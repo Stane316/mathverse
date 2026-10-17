@@ -4,6 +4,8 @@
 **Objet :** fournir des candidats de nom dont la disponibilité technique a été **mesurée**, et écarter ceux qui présentent une collision.
 **Statut :** proposition — en attente de votre arbitrage. Tant que le nom n'est pas arrêté, la documentation utilise le jeton neutre « le projet » et une variable `PROJECT_CODENAME`.
 
+> **Complété par `A3-noms-axes-semantiques.md`** (2026-10-17) : seconde génération de candidats répartis sur 12 axes sémantiques, 108 sondes de disponibilité, 19 éliminations documentées pour antériorité réelle. **Lire A3 avant de trancher** : la disponibilité sur npm/PyPI/GitHub s'est révélée un filtre insuffisant.
+
 ---
 
 ## 1. Méthode de vérification
