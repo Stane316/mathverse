@@ -1,0 +1,42 @@
+fichier,eq_display,structurellement_incompletes,pct,vide_ou_blanc,commence_par_egal,finit_par_egal,indice_orphelin,fragment_commande,parentheses_vides,courte_ambigue,exemples
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,20,20,100.0,20,0,0,0,0,0,0, ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+Ai Technical Litteracy/DOCUMENT 04 — SEO & WEB PERFORMANCE.md,4,0,0.0,0,0,0,0,0,0,0,
+"Ai Technical Litteracy/DOCUMENT 05 — AI, MACHINE LEARNING & SYSTÈMES INTELLIGENTS.md",1,0,0.0,0,0,0,0,0,0,0,
+"Ai Technical Litteracy/DOCUMENT 07 — Branding, Marketing & Personal Branding.md",6,0,0.0,0,0,0,0,0,0,1,
+"Ai Technical Litteracy/Document 06 — Product, SaaS & Start-up — Cartographie et culture produit.md",1,0,0.0,0,0,0,0,0,0,0,
+Maths-vers-Informatiques/DOCUMENT E — THÉORIE DES GRAPHES ET ALGORITHMES SUR LES GRAPHES.md,11,0,0.0,0,0,0,0,0,0,11,
+Maths-vers-Informatiques/DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE.md,118,12,10.2,3,1,7,0,2,0,55,"A(n,r)= || nr = ||  ||  ||  || = || (a+b)^n = \_{k=0}^{n} nk a<sup>{n-k}b</sup>k || A(x)=\_{n}a_nx^n || C_n= || A(n,r)= || nr = || C_n="
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",64,18,28.1,1,10,4,1,3,1,16,"D= || D= || N() || =f(x,t) || =F(,t) || = || _{n}_ {i=0}^{n-1} |f’(x_i)| || =(y-x) || =x(-z)-y || =xy-z || F(x)= \_{i=0}^{n-1} a_i N(f_i x) || T(x)=\_i a_i |N(f_i x)| || =v || =a || x’= || =f_(h,t) || =f(x,t) || "
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,178,61,34.3,36,5,0,0,19,2,54," ||  ||  ||  || f(x),Ax=b,f,\_a^b f(x),dx,=f(t,y) ||  ||  || =9.99. || e^x = \_{k=0}<sup>{}\\frac{x</sup>k}{k!} || e^x \_{k=0}<sup>{N}\\frac{x</sup>k}{k!}. ||  ||  || \_{}^{-p} ||  ||  ||  || \_x 12x<sup>TAx-b</sup>Tx. || p(x)= \_{i=0}^{n} y_iL_i(x) || L_i(x)= \_{ji} . || \_i (y_i-f(x_i))^2. || \_x|Ax-b|\_2^2. || \_x |Ax-b|\_2^2+ |x|\_2^2. || I= \_a^b f(x),dx. || \_a^b f(x),dx \_i f(x_i)x. || \_a^"
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,251,59,23.5,15,0,7,2,32,3,66,"I(x)= || I(x)=-\_2 p(x) || p(x)= || p(x)= || I=-\_2 p || I=-\_{10}p || 1 = \_2(e) || H(X) = -\_x p(x)\_2 p(x) || H(X) = \[-\_2 p(X) || H(X)=\_2 N || H(X) = -p_2p
+
+- (1-p)\_2(1-p) || H_b(p) = -p_2p-(1-p)\_2(1-p) || H_b()=1 || H(X)\_2N || H(X,Y) = -\_{x,y}p(x,y)p(x,y) || H(X|Y) = -\_{x,y}p(x,y)p(x|y) || H(X|Y) = \_Y\[H(X|Y=y) || H(X_1,,X_n) = _{i=1}^n H(X_i|X_1,,X_{i-1}) || D_{KL}(P|Q) = \_xP(x) || "
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,258,104,40.3,64,1,10,0,23,14,98," || f(t) =
+
+- \_{n=1}^{} \[ a_n(n_0t)
+- b_n(n_0t) || \_0= || a_n= \_0^T f(t)(n_0t),dt || b_n= \_0^T f(t)(n_0t),dt || f(t) = \_{n=-}^{+} c_ne^{in_0t} || c_n= \_0^T f(t)e^{-in_0t},dt ||  || F() = \_{-}^{+} f(t)e^{-it},dt || f(t) = \_{-}^{+} F()e^{it},d || F() || F()=a()+ib() || |F()| = || () = (F()) || G()=e^{-it_0}F() || (f\*g)(t) = \_{-}^{+} f()g(t-),d || Y()=X()H() || H()= || Y()=X()H() || f_N= |"
+Maths-vers-Informatiques/DOCUMENT R — ALGÈBRE ABSTRAITE.md,6,0,0.0,0,0,0,0,0,0,6,
+Maths-vers-Informatiques/DOCUMENT S — TOPOLOGIE.md,8,0,0.0,0,0,0,0,0,0,8,
+Maths-vers-Informatiques/DOMAINE U — LOGIQUE FLOUE.md,23,0,0.0,0,0,0,0,0,0,23,
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,236,60,25.4,15,3,10,1,23,11,92," || ={1,2,3,4,5,6} || P()=1 || P()=0 || P()=1 || P(\_i A_i) = \_i P(A_i) || P(AB) = || AB= || P(A) = \_{i=1}^{n} P(AB_i)P(B_i) || P(AB) = || P() || P() || P(aXb) = \_a^b f_X(x),dx || \_{-}^{+}f_X(x),dx=1 || \_X= || \_{X,Y} = {\_X_Y} || P(X=x) = \_y P(X=x,Y=y) || XPoisson() || Var(X)= || f(x)= || Var(X)= || Z= ||  || {X_t}\_{tT} || P= || P= || \_i_i=1 || X_{t+1}=X_t+\_t || \_t{-1,+1} ||  || O() || "
+Maths-vers-Informatiques/Document H — Statistiques.md,125,64,51.2,31,2,10,2,13,7,36," || x = 1n \_{i=1}^{n}x_i || x_w = {\_iw_i} || Q_2= || ^2 = 1N \_{i=1}<sup>{N}(x_i-)</sup>2 || s^2 = \_{i=1}^{n}(x_i-x)^2 || s= || CV= || s_{XY} = \_i (x_i-x)(y_i-y) || Y=\_0+\_1X+ || \_0 || \_1 || \_i (y_i-y_i)^2 || = (X<sup>TX)</sup>{-1}X^Ty || Y = \_0
+
+- \_1X_1 ++ \_pX_p + || Y= \_0+\_1X+\_2X<sup>2++\_kX</sup>k+ || P(Y=1X) = (\_0+^TX) || (z)= ||  ||  ||  || Bias() = E\[ || Var() || MSE() = E\[("
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,248,38,15.3,24,0,8,0,6,1,121,n = || n = || \_2 N ||  || \_{n}=0 || \_{n}= || T(n)=aT()+f(n) || n^{\_b a} ||  || P= ||  ||  ||  || Speedup = || Speedup_{}= ||  ||  ||  ||  || k=\_2 n || \_2N || p= ||  ||  ||  || P= ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,318,109,34.3,44,13,11,1,37,17,87," || \_{xa}f(x) || \_{xa}f(x)=f(a) ||  || f’(x) = \_{h} ||  || f(x)= || = f’(g(x))g’(x) ||  || =- || f(x) = \_{k=0}^{n} (x-a)^k
+
+- R_n(x) ||  || = 2x+3y || = 3x+2y || f(x) = ||  || df = \_{i=1}^{n} dx_i || J_F(x) = || H_f(x) = || = || = || \_i>0 ||  || \_{t+1} = \_t
+
+- \_L_B(\_t) || m_t = _1m_{t-1}
+
+- (1-\_1)g_t || v_t = _2v_{t-1}
+
+- (1-\_2)g_t^2 || \_x f(x) || \_x f=a || \_x f = (A+A^T)x || \_x f="
+Maths-vers-Informatiques/Domaine J — Optimisation.md,333,166,49.8,107,3,1,1,43,17,90," ||  ||  ||  ||  ||  ||  ||  || ^\* = _ L() || P^\* = \_P (P) ||  ||  || ^\* = _ J() || \_x C(x) || L() || = {x : g_i(x), h_j(x)=0} ||  ||  || \_x f(x) || \_x -f(x) ||  || =0, , =0 || \_x f(x) ||  ||  || \_x f(x) || \_x f(x) ||  || \_x=0 || \_x f(x) || \_i || (x,,) = f(x)
+
+- \_i_i g_i(x)
+- \_j_j h_j(x) || \_x=0 || \_i ||  ||  ||  ||  ||  ||  ||  ||  || L() ||  ||  ||  ||  ||  || \_{t+1} = \_t
+
+- \"
+Maths-vers-Informatiques/Domaine P — Cryptographie.md,66,2,3.0,0,0,0,0,2,0,36,\_p || \_{2^n}
+"Maths-vers-Informatiques/Domaine Q — Logique, Automates & Langages.md",79,11,13.9,5,4,0,0,2,0,34," || ={0,1} || ={a,b,c} || ={0,1} ||  ||  || ={0,1} ||  ||  || A_1|\_2 || A’\_1|\_2"
