@@ -156,7 +156,26 @@ des constats et non des objections :
 
 ## 6. Le chemin critique, c'est vous
 
-Le flux B est le facteur limitant. Sur le document L, 44 blocs ont demandé 11 arbitrages ; au
+### Avant de classer un bloc en « inconnue », chercher une structure équivalente
+
+Règle ajoutée le 2026-10-18, à la suite du document N. Un bloc vide n'est pas irrécupérable
+parce que son contenu est absent : il l'est seulement si **rien d'autre dans le document ne dit la
+même chose**. Or c'est souvent faux. Trois structures échappent à la destruction, parce qu'elles ne
+sont pas des blocs d'affichage :
+
+| Structure | Pourquoi elle survit |
+|---|---|
+| **Tableaux Markdown** | la destruction porte sur le LaTeX, pas sur les tables |
+| **Arbres ASCII** (flèches `│ ├ └ ↓`) | texte brut |
+| **Formules mentales rédigées en prose** | texte brut |
+
+Sur le document N, ces trois structures ont fourni **22 candidats** là où la lecture des blocs
+seuls aurait conclu à l'impasse : le tableau du §164 (7 blocs), l'arbre du §163 (2 blocs), la
+formule mentale en fin de document (6 blocs), les réponses croisées du §117 (6 blocs).
+
+Cette vérification est désormais une étape obligatoire, avant tout classement en « inconnue ».
+
+### Le flux B reste le facteur limitant. Sur le document L, 44 blocs ont demandé 11 arbitrages ; au
 rythme observé, le corpus en demandera **plusieurs centaines**. Avec le protocole « un échange par
 document », la charge devient tenable : une quinzaine de réponses de votre part sur la durée du
 chantier, chacune portant sur un tableau.
