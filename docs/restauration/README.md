@@ -64,8 +64,43 @@ Ce régime détruit en revanche les lettres grecques (sans laisser le résidu `\
 les exposants et indices, et quelques glyphes (`≠` est perdu).
 
 Mesures sur D : **22 lignes** portent des runs recomposables, **212 slots** « :  »
-marquent des formules dont il ne reste que l'annonce. ⚠️ Le régime 3 doit être vérifié
-sur A, B et C avant d'être généralisé — il change la nature du chantier A–D.
+marquent des formules dont il ne reste que l'annonce.
+
+### Régime 3 — vérification achevée sur A, B, C (2026-10-18)
+
+Le régime 3 a été **confirmé sur les quatre documents** A, B, C et D. Le tableau suivant
+est entièrement mesuré :
+
+| Doc | Lignes | Octets | Oct./ligne | Titres `^#` | Blocs `\[…\]` | Parties | Sections | Slots « :  » | Grecques | Exposants | Lignes à run |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **A** — logique | 119 | 81 681 | 686 | **0** | **0** | 0 | 101 (décimales) | 132 | 2 | **0** | 10 |
+| **B** — nombres | 103 | 68 220 | 662 | **0** | **0** | 0 | 95 (décimales) | 155 | 19 | **0** | 22 |
+| **C** — algèbre linéaire | 123 | 76 998 | 626 | **0** | **0** | 22 | 31 (décimales) | 169 | **80** | **0** | **41** |
+| **D** — géométrie | 133 | 58 287 | 438 | **0** | **0** | 30 | 122 (« N — ») | 212 | 27 | **0** | 23 |
+| **Total A–D** | **478** | **284 186** | — | **0** | **0** | 52 | 349 | **668** | 128 | **0** | **96** |
+
+**Ce qui est établi :**
+
+1. **Le régime 3 est universel sur A–D.** Zéro titre Markdown, zéro bloc `\[…\]`, zéro
+   mathématique inline `$…$`, zéro bloc de code — dans les quatre documents, sans
+   exception. La notation y est aplatie en texte ou absente.
+2. **La structure, elle, existe et est comptable** : 349 sections au total, mais **invisible
+   à tout outil** faute de balisage. `extract_domain.py` ne peut rien en extraire ; tout
+   relevé se fait à la main.
+3. **Les exposants sont universellement détruits** (`² ³ ⁿ` : 0 occurrence dans les quatre
+   documents). C'est la seule perte vraiment systématique.
+4. **Les lettres grecques survivent partiellement** — 128 occurrences au total, très
+   inégalement réparties (C en concentre 80, A seulement 2). Une affirmation antérieure
+   de la fiche D, selon laquelle elles auraient été supprimées, a été **rectifiée**.
+5. **96 lignes portent des runs recomposables**, contre **668 slots vides**. La
+   recomposition ne résout donc qu'une partie du chantier A–D — mais elle la résout
+   **mieux** que la reconstruction pratiquée sur E–U, puisqu'elle part de variables
+   conservées et non de résidus.
+
+**Conséquence sur le chantier A–D :** il se divise désormais en deux travaux distincts —
+une **recomposition** (96 lignes, confiance élevée) et une **reconstruction** (668 slots,
+confiance à établir). À ces deux travaux s'ajoute le **rétablissement des titres**, qui ne
+touche pas au fond et conditionne tout le reste.
 
 ## 3. Inventaire
 

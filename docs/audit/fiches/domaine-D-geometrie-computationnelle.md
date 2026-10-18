@@ -156,9 +156,16 @@ Autres recompositions vérifiées, mêmes lignes 11 à 21 :
 | `t = ′ max(0, min(1, t ))` | `t'=\max(0,\min(1,t))` |
 
 **Ce que ce régime détruit :** les commandes LaTeX (`\frac`, `\cdot` → parfois rendues en
-Unicode `⋅`), **les lettres grecques** (`θ` : 0 occurrence, `π` : 0 occurrence dans tout le
-document), les exposants et indices (aplatissement de `x²` en `x 2`), et quelques glyphes
-(`≠` est perdu, remplacé par un caractère de remplacement).
+Unicode `⋅`), **les exposants et les indices** (aplatissement de `x²` en `x 2`), et quelques
+glyphes (`≠` est perdu, remplacé par un caractère de remplacement).
+
+**Ce qu'il conserve :** les lettres grecques, du moins en partie. Rectification apportée le
+2026-10-18 après vérification sur A, B et C : l'affirmation initiale selon laquelle les
+grecques auraient été supprimées était **fausse**. Le document D en porte 27
+(`Δ Π α β γ ε`), et les quatre documents A–D en conservent tous — A : 2, B : 19, **C : 80**,
+D : 27. Ce qui est universellement détruit, en revanche, ce sont les **exposants** :
+`² ³ ⁿ` sont à **0 occurrence** dans les quatre documents, sans exception.
+θ et π sont en revanche absents de D, ce qui avait induit l'erreur.
 
 **Ce qu'il préserve :** les variables, la structure, l'ordre des opérations. La barre de
 fraction disparaît, mais numérateur et dénominateur restent **adjacents et dans l'ordre** —
@@ -197,8 +204,11 @@ A, B et C avant d'être généralisée.
    IA qui segmenterait par titre, et impossible à référencer par ancre.
 2. **Zéro bloc `\[…\]` et zéro mathématique inline.** Toute la notation est à l'état de
    runs aplatis ou de trous.
-3. **Les lettres grecques ont été supprimées**, sans laisser le résidu `\_` observé dans
-   E à U. Aucun indice ne subsiste de leur présence.
+3. **Les exposants et les indices sont systématiquement aplatis** : `x²` devient `x 2`,
+   `v_n` devient `v n`. Zéro occurrence de `² ³ ⁿ` dans le document — et dans les quatre
+   documents A à D. Le niveau d'une grandeur doit donc être rétabli par raisonnement.
+   (Rectifié le 2026-10-18 : les lettres grecques, elles, subsistent partiellement —
+   voir §4.)
 4. **Zéro bloc de code**, y compris dans les parties XXI (catalogue d'algorithmes),
    XXII (structures de données) et XXIV (cinq projets).
 5. **Zéro marqueur de référence**, comme dans tout le corpus.
