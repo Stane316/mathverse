@@ -1,0 +1,17 @@
+restauration(equations): lot 4a — domaine N, l. 75 a 1301
+
+62 blocs restaures sur 75 soumis (55 confiance haute, 7 confiance
+moyenne) ; 13 blocs laisses en inconnue, enregistres dans
+domaine-N-blocs-a-trancher.md.
+
+Ce lot couvre la premiere moitie du document : series et transformees de
+Fourier, transformee de Laplace, transformee en Z, STFT, ondelettes, DCT.
+La plupart des formules sont des definitions standard, ce qui explique la
+proportion elevee de confiance haute : la reconstruction est contrainte
+par la forme canonique que le texte decrit.
+
+A APPLIQUER APRES LE LOT 4b : les numeros de ligne descendent.
+
+Etat du document apres 4a + 4b : 245 blocs display (inchanges), defauts
+detectes 104 -> 32, blocs vides 71 -> 34, aucun mojibake, les 33 blocs
+en inconnue sont intacts et non degrades.

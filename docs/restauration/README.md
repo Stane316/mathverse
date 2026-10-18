@@ -44,7 +44,7 @@ ont été identifiés, et ils n'appellent pas la même méthode :
 |---|---|---|---|---|
 | 1 | Commandes LaTeX détruites **avec leurs arguments** | E à U | le bloc, son squelette, des fragments (`\_`, `_{}`, `( )`) | reconstruction |
 | 2 | Lettres grecques détruites | E à U | idem, sans résidu | reconstruction |
-| 3 | **Blocs `\[…\]` supprimés, formules aplaties en texte inline** | **A à D** (vérifié sur D) | **les variables, l'ordre des opérations** | **recomposition** |
+| 3 | **Blocs `\[…\]` supprimés, formules aplaties en texte inline** | **A à D** (vérifié sur A, B, C, D) | **les variables, l'ordre des opérations** | **recomposition** |
 
 Le régime 3 a été découvert sur le document D (fiche `domaine-D-…`, 2026-10-18) : les
 formules y ont été réécrites en texte, chaque symbole séparé par des doubles espaces, et
@@ -113,6 +113,14 @@ Répartition : J 166 · I 109 · N 104 · H 64 · L 61 · G 60 · M 59 · O 38 �
 recensés (61 signalés + 70 découverts), 87 propositions prêtes, 44 blocs en attente de l'auteur. Les décomptes par document ci-dessus
 sont des **planchers** : sur K, la relecture bloc par bloc a révélé 55 % de défauts
 supplémentaires. Il faut s'attendre à la même proportion ailleurs.
+
+**Mesure directe du sous-comptage (N, 2026-10-18).** Sur le domaine N : 146 blocs restaurés,
+alors que l'inventaire n'en signalait que 104 — et seuls 72 des 104 ont effectivement été
+résorbés par les 146 restaurations. Autrement dit **74 blocs (51 %) étaient dégradés sans
+être détectés** par les six heuristiques. La cause est connue : un bloc dont le résidu
+ressemble à une notation complète — `\[ F(\omega) \]` — ne déclenche aucune des six règles,
+alors que l'équation a bien été détruite. **Le chiffre 724 est donc un minimum strict.**
+Tout bloc non encore relu doit être considéré comme potentiellement dégradé, signalé ou non.
 
 L'inventaire est **régénérable à volonté** : `python3 tools/restauration/extract_defects.py <source> inventaire <sortie.csv>`, et consultable lot par lot avec le mode `contexte`.
 
@@ -208,7 +216,7 @@ toucher aux autres.
 | 1 | **K** — 18 défauts signalés, **30 traités** | domaine le plus utile au produit, équations canoniques — **terminé, 0 défaut restant** (lots 1 et 1 bis) |
 | 2 | **L** — analyse numérique | socle des critères de validation ; 61 signalés, **131 au total**, 102 appliqués — **33 blocs en attente de l'auteur** |
 | 3 | **I** — calcul différentiel | 109 signalés, 318 blocs lus — **lots 3a (62), 3b (133) et 3c (9) : 204 restaurations appliquées**, blocs vides 44 → 27 — **28 blocs en attente de l'auteur** |
-| 4 | **N** — transformées | 84 signalés, lecture intégrale des 248 blocs — lots 4a (75) et 4b (104) proposés, **en attente de validation** |
+| 4 | **N** — transformées | 104 signalés, **245 blocs display** recensés — **lots 4a (62) et 4b (84) : 146 restaurations appliquées**, défauts détectés 104 → 32, blocs vides 71 → 34 — **33 blocs en attente de l'auteur** |
 | 5 | **J** — optimisation | 166 signalés, **119 observés** (lecture intégrale des 332 blocs — le plus gros document) — **lots 5a (102 entrées) et 5b (186) proposés, en attente de validation** — **document entièrement parcouru** |
 | 6-9 | H, G, M, O, F, Q, P, UI/UX, E/R/S/U, « Ai Technical Litteracy » | voir `PLAN-ACHEVEMENT.md` |
 | 10 | A, B, C, D | restructuration (voie 2) — **chantier distinct, périmètre confirmé dans le périmètre d'achèvement** |

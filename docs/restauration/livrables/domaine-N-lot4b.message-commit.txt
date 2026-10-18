@@ -1,0 +1,18 @@
+restauration(equations): lot 4b — domaine N, l. 1309 a 3939
+
+84 blocs restaures sur 104 soumis (52 confiance haute, 32 confiance
+moyenne) ; 20 blocs laisses en inconnue, enregistres dans
+domaine-N-blocs-a-trancher.md.
+
+Ce lot couvre la seconde moitie du document : representation parcimonieuse,
+analyse temps-frequence, compression, et la grande carte finale de
+synthese (§ "changer de representation"). Les inconnues sont des blocs
+dont le residu se reduit a une ou deux lettres isolees (par exemple
+"x -> T(x) -> z"), sans contexte suffisant pour trancher entre plusieurs
+reconstructions egalement plausibles.
+
+A APPLIQUER AVANT LE LOT 4a : les numeros de ligne descendent.
+
+Reserve : reconstruction, pas recuperation. Les arguments LaTeX detruits
+n'existent nulle part dans le fichier ; chaque formule est retablie par
+contexte et porte une justification.
