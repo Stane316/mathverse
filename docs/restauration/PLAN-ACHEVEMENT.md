@@ -64,9 +64,18 @@ tableau**, avec un candidat recommandé par ligne. Vous répondez soit « lot ac
 « lot accepté sauf les lignes X, Y », soit votre propre texte pour certaines lignes. Un échange
 par document, pas par ligne.
 
-**Repli honnête** : pour tout bloc que ni vous ni moi ne pouvons restituer, la mention
-« contenu perdu » est une issue valide et préférable à une invention. Elle est traçable, elle
-ne trompe personne, et elle n'empêche pas de compléter plus tard.
+**Repli « contenu perdu » — validé par le porteur (2026-10-18).** Pour tout bloc que ni vous ni
+moi ne pouvons restituer, la mention « contenu perdu » est l'issue retenue, et elle est
+préférable à une invention. Procédure :
+
+1. le bloc reste **vide dans le fichier** — on n'écrit rien qui ressemble à du contenu ;
+2. il est enregistré dans le **registre des blocs non restitués** (annexe du chantier) avec son
+   numéro de ligne, son contexte, et la mention « non restituable » ;
+3. il est **décompté du compteur de défauts** sans être compté comme restauré : les deux colonnes
+   sont séparées dans les rapports ;
+4. il reste complétable plus tard, si vous retrouvez l'original ou si vous décidez d'un contenu.
+
+Ce repli est la soupape qui rend l'achèvement atteignable.
 
 ## 4. Ordre proposé
 
@@ -80,9 +89,25 @@ ne trompe personne, et elle n'empêche pas de compléter plus tard.
 | 6 | UI/UX (02) | périmètre site, DX, performance, accessibilité |
 | 7 | E, R, S, U | zéro défaut signalé mais lecture nécessaire (48 blocs) |
 | 8 | « Ai Technical Litteracy » 01-08 | 12 blocs seulement : vérification rapide |
-| 9 | **A, B, C, D** | **chantier distinct** — voir §5 |
+| 9 | **A, B, C, D** | restructuration — **dans le périmètre** (§5) |
 
 La clôture de L (33 blocs) est faite en priorité, en parallèle de l'ouverture de I.
+
+### Entrelacement avec les fiches de phase 1 — décidé par le porteur (2026-10-18)
+
+Les deux chantiers ne sont pas concurrents, ils se nourrissent : **je restaure d'abord, je
+rédige la fiche ensuite**, sur un document sain. Une seule lecture par document au lieu de deux.
+
+| Rang | Restauration | Fiche immédiatement après |
+|---|---|---|
+| 0 | L (33 blocs en attente d'arbitrage) | **L** |
+| 1 | **I** — Calcul différentiel | **I** |
+| 2 | **N** — Transformées | **N** |
+| 3 | J — Optimisation | *(hors lot courant)* |
+| … | suite du plan | — |
+
+Le porteur demandait le lot de fiches **D, I, L, N** ; D n'a rien à restaurer (0 bloc, document
+aplatissement intégral) et relève du rang 10 du présent plan.
 
 ## 5. Le cas A, B, C, D — décision à prendre
 
@@ -92,9 +117,18 @@ Restent donc une **restructuration par reconstruction** : échantillonnage, dét
 de section, reconstruction d'un plan. Ce n'est pas une restauration d'équations, et son résultat
 ne sera jamais fidèle à l'original.
 
-**Question ouverte :** ce chantier fait-il partie de l'achèvement exigé avant la phase 2, ou
-constitue-t-il un chantier séparé, ouvert après ? Je recommande la seconde option : il est long,
-incertain, et il ne conditionne ni la phase 2 ni les premiers composants.
+**Décision du porteur (2026-10-18) : ce chantier FAIT PARTIE de l'achèvement exigé avant la
+phase 2.** Il est donc inscrit en fin de plan (rang 10), avec les réserves suivantes, qui sont
+des constats et non des objections :
+
+1. le résultat ne sera **jamais fidèle à l'original** : on ne peut pas retrouver un plan détruit,
+   seulement en proposer un qui rende le texte utilisable ;
+2. la méthode est différente : échantillonnage des 478 lignes, détection des marqueurs de section
+   (numérotations, majuscules, changements de registre), reconstruction d'une arborescence
+   **proposée**, jamais présentée comme restituée ;
+3. chaque titre reconstruit portera la mention « reconstruit » — un plan inventé silencieusement
+   serait pire que pas de plan du tout ;
+4. c'est le dernier rang : rien d'autre ne l'attend.
 
 ## 6. Le chemin critique, c'est vous
 
@@ -123,7 +157,8 @@ Un document est déclaré **traité** lorsque :
 2. chaque bloc dégradé a une proposition (flux A) ou une décision (flux B) ;
 3. le correctif a été vérifié à sec puis appliqué ;
 4. l'inventaire a été rejoué et le compteur du document est à zéro ;
-5. le diff et le rapport d'application sont livrés.
+5. le diff et le rapport d'application sont livrés ;
+6. les blocs non restituables sont inscrits au registre, pas laissés dans l'oubli.
 
 C'est ainsi que K et L ont été traités, et leurs compteurs sont effectivement à zéro — à
 l'exception des blocs explicitement laissés en attente.
