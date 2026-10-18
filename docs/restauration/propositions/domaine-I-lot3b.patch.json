@@ -1,0 +1,1433 @@
+[
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 800,
+  "ancien": "\\[ = \\]",
+  "nouveau": "\\[ \\frac{dz}{dx}=\\frac{dz}{du}\\frac{du}{dx} \\]",
+  "confiance": "haute",
+  "justification": "§41 « Si z=f(u) et u=g(x), alors : [= ] ». Règle de la chaîne en notation de Leibniz ; les trois \\frac ont été détruites. Les variables sont celles des deux blocs précédents.",
+  "validation": "Rendu : dz/dx = dz/du · du/dx."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 812,
+  "ancien": "\\[ x z a L \\]",
+  "nouveau": "\\[ x \\to z \\to a \\to L \\]",
+  "confiance": "haute",
+  "justification": "§42 « Considérons : [ ] ». Les quatre termes sont intacts, les flèches ont été détruites — même destruction qu'en l. 424.",
+  "validation": "Rendu : x → z → a → L. Cohérent avec les trois blocs suivants (z, a, L)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 816,
+  "ancien": "\\[ z=Wx+b \\]",
+  "nouveau": "\\[ a=\\sigma(z) \\]",
+  "confiance": "haute",
+  "justification": "§42 « avec : z=Wx+b, [a=(z)], L=L(a,y) ». Le \\sigma a été détruit, la parenthèse est restée. Le §85 nomme explicitement la fonction d'activation.",
+  "validation": "Rendu : a=σ(z). L'activation entre la pré-activation et la perte."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 824,
+  "ancien": "\\[ = \\]",
+  "nouveau": "\\[ \\frac{\\partial L}{\\partial W}=\\frac{\\partial L}{\\partial a}\\cdot\\frac{\\partial a}{\\partial z}\\cdot\\frac{\\partial z}{\\partial W} \\]",
+  "confiance": "moyenne",
+  "justification": "§42 « Alors : [= ] La backpropagation répète ce principe. » — les numérateurs et dénominateurs ont été détruits avec \\frac et \\partial ; il ne reste que le signe égal.",
+  "validation": "Candidat alternatif : \\frac{\\partial L}{\\partial W}=\\delta x^{T}. Formulation à confirmer par l'auteur."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 834,
+  "ancien": "\\[ f(x^\\*)=0 \\]",
+  "nouveau": "\\[ \\nabla f(x^{*})=0 \\]",
+  "confiance": "haute",
+  "justification": "§43 POINTS CRITIQUES « Un point (x*) peut être critique lorsque : [ ] ou lorsque la dérivée n'existe pas. » — \\nabla détruit.",
+  "validation": "Condition de stationnarité ; la phrase suivante évoque l'absence de dérivée, ce qui confirme qu'il s'agit bien du gradient."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 851,
+  "ancien": "\\[ f(x^\\*)f(x) \\]",
+  "nouveau": "\\[ f(x^{*})\\leq f(x) \\]",
+  "confiance": "haute",
+  "justification": "§44 MINIMUM LOCAL « (x*) est un minimum local si, dans un voisinage de (x*) : [ ] ». \\leq détruit.",
+  "validation": "Rendu : f(x*) ≤ f(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 857,
+  "ancien": "\\[ f(x^\\*)f(x) \\]",
+  "nouveau": "\\[ f(x^{*})\\geq f(x) \\]",
+  "confiance": "haute",
+  "justification": "§45 MAXIMUM LOCAL. \\geq détruit ; le minimum et le maximum se distinguent uniquement par le sens de l'inégalité, perdu avec la commande.",
+  "validation": "Rendu : f(x*) ≥ f(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 895,
+  "ancien": "\\[ H(x^\\*) \\]",
+  "nouveau": "\\[ \\nabla^{2}f(x^{*})\\succ 0 \\]",
+  "confiance": "haute",
+  "justification": "§48 « ### Hessienne définie positive [ ] implique un minimum local strict ». Le résidu H(x*) : \\nabla^2 et \\succ détruits.",
+  "validation": "Rendu : ∇²f(x*) ≻ 0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 901,
+  "ancien": "\\[ H(x^\\*) \\]",
+  "nouveau": "\\[ \\nabla^{2}f(x^{*})\\prec 0 \\]",
+  "confiance": "haute",
+  "justification": "§48 « ### Hessienne définie négative [ ] implique un maximum local strict. »",
+  "validation": "Rendu : ∇²f(x*) ≺ 0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 919,
+  "ancien": "\\[ \\_i>0 \\]",
+  "nouveau": "\\[ \\lambda_i>0 \\]",
+  "confiance": "haute",
+  "justification": "§49 « Si : [ ] dans toutes les directions, la courbure est positive. » Les valeurs propres de la Hessienne : \\lambda détruit.",
+  "validation": "Rendu : λᵢ > 0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 931,
+  "ancien": "\\[ f(tx+(1-t)y) tf(x)+(1-t)f(y) \\]",
+  "nouveau": "\\[ f(tx+(1-t)y)\\leq tf(x)+(1-t)f(y) \\]",
+  "confiance": "haute",
+  "justification": "§50 CONVEXITÉ « Une fonction (f) est convexe si, pour (x,y) et (t) : [ ] ». Tous les termes sont présents ; seul \\leq a été détruit.",
+  "validation": "Définition standard de la convexité."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 952,
+  "ancien": "\\[ H_f(x) \\]",
+  "nouveau": "\\[ \\nabla^{2}f(x)\\succeq 0 \\]",
+  "confiance": "haute",
+  "justification": "§52 CRITÈRE HESSIEN « Pour une fonction deux fois différentiable : [ ] sur un domaine convexe constitue un critère de convexité. » \\nabla^2 et \\succeq détruits.",
+  "validation": "Rendu : ∇²f(x) ⪰ 0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 958,
+  "ancien": "\\[ H_f(x) \\]",
+  "nouveau": "\\[ \\nabla^{2}f(x)\\succ 0 \\]",
+  "confiance": "haute",
+  "justification": "§52 « Si : [ ] partout, on obtient une forme de convexité stricte. » Le bloc est distinct du précédent : c'est le cas strict.",
+  "validation": "Rendu : ∇²f(x) ≻ 0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 966,
+  "ancien": "\\[ |f(x)-f(y)| L|x-y| \\]",
+  "nouveau": "\\[ \\|\\nabla f(x)-\\nabla f(y)\\|\\leq L\\|x-y\\| \\]",
+  "confiance": "haute",
+  "justification": "§53 LIPSCHITZIANITÉ DU GRADIENT « Une fonction possède un gradient (L)-Lipschitz si : [ ] ». Résidu |f(x)-f(y)| L|x-y| : \\nabla, \\| et \\leq détruits.",
+  "validation": "Définition standard du gradient L-Lipschitz."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 984,
+  "ancien": "\\[ x_{k+1} = x_k-f(x_k) \\]",
+  "nouveau": "\\[ x_{k+1}=x_k-\\eta\\nabla f(x_k) \\]",
+  "confiance": "haute",
+  "justification": "§55 DESCENTE DE GRADIENT « Le principe est : [ ] où : ». Le \\eta (pas d'apprentissage) et \\nabla ont été détruits ; la section 57 leur est consacrée.",
+  "validation": "Rendu : x_{k+1}=x_k−η∇f(x_k)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1000,
+  "ancien": "\\[ -f(x) \\]",
+  "nouveau": "\\[ -\\nabla f(x) \\]",
+  "confiance": "haute",
+  "justification": "§56 « Pour diminuer (f), on choisit donc : [ ] D'où : ». \\nabla détruit.",
+  "validation": "Rendu : −∇f(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1004,
+  "ancien": "\\[ x_{k+1} = x_k-f(x_k) \\]",
+  "nouveau": "\\[ x_{k+1}=x_k-\\eta\\nabla f(x_k) \\]",
+  "confiance": "haute",
+  "justification": "§56 « D'où : [ ] ». Même reconstruction qu'en l. 984.",
+  "validation": "Rendu : x_{k+1}=x_k−η∇f(x_k)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1010,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\eta \\]",
+  "confiance": "haute",
+  "justification": "§57 LEARNING RATE « Le paramètre : [vide] contrôle la taille du déplacement. » — le \\eta a été détruit ; c'est le seul paramètre de cette section.",
+  "validation": "Rendu : η. La phrase suivante (« trop grand… trop petit ») confirme qu'il s'agit du pas."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1031,
+  "ancien": "\\[ \\_{t+1} = \\_t\n\n- \\_L_B(\\_t) \\]",
+  "nouveau": "\\[ \\theta_{t+1}=\\theta_t\n\n- \\eta\\nabla L_B(\\theta_t) \\]",
+  "confiance": "haute",
+  "justification": "§58 SGD « Au lieu d'utiliser toute la fonction de perte : [ ] où (B) représente un mini-batch. » — le \\_ est le résidu de \\sum ailleurs, ici les lettres grecques \\theta et \\eta ont été détruites. Le signe moins est réel : on descend.",
+  "validation": "Rendu : θ_{t+1}=θ_t−η∇L_B(θ_t)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1045,
+  "ancien": "\\[ v_t = v_{t-1}\n\n- (1-)g_t \\]",
+  "nouveau": "\\[ v_t=\\beta v_{t-1}\n\n+ (1-\\beta)g_t \\]",
+  "confiance": "haute",
+  "justification": "§59 MOMENTUM « Une forme classique : [ ] ». Le \\beta a été détruit dans les deux occurrences (l'une d'elles laisse 1-). Le signe + a été converti en puce -, artefact déjà observé dans les blocs de Taylor.",
+  "validation": "Rendu : v_t=βv_{t-1}+(1−β)g_t. Forme standard du momentum."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1051,
+  "ancien": "\\[ _t =_ {t-1}\n\n- v_t \\]",
+  "nouveau": "\\[ \\theta_t=\\theta_{t-1}\n\n- \\eta v_t \\]",
+  "confiance": "haute",
+  "justification": "§59 « puis : [ ] ». Mise à jour des paramètres avec la vitesse. Le signe moins est conforme à une descente.",
+  "validation": "Rendu : θ_t=θ_{t-1}−ηv_t."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1063,
+  "ancien": "\\[ m_t = _1m_{t-1}\n\n- (1-\\_1)g_t \\]",
+  "nouveau": "\\[ m_t=\\beta_1 m_{t-1}\n\n+ (1-\\beta_1)g_t \\]",
+  "confiance": "haute",
+  "justification": "§60 ADAM « On calcule : [ ] ». Le \\beta_1 a été détruit ; le signe + est devenu une puce.",
+  "validation": "Rendu : m_t=β₁m_{t-1}+(1−β₁)g_t. Premier moment."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1069,
+  "ancien": "\\[ v_t = _2v_{t-1}\n\n- (1-\\_2)g_t^2 \\]",
+  "nouveau": "\\[ v_t=\\beta_2 v_{t-1}\n\n+ (1-\\beta_2)g_t^{2} \\]",
+  "confiance": "haute",
+  "justification": "§60 « et : [ ] ». Second moment : le \\beta_2 a été détruit, l'exposant 2 du gradient a survécu.",
+  "validation": "Rendu : v_t=β₂v_{t-1}+(1−β₂)g_t²."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1081,
+  "ancien": "\\[ f \\]",
+  "nouveau": "\\[ \\nabla f \\]",
+  "confiance": "haute",
+  "justification": "§61 « Les méthodes du premier ordre utilisent principalement : [ ] Les méthodes du second ordre utilisent également : ». \\nabla détruit.",
+  "validation": "Rendu : ∇f. Opposé à la Hessienne du bloc suivant."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1085,
+  "ancien": "\\[ H_f \\]",
+  "nouveau": "\\[ \\nabla^{2}f \\]",
+  "confiance": "haute",
+  "justification": "§61 second ordre. Le résidu H_f est le nom de la Hessienne ; \\nabla^2 détruit.",
+  "validation": "Rendu : ∇²f."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1089,
+  "ancien": "\\[ x_{k+1} = x_k-H(x_k)^{-1}f(x_k) \\]",
+  "nouveau": "\\[ x_{k+1}=x_k-H(x_k)^{-1}\\nabla f(x_k) \\]",
+  "confiance": "haute",
+  "justification": "§61 « Exemple : [ ] C'est l'idée de la méthode de Newton. » \\nabla détruit.",
+  "validation": "Rendu : x_{k+1}=x_k−H(x_k)^{-1}∇f(x_k)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1101,
+  "ancien": "\\[ x_{k+1} = x_k- \\]",
+  "nouveau": "\\[ x_{k+1}=x_k-\\frac{f'(x_k)}{f''(x_k)} \\]",
+  "confiance": "haute",
+  "justification": "§62 MÉTHODE DE NEWTON « Pour résoudre f'(x)=0, on peut utiliser : [x_{k+1}=x_k−] ». La fraction a été détruite (régime « tout détruit »), mais c'est la seule itération qui résolve f'=0.",
+  "validation": "Newton scalaire : x_{k+1}=x_k−f'(x_k)/f''(x_k)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1105,
+  "ancien": "\\[ x_{k+1} = x_k- H(x_k)^{-1}f(x_k) \\]",
+  "nouveau": "\\[ x_{k+1}=x_k-\\nabla^{2}f(x_k)^{-1}\\nabla f(x_k) \\]",
+  "confiance": "haute",
+  "justification": "§62 « En optimisation multivariable : [ ] ». \\nabla et \\nabla^2 détruits.",
+  "validation": "Newton multivariable, cohérent avec le cas scalaire de la ligne précédente."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1133,
+  "ancien": "\\[ \\_x f(x) \\]",
+  "nouveau": "\\[ \\min_x f(x) \\]",
+  "confiance": "haute",
+  "justification": "§65 OPTIMISATION SOUS CONTRAI NTES « On peut chercher : [ ] sous : ». Le \\_ est le résidu de \\min.",
+  "validation": "Rendu : min_x f(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1137,
+  "ancien": "\\[ g_i(x) \\]",
+  "nouveau": "\\[ g_i(x)\\leq 0 \\]",
+  "confiance": "haute",
+  "justification": "§65 « sous : [g_i(x)] et : [h_j(x)=0] ». L'inégalité a été détruite ; la contrainte d'égalité, elle, est intacte, ce qui distingue les deux.",
+  "validation": "Rendu : g_i(x) ≤ 0. Convention usuelle de l'optimisation sous contraintes."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1157,
+  "ancien": "\\[ (x,) = f(x)+g(x) \\]",
+  "nouveau": "\\[ \\mathcal{L}(x,\\lambda)=f(x)+\\lambda g(x) \\]",
+  "confiance": "haute",
+  "justification": "§66 MULTIPLICATEURS DE LAGRANGE « on construit : [ ] ». Le résidu (x,) = f(x)+g(x) montre le \\mathcal{L} détruit, le \\lambda détruit, et la virgule orpheline de l'argument manquant.",
+  "validation": "Rendu : 𝓛(x,λ)=f(x)+λg(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1194,
+  "ancien": "\\[ \\_x f=a \\]",
+  "nouveau": "\\[ \\nabla_x f=a \\]",
+  "confiance": "haute",
+  "justification": "§69 « Soit f(x)=a^Tx. Alors : [ ] ». Le \\_ est le résidu de \\nabla.",
+  "validation": "Rendu : ∇_x f=a."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1204,
+  "ancien": "\\[ \\_x f = (A+A^T)x \\]",
+  "nouveau": "\\[ \\nabla_x f=(A+A^{T})x \\]",
+  "confiance": "haute",
+  "justification": "§70 FORME QUADRATIQUE « on obtient, dans le cas général : [ ] ». \\nabla détruit.",
+  "validation": "Rendu : ∇_x f=(A+A^T)x."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1208,
+  "ancien": "\\[ \\_x f=2Ax \\]",
+  "nouveau": "\\[ \\nabla_x f=2Ax \\]",
+  "confiance": "haute",
+  "justification": "§70 « Si (A) est symétrique : [ ] ». \\nabla détruit.",
+  "validation": "Le cas symétrique simplifie (A+A^T) en 2A."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1218,
+  "ancien": "\\[ f(x)=|Ax-b|^2 \\]",
+  "nouveau": "\\[ f(x)=\\|Ax-b\\|^{2} \\]",
+  "confiance": "haute",
+  "justification": "§71 SQUARED ERROR « Considérons : [ ] ». Le \\| a été détruit, remplacé par des barres simples.",
+  "validation": "Rendu : f(x)=‖Ax−b‖²."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1222,
+  "ancien": "\\[ f(x) = A^T(Ax-b) \\]",
+  "nouveau": "\\[ \\nabla f(x)=2A^{T}(Ax-b) \\]",
+  "confiance": "haute",
+  "justification": "§71 « Alors : [ ] ». \\nabla détruit ; le facteur 2 manque, détruit avec lui.",
+  "validation": "Vérifier : ∇‖Ax−b‖²=2A^T(Ax−b)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1234,
+  "ancien": "\\[ () \\]",
+  "nouveau": "\\[ \\max_\\theta \\mathcal{L}(\\theta) \\]",
+  "confiance": "moyenne",
+  "justification": "§72 LOG-LIKELIHOOD « on cherche souvent à maximiser : [ ] ou à minimiser : ». Le \\max et le \\mathcal{L} ont été détruits ; le θ ne subsiste que dans les parenthèses vides.",
+  "validation": "Candidat alternatif : \\max_\\theta \\log \\mathcal{L}(\\theta). La vraisemblance ou sa log-forme : à confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1238,
+  "ancien": "\\[ -() \\]",
+  "nouveau": "\\[ -\\mathcal{L}(\\theta) \\]",
+  "confiance": "moyenne",
+  "justification": "§72 « ou à minimiser : [-()] ». Même incertitude que la ligne précédente.",
+  "validation": "Négatif de la quantité maximisée en l. 1234."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1242,
+  "ancien": "\\[ \\_() \\]",
+  "nouveau": "\\[ \\nabla_\\theta \\mathcal{L}(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§72 « Le gradient : [ ] indique comment modifier les paramètres. » \\nabla et \\mathcal{L} détruits.",
+  "validation": "Rendu : ∇_θ 𝓛(θ)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1248,
+  "ancien": "\\[ \\_^2() \\]",
+  "nouveau": "\\[ \\nabla_\\theta^{2}\\mathcal{L}(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§72 « La Hessienne : [ ] décrit la courbure locale de la vraisemblance. » Le résidu \\_^2() montre \\nabla_\\theta^2 détruit.",
+  "validation": "Rendu : ∇²_θ 𝓛(θ)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1258,
+  "ancien": "\\[ y=f_(x) \\]",
+  "nouveau": "\\[ \\hat{y}=f_\\theta(x) \\]",
+  "confiance": "haute",
+  "justification": "§73 FONCTION DE PERTE « Un modèle produit : [y=f_(x)] ». Le chapeau de ŷ et le θ ont été détruits ; la perte du bloc suivant compare deux arguments, donc une prédiction et une cible.",
+  "validation": "Rendu : ŷ=f_θ(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1262,
+  "ancien": "\\[ L(y,y) \\]",
+  "nouveau": "\\[ L(\\hat{y},y) \\]",
+  "confiance": "haute",
+  "justification": "§73 « On définit une fonction de perte : [L(y,y)] ». Les deux arguments sont identiques en apparence : le chapeau du premier a été détruit.",
+  "validation": "Rendu : L(ŷ,y)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1266,
+  "ancien": "\\[ J() = 1n _{i=1}^{n} L(f_(x_i),y_i) \\]",
+  "nouveau": "\\[ J(\\theta)=\\frac{1}{n}\\sum_{i=1}^{n}L(f_\\theta(x_i),y_i) \\]",
+  "confiance": "haute",
+  "justification": "§73 « Puis une fonction objectif : [ ] ». Résidu J() = 1n _{i=1}^{n} L(f_(x_i),y_i) : \\frac{1}{n} a laissé 1n (régime « contenu conservé »), \\sum a laissé \\_, le θ a disparu.",
+  "validation": "Rendu : J(θ)=1/n Σ L(f_θ(x_i),y_i)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1270,
+  "ancien": "\\[ ^\\* = \\_J() \\]",
+  "nouveau": "\\[ \\theta^{*}=\\arg\\min_\\theta J(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§73 « L'entraînement cherche alors : [ ] ». Résidu ^\\* = \\_J() : l'étoile a survécu, \\arg\\min réduit à \\_.",
+  "validation": "Rendu : θ*=argmin_θ J(θ)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1274,
+  "ancien": "\\[ \\_J() \\]",
+  "nouveau": "\\[ \\nabla_\\theta J(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§73 « Le calcul différentiel intervient pour calculer : [ ] ». \\nabla détruit.",
+  "validation": "Rendu : ∇_θ J(θ)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1280,
+  "ancien": "\\[ f(x) f’(x) f(x) \\]",
+  "nouveau": "\\[ f(x)\\to f'(x)\\to x-\\eta f'(x) \\]",
+  "confiance": "moyenne",
+  "justification": "§74 « La chaîne centrale est : [f(x) f'(x) f(x)] ». Les flèches ont été détruites. Le troisième terme ne peut pas être f(x) tel quel : la chaîne va de la fonction à la dérivée puis à la mise à jour.",
+  "validation": "Candidat alternatif : f(x) → f'(x) → min f(x). Le troisième terme reste à confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1284,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§74 « Plus précisément : [vide] Cette boucle constitue l'une des structures mathématiques fondamentales du Machine Learning. » — la forme détaillée de la chaîne a disparu.",
+  "validation": "Candidat : \\[ x_{k+1}=x_k-\\eta\\nabla f(x_k) \\] — mais c'est redondant avec l. 1280."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1350,
+  "ancien": "\\[ = \\]",
+  "nouveau": "\\[ \\frac{dz}{dx}=\\frac{dz}{dy}\\frac{dy}{dx} \\]",
+  "confiance": "haute",
+  "justification": "§77 « Si z=f(y) et y=g(x), alors : [= ] ». Notation de Leibniz ; les variables sont celles des deux blocs précédents.",
+  "validation": "Rendu : dz/dx = dz/dy · dy/dx."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1392,
+  "ancien": "\\[ f’(x) \\]",
+  "nouveau": "\\[ f'(x)\\approx\\frac{f(x+h)-f(x)}{h} \\]",
+  "confiance": "haute",
+  "justification": "§80 DIFFÉRENCE FINIE « Différence avant : [f'(x)] Différence centrée : [f'(x)] ». Les deux blocs sont identiques en apparence : le membre de droite a été détruit dans les deux.",
+  "validation": "Rendu : f'(x)≈(f(x+h)−f(x))/h."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1396,
+  "ancien": "\\[ f’(x) \\]",
+  "nouveau": "\\[ f'(x)\\approx\\frac{f(x+h)-f(x-h)}{2h} \\]",
+  "confiance": "haute",
+  "justification": "§80 « Différence centrée : [ ] ». Même destruction ; la différence centrée est la seule formule qui distingue ce bloc du précédent.",
+  "validation": "Rendu : f'(x)≈(f(x+h)−f(x−h))/2h."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1404,
+  "ancien": "\\[ g_{} \\]",
+  "nouveau": "\\[ g_{\\text{analytique}} \\]",
+  "confiance": "moyenne",
+  "justification": "§81 GRADIENT CHECKING « Pour tester une implémentation de gradient : [g_{}] est comparé à : [g_{}] ». Les deux indices ont été détruits ; la méthode compare le gradient analytique au gradient numérique.",
+  "validation": "Candidat alternatif : g_{\\text{exact}}. À confirmer par l'auteur."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1408,
+  "ancien": "\\[ g_{} \\]",
+  "nouveau": "\\[ g_{\\text{numérique}} \\]",
+  "confiance": "moyenne",
+  "justification": "§81 « est comparé à : [g_{}] ». Pendant du bloc précédent.",
+  "validation": "Candidat alternatif : g_{\\text{approx}}. À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1434,
+  "ancien": "\\[ f_nf_{n-1}f_1 \\]",
+  "nouveau": "\\[ f_n\\circ f_{n-1}\\circ\\cdots\\circ f_1 \\]",
+  "confiance": "haute",
+  "justification": "§83 VANISHING GRADIENT « Dans une longue composition : [ ] la règle de chaîne produit des produits de dérivées. » \\circ et \\cdots détruits.",
+  "validation": "Rendu : f_n∘f_{n-1}∘⋯∘f_1."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1440,
+  "ancien": "\\[ \\_i a_i \\]",
+  "nouveau": "\\[ \\prod_i a_i \\]",
+  "confiance": "haute",
+  "justification": "§83 « Si les facteurs sont souvent inférieurs à 1 : [ ] peut devenir extrêmement petit. » Le \\_ est le résidu de \\prod.",
+  "validation": "Rendu : ∏ᵢ aᵢ."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1452,
+  "ancien": "\\[ \\_i a_i \\]",
+  "nouveau": "\\[ \\prod_i a_i \\]",
+  "confiance": "haute",
+  "justification": "§84 EXPLODING GRADIENT « si les facteurs sont fréquemment supérieurs à 1 : [ ] peut devenir extrêmement grand. »",
+  "validation": "Rendu : ∏ᵢ aᵢ."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1470,
+  "ancien": "\\[ (x)= \\]",
+  "nouveau": "\\[ \\sigma(x)=\\frac{1}{1+e^{-x}} \\]",
+  "confiance": "haute",
+  "justification": "§85 SIGMOÏDE « Exemple : [ (x)= ] et : [ '(x)=...] ». Le \\sigma a été détruit ; la dérivée du bloc suivant, σ(1−σ), n'appartient qu'à la sigmoïde.",
+  "validation": "Vérifier : σ(x)=1/(1+e^{−x}) ⇒ σ'=σ(1−σ)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1474,
+  "ancien": "\\[ ’(x) = (x)(1-(x)) \\]",
+  "nouveau": "\\[ \\sigma'(x)=\\sigma(x)(1-\\sigma(x)) \\]",
+  "confiance": "haute",
+  "justification": "§85 « et : [ '(x)=(x)(1-(x)) ] La dérivée de l'activation participe directement à la backpropagation. »",
+  "validation": "Dérivée de la sigmoïde."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1482,
+  "ancien": "\\[ (x) = (0,x) \\]",
+  "nouveau": "\\[ \\text{ReLU}(x)=\\max(0,x) \\]",
+  "confiance": "haute",
+  "justification": "§86 RELU « La fonction ReLU est : [ (x)=(0,x) ] ». Le \\max a été détruit, laissant ses arguments.",
+  "validation": "Rendu : ReLU(x)=max(0,x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1486,
+  "ancien": "\\[ ’(x) =\n\n\\]",
+  "nouveau": "\\[ \\text{ReLU}'(x)=\\begin{cases}0&\\text{si }x<0\\\\ 1&\\text{si }x>0\\end{cases} \\]",
+  "confiance": "haute",
+  "justification": "§86 « Sa dérivée est : [trois lignes vides] Le point (x=0) nécessite une convention particulière. » — la mention du point 0 et le bloc sur trois lignes imposent une définition par cas.",
+  "validation": "Rendu : ReLU'(x)=0 si x<0, 1 si x>0. La convention en 0 reste ouverte, comme le dit la phrase."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1496,
+  "ancien": "\\[ (z_i) = {\\_j e^{z_j}} \\]",
+  "nouveau": "\\[ \\sigma(z_i)=\\frac{e^{z_i}}{\\sum_j e^{z_j}} \\]",
+  "confiance": "haute",
+  "justification": "§87 SOFTMAX « Pour des logits (z_i) : [ (z_i) = {\\_j e^{z_j}} ] ». Le résidu montre le dénominateur \\sum_j e^{z_j} (régime « contenu conservé ») et un numérateur détruit.",
+  "validation": "Rendu : σ(z_i)=e^{z_i}/Σ_j e^{z_j}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1500,
+  "ancien": "\\[ = s_i(\\_{ij}-s_j) \\]",
+  "nouveau": "\\[ \\frac{\\partial s_i}{\\partial z_j}=s_i(\\delta_{ij}-s_j) \\]",
+  "confiance": "haute",
+  "justification": "§87 « Sa Jacobienne est non diagonale : [ = s_i(\\_{ij}-s_j) ] ». Le \\delta a été détruit, le membre de gauche détruit avec \\frac et \\partial.",
+  "validation": "Jacobienne du softmax : ∂s_i/∂z_j=s_i(δ_ij−s_j)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1510,
+  "ancien": "\\[ L=-\\_i y_ip_i \\]",
+  "nouveau": "\\[ L=-\\sum_i y_i\\log p_i \\]",
+  "confiance": "haute",
+  "justification": "§88 « Dans la classification : [ L=-\\_i y_ip_i ] ». Le \\log entre le y_i et le p_i a été détruit ; sans lui, l'expression ne serait pas une cross-entropie.",
+  "validation": "Rendu : L=−Σ y_i log p_i. C'est la cross-entropie annoncée par le §88."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1514,
+  "ancien": "\\[ p-y \\]",
+  "nouveau": "\\[ \\nabla_z L=p-y \\]",
+  "confiance": "moyenne",
+  "justification": "§88 « on obtient par rapport aux logits une expression simplifiée liée à : [p-y] ». Le gradient par rapport aux logits est p−y ; le membre de gauche a été détruit.",
+  "validation": "Résultat classique softmax + cross-entropie. Le membre de gauche reste à confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1522,
+  "ancien": "\\[ f_ = f_Lf_{L-1}f_1 \\]",
+  "nouveau": "\\[ f_\\theta=f_L\\circ f_{L-1}\\circ\\cdots\\circ f_1 \\]",
+  "confiance": "haute",
+  "justification": "§89 « Un réseau peut être représenté comme : [ ] ». \\circ et \\cdots détruits.",
+  "validation": "Rendu : f_θ=f_L∘f_{L-1}∘⋯∘f_1."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1526,
+  "ancien": "\\[ \\_J() \\]",
+  "nouveau": "\\[ \\min_\\theta J(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§89 « L'entraînement cherche : [ ] ». \\min détruit.",
+  "validation": "Rendu : min_θ J(θ)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1530,
+  "ancien": "\\[ \\_J \\]",
+  "nouveau": "\\[ \\nabla_\\theta J \\]",
+  "confiance": "haute",
+  "justification": "§89 « Le gradient : [ ] est calculé par différentiation de la composition. » \\nabla détruit.",
+  "validation": "Rendu : ∇_θ J."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1536,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§89 « Ainsi : [vide] » — conclusion de la section sur la composition différentiable. Aucun résidu.",
+  "validation": "Candidat : \\nabla_\\theta J=J_{f_L}\\cdots J_{f_1} (produit de Jacobiennes). À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1564,
+  "ancien": "\\[ x_{} x_{} \\]",
+  "nouveau": "\\[ x_{\\text{local}}\\neq x_{\\text{global}} \\]",
+  "confiance": "moyenne",
+  "justification": "§91 « En optimisation non convexe : [x_{} x_{}] ». Les deux indices ont été détruits ; \\neq aussi.",
+  "validation": "Candidat alternatif : f(x_{\\text{local}})>f(x_{\\text{global}}). À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1578,
+  "ancien": "\\[ |f(x)| \\]",
+  "nouveau": "\\[ \\|\\nabla f(x)\\| \\]",
+  "confiance": "haute",
+  "justification": "§93 PLATEAUX « Un plateau correspond à une région dans laquelle : [ ] est faible. » \\| et \\nabla détruits.",
+  "validation": "Rendu : ‖∇f(x)‖."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1614,
+  "ancien": "\\[ g_t J(\\_t) \\]",
+  "nouveau": "\\[ g_t\\approx\\nabla_\\theta J(\\theta_t) \\]",
+  "confiance": "moyenne",
+  "justification": "§96 « le gradient exact de l'objectif total est souvent remplacé par une estimation : [g_t J(\\_t)] ». L'estimateur g_t et le vrai gradient sont reliés par une approximation.",
+  "validation": "Candidat alternatif : g_t=\\hat{\\nabla}_\\theta J(\\theta_t). À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1624,
+  "ancien": "\\[ J(w) = \\_i (w<sup>Tx_i-y_i)</sup>2 \\]",
+  "nouveau": "\\[ J(w)=\\sum_i(w^{T}x_i-y_i)^{2} \\]",
+  "confiance": "haute",
+  "justification": "§97 « Pour : [ J(w)=\\_i (w<sup>Tx_i-y_i)</sup>2 ] ». Le \\sum a laissé \\_ ; l'exposant 2 a été converti en balise <sup> qui englobe mal le reste.",
+  "validation": "Rendu : J(w)=Σ(w^T x_i−y_i)²."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1628,
+  "ancien": "\\[ J(w) = 1n X^T(Xw-y) \\]",
+  "nouveau": "\\[ \\nabla J(w)=\\frac{1}{n}X^{T}(Xw-y) \\]",
+  "confiance": "haute",
+  "justification": "§97 « on obtient : [ ] ». Résidu J(w)=1n X^T(Xw-y) : \\nabla détruit, \\frac{1}{n} réduit à 1n.",
+  "validation": "Rendu : ∇J(w)=1/n X^T(Xw−y)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1632,
+  "ancien": "\\[ w_{t+1} = w_t-J(w_t) \\]",
+  "nouveau": "\\[ w_{t+1}=w_t-\\eta\\nabla J(w_t) \\]",
+  "confiance": "haute",
+  "justification": "§97 « La mise à jour devient : [ ] ». \\eta et \\nabla détruits.",
+  "validation": "Rendu : w_{t+1}=w_t−η∇J(w_t)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1644,
+  "ancien": "\\[ R()=||\\_2^2 \\]",
+  "nouveau": "\\[ R(\\theta)=\\|\\theta\\|_2^{2} \\]",
+  "confiance": "haute",
+  "justification": "§98 RÉGULARISATION L2 « Exemple L2 : [ R()=||\\_2^2 ] ». Le résidu || est la norme \\|…\\|₂, le θ a été détruit.",
+  "validation": "Rendu : R(θ)=‖θ‖²₂."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1648,
+  "ancien": "\\[ R()=2 \\]",
+  "nouveau": "\\[ \\nabla R(\\theta)=2\\theta \\]",
+  "confiance": "haute",
+  "justification": "§98 « Alors : [ R()=2 ] La régularisation influence donc directement le gradient. » \\nabla détruit ; le θ du membre de droite aussi.",
+  "validation": "Vérifier : ∇‖θ‖²₂=2θ."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1656,
+  "ancien": "\\[ y=f_(x) \\]",
+  "nouveau": "\\[ \\hat{y}=f_\\theta(x) \\]",
+  "confiance": "haute",
+  "justification": "§99 « Pour un modèle : [ y=f_(x) ] ». Même reconstruction qu'en l. 1258.",
+  "validation": "Rendu : ŷ=f_θ(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1660,
+  "ancien": "\\[ L(y,y) \\]",
+  "nouveau": "\\[ L(\\hat{y},y) \\]",
+  "confiance": "haute",
+  "justification": "§99 « et une perte : [ L(y,y) ] ». Même reconstruction qu'en l. 1262.",
+  "validation": "Rendu : L(ŷ,y)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1664,
+  "ancien": "\\[ \\_L \\]",
+  "nouveau": "\\[ \\nabla_\\theta L \\]",
+  "confiance": "haute",
+  "justification": "§99 « on cherche : [ ] La chaîne fondamentale est : ». \\nabla détruit.",
+  "validation": "Rendu : ∇_θ L."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1668,
+  "ancien": "\\[ = \\]",
+  "nouveau": "\\[ \\nabla_\\theta L=\\frac{\\partial L}{\\partial \\hat{y}}\\frac{\\partial \\hat{y}}{\\partial \\theta} \\]",
+  "confiance": "moyenne",
+  "justification": "§99 « La chaîne fondamentale est : [= ] Dans un réseau profond, cette relation se propage à travers toutes les couches. » — \\frac et \\partial détruits des deux côtés.",
+  "validation": "Candidat alternatif : \\nabla_\\theta L=\\frac{\\partial L}{\\partial y}\\frac{\\partial y}{\\partial \\theta}. Notation de la cible à confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1693,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§102 TENSEURS « Le principe reste le même : [vide] Chaque opération possède une règle de différentiation. » — aucun résidu.",
+  "validation": "Candidat : \\text{différencier chaque opération élémentaire}. À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1735,
+  "ancien": "\\[ f:^n \\]",
+  "nouveau": "\\[ f:\\mathbb{R}^{n}\\to\\mathbb{R} \\]",
+  "confiance": "haute",
+  "justification": "§104 « Pour : [ ] le gradient possède (n) composantes. » \\mathbb et \\to détruits.",
+  "validation": "Rendu : f : ℝⁿ → ℝ."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1753,
+  "ancien": "\\[ H^{nn} \\]",
+  "nouveau": "\\[ H\\in\\mathbb{R}^{n\\times n} \\]",
+  "confiance": "haute",
+  "justification": "§105 « Si un modèle possède (n) paramètres : [H^{nn}] Le stockage naïf nécessite : [O(n²)] éléments. » — \\in, \\mathbb, \\times détruits ; les deux n ont survécu en exposant.",
+  "validation": "Rendu : H ∈ ℝ^{n×n}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1814,
+  "ancien": "\\[ F \\]",
+  "nouveau": "\\[ \\nabla F \\]",
+  "confiance": "haute",
+  "justification": "§109 « Pour une surface implicite F(x,y,z)=0, le gradient : [F] est normal à la surface. » \\nabla détruit.",
+  "validation": "Rendu : ∇F."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1824,
+  "ancien": "\\[ =v \\]",
+  "nouveau": "\\[ \\dot{x}=v \\]",
+  "confiance": "haute",
+  "justification": "§110 SIMULATION PHYSIQUE « Une dynamique peut être décrite par : [=v] et : [=a] ». Le point sur x a été détruit (notation newtonienne).",
+  "validation": "Rendu : ẋ=v."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1828,
+  "ancien": "\\[ =a \\]",
+  "nouveau": "\\[ \\dot{v}=a \\]",
+  "confiance": "haute",
+  "justification": "§110 « et : [=a] ». Même destruction.",
+  "validation": "Rendu : v̇=a."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1844,
+  "ancien": "\\[ =f(x,t) \\]",
+  "nouveau": "\\[ \\frac{dx}{dt}=f(x,t) \\]",
+  "confiance": "haute",
+  "justification": "§111 « Une équation différentielle relie une fonction à ses dérivées. Exemple : [=f(x,t)] ». \\frac détruit.",
+  "validation": "Rendu : dx/dt=f(x,t)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1887,
+  "ancien": "\\[ \\_(a|s) \\]",
+  "nouveau": "\\[ \\pi_\\theta(a|s) \\]",
+  "confiance": "haute",
+  "justification": "§114 REINFORCEMENT LEARNING « Une politique peut être paramétrée par : [\\_(a|s)] ». Le \\_ est le résidu d'une lettre grecque indicée — \\pi_\\theta, la politique.",
+  "validation": "Rendu : π_θ(a|s)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1895,
+  "ancien": "\\[ \\_J() \\]",
+  "nouveau": "\\[ \\max_\\theta J(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§114 « On cherche : [ ] ». \\max détruit.",
+  "validation": "Rendu : max_θ J(θ)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1903,
+  "ancien": "\\[ p_(x) \\]",
+  "nouveau": "\\[ p_\\theta(x) \\]",
+  "confiance": "haute",
+  "justification": "§115 « Dans les modèles probabilistes : [p_(x)] dépend de paramètres. » Le θ a été détruit.",
+  "validation": "Rendu : p_θ(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1909,
+  "ancien": "\\[ _p_(x) \\]",
+  "nouveau": "\\[ \\nabla_\\theta\\log p_\\theta(x) \\]",
+  "confiance": "moyenne",
+  "justification": "§115 « On peut chercher : [_p_(x)] Cette quantité apparaît dans : - maximum de vraisemblance ; … ». Le \\log a été détruit ; la liste qui suit (score function, vraisemblance) désigne le gradient du log.",
+  "validation": "Candidat alternatif : \\nabla_\\theta p_\\theta(x). Le contexte penche pour le gradient du log."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1923,
+  "ancien": "\\[ ^\\* = _ L() \\]",
+  "nouveau": "\\[ \\theta^{*}=\\arg\\max_\\theta \\mathcal{L}(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§116 « Le maximum de vraisemblance cherche : [ ^\\* = _ L() ] ». \\arg\\max réduit à \\_ ; \\mathcal{L} détruit.",
+  "validation": "Rendu : θ*=argmax_θ 𝓛(θ)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1927,
+  "ancien": "\\[ ^\\* = _ -L() \\]",
+  "nouveau": "\\[ \\theta^{*}=\\arg\\min_\\theta -\\mathcal{L}(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§116 « ou : [ ^\\* = _ -L() ] ». Le signe moins a survécu : c'est la minimisation de la négative.",
+  "validation": "Équivalent au maximum de vraisemblance."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1933,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§116 « Ainsi : [vide] » — conclusion du maximum de vraisemblance. Aucun résidu.",
+  "validation": "Candidat : \\text{le gradient permet de remonter à l'optimum}. À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1939,
+  "ancien": "\\[ {xp_} \\[f_(x)\\] \\]",
+  "nouveau": "\\[ \\nabla_\\theta\\,\\mathbb{E}_{x\\sim p_\\theta}\\left[f_\\theta(x)\\right] \\]",
+  "confiance": "haute",
+  "justification": "§117 GRADIENT D'UNE ESPÉRANCE « on doit différencier : [ {xp_} \\[f_(x)\\] ] ». Le résidu montre l'espérance sous p_θ (le \\sim et le \\nabla détruits) et l'intérieur f_θ(x). Les crochets échappés \\[ \\] sont un artefact, pas une seconde équation.",
+  "validation": "Rendu : ∇_θ 𝔼_{x∼p_θ}[f_θ(x)]. Le §117 renvoie à la score function et au reparamétrage."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1952,
+  "ancien": "\\[ z=g(,) \\]",
+  "nouveau": "\\[ z=g(\\theta,\\epsilon) \\]",
+  "confiance": "haute",
+  "justification": "§118 REPARAMÉTRISATION « réécrire une variable aléatoire dépendant de (θ) sous la forme : [ z=g(,) ] ». Les deux lettres grecques θ et ε ont été détruites, la virgule est restée.",
+  "validation": "Rendu : z=g(θ,ε)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1977,
+  "ancien": "\\[ x \\]",
+  "nouveau": "\\[ \\Delta x\\to 0 \\]",
+  "confiance": "moyenne",
+  "justification": "§120 « Il décrit ce qui se passe lorsque : [x] ». Le \\Delta et la flèche ont été détruits ; le calcul différentiel est local, donc la variation tend vers zéro.",
+  "validation": "Candidat alternatif : x\\to x+\\Delta x. À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1985,
+  "ancien": "\\[ f(x) \\]",
+  "nouveau": "\\[ \\nabla f(x) \\]",
+  "confiance": "haute",
+  "justification": "§121 « Une information différentielle : [ ] décrit le comportement autour de (x). » \\nabla détruit.",
+  "validation": "Rendu : ∇f(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 1991,
+  "ancien": "\\[ = \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§121 « Elle ne garantit pas automatiquement : [= ] Pour obtenir des garanties globales, il faut exploiter des structures supplémentaires : - convexité ; … ». La liste qui suit indique de quelles garanties il s'agit, mais le bloc est vide.",
+  "validation": "Candidat : \\text{un minimum global}. À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2004,
+  "ancien": "\\[ f(x^\\*)=0 \\]",
+  "nouveau": "\\[ \\nabla f(x^{*})=0 \\]",
+  "confiance": "haute",
+  "justification": "§122 STATIONNARITÉ « Une condition fondamentale d'optimalité intérieure est : [ ] ». \\nabla détruit.",
+  "validation": "Rendu : ∇f(x*)=0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2032,
+  "ancien": "\\[ \\_{t+1} = \\_t-_t_J(\\_t) \\]",
+  "nouveau": "\\[ \\theta_{t+1}=\\theta_t-\\eta_t\\nabla_\\theta J(\\theta_t) \\]",
+  "confiance": "haute",
+  "justification": "§123 « Mathématiquement : [ \\_{t+1}=\\_t-_t_J(\\_t) ] ». Le \\eta_t et le \\nabla_\\theta ont été détruits ; le signe moins est réel.",
+  "validation": "Rendu : θ_{t+1}=θ_t−η_t∇_θ J(θ_t)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2038,
+  "ancien": "\\[ |J()|< \\]",
+  "nouveau": "\\[ \\|\\nabla J(\\theta)\\|<\\epsilon \\]",
+  "confiance": "haute",
+  "justification": "§124 CRITÈRES D'ARRÊT « Une optimisation peut être arrêtée lorsque : [ |J()|< ] ». \\|, \\nabla détruits ; \\epsilon détruit.",
+  "validation": "Rendu : ‖∇J(θ)‖<ε."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2042,
+  "ancien": "\\[ |J_{t+1}-J_t|< \\]",
+  "nouveau": "\\[ |J_{t+1}-J_t|<\\epsilon \\]",
+  "confiance": "haute",
+  "justification": "§124 « ou lorsque : [ |J_{t+1}-J_t|< ] ». Seul \\epsilon manque.",
+  "validation": "Rendu : |J_{t+1}−J_t|<ε."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2056,
+  "ancien": "\\[ x_kx^\\* \\]",
+  "nouveau": "\\[ x_k\\to x^{*} \\]",
+  "confiance": "haute",
+  "justification": "§125 CONVERGENCE « Une suite (x_k) converge vers (x*) si : [ ] ». \\to détruit.",
+  "validation": "Rendu : x_k → x*."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2124,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§130 CHECKPOINTING « On échange donc : [vide] ». Le compromis mémoire/calcul est décrit en prose autour du bloc.",
+  "validation": "Candidat : \\text{de la mémoire contre du calcul}. À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2145,
+  "ancien": "\\[ \\_i e^{x_i} \\]",
+  "nouveau": "\\[ \\log\\sum_i e^{x_i} \\]",
+  "confiance": "haute",
+  "justification": "§132 LOG-SUM-EXP « Pour calculer : [\\_i e^{x_i}] de manière stable ». Le \\log a été détruit ; la section entière porte sur la stabilité du logarithme d'une somme d'exponentielles.",
+  "validation": "Rendu : log Σᵢ e^{xᵢ}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2149,
+  "ancien": "\\[ m+\\_i e^{x_i-m} \\]",
+  "nouveau": "\\[ m+\\log\\sum_i e^{x_i-m} \\]",
+  "confiance": "haute",
+  "justification": "§132 « on utilise généralement : [ m+\\_i e^{x_i-m} ] ». Même destruction du \\log.",
+  "validation": "Astuce du max : log Σ e^{x_i} = m + log Σ e^{x_i−m}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2153,
+  "ancien": "\\[ m=\\_i x_i \\]",
+  "nouveau": "\\[ m=\\max_i x_i \\]",
+  "confiance": "haute",
+  "justification": "§132 « avec : [ m=\\_i x_i ] ». Le \\_ est ici le résidu de \\max.",
+  "validation": "Rendu : m=maxᵢ xᵢ."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2163,
+  "ancien": "\\[ g g \\]",
+  "nouveau": "\\[ g\\gets \\frac{c\\,g}{\\|g\\|} \\]",
+  "confiance": "haute",
+  "justification": "§133 GRADIENT CLIPPING « on peut limiter leur norme. Par exemple : [g g] lorsque : [‖g‖>c] ». Le \\gets (ou \\leftarrow) et \\frac ont été détruits.",
+  "validation": "Rendu : g ← cg/‖g‖. C'est le clipping par la norme."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2167,
+  "ancien": "\\[ |g|>c \\]",
+  "nouveau": "\\[ \\|g\\|>c \\]",
+  "confiance": "haute",
+  "justification": "§133 « lorsque : [ |g|>c ] ». \\| détruit.",
+  "validation": "Rendu : ‖g‖>c."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2217,
+  "ancien": "\\[ f’(x) \\]",
+  "nouveau": "\\[ f'(x)\\approx\\frac{f(x+h)-f(x)}{h} \\]",
+  "confiance": "haute",
+  "justification": "§136 « Exemple : [f'(x)] Elle est simple mais sujette aux erreurs numériques. » Même reconstruction qu'en l. 1392.",
+  "validation": "Rendu : f'(x)≈(f(x+h)−f(x))/h."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2252,
+  "ancien": "\\[ f(x) \\]",
+  "nouveau": "\\[ \\nabla f(x) \\]",
+  "confiance": "haute",
+  "justification": "§139 « Exemple : [ ] est un vecteur. » — le gradient est le vecteur, la Jacobienne la matrice (blocs suivants). \\nabla détruit.",
+  "validation": "Rendu : ∇f(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2283,
+  "ancien": "\\[ p_(x) \\]",
+  "nouveau": "\\[ \\nabla_\\theta p_\\theta(x) \\]",
+  "confiance": "moyenne",
+  "justification": "§140 « On différencie : [p_(x)] ou : [p_(x)] pour effectuer de l'estimation et de l'optimisation. » Les deux blocs sont identiques en apparence ; la conjonction « ou » les distingue.",
+  "validation": "Candidat alternatif : \\frac{\\partial}{\\partial\\theta}p_\\theta(x). À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2287,
+  "ancien": "\\[ p_(x) \\]",
+  "nouveau": "\\[ \\nabla_\\theta\\log p_\\theta(x) \\]",
+  "confiance": "moyenne",
+  "justification": "§140 second bloc. Le « ou » suggère l'alternative usuelle : la dérivée de la densité ou celle de son logarithme.",
+  "validation": "Candidat alternatif : \\nabla_\\theta \\log \\mathcal{L}(\\theta). À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2461,
+  "ancien": "\\[ x \\]",
+  "nouveau": "\\[ \\sqrt{x} \\]",
+  "confiance": "moyenne",
+  "justification": "§154 « Exemples : [x²] [x] [e^x] ». Le nom de la fonction médiane a été détruit ; entre x² et e^x, la racine carrée est l'exemple canonique de dérivée non entière.",
+  "validation": "Candidat alternatif : \\sin x ou \\ln x. À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2490,
+  "ancien": "\\[ x_{t+1} = x_t-f(x_t) \\]",
+  "nouveau": "\\[ x_{t+1}=x_t-\\eta\\nabla f(x_t) \\]",
+  "confiance": "haute",
+  "justification": "§156 PROJET 2 « Implémenter : [ ] sur plusieurs fonctions. » \\eta et \\nabla détruits.",
+  "validation": "Rendu : x_{t+1}=x_t−η∇f(x_t)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2514,
+  "ancien": "\\[ J(w,b) = 1n \\_i (y_i-y_i)^2 \\]",
+  "nouveau": "\\[ J(w,b)=\\frac{1}{n}\\sum_i(\\hat{y}_i-y_i)^{2} \\]",
+  "confiance": "haute",
+  "justification": "§157 « avec : [ J(w,b)=1n \\_i (y_i-y_i)^2 ] ». Les deux arguments sont identiques en apparence : le chapeau du premier a été détruit.",
+  "validation": "Rendu : J(w,b)=1/n Σ(ŷ_i−y_i)²."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2518,
+  "ancien": "\\[ \\_wJ \\]",
+  "nouveau": "\\[ \\nabla_w J \\]",
+  "confiance": "haute",
+  "justification": "§157 « Puis calculer manuellement : [ ] ». \\nabla détruit.",
+  "validation": "Rendu : ∇_w J."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2522,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\nabla_b J \\]",
+  "confiance": "haute",
+  "justification": "§157 « et : [vide] ». Pendant du bloc précédent, pour le biais.",
+  "validation": "Rendu : ∇_b J."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2596,
+  "ancien": "\\[ x \\]",
+  "nouveau": "\\[ \\ln x \\]",
+  "confiance": "moyenne",
+  "justification": "§162 EXERCICES NIVEAU 1 « Être capable de dériver sans assistance : [x^n] [e^x] [x] [x] [x] ainsi que des compositions et produits. » Cinq fonctions ; les trois dernières ont perdu leur nom.",
+  "validation": "Candidat : ln x. Alternatives : \\sin x, \\cos x — voir les blocs suivants."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2598,
+  "ancien": "\\[ x \\]",
+  "nouveau": "\\[ \\sin x \\]",
+  "confiance": "moyenne",
+  "justification": "§162, quatrième fonction de la liste.",
+  "validation": "Candidat. L'ordre {ln, sin, cos} reprend celui de la section 12."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2600,
+  "ancien": "\\[ x \\]",
+  "nouveau": "\\[ \\cos x \\]",
+  "confiance": "moyenne",
+  "justification": "§162, cinquième fonction de la liste.",
+  "validation": "Candidat. À confirmer ; \\tan x est une alternative."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2608,
+  "ancien": "\\[ f(x,y) \\]",
+  "nouveau": "\\[ \\nabla f(x,y) \\]",
+  "confiance": "haute",
+  "justification": "§163 EXERCICES NIVEAU 2 « Calculer : [ ] pour plusieurs fonctions. » \\nabla détruit.",
+  "validation": "Rendu : ∇f(x,y)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2622,
+  "ancien": "\\[ f:^n \\]",
+  "nouveau": "\\[ f:\\mathbb{R}^{n}\\to\\mathbb{R} \\]",
+  "confiance": "haute",
+  "justification": "§164 « Pour une fonction : [ ] être capable d'expliquer : ». \\mathbb et \\to détruits.",
+  "validation": "Rendu : f : ℝⁿ → ℝ."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2640,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\frac{dL}{dx} \\]",
+  "confiance": "moyenne",
+  "justification": "§165 « Pour une fonction composée L=f_3(f_2(f_1(x))), calculer : [vide] manuellement par la règle de chaîne. »",
+  "validation": "Candidat alternatif : \\frac{\\partial L}{\\partial x}. À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2650,
+  "ancien": "\\[ a=(z) \\]",
+  "nouveau": "\\[ a=\\sigma(z) \\]",
+  "confiance": "haute",
+  "justification": "§166 « Prendre un neurone : z=wx+b, [a=(z)], L=(a−y)² ». \\sigma détruit.",
+  "validation": "Rendu : a=σ(z)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2656,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\frac{\\partial L}{\\partial w} \\]",
+  "confiance": "moyenne",
+  "justification": "§166 « et calculer : [vide] manuellement. » — la dérivée de la perte par rapport au poids.",
+  "validation": "Candidat alternatif : \\frac{\\partial L}{\\partial \\theta}. À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2686,
+  "ancien": "\\[ f=0 \\]",
+  "nouveau": "\\[ \\nabla f=0 \\]",
+  "confiance": "haute",
+  "justification": "§168 Défi 4 « Expliquer pourquoi : [f=0] ne signifie pas nécessairement minimum. » \\nabla détruit.",
+  "validation": "Rendu : ∇f=0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2838,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§171 CE QU'IL FAUT ABSOLUMENT RETENIR, premier des quatre blocs (« doit contenir : »). Bloc vide, aucun résidu.",
+  "validation": "Candidat : dérivée — la dérivée, puis le gradient, puis la règle de chaîne, puis l'optimisation — les quatre piliers du document."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2842,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§171, deuxième bloc (« puis : »). Bloc vide, aucun résidu.",
+  "validation": "Candidat : gradient — ordre proposé : dérivée → gradient → chaîne → optimisation."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2846,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§171, troisième bloc (« puis : »). Bloc vide, aucun résidu.",
+  "validation": "Candidat : règle de chaîne — ordre proposé."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2850,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§171, quatrième bloc (« et enfin : »). Bloc vide, aucun résidu.",
+  "validation": "Candidat : optimisation — ordre proposé."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2858,
+  "ancien": "\\[ f: \\]",
+  "nouveau": "\\[ f:\\mathbb{R}\\to\\mathbb{R} \\]",
+  "confiance": "haute",
+  "justification": "§172 LES QUATRE OBJETS « ### Dérivée — Pour une fonction : [ ] on obtient : [f'(x)] ». \\mathbb et \\to détruits.",
+  "validation": "Rendu : f : ℝ → ℝ."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2872,
+  "ancien": "\\[ f(x) \\]",
+  "nouveau": "\\[ \\nabla f(x) \\]",
+  "confiance": "haute",
+  "justification": "§172 « ### Gradient — Pour : [f:^n] on obtient : [f(x)] ». \\nabla détruit.",
+  "validation": "Rendu : ∇f(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2878,
+  "ancien": "\\[ F:<sup>n</sup>m \\]",
+  "nouveau": "\\[ F:\\mathbb{R}^{n}\\to\\mathbb{R}^{m} \\]",
+  "confiance": "haute",
+  "justification": "§172 « ### Jacobienne — Pour : [F:<sup>n</sup>m] on obtient : [J_F(x)] ».",
+  "validation": "Rendu : F : ℝⁿ → ℝᵐ."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2888,
+  "ancien": "\\[ f:^n \\]",
+  "nouveau": "\\[ f:\\mathbb{R}^{n}\\to\\mathbb{R} \\]",
+  "confiance": "haute",
+  "justification": "§172 « ### Hessienne — Pour : [ ] on obtient : [H_f(x)] ».",
+  "validation": "Rendu : f : ℝⁿ → ℝ."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2932,
+  "ancien": "\\[ \\_{t+1} = \\_t\n\n- _t_ J(\\_t) \\]",
+  "nouveau": "\\[ \\theta_{t+1}=\\theta_t\n\n- \\eta_t\\nabla_\\theta J(\\theta_t) \\]",
+  "confiance": "haute",
+  "justification": "§173 LA GRANDE CHAÎNE DU ML « Mathématiquement : [ ] C'est l'une des équations les plus importantes à comprendre pour le Machine Learning. » — le \\theta, le \\eta_t et le \\nabla_\\theta ont été détruits.",
+  "validation": "Rendu : θ_{t+1}=θ_t−η_t∇_θ J(θ_t). Identique à l. 2032, ce qui confirme."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2958,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§174 « La backpropagation peut donc être comprise comme : [vide] ». La chaîne ASCII qui précède (Paramètres → Opérations → Sortie → Loss → Dérivée locale → Règle de chaîne → Gradient → Paramètres) est intacte ; le bloc mathématique qui la résume est vide.",
+  "validation": "Candidat : \\frac{\\partial L}{\\partial\\theta}=\\frac{\\partial L}{\\partial a}\\cdot\\frac{\\partial a}{\\partial z}\\cdot\\frac{\\partial z}{\\partial\\theta}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2980,
+  "ancien": "\\[ f=0 \\]",
+  "nouveau": "\\[ \\nabla f=0 \\]",
+  "confiance": "haute",
+  "justification": "§175 Erreur 2 « Un point selle peut avoir : [f=0] ». \\nabla détruit.",
+  "validation": "Rendu : ∇f=0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 2986,
+  "ancien": "\\[ f \\]",
+  "nouveau": "\\[ \\nabla f \\]",
+  "confiance": "haute",
+  "justification": "§175 Erreur 3 « Confondre : [f] et : [J_f] ». Le premier est le gradient, le second la Jacobienne ; \\nabla détruit.",
+  "validation": "Rendu : ∇f opposé à J_f."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3016,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§176 Niveau 1 — Calcul différentiel. Bloc vide, aucun résidu.",
+  "validation": "Candidat : \\[ f'(x) \\] — l'objet du niveau 1 est la dérivée."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3020,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§176 Niveau 2 — Optimisation. Bloc vide, aucun résidu.",
+  "validation": "Candidat : \\[ \\min_x f(x) \\] — l'objet du niveau 2 est la minimisation."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3024,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§176 Niveau 3 — Apprentissage. Bloc vide, aucun résidu.",
+  "validation": "Candidat : \\[ \\min_\\theta J(\\theta) \\] — l'objet du niveau 3 est la minimisation du risque empirique."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3056,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§178 Probabilités. Bloc vide, aucun résidu.",
+  "validation": "Candidat : \\[ p_\\theta(x) \\] — cf. §115."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3060,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§178 Statistiques. Bloc vide, aucun résidu.",
+  "validation": "Candidat : \\[ \\theta^{*}=\\arg\\max_\\theta \\mathcal{L}(\\theta) \\] — cf. §116."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3064,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§178 Calcul différentiel. Bloc vide, aucun résidu.",
+  "validation": "Candidat : \\[ \\nabla_\\theta J(\\theta) \\] — cf. §73."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3068,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§178 En Machine Learning. Bloc vide, aucun résidu.",
+  "validation": "Candidat : \\[ \\theta_{t+1}=\\theta_t-\\eta\\nabla_\\theta J(\\theta_t) \\] — cf. §123 et §173."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3117,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§180 « Son idée fondamentale est : ». Bloc vide, aucun résidu.",
+  "validation": "Candidat : \\[ \\text{mesurer la variation locale} \\] — reprend le paragraphe de conclusion, qui parle de « mesurer comment un système change localement »."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3121,
+  "ancien": "\\[ f(x) f’(x) \\]",
+  "nouveau": "\\[ f(x)\\to f'(x) \\]",
+  "confiance": "haute",
+  "justification": "§180 SYNTHÈSE FINALE « À une variable : [f(x) f'(x)] ». Les flèches ont été détruites ; la structure « objet → objet » est celle de toute la section.",
+  "validation": "Rendu : f(x) → f'(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3125,
+  "ancien": "\\[ f(x) f(x) \\]",
+  "nouveau": "\\[ f(x)\\to \\nabla f(x) \\]",
+  "confiance": "haute",
+  "justification": "§180 « À plusieurs variables : [f(x) f(x)] ». Les deux termes sont identiques en apparence : le \\nabla du second a été détruit.",
+  "validation": "Rendu : f(x) → ∇f(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3129,
+  "ancien": "\\[ F(x) J_F(x) \\]",
+  "nouveau": "\\[ F(x)\\to J_F(x) \\]",
+  "confiance": "haute",
+  "justification": "§180 « Pour une transformation vectorielle : [ ] ». Les termes sont intacts, la flèche a été détruite.",
+  "validation": "Rendu : F(x) → J_F(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3133,
+  "ancien": "\\[ f(x) H_f(x) \\]",
+  "nouveau": "\\[ f(x)\\to H_f(x) \\]",
+  "confiance": "haute",
+  "justification": "§180 « Pour la courbure : [ ] ». Même structure.",
+  "validation": "Rendu : f(x) → H_f(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3137,
+  "ancien": "\\[ f(x) x-f(x) \\]",
+  "nouveau": "\\[ f(x)\\to x-\\eta\\nabla f(x) \\]",
+  "confiance": "haute",
+  "justification": "§180 « Pour l'optimisation : [f(x) x-f(x)] ». Le troisième terme montre le \\eta détruit et le \\nabla détruit ; le signe moins a survécu.",
+  "validation": "Rendu : f(x) → x−η∇f(x). Cohérent avec l. 984."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3141,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§180 « Pour les réseaux neuronaux : [vide] ». Les quatre blocs suivants suivent le même motif « objet → objet » et sont tous vides.",
+  "validation": "Candidat : \\[ L\\to\\nabla_\\theta L \\] (la perte vers le gradient par backpropagation)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3145,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§180 « Pour le Machine Learning : [vide] ».",
+  "validation": "Candidat : \\[ J(\\theta)\\to\\theta_{t+1}=\\theta_t-\\eta\\nabla_\\theta J(\\theta_t) \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3149,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§180 « Pour la simulation : [vide] ».",
+  "validation": "Candidat : \\[ x(t)\\to\\dot{x}=f(x,t) \\], en écho au §110."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3153,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§180 « Pour la computer graphics : [vide] ».",
+  "validation": "Candidat : \\[ F(x,y,z)\\to\\nabla F \\], la normale d'une surface implicite (§109)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3161,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§180 « Le domaine I constitue ainsi le pont mathématique direct entre : [vide] ».",
+  "validation": "Candidat : \\text{les fonctions et leur optimisation}. À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3165,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§180 « et, plus largement : [vide] ».",
+  "validation": "Candidat : \\text{l'apprentissage automatique}. À confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3175,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "FIN DU DOCUMENT « **Noyau absolument fondamental :** [vide] ».",
+  "validation": "Candidat : \\[ f\\to f'\\to\\nabla\\to H \\] — la chaîne qui résume tout le document."
+ }
+]
