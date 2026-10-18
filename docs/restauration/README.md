@@ -141,6 +141,7 @@ toucher aux autres.
 | 1 | **K** — 18 défauts signalés, **30 traités** | domaine le plus utile au produit, équations canoniques — **terminé, 0 défaut restant** (lots 1 et 1 bis) |
 | 2 | **L** — analyse numérique | socle des critères de validation ; 61 signalés, **131 au total**, 102 appliqués — **33 blocs en attente de l'auteur** |
 | 3 | **I** — calcul différentiel | 109 signalés, **223 au total** (lecture intégrale des 318 blocs) — lots 3a et 3b proposés |
+| 4 | **N** — transformées | 84 signalés, lecture intégrale des 248 blocs — **lot 4a proposé** (75 entrées), lot 4b à venir |
 | 3 | **I** — calcul différentiel | 109 défauts, socle des systèmes continus |
 | 4 | **N** — transformées | 104 défauts, utile aux composants de signal |
 | 5 | J, H, G, M, O | 387 défauts, utilité indirecte |
