@@ -1,27 +1,19 @@
 # DOMAINE J — BLOCS À TRANCHER
 
 **Date :** 2026-10-18 · **Statut :** candidats soumis, **non appliqués**
-**Lots concernés :** `domaine-J-lot5a` (13) + `domaine-J-lot5b` (53) = **66 blocs**
+**Lots concernés :** `domaine-J-lot5a` (13) + `domaine-J-lot5b` (43) = **56 blocs**
 **Protocole validé :** une réponse par lot — « lot accepté », « lot accepté sauf les
 lignes X, Y », ou votre texte pour certaines lignes. Repli « contenu perdu » accepté.
 
 ---
 
-## 1. Une hypothèse à confirmer ou à infirmer : la Grande Carte (§155)
+## 1. Réglé : la Grande Carte (§155)
 
-Dix blocs vides consécutifs (l. 3386 à 3404), suivis du seul bloc survivant de la
-section : `\[ IJ \]`, qui restitue une flèche entre deux lettres de domaines.
-
-**Hypothèse** : les dix blocs sont les dix domaines traversés, `A → B → … → J`, la
-transition mise en avant par le texte étant la dernière, `I → J`. Deux éléments
-l'étayent : le corpus compte exactement dix documents jusqu'à J, et la notation du bloc
-survivant est une flèche entre lettres.
-
-**Ce qui la limite** : la section 122 déploie elle aussi une chaîne de **dix** étapes
-intacte (`Problem → Variables → Objective → … → Validation`), mais elle décrit un
-moteur d'optimisation et non une progression de domaines. **Un comptage n'est pas une
-preuve** — c'est pourquoi les dix blocs restent en inconnue et ne sont pas appliqués.
-Si l'hypothèse vous convient, les dix lignes se règlent d'un seul geste.
+Les dix blocs vides des lignes 3386 à 3404 ont été **tranchés par l'auteur le
+2026-10-18** : l'hypothèse A→…→J est retenue. Ils sont passés du statut « inconnue »
+au lot **`domaine-J-lot5c`**, en confiance moyenne — l'hypothèse d'ensemble est
+validée, son encodage bloc par bloc reste une reconstruction puisque chaque résidu est
+vide. Voir `domaine-J-lot5c.md`.
 
 ## 2. Trois familles de blocs
 
@@ -34,16 +26,16 @@ Si l'hypothèse vous convient, les dix lignes se règlent d'un seul geste.
 - **Schémas** — §56, §95, §109 : le bloc contenait probablement un schéma ASCII, dont
   le §122 montre que le document sait les produire.
 
-## 3. Erratum sur le lot 5a
+## 3. Réserve sur le lot 5a
 
 La ligne **473** (`0x` → `0\leq x\leq 1`) est proposée en haute dans le lot 5a. Le même
-motif apparaît en l. 1896, où je l'ai classé moyenne : le résidu ne montre que le `0` et
-la variable, sans le second `\leq` ni le `1` final. La reconstruction reste la seule
+motif apparaît en l. 1896, classée moyenne : le résidu ne montre que le `0` et la
+variable, sans le second `\leq` ni le `1` final. La reconstruction reste la seule
 sémantiquement correcte, mais elle ne découle pas du résidu. À confirmer.
 
 ---
 
-## 4. Les 66 blocs
+## 4. Les 56 blocs restants
 
 | Ligne | Lot | § | Section | Candidat / ce que le bloc contenait |
 |---:|:--:|---:|---|---|
@@ -101,15 +93,5 @@ sémantiquement correcte, mais elle ne découle pas du résidu. À confirmer.
 | 3042 | 5b | 147 | EXERCICES THÉORIQUES | Candidat : \[ \eta=0{,}1 \]. La valeur est un choix d'auteur — un exercice a besoin d'un nombre, mais ce nombre ne se déduit pas du document. |
 | 3091 | 5b | 149 | CHALLENGE AVEC IA | Candidat : \[ \text{la modélisation produite} \] et \[ \text{la vôtre} \] — l'exercice consiste à confronter deux modélisations. |
 | 3380 | 5b | 154 | SYNTHÈSE CONCEPTUELLE | Candidat : \[ J=Q-C-T-E \] (l. 2746). |
-| 3386 | 5b | 155 | LA GRANDE CARTE DES DOMAINES | Piste : le corpus compte dix domaines avant J (A, B, C, D, E, F, G, H, I puis J) et le bloc survivant \[ IJ \] montre que la notation est une flèche entre deux lettres. Candidat : les dix domaines A→… |
-| 3388 | 5b | 155 | LA GRANDE CARTE DES DOMAINES | Voir l. 3386. |
-| 3390 | 5b | 155 | LA GRANDE CARTE DES DOMAINES | Voir l. 3386. |
-| 3392 | 5b | 155 | LA GRANDE CARTE DES DOMAINES | Voir l. 3386. |
-| 3394 | 5b | 155 | LA GRANDE CARTE DES DOMAINES | Voir l. 3386. |
-| 3396 | 5b | 155 | LA GRANDE CARTE DES DOMAINES | Voir l. 3386. |
-| 3398 | 5b | 155 | LA GRANDE CARTE DES DOMAINES | Voir l. 3386. |
-| 3400 | 5b | 155 | LA GRANDE CARTE DES DOMAINES | Voir l. 3386. |
-| 3402 | 5b | 155 | LA GRANDE CARTE DES DOMAINES | Voir l. 3386. |
-| 3404 | 5b | 155 | LA GRANDE CARTE DES DOMAINES | Voir l. 3386. |
 | 3526 | 5b | 158 | SYNTHÈSE FINALE | Candidat : \[ \min\ \text{coût}\ \text{sous}\ \text{contrainte de qualité} \] — d'après la question 10 du §110 (« Quel compromis entre qualité et temps de calcul est acceptable ? »). |
 | 3534 | 5b | 158 | SYNTHÈSE FINALE | Candidat : \[ I\to J \] — la notation employée au §155. |
