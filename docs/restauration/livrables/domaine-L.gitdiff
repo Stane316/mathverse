@@ -1,0 +1,704 @@
+diff --git "a/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md" "b/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md"
+index 3174d9e..e12cc08 100644
+--- "a/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md"	
++++ "b/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md"	
+@@ -133,7 +133,7 @@ avec notamment :
+ 
+ Les domaines précédents peuvent produire :
+ 
+-\[ f(x),Ax=b,f,\_a^b f(x),dx,=f(t,y) \]
++\[ f(x),\quad Ax=b,\quad \nabla f,\quad \int_a^b f(x)\,dx,\quad y'=f(t,y) \]
+ 
+ mais L pose la question :
+ 
+@@ -151,7 +151,7 @@ Un ordinateur utilisant une représentation binaire à précision finie ne peut
+ 
+ Il stocke une approximation :
+ 
+-\[ x. \]
++\[ \hat{x}. \]
+ 
+ Cette différence est fondamentale.
+ 
+@@ -163,9 +163,9 @@ dans la plupart des cas.
+ 
+ ## 4.1 Erreur absolue
+ 
+-Si (x) est la valeur exacte et () la valeur calculée :
++Si (x) est la valeur exacte et (\hat{x}) la valeur calculée :
+ 
+-\[ E_a=|x-|. \]
++\[ E_a=|x-\hat{x}|. \]
+ 
+ Exemple :
+ 
+@@ -173,7 +173,7 @@ Exemple :
+ 
+ et
+ 
+-\[ =9.99. \]
++\[ \hat{x}=9.99. \]
+ 
+ Alors :
+ 
+@@ -183,13 +183,13 @@ Alors :
+ 
+ Lorsque (x) :
+ 
+-\[ E_r=. \]
++\[ E_r=\frac{|x-\hat{x}|}{|x|}. \]
+ 
+ Elle permet de comparer l’erreur à l’échelle du résultat.
+ 
+ ## 4.3 Erreur relative en pourcentage
+ 
+-\[ E_r(%)= 100. \]
++\[ E_r(\%)=\frac{|x-\hat{x}|}{|x|}\times 100. \]
+ 
+ # 5\. SOURCES D’ERREUR NUMÉRIQUE
+ 
+@@ -219,11 +219,11 @@ Une expression infinie ou continue est remplacée par une approximation finie.
+ 
+ Exemple :
+ 
+-\[ e^x = \_{k=0}<sup>{}\\frac{x</sup>k}{k!} \]
++\[ e^x = \sum_{k=0}^{\infty}\frac{x^k}{k!} \]
+ 
+ est approximée par :
+ 
+-\[ e^x \_{k=0}<sup>{N}\\frac{x</sup>k}{k!}. \]
++\[ e^x \approx \sum_{k=0}^{N}\frac{x^k}{k!}. \]
+ 
+ Le terme restant constitue une erreur de troncature.
+ 
+@@ -239,7 +239,7 @@ La représentation informatique classique d’un réel utilise une structure pro
+ 
+ Dans les systèmes binaires :
+ 
+-\[ x=m^e. \]
++\[ x=m\,2^e. \]
+ 
+ Une représentation flottante possède notamment :
+ 
+@@ -252,13 +252,13 @@ Une représentation flottante possède notamment :
+ 
+ Il existe une différence fondamentale entre :
+ 
+-\[ \]
++\[ \mathbb{R} \]
+ 
+ et l’ensemble fini des nombres représentables par une machine.
+ 
+ Ainsi :
+ 
+-\[ \]
++\[ \mathbb{R} \]
+ 
+ est continu et infini tandis que les nombres flottants disponibles sont finis.
+ 
+@@ -268,7 +268,7 @@ La **machine epsilon** caractérise approximativement la résolution relative de
+ 
+ Pour une représentation de précision (p), on rencontre des quantités de l’ordre de :
+ 
+-\[ \_{}^{-p} \]
++\[ \varepsilon_{\text{mach}} \approx \beta^{-p} \]
+ 
+ selon la convention utilisée.
+ 
+@@ -294,7 +294,7 @@ les chiffres significatifs communs peuvent s’annuler.
+ 
+ On parle de :
+ 
+-\[ \]
++\[ \text{annulation catastrophique} \]
+ 
+ ou **catastrophic cancellation**.
+ 
+@@ -306,11 +306,11 @@ En arithmétique exacte :
+ 
+ En flottant :
+ 
+-\[ ((a+b)+c) \]
++\[ \mathrm{fl}((a+b)+c) \]
+ 
+ peut être différent de :
+ 
+-\[ (a+(b+c)). \]
++\[ \mathrm{fl}(a+(b+c)). \]
+ 
+ ## 9.4 Overflow
+ 
+@@ -362,11 +362,11 @@ algorithme mauvais pour un problème donné.
+ 
+ Une méthode produit une suite :
+ 
+-\[ x_0,x_1,x_2, \]
++\[ x_0,x_1,x_2,\ldots \]
+ 
+ qui doit idéalement vérifier :
+ 
+-\[ x_kx^. \]
++\[ x_k\to x^*. \]
+ 
+ On étudie :
+ 
+@@ -379,11 +379,11 @@ On étudie :
+ 
+ Si :
+ 
+-\[ e_k=|x_k-x^| \]
++\[ e_k=|x_k-x^*| \]
+ 
+ et :
+ 
+-\[ e_{k+1}C e_k^p, \]
++\[ e_{k+1}\leq C e_k^p, \]
+ 
+ alors (p) représente l’ordre de convergence.
+ 
+@@ -405,15 +405,15 @@ Une méthode itérative doit savoir quand s’arrêter.
+ 
+ Critères possibles :
+ 
+-\[ |x_{k+1}-x_k|< \]
++\[ |x_{k+1}-x_k|<\varepsilon \]
+ 
+ ou :
+ 
+-\[ |F(x_k)|< \]
++\[ |F(x_k)|<\varepsilon \]
+ 
+ ou :
+ 
+-\[ {(1,|x_k|)} <. \]
++\[ |x_{k+1}-x_k|<\varepsilon\max(1,|x_k|). \]
+ 
+ Il est généralement préférable d’utiliser des critères combinant :
+ 
+@@ -432,7 +432,7 @@ Une solution peut être impossible à exprimer simplement analytiquement.
+ 
+ On cherche donc :
+ 
+-\[ x^x. \]
++\[ x^*. \]
+ 
+ # 16\. MÉTHODE DE BISSECTION
+ 
+@@ -442,11 +442,11 @@ Supposons :
+ 
+ Si (f) est continue, il existe au moins une racine dans :
+ 
+-\[ \[a,b\]. \]
++\[ [a,b]. \]
+ 
+ On calcule :
+ 
+-\[ m=. \]
++\[ m=\frac{a+b}{2}. \]
+ 
+ Puis on conserve le sous-intervalle dans lequel le changement de signe subsiste.
+ 
+@@ -462,7 +462,7 @@ Convergence relativement lente.
+ 
+ La méthode de Newton utilise :
+ 
+-\[ \]
++\[ f'(x_n) \]
+ 
+ Elle repose sur l’approximation locale de (f) par sa tangente.
+ 
+@@ -482,7 +482,7 @@ L’intersection de cette tangente avec l’axe (x) donne :
+ 
+ Près d’une racine simple et sous des conditions favorables :
+ 
+-\[ . \]
++\[ \text{convergence quadratique}. \]
+ 
+ ## 17.3 Risques
+ 
+@@ -498,7 +498,7 @@ Newton peut :
+ 
+ La dérivée est approximée par une pente :
+ 
+-\[ f’(x_n) {x_n-x_{n-1}}. \]
++\[ f'(x_n)\approx\frac{f(x_n)-f(x_{n-1})}{x_n-x_{n-1}}. \]
+ 
+ On obtient une méthode ne nécessitant pas explicitement (f’).
+ 
+@@ -628,7 +628,7 @@ Exemples :
+ 
+ Produisent :
+ 
+-\[ x_0,x_1,x_2, \]
++\[ x_0,x_1,x_2,\ldots \]
+ 
+ jusqu’à atteindre une précision acceptable.
+ 
+@@ -666,7 +666,7 @@ avec (A) symétrique définie positive, le gradient conjugué est particulièrem
+ 
+ Il transforme le problème linéaire en problème d’optimisation :
+ 
+-\[ \_x 12x<sup>TAx-b</sup>Tx. \]
++\[ \min_x \frac{1}{2}x^TAx-b^Tx. \]
+ 
+ # 31\. PRÉCONDITIONNEMENT
+ 
+@@ -688,7 +688,7 @@ L’interpolation consiste à construire une fonction passant exactement par des
+ 
+ On dispose de :
+ 
+-\[ (x_0,y_0),,(x_n,y_n). \]
++\[ (x_0,y_0),\ldots,(x_n,y_n). \]
+ 
+ On cherche (p(x)) tel que :
+ 
+@@ -698,19 +698,17 @@ On cherche (p(x)) tel que :
+ 
+ ### Forme de Lagrange
+ 
+-\[ p(x)= \_{i=0}^{n} y_iL_i(x) \]
++\[ p(x)=\sum_{i=0}^{n} y_iL_i(x) \]
+ 
+ avec :
+ 
+-\[ L_i(x)= \_{ji} . \]
++\[ L_i(x)=\prod_{j\neq i}\frac{x-x_j}{x_i-x_j}. \]
+ 
+ # 34\. FORMULE DE NEWTON
+ 
+ On peut utiliser les différences divisées :
+ 
+-\[ p(x) = a_0+ a_1(x-x_0)
+-
+-- a_2(x-x_0)(x-x_1) + \]
++\[ p(x) = a_0+ a_1(x-x_0)+ a_2(x-x_0)(x-x_1)+\ldots+a_n(x-x_0)\ldots(x-x_{n-1}) \]
+ 
+ Cette forme est pratique pour ajouter progressivement de nouveaux points.
+ 
+@@ -745,7 +743,7 @@ L’interpolation impose :
+ 
+ L’approximation cherche plutôt :
+ 
+-\[ p(x)f(x) \]
++\[ p(x)\approx f(x) \]
+ 
+ selon un critère donné.
+ 
+@@ -753,11 +751,11 @@ selon un critère donné.
+ 
+ On cherche à minimiser :
+ 
+-\[ \_i (y_i-f(x_i))^2. \]
++\[ \sum_i (y_i-f(x_i))^2. \]
+ 
+ Sous forme matricielle :
+ 
+-\[ \_x|Ax-b|\_2^2. \]
++\[ \min_x\|Ax-b\|_2^2. \]
+ 
+ Cette méthode est fondamentale en :
+ 
+@@ -773,7 +771,7 @@ Une approximation peut être stabilisée par une pénalisation.
+ 
+ Exemple :
+ 
+-\[ \_x |Ax-b|\_2^2+ |x|\_2^2. \]
++\[ \min_x \|Ax-b\|_2^2+\lambda\|x\|_2^2. \]
+ 
+ C’est une forme de régularisation de Tikhonov.
+ 
+@@ -783,7 +781,7 @@ Elle limite notamment les solutions excessivement sensibles au bruit.
+ 
+ On cherche :
+ 
+-\[ I= \_a^b f(x),dx. \]
++\[ I=\int_a^b f(x)\,dx. \]
+ 
+ Lorsque l’intégrale exacte est impossible ou trop coûteuse, on l’approxime numériquement.
+ 
+@@ -791,7 +789,7 @@ Lorsque l’intégrale exacte est impossible ou trop coûteuse, on l’approxime
+ 
+ Approximation :
+ 
+-\[ \_a^b f(x),dx \_i f(x_i)x. \]
++\[ \int_a^b f(x)\,dx \approx \sum_i f(x_i)\,\Delta x. \]
+ 
+ # 42\. RÈGLE DU MILIEU
+ 
+@@ -801,7 +799,7 @@ Cette méthode peut être plus précise que l’évaluation systématique aux ex
+ 
+ # 43\. RÈGLE DES TRAPÈZES
+ 
+-\[ \_a^b f(x),dx \[f(a)+f(b)\]. \]
++\[ \int_a^b f(x)\,dx \approx \frac{b-a}{2}\left[f(a)+f(b)\right]. \]
+ 
+ Pour plusieurs subdivisions :
+ 
+@@ -811,7 +809,7 @@ Pour plusieurs subdivisions :
+ 
+ Pour des subdivisions adaptées :
+ 
+-\[ \_a^b f(x),dx . \]
++\[ \int_a^b f(x)\,dx \approx \frac{b-a}{6}\left[f(a)+4f\left(\frac{a+b}{2}\right)+f(b)\right]. \]
+ 
+ Elle utilise une approximation quadratique locale.
+ 
+@@ -844,15 +842,15 @@ Les dérivées peuvent être approximées à partir de valeurs discrètes.
+ 
+ ## 47.1 Différence avant
+ 
+-\[ f’(x) . \]
++\[ f'(x)\approx\frac{f(x+h)-f(x)}{h}. \]
+ 
+ ## 47.2 Différence arrière
+ 
+-\[ f’(x) . \]
++\[ f'(x)\approx\frac{f(x)-f(x-h)}{h}. \]
+ 
+ ## 47.3 Différence centrée
+ 
+-\[ f’(x) . \]
++\[ f'(x)\approx\frac{f(x+h)-f(x-h)}{2h}. \]
+ 
+ La différence centrée offre généralement une meilleure précision.
+ 
+@@ -872,7 +870,7 @@ ou :
+ 
+ Plus l’ordre est élevé, plus l’erreur de discrétisation diminue rapidement lorsque :
+ 
+-\[ h. \]
++\[ h\to 0. \]
+ 
+ # 49\. COMPROMIS ENTRE DISCRÉTISATION ET ARRONDI
+ 
+@@ -898,7 +896,7 @@ approximativement.
+ 
+ Une EDO peut s’écrire :
+ 
+-\[ =f(t,y). \]
++\[ y'=f(t,y). \]
+ 
+ Avec :
+ 
+@@ -933,7 +931,7 @@ La stabilité devient critique lorsque les systèmes possèdent des échelles te
+ 
+ On parle notamment de :
+ 
+-\[ \]
++\[ \text{problèmes raides} \]
+ 
+ ou **stiff problems**.
+ 
+@@ -990,21 +988,21 @@ Monte-Carlo utilise l’échantillonnage aléatoire pour approximer une quantit
+ 
+ Pour une espérance :
+ 
+-\[ I=E\[f(X)\], \]
++\[ I=E[f(X)], \]
+ 
+ on peut utiliser :
+ 
+-\[ I_N = 1N \_{i=1}^{N}f(X_i). \]
++\[ I_N = \frac{1}{N}\sum_{i=1}^{N}f(X_i). \]
+ 
+ Sous des conditions classiques :
+ 
+-\[ I_NI. \]
++\[ I_N\to I. \]
+ 
+ # 59\. ERREUR MONTE-CARLO
+ 
+ L’erreur statistique classique décroît approximativement comme :
+ 
+-\[ O(). \]
++\[ O\left(\frac{1}{\sqrt{N}}\right). \]
+ 
+ Cela signifie qu’obtenir beaucoup plus de précision peut nécessiter énormément plus d’échantillons.
+ 
+@@ -1041,7 +1039,7 @@ Monte-Carlo est notamment utilisé pour :
+ 
+ On cherche :
+ 
+-\[ Av=v. \]
++\[ Av=\lambda v. \]
+ 
+ Les valeurs propres interviennent dans :
+ 
+@@ -1058,7 +1056,7 @@ Les valeurs propres interviennent dans :
+ 
+ Pour certaines matrices, on peut approximer la valeur propre dominante par :
+ 
+-\[ x_{k+1}= . \]
++\[ x_{k+1}=\frac{Ax_k}{\|Ax_k\|}. \]
+ 
+ # 65\. ALGORITHME QR
+ 
+@@ -1068,7 +1066,7 @@ Les méthodes QR constituent une famille importante pour calculer les valeurs pr
+ 
+ Le domaine J définit le problème :
+ 
+-\[ \_x f(x). \]
++\[ \min_x f(x). \]
+ 
+ Le domaine L explique comment le résoudre réellement.
+ 
+@@ -1086,11 +1084,11 @@ On rencontre notamment :
+ 
+ Pour :
+ 
+-\[ f(x), \]
++\[ \min f(x), \]
+ 
+ on utilise :
+ 
+-\[ x_{k+1} = x_k- H_f(x_k)^{-1}f(x_k). \]
++\[ x_{k+1} = x_k- H_f(x_k)^{-1}\nabla f(x_k). \]
+ 
+ En pratique, on évite généralement de calculer explicitement :
+ 
+@@ -1098,11 +1096,11 @@ En pratique, on évite généralement de calculer explicitement :
+ 
+ On résout plutôt :
+ 
+-\[ H=-f \]
++\[ H\delta=-\nabla f \]
+ 
+ puis :
+ 
+-\[ x_{k+1}=x_k+. \]
++\[ x_{k+1}=x_k+\delta. \]
+ 
+ # 68\. DIFFÉRENCIATION AUTOMATIQUE
+ 
+@@ -1139,7 +1137,7 @@ puis :
+ 
+ alors :
+ 
+-\[ = . \]
++\[ \frac{dy}{dx}=\frac{dy}{dz}\frac{dz}{dx}. \]
+ 
+ Un programme peut construire cette chaîne de dérivations automatiquement.
+ 
+@@ -1151,23 +1149,23 @@ C’est l’un des ponts fondamentaux entre :
+ 
+ Une méthode itérative suit généralement :
+ 
+-\[ x_{k+1}=(x_k). \]
++\[ x_{k+1}=\varphi(x_k). \]
+ 
+ On cherche un point fixe :
+ 
+-\[ x<sup>\=(x</sup>). \]
++\[ x^*=\varphi(x^*). \]
+ 
+ # 71\. POINT FIXE
+ 
+ Résoudre :
+ 
+-\[ x=(x) \]
++\[ x=\varphi(x) \]
+ 
+ peut être équivalent à résoudre une équation.
+ 
+ Si :
+ 
+-\[ |’(x^)|<1, \]
++\[ |\varphi'(x^*)|<1, \]
+ 
+ la méthode peut converger localement dans le cas scalaire approprié.
+ 
+@@ -1200,12 +1198,7 @@ peuvent devenir :
+ 
+ Pour une méthode numérique, on cherche à séparer :
+ 
+-\[ E_{} E_{}
+-
+-- E_{}
+-- E_{}
+-- E_{}
+-- E_{}. \]
++\[ E_{\text{total}}=E_{\text{modèle}}+E_{\text{données}}+E_{\text{arrondi}}+E_{\text{troncature}}+E_{\text{algorithme}}. \]
+ 
+ Cette décomposition permet de comprendre pourquoi un résultat est mauvais.
+ 
+@@ -1268,7 +1261,7 @@ Une technique fondamentale consiste à comparer :
+ 
+ Si les résultats convergent :
+ 
+-\[ x_hx^, \]
++\[ x_h\to x^*, \]
+ 
+ on obtient une indication expérimentale de convergence.
+ 
+@@ -1292,11 +1285,11 @@ Les différences d’échelle peuvent dégrader les calculs.
+ 
+ Si :
+ 
+-\[ x_110^{-10} \]
++\[ x_1\sim 10^{-10} \]
+ 
+ et :
+ 
+-\[ x_210^{10}, \]
++\[ x_2\sim 10^{10}, \]
+ 
+ une méthode naïve peut être mal conditionnée.
+ 
+@@ -1323,7 +1316,7 @@ Une méthode légèrement moins précise peut être préférable si elle est con
+ 
+ Un système dense :
+ 
+-\[ AR^{nn} \]
++\[ A\in\mathbb{R}^{n\times n} \]
+ 
+ peut nécessiter :
+ 
+@@ -1333,7 +1326,7 @@ mémoire.
+ 
+ Une matrice creuse peut être stockée proportionnellement au nombre de coefficients non nuls :
+ 
+-\[ O((A)). \]
++\[ O(\mathrm{nnz}(A)). \]
+ 
+ Pour les grands problèmes, cette différence est déterminante.
+ 
+@@ -1391,15 +1384,15 @@ L’analyse numérique est omniprésente dans l’IA.
+ 
+ ### Entraînement
+ 
+-\[ \_L(). \]
++\[ \min_{\theta}\mathcal{L}(\theta). \]
+ 
+ ### Gradient
+ 
+-\[ \_L. \]
++\[ \nabla_\theta \mathcal{L}. \]
+ 
+ ### Mise à jour
+ 
+-\[ \_{t+1} = \_t-L. \]
++\[ \theta_{t+1}=\theta_t-\eta\nabla\mathcal{L}. \]
+ 
+ ### Calcul matriciel
+ 
+@@ -1461,7 +1454,7 @@ L’analyse numérique intervient dans :
+ 
+ Une simulation peut suivre :
+ 
+-\[ =a. \]
++\[ \frac{dv}{dt}=a. \]
+ 
+ Avec Euler :
+ 
+@@ -1577,7 +1570,7 @@ Le domaine L permet ensuite de :
+ 
+ Ainsi :
+ 
+-\[ KL \]
++\[ K\times L \]
+ 
+ peut produire des systèmes procéduraux beaucoup plus riches.
+ 
+@@ -1694,11 +1687,11 @@ Lorsqu’un problème contient :
+ 
+ Il faut distinguer :
+ 
+-\[ \]
++\[ \text{exact} \]
+ 
+-\[ \]
++\[ \text{approché} \]
+ 
+-\[ \]
++\[ \text{numérique} \]
+ 
+ Une solution exacte peut ne pas avoir de forme analytique simple.
+ 
+@@ -1791,7 +1784,7 @@ Dans un système temps réel, la précision n’est pas le seul objectif.
+ 
+ Il faut parfois respecter :
+ 
+-\[ T_{}<T_{}. \]
++\[ T_{\text{calcul}}<T_{\text{budget}}. \]
+ 
+ Une méthode légèrement moins précise mais suffisamment rapide peut être préférable.
+ 
+@@ -2062,7 +2055,7 @@ Le document L peut être prolongé par des fiches spécialisées.
+ 
+ Créer une interface montrant :
+ 
+-\[ x,,|x-|. \]
++\[ x,\ \hat{x},\ |x-\hat{x}|. \]
+ 
+ Comparer différentes opérations.
+ 
+@@ -2198,11 +2191,11 @@ Un niveau de maîtrise opérationnelle du domaine L doit permettre de reconnaît
+ 
+ ### Représentation
+ 
+-\[ \]
++\[ x=m\,b^e \]
+ 
+ ### Erreur
+ 
+-\[ \]
++\[ E_r=\frac{|x-\hat{x}|}{|x|} \]
+ 
+ ### Résolution
+ 
+@@ -2218,11 +2211,11 @@ Un niveau de maîtrise opérationnelle du domaine L doit permettre de reconnaît
+ 
+ ### Interpolation
+ 
+-\[ (x_i,y_i) f(x) \]
++\[ (x_i,y_i)\to f(x) \]
+ 
+ ### Intégration
+ 
+-\[ f(x),dx . \]
++\[ \int_a^b f(x)\,dx. \]
+ 
+ ### Différentiation
+ 
+@@ -2230,15 +2223,15 @@ Un niveau de maîtrise opérationnelle du domaine L doit permettre de reconnaît
+ 
+ ### Dynamique
+ 
+-\[ =f(t,y) . \]
++\[ y'=f(t,y). \]
+ 
+ ### Incertitude
+ 
+-\[ E\[f(X)\] . \]
++\[ E[f(X)]. \]
+ 
+ ### Fiabilité
+ 
+-\[ \]
++\[ r=Ax-b \]
+ 
+ # 116\. CHECKLIST DE MAÎTRISE
+ 
+@@ -2283,11 +2276,11 @@ Je dois savoir :
+ 
+ ## Avec le domaine J — Optimisation
+ 
+-\[ \]
++\[ \min_x f(x) \]
+ 
+ ## Avec le domaine K — Fractales, chaos et systèmes dynamiques
+ 
+-\[ . \]
++\[ y'=f(t,y). \]
+ 
+ ## Avec le domaine C — Algèbre linéaire
+ 
+@@ -2295,7 +2288,7 @@ Je dois savoir :
+ 
+ ## Avec le domaine G — Probabilités
+ 
+-\[ E\[X\] . \]
++\[ E[X]. \]
+ 
+ ## Avec le domaine H — Statistiques
+ 

@@ -1,0 +1,35 @@
+restauration(equations): lot 2 — domaine L, 91 reconstructions
+
+ ATTENTION — RECONSTRUCTIONS, pas recuperation. Voir RESTAURATION-EQUATIONS.md.
+
+87 propositions validees par l'auteur (2026-10-18) : 58 de confiance haute,
+29 de confiance moyenne. 44 blocs restent en attente : ils contenaient des
+termes ou des enonces, pas des equations, et il n'en subsiste aucune trace.
+
+Principales restaurations :
+ - §4 erreurs : E_a=|x-x̂|, E_r=|x-x̂|/|x|, pourcentage
+ - §5 troncature : serie de e^x, exacte et tronquee
+ - §6-8 flottants : R, epsilon machine ~ beta^-p
+ - §9 pieges : fl((a+b)+c) vs fl(a+(b+c)), annulation catastrophique
+ - §12-14 convergence : x_k -> x*, e_{k+1} <= C e_k^p, trois criteres d'arret
+ - §16-18 : milieu de bissection, pente de la secante
+ - §30 gradient conjugue : min 1/2 xᵀAx - bᵀx
+ - §33 Lagrange : p(x) = sum y_i L_i(x), L_i(x) = prod (x-x_j)/(x_i-x_j)
+ - §38-39 moindres carres : min ||Ax-b||², Tikhonov
+ - §40-45 integration : rectangles, trapezes, Simpson
+ - §47 differences finies : avant, arriere, centree
+ - §50 EDO : y'=f(t,y) ; §88 jeux video : dv/dt=a
+ - §58-60 Monte-Carlo : estimateur, convergence, O(1/racine N)
+ - §63-67 : Av=lambda v, Newton pour l'optimisation (H delta = -grad f)
+ - §69 regle de chaine ; §70-71 point fixe : x=phi(x), |phi'(x*)|<1
+ - §85 IA : min_theta L(theta), grad L, theta_{t+1}=theta_t - eta grad L
+ - §102 exact / approche / numerique ; §115 resume
+
+4 artefacts d'echappement de crochets corriges sur decision de l'auteur :
+lignes 445, 993, 2237, 2298 (E\\[f(X)\\] redevient E[f(X)]).
+
+Le document L passe de 131 defauts a 44 (tous en attente de l'auteur).
+
+A appliquer APRES les lots 1 et 1 bis du domaine K. Justifications et tests
+de validation : depot mathverse, docs/restauration/propositions/.
+
