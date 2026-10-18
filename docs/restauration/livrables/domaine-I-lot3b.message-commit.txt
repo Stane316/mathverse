@@ -1,0 +1,8 @@
+restauration(equations): lot 3b — domaine I, sections 45 a 158
+
+133 blocs restaures (113 haute confiance, 20 moyenne). 26 blocs vides
+restent en attente de decision de l'auteur.
+
+ATTENTION — il s'agit de RECONSTRUCTIONS, pas de recuperation : le contenu
+detruit (arguments de commandes LaTeX, lettres grecques) n'existe plus dans
+le fichier.

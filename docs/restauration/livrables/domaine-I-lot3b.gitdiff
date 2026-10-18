@@ -1,0 +1,1013 @@
+diff --git "a/Maths-vers-Informatiques/Domaine I - Calcul diff\303\251rentiel \342\200\224 Cartographie compl\303\250te pour le machine learning.md" "b/Maths-vers-Informatiques/Domaine I - Calcul diff\303\251rentiel \342\200\224 Cartographie compl\303\250te pour le machine learning.md"
+index 9aa1df2..e2a81ad 100644
+--- "a/Maths-vers-Informatiques/Domaine I - Calcul diff\303\251rentiel \342\200\224 Cartographie compl\303\250te pour le machine learning.md"	
++++ "b/Maths-vers-Informatiques/Domaine I - Calcul diff\303\251rentiel \342\200\224 Cartographie compl\303\250te pour le machine learning.md"	
+@@ -797,7 +797,7 @@ et :
+ 
+ alors :
+ 
+-\[ = \]
++\[ \frac{dz}{dx}=\frac{dz}{du}\frac{du}{dx} \]
+ 
+ Dans le cas vectoriel :
+ 
+@@ -809,11 +809,11 @@ Cette formule est au cœur de la backpropagation.
+ 
+ Considérons :
+ 
+-\[ x z a L \]
++\[ x \to z \to a \to L \]
+ 
+ avec :
+ 
+-\[ z=Wx+b \]
++\[ a=\sigma(z) \]
+ 
+ \[ a=(z) \]
+ 
+@@ -821,7 +821,7 @@ avec :
+ 
+ Alors :
+ 
+-\[ = \]
++\[ \frac{\partial L}{\partial W}=\frac{\partial L}{\partial a}\cdot\frac{\partial a}{\partial z}\cdot\frac{\partial z}{\partial W} \]
+ 
+ La backpropagation n’est donc pas une formule mystérieuse.
+ 
+@@ -831,7 +831,7 @@ C’est une application systématique de la règle de chaîne.
+ 
+ Un point (x^\*) peut être critique lorsque :
+ 
+-\[ f(x^\*)=0 \]
++\[ \nabla f(x^{*})=0 \]
+ 
+ ou lorsque la dérivée n’existe pas.
+ 
+@@ -848,13 +848,13 @@ Il peut être :
+ 
+ (x^\*) est un minimum local si, dans un voisinage de (x^\*) :
+ 
+-\[ f(x^\*)f(x) \]
++\[ f(x^{*})\leq f(x) \]
+ 
+ # 45 — MAXIMUM LOCAL
+ 
+ (x^\*) est un maximum local si :
+ 
+-\[ f(x^\*)f(x) \]
++\[ f(x^{*})\geq f(x) \]
+ 
+ dans un voisinage du point.
+ 
+@@ -892,13 +892,13 @@ Pour un point critique (x^\*) :
+ 
+ ### Hessienne définie positive
+ 
+-\[ H(x^\*) \]
++\[ \nabla^{2}f(x^{*})\succ 0 \]
+ 
+ implique un minimum local strict sous les conditions appropriées.
+ 
+ ### Hessienne définie négative
+ 
+-\[ H(x^\*) \]
++\[ \nabla^{2}f(x^{*})\prec 0 \]
+ 
+ implique un maximum local strict.
+ 
+@@ -916,7 +916,7 @@ Les valeurs propres de la Hessienne renseignent sur les directions principales d
+ 
+ Si :
+ 
+-\[ \_i>0 \]
++\[ \lambda_i>0 \]
+ 
+ dans toutes les directions, la courbure est positive.
+ 
+@@ -928,7 +928,7 @@ Cette connexion explique pourquoi le calcul différentiel rejoint directement l
+ 
+ Une fonction (f) est convexe si, pour (x,y) et (t) :
+ 
+-\[ f(tx+(1-t)y) tf(x)+(1-t)f(y) \]
++\[ f(tx+(1-t)y)\leq tf(x)+(1-t)f(y) \]
+ 
+ Géométriquement, le graphe se situe sous ses cordes.
+ 
+@@ -949,13 +949,13 @@ optimisation générale
+ 
+ Pour une fonction deux fois différentiable :
+ 
+-\[ H_f(x) \]
++\[ \nabla^{2}f(x)\succeq 0 \]
+ 
+ sur un domaine convexe constitue un critère de convexité.
+ 
+ Si :
+ 
+-\[ H_f(x) \]
++\[ \nabla^{2}f(x)\succ 0 \]
+ 
+ partout, on obtient une forme de convexité stricte sous les hypothèses appropriées.
+ 
+@@ -963,7 +963,7 @@ partout, on obtient une forme de convexité stricte sous les hypothèses appropr
+ 
+ Une fonction possède un gradient (L)-Lipschitz si :
+ 
+-\[ |f(x)-f(y)| L|x-y| \]
++\[ \|\nabla f(x)-\nabla f(y)\|\leq L\|x-y\| \]
+ 
+ Cette propriété est fondamentale dans l’analyse de convergence de la descente de gradient.
+ 
+@@ -981,7 +981,7 @@ La géométrie de la Hessienne joue un rôle central dans ce phénomène.
+ 
+ Le principe est :
+ 
+-\[ x_{k+1} = x_k-f(x_k) \]
++\[ x_{k+1}=x_k-\eta\nabla f(x_k) \]
+ 
+ où :
+ 
+@@ -997,17 +997,17 @@ Le gradient indique la direction de croissance maximale.
+ 
+ Pour diminuer (f), on choisit donc :
+ 
+-\[ -f(x) \]
++\[ -\nabla f(x) \]
+ 
+ D’où :
+ 
+-\[ x_{k+1} = x_k-f(x_k) \]
++\[ x_{k+1}=x_k-\eta\nabla f(x_k) \]
+ 
+ # 57 — LEARNING RATE
+ 
+ Le paramètre :
+ 
+-\[ \]
++\[ \eta \]
+ 
+ contrôle la taille du déplacement.
+ 
+@@ -1028,9 +1028,9 @@ Le learning rate est donc un paramètre d’optimisation essentiel.
+ 
+ Au lieu d’utiliser toute la fonction de perte sur toutes les données, on peut estimer le gradient à partir d’un mini-batch.
+ 
+-\[ \_{t+1} = \_t
++\[ \theta_{t+1}=\theta_t
+ 
+-- \_L_B(\_t) \]
++- \eta\nabla L_B(\theta_t) \]
+ 
+ où (B) représente un mini-batch.
+ 
+@@ -1042,15 +1042,15 @@ Le momentum introduit une mémoire des gradients précédents.
+ 
+ Une forme classique :
+ 
+-\[ v_t = v_{t-1}
++\[ v_t=\beta v_{t-1}
+ 
+-- (1-)g_t \]
+++ (1-\beta)g_t \]
+ 
+ puis :
+ 
+-\[ _t =_ {t-1}
++\[ \theta_t=\theta_{t-1}
+ 
+-- v_t \]
++- \eta v_t \]
+ 
+ L’idée est de réduire certains zigzags et d’accélérer le déplacement dans les directions cohérentes.
+ 
+@@ -1060,15 +1060,15 @@ Adam combine notamment des estimations de premier et second moments du gradient.
+ 
+ On calcule :
+ 
+-\[ m_t = _1m_{t-1}
++\[ m_t=\beta_1 m_{t-1}
+ 
+-- (1-\_1)g_t \]
+++ (1-\beta_1)g_t \]
+ 
+ et :
+ 
+-\[ v_t = _2v_{t-1}
++\[ v_t=\beta_2 v_{t-1}
+ 
+-- (1-\_2)g_t^2 \]
+++ (1-\beta_2)g_t^{2} \]
+ 
+ avec correction du biais puis mise à jour des paramètres.
+ 
+@@ -1078,15 +1078,15 @@ L’intérêt est d’adapter la taille effective des mises à jour selon les pa
+ 
+ Les méthodes du premier ordre utilisent principalement :
+ 
+-\[ f \]
++\[ \nabla f \]
+ 
+ Les méthodes du second ordre utilisent également :
+ 
+-\[ H_f \]
++\[ \nabla^{2}f \]
+ 
+ Exemple :
+ 
+-\[ x_{k+1} = x_k-H(x_k)^{-1}f(x_k) \]
++\[ x_{k+1}=x_k-H(x_k)^{-1}\nabla f(x_k) \]
+ 
+ C’est l’idée de la méthode de Newton.
+ 
+@@ -1098,11 +1098,11 @@ Pour résoudre :
+ 
+ on peut utiliser :
+ 
+-\[ x_{k+1} = x_k- \]
++\[ x_{k+1}=x_k-\frac{f'(x_k)}{f''(x_k)} \]
+ 
+ En optimisation multivariable :
+ 
+-\[ x_{k+1} = x_k- H(x_k)^{-1}f(x_k) \]
++\[ x_{k+1}=x_k-\nabla^{2}f(x_k)^{-1}\nabla f(x_k) \]
+ 
+ # 63 — LIMITES DES MÉTHODES DE NEWTON
+ 
+@@ -1130,11 +1130,11 @@ Elles cherchent à obtenir une partie des avantages des méthodes du second ordr
+ 
+ On peut chercher :
+ 
+-\[ \_x f(x) \]
++\[ \min_x f(x) \]
+ 
+ sous :
+ 
+-\[ g_i(x) \]
++\[ g_i(x)\leq 0 \]
+ 
+ et :
+ 
+@@ -1154,7 +1154,7 @@ sous :
+ 
+ on construit :
+ 
+-\[ (x,) = f(x)+g(x) \]
++\[ \mathcal{L}(x,\lambda)=f(x)+\lambda g(x) \]
+ 
+ et on cherche les points satisfaisant les conditions stationnaires appropriées.
+ 
+@@ -1191,7 +1191,7 @@ Soit :
+ 
+ Alors :
+ 
+-\[ \_x f=a \]
++\[ \nabla_x f=a \]
+ 
+ # 70 — FORME QUADRATIQUE
+ 
+@@ -1201,11 +1201,11 @@ Pour :
+ 
+ on obtient, dans le cas général :
+ 
+-\[ \_x f = (A+A^T)x \]
++\[ \nabla_x f=(A+A^{T})x \]
+ 
+ Si (A) est symétrique :
+ 
+-\[ \_x f=2Ax \]
++\[ \nabla_x f=2Ax \]
+ 
+ et :
+ 
+@@ -1215,11 +1215,11 @@ et :
+ 
+ Considérons :
+ 
+-\[ f(x)=|Ax-b|^2 \]
++\[ f(x)=\|Ax-b\|^{2} \]
+ 
+ Alors :
+ 
+-\[ f(x) = A^T(Ax-b) \]
++\[ \nabla f(x)=2A^{T}(Ax-b) \]
+ 
+ et :
+ 
+@@ -1231,21 +1231,21 @@ Cette structure apparaît partout en régression, optimisation et apprentissage.
+ 
+ En statistiques et ML, on cherche souvent à maximiser :
+ 
+-\[ () \]
++\[ \max_\theta \mathcal{L}(\theta) \]
+ 
+ ou à minimiser :
+ 
+-\[ -() \]
++\[ -\mathcal{L}(\theta) \]
+ 
+ Le gradient :
+ 
+-\[ \_() \]
++\[ \nabla_\theta \mathcal{L}(\theta) \]
+ 
+ indique comment modifier les paramètres.
+ 
+ La Hessienne :
+ 
+-\[ \_^2() \]
++\[ \nabla_\theta^{2}\mathcal{L}(\theta) \]
+ 
+ décrit la courbure locale de la vraisemblance.
+ 
+@@ -1255,29 +1255,29 @@ Le calcul différentiel constitue donc le pont entre les domaines G, H et I.
+ 
+ Un modèle produit :
+ 
+-\[ y=f_(x) \]
++\[ \hat{y}=f_\theta(x) \]
+ 
+ On définit une fonction de perte :
+ 
+-\[ L(y,y) \]
++\[ L(\hat{y},y) \]
+ 
+ Puis une fonction objectif :
+ 
+-\[ J() = 1n _{i=1}^{n} L(f_(x_i),y_i) \]
++\[ J(\theta)=\frac{1}{n}\sum_{i=1}^{n}L(f_\theta(x_i),y_i) \]
+ 
+ L’entraînement cherche alors :
+ 
+-\[ ^\* = \_J() \]
++\[ \theta^{*}=\arg\min_\theta J(\theta) \]
+ 
+ Le calcul différentiel intervient pour calculer :
+ 
+-\[ \_J() \]
++\[ \nabla_\theta J(\theta) \]
+ 
+ # 74 — CHAÎNE FONDAMENTALE DU MACHINE LEARNING
+ 
+ La chaîne centrale est :
+ 
+-\[ f(x) f’(x) f(x) \]
++\[ f(x)\to f'(x)\to x-\eta f'(x) \]
+ 
+ Plus précisément :
+ 
+@@ -1347,7 +1347,7 @@ et :
+ 
+ alors :
+ 
+-\[ = \]
++\[ \frac{dz}{dx}=\frac{dz}{dy}\frac{dy}{dx} \]
+ 
+ La backpropagation répète ce principe à grande échelle.
+ 
+@@ -1389,11 +1389,11 @@ Une dérivée peut être approximée numériquement.
+ 
+ Différence avant :
+ 
+-\[ f’(x) \]
++\[ f'(x)\approx\frac{f(x+h)-f(x)}{h} \]
+ 
+ Différence centrée :
+ 
+-\[ f’(x) \]
++\[ f'(x)\approx\frac{f(x+h)-f(x-h)}{2h} \]
+ 
+ Ces méthodes sont utiles pour vérifier des gradients.
+ 
+@@ -1401,11 +1401,11 @@ Ces méthodes sont utiles pour vérifier des gradients.
+ 
+ Pour tester une implémentation de gradient :
+ 
+-\[ g_{} \]
++\[ g_{\text{analytique}} \]
+ 
+ est comparé à :
+ 
+-\[ g_{} \]
++\[ g_{\text{numérique}} \]
+ 
+ Une erreur relative peut être calculée.
+ 
+@@ -1431,13 +1431,13 @@ approximation informatique
+ 
+ Dans une longue composition :
+ 
+-\[ f_nf_{n-1}f_1 \]
++\[ f_n\circ f_{n-1}\circ\cdots\circ f_1 \]
+ 
+ la règle de chaîne produit des produits de dérivées.
+ 
+ Si les facteurs sont souvent inférieurs à 1 :
+ 
+-\[ \_i a_i \]
++\[ \prod_i a_i \]
+ 
+ peut devenir extrêmement petit.
+ 
+@@ -1449,7 +1449,7 @@ C’est le phénomène de **vanishing gradient**.
+ 
+ Inversement, si les facteurs sont fréquemment supérieurs à 1 :
+ 
+-\[ \_i a_i \]
++\[ \prod_i a_i \]
+ 
+ peut devenir extrêmement grand.
+ 
+@@ -1467,11 +1467,11 @@ Les activations courantes comprennent :
+ 
+ Exemple :
+ 
+-\[ (x)= \]
++\[ \sigma(x)=\frac{1}{1+e^{-x}} \]
+ 
+ et :
+ 
+-\[ ’(x) = (x)(1-(x)) \]
++\[ \sigma'(x)=\sigma(x)(1-\sigma(x)) \]
+ 
+ La dérivée de l’activation participe directement à la backpropagation.
+ 
+@@ -1479,13 +1479,11 @@ La dérivée de l’activation participe directement à la backpropagation.
+ 
+ La fonction ReLU est :
+ 
+-\[ (x) = (0,x) \]
++\[ \text{ReLU}(x)=\max(0,x) \]
+ 
+ Sa dérivée est :
+ 
+-\[ ’(x) =
+-
+-\]
++\[ \text{ReLU}'(x)=\begin{cases}0&\text{si }x<0\\ 1&\text{si }x>0\end{cases} \]
+ 
+ Le point (x=0) nécessite une convention particulière pour l’implémentation.
+ 
+@@ -1493,11 +1491,11 @@ Le point (x=0) nécessite une convention particulière pour l’implémentation.
+ 
+ Pour des logits (z_i) :
+ 
+-\[ (z_i) = {\_j e^{z_j}} \]
++\[ \sigma(z_i)=\frac{e^{z_i}}{\sum_j e^{z_j}} \]
+ 
+ Sa Jacobienne est non diagonale :
+ 
+-\[ = s_i(\_{ij}-s_j) \]
++\[ \frac{\partial s_i}{\partial z_j}=s_i(\delta_{ij}-s_j) \]
+ 
+ Cela montre pourquoi le calcul matriciel devient indispensable en classification multiclasse.
+ 
+@@ -1507,11 +1505,11 @@ Pour une classification, la combinaison softmax + cross-entropy possède une str
+ 
+ Dans la formulation standard :
+ 
+-\[ L=-\_i y_ip_i \]
++\[ L=-\sum_i y_i\log p_i \]
+ 
+ on obtient par rapport aux logits une expression simplifiée liée à :
+ 
+-\[ p-y \]
++\[ \nabla_z L=p-y \]
+ 
+ Cette propriété est très importante dans les implémentations de réseaux neuronaux.
+ 
+@@ -1519,15 +1517,15 @@ Cette propriété est très importante dans les implémentations de réseaux neu
+ 
+ Un réseau peut être représenté comme :
+ 
+-\[ f_ = f_Lf_{L-1}f_1 \]
++\[ f_\theta=f_L\circ f_{L-1}\circ\cdots\circ f_1 \]
+ 
+ L’entraînement cherche :
+ 
+-\[ \_J() \]
++\[ \min_\theta J(\theta) \]
+ 
+ Le gradient :
+ 
+-\[ \_J \]
++\[ \nabla_\theta J \]
+ 
+ est calculé par différentiation de la composition.
+ 
+@@ -1561,7 +1559,7 @@ Un minimum local n’est pas nécessairement global.
+ 
+ En optimisation non convexe :
+ 
+-\[ x_{} x_{} \]
++\[ x_{\text{local}}\neq x_{\text{global}} \]
+ 
+ Cette distinction est fondamentale pour comprendre les problèmes d’apprentissage complexes.
+ 
+@@ -1575,7 +1573,7 @@ La Hessienne permet d’étudier la courbure locale.
+ 
+ Un plateau correspond à une région dans laquelle :
+ 
+-\[ |f(x)| \]
++\[ \|\nabla f(x)\| \]
+ 
+ est faible.
+ 
+@@ -1611,7 +1609,7 @@ La normalisation peut donc faciliter l’optimisation.
+ 
+ Dans le ML moderne, le gradient exact de l’objectif total est souvent remplacé par une estimation.
+ 
+-\[ g_t J(\_t) \]
++\[ g_t\approx\nabla_\theta J(\theta_t) \]
+ 
+ Cette estimation introduit du bruit.
+ 
+@@ -1621,15 +1619,15 @@ Le bruit peut parfois être défavorable, mais il peut également modifier favor
+ 
+ Pour :
+ 
+-\[ J(w) = \_i (w<sup>Tx_i-y_i)</sup>2 \]
++\[ J(w)=\sum_i(w^{T}x_i-y_i)^{2} \]
+ 
+ on obtient :
+ 
+-\[ J(w) = 1n X^T(Xw-y) \]
++\[ \nabla J(w)=\frac{1}{n}X^{T}(Xw-y) \]
+ 
+ La mise à jour devient :
+ 
+-\[ w_{t+1} = w_t-J(w_t) \]
++\[ w_{t+1}=w_t-\eta\nabla J(w_t) \]
+ 
+ Cela fournit l’un des exemples les plus simples d’apprentissage par optimisation.
+ 
+@@ -1641,11 +1639,11 @@ On peut modifier l’objectif :
+ 
+ Exemple L2 :
+ 
+-\[ R()=||\_2^2 \]
++\[ R(\theta)=\|\theta\|_2^{2} \]
+ 
+ Alors :
+ 
+-\[ R()=2 \]
++\[ \nabla R(\theta)=2\theta \]
+ 
+ La régularisation influence donc directement le gradient.
+ 
+@@ -1653,19 +1651,19 @@ La régularisation influence donc directement le gradient.
+ 
+ Pour un modèle :
+ 
+-\[ y=f_(x) \]
++\[ \hat{y}=f_\theta(x) \]
+ 
+ et une perte :
+ 
+-\[ L(y,y) \]
++\[ L(\hat{y},y) \]
+ 
+ on cherche :
+ 
+-\[ \_L \]
++\[ \nabla_\theta L \]
+ 
+ La chaîne fondamentale est :
+ 
+-\[ = \]
++\[ \nabla_\theta L=\frac{\partial L}{\partial \hat{y}}\frac{\partial \hat{y}}{\partial \theta} \]
+ 
+ Dans un réseau profond, cette relation se propage à travers toutes les couches.
+ 
+@@ -1732,7 +1730,7 @@ Ces opérations sont centrales dans les systèmes modernes de différentiation a
+ 
+ Pour :
+ 
+-\[ f:^n \]
++\[ f:\mathbb{R}^{n}\to\mathbb{R} \]
+ 
+ le gradient possède (n) composantes.
+ 
+@@ -1750,7 +1748,7 @@ La Hessienne complète peut être énorme.
+ 
+ Si un modèle possède (n) paramètres :
+ 
+-\[ H^{nn} \]
++\[ H\in\mathbb{R}^{n\times n} \]
+ 
+ Le stockage naïf nécessite :
+ 
+@@ -1811,7 +1809,7 @@ Pour une surface implicite :
+ 
+ le gradient :
+ 
+-\[ F \]
++\[ \nabla F \]
+ 
+ est normal à la surface sous les conditions régulières appropriées.
+ 
+@@ -1821,11 +1819,11 @@ Le calcul différentiel rejoint ainsi directement la géométrie computationnell
+ 
+ Une dynamique peut être décrite par :
+ 
+-\[ =v \]
++\[ \dot{x}=v \]
+ 
+ et :
+ 
+-\[ =a \]
++\[ \dot{v}=a \]
+ 
+ Le calcul différentiel permet donc de modéliser :
+ 
+@@ -1841,7 +1839,7 @@ Une équation différentielle relie une fonction à ses dérivées.
+ 
+ Exemple :
+ 
+-\[ =f(x,t) \]
++\[ \frac{dx}{dt}=f(x,t) \]
+ 
+ Les équations différentielles constituent un prolongement naturel du calcul différentiel.
+ 
+@@ -1884,7 +1882,7 @@ Cette idée rejoint :
+ 
+ Une politique peut être paramétrée par :
+ 
+-\[ \_(a|s) \]
++\[ \pi_\theta(a|s) \]
+ 
+ L’objectif dépend de :
+ 
+@@ -1892,7 +1890,7 @@ L’objectif dépend de :
+ 
+ On cherche :
+ 
+-\[ \_J() \]
++\[ \max_\theta J(\theta) \]
+ 
+ Le calcul différentiel devient alors un élément du mécanisme d’apprentissage de la politique.
+ 
+@@ -1900,13 +1898,13 @@ Le calcul différentiel devient alors un élément du mécanisme d’apprentissa
+ 
+ Dans les modèles probabilistes :
+ 
+-\[ p_(x) \]
++\[ p_\theta(x) \]
+ 
+ dépend de paramètres.
+ 
+ On peut chercher :
+ 
+-\[ _p_(x) \]
++\[ \nabla_\theta\log p_\theta(x) \]
+ 
+ Cette quantité apparaît dans :
+ 
+@@ -1920,11 +1918,11 @@ Cette quantité apparaît dans :
+ 
+ Le maximum de vraisemblance cherche :
+ 
+-\[ ^\* = _ L() \]
++\[ \theta^{*}=\arg\max_\theta \mathcal{L}(\theta) \]
+ 
+ ou :
+ 
+-\[ ^\* = _ -L() \]
++\[ \theta^{*}=\arg\min_\theta -\mathcal{L}(\theta) \]
+ 
+ Le gradient permet de chercher efficacement ce paramètre.
+ 
+@@ -1936,7 +1934,7 @@ Ainsi :
+ 
+ Dans certains modèles probabilistes, on doit différencier :
+ 
+-\[ {xp_} \[f_(x)\] \]
++\[ \nabla_\theta\,\mathbb{E}_{x\sim p_\theta}\left[f_\theta(x)\right] \]
+ 
+ Ce type de problème conduit à des techniques avancées :
+ 
+@@ -1949,7 +1947,7 @@ Ce type de problème conduit à des techniques avancées :
+ 
+ L’idée consiste à réécrire une variable aléatoire dépendant de () sous la forme :
+ 
+-\[ z=g(,) \]
++\[ z=g(\theta,\epsilon) \]
+ 
+ où () possède une distribution indépendante de ().
+ 
+@@ -1974,7 +1972,7 @@ Le calcul différentiel est essentiellement local.
+ 
+ Il décrit ce qui se passe lorsque :
+ 
+-\[ x \]
++\[ \Delta x\to 0 \]
+ 
+ Cette information locale peut ensuite être utilisée pour construire des algorithmes globaux d’optimisation.
+ 
+@@ -1982,7 +1980,7 @@ Cette information locale peut ensuite être utilisée pour construire des algori
+ 
+ Une information différentielle :
+ 
+-\[ f(x) \]
++\[ \nabla f(x) \]
+ 
+ décrit le comportement autour de (x).
+ 
+@@ -2001,7 +1999,7 @@ Pour obtenir des garanties globales, il faut exploiter des structures supplémen
+ 
+ Une condition fondamentale d’optimalité intérieure est :
+ 
+-\[ f(x^\*)=0 \]
++\[ \nabla f(x^{*})=0 \]
+ 
+ Mais cette condition est seulement nécessaire sous certaines hypothèses, pas suffisante.
+ 
+@@ -2029,17 +2027,17 @@ Initialiser θ
+ 
+ Mathématiquement :
+ 
+-\[ \_{t+1} = \_t-_t_J(\_t) \]
++\[ \theta_{t+1}=\theta_t-\eta_t\nabla_\theta J(\theta_t) \]
+ 
+ # 124 — CRITÈRES D’ARRÊT
+ 
+ Une optimisation peut être arrêtée lorsque :
+ 
+-\[ |J()|< \]
++\[ \|\nabla J(\theta)\|<\epsilon \]
+ 
+ ou lorsque :
+ 
+-\[ |J_{t+1}-J_t|< \]
++\[ |J_{t+1}-J_t|<\epsilon \]
+ 
+ ou après un nombre maximal d’itérations.
+ 
+@@ -2053,7 +2051,7 @@ Une suite :
+ 
+ converge vers (x^\*) si :
+ 
+-\[ x_kx^\* \]
++\[ x_k\to x^{*} \]
+ 
+ L’analyse de convergence cherche à déterminer :
+ 
+@@ -2142,15 +2140,15 @@ La stabilité numérique est aussi importante que la formule analytique.
+ 
+ Pour calculer :
+ 
+-\[ \_i e^{x_i} \]
++\[ \log\sum_i e^{x_i} \]
+ 
+ de manière stable, on utilise généralement :
+ 
+-\[ m+\_i e^{x_i-m} \]
++\[ m+\log\sum_i e^{x_i-m} \]
+ 
+ avec :
+ 
+-\[ m=\_i x_i \]
++\[ m=\max_i x_i \]
+ 
+ Cette technique est particulièrement importante dans les modèles probabilistes et la classification.
+ 
+@@ -2160,11 +2158,11 @@ Pour éviter des gradients excessivement grands, on peut limiter leur norme.
+ 
+ Par exemple :
+ 
+-\[ g g \]
++\[ g\gets \frac{c\,g}{\|g\|} \]
+ 
+ lorsque :
+ 
+-\[ |g|>c \]
++\[ \|g\|>c \]
+ 
+ Cette technique est particulièrement utile dans certaines architectures et problèmes d’entraînement.
+ 
+@@ -2214,7 +2212,7 @@ On approxime la dérivée par des évaluations de la fonction.
+ 
+ Exemple :
+ 
+-\[ f’(x) \]
++\[ f'(x)\approx\frac{f(x+h)-f(x)}{h} \]
+ 
+ Elle est simple mais sujette aux erreurs numériques.
+ 
+@@ -2249,7 +2247,7 @@ Le calcul différentiel les utilise directement.
+ 
+ Exemple :
+ 
+-\[ f(x) \]
++\[ \nabla f(x) \]
+ 
+ est un vecteur.
+ 
+@@ -2280,11 +2278,11 @@ Les modèles probabilistes utilisent des fonctions dépendant de paramètres.
+ 
+ On différencie :
+ 
+-\[ p_(x) \]
++\[ \nabla_\theta p_\theta(x) \]
+ 
+ ou :
+ 
+-\[ p_(x) \]
++\[ \nabla_\theta\log p_\theta(x) \]
+ 
+ pour effectuer de l’estimation et de l’optimisation.
+ 
+@@ -2458,7 +2456,7 @@ Exemples :
+ 
+ \[ x^2 \]
+ 
+-\[ x \]
++\[ \sqrt{x} \]
+ 
+ \[ e^x \]
+ 
+@@ -2487,7 +2485,7 @@ visualiser la relation entre gradient et optimisation.
+ 
+ Implémenter :
+ 
+-\[ x_{t+1} = x_t-f(x_t) \]
++\[ x_{t+1}=x_t-\eta\nabla f(x_t) \]
+ 
+ sur plusieurs fonctions.
+ 
+@@ -2511,15 +2509,15 @@ Implémenter une régression :
+ 
+ avec :
+ 
+-\[ J(w,b) = 1n \_i (y_i-y_i)^2 \]
++\[ J(w,b)=\frac{1}{n}\sum_i(\hat{y}_i-y_i)^{2} \]
+ 
+ Puis calculer manuellement :
+ 
+-\[ \_wJ \]
++\[ \nabla_w J \]
+ 
+ et :
+ 
+-\[ \]
++\[ \nabla_b J \]
+ 
+ # 158 — PROJET 5 — MINI RÉSEAU NEURONAL SANS AUTODIFF
+ 
+@@ -2593,11 +2591,11 @@ et visualiser :
+ 
+ \[ e^x \]
+ 
+-\[ x \]
++\[ \ln x \]
+ 
+-\[ x \]
++\[ \sin x \]
+ 
+-\[ x \]
++\[ \cos x \]
+ 
+ ainsi que des compositions et produits.
+ 
+@@ -2605,7 +2603,7 @@ ainsi que des compositions et produits.
+ 
+ Calculer :
+ 
+-\[ f(x,y) \]
++\[ \nabla f(x,y) \]
+ 
+ pour plusieurs fonctions.
+ 
+@@ -2619,7 +2617,7 @@ Puis déterminer :
+ 
+ Pour une fonction :
+ 
+-\[ f:^n \]
++\[ f:\mathbb{R}^{n}\to\mathbb{R} \]
+ 
+ être capable d’expliquer :
+ 
+@@ -2637,7 +2635,7 @@ Pour une fonction composée :
+ 
+ calculer :
+ 
+-\[ \]
++\[ \frac{dL}{dx} \]
+ 
+ manuellement par la règle de chaîne.
+ 
+@@ -2647,13 +2645,13 @@ Prendre un neurone :
+ 
+ \[ z=wx+b \]
+ 
+-\[ a=(z) \]
++\[ a=\sigma(z) \]
+ 
+ \[ L=(a-y)^2 \]
+ 
+ et calculer :
+ 
+-\[ \]
++\[ \frac{\partial L}{\partial w} \]
+ 
+ manuellement.
+ 
+@@ -2683,7 +2681,7 @@ Démontrer la règle de chaîne sur un exemple simple.
+ 
+ Expliquer pourquoi :
+ 
+-\[ f=0 \]
++\[ \nabla f=0 \]
+ 
+ ne signifie pas nécessairement minimum.
+ 
+@@ -2855,7 +2853,7 @@ et enfin :
+ 
+ Pour une fonction :
+ 
+-\[ f: \]
++\[ f:\mathbb{R}\to\mathbb{R} \]
+ 
+ on obtient :
+ 
+@@ -2869,13 +2867,13 @@ Pour :
+ 
+ on obtient :
+ 
+-\[ f(x) \]
++\[ \nabla f(x) \]
+ 
+ ### Jacobienne
+ 
+ Pour :
+ 
+-\[ F:<sup>n</sup>m \]
++\[ F:\mathbb{R}^{n}\to\mathbb{R}^{m} \]
+ 
+ on obtient :
+ 
+@@ -2885,7 +2883,7 @@ on obtient :
+ 
+ Pour :
+ 
+-\[ f:^n \]
++\[ f:\mathbb{R}^{n}\to\mathbb{R} \]
+ 
+ on obtient :
+ 
+@@ -2929,9 +2927,9 @@ Répétition
+ 
+ Mathématiquement :
+ 
+-\[ \_{t+1} = \_t
++\[ \theta_{t+1}=\theta_t
+ 
+-- _t_ J(\_t) \]
++- \eta_t\nabla_\theta J(\theta_t) \]
+ 
+ C’est l’une des équations les plus importantes à comprendre pour le Machine Learning.
+ 
+@@ -2977,13 +2975,13 @@ Faux en général.
+ 
+ Un point selle peut avoir :
+ 
+-\[ f=0 \]
++\[ \nabla f=0 \]
+ 
+ ### Erreur 3
+ 
+ Confondre :
+ 
+-\[ f \]
++\[ \nabla f \]
+ 
+ et :
+ 
+@@ -3118,23 +3116,23 @@ Son idée fondamentale est :
+ 
+ À une variable :
+ 
+-\[ f(x) f’(x) \]
++\[ f(x)\to f'(x) \]
+ 
+ À plusieurs variables :
+ 
+-\[ f(x) f(x) \]
++\[ f(x)\to \nabla f(x) \]
+ 
+ Pour une transformation vectorielle :
+ 
+-\[ F(x) J_F(x) \]
++\[ F(x)\to J_F(x) \]
+ 
+ Pour la courbure :
+ 
+-\[ f(x) H_f(x) \]
++\[ f(x)\to H_f(x) \]
+ 
+ Pour l’optimisation :
+ 
+-\[ f(x) x-f(x) \]
++\[ f(x)\to x-\eta\nabla f(x) \]
+ 
+ Pour les réseaux neuronaux :
+ 

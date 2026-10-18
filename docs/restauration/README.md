@@ -140,7 +140,7 @@ toucher aux autres.
 |---:|---|---|
 | 1 | **K** — 18 défauts signalés, **30 traités** | domaine le plus utile au produit, équations canoniques — **terminé, 0 défaut restant** (lots 1 et 1 bis) |
 | 2 | **L** — analyse numérique | socle des critères de validation ; 61 signalés, **131 au total**, 102 appliqués — **33 blocs en attente de l'auteur** |
-| 3 | **I** — calcul différentiel | 109 signalés, **223 au total** (lecture intégrale des 318 blocs) — lots 3a (64) et 3b (159) proposés, **en attente de validation** |
+| 3 | **I** — calcul différentiel | 109 signalés, 318 blocs lus — **lots 3a (62), 3b (133) et 3c (9) : 204 restaurations appliquées**, blocs vides 44 → 27 — **28 blocs en attente de l'auteur** |
 | 4 | **N** — transformées | 84 signalés, lecture intégrale des 248 blocs — lots 4a (75) et 4b (104) proposés, **en attente de validation** |
 | 5 | **J** — optimisation | 166 signalés, **119 observés** (lecture intégrale des 332 blocs — le plus gros document) — **lots 5a (102 entrées) et 5b (186) proposés, en attente de validation** — **document entièrement parcouru** |
 | 6-9 | H, G, M, O, F, Q, P, UI/UX, E/R/S/U, « Ai Technical Litteracy » | voir `PLAN-ACHEVEMENT.md` |

@@ -1,0 +1,13 @@
+restauration(equations): lot 3c — domaine I, section 177
+
+Neuf blocs vides (l. 3024 a 3040), restaures par analogie avec le §155 du
+domaine J : meme formule d'introduction, meme construction, hypothese A->J
+validee par l'auteur le 2026-10-18. Le domaine I etant le neuvieme document
+du corpus et son §177 comptant neuf blocs, la meme lecture s'applique.
+
+Ces neuf blocs n'avaient jamais ete soumis : sur les 37 blocs encore
+degrades du document apres les lots 3a et 3b, 28 etaient deja en inconnue
+et 9 n'avaient pas ete vus.
+
+Reserve : le residu de chaque bloc est vide et l'argument est une analogie
+entre deux documents, pas une preuve interne. Confiance moyenne.
