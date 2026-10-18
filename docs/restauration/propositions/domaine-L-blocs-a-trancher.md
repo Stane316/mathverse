@@ -1,6 +1,7 @@
 # LOT 2 bis — DOMAINE L : 10 BLOCS À TRANCHER
 
-**Date :** 2026-10-18 — **Statut :** **candidats soumis à votre arbitrage** — non appliqués
+**Date :** 2026-10-18 — **Statut :** **les 10 candidats ont été validés et appliqués le 2026-10-18** (lot 2 bis)
+**Suite :** les 33 blocs restants sont soumis dans `domaine-L-blocs-a-trancher-suite.md`
 **Numéros de ligne :** valides **après** application du lot 2 (`domaine-L.gitdiff`)
 **Rappel :** ces blocs étaient vides. Leur contenu n'existe plus nulle part ; ce qui suit est
 une **proposition argumentée**, pas une restitution.

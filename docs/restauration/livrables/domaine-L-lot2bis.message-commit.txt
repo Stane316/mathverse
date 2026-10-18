@@ -1,0 +1,23 @@
+restauration(equations): lot 2 bis — domaine L, 11 blocs decides par l'auteur
+
+Les 44 blocs restants du document L contenaient des termes ou des enonces,
+pas des equations : aucune reconstruction n'etait possible sans l'auteur.
+11 d'entre eux ont ete tranches le 2026-10-18 sur candidats proposes :
+
+ - 61   principe directeur : un resultat n'a de sens qu'avec son erreur
+ - 115  chaine des domaines A -> ... -> L
+ - 343  stabilite != conditionnement != convergence
+ - 1597 architecture d'un solveur : modele -> discretisation -> solveur
+        -> validation
+ - 2184 ce que le developpeur doit pouvoir verifier
+ - 2301 idee fondamentale du domaine L
+ - 2305 chaine modele -> resultat
+ - 2333 formule mentale : erreur = conditionnement x stabilite
+ - 2337 concept -> modele -> algorithme -> implementation -> tests
+ - 2343/2347 de la formule mathematique au systeme exploitable
+
+Contenu decide par l'auteur ; mise en forme LaTeX (\text{...}, jamais
+employe dans ce document) reste une proposition.
+
+Il reste 33 blocs en attente dans le document L.
+

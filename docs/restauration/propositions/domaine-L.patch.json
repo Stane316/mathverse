@@ -35,9 +35,10 @@
   "ancien": "\\[ \\]",
   "nouveau": null,
   "confiance": "inconnue",
-  "statut": "en_attente_de_decision",
+  "statut": "décidé par l'auteur (2026-10-18) — appliqué dans domaine-L-lot2bis.patch.json",
   "justification": "Bloc vide ou ininterpretable : principe directeur du domaine (probablement un énoncé, pas une formule). Le contenu d'origine n'existe plus dans le fichier.",
-  "validation": null
+  "validation": null,
+  "nouveau_final": "\\[ \\text{un résultat n'a de sens qu'avec son erreur} \\]"
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
@@ -45,9 +46,10 @@
   "ancien": "\\[ \\]",
   "nouveau": null,
   "confiance": "inconnue",
-  "statut": "en_attente_de_decision",
+  "statut": "décidé par l'auteur (2026-10-18) — appliqué dans domaine-L-lot2bis.patch.json",
   "justification": "Bloc vide ou ininterpretable : chaîne des domaines A a L (candidat : A → B → … → L). Le contenu d'origine n'existe plus dans le fichier.",
-  "validation": null
+  "validation": null,
+  "nouveau_final": "\\[ A\\to B\\to C\\to \\cdots \\to L \\]"
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
@@ -229,9 +231,10 @@
   "ancien": "\\[ \\]",
   "nouveau": null,
   "confiance": "inconnue",
-  "statut": "en_attente_de_decision",
+  "statut": "décidé par l'auteur (2026-10-18) — appliqué dans domaine-L-lot2bis.patch.json",
   "justification": "Bloc vide ou ininterpretable : ce qui distingue stabilité, conditionnement et convergence. Le contenu d'origine n'existe plus dans le fichier.",
-  "validation": null
+  "validation": null,
+  "nouveau_final": "\\[ \\text{stabilité} \\neq \\text{conditionnement} \\neq \\text{convergence} \\]"
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
@@ -909,9 +912,10 @@
   "ancien": "\\[ \\]",
   "nouveau": null,
   "confiance": "inconnue",
-  "statut": "en_attente_de_decision",
+  "statut": "décidé par l'auteur (2026-10-18) — appliqué dans domaine-L-lot2bis.patch.json",
   "justification": "Bloc vide ou ininterpretable : architecture d'un solveur sérieuse. Le contenu d'origine n'existe plus dans le fichier.",
-  "validation": null
+  "validation": null,
+  "nouveau_final": "\\[ \\text{modèle} \\to \\text{discrétisation} \\to \\text{solveur} \\to \\text{validation} \\]"
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
@@ -1084,9 +1088,10 @@
   "ancien": "\\[ \\]",
   "nouveau": null,
   "confiance": "inconnue",
-  "statut": "en_attente_de_decision",
+  "statut": "décidé par l'auteur (2026-10-18) — appliqué dans domaine-L-lot2bis.patch.json",
   "justification": "Bloc vide ou ininterpretable : ce que le développeur doit pouvoir vérifier. Le contenu d'origine n'existe plus dans le fichier.",
-  "validation": null
+  "validation": null,
+  "nouveau_final": "\\[ \\text{la validité du résultat} \\]"
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
@@ -1204,9 +1209,10 @@
   "ancien": "\\[ \\]",
   "nouveau": null,
   "confiance": "inconnue",
-  "statut": "en_attente_de_decision",
+  "statut": "décidé par l'auteur (2026-10-18) — appliqué dans domaine-L-lot2bis.patch.json",
   "justification": "Bloc vide ou ininterpretable : l'idée fondamentale enseignée par le domaine L. Le contenu d'origine n'existe plus dans le fichier.",
-  "validation": null
+  "validation": null,
+  "nouveau_final": "\\[ \\text{un calcul juste peut produire un résultat faux} \\]"
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
@@ -1214,9 +1220,10 @@
   "ancien": "\\[ \\]",
   "nouveau": null,
   "confiance": "inconnue",
-  "statut": "en_attente_de_decision",
+  "statut": "décidé par l'auteur (2026-10-18) — appliqué dans domaine-L-lot2bis.patch.json",
   "justification": "Bloc vide ou ininterpretable : la chaîne entre le modele et le résultat. Le contenu d'origine n'existe plus dans le fichier.",
-  "validation": null
+  "validation": null,
+  "nouveau_final": "\\[ \\text{modèle} \\to \\text{discrétisation} \\to \\text{algorithme} \\to \\text{flottant} \\to \\text{résultat} \\]"
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
@@ -1224,9 +1231,10 @@
   "ancien": "\\[ \\]",
   "nouveau": null,
   "confiance": "inconnue",
-  "statut": "en_attente_de_decision",
+  "statut": "décidé par l'auteur (2026-10-18) — appliqué dans domaine-L-lot2bis.patch.json",
   "justification": "Bloc vide ou ininterpretable : formule mentale a conserver pour tout problème numérique. Le contenu d'origine n'existe plus dans le fichier.",
-  "validation": null
+  "validation": null,
+  "nouveau_final": "\\[ \\text{erreur} = \\text{conditionnement} \\times \\text{stabilité} \\]"
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
@@ -1234,9 +1242,10 @@
   "ancien": "\\[ \\]",
   "nouveau": null,
   "confiance": "inconnue",
-  "statut": "en_attente_de_decision",
+  "statut": "décidé par l'auteur (2026-10-18) — appliqué dans domaine-L-lot2bis.patch.json",
   "justification": "Bloc vide ou ininterpretable : ce que l'IA doit appliquer pour passer du concept au logiciel. Le contenu d'origine n'existe plus dans le fichier.",
-  "validation": null
+  "validation": null,
+  "nouveau_final": "\\[ \\text{concept} \\to \\text{modèle} \\to \\text{algorithme} \\to \\text{implémentation} \\to \\text{tests} \\]"
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
@@ -1244,9 +1253,10 @@
   "ancien": "\\[ \\]",
   "nouveau": null,
   "confiance": "inconnue",
-  "statut": "en_attente_de_decision",
+  "statut": "décidé par l'auteur (2026-10-18) — appliqué dans domaine-L-lot2bis.patch.json",
   "justification": "Bloc vide ou ininterpretable : point de départ. Le contenu d'origine n'existe plus dans le fichier.",
-  "validation": null
+  "validation": null,
+  "nouveau_final": "\\[ \\text{formule mathématique} \\]"
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
@@ -1254,8 +1264,9 @@
   "ancien": "\\[ . \\]",
   "nouveau": null,
   "confiance": "inconnue",
-  "statut": "en_attente_de_decision",
+  "statut": "décidé par l'auteur (2026-10-18) — appliqué dans domaine-L-lot2bis.patch.json",
   "justification": "Bloc vide ou ininterpretable : point d'arrivée. Le contenu d'origine n'existe plus dans le fichier.",
-  "validation": null
+  "validation": null,
+  "nouveau_final": "\\[ \\text{système exploitable}. \\]"
  }
 ]

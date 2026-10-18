@@ -139,12 +139,20 @@ toucher aux autres.
 | Ordre | Lot | Pourquoi |
 |---:|---|---|
 | 1 | **K** — 18 défauts signalés, **30 traités** | domaine le plus utile au produit, équations canoniques — **terminé, 0 défaut restant** (lots 1 et 1 bis) |
-| 2 | **L** — analyse numérique | socle des critères de validation ; 61 défauts signalés, **131 au total** — lot prêt, en attente de validation |
+| 2 | **L** — analyse numérique | socle des critères de validation ; 61 signalés, **131 au total**, 102 appliqués — **33 blocs en attente de l'auteur** |
 | 3 | **I** — calcul différentiel | 109 défauts, socle des systèmes continus |
 | 4 | **N** — transformées | 104 défauts, utile aux composants de signal |
 | 5 | J, H, G, M, O | 387 défauts, utilité indirecte |
 | 6 | F, Q, P, UI/UX | 45 défauts |
-| 7 | A, B, C, D | selon la réponse sur la voie 1 |
+| 3 | I, N, J | ordre du plan d'achèvement (§4) |
+| 4-9 | H, G, M, O, F, Q, P, UI/UX, E/R/S/U, « Ai Technical Litteracy » | voir `PLAN-ACHEVEMENT.md` |
+| 10 | A, B, C, D | restructuration (voie 2) — **chantier distinct, périmètre à confirmer** |
+
+> **Décision du porteur (2026-10-18) : le chantier doit être ACHEVÉ avant d'ouvrir la phase 2.**
+> L'ordre ci-dessous est donc devenu un plan d'achèvement, détaillé dans
+> **`PLAN-ACHEVEMENT.md`** : définition de sortie, mesure du reste à faire (~659 défauts
+> signalés, ~1 200 estimés), deux flux (reconstructions autonomes / blocs à arbitrer) et
+> protocole de validation par lot. Le facteur limitant est le flux B, qui dépend de vous.
 
 La priorisation suit l'utilité pour le produit, pas l'ordre alphabétique : les domaines qui alimenteront les premiers composants sont restaurés en premier.
 

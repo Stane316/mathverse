@@ -1,0 +1,101 @@
+[
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 61,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{un résultat n'a de sens qu'avec son erreur} \\]",
+  "confiance": "décidé par l'auteur",
+  "justification": "« ### Principe directeur ». Candidat 1 retenu par l'auteur (2026-10-18).",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 115,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ A\\to B\\to C\\to \\cdots \\to L \\]",
+  "confiance": "décidé par l'auteur",
+  "justification": "« On peut représenter la chaîne : » suivie de la liste A → L. Candidat 1 retenu.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 343,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{stabilité} \\neq \\text{conditionnement} \\neq \\text{convergence} \\]",
+  "confiance": "décidé par l'auteur",
+  "justification": "« Ces trois notions sont différentes. » Candidat 1 retenu.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1597,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{modèle} \\to \\text{discrétisation} \\to \\text{solveur} \\to \\text{validation} \\]",
+  "confiance": "décidé par l'auteur",
+  "justification": "« Un solveur sérieux peut être structuré ainsi : ». Candidat 1 retenu.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2184,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{la validité du résultat} \\]",
+  "confiance": "décidé par l'auteur",
+  "justification": "« le développeur doit conserver la capacité de vérifier : ». Candidat 1 retenu.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2301,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{un calcul juste peut produire un résultat faux} \\]",
+  "confiance": "décidé par l'auteur",
+  "justification": "« Le domaine L enseigne une idée fondamentale : ». Candidat 1 retenu.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2305,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{modèle} \\to \\text{discrétisation} \\to \\text{algorithme} \\to \\text{flottant} \\to \\text{résultat} \\]",
+  "confiance": "décidé par l'auteur",
+  "justification": "« Entre le modèle et le résultat existe toute une chaîne : ». Candidat 1 retenu.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2333,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{erreur} = \\text{conditionnement} \\times \\text{stabilité} \\]",
+  "confiance": "décidé par l'auteur",
+  "justification": "§120 « FORMULE MENTALE À CONSERVER », « Pour tout problème numérique : ». Candidat 1 retenu.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2337,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{concept} \\to \\text{modèle} \\to \\text{algorithme} \\to \\text{implémentation} \\to \\text{tests} \\]",
+  "confiance": "décidé par l'auteur",
+  "justification": "« lorsqu'une IA doit transformer un concept mathématique en logiciel : ». Candidat 1 retenu.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2343,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{formule mathématique} \\]",
+  "confiance": "décidé par l'auteur",
+  "justification": "« Il permet de passer de : ». Candidat 1 retenu.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2347,
+  "ancien": "\\[ . \\]",
+  "nouveau": "\\[ \\text{système exploitable}. \\]",
+  "confiance": "décidé par l'auteur",
+  "justification": "« à : » — pendant de la ligne 2343. Les deux termes sont dans la phrase qui précède (« transforme une formule mathématique en système informatique exploitable »).",
+  "validation": null
+ }
+]
