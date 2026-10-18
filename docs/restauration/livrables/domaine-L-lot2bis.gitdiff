@@ -1,0 +1,89 @@
+diff --git "a/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md" "b/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md"
+index e12cc08..e19a6ae 100644
+--- "a/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md"	
++++ "b/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md"	
+@@ -58,7 +58,7 @@ sans analyser les conditions du calcul.
+ 
+ ### Principe directeur
+ 
+-\[ \]
++\[ \text{un résultat n'a de sens qu'avec son erreur} \]
+ 
+ Ce domaine constitue notamment une base pour :
+ 
+@@ -112,7 +112,7 @@ L’analyse numérique explique comment les faire fonctionner sur une machine.
+ 
+ On peut représenter la chaîne :
+ 
+-\[ \]
++\[ A\to B\to C\to \cdots \to L \]
+ 
+ avec notamment :
+ 
+@@ -340,7 +340,7 @@ Capacité de l’approximation à tendre vers la solution recherchée.
+ 
+ Ces trois notions sont différentes.
+ 
+-\[ \]
++\[ \text{stabilité} \neq \text{conditionnement} \neq \text{convergence} \]
+ 
+ # 11\. CONDITIONNEMENT
+ 
+@@ -1594,7 +1594,7 @@ Cela permet :
+ 
+ Un solveur sérieux peut être structuré ainsi :
+ 
+-\[ \]
++\[ \text{modèle} \to \text{discrétisation} \to \text{solveur} \to \text{validation} \]
+ 
+ # 99\. PARAMÈTRES D’UN SOLVEUR
+ 
+@@ -2181,7 +2181,7 @@ L’IA peut aider à :
+ 
+ Mais le développeur doit conserver la capacité de vérifier :
+ 
+-\[ \]
++\[ \text{la validité du résultat} \]
+ 
+ sans dépendre aveuglément de l’IA.
+ 
+@@ -2298,11 +2298,11 @@ Je dois savoir :
+ 
+ Le domaine L enseigne une idée fondamentale :
+ 
+-\[ \]
++\[ \text{un calcul juste peut produire un résultat faux} \]
+ 
+ Entre le modèle et le résultat existe toute une chaîne :
+ 
+-\[ \]
++\[ \text{modèle} \to \text{discrétisation} \to \text{algorithme} \to \text{flottant} \to \text{résultat} \]
+ 
+ Chaque étape peut introduire :
+ 
+@@ -2330,20 +2330,20 @@ C’est cette seconde question qui transforme une formule mathématique en **sys
+ 
+ Pour tout problème numérique :
+ 
+-\[ \]
++\[ \text{erreur} = \text{conditionnement} \times \text{stabilité} \]
+ 
+ Et lorsqu’une IA doit transformer un concept mathématique en logiciel :
+ 
+-\[ \]
++\[ \text{concept} \to \text{modèle} \to \text{algorithme} \to \text{implémentation} \to \text{tests} \]
+ 
+ Le domaine L constitue ainsi la **couche d’exécution numérique** de l’ensemble de la cartographie mathématique.
+ 
+ Il permet de passer de :
+ 
+-\[ \]
++\[ \text{formule mathématique} \]
+ 
+ à :
+ 
+-\[ . \]
++\[ \text{système exploitable}. \]
+ 
+ Et c’est précisément ce qui en fait un domaine central pour le calcul scientifique, l’IA, les simulations, la robotique, la 3D, les jeux vidéo, la finance, les systèmes physiques et les logiciels mathématiques.
+\ No newline at end of file
