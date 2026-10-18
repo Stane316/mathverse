@@ -42,7 +42,8 @@ Autrement dit : **on ne restaure pas, on réécrit.** Chaque équation reconstru
 Répartition : J 166 · I 109 · N 104 · H 64 · L 61 · G 60 · M 59 · O 38 · UI/UX 20 · **K 18** · F 12 · Q 11 · P 2.
 
 **État au 2026-10-18 : 706 défauts.** Le document K est traité (18 signalés + 12 découverts
-à la lecture = 30 restaurations, 0 défaut restant). Les décomptes par document ci-dessus
+à la lecture = 30 restaurations, 0 défaut restant). Le document L est instruit : 131 défauts
+recensés (61 signalés + 70 découverts), 87 propositions prêtes, 44 blocs en attente de l'auteur. Les décomptes par document ci-dessus
 sont des **planchers** : sur K, la relecture bloc par bloc a révélé 55 % de défauts
 supplémentaires. Il faut s'attendre à la même proportion ailleurs.
 
@@ -138,7 +139,7 @@ toucher aux autres.
 | Ordre | Lot | Pourquoi |
 |---:|---|---|
 | 1 | **K** — 18 défauts signalés, **30 traités** | domaine le plus utile au produit, équations canoniques — **terminé, 0 défaut restant** (lots 1 et 1 bis) |
-| 2 | **L** — analyse numérique | socle des critères de validation ; 61 défauts |
+| 2 | **L** — analyse numérique | socle des critères de validation ; 61 défauts signalés, **131 au total** — lot prêt, en attente de validation |
 | 3 | **I** — calcul différentiel | 109 défauts, socle des systèmes continus |
 | 4 | **N** — transformées | 104 défauts, utile aux composants de signal |
 | 5 | J, H, G, M, O | 387 défauts, utilité indirecte |
