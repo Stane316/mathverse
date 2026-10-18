@@ -1,0 +1,10 @@
+restauration(equations): lot 3a — domaine I, sections introductives a 44
+
+62 blocs restaures (58 haute confiance, 4 moyenne). 2 blocs vides
+restent en attente de decision de l'auteur.
+
+Applique apres le lot 3b : les remplacements multi-lignes de 3b (lignes
+800 et au-dela) ne deplacent pas les cibles de 3a (lignes 29 a 784), alors
+que l'inverse serait faux.
+
+ATTENTION — il s'agit de RECONSTRUCTIONS, pas de recuperation.

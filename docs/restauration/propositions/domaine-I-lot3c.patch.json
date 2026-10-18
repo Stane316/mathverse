@@ -1,0 +1,83 @@
+[
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3024,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ A \\]",
+  "confiance": "moyenne",
+  "justification": "§177 « La progression mathématique construite jusqu'ici peut être résumée ainsi : » suivi de neuf blocs vides.",
+  "validation": "Domaine A — DOCUMENT MAÎTRE A — LOGIQUE ET FONDEMENTS DE L’INFORMATIQUE. Analogie avec le §155 du domaine J (même formule d'introduction, dix blocs pour dix domaines), hypothèse A→J validée par l'auteur le 2026-10-18. Le résidu du bloc est vide."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3026,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ B \\]",
+  "confiance": "moyenne",
+  "justification": "§177 « La progression mathématique construite jusqu'ici peut être résumée ainsi : » suivi de neuf blocs vides.",
+  "validation": "Domaine B — DOCUMENT B — THÉORIE DES NOMBRES. Analogie avec le §155 du domaine J (même formule d'introduction, dix blocs pour dix domaines), hypothèse A→J validée par l'auteur le 2026-10-18. Le résidu du bloc est vide."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3028,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ C \\]",
+  "confiance": "moyenne",
+  "justification": "§177 « La progression mathématique construite jusqu'ici peut être résumée ainsi : » suivi de neuf blocs vides.",
+  "validation": "Domaine C — DOCUMENT C — ALGÈBRE LINÉAIRE. Analogie avec le §155 du domaine J (même formule d'introduction, dix blocs pour dix domaines), hypothèse A→J validée par l'auteur le 2026-10-18. Le résidu du bloc est vide."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3030,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ D \\]",
+  "confiance": "moyenne",
+  "justification": "§177 « La progression mathématique construite jusqu'ici peut être résumée ainsi : » suivi de neuf blocs vides.",
+  "validation": "Domaine D — DOCUMENT D — GÉOMÉTRIE COMPUTATIONNELLE. Analogie avec le §155 du domaine J (même formule d'introduction, dix blocs pour dix domaines), hypothèse A→J validée par l'auteur le 2026-10-18. Le résidu du bloc est vide."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3032,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ E \\]",
+  "confiance": "moyenne",
+  "justification": "§177 « La progression mathématique construite jusqu'ici peut être résumée ainsi : » suivi de neuf blocs vides.",
+  "validation": "Domaine E — DOCUMENT E — THÉORIE DES GRAPHES. Analogie avec le §155 du domaine J (même formule d'introduction, dix blocs pour dix domaines), hypothèse A→J validée par l'auteur le 2026-10-18. Le résidu du bloc est vide."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3034,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ F \\]",
+  "confiance": "moyenne",
+  "justification": "§177 « La progression mathématique construite jusqu'ici peut être résumée ainsi : » suivi de neuf blocs vides.",
+  "validation": "Domaine F — DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE. Analogie avec le §155 du domaine J (même formule d'introduction, dix blocs pour dix domaines), hypothèse A→J validée par l'auteur le 2026-10-18. Le résidu du bloc est vide."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3036,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ G \\]",
+  "confiance": "moyenne",
+  "justification": "§177 « La progression mathématique construite jusqu'ici peut être résumée ainsi : » suivi de neuf blocs vides.",
+  "validation": "Domaine G — Document G — Probabilités. Analogie avec le §155 du domaine J (même formule d'introduction, dix blocs pour dix domaines), hypothèse A→J validée par l'auteur le 2026-10-18. Le résidu du bloc est vide."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3038,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ H \\]",
+  "confiance": "moyenne",
+  "justification": "§177 « La progression mathématique construite jusqu'ici peut être résumée ainsi : » suivi de neuf blocs vides.",
+  "validation": "Domaine H — Document H — Statistiques. Analogie avec le §155 du domaine J (même formule d'introduction, dix blocs pour dix domaines), hypothèse A→J validée par l'auteur le 2026-10-18. Le résidu du bloc est vide."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3040,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ I \\]",
+  "confiance": "moyenne",
+  "justification": "§177 « La progression mathématique construite jusqu'ici peut être résumée ainsi : » suivi de neuf blocs vides.",
+  "validation": "Domaine I — Domaine I — Calcul différentiel (le présent document). Analogie avec le §155 du domaine J (même formule d'introduction, dix blocs pour dix domaines), hypothèse A→J validée par l'auteur le 2026-10-18. Le résidu du bloc est vide."
+ }
+]

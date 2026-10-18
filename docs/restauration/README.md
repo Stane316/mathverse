@@ -32,8 +32,75 @@ Autrement dit : **on ne restaure pas, on réécrit.** Chaque équation reconstru
 | Fragments de commandes (`\_`, `_{n}_`) | 205 | reconstruction |
 | Parenthèses vides `()` | 73 | reconstruction à partir du contexte |
 | Membres gauche ou droit manquants | 110 | reconstruction |
-| **Titres et équations des documents A, B, C, D** | 4 documents | **chantier distinct** (§6) |
+| **Titres et équations des documents A, B, C, D** | 4 documents | **chantier distinct** (§6) — voir le régime 3 ci-dessous |
 | Artefacts d'échappement de crochets (E, R, S, U) | 48 blocs | correction de l'échappement, pas du contenu |
+
+### Trois régimes de dégradation, pas un seul
+
+Les documents n'ont pas tous été atteints de la même façon. Trois régimes distincts
+ont été identifiés, et ils n'appellent pas la même méthode :
+
+| | Régime | Documents | Ce qui subsiste | Méthode |
+|---|---|---|---|---|
+| 1 | Commandes LaTeX détruites **avec leurs arguments** | E à U | le bloc, son squelette, des fragments (`\_`, `_{}`, `( )`) | reconstruction |
+| 2 | Lettres grecques détruites | E à U | idem, sans résidu | reconstruction |
+| 3 | **Blocs `\[…\]` supprimés, formules aplaties en texte inline** | **A à D** (vérifié sur D) | **les variables, l'ordre des opérations** | **recomposition** |
+
+Le régime 3 a été découvert sur le document D (fiche `domaine-D-…`, 2026-10-18) : les
+formules y ont été réécrites en texte, chaque symbole séparé par des doubles espaces, et
+rejetées en fin de paragraphe. Exemple, section 24 (intersection rayon/plan) :
+
+```
+R ( t ) =   O   +   td   n   ⋅   X   +   c   = 0   t   = −   n   ⋅   d n   ⋅   O   +   c
+n   ⋅   d   =   0   ∥ P   −   C ∥   = 2   r 2
+```
+
+soit `R(t)=O+td`, `n·X+c=0`, `t=−(n·O+c)/(n·d)`, `n·d≠0`, `‖P−C‖²=r²`. La barre de
+fraction disparaît, mais numérateur et dénominateur restent **adjacents et dans l'ordre** :
+la recomposition est donc déterministe, et **plus sûre** que la reconstruction des
+documents E à U, qui part de résidus.
+
+Ce régime détruit en revanche les lettres grecques (sans laisser le résidu `\_`),
+les exposants et indices, et quelques glyphes (`≠` est perdu).
+
+Mesures sur D : **22 lignes** portent des runs recomposables, **212 slots** « :  »
+marquent des formules dont il ne reste que l'annonce.
+
+### Régime 3 — vérification achevée sur A, B, C (2026-10-18)
+
+Le régime 3 a été **confirmé sur les quatre documents** A, B, C et D. Le tableau suivant
+est entièrement mesuré :
+
+| Doc | Lignes | Octets | Oct./ligne | Titres `^#` | Blocs `\[…\]` | Parties | Sections | Slots « :  » | Grecques | Exposants | Lignes à run |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **A** — logique | 119 | 81 681 | 686 | **0** | **0** | 0 | 101 (décimales) | 132 | 2 | **0** | 10 |
+| **B** — nombres | 103 | 68 220 | 662 | **0** | **0** | 0 | 95 (décimales) | 155 | 19 | **0** | 22 |
+| **C** — algèbre linéaire | 123 | 76 998 | 626 | **0** | **0** | 22 | 31 (décimales) | 169 | **80** | **0** | **41** |
+| **D** — géométrie | 133 | 58 287 | 438 | **0** | **0** | 30 | 122 (« N — ») | 212 | 27 | **0** | 23 |
+| **Total A–D** | **478** | **284 186** | — | **0** | **0** | 52 | 349 | **668** | 128 | **0** | **96** |
+
+**Ce qui est établi :**
+
+1. **Le régime 3 est universel sur A–D.** Zéro titre Markdown, zéro bloc `\[…\]`, zéro
+   mathématique inline `$…$`, zéro bloc de code — dans les quatre documents, sans
+   exception. La notation y est aplatie en texte ou absente.
+2. **La structure, elle, existe et est comptable** : 349 sections au total, mais **invisible
+   à tout outil** faute de balisage. `extract_domain.py` ne peut rien en extraire ; tout
+   relevé se fait à la main.
+3. **Les exposants sont universellement détruits** (`² ³ ⁿ` : 0 occurrence dans les quatre
+   documents). C'est la seule perte vraiment systématique.
+4. **Les lettres grecques survivent partiellement** — 128 occurrences au total, très
+   inégalement réparties (C en concentre 80, A seulement 2). Une affirmation antérieure
+   de la fiche D, selon laquelle elles auraient été supprimées, a été **rectifiée**.
+5. **96 lignes portent des runs recomposables**, contre **668 slots vides**. La
+   recomposition ne résout donc qu'une partie du chantier A–D — mais elle la résout
+   **mieux** que la reconstruction pratiquée sur E–U, puisqu'elle part de variables
+   conservées et non de résidus.
+
+**Conséquence sur le chantier A–D :** il se divise désormais en deux travaux distincts —
+une **recomposition** (96 lignes, confiance élevée) et une **reconstruction** (668 slots,
+confiance à établir). À ces deux travaux s'ajoute le **rétablissement des titres**, qui ne
+touche pas au fond et conditionne tout le reste.
 
 ## 3. Inventaire
 
@@ -140,7 +207,7 @@ toucher aux autres.
 |---:|---|---|
 | 1 | **K** — 18 défauts signalés, **30 traités** | domaine le plus utile au produit, équations canoniques — **terminé, 0 défaut restant** (lots 1 et 1 bis) |
 | 2 | **L** — analyse numérique | socle des critères de validation ; 61 signalés, **131 au total**, 102 appliqués — **33 blocs en attente de l'auteur** |
-| 3 | **I** — calcul différentiel | 109 signalés, **223 au total** (lecture intégrale des 318 blocs) — lots 3a (64) et 3b (159) proposés, **en attente de validation** |
+| 3 | **I** — calcul différentiel | 109 signalés, 318 blocs lus — **lots 3a (62), 3b (133) et 3c (9) : 204 restaurations appliquées**, blocs vides 44 → 27 — **28 blocs en attente de l'auteur** |
 | 4 | **N** — transformées | 84 signalés, lecture intégrale des 248 blocs — lots 4a (75) et 4b (104) proposés, **en attente de validation** |
 | 5 | **J** — optimisation | 166 signalés, **119 observés** (lecture intégrale des 332 blocs — le plus gros document) — **lots 5a (102 entrées) et 5b (186) proposés, en attente de validation** — **document entièrement parcouru** |
 | 6-9 | H, G, M, O, F, Q, P, UI/UX, E/R/S/U, « Ai Technical Litteracy » | voir `PLAN-ACHEVEMENT.md` |

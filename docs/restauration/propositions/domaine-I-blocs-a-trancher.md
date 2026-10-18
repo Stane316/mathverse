@@ -72,3 +72,27 @@ candidats proposés en découlent directement :
 | Pour la computer graphics | — | `F(x,y,z) → ∇F` (la normale, §109) |
 
 Ce sont des **propositions**, pas des restitutions : le motif donne la forme, pas le contenu.
+
+---
+
+## Annexe — les 2 blocs du lot 3a
+
+Ils s'ajoutent aux 26 du lot 3b : **28 blocs** attendent une décision.
+
+| Ligne | Lot | Contexte | Candidat |
+|---:|:--|---|---|
+| **75** | 3a | « Une compréhension sérieuse du Machine Learning nécessite donc de comprendre au minimum : [vide] » | aucun résidu — à trancher par l'auteur, à défaut mention « contenu perdu » |
+| **332** | 3a | « Ainsi : [vide] est une application fondamentale du calcul différentiel. » — après l'accélération | `\text{la dérivation}` ou `\text{le calcul des dérivées}` |
+
+## État après application des lots 3a, 3b et 3c
+
+| Mesure | Avant | Après |
+|---|---:|---:|
+| Blocs display | 318 | 318 |
+| Blocs vides | 44 | **27** |
+| Restaurations appliquées | — | **204** (62 + 133 + 9) |
+| Blocs en attente de décision | — | **28** |
+
+Le lot 3c a comblé les neuf blocs du §177, qui n'avaient jamais été soumis :
+la vérification croisée a montré que sur les 37 blocs encore dégradés après
+3a et 3b, **28 étaient déjà en inconnue et 9 n'avaient pas été vus**.

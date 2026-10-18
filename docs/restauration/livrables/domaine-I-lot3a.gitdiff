@@ -1,0 +1,461 @@
+diff --git "a/Maths-vers-Informatiques/Domaine I - Calcul diff\303\251rentiel \342\200\224 Cartographie compl\303\250te pour le machine learning.md" "b/Maths-vers-Informatiques/Domaine I - Calcul diff\303\251rentiel \342\200\224 Cartographie compl\303\250te pour le machine learning.md"
+index e2a81ad..cb32a26 100644
+--- "a/Maths-vers-Informatiques/Domaine I - Calcul diff\303\251rentiel \342\200\224 Cartographie compl\303\250te pour le machine learning.md"	
++++ "b/Maths-vers-Informatiques/Domaine I - Calcul diff\303\251rentiel \342\200\224 Cartographie compl\303\250te pour le machine learning.md"	
+@@ -26,7 +26,7 @@ La notion centrale est celle de **dérivée**.
+ 
+ Pour une fonction d’une variable :
+ 
+-\[ f : \]
++\[ f:\mathbb{R}\to\mathbb{R} \]
+ 
+ la dérivée (f’(x)) mesure le taux de variation local de (f).
+ 
+@@ -203,7 +203,7 @@ Avant toute formule, il faut maîtriser les termes suivants.
+ 
+ Une fonction associe une entrée à une sortie.
+ 
+-\[ f : XY \]
++\[ f:X\to Y \]
+ 
+ Exemple :
+ 
+@@ -215,7 +215,7 @@ Exemple :
+ 
+ En Machine Learning :
+ 
+-\[ f_(x) \]
++\[ f_\theta(x) \]
+ 
+ désigne souvent un modèle dépendant de paramètres ().
+ 
+@@ -223,17 +223,17 @@ désigne souvent un modèle dépendant de paramètres ().
+ 
+ Une fonction scalaire d’une variable possède la forme :
+ 
+-\[ f: \]
++\[ f:\mathbb{R}\to\mathbb{R} \]
+ 
+ Exemples :
+ 
+ \[ f(x)=x^2 \]
+ 
+-\[ f(x)=(x) \]
++\[ f(x)=\sin x \]
+ 
+ \[ f(x)=e^x \]
+ 
+-\[ f(x)=(x) \]
++\[ f(x)=\ln x \]
+ 
+ Ces fonctions constituent les briques élémentaires du calcul différentiel.
+ 
+@@ -241,7 +241,7 @@ Ces fonctions constituent les briques élémentaires du calcul différentiel.
+ 
+ La limite décrit le comportement d’une fonction lorsqu’une variable se rapproche d’une valeur.
+ 
+-\[ \_{xa}f(x) \]
++\[ \lim_{x\to a}f(x) \]
+ 
+ Elle permet de formaliser la notion de comportement local.
+ 
+@@ -251,7 +251,7 @@ La dérivée sera construite à partir d’une limite.
+ 
+ Une fonction est continue en (a) si :
+ 
+-\[ \_{xa}f(x)=f(a) \]
++\[ \lim_{x\to a}f(x)=f(a) \]
+ 
+ Intuitivement :
+ 
+@@ -263,7 +263,7 @@ La continuité ne garantit cependant pas automatiquement la différentiabilité.
+ 
+ Entre deux points (x) et (x+h) :
+ 
+-\[ \]
++\[ \frac{f(x+h)-f(x)}{h} \]
+ 
+ mesure le taux de variation moyen.
+ 
+@@ -275,7 +275,7 @@ Lorsque (h) devient très petit, on obtient la dérivée.
+ 
+ La dérivée de (f) en (x) est :
+ 
+-\[ f’(x) = \_{h} \]
++\[ f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h} \]
+ 
+ si cette limite existe.
+ 
+@@ -337,27 +337,27 @@ est une application fondamentale du calcul différentiel.
+ 
+ Pour (n) :
+ 
+-\[ x<sup>n=nx</sup>{n-1} \]
++\[ \frac{d}{dx}x^{n}=nx^{n-1} \]
+ 
+ Constante :
+ 
+-\[ c=0 \]
++\[ \frac{d}{dx}c=0 \]
+ 
+ Exponentielle :
+ 
+-\[ e<sup>x=e</sup>x \]
++\[ \frac{d}{dx}e^{x}=e^{x} \]
+ 
+ Logarithme :
+ 
+-\[ (x)=1x \]
++\[ \frac{d}{dx}(\ln x)=\frac{1}{x} \]
+ 
+ Sinus :
+ 
+-\[ (x)=(x) \]
++\[ \frac{d}{dx}(\sin x)=\cos x \]
+ 
+ Cosinus :
+ 
+-\[ (x)=-(x) \]
++\[ \frac{d}{dx}(\cos x)=-\sin x \]
+ 
+ # 13 — RÈGLE DE SOMME
+ 
+@@ -389,11 +389,11 @@ alors :
+ 
+ Si :
+ 
+-\[ f(x)= \]
++\[ f(x)=\frac{u(x)}{v(x)} \]
+ 
+ alors :
+ 
+-\[ f’(x) = {v(x)^2} \]
++\[ f'(x)=\frac{u'(x)v(x)-u(x)v'(x)}{v(x)^2} \]
+ 
+ avec (v(x)).
+ 
+@@ -407,11 +407,11 @@ Si :
+ 
+ alors :
+ 
+-\[ = f’(g(x))g’(x) \]
++\[ \frac{dy}{dx}=f'(g(x))g'(x) \]
+ 
+ Autrement dit :
+ 
+-\[ \]
++\[ \frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx} \]
+ 
+ Cette règle permet de différencier une composition de fonctions.
+ 
+@@ -421,7 +421,7 @@ Un réseau neuronal est essentiellement une composition de fonctions.
+ 
+ Par exemple :
+ 
+-\[ x z_1 a_1 z_2 a_2 L \]
++\[ x \to z_1 \to a_1 \to z_2 \to a_2 \to L \]
+ 
+ On peut écrire :
+ 
+@@ -445,15 +445,15 @@ On dérive alors les deux membres par rapport à (x).
+ 
+ Exemple :
+ 
+-\[ x<sup>2+y</sup>2=1 \]
++\[ x^{2}+y^{2}=1 \]
+ 
+ donne :
+ 
+-\[ 2x+2y=0 \]
++\[ 2x+2yy'=0 \]
+ 
+ donc :
+ 
+-\[ =- \]
++\[ y'=-\frac{x}{y} \]
+ 
+ # 20 — DÉRIVÉE SECONDE
+ 
+@@ -505,17 +505,17 @@ La différentielle fournit une approximation locale de la variation.
+ 
+ Pour une petite variation (dx) :
+ 
+-\[ fdf \]
++\[ \Delta f\approx df \]
+ 
+ donc :
+ 
+-\[ ff’(x)x \]
++\[ \Delta f\approx f'(x)\Delta x \]
+ 
+ # 23 — APPROXIMATION LINÉAIRE
+ 
+ Autour d’un point (a) :
+ 
+-\[ f(x) f(a)+f’(a)(x-a) \]
++\[ f(x)\approx f(a)+f'(a)(x-a) \]
+ 
+ C’est l’approximation par la tangente.
+ 
+@@ -525,16 +525,16 @@ Elle constitue le premier niveau du développement de Taylor.
+ 
+ Autour de (a) :
+ 
+-\[ f(x) f(a)
++\[ f(x)\approx f(a)
+ 
+-- f’(a)(x-a)
+-- (x-a)^2 + \]
+++ f'(a)(x-a)
+++ \frac{f''(a)}{2}(x-a)^2 + \cdots \]
+ 
+ Formellement :
+ 
+-\[ f(x) = \_{k=0}^{n} (x-a)^k
++\[ f(x)=\sum_{k=0}^{n}\frac{f^{(k)}(a)}{k!}(x-a)^k
+ 
+-- R_n(x) \]
+++ R_n(x) \]
+ 
+ Le terme (R_n) représente le reste.
+ 
+@@ -542,10 +542,10 @@ Le terme (R_n) représente le reste.
+ 
+ Autour d’un point (x), une fonction peut être approximée par :
+ 
+-\[ f(x+x) f(x)
++\[ f(x+\Delta x)\approx f(x)
+ 
+-- f(x)^Tx
+-- x^THx \]
+++ \nabla f(x)^T\Delta x
+++ \frac{1}{2}\Delta x^TH\Delta x \]
+ 
+ Cette formule explique mathématiquement pourquoi :
+ 
+@@ -556,11 +556,11 @@ Cette formule explique mathématiquement pourquoi :
+ 
+ On considère maintenant :
+ 
+-\[ f:^n \]
++\[ f:\mathbb{R}^{n}\to\mathbb{R} \]
+ 
+ Exemple :
+ 
+-\[ f(x,y)=x<sup>2+y</sup>2 \]
++\[ f(x,y)=x^{2}+y^{2} \]
+ 
+ La fonction dépend de plusieurs variables.
+ 
+@@ -572,31 +572,29 @@ On introduit les **dérivées partielles**.
+ 
+ La dérivée partielle par rapport à (x) consiste à faire varier (x) en maintenant les autres variables constantes.
+ 
+-\[ \]
++\[ \frac{\partial f}{\partial x} \]
+ 
+ Exemple :
+ 
+-\[ f(x,y)=x<sup>2+3xy+y</sup>2 \]
++\[ f(x,y)=x^{2}+3xy+y^{2} \]
+ 
+ Alors :
+ 
+-\[ = 2x+3y \]
++\[ \frac{\partial f}{\partial x}=2x+3y \]
+ 
+ et :
+ 
+-\[ = 3x+2y \]
++\[ \frac{\partial f}{\partial y}=3x+2y \]
+ 
+ # 28 — GRADIENT
+ 
+ Pour :
+ 
+-\[ f:^n \]
++\[ f:\mathbb{R}^{n}\to\mathbb{R} \]
+ 
+ le gradient est :
+ 
+-\[ f(x) =
+-
+-\]
++\[ \nabla f(x)=\begin{pmatrix}\frac{\partial f}{\partial x_1}\\ \vdots \\ \frac{\partial f}{\partial x_n}\end{pmatrix} \]
+ 
+ Le gradient est donc un vecteur.
+ 
+@@ -606,13 +604,13 @@ Le gradient indique la direction de **plus forte augmentation locale** de la fon
+ 
+ Sa norme :
+ 
+-\[ |f(x)| \]
++\[ \|\nabla f(x)\| \]
+ 
+ mesure l’intensité maximale de cette variation directionnelle.
+ 
+ La direction de descente maximale est :
+ 
+-\[ -f(x) \]
++\[ -\nabla f(x) \]
+ 
+ C’est le fondement de la descente de gradient.
+ 
+@@ -620,29 +618,29 @@ C’est le fondement de la descente de gradient.
+ 
+ Pour une direction (u), la dérivée directionnelle est :
+ 
+-\[ D_uf(x) = f(x)^Tu \]
++\[ D_uf(x)=\nabla f(x)^Tu \]
+ 
+ si (u) est un vecteur directionnel.
+ 
+ Si (u) est unitaire :
+ 
+-\[ D_uf(x)=f(x)u \]
++\[ D_uf(x)=\nabla f(x)\cdot u \]
+ 
+ # 31 — PROPRIÉTÉ FONDAMENTALE DU GRADIENT
+ 
+ Pour une direction unitaire (u) :
+ 
+-\[ D_uf(x) = |f(x)| \]
++\[ D_uf(x)=\|\nabla f(x)\|\cos\theta \]
+ 
+ où () est l’angle entre le gradient et (u).
+ 
+ Le maximum est obtenu lorsque :
+ 
+-\[ u= {|f(x)|} \]
++\[ u=\frac{\nabla f(x)}{\|\nabla f(x)\|} \]
+ 
+ Le minimum lorsque :
+ 
+-\[ u= - {|f(x)|} \]
++\[ u=-\frac{\nabla f(x)}{\|\nabla f(x)\|} \]
+ 
+ # 32 — SURFACES DE NIVEAU
+ 
+@@ -654,7 +652,7 @@ Le gradient est orthogonal aux surfaces de niveau.
+ 
+ Ainsi :
+ 
+-\[ f(x,y) \]
++\[ \nabla f(x,y)\perp\{(x,y)\mid f(x,y)=c\} \]
+ 
+ Cette propriété est importante en géométrie, optimisation et visualisation des fonctions de perte.
+ 
+@@ -664,7 +662,7 @@ Une fonction est différentiable en un point si elle peut être correctement app
+ 
+ Pour :
+ 
+-\[ f:<sup>n</sup>m \]
++\[ f:\mathbb{R}^{n}\to\mathbb{R}^{m} \]
+ 
+ on cherche une application linéaire (A) telle que :
+ 
+@@ -672,25 +670,25 @@ on cherche une application linéaire (A) telle que :
+ 
+ avec :
+ 
+-\[ \]
++\[ \frac{\|r(h)\|}{\|h\|}\to 0 \]
+ 
+ lorsque :
+ 
+-\[ h \]
++\[ h\to 0 \]
+ 
+ # 34 — DIFFÉRENTIELLE TOTALE
+ 
+ Pour :
+ 
+-\[ f:^n \]
++\[ f:\mathbb{R}^{n}\to\mathbb{R} \]
+ 
+ la différentielle est :
+ 
+-\[ df = \_{i=1}^{n} dx_i \]
++\[ df=\sum_{i=1}^{n}\frac{\partial f}{\partial x_i}dx_i \]
+ 
+ Sous forme vectorielle :
+ 
+-\[ df=f(x)^Tdx \]
++\[ df=\nabla f(x)^Tdx \]
+ 
+ Cette formule est fondamentale pour comprendre la relation entre différentielle et gradient.
+ 
+@@ -698,23 +696,21 @@ Cette formule est fondamentale pour comprendre la relation entre différentielle
+ 
+ Pour une fonction :
+ 
+-\[ F:<sup>n</sup>m \]
++\[ F:\mathbb{R}^{n}\to\mathbb{R}^{m} \]
+ 
+ la Jacobienne est la matrice des dérivées premières :
+ 
+-\[ J_F(x) =
+-
+-\]
++\[ J_F(x)=\begin{pmatrix}\frac{\partial F_1}{\partial x_1}&\cdots&\frac{\partial F_1}{\partial x_n}\\ \vdots&\ddots&\vdots\\ \frac{\partial F_m}{\partial x_1}&\cdots&\frac{\partial F_m}{\partial x_n}\end{pmatrix} \]
+ 
+ Sa dimension est :
+ 
+-\[ mn \]
++\[ m\times n \]
+ 
+ # 36 — JACOBIENNE ET DIFFÉRENTIELLE
+ 
+ Localement :
+ 
+-\[ F(x+x) F(x)+J_F(x)x \]
++\[ F(x+\Delta x)\approx F(x)+J_F(x)\Delta x \]
+ 
+ La Jacobienne est donc la généralisation multidimensionnelle de la dérivée.
+ 
+@@ -722,13 +718,13 @@ La Jacobienne est donc la généralisation multidimensionnelle de la dérivée.
+ 
+ Pour :
+ 
+-\[ f:^n \]
++\[ f:\mathbb{R}^{n}\to\mathbb{R} \]
+ 
+ le gradient est un vecteur.
+ 
+ Pour :
+ 
+-\[ F:<sup>n</sup>m \]
++\[ F:\mathbb{R}^{n}\to\mathbb{R}^{m} \]
+ 
+ la Jacobienne est une matrice.
+ 
+@@ -750,17 +746,15 @@ Les conventions ligne/colonne peuvent varier selon les ouvrages et bibliothèque
+ 
+ Pour une fonction scalaire :
+ 
+-\[ f:^n \]
++\[ f:\mathbb{R}^{n}\to\mathbb{R} \]
+ 
+ la Hessienne contient les dérivées secondes :
+ 
+-\[ H_f(x) = ^2f(x) \]
++\[ H_f(x)=\nabla^{2}f(x) \]
+ 
+ avec :
+ 
+-\[ H_f(x) =
+-
+-\]
++\[ H_f(x)=\begin{pmatrix}\frac{\partial^{2}f}{\partial x_1^{2}}&\cdots&\frac{\partial^{2}f}{\partial x_1\partial x_n}\\ \vdots&\ddots&\vdots\\ \frac{\partial^{2}f}{\partial x_n\partial x_1}&\cdots&\frac{\partial^{2}f}{\partial x_n^{2}}\end{pmatrix} \]
+ 
+ # 39 — INTERPRÉTATION DE LA HESSIENNE
+ 
+@@ -781,7 +775,7 @@ Hessienne → courbure locale
+ 
+ Sous des hypothèses régulières de continuité des dérivées secondes :
+ 
+-\[ {x_ix_j} = {x_jx_i} \]
++\[ \frac{\partial^{2}f}{\partial x_i\partial x_j}=\frac{\partial^{2}f}{\partial x_j\partial x_i} \]
+ 
+ La Hessienne est alors symétrique.
+ 
