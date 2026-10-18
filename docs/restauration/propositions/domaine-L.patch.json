@@ -317,6 +317,15 @@
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 445,
+  "ancien": "\\[ \\[a,b\\]. \\]",
+  "nouveau": "\\[ [a,b]. \\]",
+  "confiance": "correction d'echappement",
+  "justification": "Crochets echappes a l'interieur du mode mathematique (l'intervalle [a,b] a ete ecrit \\[a,b\\]). Ce n'est pas une perte de contenu mais un artefact de traitement automatique ; le bloc est mathematiquement invalide en l'etat.",
+  "validation": "Le bloc redevient un intervalle lisible, et le \\[...\\] imbrique disparait."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
   "ligne": 449,
   "ancien": "\\[ m=. \\]",
   "nouveau": "\\[ m=\\frac{a+b}{2}. \\]",
@@ -580,6 +589,15 @@
   "confiance": "moyenne",
   "justification": "« On parle notamment de : [ ] ou stiff problems » : le terme français.",
   "validation": "Traduction consacrée de stiff problems."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 993,
+  "ancien": "\\[ I=E\\[f(X)\\], \\]",
+  "nouveau": "\\[ I=E[f(X)], \\]",
+  "confiance": "correction d'echappement",
+  "justification": "Artefact d'echappement : l'esperance E[f(X)] a ete ecrite E\\[f(X)\\], a l'interieur d'un bloc d'affichage. Meme famille que les 48 blocs deja ecartes du compte dans le rapport A7 ; corrige ici sur decision de l'auteur (2026-10-18) car le \\[...\\] imbrique rend le bloc invalide.",
+  "validation": "Coherence avec les lignes 2237 et 2298, corrigees de la meme maniere."
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
@@ -1117,6 +1135,15 @@
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2237,
+  "ancien": "\\[ E\\[f(X)\\] . \\]",
+  "nouveau": "\\[ E[f(X)]. \\]",
+  "confiance": "correction d'echappement",
+  "justification": "Artefact d'echappement : E[f(X)].",
+  "validation": "Idem."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
   "ligne": 2241,
   "ancien": "\\[ \\]",
   "nouveau": "\\[ r=Ax-b \\]",
@@ -1151,6 +1178,15 @@
   "confiance": "moyenne",
   "justification": "Relation avec le domaine K : les systèmes dynamiques s'écrivent sous cette forme (sections 50 et 2233).",
   "validation": "Coherence avec les lignes 901 et 2233."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2298,
+  "ancien": "\\[ E\\[X\\] . \\]",
+  "nouveau": "\\[ E[X]. \\]",
+  "confiance": "correction d'echappement",
+  "justification": "Artefact d'echappement : E[X].",
+  "validation": "Idem."
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
