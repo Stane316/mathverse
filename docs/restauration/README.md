@@ -32,8 +32,40 @@ Autrement dit : **on ne restaure pas, on réécrit.** Chaque équation reconstru
 | Fragments de commandes (`\_`, `_{n}_`) | 205 | reconstruction |
 | Parenthèses vides `()` | 73 | reconstruction à partir du contexte |
 | Membres gauche ou droit manquants | 110 | reconstruction |
-| **Titres et équations des documents A, B, C, D** | 4 documents | **chantier distinct** (§6) |
+| **Titres et équations des documents A, B, C, D** | 4 documents | **chantier distinct** (§6) — voir le régime 3 ci-dessous |
 | Artefacts d'échappement de crochets (E, R, S, U) | 48 blocs | correction de l'échappement, pas du contenu |
+
+### Trois régimes de dégradation, pas un seul
+
+Les documents n'ont pas tous été atteints de la même façon. Trois régimes distincts
+ont été identifiés, et ils n'appellent pas la même méthode :
+
+| | Régime | Documents | Ce qui subsiste | Méthode |
+|---|---|---|---|---|
+| 1 | Commandes LaTeX détruites **avec leurs arguments** | E à U | le bloc, son squelette, des fragments (`\_`, `_{}`, `( )`) | reconstruction |
+| 2 | Lettres grecques détruites | E à U | idem, sans résidu | reconstruction |
+| 3 | **Blocs `\[…\]` supprimés, formules aplaties en texte inline** | **A à D** (vérifié sur D) | **les variables, l'ordre des opérations** | **recomposition** |
+
+Le régime 3 a été découvert sur le document D (fiche `domaine-D-…`, 2026-10-18) : les
+formules y ont été réécrites en texte, chaque symbole séparé par des doubles espaces, et
+rejetées en fin de paragraphe. Exemple, section 24 (intersection rayon/plan) :
+
+```
+R ( t ) =   O   +   td   n   ⋅   X   +   c   = 0   t   = −   n   ⋅   d n   ⋅   O   +   c
+n   ⋅   d   =   0   ∥ P   −   C ∥   = 2   r 2
+```
+
+soit `R(t)=O+td`, `n·X+c=0`, `t=−(n·O+c)/(n·d)`, `n·d≠0`, `‖P−C‖²=r²`. La barre de
+fraction disparaît, mais numérateur et dénominateur restent **adjacents et dans l'ordre** :
+la recomposition est donc déterministe, et **plus sûre** que la reconstruction des
+documents E à U, qui part de résidus.
+
+Ce régime détruit en revanche les lettres grecques (sans laisser le résidu `\_`),
+les exposants et indices, et quelques glyphes (`≠` est perdu).
+
+Mesures sur D : **22 lignes** portent des runs recomposables, **212 slots** « :  »
+marquent des formules dont il ne reste que l'annonce. ⚠️ Le régime 3 doit être vérifié
+sur A, B et C avant d'être généralisé — il change la nature du chantier A–D.
 
 ## 3. Inventaire
 

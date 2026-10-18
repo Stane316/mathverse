@@ -57,6 +57,7 @@ dans A1, A3, A4, A5. Un jeu de repli est conservé si `mathemirum` devait être 
 | `A7-integrite-des-equations.md` + annexe CSV | **terminé** (rectifié) | nature et étendue de la dégradation |
 | `fiches/domaine-K-…md` | **terminée** | fiche 1 sur 29 |
 | `fiches/domaine-L-analyse-numerique.md` | **terminée** | fiche 2 sur 29 — **rédigée sur le document restauré** (102 écritures appliquées) ; ordre d'entrelacement L → I → N → J |
+| `fiches/domaine-D-geometrie-computationnelle.md` | **terminée** | fiche 3 sur 29 — document **non restauré** (chantier A–D) ; révèle un **troisième régime de dégradation** : formules aplaties en texte inline, variables conservées |
 | Index notion → composant | **non commencé** | prévu par A6 §3.4 |
 
 **Constats A2 (vérifiés, reproductibles par `tools/audit-phase1/extract_structure.py`) :**
