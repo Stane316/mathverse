@@ -13,8 +13,11 @@
 ## 0. État d'application (2026-10-18)
 
 Lot validé par l'auteur le 2026-10-18, avec confirmation qu'une sauvegarde indépendante du
-dépôt existe. Les 19 entrées de confiance haute et moyenne ont été appliquées ; la 20ᵉ
-(section 166) reste en attente de l'intention de l'auteur.
+dépôt existe. Les 19 entrées de confiance haute et moyenne ont été appliquées ; la 20ᵉ,
+d'abord laissée en attente, a été tranchée le même jour (chaîne opérationnelle **et** formule
+itérative) et appliquée avec le complément de 10 propositions — voir
+`domaine-K-complement.md`. **Le document K ne compte plus aucun défaut détecté : 30
+restaurations au total.**
 
 **Contrainte rencontrée :** l'envoi git vers `my-own-connaissance` est refusé
 (`403 — Permission to Stane316/my-own-connaissance.git denied`, puis
@@ -30,7 +33,7 @@ de diff. La procédure d'application est dans le README du chantier, §7.
 |---|---:|---|
 | **Haute** | 14 | le fragment survivant et la forme canonique n'autorisent pas d'autre lecture raisonnable |
 | **Moyenne** | 5 | forme canonique probable, mais un choix de notation ou de normalisation subsiste |
-| **Inconnue** | 1 | l'intention de l'auteur est requise |
+| **Inconnue** | 1 | l'intention de l'auteur est requise — **tranchée le 2026-10-18** |
 | **Total** | **20** | 18 défauts de l'inventaire + 2 défauts découverts hors inventaire |
 
 Les 18 défauts de l'inventaire (`annexes/inventaire-defauts.csv`) sont tous traités. Deux blocs supplémentaires, non détectés par les heuristiques parce qu'ils sont courts sans être structurellement invalides (L2581, et la liste de paramètres L1150), ont été ajoutés — ce qui confirme que l'inventaire automatisé est un **plancher**, pas un décompte exact.
@@ -78,7 +81,7 @@ Trois mécanismes, tous cohérents entre eux :
 
 | Ligne | Bloc actuel | Candidats | Décision requise |
 |---:|---|---|---|
-| 4314 | `\[ \]` (bloc vide) | **(a)** la chaîne opérationnelle énoncée ligne 37 : PHÉNOMÈNE → CONCEPT MATHÉMATIQUE → RÈGLE OU ÉQUATION → PROCESSUS ITÉRATIF → REPRÉSENTATION NUMÉRIQUE → ALGORITHME → PARAMÈTRES → VISUALISATION → APPLICATION LOGICIELLE ; **(b)** la formule itérative centrale `x_{n+1}=f(x_n)` | l'arbitrage de l'auteur. Le titre de section est « FORMULE DE RÉFÉRENCE » et la phrase qui suit parle de « cette chaîne » : les deux lectures sont défendables |
+| 4314 | `\[ \]` (bloc vide) | **Décidé par l'auteur (2026-10-18) : les deux.** `\[ \text{PHÉNOMÈNE}\to\text{CONCEPT}\to\text{RÈGLE}\to\text{PROCESSUS}\to\text{REPRÉSENTATION}\to\text{ALGORITHME}\to\text{PARAMÈTRES}\to\text{VISUALISATION}\to\text{APPLICATION},\quad x_{n+1}=f(x_n) \]` | le contenu est désormais autorisé ; seule la mise en forme LaTeX (chaîne compacte plutôt que les neuf maillons en toutes lettres des lignes 39-55) reste une proposition modifiable |
 
 ## 4. Ce que ce lot démontre
 

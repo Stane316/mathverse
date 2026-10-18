@@ -1,0 +1,85 @@
+diff --git "a/Maths-vers-Informatiques/DOCUMENT K \342\200\224 FRACTALES, CHAOS & SYST\303\210MES DYNAMIQUES.md" "b/Maths-vers-Informatiques/DOCUMENT K \342\200\224 FRACTALES, CHAOS & SYST\303\210MES DYNAMIQUES.md"
+index 3f6c3d1..3c12e2e 100644
+--- "a/Maths-vers-Informatiques/DOCUMENT K \342\200\224 FRACTALES, CHAOS & SYST\303\210MES DYNAMIQUES.md"	
++++ "b/Maths-vers-Informatiques/DOCUMENT K \342\200\224 FRACTALES, CHAOS & SYST\303\210MES DYNAMIQUES.md"	
+@@ -345,7 +345,7 @@ Application répétée d’une fonction.
+ 
+ Suite des états successifs :
+ 
+-\[ x_0, x_1, x_2, \]
++\[ x_0, x_1, x_2,\ldots \]
+ 
+ avec :
+ 
+@@ -790,7 +790,7 @@ où :
+ 
+ Un IFS combine plusieurs transformations :
+ 
+-\[ T_1,T_2,,T_n \]
++\[ T_1,T_2,\ldots,T_n \]
+ 
+ ## 16.1 — Principe
+ 
+@@ -856,7 +856,7 @@ Elle permet de caractériser quantitativement :
+ 
+ Pour des objets plus complexes, on peut utiliser le principe du comptage par boîtes.
+ 
+-On recouvre l’objet avec des boîtes de taille ().
++On recouvre l’objet avec des boîtes de taille (\varepsilon).
+ 
+ On observe le nombre :
+ 
+@@ -866,7 +866,7 @@ de boîtes nécessaires.
+ 
+ La dimension peut être estimée par :
+ 
+-\[ D {(1/)} \]
++\[ D=\lim_{\varepsilon\to 0}\frac{\log N(\varepsilon)}{\log(1/\varepsilon)} \]
+ 
+ lorsque le comportement asymptotique est approprié.
+ 
+@@ -952,7 +952,7 @@ Dans un système multidimensionnel, l’espace des phases devient particulièrem
+ 
+ Un point fixe (x^\*) vérifie :
+ 
+-\[ f(x<sup>\*)=x</sup>\* \]
++\[ f(x^*)=x^* \]
+ 
+ Pour un système discret :
+ 
+@@ -1127,9 +1127,9 @@ dans le cas scalaire approprié.
+ 
+ Interprétation simplifiée :
+ 
+-- (<0) : convergence ;
+-- () : régime critique ;
+-- (>0) : divergence exponentielle locale compatible avec un comportement chaotique.
++- (\lambda<0) : convergence ;
++- (\lambda=0) : régime critique ;
++- (\lambda>0) : divergence exponentielle locale compatible avec un comportement chaotique.
+ 
+ Il s’agit d’un outil important pour l’analyse des systèmes dynamiques.
+ 
+@@ -1206,11 +1206,11 @@ Le bruit procédural permet de générer une variation contrôlée sans stocker
+ 
+ Une fonction de bruit peut être vue comme :
+ 
+-\[ N:^n \]
++\[ N:\mathbb{R}^n\rightarrow\mathbb{R} \]
+ 
+ ou :
+ 
+-\[ N(x,y)v \]
++\[ N(x,y)\rightarrow v \]
+ 
+ pour une surface 2D.
+ 
+@@ -4309,6 +4309,6 @@ Le Domaine K devient ainsi le domaine où les mathématiques cessent d’être u
+ 
+ Pour toute future application utilisant ce domaine :
+ 
+-\[ \]
++\[ \text{PHÉNOMÈNE}\to\text{CONCEPT}\to\text{RÈGLE}\to\text{PROCESSUS}\to\text{REPRÉSENTATION}\to\text{ALGORITHME}\to\text{PARAMÈTRES}\to\text{VISUALISATION}\to\text{APPLICATION},\quad x_{n+1}=f(x_n) \]
+ 
+ Cette chaîne constitue la référence opérationnelle du **Domaine K**.
+\ No newline at end of file

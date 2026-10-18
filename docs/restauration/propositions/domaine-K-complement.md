@@ -1,8 +1,19 @@
 # LOT 1 bis — COMPLÉMENT DU DOMAINE K (10 propositions)
 
-**Date :** 2026-10-18 — **Statut :** **propositions soumises à validation** — **non appliquées**
-**Correctif prêt :** `domaine-K-complement.patch.json` (10 entrées, vérifiées par `--apply` à sec)
+**Date :** 2026-10-18 — **Statut :** **validé et appliqué** (11 entrées : 10 du complément + la section 166)
+**Correctif :** `domaine-K-lot1bis.patch.json` (11 entrées, vérifiées par `--apply` à sec puis appliquées)
+**Livrables :** `livrables/domaine-K-lot1bis.gitdiff` — **à appliquer APRÈS** `domaine-K-lot1.gitdiff`
 **Numéros de ligne :** valides **après** application du lot 1 (`domaine-K.patch.json`)
+
+> **Décision de l'auteur (2026-10-18).** Complément validé en totalité (10 entrées).
+> Section 166 « FORMULE DE RÉFÉRENCE » tranchée : **les deux** — la chaîne opérationnelle
+> *et* la formule itérative centrale. Le bloc retenu :
+>
+> `\[ \text{PHÉNOMÈNE}\to\text{CONCEPT}\to\text{RÈGLE}\to\text{PROCESSUS}\to\text{REPRÉSENTATION}\to\text{ALGORITHME}\to\text{PARAMÈTRES}\to\text{VISUALISATION}\to\text{APPLICATION},\quad x_{n+1}=f(x_n) \]`
+>
+> Les neuf maillons sont ceux des lignes 39-55, en forme compacte ; la formule est celle des
+> sections 05.1, 20.1, 22 et 24. Le contenu est autorisé, la mise en forme LaTeX reste une
+> proposition modifiable.
 
 ---
 
@@ -61,19 +72,22 @@ En rédigeant ce complément, la forme retenue pour les paramètres de Lorenz (l
 Les trois symboles et leurs appellations sont inchangés : seule la forme éditoriale diffère.
 Le diff livré (`livrables/domaine-K-lot1.gitdiff`) contient la forme retenue.
 
-## 4. État du document K après le lot 1
+## 4. État du document K après les lots 1 et 1 bis
 
-| | Défauts restants |
+| | Défauts |
 |---|---:|
-| Défauts détectés par l'inventaire | 18 → **1** (section 166, en attente de votre décision) |
-| Défauts du présent complément | **10** |
-| **Restant si le complément est validé** | **1** |
+| Défauts signalés par l'inventaire au départ | 18 |
+| Défauts découverts à la lecture (présent complément) | 10 |
+| **Total traité** | **30** (19 + 11) |
+| **Défauts restants** | **0** |
 
-Le corpus passe de 724 à 707 défauts détectés après le lot 1.
+Le document K est le premier du corpus à être **exempt de défaut détecté**. Il reste
+néanmoins vrai qu'une reconstruction n'est pas une restitution : les 30 équations concernées
+doivent être relues par vous, en particulier les 7 de confiance moyenne.
 
-## 5. Ce que je vous demande
+**Corpus : 706 défauts signalés** restants (724 au départ, 18 dans le document K).
 
-1. **Valider ou refuser** ce complément (en totalité ou entrée par entrée) ;
-2. **Trancher la ligne 4312** (ancienne 4314, section 166 « FORMULE DE RÉFÉRENCE ») :
-   chaîne opérationnelle de la ligne 37, ou formule itérative `x_{n+1}=f(x_n)` ;
-3. me dire si la **forme révisée des paramètres de Lorenz** vous convient.
+*Précision de mesure* : l'inventaire compte 709 blocs sur la copie de travail, dont 3
+provenant du fichier de traçabilité `RESTAURATION-EQUATIONS.md` — qui cite l'exemple dégradé
+de Lorenz à titre d'illustration. Le chiffre retenu exclut ce fichier, qui n'appartient pas
+au corpus d'origine.

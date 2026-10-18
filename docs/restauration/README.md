@@ -41,6 +41,11 @@ Autrement dit : **on ne restaure pas, on réécrit.** Chaque équation reconstru
 
 Répartition : J 166 · I 109 · N 104 · H 64 · L 61 · G 60 · M 59 · O 38 · UI/UX 20 · **K 18** · F 12 · Q 11 · P 2.
 
+**État au 2026-10-18 : 706 défauts.** Le document K est traité (18 signalés + 12 découverts
+à la lecture = 30 restaurations, 0 défaut restant). Les décomptes par document ci-dessus
+sont des **planchers** : sur K, la relecture bloc par bloc a révélé 55 % de défauts
+supplémentaires. Il faut s'attendre à la même proportion ailleurs.
+
 L'inventaire est **régénérable à volonté** : `python3 tools/restauration/extract_defects.py <source> inventaire <sortie.csv>`, et consultable lot par lot avec le mode `contexte`.
 
 ## 4. Protocole de reconstruction
@@ -95,12 +100,22 @@ commit par lot) puis livré sous forme de diff. Deux façons de procéder :
 
 ```bash
 cd my-own-connaissance
-git switch -c restauration-equations          # jamais sur main
-git apply --check /chemin/domaine-K-lot1.gitdiff   # vérification, n'écrit rien
-git apply /chemin/domaine-K-lot1.gitdiff
-cp /chemin/RESTAURATION-EQUATIONS.md .
-git add -A && git commit -F /chemin/domaine-K-lot1.message-commit.txt
+git switch -c restauration-equations               # jamais sur main
+
+# lot 1 — domaine K
+git apply --check ../chemin/domaine-K-lot1.gitdiff      # vérification, n'écrit rien
+git apply ../chemin/domaine-K-lot1.gitdiff
+cp ../chemin/RESTAURATION-EQUATIONS.md .
+git add -A && git commit -F ../chemin/domaine-K-lot1.message-commit.txt
+
+# lot 1 bis — même document, À APPLIQUER ENSUITE (les numéros de ligne en dépendent)
+git apply --check ../chemin/domaine-K-lot1bis.gitdiff
+git apply ../chemin/domaine-K-lot1bis.gitdiff
+git add -A && git commit -F ../chemin/domaine-K-lot1bis.message-commit.txt
 ```
+
+Si un `git apply` échoue, c'est que le lot précédent n'a pas été appliqué, ou que le fichier
+a bougé entre-temps : **ne forcez pas**, signalez-le.
 
 **B. Vous autorisez l'accès en écriture** au dépôt `my-own-connaissance` pour la connexion
 GitHub utilisée ici ; les lots suivants sont alors poussés directement sur une branche
@@ -122,7 +137,7 @@ toucher aux autres.
 
 | Ordre | Lot | Pourquoi |
 |---:|---|---|
-| 1 | **K** — 18 défauts signalés, **28 traités** | domaine le plus utile au produit, équations canoniques — **lot 1 appliqué** (19), complément de 10 propositions en attente |
+| 1 | **K** — 18 défauts signalés, **30 traités** | domaine le plus utile au produit, équations canoniques — **terminé, 0 défaut restant** (lots 1 et 1 bis) |
 | 2 | **L** — analyse numérique | socle des critères de validation ; 61 défauts |
 | 3 | **I** — calcul différentiel | 109 défauts, socle des systèmes continus |
 | 4 | **N** — transformées | 104 défauts, utile aux composants de signal |
