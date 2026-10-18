@@ -1,0 +1,239 @@
+diff --git "a/Maths-vers-Informatiques/DOCUMENT K \342\200\224 FRACTALES, CHAOS & SYST\303\210MES DYNAMIQUES.md" "b/Maths-vers-Informatiques/DOCUMENT K \342\200\224 FRACTALES, CHAOS & SYST\303\210MES DYNAMIQUES.md"
+index a233977..3f6c3d1 100644
+--- "a/Maths-vers-Informatiques/DOCUMENT K \342\200\224 FRACTALES, CHAOS & SYST\303\210MES DYNAMIQUES.md"	
++++ "b/Maths-vers-Informatiques/DOCUMENT K \342\200\224 FRACTALES, CHAOS & SYST\303\210MES DYNAMIQUES.md"	
+@@ -827,7 +827,7 @@ Si une structure est composée de (N) copies réduites d’un facteur (r), alors
+ 
+ d’où :
+ 
+-\[ D= \]
++\[ D=\frac{\log N}{\log(1/r)} \]
+ 
+ ## 17.2 — Exemple
+ 
+@@ -838,7 +838,7 @@ Pour le triangle de Sierpiński :
+ 
+ donc :
+ 
+-\[ D= \]
++\[ D=\frac{\log 3}{\log 2}\approx 1{,}585 \]
+ 
+ La dimension est comprise entre 1 et 2.
+ 
+@@ -860,7 +860,7 @@ On recouvre l’objet avec des boîtes de taille ().
+ 
+ On observe le nombre :
+ 
+-\[ N() \]
++\[ N(\varepsilon) \]
+ 
+ de boîtes nécessaires.
+ 
+@@ -911,19 +911,17 @@ Le temps évolue par étapes.
+ 
+ ## 20.2 — Système continu
+ 
+-\[ =f(x,t) \]
++\[ \frac{dx}{dt}=f(x,t) \]
+ 
+ Le temps est continu.
+ 
+ ## 20.3 — Système multidimensionnel
+ 
+-\[ =F(,t) \]
++\[ \frac{d\mathbf{x}}{dt}=F(\mathbf{x},t) \]
+ 
+ où :
+ 
+-\[ =
+-
+-\]
++\[ \mathbf{x}=(x_1,\ldots,x_n) \]
+ 
+ # 21 — ESPACE DES PHASES
+ 
+@@ -1123,7 +1121,7 @@ L’exposant de Lyapunov mesure le taux moyen de divergence ou de convergence de
+ 
+ Conceptuellement :
+ 
+-\[ _{n}_ {i=0}^{n-1} |f’(x_i)| \]
++\[ \lambda=\lim_{n\to\infty}\frac{1}{n}\sum_{i=0}^{n-1}\ln\left|f'(x_i)\right| \]
+ 
+ dans le cas scalaire approprié.
+ 
+@@ -1139,17 +1137,17 @@ Il s’agit d’un outil important pour l’analyse des systèmes dynamiques.
+ 
+ Le système de Lorenz est donné par :
+ 
+-\[ =(y-x) \]
++\[ \frac{dx}{dt}=\sigma(y-x) \]
+ 
+-\[ =x(-z)-y \]
++\[ \frac{dy}{dt}=x(\rho-z)-y \]
+ 
+-\[ =xy-z \]
++\[ \frac{dz}{dt}=xy-\beta z \]
+ 
+ où :
+ 
+-- () ;
+-- () ;
+-- ()
++- (\sigma) est le nombre de Prandtl ;
++- (\rho) est le nombre de Rayleigh ;
++- (\beta) est le paramètre géométrique
+ 
+ sont des paramètres.
+ 
+@@ -1321,7 +1319,7 @@ Le FBM consiste à additionner plusieurs couches de bruit à différentes échel
+ 
+ Forme générale :
+ 
+-\[ F(x)= \_{i=0}^{n-1} a_i N(f_i x) \]
++\[ F(x)=\sum_{i=0}^{n-1} a_i\,N(f_i x) \]
+ 
+ où :
+ 
+@@ -1360,7 +1358,7 @@ Les paramètres doivent permettre de contrôler :
+ 
+ Une construction fréquente consiste à utiliser la valeur absolue du bruit :
+ 
+-\[ T(x)=\_i a_i |N(f_i x)| \]
++\[ T(x)=\sum_i a_i\,\left|N(f_i x)\right| \]
+ 
+ Cela produit des structures visuelles plus agressives et plus riches.
+ 
+@@ -1753,11 +1751,11 @@ Une particule peut être représentée par :
+ 
+ avec :
+ 
+-\[ =v \]
++\[ \frac{dx}{dt}=v \]
+ 
+ et :
+ 
+-\[ =a \]
++\[ \frac{dv}{dt}=a \]
+ 
+ Le système peut ensuite ajouter :
+ 
+@@ -2572,11 +2570,11 @@ Les générateurs peuvent produire des valeurs dans différents intervalles.
+ 
+ Il est souvent utile de normaliser :
+ 
+-\[ x’= \]
++\[ x'=\frac{x-x_{\min}}{x_{\max}-x_{\min}} \]
+ 
+ afin d’obtenir :
+ 
+-\[ x’\]
++\[ x'\in[0,1] \]
+ 
+ Cette étape facilite :
+ 
+@@ -2948,7 +2946,7 @@ Ils peuvent être combinés avec :
+ 
+ Une connexion avancée consiste à représenter l’évolution d’un modèle neuronal sous la forme :
+ 
+-\[ =f_(h,t) \]
++\[ \frac{dh}{dt}=f_\theta(h,t) \]
+ 
+ où (f_) est paramétré par un réseau neuronal.
+ 
+@@ -3247,7 +3245,7 @@ Les statistiques peuvent mesurer :
+ 
+ Les systèmes dynamiques continus utilisent directement :
+ 
+-\[ =f(x,t) \]
++\[ \frac{dx}{dt}=f(x,t) \]
+ 
+ Le calcul différentiel fournit donc les outils nécessaires pour comprendre leur évolution.
+ 
+diff --git a/RESTAURATION-EQUATIONS.md b/RESTAURATION-EQUATIONS.md
+new file mode 100644
+index 0000000..65ae9ba
+--- /dev/null
++++ b/RESTAURATION-EQUATIONS.md
+@@ -0,0 +1,82 @@
++# RESTAURATION DES ÉQUATIONS — branche `arena/restauration-equations`
++
++> **Lire ceci avant de fusionner quoi que ce soit dans `main`.**
++
++## Ce qu'est cette branche
++
++Un certain nombre d'équations du corpus ont été **détruites** lors d'un traitement
++automatique : les commandes LaTeX (`\frac`, `\sum`, `\lim`, `\log`, `\mathbf`) ont été
++supprimées **avec leurs arguments**, ainsi que les lettres grecques. Exemple réel,
++dans le document K avant restauration :
++
++```
++Le système de Lorenz est donné par :
++
++\[ =(y-x) \]
++
++\[ =x(-z)-y \]
++
++\[ =xy-z \]
++
++où :
++
++- () ;
++- () ;
++- ()
++
++sont des paramètres.
++```
++
++Cette branche contient les **reconstructions** de ces équations, validées lot par lot.
++
++## Ce que cette branche n'est PAS
++
++**Ce n'est pas une récupération.** Le contenu détruit n'existe plus nulle part dans les
++fichiers : il n'a pas été déplacé, il a été effacé. Chaque équation de cette branche a
++donc été **réécrite** à partir des fragments survivants et de la forme canonique connue
++du modèle mathématique. Une équation reconstruite est **indistinguable d'une équation
++d'origine** une fois le texte fusionné — c'est pourquoi ce fichier existe.
++
++Conséquence pratique : **ne citez pas une équation restaurée comme une source
++autorisée.** Vérifiez-la contre une référence externe, comme n'importe quelle
++reconstruction.
++
++## Échelle de confiance
++
++| Niveau | Signification |
++|---|---|
++| **haute** | le fragment survivant et la forme canonique n'autorisent pas d'autre lecture raisonnable |
++| **moyenne** | forme canonique probable, mais un choix de notation ou de normalisation subsiste |
++| **inconnue** | l'intention de l'auteur est requise ; **non appliqué** |
++
++Chaque proposition porte sa justification et un **test de validation** (une propriété
++vérifiable qui doit être satisfaite si la reconstruction est correcte).
++
++## État des lots
++
++| Lot | Document | Défauts traités | Confiance | Statut |
++|---|---|---:|---|---|
++| 1 | K — Fractales, chaos & systèmes dynamiques | 19 / 20 | 14 haute, 5 moyenne, 1 en attente | **appliqué** (2026-10-18) |
++
++Un défaut reste en attente dans K : la section 166 « FORMULE DE RÉFÉRENCE » (bloc vide),
++qui demande l'intention de l'auteur.
++
++Défauts restants dans le corpus au 2026-10-18 : **707** (le décompte initial était de
++724, dont 18 dans le document K).
++
++## Détail et suivi
++
++Le dossier de référence — inventaire complet des 724 défauts, justifications, tests de
++validation, correctifs JSON applicables par script — est dans le dépôt `mathverse`,
++branche de travail, sous `docs/restauration/`. Cette branche-ci ne contient que les
++modifications de texte.
++
++## Comment relire
++
++```bash
++git diff main..arena/restauration-equations --stat
++git diff main..arena/restauration-equations -- Maths-vers-Informatiques/
++```
++
++Chaque lot correspond à un commit distinct, ce qui permet de relire ou de refuser un lot
++sans toucher aux autres.

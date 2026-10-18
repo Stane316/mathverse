@@ -29,9 +29,9 @@ Les brouillons et copies de travail restent **hors dépôt**, dans `/home/user/a
 
 ## 3. Convention de nommage du projet
 
-**Nom de travail courant : `mathauma`** (décision du 2026-10-18, réversible).
+**Nom de travail retenu : `mathemirum`** — décision approuvée le 2026-10-18, consignée dans `docs/decisions/0001-nom-de-travail-mathemirum.md`.
 
-Le nom n'est pas définitivement arrêté. En attendant, la documentation utilise le jeton neutre **« le projet »** et le nom technique sera injecté par une variable `PROJECT_CODENAME`, jamais écrit en dur.
+Le nom reste provisoire et non déposé. Il est injecté par une variable `PROJECT_CODENAME`, **jamais écrit en dur** dans le code ni dans les gabarits ; la prose peut employer le jeton neutre « le projet » tant que l'interface n'est pas figée.
 
 Campagne de nommage : `A1-propositions-de-nom.md` → `A3-noms-axes-semantiques.md` → `A4-noms-merveille-mathematique.md` → **`A5-noms-math-merveille.md`** (famille retenue et vérification de `mathauma`). 242 sondes au total, 175 candidats libres sur les trois registres, 58 éliminés par une antériorité réelle.
 

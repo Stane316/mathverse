@@ -1,0 +1,1225 @@
+[
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 13,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : tension entre [ ] et [ ] — le couple oppose n'est pas nomme ailleurs dans le document (candidats : précision / coût, exactitude / vitesse, stabilité / rapidité). Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 17,
+  "ancien": "\\[ . \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : second terme de la même opposition. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 55,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : ce que le système ne doit jamais considérer sans analyser les conditions du calcul. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 61,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : principe directeur du domaine (probablement un énoncé, pas une formule). Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 115,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : chaîne des domaines A a L (candidat : A → B → … → L). Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 136,
+  "ancien": "\\[ f(x),Ax=b,f,\\_a^b f(x),dx,=f(t,y) \\]",
+  "nouveau": "\\[ f(x),\\quad Ax=b,\\quad \\nabla f,\\quad \\int_a^b f(x)\\,dx,\\quad y'=f(t,y) \\]",
+  "confiance": "moyenne",
+  "justification": "Enumeration des objets produits par les domaines précédents. f(x), Ax=b, y'=f(t,y) sont intacts ; \\_a^b f(x),dx est \\int_a^b f(x)\\,dx ; le troisième terme « f » est un résidu dont \\nabla a été supprimé.",
+  "validation": "Coherence avec le texte : L pose la question du calcul effectif de ces objets."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 146,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : le réel que l'on écrit exactement sur papier (candidats : racine de 2, 0,1, 1/3, pi). Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 154,
+  "ancien": "\\[ x. \\]",
+  "nouveau": "\\[ \\hat{x}. \\]",
+  "confiance": "moyenne",
+  "justification": "« Il stocke une approximation : [x.] ». Le symbole de la valeur calculée a été supprimé ; la ligne 168, restaurée avec une confiance haute, désigne cette valeur par \\hat{x}. L'autre lecture est fl(x).",
+  "validation": "Coherence avec E_a=|x-\\hat{x}|."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 158,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : ce qui reste vrai dans la plupart des cas (candidat : x̂ ≈ x). Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 166,
+  "ancien": "Si (x) est la valeur exacte et () la valeur calculée :",
+  "nouveau": "Si (x) est la valeur exacte et (\\hat{x}) la valeur calculée :",
+  "confiance": "haute",
+  "justification": "Parentheses vides dans du texte courant : le symbole de la valeur calculée a été supprimé. L'equation qui suit, E_a=|x-x̂|, impose \\hat{x}.",
+  "validation": "La ligne 168 restaurée utilise le même symbole."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 168,
+  "ancien": "\\[ E_a=|x-|. \\]",
+  "nouveau": "\\[ E_a=|x-\\hat{x}|. \\]",
+  "confiance": "haute",
+  "justification": "Definition de l'erreur absolue ; le fragment |x-| ne laisse pas d'autre lecture que |x-x̂|.",
+  "validation": "Avec x=10 et x̂=9,99 : E_a=0,01, ce qui est exactement le résultat affiché ligne 180."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 176,
+  "ancien": "\\[ =9.99. \\]",
+  "nouveau": "\\[ \\hat{x}=9.99. \\]",
+  "confiance": "haute",
+  "justification": "Le bloc commence par = : la variable a été supprimée. Ligne 172 donne x=10 ; l'exemple oppose la valeur exacte a la valeur calculée, donc x̂=9,99.",
+  "validation": "E_a=|10-9,99|=0,01 = valeur de la ligne 180."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 186,
+  "ancien": "\\[ E_r=. \\]",
+  "nouveau": "\\[ E_r=\\frac{|x-\\hat{x}|}{|x|}. \\]",
+  "confiance": "haute",
+  "justification": "Definition de l'erreur relative ; le \\frac a été supprimé avec ses arguments, ne laissant que E_r=.",
+  "validation": "E_r=E_a/|x| : pour x=10 et E_a=0,01, E_r=0,001."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 192,
+  "ancien": "\\[ E_r(%)= 100. \\]",
+  "nouveau": "\\[ E_r(\\%)=\\frac{|x-\\hat{x}|}{|x|}\\times 100. \\]",
+  "confiance": "haute",
+  "justification": "Erreur relative en pourcentage ; les fragments conservés sont (%) et 100.",
+  "validation": "100x l'erreur relative : 0,001 → 0,1 %."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 202,
+  "ancien": "\\[ . \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : erreur de modele : bloc vide. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 222,
+  "ancien": "\\[ e^x = \\_{k=0}<sup>{}\\\\frac{x</sup>k}{k!} \\]",
+  "nouveau": "\\[ e^x = \\sum_{k=0}^{\\infty}\\frac{x^k}{k!} \\]",
+  "confiance": "haute",
+  "justification": "Developpement en série de l'exponentielle. \\sum est devenu \\_ ; ^{} et les balises <sup> sont des artefacts de conversion HTML de \\infty.",
+  "validation": "Somme de 0 a l'infini de x^k/k! : développement de Taylor de e^x en 0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 226,
+  "ancien": "\\[ e^x \\_{k=0}<sup>{N}\\\\frac{x</sup>k}{k!}. \\]",
+  "nouveau": "\\[ e^x \\approx \\sum_{k=0}^{N}\\frac{x^k}{k!}. \\]",
+  "confiance": "haute",
+  "justification": "Troncature au rang N de la même série ; \\approx et \\sum supprimés.",
+  "validation": "N fini : la somme partielle approche e^x, le reste est l'erreur de troncature annoncée par le texte."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 242,
+  "ancien": "\\[ x=m^e. \\]",
+  "nouveau": "\\[ x=m\\,2^e. \\]",
+  "confiance": "moyenne",
+  "justification": "« Dans les systèmes binaires » : la base b de la ligne 238 devient 2. Le fragment conservé est x=m^e, la base et le signe de multiplication ayant ete supprimés.",
+  "validation": "b=2 : représentation binaire m x 2^e."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 255,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\mathbb{R} \\]",
+  "confiance": "haute",
+  "justification": "« Il existe une difference fondamentale entre : [ ] et l'ensemble fini des nombres representables ». \\mathbb{R} a été supprimé avec son argument : il ne reste rien.",
+  "validation": "La ligne 261 confirmé : l'ensemble en question est « continu et infini »."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 261,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\mathbb{R} \\]",
+  "confiance": "haute",
+  "justification": "« Ainsi : [ ] est continu et infini tandis que les nombres flottants sont finis ».",
+  "validation": "Seul R est continu, infini et oppose a un ensemble fini de flottants."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 271,
+  "ancien": "\\[ \\_{}^{-p} \\]",
+  "nouveau": "\\[ \\varepsilon_{\\text{mach}} \\approx \\beta^{-p} \\]",
+  "confiance": "moyenne",
+  "justification": "Fragments \\_{}^{-p} : un indice vide et un exposant -p. \\varepsilon (grec) et \\beta (grec) ont ete supprimés, ainsi que le nom de l'indice et \\approx.",
+  "validation": "En double précision IEEE-754 : beta=2, p=53, 2^-52 ≈ 2,2x10^-16, l'epsilon machine connu. Le texte signale « selon la convention utilisée » : l'exposant peut aussi valoir 1-p."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 297,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{annulation catastrophique} \\]",
+  "confiance": "moyenne",
+  "justification": "« On parle de : [ ] ou catastrophic cancellation » : le terme français, dont la traduction est donnée juste après.",
+  "validation": "Terme consacre : cancellation = annulation, catastrophic = catastrophique."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 309,
+  "ancien": "\\[ ((a+b)+c) \\]",
+  "nouveau": "\\[ \\mathrm{fl}((a+b)+c) \\]",
+  "confiance": "moyenne",
+  "justification": "« En flottant : ((a+b)+c) peut être différent de (a+(b+c)) ». L'opérateur fl(.) a été supprimé, ce qui vide la phrase de son sens : sans lui les deux expressions sont égales en arithmétique exacte.",
+  "validation": "fl(a+b+c) diffère de fl(a+fl(b+c)) : c'est précisément la perte d'associativité."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 313,
+  "ancien": "\\[ (a+(b+c)). \\]",
+  "nouveau": "\\[ \\mathrm{fl}(a+(b+c)). \\]",
+  "confiance": "moyenne",
+  "justification": "Meme opérateur, second membre de la comparaison.",
+  "validation": "Idem."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 343,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : ce qui distingue stabilité, conditionnement et convergence. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 351,
+  "ancien": "\\[ . \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : condition de mauvais conditionnement. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 365,
+  "ancien": "\\[ x_0,x_1,x_2, \\]",
+  "nouveau": "\\[ x_0,x_1,x_2,\\ldots \\]",
+  "confiance": "haute",
+  "justification": "L'énumération s'arrêté sur une virgule : \\ldots a été supprimé. Defaut invisible aux heuristiques (le bloc reste syntaxiquement valide).",
+  "validation": "Une suite itérative est infinie."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 369,
+  "ancien": "\\[ x_kx^. \\]",
+  "nouveau": "\\[ x_k\\to x^*. \\]",
+  "confiance": "haute",
+  "justification": "Fragments x_k et x^ : la fleche a été supprimée et l'étoile de x* aussi (même trace qu'aux lignes 382, 435, 1170, 1271).",
+  "validation": "« qui doit idealement vérifier » : convergence vers la solution x*."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 382,
+  "ancien": "\\[ e_k=|x_k-x^| \\]",
+  "nouveau": "\\[ e_k=|x_k-x^*| \\]",
+  "confiance": "haute",
+  "justification": "Definition de l'erreur a l'itération k ; x* privé de son étoile.",
+  "validation": "e_k → 0 ssi x_k → x*."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 386,
+  "ancien": "\\[ e_{k+1}C e_k^p, \\]",
+  "nouveau": "\\[ e_{k+1}\\leq C e_k^p, \\]",
+  "confiance": "haute",
+  "justification": "Le comparateur a disparu mais pas la constante C : \\leq (commande sans argument) a été supprimé, alors que = aurait survecu comme partout ailleurs dans le document.",
+  "validation": "Definition usuelle de l'ordre de convergence : e_{k+1} <= C e_k^p."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 408,
+  "ancien": "\\[ |x_{k+1}-x_k|< \\]",
+  "nouveau": "\\[ |x_{k+1}-x_k|<\\varepsilon \\]",
+  "confiance": "haute",
+  "justification": "Critère d'arrêt sur l'incrément ; la tolérance (grec epsilon) a été supprimée.",
+  "validation": "Critère absolu standard ; le texte énuméré ensuite tolérance absolue, relative, résidu."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 412,
+  "ancien": "\\[ |F(x_k)|< \\]",
+  "nouveau": "\\[ |F(x_k)|<\\varepsilon \\]",
+  "confiance": "haute",
+  "justification": "Critère d'arrêt sur le résidu ; même suppression.",
+  "validation": "Le résidu s'annule a la solution."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 416,
+  "ancien": "\\[ {(1,|x_k|)} <. \\]",
+  "nouveau": "\\[ |x_{k+1}-x_k|<\\varepsilon\\max(1,|x_k|). \\]",
+  "confiance": "moyenne",
+  "justification": "Fragments {(1,|x_k|)} et < : forme mixte absolu/relatif. Le \\max et l'epsilon ont ete supprimés, ainsi que la partie gauche que rien n'explique — la lecture reste donc incertaine.",
+  "validation": "Critère relatif standard : borne l'incrément par une tolérance fois max(1,|x|). Si ce n'est pas la forme voulue, la replacer par la vôtre."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 435,
+  "ancien": "\\[ x^x. \\]",
+  "nouveau": "\\[ x^*. \\]",
+  "confiance": "moyenne",
+  "justification": "« On cherche donc : x^x ». L'exposant x est inexpliqué ; la lecture la plus probable est x* (la solution), l'étoile ayant subi une alteration.",
+  "validation": "Coherence avec les lignes 369, 382, 1170, 1271 ou x* apparaît sous la forme x^."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 449,
+  "ancien": "\\[ m=. \\]",
+  "nouveau": "\\[ m=\\frac{a+b}{2}. \\]",
+  "confiance": "haute",
+  "justification": "Milieu de l'intervalle de bissection ; le \\frac a été supprimé avec ses arguments.",
+  "validation": "m est le milieu de [a,b] : le texte decrit ensuite la conservation du sous-intervalle de changement de signe."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 465,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ f'(x_n) \\]",
+  "confiance": "moyenne",
+  "justification": "« La méthode de Newton utilisé : [ ] Elle repose sur l'approximation locale de (f) par sa tangente » : la dérivée. La notation exacte reste un choix (f'(x_n), f'(x), ∇f).",
+  "validation": "Newton-Raphson requiert f' : section 17.3 sur les risques quand f'(x) est proche de zero."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 485,
+  "ancien": "\\[ . \\]",
+  "nouveau": "\\[ \\text{convergence quadratique}. \\]",
+  "confiance": "moyenne",
+  "justification": "« ## 17.2 Avantage — Pres d'une racine simple et sous des conditions favorables : [ ] ». L'avantage de Newton est sa convergence quadratique (section 13 : p=2). Le bloc ne contenait peut-être qu'un terme.",
+  "validation": "Newton est quadratique pres d'une racine simple : ordre p=2."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 501,
+  "ancien": "\\[ f’(x_n) {x_n-x_{n-1}}. \\]",
+  "nouveau": "\\[ f'(x_n)\\approx\\frac{f(x_n)-f(x_{n-1})}{x_n-x_{n-1}}. \\]",
+  "confiance": "haute",
+  "justification": "Pente de la sécante. Fragment conservé : {x_n-x_{n-1}} — le dénominateur entre accolades, le numérateur ayant ete emporte avec le \\frac ( même trace qu'au document K, ligne 869 ).",
+  "validation": "Quotient des differences finies : la pente entre les deux derniers points."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 631,
+  "ancien": "\\[ x_0,x_1,x_2, \\]",
+  "nouveau": "\\[ x_0,x_1,x_2,\\ldots \\]",
+  "confiance": "haute",
+  "justification": "Meme énumération tronquée qu'a la ligne 365, pour les méthodes itératives.",
+  "validation": "Une suite itérative est infinie."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 669,
+  "ancien": "\\[ \\_x 12x<sup>TAx-b</sup>Tx. \\]",
+  "nouveau": "\\[ \\min_x \\frac{1}{2}x^TAx-b^Tx. \\]",
+  "confiance": "haute",
+  "justification": "Forme variationnelle du gradient conjugue. \\min_x est devenu \\_x ; \\frac{1}{2} est devenu 12 ; x^T A x - b^T x a été hache par les balises <sup>.",
+  "validation": "Le gradient de 1/2 x'Ax - b'x est Ax-b : minimiser revient a resoudre Ax=b, ce que dit le texte."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 691,
+  "ancien": "\\[ (x_0,y_0),,(x_n,y_n). \\]",
+  "nouveau": "\\[ (x_0,y_0),\\ldots,(x_n,y_n). \\]",
+  "confiance": "haute",
+  "justification": "Double virgule : \\ldots supprimé. Defaut invisible aux heuristiques.",
+  "validation": "Enumeration elliptique de n+1 points."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 701,
+  "ancien": "\\[ p(x)= \\_{i=0}^{n} y_iL_i(x) \\]",
+  "nouveau": "\\[ p(x)=\\sum_{i=0}^{n} y_iL_i(x) \\]",
+  "confiance": "haute",
+  "justification": "Forme de Lagrange ; \\sum devenu \\_.",
+  "validation": "p(x_i)=y_i : en x=x_i, seul L_i vaut 1, les autres s'annulent."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 705,
+  "ancien": "\\[ L_i(x)= \\_{ji} . \\]",
+  "nouveau": "\\[ L_i(x)=\\prod_{j\\neq i}\\frac{x-x_j}{x_i-x_j}. \\]",
+  "confiance": "haute",
+  "justification": "Polynôme de base de Lagrange. \\prod devenu \\_ et \\neq supprimé laissant ji ; le quotient a été emporte avec le \\frac.",
+  "validation": "L_i(x_j)=1 si j=i, 0 sinon : c'est la définition des polynômes de Lagrange."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 711,
+  "ancien": "\\[ p(x) = a_0+ a_1(x-x_0)\n\n- a_2(x-x_0)(x-x_1) + \\]",
+  "nouveau": "\\[ p(x) = a_0+ a_1(x-x_0)+ a_2(x-x_0)(x-x_1)+\\ldots+a_n(x-x_0)\\ldots(x-x_{n-1}) \\]",
+  "confiance": "moyenne",
+  "justification": "Forme de Newton pour l'interpolation, section 34 « on peut utiliser les differences divisees ». Le bloc occupe trois lignes et le signe + initial est devenu un tiret, même alteration qu'aux lignes 1205-1208 et dans les blocs de combinaison de la section 108.",
+  "validation": "Forme imbriquée : chaque terme ajoute un facteur (x-x_j), le texte vante l'ajout progressif de points."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 723,
+  "ancien": "\\[ . \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : ce que montre le phénomène de Runge. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 748,
+  "ancien": "\\[ p(x)f(x) \\]",
+  "nouveau": "\\[ p(x)\\approx f(x) \\]",
+  "confiance": "haute",
+  "justification": "« L'approximation cherche plutôt : [ ] selon un critère donne » : \\approx supprimé.",
+  "validation": "Opposition avec l'interpolation de la ligne 744 qui impose p(x_i)=f(x_i)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 756,
+  "ancien": "\\[ \\_i (y_i-f(x_i))^2. \\]",
+  "nouveau": "\\[ \\sum_i (y_i-f(x_i))^2. \\]",
+  "confiance": "haute",
+  "justification": "Somme des carrés des résidus ; \\sum_i devenu \\_i.",
+  "validation": "Minimum atteint quand les résidus sont nuls en moyenne quadratique."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 760,
+  "ancien": "\\[ \\_x|Ax-b|\\_2^2. \\]",
+  "nouveau": "\\[ \\min_x\\|Ax-b\\|_2^2. \\]",
+  "confiance": "haute",
+  "justification": "Moindres carrés matriciels. \\min_x devenu \\_x ; \\| et \\|_2 supprimés.",
+  "validation": "La norme au carré de Ax-b est la somme des carrés des résidus de la ligne 756."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 776,
+  "ancien": "\\[ \\_x |Ax-b|\\_2^2+ |x|\\_2^2. \\]",
+  "nouveau": "\\[ \\min_x \\|Ax-b\\|_2^2+\\lambda\\|x\\|_2^2. \\]",
+  "confiance": "moyenne",
+  "justification": "Regularisation de Tikhonov : le terme de pénalisation subsiste, mais son coefficient (grec lambda) a été supprimé. λ est le choix standard, il pourrait être note alpha.",
+  "validation": "Le texte parle de régularisation ; la pénalité quadratique limite les solutions instables."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 786,
+  "ancien": "\\[ I= \\_a^b f(x),dx. \\]",
+  "nouveau": "\\[ I=\\int_a^b f(x)\\,dx. \\]",
+  "confiance": "haute",
+  "justification": "Integrale définie ; \\int devenu \\_ et \\, supprimé devant dx.",
+  "validation": "Notation standard de l'intégrale a approcher."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 794,
+  "ancien": "\\[ \\_a^b f(x),dx \\_i f(x_i)x. \\]",
+  "nouveau": "\\[ \\int_a^b f(x)\\,dx \\approx \\sum_i f(x_i)\\,\\Delta x. \\]",
+  "confiance": "haute",
+  "justification": "Règle des rectangles ; \\approx et \\sum supprimés, \\Delta réduit a x.",
+  "validation": "Somme des aires de rectangles de largeur Delta x."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 804,
+  "ancien": "\\[ \\_a^b f(x),dx \\[f(a)+f(b)\\]. \\]",
+  "nouveau": "\\[ \\int_a^b f(x)\\,dx \\approx \\frac{b-a}{2}\\left[f(a)+f(b)\\right]. \\]",
+  "confiance": "haute",
+  "justification": "Règle des trapèzes ; le crochet [f(a)+f(b)] a survecu, le facteur (b-a)/2 a été emporte avec le \\frac.",
+  "validation": "Aire du trapèze : base fois (f(a)+f(b))/2."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 808,
+  "ancien": "\\[ I h . \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : règle des trapèzes composée. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 814,
+  "ancien": "\\[ \\_a^b f(x),dx . \\]",
+  "nouveau": "\\[ \\int_a^b f(x)\\,dx \\approx \\frac{b-a}{6}\\left[f(a)+4f\\left(\\frac{a+b}{2}\\right)+f(b)\\right]. \\]",
+  "confiance": "moyenne",
+  "justification": "Methode de Simpson : le texte annoncé une approximation quadratique locale. Seule la structure est reconstruite, le contenu exact a disparu ; la forme composite est une autre possibilite.",
+  "validation": "Simpson est exacte pour les polynômes de degré 3 : vérifiable sur un polynôme de degré 2."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 847,
+  "ancien": "\\[ f’(x) . \\]",
+  "nouveau": "\\[ f'(x)\\approx\\frac{f(x+h)-f(x)}{h}. \\]",
+  "confiance": "haute",
+  "justification": "Différence avant (section 47.1). Les trois blocs de la section sont identiques dans le fichier : seuls les titres permettent de les distinguer.",
+  "validation": "Developpement de Taylor : (f(x+h)-f(x))/h = f'(x) + O(h)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 851,
+  "ancien": "\\[ f’(x) . \\]",
+  "nouveau": "\\[ f'(x)\\approx\\frac{f(x)-f(x-h)}{h}. \\]",
+  "confiance": "haute",
+  "justification": "Différence arrière (section 47.2).",
+  "validation": "(f(x)-f(x-h))/h = f'(x) + O(h)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 855,
+  "ancien": "\\[ f’(x) . \\]",
+  "nouveau": "\\[ f'(x)\\approx\\frac{f(x+h)-f(x-h)}{2h}. \\]",
+  "confiance": "haute",
+  "justification": "Différence centrée (section 47.3).",
+  "validation": "Erreur en O(h^2) : la section 48 annoncé O(h), O(h^2), O(h^4)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 875,
+  "ancien": "\\[ h. \\]",
+  "nouveau": "\\[ h\\to 0. \\]",
+  "confiance": "moyenne",
+  "justification": "« Plus l'ordre est élevé, plus l'erreur de discrétisation diminue rapidement lorsque : [h.] » : la fleche a été supprimée, comme aux lignes 369, 1001, 1271 et 2221.",
+  "validation": "Les ordres O(h^p) de la section 48 s'entendent pour h tendant vers 0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 883,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : ce qui diminue quand h diminue. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 887,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : ce qui augmente quand h diminue. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 893,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : forme de la courbe d'erreur (candidat : E(h) = C1 h^p + C2 eps / h). Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 901,
+  "ancien": "\\[ =f(t,y). \\]",
+  "nouveau": "\\[ y'=f(t,y). \\]",
+  "confiance": "haute",
+  "justification": "« Une EDO peut s'écrire : =f(t,y) » : la fonction inconnue a été supprimée.",
+  "validation": "Forme standard d'un problème de Cauchy, complété par y(t_0)=y_0 ligne 905."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 936,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{problèmes raides} \\]",
+  "confiance": "moyenne",
+  "justification": "« On parle notamment de : [ ] ou stiff problems » : le terme français.",
+  "validation": "Traduction consacrée de stiff problems."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 997,
+  "ancien": "\\[ I_N = 1N \\_{i=1}^{N}f(X_i). \\]",
+  "nouveau": "\\[ I_N = \\frac{1}{N}\\sum_{i=1}^{N}f(X_i). \\]",
+  "confiance": "haute",
+  "justification": "Estimateur de Monte-Carlo. \\frac{1}{N} est devenu 1N et \\sum est devenu \\_.",
+  "validation": "Estimateur sans biais de E[f(X)] : moyenne empirique de N tirages."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1001,
+  "ancien": "\\[ I_NI. \\]",
+  "nouveau": "\\[ I_N\\to I. \\]",
+  "confiance": "haute",
+  "justification": "Convergence de l'estimateur ; la fleche a été supprimée.",
+  "validation": "Loi des grands nombres : I_N tend vers I quand N croît."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1007,
+  "ancien": "\\[ O(). \\]",
+  "nouveau": "\\[ O\\left(\\frac{1}{\\sqrt{N}}\\right). \\]",
+  "confiance": "haute",
+  "justification": "Ordre de l'erreur Monte-Carlo ; le \\frac et la racine ont ete supprimés, laissant des parentheses vides.",
+  "validation": "L'écart-type de la moyenne empirique est sigma/racine de N : diviser l'erreur par 10 coûte 100 fois plus d'échantillons, ce que dit le texte."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1017,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : ce qui rend les méthodes deterministes coûteuses (candidat : la malediction de la dimension). Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1044,
+  "ancien": "\\[ Av=v. \\]",
+  "nouveau": "\\[ Av=\\lambda v. \\]",
+  "confiance": "haute",
+  "justification": "Definition valeur/vecteur propre ; le lambda grec a été supprimé.",
+  "validation": "v propre associé a la valeur propre lambda."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1061,
+  "ancien": "\\[ x_{k+1}= . \\]",
+  "nouveau": "\\[ x_{k+1}=\\frac{Ax_k}{\\|Ax_k\\|}. \\]",
+  "confiance": "moyenne",
+  "justification": "Iteration de la puissance. Seule la forme normalisée est compatible avec « approximer la valeur propre dominante » ; la forme non normalisée x_{k+1}=Ax_k est l'autre lecture possible.",
+  "validation": "La normalisation empêche la divergence ; le rapport de Rayleigh donne alors la valeur propre."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1071,
+  "ancien": "\\[ \\_x f(x). \\]",
+  "nouveau": "\\[ \\min_x f(x). \\]",
+  "confiance": "haute",
+  "justification": "« Le domaine J définit le problème : \\_x f(x) » : \\min_x devenu \\_x.",
+  "validation": "Probleme d'optimisation sans contrainte."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1089,
+  "ancien": "\\[ f(x), \\]",
+  "nouveau": "\\[ \\min f(x), \\]",
+  "confiance": "haute",
+  "justification": "« Pour : [f(x)], on utilisé : x_{k+1}=x_k-H_f(x_k)^{-1}∇f(x_k) » : \\min supprimé.",
+  "validation": "Newton pour l'optimisation minimise f."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1093,
+  "ancien": "\\[ x_{k+1} = x_k- H_f(x_k)^{-1}f(x_k). \\]",
+  "nouveau": "\\[ x_{k+1} = x_k- H_f(x_k)^{-1}\\nabla f(x_k). \\]",
+  "confiance": "haute",
+  "justification": "Newton pour l'optimisation. Le gradient a été supprimé devant f(x_k) : sans lui l'itération n'a pas de sens (H^{-1}f(x_k) n'est pas homogène a une position).",
+  "validation": "H_f est la hessienne : l'itération annule le gradient au second ordre."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1101,
+  "ancien": "\\[ H=-f \\]",
+  "nouveau": "\\[ H\\delta=-\\nabla f \\]",
+  "confiance": "haute",
+  "justification": "Systeme de Newton. \\delta (grec) et \\nabla supprimés, laissant H=-f.",
+  "validation": "Resolution du système linéaire en le pas delta."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1105,
+  "ancien": "\\[ x_{k+1}=x_k+. \\]",
+  "nouveau": "\\[ x_{k+1}=x_k+\\delta. \\]",
+  "confiance": "haute",
+  "justification": "Mise a jour. Le même delta grec a été supprimé, ce qui confirmé la lecture de la ligne 1101.",
+  "validation": "Le pas delta calcule en 1101 est ajoute a x_k."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1142,
+  "ancien": "\\[ = . \\]",
+  "nouveau": "\\[ \\frac{dy}{dx}=\\frac{dy}{dz}\\frac{dz}{dx}. \\]",
+  "confiance": "haute",
+  "justification": "Règle de chaîne. z=f(x), y=g(z) sont donnés aux lignes 1134 et 1138 ; les trois \\frac ont ete supprimés, ne laissant que le signe égal.",
+  "validation": "Dérivée de la composée : produit des dérivées."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1148,
+  "ancien": "\\[ . \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : les deux poles reliés par la différentiation automatique. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1154,
+  "ancien": "\\[ x_{k+1}=(x_k). \\]",
+  "nouveau": "\\[ x_{k+1}=\\varphi(x_k). \\]",
+  "confiance": "haute",
+  "justification": "Iteration de point fixe ; le phi grec a été supprimé, laissant des parentheses vides.",
+  "validation": "Forme générale annoncée par le titre de section."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1158,
+  "ancien": "\\[ x<sup>\\=(x</sup>). \\]",
+  "nouveau": "\\[ x^*=\\varphi(x^*). \\]",
+  "confiance": "haute",
+  "justification": "Point fixe. Meme suppression, plus l'étoile de x* ; les balises <sup> sont un artefact de conversion.",
+  "validation": "Le point fixe vérifié x=phi(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1164,
+  "ancien": "\\[ x=(x) \\]",
+  "nouveau": "\\[ x=\\varphi(x) \\]",
+  "confiance": "haute",
+  "justification": "« Resoudre : [x=(x)] peut être equivalent a resoudre une equation » : même phi supprimé.",
+  "validation": "Coherence avec la ligne 1158."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1170,
+  "ancien": "\\[ |’(x^)|<1, \\]",
+  "nouveau": "\\[ |\\varphi'(x^*)|<1, \\]",
+  "confiance": "haute",
+  "justification": "Condition de convergence locale. phi' et l'étoile supprimés, laissant |'(x^)|<1.",
+  "validation": "Le module de la dérivée au point fixe doit être inférieur a 1 : théorème du point fixe."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1193,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : idée des méthodes multigrilles. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1197,
+  "ancien": "\\[ . \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : ce que deviennent les erreurs. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1203,
+  "ancien": "\\[ E_{} E_{}\n\n- E_{}\n- E_{}\n- E_{}\n- E_{}. \\]",
+  "nouveau": "\\[ E_{\\text{total}}=E_{\\text{modèle}}+E_{\\text{données}}+E_{\\text{arrondi}}+E_{\\text{troncature}}+E_{\\text{algorithme}}. \\]",
+  "confiance": "moyenne",
+  "justification": "Decomposition de l'erreur, section 74. Six termes subsistent dont les indices ont ete vides : un total et cinq contributions — exactement les cinq sources énumérées en section 5. L'ordre des termes est reconstruit.",
+  "validation": "Les cinq contributions sont celles des sections 5.1 a 5.6."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1271,
+  "ancien": "\\[ x_hx^, \\]",
+  "nouveau": "\\[ x_h\\to x^*, \\]",
+  "confiance": "haute",
+  "justification": "Test de convergence pratique : comparer x_h, x_{h/2}, x_{h/4}. La fleche et l'étoile ont ete supprimées.",
+  "validation": "Si les résultats convergent vers x*, la discrétisation est convergente."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1281,
+  "ancien": "\\[ . \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : examen analytique de la sensibilité. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1285,
+  "ancien": "\\[ . \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : examen experimental. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1295,
+  "ancien": "\\[ x_110^{-10} \\]",
+  "nouveau": "\\[ x_1\\sim 10^{-10} \\]",
+  "confiance": "haute",
+  "justification": "Ordre de grandeur ; \\sim supprimé.",
+  "validation": "Opposition des échelles : 10^-10 contre 10^10, écart de 20 decades."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1299,
+  "ancien": "\\[ x_210^{10}, \\]",
+  "nouveau": "\\[ x_2\\sim 10^{10}, \\]",
+  "confiance": "haute",
+  "justification": "Meme suppression.",
+  "validation": "Idem."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1326,
+  "ancien": "\\[ AR^{nn} \\]",
+  "nouveau": "\\[ A\\in\\mathbb{R}^{n\\times n} \\]",
+  "confiance": "haute",
+  "justification": "Matrice dense carrée. \\in, \\mathbb{R} et \\times supprimés, laissant AR^{nn}.",
+  "validation": "Une matrice n x n demandée O(n^2) de mémoire, comme l'annoncé la ligne 1330."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1336,
+  "ancien": "\\[ O((A)). \\]",
+  "nouveau": "\\[ O(\\mathrm{nnz}(A)). \\]",
+  "confiance": "moyenne",
+  "justification": "Cout de stockage d'une matrice creuse : proportionnel au nombre de coefficients non nuls. Le nom de la fonction a été supprimé avec son argument.",
+  "validation": "Formulation standard nnz(A)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1364,
+  "ancien": "\\[ . \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : le compromis ameliore par la précision mixte (candidat : vitesse / précision). Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1394,
+  "ancien": "\\[ \\_L(). \\]",
+  "nouveau": "\\[ \\min_{\\theta}\\mathcal{L}(\\theta). \\]",
+  "confiance": "haute",
+  "justification": "Entrainement : minimisation de la perte. \\min_{\\theta} devenu \\_ (l'indice grec a disparu), \\mathcal{L} réduit a L, (\\theta) vide.",
+  "validation": "Forme standard ; le bloc « Gradient » qui suit porte sur la même perte."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1398,
+  "ancien": "\\[ \\_L. \\]",
+  "nouveau": "\\[ \\nabla_\\theta \\mathcal{L}. \\]",
+  "confiance": "haute",
+  "justification": "Gradient de la perte. \\nabla_\\theta devenu \\_ ; \\mathcal{L} réduit a L.",
+  "validation": "Gradient de la fonction minimisée en 1394."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1402,
+  "ancien": "\\[ \\_{t+1} = \\_t-L. \\]",
+  "nouveau": "\\[ \\theta_{t+1}=\\theta_t-\\eta\\nabla\\mathcal{L}. \\]",
+  "confiance": "haute",
+  "justification": "Descente de gradient. Les theta et eta grecs ont ete supprimés ainsi que \\nabla : il reste _{t+1}=_t-L.",
+  "validation": "Pas de descente : on retranche au paramètre le gradient multiplie par le pas d'apprentissage."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1464,
+  "ancien": "\\[ =a. \\]",
+  "nouveau": "\\[ \\frac{dv}{dt}=a. \\]",
+  "confiance": "haute",
+  "justification": "Physique des jeux video. Le \\frac a été supprimé ; l'equation manquante est celle de la vitesse : les lignes 1468 et 1472 integrent v puis x.",
+  "validation": "Euler : v_{n+1}=v_n+h a_n est l'integration de dv/dt=a."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1580,
+  "ancien": "\\[ KL \\]",
+  "nouveau": "\\[ K\\times L \\]",
+  "confiance": "moyenne",
+  "justification": "« Ainsi : [KL] peut produire des systèmes procéduraux beaucoup plus riches ». Le signe a été supprimé ; la trace de \\times est la même qu'a la ligne 1326 (AR^{nn} pour A dans R^{n x n}). K+L reste une lecture défendable.",
+  "validation": "Combinaison des domaines K (structures) et L (calcul)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1604,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : architecture d'un solveur sérieuse. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1697,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{exact} \\]",
+  "confiance": "moyenne",
+  "justification": "Section 102 « EXACT, APPROCHE, NUMERIQUE » : les trois blocs vides qui suivent « Il faut distinguer : » reprennent les trois termes du titre. Le contenu est donc très probable, la mise en forme (terme ou formule) reste incertaine.",
+  "validation": "Le titre de section nomme les trois notions."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1699,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{approché} \\]",
+  "confiance": "moyenne",
+  "justification": "Deuxieme terme du titre de la section 102.",
+  "validation": "Idem."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1701,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{numérique} \\]",
+  "confiance": "moyenne",
+  "justification": "Troisième terme du titre de la section 102.",
+  "validation": "Idem."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1770,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : critères d'évaluation d'une méthode. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1794,
+  "ancien": "\\[ T_{}<T_{}. \\]",
+  "nouveau": "\\[ T_{\\text{calcul}}<T_{\\text{budget}}. \\]",
+  "confiance": "moyenne",
+  "justification": "Temps réel : le temps de calcul doit rester sous le temps imparti. Les deux indices ont ete supprimés.",
+  "validation": "Contrainte de temps réel annoncée par le titre de section."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1812,
+  "ancien": "\\[",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : combinaison L + K → mondes procéduraux dynamiques. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1820,
+  "ancien": "\\[",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : combinaison L + J → systèmes de décision numériques. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1828,
+  "ancien": "\\[",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : combinaison L + I → apprentissage et simulation. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1836,
+  "ancien": "\\[",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : combinaison L + C → calcul scientifique et IA. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1844,
+  "ancien": "\\[",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : combinaison L + G → simulation sous incertitude. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1852,
+  "ancien": "\\[",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : combinaison L + D → reconstruction et animation 3D. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1860,
+  "ancien": "\\[",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : combinaison L + E/F → planification et systèmes complexes. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1870,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : ce que le système applique pour inventer une application. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1874,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : premier exemple. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1878,
+  "ancien": "\\[ . \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : second exemple. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2065,
+  "ancien": "\\[ x,,|x-|. \\]",
+  "nouveau": "\\[ x,\\ \\hat{x},\\ |x-\\hat{x}|. \\]",
+  "confiance": "haute",
+  "justification": "Projet 1 : visualiseur d'erreur flottante. Les double virgules trahissent un terme supprimé entre x et |x-| : la valeur calculée, soit x̂.",
+  "validation": "Coherence avec les lignes 168 et 176."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2106,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : quantité a estimer par Monte-Carlo (candidats : pi, une intégrale). Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2191,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : ce que le développeur doit pouvoir vérifier. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2201,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ x=m\\,b^e \\]",
+  "confiance": "moyenne",
+  "justification": "Resume §115, rubrique Representation : la formule de la section 6.",
+  "validation": "Coherence avec la ligne 238."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2205,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ E_r=\\frac{|x-\\hat{x}|}{|x|} \\]",
+  "confiance": "moyenne",
+  "justification": "Resume §115, rubrique Erreur : la formule de la section 4.2.",
+  "validation": "Coherence avec la ligne 186."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2221,
+  "ancien": "\\[ (x_i,y_i) f(x) \\]",
+  "nouveau": "\\[ (x_i,y_i)\\to f(x) \\]",
+  "confiance": "haute",
+  "justification": "Resume §115, rubrique Interpolation : la fleche a été supprimée.",
+  "validation": "Des données vers la fonction interpolée."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2225,
+  "ancien": "\\[ f(x),dx . \\]",
+  "nouveau": "\\[ \\int_a^b f(x)\\,dx. \\]",
+  "confiance": "haute",
+  "justification": "Resume §115, rubrique Integration : \\int supprimé, le ,dx a survecu.",
+  "validation": "Coherence avec la ligne 786."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2233,
+  "ancien": "\\[ =f(t,y) . \\]",
+  "nouveau": "\\[ y'=f(t,y). \\]",
+  "confiance": "haute",
+  "justification": "Resume §115, rubrique Dynamique : même forme qu'a la ligne 901.",
+  "validation": "Coherence avec la ligne 901."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2241,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ r=Ax-b \\]",
+  "confiance": "moyenne",
+  "justification": "Resume §115, rubrique Fiabilite : le résidu, seul critère de vérification formule dans le document (section 75, ligne 1236).",
+  "validation": "Coherence avec la ligne 1236."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2282,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : relation avec le domaine I. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2286,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\min_x f(x) \\]",
+  "confiance": "moyenne",
+  "justification": "Relation avec le domaine J : la forme de la section 66, ligne 1071.",
+  "validation": "Coherence avec la ligne 1071."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2290,
+  "ancien": "\\[ . \\]",
+  "nouveau": "\\[ y'=f(t,y). \\]",
+  "confiance": "moyenne",
+  "justification": "Relation avec le domaine K : les systèmes dynamiques s'écrivent sous cette forme (sections 50 et 2233).",
+  "validation": "Coherence avec les lignes 901 et 2233."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2302,
+  "ancien": "\\[ . \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : relation avec le domaine H. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2308,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : l'idée fondamentale enseignée par le domaine L. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2312,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : la chaîne entre le modele et le résultat. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2340,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : formule mentale a conserver pour tout problème numérique. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2344,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : ce que l'IA doit appliquer pour passer du concept au logiciel. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2350,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : point de départ. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2354,
+  "ancien": "\\[ . \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "statut": "en_attente_de_decision",
+  "justification": "Bloc vide ou ininterpretable : point d'arrivée. Le contenu d'origine n'existe plus dans le fichier.",
+  "validation": null
+ }
+]

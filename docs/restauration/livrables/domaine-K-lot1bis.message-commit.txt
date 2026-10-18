@@ -1,0 +1,30 @@
+restauration(equations): lot 1 bis — domaine K, 11 reconstructions
+
+ ATTENTION — RECONSTRUCTIONS, pas recuperation. Voir RESTAURATION-EQUATIONS.md.
+
+10 degradations invisibles aux heuristiques, trouvees en relisant le document
+bloc par bloc :
+
+ - 348, 793 : \ldots detruit (enumeration elliptique : x_0,x_1,x_2,... et
+   T_1,T_2,...,T_n)
+ - 859 : \varepsilon detruit dans du texte courant (« boites de taille () »)
+ - 869 : dimension par comptage de boites (box-counting) — confiance moyenne
+ - 955 : balises HTML <sup> imbriquees invalides ; corrige en f(x*)=x*
+ - 1130-1132 : \lambda detruit dans la liste des regimes (convergence,
+   critique, divergence) sans vider les parentheses
+ - 1209, 1213 : \mathbb{R} et la fleche detruits dans la signature du bruit
+   N : R^n -> R et N(x,y) -> v — confiance moyenne
+
+1 bloc tranche par l'auteur (2026-10-18) :
+
+ - 4312, section 166 « FORMULE DE REFERENCE » : la chaine operationnelle
+   (lignes 39-55, en forme compacte) suivie de la formule iterative centrale
+   x_{n+1}=f(x_n). Contenu decide par l'auteur ; mise en forme LaTeX proposee.
+
+Le document K ne compte plus aucun defaut detecte. Le corpus passe de 707
+a 696 defauts signales (plancher : la relecture a revele +55 % de defauts
+sur ce document).
+
+A appliquer APRES le lot 1. Justifications et tests de validation :
+depot mathverse, docs/restauration/propositions/domaine-K-lot1bis.patch.json
+
