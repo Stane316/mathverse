@@ -1,0 +1,677 @@
+[
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 75,
+  "ancien": "\\[ f F \\]",
+  "nouveau": "\\[ f \\to F \\]",
+  "confiance": "haute",
+  "justification": "« Une transformée associe à un objet mathématique (f) une autre représentation (F) : [ ] ». Les deux lettres sont intactes, la flèche a été détruite — même destruction que dans le document I (l. 3121 à 3137).",
+  "validation": "Rendu : f → F."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 142,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§3 « La convolution devient une multiplication. On peut donc avoir : [vide] C'est précisément cette propriété qui explique l'importance des transformées en informatique. » — le bloc désigne le bénéfice retiré, qui n'est pas nommé ailleurs dans la section.",
+  "validation": "Candidat : \\[ O(N^2)\\to O(N\\log N) \\] — le gain de complexité, effet concret de la propriété. Alternative : \\[ (f\\ast g)\\to F\\cdot G \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 190,
+  "ancien": "\\[ f(t) =\n\n- \\_{n=1}^{} \\[ a_n(n_0t)\n- b_n(n_0t) \\] \\]",
+  "nouveau": "\\[ f(t)=\\frac{a_0}{2}\n\n+ \\sum_{n=1}^{\\infty}\\left[a_n\\cos(n\\omega_0t)+b_n\\sin(n\\omega_0t)\\right] \\]",
+  "confiance": "haute",
+  "justification": "§5.1 série de Fourier. Le résidu conserve le \\sum_{n=1}^{} et les deux lignes a_n(...) / b_n(...) : les fonctions \\cos et \\sin ont été détruites, ainsi que la borne supérieure \\infty et l'exposant \\omega. La ligne vide entre f(t)= et la somme correspond au terme constant a_0/2. Les crochets \\[...\\] sont le résidu d'un \\left[. Artefact : les + de tête de ligne sont devenus des puces -.",
+  "validation": "Forme canonique de la série de Fourier trigonométrique. Le terme a_0/2 est restitué d'après la ligne vide et l'usage ; à confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 197,
+  "ancien": "\\[ \\_0= \\]",
+  "nouveau": "\\[ \\omega_0=\\frac{2\\pi}{T} \\]",
+  "confiance": "haute",
+  "justification": "§5.1 « avec : [ \\_0= ] ». Le \\omega a été détruit ; \\frac détruit. La pulsation fondamentale ne peut être que 2π/T pour une fonction de période T.",
+  "validation": "Rendu : ω₀=2π/T."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 203,
+  "ancien": "\\[ a_n= \\_0^T f(t)(n_0t),dt \\]",
+  "nouveau": "\\[ a_n=\\frac{2}{T}\\int_0^T f(t)\\cos(n\\omega_0t)\\,dt \\]",
+  "confiance": "haute",
+  "justification": "§6 coefficients de Fourier. Résidu \\_0^T : \\frac{2}{T} réduit à 2T (régime « contenu conservé ») devant \\int_0^T réduit à \\_0^T. Le \\cos a été détruit, le \\, est devenu une virgule.",
+  "validation": "Rendu : a_n=(2/T)∫₀ᵗ f(t)cos(nω₀t)dt."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 207,
+  "ancien": "\\[ b_n= \\_0^T f(t)(n_0t),dt \\]",
+  "nouveau": "\\[ b_n=\\frac{2}{T}\\int_0^T f(t)\\sin(n\\omega_0t)\\,dt \\]",
+  "confiance": "haute",
+  "justification": "§6 « et : [ ] ». Même reconstruction, avec \\sin. Le bloc est identique au précédent en apparence, ce qui est la marque même de la destruction des fonctions.",
+  "validation": "Rendu : b_n=(2/T)∫₀ᵗ f(t)sin(nω₀t)dt."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 215,
+  "ancien": "\\[ f(t) = \\_{n=-}^{+} c_ne^{in_0t} \\]",
+  "nouveau": "\\[ f(t)=\\sum_{n=-\\infty}^{+\\infty}c_ne^{in\\omega_0t} \\]",
+  "confiance": "haute",
+  "justification": "§7 formulation complexe. Le \\_ est le résidu de \\sum ; les bornes -\\infty et +\\infty ont laissé - et + ; le \\omega a été détruit.",
+  "validation": "Rendu : f(t)=Σ_{n=-∞}^{+∞} c_n e^{inω₀t}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 219,
+  "ancien": "\\[ c_n= \\_0^T f(t)e^{-in_0t},dt \\]",
+  "nouveau": "\\[ c_n=\\frac{1}{T}\\int_0^T f(t)e^{-in\\omega_0t}\\,dt \\]",
+  "confiance": "haute",
+  "justification": "§7 « avec : [ ] ». Même structure qu'en l. 203, mais le facteur est 1/T et non 2/T : c'est la convention de la forme complexe.",
+  "validation": "Vérifier : la forme complexe utilise 1/T, la forme trigonométrique 2/T."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 231,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§8 « La série de Fourier dit essentiellement : … Cela permet de passer : [vide] Cette idée est fondamentale pour : ».",
+  "validation": "Candidat : \\[ \\text{d'une description temporelle à une description fréquentielle} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 247,
+  "ancien": "\\[ F() = \\_{-}^{+} f(t)e^{-it},dt \\]",
+  "nouveau": "\\[ F(\\omega)=\\int_{-\\infty}^{+\\infty}f(t)e^{-i\\omega t}\\,dt \\]",
+  "confiance": "haute",
+  "justification": "§9 transformée de Fourier. Le \\omega a été détruit dans F(·) et dans l'exponentielle ; le \\_ est le résidu de \\int ; le \\, est devenu une virgule.",
+  "validation": "Rendu : F(ω)=∫_{-∞}^{+∞} f(t)e^{-iωt}dt. La phrase suivante rappelle que les conventions varient."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 251,
+  "ancien": "\\[ f(t) = \\_{-}^{+} F()e^{it},d \\]",
+  "nouveau": "\\[ f(t)=\\frac{1}{2\\pi}\\int_{-\\infty}^{+\\infty}F(\\omega)e^{i\\omega t}\\,d\\omega \\]",
+  "confiance": "haute",
+  "justification": "§9 « et l'inverse : [ ] ». Le facteur 1/2π a été détruit avec \\frac ; le d\\omega final ne subsiste que par la lettre d.",
+  "validation": "Rendu : f(t)=(1/2π)∫F(ω)e^{iωt}dω. Cohérent avec la convention retenue en l. 247."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 267,
+  "ancien": "\\[ F() \\]",
+  "nouveau": "\\[ F(\\omega) \\]",
+  "confiance": "haute",
+  "justification": "§10 « On passe approximativement de : [f(t)] à : [ ] où : ». Le \\omega a été détruit.",
+  "validation": "Rendu : F(ω)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 280,
+  "ancien": "\\[ F()=a()+ib() \\]",
+  "nouveau": "\\[ F(\\omega)=a(\\omega)+ib(\\omega) \\]",
+  "confiance": "moyenne",
+  "justification": "§11 « Pour : [F()=a()+ib()] la magnitude est : ». Les trois \\omega ont été détruits. Le choix de a et b comme parties réelle et imaginaire est conservé du résidu.",
+  "validation": "Candidat alternatif : F(\\omega)=\\Re(F)+i\\Im(F). La notation a/b est celle du résidu."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 284,
+  "ancien": "\\[ |F()| = \\]",
+  "nouveau": "\\[ |F(\\omega)|=\\sqrt{a(\\omega)^{2}+b(\\omega)^{2}} \\]",
+  "confiance": "haute",
+  "justification": "§11 « la magnitude est : [ |F()|= ] ». \\sqrt et les exposants détruits.",
+  "validation": "Rendu : |F(ω)|=√(a²+b²)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 288,
+  "ancien": "\\[ () = (F()) \\]",
+  "nouveau": "\\[ \\varphi(\\omega)=\\arg(F(\\omega)) \\]",
+  "confiance": "haute",
+  "justification": "§11 « et la phase : [ ()=(F()) ] ». Le \\varphi et le \\arg ont été détruits.",
+  "validation": "Rendu : φ(ω)=arg(F(ω))."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 304,
+  "ancien": "\\[ {af+bg} = aF+bG \\]",
+  "nouveau": "\\[ \\mathcal{F}\\{af+bg\\}=aF+bG \\]",
+  "confiance": "haute",
+  "justification": "§12 linéarité. Le \\mathcal{F} a été détruit, ses accolades ont survécu — signature constante dans tout le document (l. 322, 326, 744, 748, 752, 756, 1301).",
+  "validation": "Rendu : 𝓕{af+bg}=aF+bG."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 314,
+  "ancien": "\\[ G()=e^{-it_0}F() \\]",
+  "nouveau": "\\[ G(\\omega)=e^{-i\\omega t_0}F(\\omega) \\]",
+  "confiance": "haute",
+  "justification": "§12 translation temporelle « alors : [ ] ». Deux \\omega détruits.",
+  "validation": "Rendu : G(ω)=e^{-iωt₀}F(ω)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 322,
+  "ancien": "\\[ {f\\*g} = FG \\]",
+  "nouveau": "\\[ \\mathcal{F}\\{f\\ast g\\}=F\\cdot G \\]",
+  "confiance": "haute",
+  "justification": "§12 convolution. \\mathcal{F} et \\cdot détruits.",
+  "validation": "Rendu : 𝓕{f∗g}=F·G."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 326,
+  "ancien": "\\[ {fg} \\]",
+  "nouveau": "\\[ \\mathcal{F}\\{fg\\}=F\\ast G \\]",
+  "confiance": "haute",
+  "justification": "§12 multiplication « [ {fg} ] est reliée à une convolution des transformées. » — \\mathcal{F}, le membre de droite et le \\ast ont été détruits. La phrase qui suit dit exactement ce qu'il contient.",
+  "validation": "Rendu : 𝓕{fg}=F∗G. Dualité de la ligne précédente."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 336,
+  "ancien": "\\[ (f\\*g)(t) = \\_{-}^{+} f()g(t-),d \\]",
+  "nouveau": "\\[ (f\\ast g)(t)=\\int_{-\\infty}^{+\\infty}f(\\tau)g(t-\\tau)\\,d\\tau \\]",
+  "confiance": "haute",
+  "justification": "§13 convolution continue. Le \\tau a été détruit aux deux endroits ; le \\_ est le résidu de \\int ; le \\, est devenu une virgule.",
+  "validation": "Rendu : (f∗g)(t)=∫f(τ)g(t−τ)dτ."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 373,
+  "ancien": "\\[ Y()=X()H() \\]",
+  "nouveau": "\\[ Y(\\omega)=X(\\omega)H(\\omega) \\]",
+  "confiance": "haute",
+  "justification": "§15 « Dans le domaine fréquentiel : [ ] ». Trois \\omega détruits.",
+  "validation": "Rendu : Y(ω)=X(ω)H(ω)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 377,
+  "ancien": "\\[ H()= \\]",
+  "nouveau": "\\[ H(\\omega)=\\frac{Y(\\omega)}{X(\\omega)} \\]",
+  "confiance": "haute",
+  "justification": "§15 « avec : [ H()= ] lorsque le rapport est défini. » — la phrase nomme le rapport, ce qui impose la fraction.",
+  "validation": "Rendu : H(ω)=Y(ω)/X(ω)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 405,
+  "ancien": "\\[ Y()=X()H() \\]",
+  "nouveau": "\\[ Y(\\omega)=X(\\omega)H(\\omega) \\]",
+  "confiance": "haute",
+  "justification": "§15 filtre coupe-bande « Conceptuellement : [ ] ». Trois \\omega détruits.",
+  "validation": "Rendu : Y(ω)=X(ω)H(ω)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 425,
+  "ancien": "\\[ f_N= \\]",
+  "nouveau": "\\[ f_N=\\frac{f_s}{2} \\]",
+  "confiance": "haute",
+  "justification": "§16 « Si la fréquence d'échantillonnage est (f_s), la fréquence de Nyquist est : [ ] ».",
+  "validation": "Rendu : f_N=f_s/2."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 429,
+  "ancien": "\\[ f_s>2f_{} \\]",
+  "nouveau": "\\[ f_s>2f_{\\max} \\]",
+  "confiance": "haute",
+  "justification": "§16 « Pour reconstruire correctement un signal limité en bande, il faut idéalement : [ ] C'est le principe de Nyquist-Shannon. » — le \\max a été détruit.",
+  "validation": "Rendu : f_s>2f_max."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 439,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§17 « Ce phénomène est appelé : [vide] Il est particulièrement important en : ». Le titre de la section donne le terme, mais la forme exacte du bloc reste inconnue.",
+  "validation": "Candidat : \\[ \\text{aliasing} \\] (ou \\text{repliement de spectre})."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 461,
+  "ancien": "\\[ X\\[k\\] = \\_{n=0}^{N-1} x\\[n\\]e^{-i2kn/N} \\]",
+  "nouveau": "\\[ X[k]=\\sum_{n=0}^{N-1}x[n]e^{-i2\\pi kn/N} \\]",
+  "confiance": "haute",
+  "justification": "§18 DFT. Le \\pi et le \\sum ont été détruits (le \\sum laisse \\_).",
+  "validation": "Rendu : X[k]=Σ_{n=0}^{N-1} x[n]e^{-i2πkn/N}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 465,
+  "ancien": "\\[ k=0,,N-1 \\]",
+  "nouveau": "\\[ k=0,\\ldots,N-1 \\]",
+  "confiance": "haute",
+  "justification": "§18 « pour : [k=0,,N-1] ». Le \\ldots est devenu une virgule — conversion systématique dans ce document (l. 2251, 2872).",
+  "validation": "Rendu : k=0,…,N−1."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 469,
+  "ancien": "\\[ x\\[n\\] = \\_{k=0}^{N-1} X\\[k\\]e^{i2kn/N} \\]",
+  "nouveau": "\\[ x[n]=\\frac{1}{N}\\sum_{k=0}^{N-1}X[k]e^{i2\\pi kn/N} \\]",
+  "confiance": "haute",
+  "justification": "§18 « L'inverse est : [ ] ». Le facteur 1/N et le \\pi ont été détruits.",
+  "validation": "Rendu : x[n]=(1/N)Σ X[k]e^{i2πkn/N}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 475,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ x[n] \\]",
+  "confiance": "moyenne",
+  "justification": "§19 « La DFT transforme un vecteur temporel fini : [vide] en un vecteur de coefficients fréquentiels : [vide] ». Les deux blocs sont vides ; le premier ne peut désigner que la séquence d'entrée.",
+  "validation": "Candidat alternatif : \\mathbf{x}. La notation à confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 479,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ X[k] \\]",
+  "confiance": "moyenne",
+  "justification": "§19, second bloc. Pendant du précédent.",
+  "validation": "Candidat alternatif : \\mathbf{X}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 497,
+  "ancien": "\\[ f_k= \\]",
+  "nouveau": "\\[ f_k=\\frac{kf_s}{N} \\]",
+  "confiance": "haute",
+  "justification": "§20 « Pour une DFT de (N) points avec fréquence d'échantillonnage (f_s) : [ ] ».",
+  "validation": "Rendu : f_k=k·f_s/N."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 501,
+  "ancien": "\\[ f= \\]",
+  "nouveau": "\\[ \\Delta f=\\frac{f_s}{N} \\]",
+  "confiance": "haute",
+  "justification": "§20 « La résolution fréquentielle est : [ ] ». Le \\Delta a été détruit.",
+  "validation": "Rendu : Δf=f_s/N."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 547,
+  "ancien": "\\[ O(NN) \\]",
+  "nouveau": "\\[ O(N\\log N) \\]",
+  "confiance": "haute",
+  "justification": "§22 « Une FFT classique de type Cooley-Tukey permet typiquement : [O(NN)] ». Le \\log a été détruit ; le résidu NN est la marque de O(N log N), présente trois fois dans ce document (l. 606, 2046, 3530).",
+  "validation": "Rendu : O(N log N)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 562,
+  "ancien": "\\[ X\\[k\\] = \\_{m=0}^{N/2-1} x\\[2m\\]e^{-i2k(2m)/N}\n\n- \\_{m=0}^{N/2-1} x\\[2m+1\\]e^{-i2k(2m+1)/N} \\]",
+  "nouveau": "\\[ X[k]=\\sum_{m=0}^{N/2-1}x[2m]e^{-i2\\pi k(2m)/N}\n\n+ \\sum_{m=0}^{N/2-1}x[2m+1]e^{-i2\\pi k(2m+1)/N} \\]",
+  "confiance": "haute",
+  "justification": "§23 décomposition paire/impaire. Les deux \\pi ont été détruits ; le + de tête de ligne est devenu une puce -, artefact constant. Le bloc décompose la somme en indices pairs puis impairs, conformément au texte qui précède.",
+  "validation": "Première étape de Cooley-Tukey : séparation des termes pairs et impairs."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 574,
+  "ancien": "\\[ W_N=e^{-i2/N} \\]",
+  "nouveau": "\\[ W_N=e^{-i2\\pi/N} \\]",
+  "confiance": "haute",
+  "justification": "§24 twiddle factors « On utilise : [ ] ». Le \\pi a été détruit.",
+  "validation": "Rendu : W_N=e^{-i2π/N}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 596,
+  "ancien": "\\[ \\_2N \\]",
+  "nouveau": "\\[ \\log_2 N \\]",
+  "confiance": "haute",
+  "justification": "§25 radix-2 « et construit : [ \\_2N ] niveaux de décomposition. » Le \\_ est ici le résidu de \\log, et le 2 est son indice.",
+  "validation": "Rendu : log₂ N."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 606,
+  "ancien": "\\[ O(N_2N) \\]",
+  "nouveau": "\\[ O(N\\log_2 N) \\]",
+  "confiance": "haute",
+  "justification": "§25 « ce qui produit : [O(N_2N)] ». Le \\log_2 a été détruit, laissant ses deux arguments.",
+  "validation": "Rendu : O(N log₂ N)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 666,
+  "ancien": "\\[ C_k = _k_ {n=0}^{N-1} x_n \\]",
+  "nouveau": "\\[ C_k=\\alpha_k\\sum_{n=0}^{N-1}x_n\\cos\\left(\\frac{\\pi}{N}\\left(n+\\frac{1}{2}\\right)k\\right) \\]",
+  "confiance": "haute",
+  "justification": "§29 DCT « Une forme classique : [C_k=_k_ {n=0}^{N-1} x_n] ». Le résidu montre le facteur d'échelle \\alpha_k (deux lettres grecques détruites encadrant le k), le \\sum_{n=0}^{N-1}, et un \\cos détruit avec son argument.",
+  "validation": "Forme DCT-II. L'argument du cosinus est restitué d'après la forme standard ; à confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 676,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§30 « Principe général : [vide] L'idée est de représenter efficacement les informations importantes. »",
+  "validation": "Candidat : \\[ x\\to T(x)\\to Q\\to C \\] — la chaîne complète est donnée au §130 (transformée, quantification, codage)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 712,
+  "ancien": "\\[ F(s) = \\_0^ f(t)e^{-st},dt \\]",
+  "nouveau": "\\[ F(s)=\\int_0^{\\infty}f(t)e^{-st}\\,dt \\]",
+  "confiance": "haute",
+  "justification": "§31 Laplace. Le \\_ est le résidu de \\int ; la borne \\infty a été détruite ; le \\, est devenu une virgule.",
+  "validation": "Rendu : F(s)=∫₀^∞ f(t)e^{-st}dt."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 716,
+  "ancien": "\\[ s=+i \\]",
+  "nouveau": "\\[ s=\\sigma+i\\omega \\]",
+  "confiance": "haute",
+  "justification": "§31 « où : [s=+i] ». Le \\sigma et le \\omega ont été détruits, le + et le i sont restés.",
+  "validation": "Rendu : s=σ+iω."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 726,
+  "ancien": "\\[ {y’} = sY(s)-y(0) \\]",
+  "nouveau": "\\[ \\mathcal{L}\\{y'\\}=sY(s)-y(0) \\]",
+  "confiance": "haute",
+  "justification": "§32 « Une dérivée devient, sous Laplace : [ ] ». Le \\mathcal{L} a été détruit, ses accolades ont survécu.",
+  "validation": "Rendu : 𝓛{y'}=sY(s)−y(0)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 732,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§32 « On passe de : [vide] à : [vide] puis on effectue la transformée inverse. »",
+  "validation": "Candidats : \\[ \\text{une équation différentielle} \\] puis \\[ \\text{une équation algébrique} \\] — c'est l'objet même de la section."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 736,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§32, pendant du bloc précédent.",
+  "validation": "Voir l. 732."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 744,
+  "ancien": "\\[ {af+bg} = aF+bG \\]",
+  "nouveau": "\\[ \\mathcal{L}\\{af+bg\\}=aF+bG \\]",
+  "confiance": "haute",
+  "justification": "§33 linéarité de Laplace. Même signature que la ligne 304 : \\mathcal{L} détruit, accolades conservées.",
+  "validation": "Rendu : 𝓛{af+bg}=aF+bG."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 748,
+  "ancien": "\\[ {f’} = sF(s)-f(0) \\]",
+  "nouveau": "\\[ \\mathcal{L}\\{f'\\}=sF(s)-f(0) \\]",
+  "confiance": "haute",
+  "justification": "§33 dérivée.",
+  "validation": "Rendu : 𝓛{f'}=sF(s)−f(0)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 752,
+  "ancien": "\\[ {f’‘} = s^2F(s)-sf(0)-f’(0) \\]",
+  "nouveau": "\\[ \\mathcal{L}\\{f''\\}=s^{2}F(s)-sf(0)-f'(0) \\]",
+  "confiance": "haute",
+  "justification": "§33 seconde dérivée. Les exposants ont survécu.",
+  "validation": "Rendu : 𝓛{f''}=s²F(s)−sf(0)−f'(0)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 756,
+  "ancien": "\\[ {f\\*g} = F(s)G(s) \\]",
+  "nouveau": "\\[ \\mathcal{L}\\{f\\ast g\\}=F(s)G(s) \\]",
+  "confiance": "haute",
+  "justification": "§33 convolution. Seul \\mathcal{L} manque.",
+  "validation": "Rendu : 𝓛{f∗g}=F(s)G(s)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 768,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§34 « Il faut également déterminer les valeurs de (s) pour lesquelles l'intégrale converge. On parle de : [vide] ».",
+  "validation": "Candidat : \\[ \\text{région de convergence} \\] (ou \\text{domaine de convergence}, ou ROC)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 776,
+  "ancien": "\\[ H(s)= \\]",
+  "nouveau": "\\[ H(s)=\\frac{N(s)}{D(s)} \\]",
+  "confiance": "haute",
+  "justification": "§35 pôles et zéros « Une fonction de transfert peut s'écrire : [H(s)=] Les racines de : [N(s)=0] sont les zéros … [D(s)=0] sont les pôles. » — les deux blocs suivants nomment N(s) et D(s), ce qui impose la fraction.",
+  "validation": "Rendu : H(s)=N(s)/D(s)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 805,
+  "ancien": "\\[ n \\]",
+  "nouveau": "\\[ n\\geq 0 \\]",
+  "confiance": "haute",
+  "justification": "§36 transformée en Z « Une version unilatérale utilise généralement : [n] ». Le \\geq a été détruit.",
+  "validation": "Rendu : n ≥ 0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 845,
+  "ancien": "\\[ z=e^{i} \\]",
+  "nouveau": "\\[ z=e^{i\\omega} \\]",
+  "confiance": "haute",
+  "justification": "§39 lien entre Z et Fourier « Sur le cercle unité : [ ] ». Le \\omega a été détruit.",
+  "validation": "Rendu : z=e^{iω}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 895,
+  "ancien": "\\[ X(,) = x(t)w(t-)e^{-it},dt \\]",
+  "nouveau": "\\[ X(\\tau,\\omega)=\\int x(t)w(t-\\tau)e^{-i\\omega t}\\,dt \\]",
+  "confiance": "haute",
+  "justification": "§42 STFT « On applique une fenêtre (w) localement : [X(,)=x(t)w(t-)e^{-it},dt] ». Le \\tau et le \\omega ont été détruits, ainsi que le \\int ; le \\, est devenu une virgule.",
+  "validation": "Rendu : X(τ,ω)=∫x(t)w(t−τ)e^{-iωt}dt."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 901,
+  "ancien": "\\[ |X(,)|^2 \\]",
+  "nouveau": "\\[ |X(\\tau,\\omega)|^{2} \\]",
+  "confiance": "haute",
+  "justification": "§43 spectrogramme « Le spectrogramme représente généralement : [ ] ». Deux lettres grecques détruites.",
+  "validation": "Rendu : |X(τ,ω)|²."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 942,
+  "ancien": "\\[ (t) \\]",
+  "nouveau": "\\[ \\psi(t) \\]",
+  "confiance": "haute",
+  "justification": "§45 ondelette mère « Une famille peut être construite à partir d'une ondelette mère : [ ] ». Le \\psi a été détruit.",
+  "validation": "Rendu : ψ(t)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 946,
+  "ancien": "\\[ \\_{a,b}(t) = ( ) \\]",
+  "nouveau": "\\[ \\psi_{a,b}(t)=\\frac{1}{\\sqrt{a}}\\psi\\left(\\frac{t-b}{a}\\right) \\]",
+  "confiance": "haute",
+  "justification": "§45 « par translation et dilatation : [\\_{a,b}(t)=( )] ». Le \\psi a été détruit aux deux endroits ; la fraction de normalisation et l'argument ont été détruits.",
+  "validation": "Rendu : ψ_{a,b}(t)=(1/√a)ψ((t−b)/a). Forme usuelle de la dilatation-translation."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 952,
+  "ancien": "\\[ W(a,b) = x(t) dt \\]",
+  "nouveau": "\\[ W(a,b)=\\int x(t)\\psi_{a,b}(t)\\,dt \\]",
+  "confiance": "haute",
+  "justification": "§46 transformée en ondelettes continue « Une formulation classique est : [W(a,b)=x(t) dt] ». Le \\psi_{a,b}(t) a été détruit, ainsi que \\int et \\, .",
+  "validation": "Rendu : W(a,b)=∫x(t)ψ_{a,b}(t)dt."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 964,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§47 « L'échelle possède une relation inverse approximative avec la fréquence : [vide] [vide] ». Deux blocs vides consécutifs.",
+  "validation": "Candidats : \\[ a\\propto\\frac{1}{f} \\] puis \\[ f\\approx\\frac{f_c}{a} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 966,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§47, second bloc.",
+  "validation": "Voir l. 964."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1058,
+  "ancien": "\\[ x(t)=A(2f_0t) \\]",
+  "nouveau": "\\[ x(t)=A\\sin(2\\pi f_0t) \\]",
+  "confiance": "haute",
+  "justification": "§52 signal stationnaire « Pour ce type de signal, une représentation fréquentielle … [x(t)=A(2f_0t)] La Fourier révèle clairement (f_0). » — le \\sin et le \\pi ont été détruits.",
+  "validation": "Rendu : x(t)=A sin(2πf₀t)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1066,
+  "ancien": "\\[ x(t)=\n\n\\]",
+  "nouveau": "\\[ x(t)=\\sin(2\\pi f_1t)+\\sin(2\\pi f_2t) \\]",
+  "confiance": "moyenne",
+  "justification": "§53 signal non stationnaire « Supposons : [x(t)= ] Une Fourier globale révèle les fréquences mais perd une partie de l'information sur leur localisation temporelle. » — le bloc est vide ; l'exemple doit montrer deux fréquences successives ou un chirp.",
+  "validation": "Candidat alternatif : un chirp, \\[ x(t)=\\sin(2\\pi f(t)t) \\]. Le premier candidat est le plus courant pour illustrer la perte de localisation."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1085,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§54 reconnaissance vocale « On peut appliquer : [vide] On peut également utiliser : ».",
+  "validation": "Candidat : \\[ \\text{une STFT ou des MFCC} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1153,
+  "ancien": "\\[ xT(x) \\]",
+  "nouveau": "\\[ x\\to T(x) \\]",
+  "confiance": "haute",
+  "justification": "§57 « ### Prétraitement [ ] ### Extraction de caractéristiques ». La flèche a été détruite ; la structure « x → objet » est celle de toute la section.",
+  "validation": "Rendu : x → T(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1157,
+  "ancien": "\\[ x(x) \\]",
+  "nouveau": "\\[ x\\to \\phi(x) \\]",
+  "confiance": "moyenne",
+  "justification": "§57 « ### Extraction de caractéristiques [x(x)] ». Le \\phi a été détruit, laissant deux x identiques en apparence.",
+  "validation": "Candidat alternatif : x\\to \\varphi(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1161,
+  "ancien": "\\[ x \\]",
+  "nouveau": "\\[ x\\to \\tilde{x} \\]",
+  "confiance": "moyenne",
+  "justification": "§57 « ### Réduction du bruit [x] ». Le tilde a été détruit.",
+  "validation": "Candidat alternatif : x\\to \\hat{x}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1165,
+  "ancien": "\\[ xz \\]",
+  "nouveau": "\\[ x\\to z \\]",
+  "confiance": "haute",
+  "justification": "§57 « ### Compression [xz] ### Représentation ». Deux lettres accolées : la flèche a été détruite.",
+  "validation": "Rendu : x → z."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1169,
+  "ancien": "\\[ x \\]",
+  "nouveau": "\\[ x\\to X \\]",
+  "confiance": "moyenne",
+  "justification": "§57 « ### Représentation [x] ### Analyse ». Un seul symbole subsiste ; la représentation transformée est notée en majuscule dans tout le document.",
+  "validation": "Candidat alternatif : x\\to T(x), mais cela répéterait l. 1153."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1190,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§58 « Une donnée temporelle devient ainsi une structure 2D exploitable par des architectures de vision. Cela crée un pont entre : [vide] ».",
+  "validation": "Candidat : \\[ \\text{le traitement du signal et la vision par ordinateur} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1226,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§60 transformée de Radon « Conceptuellement : [vide] Elle constitue notamment une base mathématique importante de la tomographie. »",
+  "validation": "Candidat : \\[ R(\\rho,\\theta)=\\int f(x,y)\\,ds \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1258,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§62 transformées et simulation « Exemple conceptuel : [vide] Elles peuvent donc servir à : ».",
+  "validation": "Candidat : \\[ \\mathcal{F}\\{u_{xx}\\}=-k^{2}U \\], repris au §64."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1274,
+  "ancien": "\\[ u(x) \\_{k=0}^{N} a_k_k(x) \\]",
+  "nouveau": "\\[ u(x)\\approx\\sum_{k=0}^{N}a_k\\phi_k(x) \\]",
+  "confiance": "haute",
+  "justification": "§63 méthodes spectrales « Par exemple : [u(x) \\_{k=0}^{N} a_k_k(x)] ». Le \\phi a été détruit (résidu _k), le \\sum réduit à \\_, et \\approx détruit.",
+  "validation": "Rendu : u(x)≈Σ a_k φ_k(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1278,
+  "ancien": "\\[ \\_k(x) \\]",
+  "nouveau": "\\[ \\phi_k(x) \\]",
+  "confiance": "haute",
+  "justification": "§63 « avec : [ ] comme fonctions de base. » Le \\phi a été détruit.",
+  "validation": "Rendu : φ_k(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1295,
+  "ancien": "\\[ u(x,t) U(k,t) \\]",
+  "nouveau": "\\[ u(x,t)\\to U(k,t) \\]",
+  "confiance": "haute",
+  "justification": "§64 « Exemple conceptuel : [u(x,t) U(k,t)] ». La flèche a été détruite.",
+  "validation": "Rendu : u(x,t) → U(k,t)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1301,
+  "ancien": "\\[ { } = -k^2U(k,t) \\]",
+  "nouveau": "\\[ \\mathcal{F}\\left\\{\\frac{\\partial^{2}u}{\\partial x^{2}}\\right\\}=-k^{2}U(k,t) \\]",
+  "confiance": "haute",
+  "justification": "§64 « Par exemple : [{ } = -k^2U(k,t)] Cela peut transformer une PDE en une famille d'EDO. » — le \\mathcal{F} et la dérivée seconde ont été détruits ; seules les accolades et le membre de droite subsistent.",
+  "validation": "Rendu : 𝓕{∂²u/∂x²}=−k²U(k,t)."
+ }
+]
