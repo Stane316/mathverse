@@ -5,6 +5,11 @@
 **Outils :** `tools/check_equations.py`, `tools/check_equations2.py` (déterministes, sans réseau)
 **Données brutes :** `annexes/A7-integrite-equations.csv`
 
+> ### Rectification du 2026-10-18
+> Une version antérieure de ce document attribuait 48 équations défectueuses à **100 %** aux documents **E, R, S, U**. Ce chiffre était **faux** : il provenait du détecteur composite, dont le critère « longueur < 6 caractères » comptait comme défectueux des bloc-notes légitimement courts.
+> **Vérification faite :** ces quatre documents contiennent 48 blocs `\[…\]` dont le contenu est un symbole unique (`x`, `v`, `u`, `B`, `C`) ou un intervalle (`0,1`). Ce ne sont **pas des équations** : ce sont des artefacts d'échappement de crochets (`[0,1]` écrit `\[0,1\]`, ce que LaTeX interprète comme une équation display). Ils ne comptent **aucun défaut structurel**.
+> **Conséquence :** le taux de 30,8 % est calculé sur les 2 354 blocs display, dont 48 ne sont pas des équations. Ramené aux 2 306 blocs réellement équationnels, le taux est de **31,4 %**. Le tableau ci-dessous a été corrigé.
+
 ---
 
 ## 1. Résumé
@@ -83,10 +88,10 @@ Reste de `λ = lim (1/n) Σ ln|f'(x_i)|` après suppression de `\lambda`, `\lim`
 | Q — Logique, automates | 79 | 11 | 13,9 % |
 | F — Combinatoire | 118 | 12 | 10,2 % |
 | P — Cryptographie | 66 | 2 | 3,0 % |
-| E — Graphes · R — Algèbre abstraite · S — Topologie · U — Logique floue | 48 | 48 | **100 %** |
+| E — Graphes · R — Algèbre abstraite · S — Topologie · U — Logique floue | 48 (*) | **0** | 0 % |
 | **A (maître) · B · C · D** | **0** | — | **équations entièrement absentes** |
 
-Les quatre derniers documents de mathématiques (E, R, S, U) ont un taux de 100 % sur un petit nombre d'équations (6 à 11) : dans leur cas, la quasi-totalité du formalisme a été perdue, et non une fraction.
+(*) Ces 48 blocs ne sont **pas des équations** mais des artefacts d'échappement de crochets (`[0,1]` écrit `\[0,1\]`). Ils sont exclus du taux de défaut. Ces quatre documents ne contiennent donc, en pratique, **aucune équation** : leur formalisme a été perdu en totalité, mais par un autre mécanisme que la troncature.
 
 ## 5. Conséquences pour le projet
 

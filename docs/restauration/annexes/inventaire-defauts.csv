@@ -1,0 +1,825 @@
+fichier,ligne,heuristiques,equation,bloc,avant,apres
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2108,vide_ou_blanc,,\[ \],Avant de valider un design généré par IA :,\[ \] La cible est claire / \[ \] La hiérarchie est cohérente / \[ \] Les CTA sont explicites
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2109,vide_ou_blanc,,\[ \],Avant de valider un design généré par IA : / \[ \] Le produit est immédiatement compréhensible,\[ \] La hiérarchie est cohérente / \[ \] Les CTA sont explicites / \[ \] La navigation est logique
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2110,vide_ou_blanc,,\[ \],\[ \] Le produit est immédiatement compréhensible / \[ \] La cible est claire,\[ \] Les CTA sont explicites / \[ \] La navigation est logique / \[ \] Les composants sont cohérents
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2111,vide_ou_blanc,,\[ \],\[ \] Le produit est immédiatement compréhensible / \[ \] La cible est claire / \[ \] La hiérarchie est cohérente,\[ \] La navigation est logique / \[ \] Les composants sont cohérents / \[ \] Les espacements sont systématiques
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2112,vide_ou_blanc,,\[ \],\[ \] La cible est claire / \[ \] La hiérarchie est cohérente / \[ \] Les CTA sont explicites,\[ \] Les composants sont cohérents / \[ \] Les espacements sont systématiques / \[ \] La typographie est maîtrisée
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2113,vide_ou_blanc,,\[ \],\[ \] La hiérarchie est cohérente / \[ \] Les CTA sont explicites / \[ \] La navigation est logique,\[ \] Les espacements sont systématiques / \[ \] La typographie est maîtrisée / \[ \] Le contraste est suffisant
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2114,vide_ou_blanc,,\[ \],\[ \] Les CTA sont explicites / \[ \] La navigation est logique / \[ \] Les composants sont cohérents,\[ \] La typographie est maîtrisée / \[ \] Le contraste est suffisant / \[ \] Les états sont prévus
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2115,vide_ou_blanc,,\[ \],\[ \] La navigation est logique / \[ \] Les composants sont cohérents / \[ \] Les espacements sont systématiques,\[ \] Le contraste est suffisant / \[ \] Les états sont prévus / \[ \] Les erreurs sont prévues
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2116,vide_ou_blanc,,\[ \],\[ \] Les composants sont cohérents / \[ \] Les espacements sont systématiques / \[ \] La typographie est maîtrisée,\[ \] Les états sont prévus / \[ \] Les erreurs sont prévues / \[ \] Le responsive est réellement pensé
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2117,vide_ou_blanc,,\[ \],\[ \] Les espacements sont systématiques / \[ \] La typographie est maîtrisée / \[ \] Le contraste est suffisant,\[ \] Les erreurs sont prévues / \[ \] Le responsive est réellement pensé / \[ \] L'accessibilité est considérée
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2118,vide_ou_blanc,,\[ \],\[ \] La typographie est maîtrisée / \[ \] Le contraste est suffisant / \[ \] Les états sont prévus,\[ \] Le responsive est réellement pensé / \[ \] L'accessibilité est considérée / \[ \] Les animations ont une raison
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2119,vide_ou_blanc,,\[ \],\[ \] Le contraste est suffisant / \[ \] Les états sont prévus / \[ \] Les erreurs sont prévues,\[ \] L'accessibilité est considérée / \[ \] Les animations ont une raison / \[ \] Les images ont une fonction
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2120,vide_ou_blanc,,\[ \],\[ \] Les états sont prévus / \[ \] Les erreurs sont prévues / \[ \] Le responsive est réellement pensé,\[ \] Les animations ont une raison / \[ \] Les images ont une fonction / \[ \] Le design possède une identité
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2121,vide_ou_blanc,,\[ \],\[ \] Les erreurs sont prévues / \[ \] Le responsive est réellement pensé / \[ \] L'accessibilité est considérée,\[ \] Les images ont une fonction / \[ \] Le design possède une identité / \[ \] Le contenu n'est pas générique
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2122,vide_ou_blanc,,\[ \],\[ \] Le responsive est réellement pensé / \[ \] L'accessibilité est considérée / \[ \] Les animations ont une raison,\[ \] Le design possède une identité / \[ \] Le contenu n'est pas générique / \[ \] Le design correspond au positionnement
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2123,vide_ou_blanc,,\[ \],\[ \] L'accessibilité est considérée / \[ \] Les animations ont une raison / \[ \] Les images ont une fonction,\[ \] Le contenu n'est pas générique / \[ \] Le design correspond au positionnement / \[ \] Les performances sont acceptables
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2124,vide_ou_blanc,,\[ \],\[ \] Les animations ont une raison / \[ \] Les images ont une fonction / \[ \] Le design possède une identité,\[ \] Le design correspond au positionnement / \[ \] Les performances sont acceptables / \[ \] Le résultat ne dépend pas d'effets superficiels
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2125,vide_ou_blanc,,\[ \],\[ \] Les images ont une fonction / \[ \] Le design possède une identité / \[ \] Le contenu n'est pas générique,\[ \] Les performances sont acceptables / \[ \] Le résultat ne dépend pas d'effets superficiels
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2126,vide_ou_blanc,,\[ \],\[ \] Le design possède une identité / \[ \] Le contenu n'est pas générique / \[ \] Le design correspond au positionnement,\[ \] Le résultat ne dépend pas d'effets superficiels / # **73\. LES 7 QUESTIONS À POSER À UNE IA AVANT D'ACCEPTER SON DESIGN**
+Ai Technical Litteracy/DOCUMENT 02 — UI  UX DESIGN.md,2127,vide_ou_blanc,,\[ \],\[ \] Le contenu n'est pas générique / \[ \] Le design correspond au positionnement / \[ \] Les performances sont acceptables,# **73\. LES 7 QUESTIONS À POSER À UNE IA AVANT D'ACCEPTER SON DESIGN**
+Maths-vers-Informatiques/DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE.md,417,finit_par_egal,"A(n,r)=","\[ A(n,r)= \]","On sélectionne (r) objets parmi (n), et **l’ordre compte**.",## Exemple
+Maths-vers-Informatiques/DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE.md,453,finit_par_egal,nr =,\[ nr = \],Lorsqu’on sélectionne (r) objets parmi (n) et que l’ordre ne compte pas :,## Exemple
+Maths-vers-Informatiques/DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE.md,459,vide_ou_blanc,,\[ \],Choisir 3 membres parmi 10 :,Les groupes :
+Maths-vers-Informatiques/DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE.md,479,vide_ou_blanc,,\[ \],Donc :,# 14 — PERMUTATIONS ET COMBINAISONS : DISTINCTION ESSENTIELLE
+Maths-vers-Informatiques/DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE.md,503,vide_ou_blanc,,\[ \],Pour sélectionner (r) éléments parmi (n) types avec répétition :,Cette formule est notamment associée à la méthode :
+Maths-vers-Informatiques/DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE.md,523,commence_par_egal+finit_par_egal,=,\[ = \],Nombre de solutions :,# 17 — CONTRAINTES DANS LES DISTRIBUTIONS
+Maths-vers-Informatiques/DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE.md,585,fragment_commande,(a+b)^n = \_{k=0}^{n} nk a<sup>{n-k}b</sup>k,\[ (a+b)^n = \_{k=0}^{n} nk a<sup>{n-k}b</sup>k \],# 20 — FORMULE DU BINÔME,Cette formule relie directement :
+Maths-vers-Informatiques/DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE.md,753,fragment_commande,A(x)=\_{n}a_nx^n,\[ A(x)=\_{n}a_nx^n \],dans une expression formelle :,## Pourquoi les utiliser ?
+Maths-vers-Informatiques/DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE.md,827,finit_par_egal,C_n=,\[ C_n= \],Une forme classique est :,Ils constituent un excellent exemple de structure apparaissant dans plusieurs problèmes apparemment différents.
+Maths-vers-Informatiques/DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE.md,2064,finit_par_egal,"A(n,r)=","\[ A(n,r)= \]",## Propriété 4 — Arrangement,## Propriété 5 — Combinaison
+Maths-vers-Informatiques/DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE.md,2068,finit_par_egal,nr =,\[ nr = \],## Propriété 5 — Combinaison,## Propriété 6 — Symétrie
+Maths-vers-Informatiques/DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE.md,2092,finit_par_egal,C_n=,\[ C_n= \],## Propriété 10 — Catalan,# 115 — DISTINCTIONS CONCEPTUELLES À MAÎTRISER
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",830,finit_par_egal,D=,\[ D= \],d’où :,## 17.2 — Exemple
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",841,finit_par_egal,D=,\[ D= \],donc :,La dimension est comprise entre 1 et 2.
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",863,parentheses_vides,N(),\[ N() \],On observe le nombre :,de boîtes nécessaires.
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",914,commence_par_egal,"=f(x,t)","\[ =f(x,t) \]",## 20.2 — Système continu,Le temps est continu.
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",920,commence_par_egal,"=F(,t)","\[ =F(,t) \]",## 20.3 — Système multidimensionnel,où :
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",924,commence_par_egal+finit_par_egal,=,"\[ =
+
+\]",où :,\]
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",1126,indice_orphelin+fragment_commande,_{n}_ {i=0}^{n-1} |f’(x_i)|,\[ _{n}_ {i=0}^{n-1} |f’(x_i)| \],Conceptuellement :,dans le cas scalaire approprié.
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",1142,commence_par_egal,=(y-x),\[ =(y-x) \],Le système de Lorenz est donné par :,\[ =x(-z)-y \]
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",1144,commence_par_egal,=x(-z)-y,\[ =x(-z)-y \],\[ =(y-x) \],\[ =xy-z \]
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",1146,commence_par_egal,=xy-z,\[ =xy-z \],\[ =x(-z)-y \],où :
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",1324,fragment_commande,F(x)= \_{i=0}^{n-1} a_i N(f_i x),\[ F(x)= \_{i=0}^{n-1} a_i N(f_i x) \],Forme générale :,où :
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",1363,fragment_commande,T(x)=\_i a_i |N(f_i x)|,\[ T(x)=\_i a_i |N(f_i x)| \],Une construction fréquente consiste à utiliser la valeur absolue du bruit :,Cela produit des structures visuelles plus agressives et plus riches.
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",1756,commence_par_egal,=v,\[ =v \],avec :,et :
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",1760,commence_par_egal,=a,\[ =a \],et :,Le système peut ensuite ajouter :
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",2575,finit_par_egal,x’=,\[ x’= \],Il est souvent utile de normaliser :,afin d’obtenir :
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",2951,commence_par_egal,"=f_(h,t)","\[ =f_(h,t) \]",Une connexion avancée consiste à représenter l’évolution d’un modèle neuronal sous la forme :,où (f_) est paramétré par un réseau neuronal.
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",3250,commence_par_egal,"=f(x,t)","\[ =f(x,t) \]",Les systèmes dynamiques continus utilisent directement :,Le calcul différentiel fournit donc les outils nécessaires pour comprendre leur évolution.
+"Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",4314,vide_ou_blanc,,\[ \],Pour toute future application utilisant ce domaine :,Cette chaîne constitue la référence opérationnelle du **Domaine K**.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,13,vide_ou_blanc,,\[ \],Il doit être considéré comme une référence lorsqu’un problème contient une tension entre :,et
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,55,vide_ou_blanc,,\[ \],Le système ne doit donc jamais considérer :,sans analyser les conditions du calcul.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,61,vide_ou_blanc,,\[ \],### Principe directeur,Ce domaine constitue notamment une base pour :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,115,vide_ou_blanc,,\[ \],On peut représenter la chaîne :,avec notamment :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,136,fragment_commande,"f(x),Ax=b,f,\_a^b f(x),dx,=f(t,y)","\[ f(x),Ax=b,f,\_a^b f(x),dx,=f(t,y) \]",Les domaines précédents peuvent produire :,mais L pose la question :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,146,vide_ou_blanc,,\[ \],"Sur papier, on peut écrire :",exactement.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,158,vide_ou_blanc,,\[ \],Cette différence est fondamentale.,dans la plupart des cas.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,176,commence_par_egal,=9.99.,\[ =9.99. \],et,Alors :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,222,fragment_commande,e^x = \_{k=0}<sup>{}\\frac{x</sup>k}{k!},\[ e^x = \_{k=0}<sup>{}\\frac{x</sup>k}{k!} \],Exemple :,est approximée par :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,226,fragment_commande,e^x \_{k=0}<sup>{N}\\frac{x</sup>k}{k!}.,\[ e^x \_{k=0}<sup>{N}\\frac{x</sup>k}{k!}. \],est approximée par :,Le terme restant constitue une erreur de troncature.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,255,vide_ou_blanc,,\[ \],Il existe une différence fondamentale entre :,et l’ensemble fini des nombres représentables par une machine.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,261,vide_ou_blanc,,\[ \],Ainsi :,est continu et infini tandis que les nombres flottants disponibles sont finis.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,271,fragment_commande,\_{}^{-p},\[ \_{}^{-p} \],"Pour une représentation de précision (p), on rencontre des quantités de l’ordre de :",selon la convention utilisée.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,297,vide_ou_blanc,,\[ \],On parle de :,ou **catastrophic cancellation**.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,343,vide_ou_blanc,,\[ \],Ces trois notions sont différentes.,# 11\. CONDITIONNEMENT
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,465,vide_ou_blanc,,\[ \],La méthode de Newton utilise :,Elle repose sur l’approximation locale de (f) par sa tangente.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,669,fragment_commande,\_x 12x<sup>TAx-b</sup>Tx.,\[ \_x 12x<sup>TAx-b</sup>Tx. \],Il transforme le problème linéaire en problème d’optimisation :,# 31\. PRÉCONDITIONNEMENT
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,701,fragment_commande,p(x)= \_{i=0}^{n} y_iL_i(x),\[ p(x)= \_{i=0}^{n} y_iL_i(x) \],### Forme de Lagrange,avec :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,705,fragment_commande,L_i(x)= \_{ji} .,\[ L_i(x)= \_{ji} . \],avec :,# 34\. FORMULE DE NEWTON
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,756,fragment_commande,\_i (y_i-f(x_i))^2.,\[ \_i (y_i-f(x_i))^2. \],On cherche à minimiser :,Sous forme matricielle :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,760,fragment_commande,\_x|Ax-b|\_2^2.,\[ \_x|Ax-b|\_2^2. \],Sous forme matricielle :,Cette méthode est fondamentale en :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,776,fragment_commande,\_x |Ax-b|\_2^2+ |x|\_2^2.,\[ \_x |Ax-b|\_2^2+ |x|\_2^2. \],Exemple :,C’est une forme de régularisation de Tikhonov.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,786,fragment_commande,"I= \_a^b f(x),dx.","\[ I= \_a^b f(x),dx. \]",On cherche :,"Lorsque l’intégrale exacte est impossible ou trop coûteuse, on l’approxime numériquement."
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,794,fragment_commande,"\_a^b f(x),dx \_i f(x_i)x.","\[ \_a^b f(x),dx \_i f(x_i)x. \]",Approximation :,# 42\. RÈGLE DU MILIEU
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,804,fragment_commande,"\_a^b f(x),dx \[f(a)+f(b)","\[ \_a^b f(x),dx \[f(a)+f(b)\]",# 43\. RÈGLE DES TRAPÈZES,Pour plusieurs subdivisions :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,814,fragment_commande,"\_a^b f(x),dx .","\[ \_a^b f(x),dx . \]",Pour des subdivisions adaptées :,Elle utilise une approximation quadratique locale.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,883,vide_ou_blanc,,\[ \],En diminuant (h) :,mais :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,887,vide_ou_blanc,,\[ \],mais :,et les erreurs d’arrondi peuvent devenir dominantes.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,893,vide_ou_blanc,,\[ \],On peut donc avoir une courbe d’erreur en forme de compromis :,approximativement.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,901,commence_par_egal,"=f(t,y).","\[ =f(t,y). \]",Une EDO peut s’écrire :,Avec :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,936,vide_ou_blanc,,\[ \],On parle notamment de :,ou **stiff problems**.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,997,fragment_commande,I_N = 1N \_{i=1}^{N}f(X_i).,\[ I_N = 1N \_{i=1}^{N}f(X_i). \],on peut utiliser :,Sous des conditions classiques :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1007,parentheses_vides,O().,\[ O(). \],L’erreur statistique classique décroît approximativement comme :,Cela signifie qu’obtenir beaucoup plus de précision peut nécessiter énormément plus d’échantillons.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1017,vide_ou_blanc,,\[ \],Dans certaines situations :,"rend les méthodes déterministes classiques très coûteuses, tandis que Monte-Carlo reste exploitable."
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1071,fragment_commande,\_x f(x).,\[ \_x f(x). \],Le domaine J définit le problème :,Le domaine L explique comment le résoudre réellement.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1142,commence_par_egal,= .,\[ = . \],alors :,Un programme peut construire cette chaîne de dérivations automatiquement.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1193,vide_ou_blanc,,\[ \],Idée :,peuvent devenir :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1394,fragment_commande+parentheses_vides,\_L().,\[ \_L(). \],### Entraînement,### Gradient
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1398,fragment_commande,\_L.,\[ \_L. \],### Gradient,### Mise à jour
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1402,fragment_commande,\_{t+1} = \_t-L.,\[ \_{t+1} = \_t-L. \],### Mise à jour,### Calcul matriciel
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1464,commence_par_egal,=a.,\[ =a. \],Une simulation peut suivre :,Avec Euler :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1604,vide_ou_blanc,,\[ \],Un solveur sérieux peut être structuré ainsi :,# 99\. PARAMÈTRES D’UN SOLVEUR
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1697,vide_ou_blanc,,\[ \],Il faut distinguer :,\[ \]
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1699,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1701,vide_ou_blanc,,\[ \],\[ \],Une solution exacte peut ne pas avoir de forme analytique simple.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1770,vide_ou_blanc,,\[ \],On peut évaluer une méthode selon :,Il n’existe généralement pas de méthode universellement optimale.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1870,vide_ou_blanc,,\[ \],"Lorsqu’un système doit inventer une application, il peut appliquer :",Exemple :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,1874,vide_ou_blanc,,\[ \],Exemple :,Autre exemple :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,2106,vide_ou_blanc,,\[ \],Estimer :,par échantillonnage aléatoire.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,2191,vide_ou_blanc,,\[ \],Mais le développeur doit conserver la capacité de vérifier :,sans dépendre aveuglément de l’IA.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,2201,vide_ou_blanc,,\[ \],### Représentation,### Erreur
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,2205,vide_ou_blanc,,\[ \],### Erreur,### Résolution
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,2233,commence_par_egal,"=f(t,y) .","\[ =f(t,y) . \]",### Dynamique,### Incertitude
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,2241,vide_ou_blanc,,\[ \],### Fiabilité,# 116\. CHECKLIST DE MAÎTRISE
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,2282,vide_ou_blanc,,\[ \],## Avec le domaine I — Calcul différentiel,## Avec le domaine J — Optimisation
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,2286,vide_ou_blanc,,\[ \],## Avec le domaine J — Optimisation,"## Avec le domaine K — Fractales, chaos et systèmes dynamiques"
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,2308,vide_ou_blanc,,\[ \],Le domaine L enseigne une idée fondamentale :,Entre le modèle et le résultat existe toute une chaîne :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,2312,vide_ou_blanc,,\[ \],Entre le modèle et le résultat existe toute une chaîne :,Chaque étape peut introduire :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,2340,vide_ou_blanc,,\[ \],Pour tout problème numérique :,Et lorsqu’une IA doit transformer un concept mathématique en logiciel :
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,2344,vide_ou_blanc,,\[ \],Et lorsqu’une IA doit transformer un concept mathématique en logiciel :,Le domaine L constitue ainsi la **couche d’exécution numérique** de l’ensemble de la cartographie mathématique.
+Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md,2350,vide_ou_blanc,,\[ \],Il permet de passer de :,à :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,179,finit_par_egal,I(x)=,\[ I(x)= \],ou :,Si le logarithme est en base 2 :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,183,fragment_commande,I(x)=-\_2 p(x),\[ I(x)=-\_2 p(x) \],Si le logarithme est en base 2 :,l’unité est le **bit**.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,195,finit_par_egal,p(x)=,\[ p(x)= \],Par exemple :,donne :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,203,finit_par_egal,p(x)=,\[ p(x)= \],Alors que :,donne :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,233,fragment_commande,I=-\_2 p,\[ I=-\_2 p \],Avec un logarithme en base 2 :,l’unité est le **bit**.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,249,fragment_commande,I=-\_{10}p,\[ I=-\_{10}p \],Avec un logarithme en base 10 :,l’unité est parfois appelée **hartley**.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,257,fragment_commande,1 = \_2(e),\[ 1 = \_2(e) \],Entre nats et bits :,et :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,269,fragment_commande,H(X) = -\_x p(x)\_2 p(x),\[ H(X) = -\_x p(x)\_2 p(x) \],Pour une variable aléatoire discrète (X) :,Équivalent :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,273,fragment_commande,H(X) = \[-\_2 p(X),\[ H(X) = \[-\_2 p(X)\],Équivalent :,L’entropie est donc l’information moyenne produite par la réalisation de (X).
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,311,fragment_commande,H(X)=\_2 N,\[ H(X)=\_2 N \],alors :,C’est l’entropie maximale pour une variable possédant (N) états.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,323,fragment_commande,"H(X) = -p_2p
+
+- (1-p)\_2(1-p)","\[ H(X) = -p_2p
+
+- (1-p)\_2(1-p) \]",on obtient :,- (1-p)\_2(1-p) \]
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,329,fragment_commande,H_b(p) = -p_2p-(1-p)\_2(1-p),\[ H_b(p) = -p_2p-(1-p)\_2(1-p) \],On note souvent :,## 08.1 — Propriété importante
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,339,parentheses_vides,H_b()=1,\[ H_b()=1 \],et :,L’incertitude est maximale lorsque les deux résultats sont équiprobables.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,351,fragment_commande,H(X)\_2N,\[ H(X)\_2N \],Si (X) possède (N) états :,avec égalité lorsque la distribution est uniforme.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,371,fragment_commande,"H(X,Y) = -\_{x,y}p(x,y)p(x,y)","\[ H(X,Y) = -\_{x,y}p(x,y)p(x,y) \]",Pour deux variables (X) et (Y) :,Elle mesure l’incertitude concernant le couple :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,403,fragment_commande,"H(X|Y) = -\_{x,y}p(x,y)p(x|y)","\[ H(X|Y) = -\_{x,y}p(x,y)p(x|y) \]",L’entropie conditionnelle mesure l’incertitude restante sur (X) lorsqu’on connaît (Y).,On peut aussi écrire :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,407,fragment_commande,H(X|Y) = \_Y\[H(X|Y=y),\[ H(X|Y) = \_Y\[H(X|Y=y)\],On peut aussi écrire :,## 11.1 — Interprétation
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,437,indice_orphelin,"H(X_1,,X_n) = _{i=1}^n H(X_i|X_1,,X_{i-1})","\[ H(X_1,,X_n) = _{i=1}^n H(X_i|X_1,,X_{i-1}) \]",Pour plusieurs variables :,Cette règle est fondamentale pour analyser les séquences et les sources avec mémoire.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,520,fragment_commande,D_{KL}(P|Q) = \_xP(x),\[ D_{KL}(P|Q) = \_xP(x) \],Pour deux distributions (P) et (Q) :,Elle est également appelée :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,578,fragment_commande,"H(P,Q) = -\_xP(x)Q(x)","\[ H(P,Q) = -\_xP(x)Q(x) \]",La cross-entropy entre (P) et (Q) est :,Elle vérifie :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,595,fragment_commande,L = -\_i y_iy_i,\[ L = -\_i y_iy_i \],la loss cross-entropy est :,Pour une cible one-hot :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,629,finit_par_egal,M=,\[ M= \],avec :,Contrairement à la KL :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,766,fragment_commande,"H_ = \_{n} 1nH(X_1,,X_n)","\[ H_ = \_{n} 1nH(X_1,,X_n) \]",Mais une notion encore plus importante pour une source séquentielle est le **taux d’entropie** :,lorsque la limite existe.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,884,fragment_commande,L=\_i p_i l_i,\[ L=\_i p_i l_i \],la longueur moyenne est :,Un bon code cherche à minimiser :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,896,fragment_commande,\_2N,\[ \_2N \],"Si l’alphabet possède (N) symboles, un code fixe nécessite approximativement :",bits par symbole.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,944,fragment_commande,\_i2^{-l_i},\[ \_i2^{-l_i} \],Pour un code préfixe binaire :,Cette condition caractérise les longueurs compatibles avec un code préfixe.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,962,fragment_commande,l_i-\_2p_i,\[ l_i-\_2p_i \],Une construction historique consiste à choisir des longueurs proches de :,L’idée est fondamentale :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,1031,vide_ou_blanc,,\[ \],de :,Parmi les grandes familles :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,1089,fragment_commande,-\_2P(w_t|context),\[ -\_2P(w_t|context) \],La surprise d’un token est :,La somme des surprises donne une mesure du coût informationnel de la séquence.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,1099,fragment_commande,H = -1N \_{i=1}^{N} \_2P(w_i|context_i),\[ H = -1N \_{i=1}^{N} \_2P(w_i|context_i) \],Pour une séquence de (N) tokens :,La perplexité peut être définie :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,1212,fragment_commande,C = \_{P_X}I(X;Y),\[ C = \_{P_X}I(X;Y) \],La capacité d’un canal est :,Elle représente le débit maximal théorique auquel une communication fiable peut être obtenue dans le modèle considéré.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,1290,fragment_commande,C = \_2 ( 1+ ),\[ C = \_2 ( 1+ ) \],"Sous une contrainte de puissance (P), la capacité classique est :","par utilisation réelle du canal, selon la normalisation retenue."
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,1302,finit_par_egal,SNR=,\[ SNR= \],Le rapport :,influence directement la capacité.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,1405,fragment_commande,H(X)\_2|X|,\[ H(X)\_2|X| \],Si :,alors la source contient beaucoup de structure exploitable.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,1415,vide_ou_blanc,,\[ \],La compression avec perte introduit un nouveau compromis :,On définit une fonction :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,1448,vide_ou_blanc,,\[ \],Le problème devient :,sous :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,1456,indice_orphelin,"R(D) = _{P_{X|X}:,E\[d(X,X)","\[ R(D) = _{P_{X|X}:,E\[d(X,X)\]",La formulation fondamentale de la théorie est :,# 67 — COMPRESSION ET IA GÉNÉRATIVE
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,1562,finit_par_egal,Y=,\[ Y= \],L’entropie initiale mesure l’incertitude sur :,Pour chaque variable :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,1710,parentheses_vides,"L()
+
+- L()","\[ L()
+
+- L() \]",Le principe MDL propose de choisir un modèle en minimisant :,- L() \]
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,1877,finit_par_egal,C_i=,\[ C_i= \],Si certains fragments disparaissent :,la structure du code peut permettre de reconstruire (D).
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,2247,fragment_commande,H(X) = -\_xp(x)p(x),\[ H(X) = -\_xp(x)p(x) \],puis :,Cela introduit une erreur d’estimation.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,2494,fragment_commande,\_2N,\[ \_2N \],Un espace de recherche de taille (N) fournit au maximum :,bits d’incertitude si les possibilités sont équiprobables.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,2824,fragment_commande,(\_i e^{z_i}),\[ (\_i e^{z_i}) \],Pour calculer :,on utilise :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,2828,fragment_commande,m+(\_i e^{z_i-m}),\[ m+(\_i e^{z_i-m}) \],on utilise :,où :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,2832,fragment_commande,m=\_i z_i,\[ m=\_i z_i \],où :,Cette technique est fondamentale pour les modèles probabilistes et le machine learning.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,2840,fragment_commande,P_i = {\_j e^{z_j}},\[ P_i = {\_j e^{z_j}} \],Le softmax :,produit une distribution.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,3033,vide_ou_blanc,,\[ \],penser :,### « compression »
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,3309,vide_ou_blanc,,\[ \],"Au lieu de tout lire, il cherche les observations maximisant :",Pipeline :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,3409,parentheses_vides,"IG(q) = H()
+
+- H(q)","\[ IG(q) = H()
+
+- H(q) \]",Un agent de recherche pourrait estimer :,- H(q) \]
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,4001,vide_ou_blanc,,\[ \],Une distinction particulièrement importante :,Une donnée peut contenir beaucoup d’information au sens de Shannon tout en étant inutile pour la tâche.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,4113,vide_ou_blanc,,\[ \],La théorie de l’information peut être résumée par une chaîne extrêmement compacte :,Avec les notions centrales :
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,4117,vide_ou_blanc,,\[ \],Avec les notions centrales :,\[ \]
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,4119,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,4121,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,4123,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,4125,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,4127,vide_ou_blanc,,\[ \],\[ \],"et, pour la compression avec perte :"
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,4131,vide_ou_blanc,,\[ \],"et, pour la compression avec perte :",Ces équations forment le noyau mathématique du domaine.
+Maths-vers-Informatiques/DOCUMENT M — THÉORIE DE L’INFORMATION.md,4216,vide_ou_blanc,,\[ \],"La théorie de l’information devient alors non seulement une branche des mathématiques appliquées, mais une **théorie de l’économie de l’information** :",# 188 — RÉFÉRENCES DE RECHERCHE ET POURSUITE
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,142,vide_ou_blanc,,\[ \],On peut donc avoir :,C’est précisément cette propriété qui explique l’importance des transformées en informatique.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,190,fragment_commande,"f(t) =
+
+- \_{n=1}^{} \[ a_n(n_0t)
+- b_n(n_0t)","\[ f(t) =
+
+- \_{n=1}^{} \[ a_n(n_0t)
+- b_n(n_0t) \]",Pour une fonction de période (T) :,- \_{n=1}^{} \[ a_n(n_0t) / - b_n(n_0t) \] \]
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,197,finit_par_egal+fragment_commande,\_0=,\[ \_0= \],avec :,# 6\. COEFFICIENTS DE FOURIER
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,203,fragment_commande,"a_n= \_0^T f(t)(n_0t),dt","\[ a_n= \_0^T f(t)(n_0t),dt \]",Les coefficients sont :,et :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,207,fragment_commande,"b_n= \_0^T f(t)(n_0t),dt","\[ b_n= \_0^T f(t)(n_0t),dt \]",et :,Ils indiquent essentiellement la contribution de chaque fréquence harmonique.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,215,fragment_commande,f(t) = \_{n=-}^{+} c_ne^{in_0t},\[ f(t) = \_{n=-}^{+} c_ne^{in_0t} \],La série de Fourier peut être exprimée sous la forme :,avec :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,219,fragment_commande,"c_n= \_0^T f(t)e^{-in_0t},dt","\[ c_n= \_0^T f(t)e^{-in_0t},dt \]",avec :,Cette formulation est particulièrement importante car elle prépare directement la transition vers la transformée de Fourier.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,231,vide_ou_blanc,,\[ \],Cela permet de passer :,Cette idée est fondamentale pour :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,247,fragment_commande+parentheses_vides,"F() = \_{-}^{+} f(t)e^{-it},dt","\[ F() = \_{-}^{+} f(t)e^{-it},dt \]","Pour une fonction (f(t)), une convention classique est :",et l’inverse :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,251,fragment_commande+parentheses_vides,"f(t) = \_{-}^{+} F()e^{it},d","\[ f(t) = \_{-}^{+} F()e^{it},d \]",et l’inverse :,Les conventions de normalisation et de signe peuvent varier selon les disciplines.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,267,parentheses_vides,F(),\[ F() \],à :,où :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,280,parentheses_vides,F()=a()+ib(),\[ F()=a()+ib() \],Pour :,la magnitude est :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,284,finit_par_egal+parentheses_vides,|F()| =,\[ |F()| = \],la magnitude est :,et la phase :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,288,parentheses_vides,() = (F()),\[ () = (F()) \],et la phase :,Une analyse fréquentielle sérieuse ne doit donc pas toujours se limiter à la magnitude.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,314,parentheses_vides,G()=e^{-it_0}F(),\[ G()=e^{-it_0}F() \],alors :,## Translation fréquentielle
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,336,fragment_commande+parentheses_vides,"(f\*g)(t) = \_{-}^{+} f()g(t-),d","\[ (f\*g)(t) = \_{-}^{+} f()g(t-),d \]",La convolution continue est :,Elle représente une interaction entre deux fonctions.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,373,parentheses_vides,Y()=X()H(),\[ Y()=X()H() \],Dans le domaine fréquentiel :,avec :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,377,finit_par_egal+parentheses_vides,H()=,\[ H()= \],avec :,lorsque le rapport est défini.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,405,parentheses_vides,Y()=X()H(),\[ Y()=X()H() \],Conceptuellement :,Le filtre agit donc comme une fonction multiplicative sur le spectre.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,425,finit_par_egal,f_N=,\[ f_N= \],"Si la fréquence d’échantillonnage est (f_s), la fréquence de Nyquist est :","Pour reconstruire correctement un signal limité en bande, il faut idéalement :"
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,439,vide_ou_blanc,,\[ \],Ce phénomène est appelé :,Il est particulièrement important en :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,475,vide_ou_blanc,,\[ \],La DFT transforme un vecteur temporel fini :,en un vecteur de coefficients fréquentiels :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,479,vide_ou_blanc,,\[ \],en un vecteur de coefficients fréquentiels :,Elle est donc particulièrement adaptée au calcul numérique.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,497,finit_par_egal,f_k=,\[ f_k= \],Pour une DFT de (N) points avec fréquence d’échantillonnage (f_s) :,La résolution fréquentielle est :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,501,finit_par_egal,f=,\[ f= \],La résolution fréquentielle est :,"Augmenter (N) permet donc généralement une résolution fréquentielle plus fine, mais il faut distinguer :"
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,596,fragment_commande,\_2N,\[ \_2N \],et construit :,niveaux de décomposition.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,676,vide_ou_blanc,,\[ \],Principe général :,L’idée est de représenter efficacement les informations importantes.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,712,fragment_commande,"F(s) = \_0^ f(t)e^{-st},dt","\[ F(s) = \_0^ f(t)e^{-st},dt \]",Une définition classique :,où :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,732,vide_ou_blanc,,\[ \],On passe de :,à :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,736,vide_ou_blanc,,\[ \],à :,puis on effectue la transformée inverse.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,768,vide_ou_blanc,,\[ \],On parle de :,Elle est particulièrement importante dans l’analyse des systèmes et de leur stabilité.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,776,finit_par_egal,H(s)=,\[ H(s)= \],Une fonction de transfert peut s’écrire :,Les racines de :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,801,fragment_commande,X(z) = \_{n=-}^{+} x\[n,\[ X(z) = \_{n=-}^{+} x\[n\],"Pour une séquence (x\[n\]), une définition bilatérale courante est :",Une version unilatérale utilise généralement :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,946,fragment_commande+parentheses_vides,"\_{a,b}(t) = ( )","\[ \_{a,b}(t) = ( ) \]",par translation et dilatation :,# 46\. TRANSFORMÉE EN ONDELETTES CONTINUE
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,964,vide_ou_blanc,,\[ \],L’échelle possède une relation inverse approximative avec la fréquence :,\[ \]
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,966,vide_ou_blanc,,\[ \],\[ \],Cela permet une représentation multirésolution.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1066,finit_par_egal,x(t)=,"\[ x(t)=
+
+\]",Supposons :,\]
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1085,vide_ou_blanc,,\[ \],On peut appliquer :,On peut également utiliser :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1190,vide_ou_blanc,,\[ \],Cela crée un pont entre :,# 59\. TRANSFORMÉES ET VISION
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1226,vide_ou_blanc,,\[ \],Conceptuellement :,Elle constitue notamment une base mathématique importante de la tomographie.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1258,vide_ou_blanc,,\[ \],Exemple conceptuel :,Elles peuvent donc servir à :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1274,fragment_commande,u(x) \_{k=0}^{N} a_k_k(x),\[ u(x) \_{k=0}^{N} a_k_k(x) \],Par exemple :,avec :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1278,fragment_commande,\_k(x),\[ \_k(x) \],avec :,comme fonctions de base.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1389,fragment_commande,x=\_k c_k_k,\[ x=\_k c_k_k \],peut être représenté dans une autre base :,Les coefficients :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1427,fragment_commande,{\_k},\[ {\_k} \],Une famille :,est orthonormale si :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1431,fragment_commande,"\_i,_j =_ {ij}","\[ \_i,_j =_ {ij} \]",est orthonormale si :,Cette propriété simplifie :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1469,finit_par_egal,c_i’=,"\[ c_i’=
+
+\]",Une stratégie simple consiste à supprimer les petits coefficients :,\]
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1485,fragment_commande,"S_(x) = x,\_{|x|}","\[ S_(x) = x,\_{|x|} \]",### Hard thresholding,### Soft thresholding
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1694,vide_ou_blanc,,\[ \],On cherche souvent :,tout en conservant une qualité acceptable.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1720,fragment_commande,N(x) = \_{k=0}^{K} a_kN_k(x),\[ N(x) = \_{k=0}^{K} a_kN_k(x) \],comme combinaison de composantes à différentes échelles :,avec différentes fréquences ou échelles.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1817,vide_ou_blanc,,\[ \],On peut donc rechercher :,comme indicateur de :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1932,fragment_commande+parentheses_vides,\_g() = -,\[ \_g() = - \],Le retard peut être relié à la pente de phase :,dans les contextes appropriés.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,1987,finit_par_egal,X=,\[ X= \],Retrouver (X) implique :,si (H).
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2005,vide_ou_blanc,,\[ \],"Par exemple, au lieu de :",on peut utiliser une forme régularisée.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2011,vide_ou_blanc,,\[ \],L’idée générale :,Cette idée fait directement le lien avec le domaine L — Analyse numérique.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2052,vide_ou_blanc,,\[ \],Cette différence est un excellent exemple de passage :,# 104\. FFT ET CONVOLUTION RAPIDE
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2173,vide_ou_blanc,,\[ \],Une donnée sonore peut devenir une expérience visuelle :,Exemples :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2265,fragment_commande,"T^ = \_T (T,x)","\[ T^ = \_T (T,x) \]",Puis sélectionner celle qui maximise un objectif :,Le score peut mesurer :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2301,vide_ou_blanc,,\[ \],On peut alors calculer :,à travers la transformation.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2383,vide_ou_blanc,,\[ \],Alors :,Question 4 :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2391,vide_ou_blanc,,\[ \],Alors :,Question 5 :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2399,vide_ou_blanc,,\[ \],Alors :,Question 6 :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2407,vide_ou_blanc,,\[ \],Alors :,Question 7 :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2415,vide_ou_blanc,,\[ \],Alors :,Question 8 :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2423,vide_ou_blanc,,\[ \],Alors :,# 119\. MATRICE DE DÉCISION
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2601,vide_ou_blanc,,\[ \],Il faut distinguer :,et :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2605,vide_ou_blanc,,\[ \],et :,Une représentation complexe peut nécessiter davantage de mémoire qu’une représentation réelle.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2647,vide_ou_blanc,,\[ \],Le compromis devient :,# 130\. TRANSFORMÉES ET COMPRESSION AVEC PERTE
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2675,commence_par_egal,=x,\[ =x \],"Dans une compression sans perte, la reconstruction doit être exacte :",La transformée seule ne garantit pas la compression sans perte.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2699,vide_ou_blanc,,\[ \],On peut donc avoir :,# 133\. LIEN AVEC L’ANALYSE NUMÉRIQUE
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2747,fragment_commande,\_X(t) = \[e^{itX},\[ \_X(t) = \[e^{itX}\],Une variable aléatoire possède une fonction caractéristique :,qui est intimement liée à la transformée de Fourier de sa loi sous des conditions appropriées.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2780,vide_ou_blanc,,\[ \],Cela mène à la :,avec des applications en :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2814,parentheses_vides,x T(x) z T^{-1}(),\[ x T(x) z T^{-1}() \],Exemple conceptuel :,Cela permet potentiellement de travailler dans un espace où certaines structures sont plus faciles à manipuler.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2824,vide_ou_blanc,,\[ \],"Même lorsque la transformée n’est pas explicitement utilisée, le principe général de :",reste profondément similaire.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2914,vide_ou_blanc,,\[ \],Exemple :,puis :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,2918,vide_ou_blanc,,\[ \],puis :,On peut alors construire :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3140,vide_ou_blanc,,\[ \],penser :,# 157\. FICHE DE RECONNAISSANCE — FFT
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3154,vide_ou_blanc,,\[ \],penser :,# 158\. FICHE DE RECONNAISSANCE — LAPLACE
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3169,vide_ou_blanc,,\[ \],penser :,# 159\. FICHE DE RECONNAISSANCE — Z
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3183,vide_ou_blanc,,\[ \],penser :,# 160\. FICHE DE RECONNAISSANCE — STFT
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3197,vide_ou_blanc,,\[ \],penser :,# 161\. FICHE DE RECONNAISSANCE — ONDELETTES
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3212,vide_ou_blanc,,\[ \],penser :,# 162\. FICHE DE RECONNAISSANCE — DCT
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3225,vide_ou_blanc,,\[ \],penser :,# 163\. ERREURS CONCEPTUELLES À ÉVITER
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3231,vide_ou_blanc,,\[ \],Ne jamais confondre :,La relation est :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3248,vide_ou_blanc,,\[ \],De même :,mais elles jouent des rôles conceptuellement analogues dans les domaines continu et discret.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3426,vide_ou_blanc,,\[ \],Construire :,et permettre de modifier :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3610,vide_ou_blanc,,\[ \],Construire :,Le système pourrait contrôler :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3720,vide_ou_blanc,,\[ \],Construire de nouvelles applications à partir du principe :,# 174\. CHECKLIST DE MAÎTRISE
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3794,vide_ou_blanc,,\[ \],# 176\. SYNTHÈSE DES GRANDES TRANSFORMÉES,# 177\. CONNEXION AVEC L’ENSEMBLE DE LA BIBLIOTHÈQUE MATHÉMATIQUE
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3858,vide_ou_blanc,,\[ \],La contribution la plus importante de ce domaine peut être résumée ainsi :,Fourier transforme :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3862,vide_ou_blanc,,\[ \],Fourier transforme :,Laplace transforme :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3866,vide_ou_blanc,,\[ \],Laplace transforme :,Z transforme :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3870,vide_ou_blanc,,\[ \],Z transforme :,STFT transforme :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3874,vide_ou_blanc,,\[ \],STFT transforme :,Les ondelettes transforment :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3878,vide_ou_blanc,,\[ \],Les ondelettes transforment :,La DCT transforme :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3882,vide_ou_blanc,,\[ \],La DCT transforme :,Et la FFT transforme une idée mathématique en un outil informatique suffisamment efficace pour être utilisé à grande échelle.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3898,vide_ou_blanc,,\[ \],C’est ce qui permet de passer :,\[ \]
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3900,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3902,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3904,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3906,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3908,vide_ou_blanc,,\[ \],\[ \],C’est précisément cette capacité à **changer de perspective mathématique** qui rend les transformées aussi puissantes.
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3935,vide_ou_blanc,,\[ \],Le réflexe d’ingénieur à développer est donc :,mais :
+Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md,3939,vide_ou_blanc,,\[ \],mais :,## FORMULE MENTALE DU DOMAINE N
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,292,vide_ou_blanc,,\[ \],Notation :,Exemple :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,296,commence_par_egal,"={1,2,3,4,5,6}","\[ ={1,2,3,4,5,6} \]",Exemple :,pour un dé.
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,312,parentheses_vides,P()=1,\[ P()=1 \],## 4.4 Événement certain,## 4.5 Événement impossible
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,316,parentheses_vides,P()=0,\[ P()=0 \],## 4.5 Événement impossible,# 5\. AXIOMES DE KOLMOGOROV
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,328,parentheses_vides,P()=1,\[ P()=1 \],## Axiome 2 — Normalisation,## Axiome 3 — Additivité
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,338,fragment_commande,P(\_i A_i) = \_i P(A_i),\[ P(\_i A_i) = \_i P(A_i) \],plus généralement :,lorsque les événements sont deux à deux disjoints.
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,372,finit_par_egal,P(AB) =,\[ P(AB) = \],on définit :,"genui{“learning_viz”:{“type_id”:“CONDITIONAL_PROBABILITY_DEFINITION”,“initial_values”:{“pB”:0.65,“pIntersection”:0.3},“locale_override”:“fr-FR”}}"
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,410,finit_par_egal,AB=,\[ AB= \],Deux événements incompatibles vérifient :,Deux événements indépendants vérifient :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,426,fragment_commande,P(A) = \_{i=1}^{n} P(AB_i)P(B_i),\[ P(A) = \_{i=1}^{n} P(AB_i)P(B_i) \],"forment une partition de (), alors :",Cette formule est particulièrement importante dans :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,440,finit_par_egal,P(AB) =,\[ P(AB) = \],Le théorème de Bayes permet de renverser une condition.,"genui{“learning_viz”:{“type_id”:“BAYES_THEOREM”,“initial_values”:{“pA”:0.2,“pBGivenA”:0.85,“pBGivenNotA”:0.1},“locale_override”:“fr-FR”}}"
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,448,parentheses_vides,P(),\[ P() \],Bayes permet de passer de :,à :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,452,parentheses_vides,P(),\[ P() \],à :,C’est l’un des mécanismes fondamentaux de l’inférence probabiliste.
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,558,fragment_commande,"P(aXb) = \_a^b f_X(x),dx","\[ P(aXb) = \_a^b f_X(x),dx \]",on a :,et :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,562,fragment_commande,"\_{-}^{+}f_X(x),dx=1","\[ \_{-}^{+}f_X(x),dx=1 \]",et :,# 18\. ESPÉRANCE
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,611,finit_par_egal+fragment_commande,\_X=,\[ \_X= \],# 21\. ÉCART-TYPE,"Contrairement à la variance, l’écart-type possède les mêmes unités que (X)."
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,643,fragment_commande,"\_{X,Y} = {\_X_Y}","\[ \_{X,Y} = {\_X_Y} \]",La corrélation normalise la covariance :,avec :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,670,fragment_commande,"P(X=x) = \_y P(X=x,Y=y)","\[ P(X=x) = \_y P(X=x,Y=y) \]",et obtenir une marginale :,dans le cas discret.
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,775,parentheses_vides,XPoisson(),\[ XPoisson() \],Elle modélise souvent le nombre d’événements rares apparaissant pendant une durée ou une région donnée.,avec :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,787,finit_par_egal,Var(X)=,\[ Var(X)= \],Variance :,Applications :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,808,finit_par_egal,f(x)=,\[ f(x)= \],"Sur (\[a,b\]) :",pour :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,830,finit_par_egal,Var(X)=,\[ Var(X)= \],Variance :,Elle possède également la propriété d’absence de mémoire.
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,854,finit_par_egal,Z=,\[ Z= \],alors :,suit une loi normale centrée réduite :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1019,vide_ou_blanc,,\[ \],Pour une moyenne :,tend vers :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1077,fragment_commande,{X_t}\_{tT},\[ {X_t}\_{tT} \],On peut écrire :,Exemples :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1101,finit_par_egal,P=,"\[ P=
+
+\]",Une chaîne de Markov finie peut être représentée par :,\]
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1115,finit_par_egal,P=,\[ P= \],Une distribution () est stationnaire si :,avec :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1119,fragment_commande,\_i_i=1,\[ \_i_i=1 \],avec :,Cette notion intervient dans :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1135,fragment_commande,X_{t+1}=X_t+\_t,\[ X_{t+1}=X_t+\_t \],Exemple simple :,avec :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1139,fragment_commande,"\_t{-1,+1}","\[ \_t{-1,+1} \]",avec :,selon certaines probabilités.
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1185,vide_ou_blanc,,\[ \],Principe :,Par exemple :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1201,parentheses_vides,O(),\[ O() \],L’erreur typique de Monte Carlo décroît de l’ordre de :,Ce point explique pourquoi doubler simplement la précision peut coûter très cher en nombre d’échantillons.
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1264,parentheses_vides,Var(),\[ Var() \],"\[ E\[L(Y,Y)\] \]",# 62\. CLASSIFICATION PROBABILISTE
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1284,fragment_commande,y=\_y P(Y=yX),\[ y=\_y P(Y=yX) \],La décision peut ensuite être :,# 63\. NAIVE BAYES
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1290,fragment_commande,"P(YX_1,,X_n) P(Y) \_iP(X_iY)","\[ P(YX_1,,X_n) P(Y) \_iP(X_iY) \]",Le classifieur Naive Bayes repose sur Bayes et une hypothèse simplificatrice d’indépendance conditionnelle entre certaines variables.,Applications :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1364,indice_orphelin,"P(w_1,,w_n) = _{t=1}^{n} P(w_tw_1,,w_{t-1})","\[ P(w_1,,w_n) = _{t=1}^{n} P(w_tw_1,,w_{t-1}) \]",Un modèle autoregressif factorise :,Cette idée est fondamentale pour comprendre de nombreux modèles de langage.
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1372,fragment_commande,\_i p_i,\[ \_i p_i \],Au lieu de multiplier de nombreuses probabilités :,on utilise souvent :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1376,fragment_commande,P = \_ip_i,\[ P = \_ip_i \],on utilise souvent :,Avantages :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1396,commence_par_egal+fragment_commande,= \_L(;D),\[ = \_L(;D) \],On cherche :,ou de façon équivalente :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1400,commence_par_egal+fragment_commande,= \_L(;D),\[ = \_L(;D) \],ou de façon équivalente :,Cette idée est fondamentale en apprentissage statistique.
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1408,parentheses_vides,P(D) P(D)P(),\[ P(D) P(D)P() \],"Dans l’approche bayésienne, le paramètre lui-même est modélisé comme aléatoire :",On obtient une distribution a posteriori plutôt qu’une simple estimation ponctuelle.
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1568,fragment_commande,H(X) = -\_xP(x)P(x),\[ H(X) = -\_xP(x)P(x) \],Pour une variable discrète :,est l’entropie.
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1582,fragment_commande,"I(X;Y) = \_{x,y} P(x,y)","\[ I(X;Y) = \_{x,y} P(x,y) \]",# 83\. INFORMATION MUTUELLE,Elle mesure la quantité d’information partagée entre (X) et (Y).
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1598,fragment_commande,D_{KL}(PQ) = \_xP(x),\[ D_{KL}(PQ) = \_xP(x) \],La divergence KL est :,Elle mesure une forme d’écart entre distributions.
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1694,parentheses_vides,P(),\[ P() \],On peut ainsi analyser :,\[ E\[\] \]
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1814,vide_ou_blanc,,\[ \],On cherche à estimer un paramètre inconnu :,à partir des données.
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1820,vide_ou_blanc,,\[ \],On obtient un estimateur :,# 100\. BIAIS D’UN ESTIMATEUR
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1824,parentheses_vides,Bias() = E\[,\[ Bias() = E\[\],# 100\. BIAIS D’UN ESTIMATEUR,Un estimateur est sans biais si :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,1998,fragment_commande,V(s) 1N \_{i=1}^{N} G_i,\[ V(s) 1N \_{i=1}^{N} G_i \],Conceptuellement :,où (G_i) est un retour observé.
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,2053,fragment_commande,P(X) = \_k_kP(XZ=k),\[ P(X) = \_k_kP(XZ=k) \],Par exemple :,Applications :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,2835,vide_ou_blanc,,\[ \],On peut résumer le domaine par :,puis :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,2839,vide_ou_blanc,,\[ \],puis :,puis :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,2843,vide_ou_blanc,,\[ \],puis :,puis :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,2847,vide_ou_blanc,,\[ \],puis :,et enfin :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,2851,vide_ou_blanc,,\[ \],et enfin :,# 137\. CRITÈRE DE MAÎTRISE
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,2994,vide_ou_blanc,,\[ \],### 1\. Qu’est-ce qui peut arriver ?,### 2\. Avec quelle probabilité ?
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,3010,fragment_commande,{X_t}\_{tT},\[ {X_t}\_{tT} \],### 5\. Comment évolue l’incertitude dans le temps ?,À partir de ces questions se construisent :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,3014,vide_ou_blanc,,\[ \],À partir de ces questions se construisent :,# 140\. POSITION DU DOMAINE G DANS LA CARTOGRAPHIE GLOBALE
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,3048,vide_ou_blanc,,\[ \],Elle permet de passer :,et :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,3052,vide_ou_blanc,,\[ \],et :,Elle fournit ainsi une infrastructure commune à :
+Maths-vers-Informatiques/Document G - Probabilités — Cartographie complète.md,3070,vide_ou_blanc,,\[ \],**Idée centrale du Domaine G :**,**Domaine suivant : Domaine H — à définir selon la cartographie mathématique globale du projet.**
+Maths-vers-Informatiques/Document H — Statistiques.md,97,vide_ou_blanc,,\[ \],C’est le fondement immédiat du Domaine H :,Les probabilités permettent de modéliser l’incertitude.
+Maths-vers-Informatiques/Document H — Statistiques.md,336,fragment_commande,x = 1n \_{i=1}^{n}x_i,\[ x = 1n \_{i=1}^{n}x_i \],la moyenne est :,Elle représente le centre arithmétique des observations.
+Maths-vers-Informatiques/Document H — Statistiques.md,344,fragment_commande,x_w = {\_iw_i},\[ x_w = {\_iw_i} \],Lorsque les observations possèdent des poids :,Applications :
+Maths-vers-Informatiques/Document H — Statistiques.md,410,finit_par_egal,Q_2=,\[ Q_2= \],avec :,# 12\. ÉCART INTERQUARTILE
+Maths-vers-Informatiques/Document H — Statistiques.md,440,fragment_commande,^2 = 1N \_{i=1}<sup>{N}(x_i-)</sup>2,\[ ^2 = 1N \_{i=1}<sup>{N}(x_i-)</sup>2 \],Pour une population :,"Pour un échantillon, l’estimateur classique de la variance utilise :"
+Maths-vers-Informatiques/Document H — Statistiques.md,444,fragment_commande,s^2 = \_{i=1}^{n}(x_i-x)^2,\[ s^2 = \_{i=1}^{n}(x_i-x)^2 \],"Pour un échantillon, l’estimateur classique de la variance utilise :",La différence entre (N) et (n-1) est fondamentale.
+Maths-vers-Informatiques/Document H — Statistiques.md,458,finit_par_egal,s=,\[ s= \],# 16\. ÉCART-TYPE,L’écart-type possède les mêmes unités que la variable étudiée.
+Maths-vers-Informatiques/Document H — Statistiques.md,481,finit_par_egal,CV=,\[ CV= \],Lorsque la moyenne est positive et que la comparaison est pertinente :,Il permet de comparer des dispersions relatives entre variables ayant des échelles différentes.
+Maths-vers-Informatiques/Document H — Statistiques.md,581,fragment_commande,s_{XY} = \_i (x_i-x)(y_i-y),\[ s_{XY} = \_i (x_i-x)(y_i-y) \],Estimateur empirique :,# 26\. CORRÉLATION DE PEARSON
+Maths-vers-Informatiques/Document H — Statistiques.md,643,fragment_commande,Y=\_0+\_1X+,\[ Y=\_0+\_1X+ \],Le modèle :,L’estimation donne :
+Maths-vers-Informatiques/Document H — Statistiques.md,653,fragment_commande,\_0,\[ \_0 \],# 31\. INTERPRÉTATION DES COEFFICIENTS,est l’intercept.
+Maths-vers-Informatiques/Document H — Statistiques.md,657,fragment_commande,\_1,\[ \_1 \],est l’intercept.,"représente la variation moyenne attendue de (Y) associée à une variation d’une unité de (X), dans le cadre du modèle."
+Maths-vers-Informatiques/Document H — Statistiques.md,667,fragment_commande,\_i (y_i-y_i)^2,\[ \_i (y_i-y_i)^2 \],On choisit les coefficients minimisant :,Les termes :
+Maths-vers-Informatiques/Document H — Statistiques.md,683,commence_par_egal,= (X<sup>TX)</sup>{-1}X^Ty,\[ = (X<sup>TX)</sup>{-1}X^Ty \],"L’estimateur des moindres carrés, lorsque les conditions permettent l’inversion, est :","En pratique, des méthodes numériques comme QR ou SVD sont souvent préférables à l’inversion explicite."
+Maths-vers-Informatiques/Document H — Statistiques.md,691,fragment_commande,"Y = \_0
+
+- \_1X_1 ++ \_pX_p +","\[ Y = \_0
+
+- \_1X_1 ++ \_pX_p + \]",# 34\. RÉGRESSION LINÉAIRE MULTIPLE,- \_1X_1 ++ \_pX_p + \]
+Maths-vers-Informatiques/Document H — Statistiques.md,701,fragment_commande,Y= \_0+\_1X+\_2X<sup>2++\_kX</sup>k+,\[ Y= \_0+\_1X+\_2X<sup>2++\_kX</sup>k+ \],On peut utiliser :,"Même si le modèle est non linéaire en (X), il reste linéaire par rapport aux paramètres (\_i)."
+Maths-vers-Informatiques/Document H — Statistiques.md,715,fragment_commande,P(Y=1X) = (\_0+^TX),\[ P(Y=1X) = (\_0+^TX) \],avec une fonction logistique :,où :
+Maths-vers-Informatiques/Document H — Statistiques.md,719,finit_par_egal,(z)=,\[ (z)= \],où :,Elle constitue un pont majeur entre statistiques et machine learning.
+Maths-vers-Informatiques/Document H — Statistiques.md,776,vide_ou_blanc,,\[ \],Objectif :,# 42\. ÉCHANTILLONNAGE ALÉATOIRE SIMPLE
+Maths-vers-Informatiques/Document H — Statistiques.md,843,vide_ou_blanc,,\[ \],Paramètre :,Estimateur :
+Maths-vers-Informatiques/Document H — Statistiques.md,847,vide_ou_blanc,,\[ \],Estimateur :,# 50\. BIAIS D’UN ESTIMATEUR
+Maths-vers-Informatiques/Document H — Statistiques.md,851,parentheses_vides,Bias() = E\[,\[ Bias() = E\[\],# 50\. BIAIS D’UN ESTIMATEUR,Un estimateur est sans biais si :
+Maths-vers-Informatiques/Document H — Statistiques.md,859,parentheses_vides,Var(),\[ Var() \],# 51\. VARIANCE D’UN ESTIMATEUR,mesure sa variabilité d’un échantillon à l’autre.
+Maths-vers-Informatiques/Document H — Statistiques.md,872,parentheses_vides,MSE() = E\[(-)^2,\[ MSE() = E\[(-)^2\],La MSE est :,Elle se décompose en :
+Maths-vers-Informatiques/Document H — Statistiques.md,896,parentheses_vides,"L() = P(X_1=x_1,,X_n=x_n)","\[ L() = P(X_1=x_1,,X_n=x_n) \]","Pour des observations (x_1,,x_n) et un paramètre () :","dans le cas discret, ou la densité jointe dans le cas continu."
+Maths-vers-Informatiques/Document H — Statistiques.md,902,indice_orphelin+parentheses_vides,_{MLE} =_ L(),\[ _{MLE} =_ L() \],L’estimateur du maximum de vraisemblance est :,# 56\. LOG-VRAISEMBLANCE
+Maths-vers-Informatiques/Document H — Statistiques.md,908,parentheses_vides,()=L(),\[ ()=L() \],On travaille souvent avec :,car :
+Maths-vers-Informatiques/Document H — Statistiques.md,912,fragment_commande,\_iL_i = \_iL_i,\[ \_iL_i = \_iL_i \],car :,Cela simplifie les calculs et améliore souvent la stabilité numérique.
+Maths-vers-Informatiques/Document H — Statistiques.md,920,indice_orphelin,_{MAP} =_ P(D),\[ _{MAP} =_ P(D) \],Dans une approche bayésienne :,et :
+Maths-vers-Informatiques/Document H — Statistiques.md,924,parentheses_vides,P(D) P(D)P(),\[ P(D) P(D)P() \],et :,Ainsi :
+Maths-vers-Informatiques/Document H — Statistiques.md,938,vide_ou_blanc,,\[ \],Forme conceptuelle :,# 59\. MARGE D’ERREUR
+Maths-vers-Informatiques/Document H — Statistiques.md,954,finit_par_egal,SE(X) =,\[ SE(X) = \],Pour la moyenne dans un cadre classique :,# 61\. INTERVALLE DE CONFIANCE POUR UNE MOYENNE
+Maths-vers-Informatiques/Document H — Statistiques.md,1002,vide_ou_blanc,,\[ \],On fixe généralement :,par exemple :
+Maths-vers-Informatiques/Document H — Statistiques.md,1006,vide_ou_blanc,,\[ \],par exemple :,Puis on définit une règle de décision.
+Maths-vers-Informatiques/Document H — Statistiques.md,1012,vide_ou_blanc,,\[ \],Attention :,ne signifie pas automatiquement :
+Maths-vers-Informatiques/Document H — Statistiques.md,1024,vide_ou_blanc,,\[ \],"Probabilité contrôlée, dans le cadre du test, par :",# 67\. ERREUR DE TYPE II
+Maths-vers-Informatiques/Document H — Statistiques.md,1032,vide_ou_blanc,,\[ \],Probabilité :,# 68\. PUISSANCE STATISTIQUE
+Maths-vers-Informatiques/Document H — Statistiques.md,1359,finit_par_egal,z=,\[ z= \],Pour une observation (x) :,Il mesure la distance à la moyenne en nombre d’écarts-types.
+Maths-vers-Informatiques/Document H — Statistiques.md,1367,finit_par_egal,z_i=,\[ z_i= \],Standardiser :,Cela produit une variable centrée et réduite selon l’estimation utilisée.
+Maths-vers-Informatiques/Document H — Statistiques.md,1476,finit_par_egal,RMSE=,\[ RMSE= \],### RMSE,### (R^2)
+Maths-vers-Informatiques/Document H — Statistiques.md,1511,finit_par_egal,Precision=,\[ Precision= \],# 108\. PRECISION,Elle répond approximativement à :
+Maths-vers-Informatiques/Document H — Statistiques.md,1519,finit_par_egal,Recall=,\[ Recall= \],# 109\. RECALL,Il répond approximativement à :
+Maths-vers-Informatiques/Document H — Statistiques.md,1548,vide_ou_blanc,,\[ \],Il faut donc distinguer :,et :
+Maths-vers-Informatiques/Document H — Statistiques.md,1552,vide_ou_blanc,,\[ \],et :,# 112\. CALIBRATION
+Maths-vers-Informatiques/Document H — Statistiques.md,1612,commence_par_egal,=p_B-p_A,\[ =p_B-p_A \],On peut étudier :,ou une mesure relative.
+Maths-vers-Informatiques/Document H — Statistiques.md,1665,vide_ou_blanc,,\[ \],Il faut donc examiner ensemble :,# 121\. INTERVALLE DE CONFIANCE VS INTERVALLE DE PRÉDICTION
+Maths-vers-Informatiques/Document H — Statistiques.md,1683,vide_ou_blanc,,\[ \],Le lien fondamental est :,alors que :
+Maths-vers-Informatiques/Document H — Statistiques.md,1687,vide_ou_blanc,,\[ \],alors que :,Cette distinction doit être profondément maîtrisée.
+Maths-vers-Informatiques/Document H — Statistiques.md,2386,vide_ou_blanc,,\[ \],C’est la connexion la plus importante :,Les probabilités modélisent les données possibles.
+Maths-vers-Informatiques/Document H — Statistiques.md,2417,vide_ou_blanc,,\[ \],La relation fondamentale est :,et :
+Maths-vers-Informatiques/Document H — Statistiques.md,2421,vide_ou_blanc,,\[ \],et :,On obtient :
+Maths-vers-Informatiques/Document H — Statistiques.md,2425,vide_ou_blanc,,\[ \],On obtient :,puis :
+Maths-vers-Informatiques/Document H — Statistiques.md,2429,vide_ou_blanc,,\[ \],puis :,puis :
+Maths-vers-Informatiques/Document H — Statistiques.md,2433,vide_ou_blanc,,\[ \],puis :,et :
+Maths-vers-Informatiques/Document H — Statistiques.md,2437,vide_ou_blanc,,\[ \],et :,# 140\. CRITÈRE DE MAÎTRISE
+Maths-vers-Informatiques/Document H — Statistiques.md,2588,vide_ou_blanc,,\[ \],Le Domaine H peut être résumé par une chaîne fondamentale :,Les statistiques permettent donc de transformer :
+Maths-vers-Informatiques/Document H — Statistiques.md,2592,vide_ou_blanc,,\[ \],Les statistiques permettent donc de transformer :,en :
+Maths-vers-Informatiques/Document H — Statistiques.md,2596,vide_ou_blanc,,\[ \],en :,puis en :
+Maths-vers-Informatiques/Document H — Statistiques.md,2600,vide_ou_blanc,,\[ \],puis en :,puis en :
+Maths-vers-Informatiques/Document H — Statistiques.md,2604,vide_ou_blanc,,\[ \],puis en :,# 143\. POSITION DU DOMAINE H DANS LA CARTOGRAPHIE GLOBALE
+Maths-vers-Informatiques/Document H — Statistiques.md,2634,vide_ou_blanc,,\[ \],Elle fournit une méthodologie complète permettant de passer :,Elle permet notamment de répondre à des questions telles que :
+Maths-vers-Informatiques/Document H — Statistiques.md,2652,vide_ou_blanc,,\[ \],La grande idée du Domaine H est donc :,Et sa relation avec le Domaine G peut être retenue sous la forme :
+Maths-vers-Informatiques/Document H — Statistiques.md,2656,vide_ou_blanc,,\[ \],Et sa relation avec le Domaine G peut être retenue sous la forme :,\[ \]
+Maths-vers-Informatiques/Document H — Statistiques.md,2658,vide_ou_blanc,,\[ \],\[ \],"Le Domaine H constitue ainsi l’une des bases mathématiques directes de la **data science, de l’analytics, de l’expérimentation, du machine learning et de l’IA appliquée aux données**."
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,232,finit_par_egal,n =,\[ n = \],### Tableau,### Graphe
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,244,finit_par_egal,n =,\[ n = \],### Chaîne,### Nombre entier
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,250,fragment_commande,\_2 N,\[ \_2 N \],"La taille pertinente est généralement le **nombre de bits nécessaires pour représenter le nombre**, soit approximativement :",et non (N) lui-même.
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,332,vide_ou_blanc,,\[ \],On obtient un compromis classique :,Exemple :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,507,fragment_commande,\_{n}=0,\[ \_{n}=0 \],signifie :,Donc (f) croît strictement moins vite que (g).
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,521,finit_par_egal+fragment_commande,\_{n}=,\[ \_{n}= \],signifie :,Donc (f) croît strictement plus vite.
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,613,parentheses_vides,T(n)=aT()+f(n),\[ T(n)=aT()+f(n) \],Pour les récurrences de la forme :,le Master Theorem permet de comparer :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,621,fragment_commande,n^{\_b a},\[ n^{\_b a} \],avec :,et d’obtenir une borne asymptotique dans un grand nombre de cas.
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,822,vide_ou_blanc,,\[ \],La classe :,est définie formellement à partir des machines non déterministes.
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,865,finit_par_egal,P=,\[ P= \],Mais on ne sait pas démontrer actuellement :,ou :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,1087,vide_ou_blanc,,\[ \],"Pour démontrer que (A) est difficile, il faut généralement réduire :",où (B) est déjà connu comme difficile.
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,1629,vide_ou_blanc,,\[ \],Il faut donc distinguer :,et :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,1633,vide_ou_blanc,,\[ \],et :,# 74\. COMPLEXITÉ ET TRANSFORMERS
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,1697,finit_par_egal,Speedup =,\[ Speedup = \],Si (p) est la fraction parallélisable et (s) le nombre de processeurs :,Même avec :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,1705,finit_par_egal,Speedup_{}=,\[ Speedup_{}= \],on obtient :,Cela montre pourquoi l’architecture doit être pensée avec la complexité et non uniquement avec la puissance matérielle.
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,1902,vide_ou_blanc,,\[ \],On peut rechercher :,plutôt que :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,1906,vide_ou_blanc,,\[ \],plutôt que :,Cette idée est fondamentale dans :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,1984,vide_ou_blanc,,\[ \],Inconvénient :,peut croître exponentiellement ou factoriellement.
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,2164,vide_ou_blanc,,\[ \],Après (k) étapes :,Pour atteindre 1 :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,2172,fragment_commande,k=\_2 n,\[ k=\_2 n \],donc :,C’est pourquoi :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,2265,fragment_commande,\_2N,\[ \_2N \],un entier (N) possède environ :,bits.
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,2296,finit_par_egal,p=,\[ p= \],Il faut aussi considérer :,Le coût peut alors dépendre de :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,2344,vide_ou_blanc,,\[ \],Un système sécurisé doit considérer :,contre :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,2348,vide_ou_blanc,,\[ \],contre :,Si une attaque est :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,2449,vide_ou_blanc,,\[ \],Les méthodes ANN cherchent à réduire ce coût au prix éventuel d’un compromis :,# 120\. COMPLEXITÉ ET ARCHITECTURE LOGICIELLE
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,2801,finit_par_egal,P=,\[ P= \],# 132\. FICHE O06 — P,Intuition :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,2859,vide_ou_blanc,,\[ \],Problème :,dans le cas général.
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,2948,vide_ou_blanc,,\[ \],Comparer :,avec :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,2952,vide_ou_blanc,,\[ \],avec :,# 149\. PROJET NIVEAU 3 — COMPARATEUR D’ALGORITHMES
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,3280,vide_ou_blanc,,\[ \],On peut donc optimiser :,La théorie de la complexité devient ainsi une composante de l’architecture d’un système IA.
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,3373,vide_ou_blanc,,\[ \],### Question 1 — Calculabilité,### Question 2 — Complexité
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,3377,vide_ou_blanc,,\[ \],### Question 2 — Complexité,### Question 3 — Ingénierie
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,3381,vide_ou_blanc,,\[ \],### Question 3 — Ingénierie,# 169\. MODÈLE MENTAL FINAL
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,3440,vide_ou_blanc,,\[ \],### 2.,est une borne inférieure.
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,3446,vide_ou_blanc,,\[ \],### 3.,décrit l’ordre asymptotique exact.
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,3567,vide_ou_blanc,,\[ \],Elle apprend à distinguer :,de :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,3571,vide_ou_blanc,,\[ \],de :,et :
+Maths-vers-Informatiques/Document O --Théorie de la complexité.md,3575,vide_ou_blanc,,\[ \],et :,Un programme peut exister sans être utilisable.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,75,vide_ou_blanc,,\[ \],Une compréhension sérieuse du Machine Learning nécessite donc de comprendre au minimum :,# 2 — LA GRANDE CARTOGRAPHIE DU DOMAINE
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,244,fragment_commande,\_{xa}f(x),\[ \_{xa}f(x) \],La limite décrit le comportement d’une fonction lorsqu’une variable se rapproche d’une valeur.,Elle permet de formaliser la notion de comportement local.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,254,fragment_commande,\_{xa}f(x)=f(a),\[ \_{xa}f(x)=f(a) \],Une fonction est continue en (a) si :,Intuitivement :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,266,vide_ou_blanc,,\[ \],Entre deux points (x) et (x+h) :,mesure le taux de variation moyen.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,278,fragment_commande,f’(x) = \_{h},\[ f’(x) = \_{h} \],La dérivée de (f) en (x) est :,si cette limite existe.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,332,vide_ou_blanc,,\[ \],Ainsi :,est une application fondamentale du calcul différentiel.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,392,finit_par_egal,f(x)=,\[ f(x)= \],Si :,alors :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,410,commence_par_egal,= f’(g(x))g’(x),\[ = f’(g(x))g’(x) \],alors :,Autrement dit :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,414,vide_ou_blanc,,\[ \],Autrement dit :,Cette règle permet de différencier une composition de fonctions.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,456,commence_par_egal,=-,\[ =- \],donc :,# 20 — DÉRIVÉE SECONDE
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,535,fragment_commande,"f(x) = \_{k=0}^{n} (x-a)^k
+
+- R_n(x)","\[ f(x) = \_{k=0}^{n} (x-a)^k
+
+- R_n(x) \]",Formellement :,- R_n(x) \]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,575,vide_ou_blanc,,\[ \],La dérivée partielle par rapport à (x) consiste à faire varier (x) en maintenant les autres variables constantes.,Exemple :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,583,commence_par_egal,= 2x+3y,\[ = 2x+3y \],Alors :,et :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,587,commence_par_egal,= 3x+2y,\[ = 3x+2y \],et :,# 28 — GRADIENT
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,597,finit_par_egal,f(x) =,"\[ f(x) =
+
+\]",le gradient est :,\]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,675,vide_ou_blanc,,\[ \],avec :,lorsque :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,689,fragment_commande,df = \_{i=1}^{n} dx_i,\[ df = \_{i=1}^{n} dx_i \],la différentielle est :,Sous forme vectorielle :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,705,finit_par_egal,J_F(x) =,"\[ J_F(x) =
+
+\]",la Jacobienne est la matrice des dérivées premières :,\]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,761,finit_par_egal,H_f(x) =,"\[ H_f(x) =
+
+\]",avec :,\]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,800,commence_par_egal+finit_par_egal,=,\[ = \],alors :,Dans le cas vectoriel :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,824,commence_par_egal+finit_par_egal,=,\[ = \],Alors :,La backpropagation n’est donc pas une formule mystérieuse.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,919,fragment_commande,\_i>0,\[ \_i>0 \],Si :,"dans toutes les directions, la courbure est positive."
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1010,vide_ou_blanc,,\[ \],Le paramètre :,contrôle la taille du déplacement.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1031,fragment_commande,"\_{t+1} = \_t
+
+- \_L_B(\_t)","\[ \_{t+1} = \_t
+
+- \_L_B(\_t) \]","Au lieu d’utiliser toute la fonction de perte sur toutes les données, on peut estimer le gradient à partir d’un mini-batch.",- \_L_B(\_t) \]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1063,fragment_commande,"m_t = _1m_{t-1}
+
+- (1-\_1)g_t","\[ m_t = _1m_{t-1}
+
+- (1-\_1)g_t \]",On calcule :,- (1-\_1)g_t \]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1069,fragment_commande,"v_t = _2v_{t-1}
+
+- (1-\_2)g_t^2","\[ v_t = _2v_{t-1}
+
+- (1-\_2)g_t^2 \]",et :,- (1-\_2)g_t^2 \]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1133,fragment_commande,\_x f(x),\[ \_x f(x) \],On peut chercher :,sous :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1194,fragment_commande,\_x f=a,\[ \_x f=a \],Alors :,# 70 — FORME QUADRATIQUE
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1204,fragment_commande,\_x f = (A+A^T)x,\[ \_x f = (A+A^T)x \],"on obtient, dans le cas général :",Si (A) est symétrique :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1208,fragment_commande,\_x f=2Ax,\[ \_x f=2Ax \],Si (A) est symétrique :,et :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1234,parentheses_vides,(),\[ () \],"En statistiques et ML, on cherche souvent à maximiser :",ou à minimiser :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1238,parentheses_vides,-(),\[ -() \],ou à minimiser :,Le gradient :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1242,fragment_commande+parentheses_vides,\_(),\[ \_() \],Le gradient :,indique comment modifier les paramètres.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1248,fragment_commande+parentheses_vides,\_^2(),\[ \_^2() \],La Hessienne :,décrit la courbure locale de la vraisemblance.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1266,indice_orphelin+parentheses_vides,"J() = 1n _{i=1}^{n} L(f_(x_i),y_i)","\[ J() = 1n _{i=1}^{n} L(f_(x_i),y_i) \]",Puis une fonction objectif :,L’entraînement cherche alors :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1270,fragment_commande+parentheses_vides,^\* = \_J(),\[ ^\* = \_J() \],L’entraînement cherche alors :,Le calcul différentiel intervient pour calculer :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1274,fragment_commande+parentheses_vides,\_J(),\[ \_J() \],Le calcul différentiel intervient pour calculer :,# 74 — CHAÎNE FONDAMENTALE DU MACHINE LEARNING
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1284,vide_ou_blanc,,\[ \],Plus précisément :,Cette boucle constitue l’une des structures mathématiques fondamentales du Machine Learning.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1350,commence_par_egal+finit_par_egal,=,\[ = \],alors :,La backpropagation répète ce principe à grande échelle.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1440,fragment_commande,\_i a_i,\[ \_i a_i \],Si les facteurs sont souvent inférieurs à 1 :,peut devenir extrêmement petit.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1452,fragment_commande,\_i a_i,\[ \_i a_i \],"Inversement, si les facteurs sont fréquemment supérieurs à 1 :",peut devenir extrêmement grand.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1470,finit_par_egal,(x)=,\[ (x)= \],Exemple :,et :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1486,finit_par_egal,’(x) =,"\[ ’(x) =
+
+\]",Sa dérivée est :,\]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1496,fragment_commande,(z_i) = {\_j e^{z_j}},\[ (z_i) = {\_j e^{z_j}} \],Pour des logits (z_i) :,Sa Jacobienne est non diagonale :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1500,commence_par_egal+fragment_commande,= s_i(\_{ij}-s_j),\[ = s_i(\_{ij}-s_j) \],Sa Jacobienne est non diagonale :,Cela montre pourquoi le calcul matriciel devient indispensable en classification multiclasse.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1510,fragment_commande,L=-\_i y_ip_i,\[ L=-\_i y_ip_i \],Dans la formulation standard :,on obtient par rapport aux logits une expression simplifiée liée à :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1526,fragment_commande+parentheses_vides,\_J(),\[ \_J() \],L’entraînement cherche :,Le gradient :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1530,fragment_commande,\_J,\[ \_J \],Le gradient :,est calculé par différentiation de la composition.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1536,vide_ou_blanc,,\[ \],Ainsi :,# 90 — PAYSAGE DE PERTE
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1542,parentheses_vides,J(),\[ J() \],La fonction :,définit un paysage dans l’espace des paramètres.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1614,fragment_commande,g_t J(\_t),\[ g_t J(\_t) \],"Dans le ML moderne, le gradient exact de l’objectif total est souvent remplacé par une estimation.",Cette estimation introduit du bruit.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1624,fragment_commande,J(w) = \_i (w<sup>Tx_i-y_i)</sup>2,\[ J(w) = \_i (w<sup>Tx_i-y_i)</sup>2 \],Pour :,on obtient :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1640,parentheses_vides,J() = L()+R(),\[ J() = L()+R() \],On peut modifier l’objectif :,Exemple L2 :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1644,fragment_commande+parentheses_vides,R()=||\_2^2,\[ R()=||\_2^2 \],Exemple L2 :,Alors :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1648,parentheses_vides,R()=2,\[ R()=2 \],Alors :,La régularisation influence donc directement le gradient.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1664,fragment_commande,\_L,\[ \_L \],on cherche :,La chaîne fondamentale est :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1668,commence_par_egal+finit_par_egal,=,\[ = \],La chaîne fondamentale est :,"Dans un réseau profond, cette relation se propage à travers toutes les couches."
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1693,vide_ou_blanc,,\[ \],Le principe reste le même :,Chaque opération possède une règle de différentiation.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1824,commence_par_egal,=v,\[ =v \],Une dynamique peut être décrite par :,et :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1828,commence_par_egal,=a,\[ =a \],et :,Le calcul différentiel permet donc de modéliser :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1844,commence_par_egal,"=f(x,t)","\[ =f(x,t) \]",Exemple :,Les équations différentielles constituent un prolongement naturel du calcul différentiel.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1887,fragment_commande,\_(a|s),\[ \_(a|s) \],Une politique peut être paramétrée par :,L’objectif dépend de :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1891,parentheses_vides,J(),\[ J() \],L’objectif dépend de :,On cherche :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1895,fragment_commande+parentheses_vides,\_J(),\[ \_J() \],On cherche :,Le calcul différentiel devient alors un élément du mécanisme d’apprentissage de la politique.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1923,parentheses_vides,^\* = _ L(),\[ ^\* = _ L() \],Le maximum de vraisemblance cherche :,ou :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1927,parentheses_vides,^\* = _ -L(),\[ ^\* = _ -L() \],ou :,Le gradient permet de chercher efficacement ce paramètre.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1933,vide_ou_blanc,,\[ \],Ainsi :,# 117 — GRADIENT D’UNE ESPÉRANCE
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,1991,commence_par_egal+finit_par_egal,=,\[ = \],Elle ne garantit pas automatiquement :,"Pour obtenir des garanties globales, il faut exploiter des structures supplémentaires :"
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2032,fragment_commande,\_{t+1} = \_t-_t_J(\_t),\[ \_{t+1} = \_t-_t_J(\_t) \],Mathématiquement :,# 124 — CRITÈRES D’ARRÊT
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2038,parentheses_vides,|J()|<,\[ |J()|< \],Une optimisation peut être arrêtée lorsque :,ou lorsque :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2124,vide_ou_blanc,,\[ \],On échange donc :,# 131 — NUMERICAL STABILITY
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2145,fragment_commande,\_i e^{x_i},\[ \_i e^{x_i} \],Pour calculer :,"de manière stable, on utilise généralement :"
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2149,fragment_commande,m+\_i e^{x_i-m},\[ m+\_i e^{x_i-m} \],"de manière stable, on utilise généralement :",avec :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2153,fragment_commande,m=\_i x_i,\[ m=\_i x_i \],avec :,Cette technique est particulièrement importante dans les modèles probabilistes et la classification.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2514,fragment_commande,"J(w,b) = 1n \_i (y_i-y_i)^2","\[ J(w,b) = 1n \_i (y_i-y_i)^2 \]",avec :,Puis calculer manuellement :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2518,fragment_commande,\_wJ,\[ \_wJ \],Puis calculer manuellement :,et :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2522,vide_ou_blanc,,\[ \],et :,# 158 — PROJET 5 — MINI RÉSEAU NEURONAL SANS AUTODIFF
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2640,vide_ou_blanc,,\[ \],calculer :,manuellement par la règle de chaîne.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2656,vide_ou_blanc,,\[ \],et calculer :,manuellement.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2838,vide_ou_blanc,,\[ \],Le noyau minimal de maîtrise doit contenir :,puis :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2842,vide_ou_blanc,,\[ \],puis :,puis :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2846,vide_ou_blanc,,\[ \],puis :,et enfin :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2850,vide_ou_blanc,,\[ \],et enfin :,# 172 — LES QUATRE OBJETS À NE PAS CONFONDRE
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2932,fragment_commande,"\_{t+1} = \_t
+
+- _t_ J(\_t)","\[ \_{t+1} = \_t
+
+- _t_ J(\_t) \]",Mathématiquement :,- _t_ J(\_t) \]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,2958,vide_ou_blanc,,\[ \],La backpropagation peut donc être comprise comme :,# 175 — LES ERREURS CONCEPTUELLES À ÉVITER
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3016,vide_ou_blanc,,\[ \],### Niveau 1 — Calcul différentiel,### Niveau 2 — Optimisation
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3020,vide_ou_blanc,,\[ \],### Niveau 2 — Optimisation,### Niveau 3 — Apprentissage
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3024,vide_ou_blanc,,\[ \],### Niveau 3 — Apprentissage,Ces trois niveaux sont liés mais ne sont pas identiques.
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3032,vide_ou_blanc,,\[ \],La progression mathématique construite jusqu’ici peut être résumée ainsi :,\[ \]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3034,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3036,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3038,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3040,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3042,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3044,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3046,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3048,vide_ou_blanc,,\[ \],\[ \],"# 178 — RELATION ENTRE G, H ET I"
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3056,vide_ou_blanc,,\[ \],### Probabilités,### Statistiques
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3060,vide_ou_blanc,,\[ \],### Statistiques,### Calcul différentiel
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3064,vide_ou_blanc,,\[ \],### Calcul différentiel,En Machine Learning :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3068,vide_ou_blanc,,\[ \],En Machine Learning :,# 179 — CRITÈRE DE MAÎTRISE DU DOMAINE I
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3117,vide_ou_blanc,,\[ \],Son idée fondamentale est :,À une variable :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3141,vide_ou_blanc,,\[ \],Pour les réseaux neuronaux :,Pour le Machine Learning :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3145,vide_ou_blanc,,\[ \],Pour le Machine Learning :,Pour la simulation :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3149,vide_ou_blanc,,\[ \],Pour la simulation :,Pour la computer graphics :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3153,vide_ou_blanc,,\[ \],Pour la computer graphics :,Le point central à retenir est donc :
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3161,vide_ou_blanc,,\[ \],Le domaine I constitue ainsi le pont mathématique direct entre :,"et, plus largement :"
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3165,vide_ou_blanc,,\[ \],"et, plus largement :",## FIN DU DOCUMENT I
+Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md,3175,vide_ou_blanc,,\[ \],**Noyau absolument fondamental :**,**Domaine suivant : Domaine J — à définir selon la cartographie mathématique globale du projet.**
+Maths-vers-Informatiques/Domaine J — Optimisation.md,17,vide_ou_blanc,,\[ \],"De manière abstraite, un problème d’optimisation cherche une variable (x) qui minimise ou maximise une fonction objectif :",ou
+Maths-vers-Informatiques/Domaine J — Optimisation.md,21,vide_ou_blanc,,\[ \],ou,où :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,41,vide_ou_blanc,,\[ \],On peut représenter une partie de la chaîne ainsi :,Mais l’optimisation utilise également :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,45,vide_ou_blanc,,\[ \],Mais l’optimisation utilise également :,\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,47,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,49,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,51,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,53,vide_ou_blanc,,\[ \],\[ \],"Ainsi, le Domaine J n’est pas isolé."
+Maths-vers-Informatiques/Domaine J — Optimisation.md,69,parentheses_vides,^\* = _ L(),\[ ^\* = _ L() \],Chercher les paramètres d’un modèle qui minimisent l’erreur :,### Réseaux
+Maths-vers-Informatiques/Domaine J — Optimisation.md,75,fragment_commande,P^\* = \_P (P),\[ P^\* = \_P (P) \],Chercher le chemin minimisant le coût :,### Logistique
+Maths-vers-Informatiques/Domaine J — Optimisation.md,89,vide_ou_blanc,,\[ \],Minimiser :,ou :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,93,vide_ou_blanc,,\[ \],ou :,### Robotique
+Maths-vers-Informatiques/Domaine J — Optimisation.md,99,parentheses_vides,^\* = _ J(),\[ ^\* = _ J() \],Chercher une trajectoire :,### Allocation de ressources
+Maths-vers-Informatiques/Domaine J — Optimisation.md,135,fragment_commande,\_x C(x),\[ \_x C(x) \],Terme souvent utilisé lorsque l’on cherche une valeur minimale.,## 3.4 Fonction de perte
+Maths-vers-Informatiques/Domaine J — Optimisation.md,141,parentheses_vides,L(),\[ L() \],En machine learning :,mesure l’écart entre les prédictions du modèle et les observations.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,157,commence_par_egal,"= {x : g_i(x), h_j(x)=0}","\[ = {x : g_i(x), h_j(x)=0} \]",Ensemble des solutions satisfaisant toutes les contraintes.,## 3.7 Solution admissible
+Maths-vers-Informatiques/Domaine J — Optimisation.md,203,vide_ou_blanc,,\[ \],La forme générale peut être écrite :,sous :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,215,vide_ou_blanc,,\[ \],On peut donc avoir :,Cette formulation est fondamentale.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,243,fragment_commande,\_x f(x),\[ \_x f(x) \],Un problème :,peut être transformé en :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,247,fragment_commande,\_x -f(x),\[ \_x -f(x) \],peut être transformé en :,Cette transformation est extrêmement fréquente dans les bibliothèques d’optimisation.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,296,vide_ou_blanc,,\[ \],un optimum intérieur peut satisfaire :,Cela signifie que toutes les dérivées partielles sont nulles :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,300,commence_par_egal,"=0, , =0","\[ =0, , =0 \]",Cela signifie que toutes les dérivées partielles sont nulles :,Attention :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,357,fragment_commande,\_x f(x),\[ \_x f(x) \],Dans un problème de minimisation convexe :,tout minimum local est également un minimum global.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,373,vide_ou_blanc,,\[ \],une condition classique de convexité est :,pour tout (x).
+Maths-vers-Informatiques/Domaine J — Optimisation.md,413,vide_ou_blanc,,\[ \],Forme :,sans restriction supplémentaire.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,429,fragment_commande,\_x f(x),\[ \_x f(x) \],Forme :,sous :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,481,fragment_commande,\_x f(x),\[ \_x f(x) \],Pour :,sous :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,489,vide_ou_blanc,,\[ \],on construit le Lagrangien :,Les conditions stationnaires sont :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,493,fragment_commande,\_x=0,\[ \_x=0 \],Les conditions stationnaires sont :,et :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,511,fragment_commande,\_x f(x),\[ \_x f(x) \],Pour :,sous :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,523,fragment_commande,\_i,\[ \_i \],on introduit des multiplicateurs :,et (\_j).
+Maths-vers-Informatiques/Domaine J — Optimisation.md,529,fragment_commande,"(x,,) = f(x)
+
+- \_i_i g_i(x)
+- \_j_j h_j(x)","\[ (x,,) = f(x)
+
+- \_i_i g_i(x)
+- \_j_j h_j(x) \]",Le Lagrangien devient :,- \_i_i g_i(x) / - \_j_j h_j(x) \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,538,fragment_commande,\_x=0,\[ \_x=0 \],### Stationnarité,### Faisabilité primale
+Maths-vers-Informatiques/Domaine J — Optimisation.md,548,fragment_commande,\_i,\[ \_i \],### Faisabilité duale,### Complémentarité
+Maths-vers-Informatiques/Domaine J — Optimisation.md,552,vide_ou_blanc,,\[ \],### Complémentarité,Ces conditions sont fondamentales en optimisation sous contraintes.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,562,vide_ou_blanc,,\[ \],On peut avoir :,La dualité permet notamment :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,574,vide_ou_blanc,,\[ \],"Dans certains problèmes convexes, sous des hypothèses appropriées, la dualité forte donne :",où (p^_) et (d^_) représentent les valeurs optimales primal et dual.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,584,vide_ou_blanc,,\[ \],Forme générale :,sous :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,618,vide_ou_blanc,,\[ \],Conceptuellement :,jusqu’à atteindre une solution optimale ou détecter certaines situations particulières.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,759,vide_ou_blanc,,\[ \],L’algorithme fondamental :,où :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,773,vide_ou_blanc,,\[ \],### Trop petit,→ convergence potentiellement très lente.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,779,vide_ou_blanc,,\[ \],### Trop grand,→ oscillations ou divergence possibles.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,793,parentheses_vides,L(),\[ L() \],"En machine learning, au lieu de calculer le gradient sur tout le dataset :",on peut utiliser un mini-batch (B) :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,797,vide_ou_blanc,,\[ \],on peut utiliser un mini-batch (B) :,C’est la base du **Stochastic Gradient Descent — SGD** et de nombreuses variantes.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,906,vide_ou_blanc,,\[ \],En dimension 1 :,En dimension (n) :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,910,vide_ou_blanc,,\[ \],En dimension (n) :,lorsque la Hessienne est inversible.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,918,vide_ou_blanc,,\[ \],Gradient descent utilise principalement :,Newton utilise :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,978,vide_ou_blanc,,\[ \],Le calcul différentiel permet de calculer :,La backpropagation permet de calculer efficacement ces dérivées dans un réseau.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,984,fragment_commande,"\_{t+1} = \_t
+
+- \_L","\[ \_{t+1} = \_t
+
+- \_L \]",L’optimiseur utilise ensuite ces gradients :,- \_L \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,990,vide_ou_blanc,,\[ \],Ainsi :,# 45\. CHAÎNE FONDAMENTALE POUR LE MACHINE LEARNING
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1004,vide_ou_blanc,,\[ \],Le problème d’apprentissage peut être écrit :,Exemples :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1012,fragment_commande,MSE = 1n \_{i=1}^{n} (y_i-y_i)^2,\[ MSE = 1n \_{i=1}^{n} (y_i-y_i)^2 \],Erreur quadratique :,### Classification
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1018,fragment_commande,L = -\_i y_i(y_i),\[ L = -\_i y_i(y_i) \],Cross-entropy :,Le choix de la fonction de perte définit ce que signifie « faire une bonne prédiction » pour le modèle.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1026,vide_ou_blanc,,\[ \],On peut ajouter une pénalité :,Exemples :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1032,fragment_commande+parentheses_vides,R()=||\_2^2,\[ R()=||\_2^2 \],### L2,### L1
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1036,fragment_commande+parentheses_vides,R()=||\_1,\[ R()=||\_1 \],### L1,La régularisation modifie donc directement le problème d’optimisation.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1072,parentheses_vides,L(),\[ L() \],Pour un réseau :,"où () peut contenir des millions ou milliards de paramètres, l’espace d’optimisation est extrêmement dimensionnel."
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1092,fragment_commande,"g_t = f(x_t)
+
+- \_t","\[ g_t = f(x_t)
+
+- \_t \]",Lorsque le gradient est bruité :,- \_t \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1116,vide_ou_blanc,,\[ \],Il existe donc un compromis entre :,et :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1120,vide_ou_blanc,,\[ \],et :,# 52\. OPTIMISATION GLOBALE
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1194,vide_ou_blanc,,\[ \],Schéma :,# 57\. FITNESS
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1265,vide_ou_blanc,,\[ \],Principe :,Applications :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1303,vide_ou_blanc,,\[ \],Par exemple :,tout en :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1307,vide_ou_blanc,,\[ \],tout en :,et :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1311,vide_ou_blanc,,\[ \],et :,Ces objectifs peuvent être contradictoires.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1334,fragment_commande,"F(x) = \_1 f_1(x)
+
+- \_2 f_2(x)
+
+- \_k f_k(x)","\[ F(x) = \_1 f_1(x)
+
+- \_2 f_2(x)
+
+- \_k f_k(x) \]",On peut combiner plusieurs objectifs :,- \_2 f_2(x)
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1342,fragment_commande,\_i,\[ \_i \],avec des poids :,"Cette méthode transforme un problème multi-objectifs en un problème scalaire, mais elle impose des choix sur l’importance relative des objectifs."
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1352,fragment_commande,\_x f(x),\[ \_x f(x) \],Au lieu de :,on peut considérer :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1376,vide_ou_blanc,,\[ \],on peut chercher :,Cette formulation est extrêmement importante en machine learning.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1384,indice_orphelin+parentheses_vides,"R() = 1n _{i=1}^{n} L(f_(x_i),y_i)","\[ R() = 1n _{i=1}^{n} L(f_(x_i),y_i) \]",En apprentissage supervisé :,On cherche :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1388,vide_ou_blanc,,\[ \],On cherche :,C’est une formulation centrale du machine learning statistique.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1424,vide_ou_blanc,,\[ \],Un réseau neuronal possède des paramètres :,et produit :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1436,vide_ou_blanc,,\[ \],La chaîne complète est :,# 72\. OPTIMISATION ET HYPERPARAMÈTRES
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1470,commence_par_egal,= H_1H_2H_k,\[ = H_1H_2H_k \],On définit une grille :,Puis on évalue chaque combinaison.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1496,finit_par_egal+parentheses_vides,J() =,\[ J() = \],"En reinforcement learning, l’agent cherche à maximiser une récompense cumulée :",L’objectif devient :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1500,vide_ou_blanc,,\[ \],L’objectif devient :,Les méthodes de policy gradient transforment notamment ce problème en optimisation différentielle.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1512,parentheses_vides,"J() = J_{}
+
+- J_{}
+- J_{}
+- J_{}","\[ J() = J_{}
+
+- J_{}
+- J_{}
+- J_{} \]",On peut minimiser :,- J_{} / - J_{}
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1528,vide_ou_blanc,,\[ \],On obtient :,# 78\. OPTIMISATION ET LOGISTIQUE
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1588,fragment_commande,\_i x_iR,\[ \_i x_iR \],sous :,C’est un schéma fondamental en :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1614,fragment_commande,\_P (P),\[ \_P (P) \],### Routage,### Allocation de bande passante
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1618,fragment_commande,\_x \_i U_i(x_i),\[ \_x \_i U_i(x_i) \],### Allocation de bande passante,sous :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1622,fragment_commande,\_i x_iC,\[ \_i x_iC \],sous :,où (C) représente une capacité réseau.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1640,fragment_commande,\_i w_i=1,\[ \_i w_i=1 \],sous :,et éventuellement :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1664,parentheses_vides,^\* = _ |R()-I|^2,\[ ^\* = _ |R()-I|^2 \],Exemple :,où (R()) représente un rendu et (I) une image cible.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1676,fragment_commande,x^\* = \_x E(x),\[ x^\* = \_x E(x) \],Exemple conceptuel :,Cette idée intervient dans :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1702,fragment_commande+parentheses_vides,_ \_i L_i(),\[ _ \_i L_i() \],Une grande partie de ces problèmes peut être formulée sous forme :,# 86\. OPTIMISATION ET TRAITEMENT DU SIGNAL
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1712,fragment_commande,"x^\* = \_x |Ax-y|^2
+
+- R(x)","\[ x^\* = \_x |Ax-y|^2
+
+- R(x) \]",Puis :,- R(x) \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1742,vide_ou_blanc,,\[ \],"En machine learning, on peut chercher une perturbation :",maximisant la perte :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1746,fragment_commande,"\_{} L(x+,y)","\[ \_{} L(x+,y) \]",maximisant la perte :,sous :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1781,parentheses_vides,{k=1}^{K} p_k F_k(),\[ {k=1}^{K} p_k F_k() \],On cherche :,où :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1824,vide_ou_blanc,,\[ \],Il faut donc parfois optimiser :,sous :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1832,vide_ou_blanc,,\[ \],Cela introduit un compromis entre :,# 93\. EXACTITUDE VS APPROXIMATION
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1860,vide_ou_blanc,,\[ \],Il faut donc distinguer :,Certains problèmes combinatoires sont NP-difficiles.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1878,fragment_commande,"\_1,\_2,","\[ \_1,\_2, \]",Branch and Bound divise l’espace des solutions :,et calcule des bornes permettant d’éliminer des sous-espaces qui ne peuvent pas produire une meilleure solution.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,1884,vide_ou_blanc,,\[ \],Schéma :,# 96\. RELAXATION
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2174,vide_ou_blanc,,\[ \],Il faut suivre une chaîne :,C’est cette chaîne qui transforme les mathématiques en système exploitable.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2237,fragment_commande,\_x f(x),\[ \_x f(x) \],### Forme 1,→ optimisation générale.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2243,fragment_commande,\_x c^Tx,\[ \_x c^Tx \],### Forme 2,sous :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2253,fragment_commande,\_x f(x),\[ \_x f(x) \],### Forme 3,sous :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2263,fragment_commande,\_x f(x)+R(x),\[ \_x f(x)+R(x) \],### Forme 4,→ régularisation.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2281,fragment_commande,"\_x \[f(x,)","\[ \_x \[f(x,)\]",### Forme 7,→ optimisation stochastique.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2287,fragment_commande+parentheses_vides,\_J(),\[ \_J() \],### Forme 8,→ optimisation de politique en reinforcement learning.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2353,fragment_commande,||\_1,\[ ||\_1 \],"\[ x{0,1} \]",\[ ||\_2 \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2355,fragment_commande,||\_2,\[ ||\_2 \],\[ ||\_1 \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2357,vide_ou_blanc,,\[ \],\[ ||\_2 \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2359,vide_ou_blanc,,\[ \],\[ \],"\[ \[f(x,)\] \]"
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2379,vide_ou_blanc,,\[ \],Ainsi :,Et :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2383,vide_ou_blanc,,\[ \],Et :,# 116\. RELATION AVEC LE DOMAINE G — PROBABILITÉS
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2389,fragment_commande,"\_x \[f(x,)","\[ \_x \[f(x,)\]",L’optimisation peut porter sur une espérance :,Les probabilités permettent alors de modéliser l’incertitude.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2397,parentheses_vides,^\* = _ L(),\[ ^\* = _ L() \],L’estimation statistique peut devenir :,ou :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2401,parentheses_vides,^\* = _ (),\[ ^\* = _ () \],ou :,Le maximum de vraisemblance est donc naturellement relié à l’optimisation.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2607,vide_ou_blanc,,\[ \],Par exemple :,\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2609,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2611,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2613,vide_ou_blanc,,\[ \],\[ \],Comprendre l’optimisation signifie donc aussi comprendre les **compromis**.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2649,vide_ou_blanc,,\[ \],Ainsi :,"Cette formule est volontairement conceptuelle, mais elle constitue une excellente grille de lecture."
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2746,parentheses_vides,"J() = Q
+
+- C
+- T
+- E","\[ J() = Q
+
+- C
+- T
+- E \]",On peut donc construire :,- C / - T
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2771,vide_ou_blanc,,\[ \],Le système doit déterminer :,tout en minimisant :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2817,vide_ou_blanc,,\[ \],Cela donne :,# 137\. APPLICATIONS À LA PLANIFICATION
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2831,fragment_commande,P^\* = \_P J(P),\[ P^\* = \_P J(P) \],et chercher :,C’est la base conceptuelle de nombreux systèmes de planification.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2839,vide_ou_blanc,,\[ \],Chaîne :,Les contraintes géométriques du Domaine D et les graphes du Domaine E peuvent être combinés avec l’optimisation pour construire des planificateurs complexes.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2857,vide_ou_blanc,,\[ \],On peut optimiser :,\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2859,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2861,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2863,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,2865,vide_ou_blanc,,\[ \],\[ \],La théorie des graphes et l’optimisation se complètent alors directement.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3042,vide_ou_blanc,,\[ \],avec :,et :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3054,fragment_commande,"\_{x,y}x<sup>2+y</sup>2","\[ \_{x,y}x<sup>2+y</sup>2 \]",Résoudre avec Lagrange :,sous :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3091,vide_ou_blanc,,\[ \],Puis comparer :,"L’objectif est d’apprendre à utiliser l’IA comme **assistant de modélisation**, et non comme générateur aveugle de solutions."
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3372,vide_ou_blanc,,\[ \],Le Domaine J peut être résumé par la chaîne :,Pour le machine learning :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3376,vide_ou_blanc,,\[ \],Pour le machine learning :,Pour un système :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3380,vide_ou_blanc,,\[ \],Pour un système :,# 155\. LA GRANDE CARTE DES DOMAINES
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3386,vide_ou_blanc,,\[ \],La progression construite jusqu’ici peut être comprise comme :,\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3388,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3390,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3392,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3394,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3396,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3398,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3400,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3402,vide_ou_blanc,,\[ \],\[ \],\[ \]
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3404,vide_ou_blanc,,\[ \],\[ \],La transition :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3414,vide_ou_blanc,,\[ \],Le calcul différentiel fournit les outils permettant de comprendre :,L’optimisation transforme ces informations en :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3418,vide_ou_blanc,,\[ \],L’optimisation transforme ces informations en :,Et le machine learning assemble ensuite :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3422,vide_ou_blanc,,\[ \],Et le machine learning assemble ensuite :,pour produire des systèmes capables d’apprendre.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3432,vide_ou_blanc,,\[ \],**Qu’est-ce que je cherche à améliorer ?**,**Qu’est-ce que je peux modifier ?**
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3436,vide_ou_blanc,,\[ \],**Qu’est-ce que je peux modifier ?**,**Qu’est-ce que je n’ai pas le droit de violer ?**
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3440,vide_ou_blanc,,\[ \],**Qu’est-ce que je n’ai pas le droit de violer ?**,**Comment mesurer une amélioration ?**
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3444,vide_ou_blanc,,\[ \],**Comment mesurer une amélioration ?**,**Puis-je exploiter les dérivées ?**
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3448,vide_ou_blanc,,\[ \],**Puis-je exploiter les dérivées ?**,**Le problème est-il convexe ?**
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3452,vide_ou_blanc,,\[ \],**Le problème est-il convexe ?**,**Les solutions sont-elles discrètes ?**
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3456,vide_ou_blanc,,\[ \],**Les solutions sont-elles discrètes ?**,**L’évaluation est-elle coûteuse ?**
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3460,vide_ou_blanc,,\[ \],**L’évaluation est-elle coûteuse ?**,**Ai-je plusieurs objectifs ?**
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3464,vide_ou_blanc,,\[ \],**Ai-je plusieurs objectifs ?**,**Ai-je besoin d’une solution exacte ?**
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3468,vide_ou_blanc,,\[ \],**Ai-je besoin d’une solution exacte ?**,Cette manière de penser est probablement plus importante que la mémorisation isolée des algorithmes.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3476,vide_ou_blanc,,\[ \],"Le Domaine J est suffisamment maîtrisé lorsque, face à un nouveau problème informatique, l’on peut spontanément effectuer la transformation :",puis :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3480,vide_ou_blanc,,\[ \],puis :,puis :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3484,vide_ou_blanc,,\[ \],puis :,et enfin :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3488,vide_ou_blanc,,\[ \],et enfin :,"C’est cette capacité de **modélisation, sélection de méthode et raisonnement sur les compromis** qui transforme la connaissance de l’optimisation en véritable compétence d’ingénierie."
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3506,vide_ou_blanc,,\[ \],En machine learning :,En robotique :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3510,vide_ou_blanc,,\[ \],En robotique :,En logistique :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3514,vide_ou_blanc,,\[ \],En logistique :,En réseaux :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3518,vide_ou_blanc,,\[ \],En réseaux :,En systèmes intelligents :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3522,vide_ou_blanc,,\[ \],En systèmes intelligents :,Et dans l’ingénierie logicielle :
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3526,vide_ou_blanc,,\[ \],Et dans l’ingénierie logicielle :,Le Domaine I explique **comment une fonction change**.
+Maths-vers-Informatiques/Domaine J — Optimisation.md,3534,vide_ou_blanc,,\[ \],Ensemble :,constitue l’une des chaînes mathématiques fondamentales de l’intelligence artificielle moderne.
+Maths-vers-Informatiques/Domaine P — Cryptographie.md,489,fragment_commande,\_p,\[ \_p \],On note souvent :,pour un corps de (p) éléments lorsque (p) est premier.
+Maths-vers-Informatiques/Domaine P — Cryptographie.md,495,fragment_commande,\_{2^n},\[ \_{2^n} \],On utilise également :,dans certaines constructions.
+"Maths-vers-Informatiques/Domaine Q — Logique, Automates & Langages.md",155,vide_ou_blanc,,\[ \],On le note généralement :,Exemple :
+"Maths-vers-Informatiques/Domaine Q — Logique, Automates & Langages.md",159,commence_par_egal,"={0,1}","\[ ={0,1} \]",Exemple :,ou :
+"Maths-vers-Informatiques/Domaine Q — Logique, Automates & Langages.md",163,commence_par_egal,"={a,b,c}","\[ ={a,b,c} \]",ou :,ou encore un alphabet de caractères :
+"Maths-vers-Informatiques/Domaine Q — Logique, Automates & Langages.md",181,commence_par_egal,"={0,1}","\[ ={0,1} \]",est une chaîne sur :,# 6\. MOT VIDE
+"Maths-vers-Informatiques/Domaine Q — Logique, Automates & Langages.md",187,vide_ou_blanc,,\[ \],Le mot vide est noté :,Il possède une longueur :
+"Maths-vers-Informatiques/Domaine Q — Logique, Automates & Langages.md",220,vide_ou_blanc,,\[ \],"contient toutes les chaînes finies construites à partir de (), y compris :",Exemple :
+"Maths-vers-Informatiques/Domaine Q — Logique, Automates & Langages.md",224,commence_par_egal,"={0,1}","\[ ={0,1} \]",Exemple :,alors :
+"Maths-vers-Informatiques/Domaine Q — Logique, Automates & Langages.md",460,vide_ou_blanc,,\[ \],Un NFA peut autoriser des transitions consommant :,c’est-à-dire aucun symbole.
+"Maths-vers-Informatiques/Domaine Q — Logique, Automates & Langages.md",466,vide_ou_blanc,,\[ \],On parle alors souvent de :,Ces transitions facilitent la construction d’automates à partir d’expressions régulières.
+"Maths-vers-Informatiques/Domaine Q — Logique, Automates & Langages.md",1009,fragment_commande,A_1|\_2,\[ A_1|\_2 \],Exemple :,devient :
+"Maths-vers-Informatiques/Domaine Q — Logique, Automates & Langages.md",1017,fragment_commande,A’\_1|\_2,\[ A’\_1|\_2 \],puis :,# 69\. BOTTOM-UP PARSING

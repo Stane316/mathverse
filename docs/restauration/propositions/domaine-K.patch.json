@@ -1,0 +1,182 @@
+[
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 830,
+  "ancien": "\\[ D= \\]",
+  "nouveau": "\\[ D=\\frac{\\log N}{\\log(1/r)} \\]",
+  "confiance": "haute",
+  "justification": "Forme canonique de la dimension de similarité, seule lecture cohérente avec N=r^{-D} énoncé juste au-dessus.",
+  "validation": "Sierpiński : N=3, r=1/2 → D=log3/log2≈1,585, compris entre 1 et 2 (affirmé dans le texte)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 841,
+  "ancien": "\\[ D= \\]",
+  "nouveau": "\\[ D=\\frac{\\log 3}{\\log 2}\\approx 1{,}585 \\]",
+  "confiance": "haute",
+  "justification": "Application directe de la formule précédente avec N=3 et r=1/2, énoncés dans la section 17.2.",
+  "validation": "Vérifier 1 < D < 2."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 863,
+  "ancien": "\\[ N() \\]",
+  "nouveau": "\\[ N(\\varepsilon) \\]",
+  "confiance": "haute",
+  "justification": "Le contexte « On observe le nombre … de boîtes nécessaires » impose N(ε) : nombre de boîtes de taille ε.",
+  "validation": "N(ε) croît quand ε décroît ; la pente en log-log donne la dimension."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 914,
+  "ancien": "\\[ =f(x,t) \\]",
+  "nouveau": "\\[ \\frac{dx}{dt}=f(x,t) \\]",
+  "confiance": "haute",
+  "justification": "Section 20.2 « Système continu », par opposition au discret x_{n+1}=f(x_n) de 20.1 ; le membre gauche dx/dt a été supprimé avec la commande \\frac.",
+  "validation": "Cohérence avec 20.1 et avec la section 129 (connexion au calcul différentiel, même forme)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 920,
+  "ancien": "\\[ =F(,t) \\]",
+  "nouveau": "\\[ \\frac{d\\mathbf{x}}{dt}=F(\\mathbf{x},t) \\]",
+  "confiance": "haute",
+  "justification": "Section 20.3 multidimensionnelle ; les vecteurs (\\mathbf{x}) ont été supprimés avec \\frac.",
+  "validation": "Se réduit à 20.2 si x est scalaire."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 924,
+  "ancien": "\\[ =",
+  "nouveau": "\\[ \\mathbf{x}=(x_1,\\ldots,x_n) \\]",
+  "confiance": "moyenne",
+  "justification": "Bloc vide suivant « où : » : définition probable du vecteur d'état. Forme proposée, à confirmer par l'auteur.",
+  "validation": "Doit être cohérent avec la dimension de F dans 20.3."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 1126,
+  "ancien": "\\[ _{n}_ {i=0}^{n-1} |f’(x_i)| \\]",
+  "nouveau": "\\[ \\lambda=\\lim_{n\\to\\infty}\\frac{1}{n}\\sum_{i=0}^{n-1}\\ln\\left|f'(x_i)\\right| \\]",
+  "confiance": "haute",
+  "justification": "Fragments survivants : _{n}_ (limite et 1/n), {i=0}^{n-1} (somme), |f'(x_i)|. Forme canonique de l'exposant de Lyapunov.",
+  "validation": "Carte logistique à r=4 : λ=ln 2≈0,693>0 (chaos). r=2 : λ<0 (point fixe stable)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 1142,
+  "ancien": "\\[ =(y-x) \\]",
+  "nouveau": "\\[ \\frac{dx}{dt}=\\sigma(y-x) \\]",
+  "confiance": "haute",
+  "justification": "Première équation canonique de Lorenz ; σ supprimé car lettre grecque.",
+  "validation": "Avec ρ=28, β=8/3, σ=10 : attracteur chaotique à deux lobes (décrit dans le texte)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 1144,
+  "ancien": "\\[ =x(-z)-y \\]",
+  "nouveau": "\\[ \\frac{dy}{dt}=x(\\rho-z)-y \\]",
+  "confiance": "haute",
+  "justification": "Deuxième équation de Lorenz ; ρ supprimé. La structure x(·-z)-y est intacte.",
+  "validation": "Idem, et les points fixes sont en (±√(β(ρ-1)), ±√(β(ρ-1)), ρ-1)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 1146,
+  "ancien": "\\[ =xy-z \\]",
+  "nouveau": "\\[ \\frac{dz}{dt}=xy-\\beta z \\]",
+  "confiance": "haute",
+  "justification": "Troisième équation de Lorenz ; β supprimé. Structure xy-·z intacte.",
+  "validation": "λ₁≈0,906 pour (σ,ρ,β)=(10,28,8/3)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 1150,
+  "ancien": "- () ;",
+  "nouveau": "- \\(\\sigma\\) (nombre de Prandtl) ;\\n- \\(\\rho\\) (nombre de Rayleigh) ;\\n- \\(\\beta\\) (paramètre géométrique)",
+  "confiance": "moyenne",
+  "justification": "La liste « où : » est vide et suivie de « sont des paramètres » : trois paramètres, donc σ, ρ, β. Les valeurs usuelles (10, 28, 8/3) peuvent être ajoutées en remark.",
+  "validation": "Vérifier que les trois symboles apparaissent bien dans les équations 1142-1146 reconstruites."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 1324,
+  "ancien": "\\[ F(x)= \\_{i=0}^{n-1} a_i N(f_i x) \\]",
+  "nouveau": "\\[ F(x)=\\sum_{i=0}^{n-1} a_i\\,N(f_i x) \\]",
+  "confiance": "haute",
+  "justification": "Fragment \\_ restant de \\sum ; bornes et termes intacts.",
+  "validation": "Contrôler la convergence : a_i = gain^i avec gain<1."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 1363,
+  "ancien": "\\[ T(x)=\\_i a_i |N(f_i x)| \\]",
+  "nouveau": "\\[ T(x)=\\sum_i a_i\\,\\left|N(f_i x)\\right| \\]",
+  "confiance": "haute",
+  "justification": "Fragment \\_i restant de \\sum_i ; forme canonique du bruit de turbulence.",
+  "validation": "T(x) ≥ 0 pour tout x."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 1756,
+  "ancien": "\\[ =v \\]",
+  "nouveau": "\\[ \\frac{dx}{dt}=v \\]",
+  "confiance": "haute",
+  "justification": "Section 58 « Particules et systèmes dynamiques », bloc introduit par « avec : » ; la vitesse est la dérivée de la position.",
+  "validation": "Cohérence dimensionnelle : [x]/[t] = [v]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 1760,
+  "ancien": "\\[ =a \\]",
+  "nouveau": "\\[ \\frac{dv}{dt}=a \\]",
+  "confiance": "haute",
+  "justification": "Bloc suivant « et : » dans la même section ; l'accélération est la dérivée de la vitesse.",
+  "validation": "Cohérence avec la ligne précédente (système de Newton)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 2575,
+  "ancien": "\\[ x’= \\]",
+  "nouveau": "\\[ x'=\\frac{x-x_{\\min}}{x_{\\max}-x_{\\min}} \\]",
+  "confiance": "moyenne",
+  "justification": "Section 96 « Normalisation » ; la forme min-max est la normalisation standard vers [0,1]. À confirmer (d'autres normalisations existent : centrée-réduite).",
+  "validation": "x=x_min → 0 ; x=x_max → 1."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 2581,
+  "ancien": "\\[ x’\\]",
+  "nouveau": "\\[ x'\\in[0,1] \\]",
+  "confiance": "moyenne",
+  "justification": "Bloc « afin d'obtenir : » — l'intervalle cible est très probablement [0,1]. Défaut détecté hors inventaire (bloc court non flagué par les heuristiques).",
+  "validation": "Cohérence avec la normalisation proposée en 2575."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 2951,
+  "ancien": "\\[ =f_(h,t) \\]",
+  "nouveau": "\\[ \\frac{dh}{dt}=f_\\theta(h,t) \\]",
+  "confiance": "moyenne",
+  "justification": "Contexte : évolution d'un modèle neuronal (neural ODE). f_ est paramétré par un réseau (indice θ probable, supprimé).",
+  "validation": "Forme canonique des EDO neuronales ; à confirmer par l'auteur."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 3250,
+  "ancien": "\\[ =f(x,t) \\]",
+  "nouveau": "\\[ \\frac{dx}{dt}=f(x,t) \\]",
+  "confiance": "haute",
+  "justification": "Section 129 (connexion au calcul différentiel) ; identique à 20.2.",
+  "validation": "Cohérence avec la section 20.2."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 4314,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "Bloc vide en section 166 « FORMULE DE RÉFÉRENCE », entre « Pour toute future application utilisant ce domaine : » et « Cette chaîne constitue la référence opérationnelle ». Deux candidats : (a) la chaîne opérationnelle énoncée ligne 37 (PHÉNOMÈNE → CONCEPT → RÈGLE → PROCESSUS → REPRÉSENTATION → ALGORITHME → PARAMÈTRES → VISUALISATION → APPLICATION) ; (b) la formule itérative centrale x_{n+1}=f(x_n). L'intention de l'auteur est requise.",
+  "validation": "Aucun test : nécessite l'arbitrage de l'auteur."
+ }
+]
