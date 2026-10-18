@@ -29,7 +29,11 @@ Les brouillons et copies de travail restent **hors dépôt**, dans `/home/user/a
 
 ## 3. Convention de nommage du projet
 
-Le nom définitif n'est pas arrêté. En attendant, la documentation utilise le jeton neutre **« le projet »** et le nom technique sera injecté par une variable `PROJECT_CODENAME`, jamais écrit en dur. Voir `A1-propositions-de-nom.md`.
+**Nom de travail courant : `mathauma`** (décision du 2026-10-18, réversible).
+
+Le nom n'est pas définitivement arrêté. En attendant, la documentation utilise le jeton neutre **« le projet »** et le nom technique sera injecté par une variable `PROJECT_CODENAME`, jamais écrit en dur.
+
+Campagne de nommage : `A1-propositions-de-nom.md` → `A3-noms-axes-semantiques.md` → `A4-noms-merveille-mathematique.md` → **`A5-noms-math-merveille.md`** (famille retenue et vérification de `mathauma`). 242 sondes au total, 175 candidats libres sur les trois registres, 58 éliminés par une antériorité réelle.
 
 ## 4. Conventions appliquées à ce dossier
 
