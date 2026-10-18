@@ -1,0 +1,92 @@
+[
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3386,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ A \\]",
+  "confiance": "moyenne",
+  "justification": "§155 « La progression construite jusqu'ici peut être comprise comme : » suivi de dix blocs vides, puis « La transition : [I→J] est particulièrement importante. ».",
+  "validation": "Domaine A — DOCUMENT MAÎTRE A — LOGIQUE ET FONDEMENTS DE L’INFORMATIQUE. Hypothèse A→J validée par l'auteur le 2026-10-18 ; le résidu du bloc est vide, la lettre est donc restituée nue comme dans \\[ IJ \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3388,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ B \\]",
+  "confiance": "moyenne",
+  "justification": "§155 « La progression construite jusqu'ici peut être comprise comme : » suivi de dix blocs vides, puis « La transition : [I→J] est particulièrement importante. ».",
+  "validation": "Domaine B — DOCUMENT B — THÉORIE DES NOMBRES. Hypothèse A→J validée par l'auteur le 2026-10-18 ; le résidu du bloc est vide, la lettre est donc restituée nue comme dans \\[ IJ \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3390,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ C \\]",
+  "confiance": "moyenne",
+  "justification": "§155 « La progression construite jusqu'ici peut être comprise comme : » suivi de dix blocs vides, puis « La transition : [I→J] est particulièrement importante. ».",
+  "validation": "Domaine C — DOCUMENT C — ALGÈBRE LINÉAIRE. Hypothèse A→J validée par l'auteur le 2026-10-18 ; le résidu du bloc est vide, la lettre est donc restituée nue comme dans \\[ IJ \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3392,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ D \\]",
+  "confiance": "moyenne",
+  "justification": "§155 « La progression construite jusqu'ici peut être comprise comme : » suivi de dix blocs vides, puis « La transition : [I→J] est particulièrement importante. ».",
+  "validation": "Domaine D — DOCUMENT D — GÉOMÉTRIE COMPUTATIONNELLE. Hypothèse A→J validée par l'auteur le 2026-10-18 ; le résidu du bloc est vide, la lettre est donc restituée nue comme dans \\[ IJ \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3394,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ E \\]",
+  "confiance": "moyenne",
+  "justification": "§155 « La progression construite jusqu'ici peut être comprise comme : » suivi de dix blocs vides, puis « La transition : [I→J] est particulièrement importante. ».",
+  "validation": "Domaine E — DOCUMENT E — THÉORIE DES GRAPHES. Hypothèse A→J validée par l'auteur le 2026-10-18 ; le résidu du bloc est vide, la lettre est donc restituée nue comme dans \\[ IJ \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3396,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ F \\]",
+  "confiance": "moyenne",
+  "justification": "§155 « La progression construite jusqu'ici peut être comprise comme : » suivi de dix blocs vides, puis « La transition : [I→J] est particulièrement importante. ».",
+  "validation": "Domaine F — DOCUMENT F — COMBINATOIRE ET OPTIMISATION COMBINATOIRE. Hypothèse A→J validée par l'auteur le 2026-10-18 ; le résidu du bloc est vide, la lettre est donc restituée nue comme dans \\[ IJ \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3398,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ G \\]",
+  "confiance": "moyenne",
+  "justification": "§155 « La progression construite jusqu'ici peut être comprise comme : » suivi de dix blocs vides, puis « La transition : [I→J] est particulièrement importante. ».",
+  "validation": "Domaine G — Document G — Probabilités. Hypothèse A→J validée par l'auteur le 2026-10-18 ; le résidu du bloc est vide, la lettre est donc restituée nue comme dans \\[ IJ \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3400,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ H \\]",
+  "confiance": "moyenne",
+  "justification": "§155 « La progression construite jusqu'ici peut être comprise comme : » suivi de dix blocs vides, puis « La transition : [I→J] est particulièrement importante. ».",
+  "validation": "Domaine H — Document H — Statistiques. Hypothèse A→J validée par l'auteur le 2026-10-18 ; le résidu du bloc est vide, la lettre est donc restituée nue comme dans \\[ IJ \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3402,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ I \\]",
+  "confiance": "moyenne",
+  "justification": "§155 « La progression construite jusqu'ici peut être comprise comme : » suivi de dix blocs vides, puis « La transition : [I→J] est particulièrement importante. ».",
+  "validation": "Domaine I — Domaine I — Calcul différentiel. Hypothèse A→J validée par l'auteur le 2026-10-18 ; le résidu du bloc est vide, la lettre est donc restituée nue comme dans \\[ IJ \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3404,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ J \\]",
+  "confiance": "moyenne",
+  "justification": "§155 « La progression construite jusqu'ici peut être comprise comme : » suivi de dix blocs vides, puis « La transition : [I→J] est particulièrement importante. ».",
+  "validation": "Domaine J — Domaine J — Optimisation (le présent document). Hypothèse A→J validée par l'auteur le 2026-10-18 ; le résidu du bloc est vide, la lettre est donc restituée nue comme dans \\[ IJ \\]."
+ }
+]

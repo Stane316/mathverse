@@ -1,0 +1,1676 @@
+[
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1026,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ L(\\theta)+\\lambda R(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§47 « On peut ajouter une pénalité : [vide] Exemples : ### L2 … ### L1 ». Le \\theta et le \\lambda ont été détruits ; la structure « perte + pénalité » est imposée par les deux exemples qui suivent et par la forme 4 du §112 (l. 2263).",
+  "validation": "Rendu : L(θ)+λR(θ)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1032,
+  "ancien": "\\[ R()=||\\_2^2 \\]",
+  "nouveau": "\\[ R(\\theta)=\\|\\theta\\|_{2}^{2} \\]",
+  "confiance": "haute",
+  "justification": "§47 « ### L2 [R()=||\\_2^2] ». Le \\theta a été détruit dans R() et dans la norme ; \\| a perdu sa contre-oblique.",
+  "validation": "Pénalité L2 au carré — la forme universelle du weight decay."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1036,
+  "ancien": "\\[ R()=||\\_1 \\]",
+  "nouveau": "\\[ R(\\theta)=\\|\\theta\\|_{1} \\]",
+  "confiance": "haute",
+  "justification": "§47 « ### L1 [R()=||\\_1] ». Même destruction.",
+  "validation": "Pénalité L1 — la forme du lasso."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1046,
+  "ancien": "\\[ L_{} \\]",
+  "nouveau": "\\[ L_{\\text{train}} \\]",
+  "confiance": "haute",
+  "justification": "§48 « On distingue : [L_{}] et : [L_{}] ». Le contenu de \\text{…} a été détruit ; la paire entraînement/test est la seule distinction possible dans ce contexte.",
+  "validation": "Rendu : L_train."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1050,
+  "ancien": "\\[ L_{} \\]",
+  "nouveau": "\\[ L_{\\text{test}} \\]",
+  "confiance": "haute",
+  "justification": "§48, second terme de la paire.",
+  "validation": "Rendu : L_test."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1054,
+  "ancien": "\\[ L_{} \\]",
+  "nouveau": "\\[ L_{\\text{train}} \\]",
+  "confiance": "haute",
+  "justification": "§48 « Un modèle peut avoir : [L_{}] mais : [L_{}] ». Le surapprentissage est une perte d'entraînement faible avec une perte de test élevée : l'ordre est imposé par le sens.",
+  "validation": "Rendu : L_train (faible)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1058,
+  "ancien": "\\[ L_{} \\]",
+  "nouveau": "\\[ L_{\\text{test}} \\]",
+  "confiance": "haute",
+  "justification": "§48, second terme — la perte de test, élevée.",
+  "validation": "Rendu : L_test (élevée)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1072,
+  "ancien": "\\[ L() \\]",
+  "nouveau": "\\[ L(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§49 « Pour un réseau : [L()] où (θ) peut contenir des millions ou milliards de paramètres ». Le \\theta a été détruit.",
+  "validation": "Rendu : L(θ)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1092,
+  "ancien": "\\[ g_t = f(x_t)\n\n- \\_t \\]",
+  "nouveau": "\\[ g_t=\\nabla f(x_t)\n\n+ \\xi_t \\]",
+  "confiance": "haute",
+  "justification": "§50 « Lorsque le gradient est bruité : [trois lignes] l'algorithme travaille avec une estimation du gradient. ». Le \\nabla et le \\xi ont été détruits ; le + de tête de ligne est devenu une puce -.",
+  "validation": "Gradient bruité = vrai gradient + bruit ξ_t."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1116,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§51 « Il existe donc un compromis entre : [vide] et : [vide] ». La liste qui précède énumère cinq effets de la taille du batch ; le compromis en oppose deux, mais lesquels n'est pas déterminé.",
+  "validation": "Candidats : \\[ \\text{bruit du gradient} \\] et \\[ \\text{coût computationnel} \\] — les deux items de tête de la liste (l. 1108-1109)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1120,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§51, second terme du compromis.",
+  "validation": "Voir l. 1116."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1146,
+  "ancien": "\\[ x N(x) x’ N(x’) \\]",
+  "nouveau": "\\[ x\\to N(x)\\to x'\\to N(x') \\]",
+  "confiance": "haute",
+  "justification": "§53 « Schéma : [x N(x) x’ N(x’)] ». Les flèches ont été détruites ; quatre termes subsistent dans l'ordre d'une itération de recherche locale.",
+  "validation": "Rendu : x → N(x) → x’ → N(x’)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1154,
+  "ancien": "\\[ x_0^{(1)}, x_0^{(2)}, , x_0^{(k)} \\]",
+  "nouveau": "\\[ x_0^{(1)},x_0^{(2)},\\ldots,x_0^{(k)} \\]",
+  "confiance": "haute",
+  "justification": "§54 « On lance une recherche locale depuis plusieurs points de départ : [x_0^{(1)},x_0^{(2)},,x_0^{(k)}] ». Le \\ldots est devenu une virgule.",
+  "validation": "Rendu : x₀⁽¹⁾,x₀⁽²⁾,…,x₀⁽ᵏ⁾."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1168,
+  "ancien": "\\[ P = ( - ) \\]",
+  "nouveau": "\\[ P=\\exp\\left(-\\frac{\\Delta E}{T}\\right) \\]",
+  "confiance": "moyenne",
+  "justification": "§55 « Une probabilité typique d'acceptation est : [P=( - )] où (E) est l'augmentation de coût ; (T) est la température. ». Le résidu montre un exposant négatif entre parenthèses : \\exp et \\frac ont été détruits, ainsi que ΔE/T.",
+  "validation": "Probabilité d'acceptation de Metropolis. La notation du numérateur (ΔE, Δc ou Δf) est un choix d'auteur ; la structure exponentielle est certaine."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1183,
+  "ancien": "\\[ P={x_1,x_2,,x_n} \\]",
+  "nouveau": "\\[ P=\\{x_1,x_2,\\ldots,x_n\\} \\]",
+  "confiance": "haute",
+  "justification": "§56 « Une population : [P={x_1,x_2,,x_n}] ». Le \\ldots est devenu une virgule ; les accolades d'ensemble ont perdu leurs contre-obliques.",
+  "validation": "Rendu : P={x₁,x₂,…,x_n}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1194,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§56 « Schéma : [vide] ». Le schéma d'évolution d'un algorithme génétique (sélection → croisement → mutation) tenait en un bloc.",
+  "validation": "Candidat : \\[ \\text{sélection}\\to\\text{croisement}\\to\\text{mutation} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1202,
+  "ancien": "\\[ (x) \\]",
+  "nouveau": "\\[ F(x) \\]",
+  "confiance": "moyenne",
+  "justification": "§57 « Selon le problème : [(x)] peut être : ». La fonction de fitness est nommée en toutes lettres ; le symbole a été détruit.",
+  "validation": "Candidat alternatif : \\[ \\text{fitness}(x) \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1265,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§62 optimisation bayésienne « Principe : [vide] Applications : ». Bloc entièrement détruit.",
+  "validation": "Candidat : \\[ x_{t+1}=\\arg\\max_x\\ \\text{EI}(x) \\] — le critère d'amélioration espérée, ou plus sobrement \\[ \\text{modèle}\\to\\text{acquisition}\\to\\text{évaluation} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1299,
+  "ancien": "\\[ f_1(x),f_2(x),,f_k(x) \\]",
+  "nouveau": "\\[ f_1(x),f_2(x),\\ldots,f_k(x) \\]",
+  "confiance": "haute",
+  "justification": "§63 « Certains problèmes possèdent plusieurs objectifs : [f_1(x),f_2(x),,f_k(x)] ». Le \\ldots est devenu une virgule.",
+  "validation": "Rendu : f₁(x),f₂(x),…,f_k(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1303,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§63 « Par exemple : [vide] tout en : [vide] et : [vide] Ces objectifs peuvent être contradictoires. ». Trois blocs pour un exemple d'objectifs contradictoires.",
+  "validation": "Candidats : \\[ \\min\\ \\text{coût} \\], \\[ \\max\\ \\text{qualité} \\], \\[ \\min\\ \\text{délai} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1307,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§63, deuxième objectif de l'exemple.",
+  "validation": "Voir l. 1303."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1311,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§63, troisième objectif de l'exemple.",
+  "validation": "Voir l. 1303."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1334,
+  "ancien": "\\[ F(x) = \\_1 f_1(x)\n\n- \\_2 f_2(x)\n\n- \\_k f_k(x) \\]",
+  "nouveau": "\\[ F(x)=\\lambda_1f_1(x)\n\n+ \\lambda_2f_2(x)\n\n+ \\lambda_kf_k(x) \\]",
+  "confiance": "haute",
+  "justification": "§65 « On peut combiner plusieurs objectifs : [cinq lignes] avec des poids : [\\_i] ». Le \\lambda a été détruit trois fois ; les + de tête de ligne sont devenus des puces -.",
+  "validation": "Somme pondérée — la scalarisation canonique. Rendu : F(x)=λ₁f₁(x)+λ₂f₂(x)+λ_kf_k(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1342,
+  "ancien": "\\[ \\_i \\]",
+  "nouveau": "\\[ \\lambda_i \\]",
+  "confiance": "haute",
+  "justification": "§65 « avec des poids : [\\_i] ». Le \\lambda a été détruit ; le \\_ est son résidu, comme en l. 523 et l. 548.",
+  "validation": "Rendu : λ_i."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1352,
+  "ancien": "\\[ \\_x f(x) \\]",
+  "nouveau": "\\[ \\min_x f(x) \\]",
+  "confiance": "haute",
+  "justification": "§66 « Au lieu de : [\\_x f(x)] on peut considérer : […] ».",
+  "validation": "Rendu : min_x f(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1356,
+  "ancien": "\\[ _x_ {} f(x,) \\]",
+  "nouveau": "\\[ \\min_x\\max_{\\delta\\in\\Delta}f(x,\\delta) \\]",
+  "confiance": "moyenne",
+  "justification": "§66 « on peut considérer : [_x_ {} f(x,)] où (δ) représente une incertitude. ». Le résidu porte la trace de deux opérateurs d'optimisation et d'un sous-script vide : c'est une forme min-max.",
+  "validation": "Optimisation robuste. Le symbole de l'ensemble d'incertitude (Δ ou 𝒰) est un choix d'auteur."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1376,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\min_x\\mathbb{E}[f(x,\\xi)] \\]",
+  "confiance": "haute",
+  "justification": "§67 « on peut chercher : [vide] ». La forme est donnée mot pour mot par la forme 7 du §112 (l. 2281) et par le §116 (l. 2389), tous deux lisibles.",
+  "validation": "Minimisation d'une espérance — la forme de l'optimisation stochastique."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1384,
+  "ancien": "\\[ R() = 1n _{i=1}^{n} L(f_(x_i),y_i) \\]",
+  "nouveau": "\\[ R(\\theta)=\\frac{1}{n}\\sum_{i=1}^{n}L(f_\\theta(x_i),y_i) \\]",
+  "confiance": "haute",
+  "justification": "§68 « En apprentissage supervisé : [R()=1n _{i=1}^{n} L(f_(x_i),y_i)] ». \\frac{1}{n} réduit à 1n, \\sum réduit à \\_, le \\theta de f_θ détruit.",
+  "validation": "Risque empirique — rendu : R(θ)=(1/n)Σ L(f_θ(x_i),y_i)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1388,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\min_\\theta R(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§68 « On cherche : [vide] ». Le principe ERM minimise le risque empirique.",
+  "validation": "Rendu : min_θ R(θ)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1396,
+  "ancien": "\\[ ||C \\]",
+  "nouveau": "\\[ \\|\\theta\\|\\leq C \\]",
+  "confiance": "haute",
+  "justification": "§69 « On peut imposer : [||C] ou ajouter : [||] ». Le \\theta et le \\leq ont été détruits, \\| a perdu sa contre-oblique.",
+  "validation": "Contrainte de norme — rendu : ‖θ‖≤C."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1400,
+  "ancien": "\\[ || \\]",
+  "nouveau": "\\[ \\|\\theta\\| \\]",
+  "confiance": "moyenne",
+  "justification": "§69 « ou ajouter : [||] ». Même résidu qu'en l. 1396, mais sans la borne : c'est le terme de pénalité ajouté à la perte.",
+  "validation": "Un coefficient λ a pu précéder la norme (le grec est détruit sans laisser de trace) ; le résidu ne montre que ‖θ‖."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1416,
+  "ancien": "\\[ _ 1n _i L(y_i,f_(x_i)) \\]",
+  "nouveau": "\\[ \\min_\\theta\\frac{1}{n}\\sum_i L(y_i,f_\\theta(x_i)) \\]",
+  "confiance": "haute",
+  "justification": "§70 « Exemple conceptuel : [_ 1n _i L(y_i,f_(x_i))] ». Le \\min_\\theta, le \\frac, le \\sum et le \\theta de f_θ ont été détruits.",
+  "validation": "Rendu : min_θ (1/n)Σ L(y_i,f_θ(x_i))."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1424,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\theta \\]",
+  "confiance": "moyenne",
+  "justification": "§71 « Un réseau neuronal possède des paramètres : [vide] et produit : [ŷ=f_θ(x)] ». Le bloc nomme les paramètres.",
+  "validation": "Candidat alternatif : \\[ \\theta=(W,b) \\] — forme donnée en l. 1448 pour les paramètres."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1428,
+  "ancien": "\\[ y=f_(x) \\]",
+  "nouveau": "\\[ \\hat{y}=f_\\theta(x) \\]",
+  "confiance": "haute",
+  "justification": "§71 « et produit : [y=f_(x)] ». Le chapeau et le \\theta ont été détruits.",
+  "validation": "Rendu : ŷ=f_θ(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1432,
+  "ancien": "\\[ ^\\* = _L(f_(x),y) \\]",
+  "nouveau": "\\[ \\theta^{*}=\\arg\\min_\\theta L(f_\\theta(x),y) \\]",
+  "confiance": "haute",
+  "justification": "§71 « L'entraînement cherche : [^\\*=_L(f_(x),y)] ». Le \\theta, le \\arg\\min et le \\theta de f_θ ont été détruits.",
+  "validation": "Rendu : θ*=argmin_θ L(f_θ(x),y)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1436,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§71 « La chaîne complète est : [vide] ». Une chaîne, mais le nombre et la nature des maillons ne sont pas déterminés.",
+  "validation": "Candidat : \\[ x\\to f_\\theta(x)\\to L\\to\\nabla_\\theta L\\to\\theta_{t+1} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1470,
+  "ancien": "\\[ = H_1H_2H_k \\]",
+  "nouveau": "\\[ \\mathcal{H}=H_1\\times H_2\\times\\cdots\\times H_k \\]",
+  "confiance": "haute",
+  "justification": "§73 « On définit une grille : [=H_1H_2H_k] ». Le \\mathcal{H}, les \\times et le \\cdots ont été détruits.",
+  "validation": "Produit cartésien des ensembles d'hyperparamètres."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1486,
+  "ancien": "\\[ h \\]",
+  "nouveau": "\\[ L(h) \\]",
+  "confiance": "moyenne",
+  "justification": "§75 « On peut modéliser : [h] et sélectionner progressivement les hyperparamètres les plus prometteurs. ». Le bloc ne peut pas être la variable seule : on modélise une réponse. Le §136 (l. 2811) écrit h*=argmin_h L_val(h), ce qui montre que J modélise bien L comme fonction de h.",
+  "validation": "Candidat alternatif : \\[ L_{\\text{val}}(h) \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1496,
+  "ancien": "\\[ J() = \\]",
+  "nouveau": "\\[ J(\\theta)=\\mathbb{E}\\left[\\sum_{t}\\gamma^{t}r_t\\right] \\]",
+  "confiance": "moyenne",
+  "justification": "§76 « l'agent cherche à maximiser une récompense cumulée : [J()=] ». Le membre de droite a été entièrement détruit — il ne contenait que des commandes et des lettres grecques.",
+  "validation": "Récompense cumulée actualisée. L'absence ou la présence du facteur d'actualisation γ est un choix d'auteur ; l'espérance, elle, est certaine (le §76 parle d'un agent dans un environnement stochastique)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1500,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\max_\\theta J(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§76 « L'objectif devient : [vide] ». La forme est donnée mot pour mot par la forme 8 du §112 (l. 2287), lisible.",
+  "validation": "Rendu : max_θ J(θ)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1508,
+  "ancien": "\\[ (t) \\]",
+  "nouveau": "\\[ \\tau(t) \\]",
+  "confiance": "haute",
+  "justification": "§77 « Une trajectoire peut être représentée par : [(t)] ». Le \\tau a été détruit.",
+  "validation": "Rendu : τ(t)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1512,
+  "ancien": "\\[ J() = J_{}\n\n- J_{}\n- J_{}\n- J_{} \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§77 « On peut minimiser : [cinq lignes] sous des contraintes : obstacles, vitesse, accélération, articulation, énergie. ». Un coût J(τ) décomposé en quatre termes, tous détruits.",
+  "validation": "Candidats : J_longueur, J_énergie, J_temps, J_sécurité. La liste des contraintes qui suit suggère d'autres découpages — à trancher par l'auteur."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1528,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\min_\\tau J(\\tau) \\]",
+  "confiance": "moyenne",
+  "justification": "§77 « On obtient : [vide] ». Après l'énoncé des contraintes, le bloc énonce le problème complet.",
+  "validation": "La mention explicite des contraintes (s.c. τ∈𝒯) a pu figurer dans le bloc."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1534,
+  "ancien": "\\[ (\n\n- ) \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§78 logistique « Exemple : [trois lignes : une parenthèse ouvrante, une ligne vide, « - ) »] sous : capacité des véhicules, disponibilité, demandes, horaires, contraintes géographiques. ».",
+  "validation": "Le même gabarit « ( / - ) » réapparaît en l. 2688. Candidat : une somme de coûts de transport \\[ \\sum_{i,j}c_{ij}x_{ij} \\] encadrée par \\left( \\right)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1552,
+  "ancien": "\\[ T_1,T_2,,T_n \\]",
+  "nouveau": "\\[ T_1,T_2,\\ldots,T_n \\]",
+  "confiance": "haute",
+  "justification": "§79 « Supposons : [T_1,T_2,,T_n] ». Le \\ldots est devenu une virgule.",
+  "validation": "Rendu : T₁,T₂,…,T_n."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1556,
+  "ancien": "\\[ M_1,M_2,,M_k \\]",
+  "nouveau": "\\[ M_1,M_2,\\ldots,M_k \\]",
+  "confiance": "haute",
+  "justification": "§79 « à affecter à : [M_1,M_2,,M_k] ».",
+  "validation": "Rendu : M₁,M₂,…,M_k."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1560,
+  "ancien": "\\[ C_{} \\]",
+  "nouveau": "\\[ C_{\\max} \\]",
+  "confiance": "haute",
+  "justification": "§79 « On peut chercher à minimiser : [C_{}] où (C_max) représente le temps de fin global. ». Le \\max a été détruit ; la prose qui suit nomme C_max.",
+  "validation": "Makespan."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1580,
+  "ancien": "\\[ A_1,,A_n \\]",
+  "nouveau": "\\[ A_1,\\ldots,A_n \\]",
+  "confiance": "haute",
+  "justification": "§80 « et de plusieurs activités : [A_1,,A_n] ».",
+  "validation": "Rendu : A₁,…,A_n."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1588,
+  "ancien": "\\[ \\_i x_iR \\]",
+  "nouveau": "\\[ \\sum_i x_i\\leq R \\]",
+  "confiance": "haute",
+  "justification": "§80 « sous : [\\_i x_iR] ». Le \\sum et le \\leq ont été détruits.",
+  "validation": "Rendu : Σ x_i≤R."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1614,
+  "ancien": "\\[ \\_P (P) \\]",
+  "nouveau": "\\[ \\min_P C(P) \\]",
+  "confiance": "haute",
+  "justification": "§81 « ### Routage [\\_P (P)] ». Le \\min et le C ont été détruits.",
+  "validation": "Identique à la l. 75."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1618,
+  "ancien": "\\[ \\_x \\_i U_i(x_i) \\]",
+  "nouveau": "\\[ \\max_x\\sum_i U_i(x_i) \\]",
+  "confiance": "haute",
+  "justification": "§81 « ### Allocation de bande passante [\\_x \\_i U_i(x_i)] sous : [\\_i x_iC] ». Le \\max et le \\sum ont été détruits.",
+  "validation": "Somme d'utilités — l'allocation est un maximum, pas un minimum."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1622,
+  "ancien": "\\[ \\_i x_iC \\]",
+  "nouveau": "\\[ \\sum_i x_i\\leq C \\]",
+  "confiance": "haute",
+  "justification": "§81 « sous : [\\_i x_iC] où (C) représente une capacité réseau. ».",
+  "validation": "Rendu : Σ x_i≤C."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1630,
+  "ancien": "\\[ w=(w_1,,w_n) \\]",
+  "nouveau": "\\[ w=(w_1,\\ldots,w_n) \\]",
+  "confiance": "haute",
+  "justification": "§82 « Un portefeuille peut être représenté par : [w=(w_1,,w_n)] ».",
+  "validation": "Rendu : w=(w₁,…,w_n)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1634,
+  "ancien": "\\[\n\n- \\]",
+  "nouveau": "\\[ \\max_w\\left(w^{T}\\mu\n\n- \\lambda w^{T}\\Sigma w\\right) \\]",
+  "confiance": "moyenne",
+  "justification": "§82 « On peut chercher à optimiser : [trois lignes] sous : [Σw_i=1] et éventuellement : [w_i≥0]. L'optimisation permet donc de formaliser les compromis entre rendement, risque et contraintes. ».",
+  "validation": "Les deux contraintes qui ont survécu (somme des poids égale à 1, poids non négatifs) sont exactement celles de Markowitz, et la phrase de clôture nomme les deux termes : rendement et risque. Le facteur λ et sa place restent un choix d'auteur."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1640,
+  "ancien": "\\[ \\_i w_i=1 \\]",
+  "nouveau": "\\[ \\sum_i w_i=1 \\]",
+  "confiance": "haute",
+  "justification": "§82 « sous : [\\_i w_i=1] ». Le \\sum a été détruit.",
+  "validation": "Rendu : Σ w_i=1."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1644,
+  "ancien": "\\[ w_i \\]",
+  "nouveau": "\\[ w_i\\geq 0 \\]",
+  "confiance": "haute",
+  "justification": "§82 « et éventuellement : [w_i] ». Le \\geq a été détruit.",
+  "validation": "Rendu : w_i≥0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1664,
+  "ancien": "\\[ ^\\* = _ |R()-I|^2 \\]",
+  "nouveau": "\\[ \\theta^{*}=\\arg\\min_\\theta\\|R(\\theta)-I\\|^{2} \\]",
+  "confiance": "haute",
+  "justification": "§83 « Exemple : [^\\*=_ |R()-I|^2] où (R(θ)) représente un rendu et (I) une image cible. ». Le \\theta, le \\arg\\min et le \\| ont été détruits.",
+  "validation": "Moindres carrés entre rendu et image cible."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1676,
+  "ancien": "\\[ x^\\* = \\_x E(x) \\]",
+  "nouveau": "\\[ x^{*}=\\arg\\min_x E(x) \\]",
+  "confiance": "haute",
+  "justification": "§84 « Exemple conceptuel : [x^\\*=\\_x E(x)] ». Le \\arg\\min réduit à \\_.",
+  "validation": "Minimisation d'énergie."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1702,
+  "ancien": "\\[ _ \\_i L_i() \\]",
+  "nouveau": "\\[ \\min_\\theta\\sum_i L_i(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§85 « Une grande partie de ces problèmes peut être formulée sous forme : [_ \\_i L_i()] ». Le \\min_\\theta et le \\sum ont été détruits.",
+  "validation": "Somme de pertes."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1708,
+  "ancien": "\\[ y=Ax+ \\]",
+  "nouveau": "\\[ y=Ax+\\epsilon \\]",
+  "confiance": "haute",
+  "justification": "§86 « à partir d'observations bruitées : [y=Ax+] ». Le \\epsilon a été détruit.",
+  "validation": "Modèle linéaire bruité."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1712,
+  "ancien": "\\[ x^\\* = \\_x |Ax-y|^2\n\n- R(x) \\]",
+  "nouveau": "\\[ x^{*}=\\arg\\min_x\\|Ax-y\\|^{2}\n\n+ \\lambda R(x) \\]",
+  "confiance": "haute",
+  "justification": "§86 « Puis : [trois lignes] Cette formulation apparaît notamment dans : ». Le \\arg\\min, le \\|, le \\lambda et le + de tête de ligne (devenu une puce -) ont été détruits.",
+  "validation": "Régularisation de Tikhonov — reconstruction par moindres carrés régularisés."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1742,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\delta \\]",
+  "confiance": "haute",
+  "justification": "§88 « on peut chercher une perturbation : [vide] maximisant la perte : […] ». La perturbation est nommée par les deux blocs suivants, qui la contiennent.",
+  "validation": "Rendu : δ."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1746,
+  "ancien": "\\[ \\_{} L(x+,y) \\]",
+  "nouveau": "\\[ \\max_{\\|\\delta\\|\\leq\\epsilon}L(x+\\delta,y) \\]",
+  "confiance": "haute",
+  "justification": "§88 « maximisant la perte : [\\_{} L(x+,y)] sous : [||] ». Le \\max, le sous-script complet et le \\delta ont été détruits.",
+  "validation": "Attaque adversariale bornée."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1750,
+  "ancien": "\\[ || \\]",
+  "nouveau": "\\[ \\|\\delta\\|\\leq\\epsilon \\]",
+  "confiance": "haute",
+  "justification": "§88 « sous : [||] On obtient un problème d'optimisation sous contrainte. ». Le résidu || est exactement ce que laisse \\|δ\\|≤ε quand δ et ε (grecs) et \\leq sont détruits.",
+  "validation": "Borne sur la perturbation."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1760,
+  "ancien": "\\[ _x_ {i=1}^{N} f_i(x) \\]",
+  "nouveau": "\\[ \\min_x\\sum_{i=1}^{N}f_i(x) \\]",
+  "confiance": "haute",
+  "justification": "§89 « Lorsque les données ou calculs sont répartis entre plusieurs machines : [_x_ {i=1}^{N} f_i(x)] ». Le \\min et le \\sum ont été détruits.",
+  "validation": "Somme fédérée."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1781,
+  "ancien": "\\[ {k=1}^{K} p_k F_k() \\]",
+  "nouveau": "\\[ \\min_\\theta\\sum_{k=1}^{K}p_kF_k(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§90 « On cherche : [{k=1}^{K} p_k F_k()] ». Le \\min_\\theta et le \\sum ont été détruits.",
+  "validation": "Moyenne pondérée des objectifs locaux — FedAvg."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1806,
+  "ancien": "\\[ x_1,x_2,x_3, \\]",
+  "nouveau": "\\[ x_1,x_2,x_3,\\ldots \\]",
+  "confiance": "haute",
+  "justification": "§91 « on reçoit : [x_1,x_2,x_3,] ». Le \\ldots a été détruit.",
+  "validation": "Flux de données."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1824,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\min_x f(x) \\]",
+  "confiance": "moyenne",
+  "justification": "§92 « Il faut donc parfois optimiser : [vide] sous : [T] ». Le second bloc porte la contrainte de temps ; le premier est l'objectif.",
+  "validation": "Candidat alternatif : \\[ f(x) \\] sans l'opérateur."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1828,
+  "ancien": "\\[ T \\]",
+  "nouveau": "\\[ t\\leq T \\]",
+  "confiance": "haute",
+  "justification": "§92 « sous : [T] ». Le \\leq et le t ont été détruits.",
+  "validation": "Contrainte de latence."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1832,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§92 « Cela introduit un compromis entre : [vide] ». Un seul bloc pour ce qui est annoncé comme un compromis.",
+  "validation": "Candidat : \\[ \\text{qualité de la solution} \\] et \\[ \\text{temps de calcul} \\] ont pu tenir dans ce bloc."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1844,
+  "ancien": "\\[ x \\]",
+  "nouveau": "\\[ \\hat{x} \\]",
+  "confiance": "moyenne",
+  "justification": "§93 « ### Solution exacte [x^\\*] ### Solution approximative [x] ». La solution approchée est notée par un chapeau, détruit.",
+  "validation": "Rendu : x̂. Le §93 oppose x* (exact) à x̂ (approché) ; le chapeau est la notation la plus courante."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1848,
+  "ancien": "\\[ f(x) f(x^\\*) \\]",
+  "nouveau": "\\[ f(\\hat{x})\\leq\\alpha f(x^{*}) \\]",
+  "confiance": "moyenne",
+  "justification": "§93 « avec une garantie : [f(x) f(x^\\*)] dans certains problèmes de minimisation. ». Le résidu montre exactement deux termes séparés par des commandes détruites — donc un opérateur de comparaison et éventuellement un facteur grec, mais aucun signe + ou - n'a survécu.",
+  "validation": "Garantie d'approximation : f(x̂)≤α·f(x*). L'absence de signe + écarte la forme additive f(x̂)≤f(x*)+ε. La restriction « dans certains problèmes de minimisation » est caractéristique du rapport d'approximation α."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1860,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§94 « Un problème peut être facile à formuler mais difficile à résoudre. Il faut donc distinguer : [vide] ».",
+  "validation": "Candidat : \\[ \\text{formuler} \\] et \\[ \\text{résoudre} \\] — l'opposition que la phrase énonce."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1878,
+  "ancien": "\\[ \\_1,\\_2, \\]",
+  "nouveau": "\\[ S_1,S_2,\\ldots \\]",
+  "confiance": "haute",
+  "justification": "§95 « Branch and Bound divise l'espace des solutions : [\\_1,\\_2,] ». Le \\ldots est devenu une virgule, le symbole de sous-ensemble a été détruit.",
+  "validation": "Rendu : S₁,S₂,…"
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1884,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§95 « Schéma : [vide] ».",
+  "validation": "Candidat : un arbre de partition ASCII, analogue à la chaîne du §122."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1892,
+  "ancien": "\\[ x_i{0,1} \\]",
+  "nouveau": "\\[ x_i\\in\\{0,1\\} \\]",
+  "confiance": "haute",
+  "justification": "§96 « Exemple : [x_i{0,1}] devient : [0x_i] On obtient une relaxation continue. ». Le \\in a été détruit, les accolades ont perdu leurs contre-obliques.",
+  "validation": "Rendu : x_i∈{0,1}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1896,
+  "ancien": "\\[ 0x_i \\]",
+  "nouveau": "\\[ 0\\leq x_i\\leq 1 \\]",
+  "confiance": "moyenne",
+  "justification": "§96 « devient : [0x_i] On obtient une relaxation continue. ». Le résidu ne montre que le 0 et la variable : les deux \\leq et le 1 ont été détruits.",
+  "validation": "La relaxation continue d'une variable binaire est nécessairement l'intervalle [0,1] ; le résidu seul ne prouve pas la borne supérieure. Même motif qu'en l. 473 (lot 5a) : à confirmer par l'auteur."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1975,
+  "ancien": "\\[ 01 \\]",
+  "nouveau": "\\[ [0,1] \\]",
+  "confiance": "haute",
+  "justification": "§101 « Si une caractéristique varie entre : [01] ». Les crochets et la virgule ont été détruits.",
+  "validation": "Rendu : [0,1]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 1979,
+  "ancien": "\\[ 010^6 \\]",
+  "nouveau": "\\[ [0,10^{6}] \\]",
+  "confiance": "haute",
+  "justification": "§101 « et une autre entre : [010^6] ». Même destruction.",
+  "validation": "Rendu : [0,10⁶]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2006,
+  "ancien": "\\[ x_tx^\\* \\]",
+  "nouveau": "\\[ x_t\\to x^{*} \\]",
+  "confiance": "haute",
+  "justification": "§103 « Exemple : [x_tx^\\*] ou : [f(x_t)f(x^\\*)] ». Les flèches ont été détruites.",
+  "validation": "Convergence des itérés."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2010,
+  "ancien": "\\[ f(x_t)f(x^\\*) \\]",
+  "nouveau": "\\[ f(x_t)\\to f(x^{*}) \\]",
+  "confiance": "haute",
+  "justification": "§103, second critère.",
+  "validation": "Convergence des valeurs."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2039,
+  "ancien": "\\[\n\n- \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§105 « Le coût d'un optimiseur dépend de : [trois lignes] Pour les modèles modernes, le coût total est souvent dominé par l'évaluation répétée du modèle et des gradients. ».",
+  "validation": "Candidats : \\[ \\text{nombre d'itérations} \\] et \\[ \\text{coût par itération} \\] — les deux facteurs dont le produit donne le coût total annoncé juste après."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2051,
+  "ancien": "\\[ f \\]",
+  "nouveau": "\\[ \\nabla f \\]",
+  "confiance": "haute",
+  "justification": "§106 « ### Premier ordre / Utilisent principalement : [f] ». Le \\nabla a été détruit.",
+  "validation": "Rendu : ∇f."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2064,
+  "ancien": "\\[ ^2f \\]",
+  "nouveau": "\\[ \\nabla^{2}f \\]",
+  "confiance": "haute",
+  "justification": "§106 « ### Second ordre / Utilisent : [^2f] ou une approximation. ». Le \\nabla a été détruit.",
+  "validation": "Rendu : ∇²f."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2135,
+  "ancien": "\\[ f(x)=0 \\]",
+  "nouveau": "\\[ \\nabla f(x)=0 \\]",
+  "confiance": "haute",
+  "justification": "§108 « ## Erreur 1 — Confondre minimum local et global [f(x)=0] ne garantit pas l'optimalité globale. ». Le \\nabla a été détruit.",
+  "validation": "Rendu : ∇f(x)=0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2162,
+  "ancien": "\\[ L_{} \\]",
+  "nouveau": "\\[ L_{\\text{train}} \\]",
+  "confiance": "haute",
+  "justification": "§108 « ## Erreur 6 — Confondre perte d'entraînement et performance réelle [L_{}] n'implique pas nécessairement : [L_{}] ».",
+  "validation": "Même paire qu'au §48."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2166,
+  "ancien": "\\[ L_{} \\]",
+  "nouveau": "\\[ L_{\\text{test}} \\]",
+  "confiance": "haute",
+  "justification": "§108, erreur 6, second terme.",
+  "validation": "Rendu : L_test."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2174,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§109 « Il faut suivre une chaîne : [vide] C'est cette chaîne qui transforme les mathématiques en système exploitable. ».",
+  "validation": "Piste : le §122 (l. 2464-2484) déploie en ASCII une chaîne de dix étapes intacte (Problem → Variables → Objective → Constraints → Model → Optimizer → Iteration → Evaluation → Stopping criterion → Solution → Validation). Le bloc de la l. 2174 en est vraisemblablement le résumé, mais sa forme exacte reste à fixer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2237,
+  "ancien": "\\[ \\_x f(x) \\]",
+  "nouveau": "\\[ \\min_x f(x) \\]",
+  "confiance": "haute",
+  "justification": "§112 forme 1 « → optimisation générale ».",
+  "validation": "Rendu : min_x f(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2243,
+  "ancien": "\\[ \\_x c^Tx \\]",
+  "nouveau": "\\[ \\min_x c^{T}x \\]",
+  "confiance": "haute",
+  "justification": "§112 forme 2 « → programmation linéaire ».",
+  "validation": "Rendu : min_x c^T x."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2247,
+  "ancien": "\\[ Axb \\]",
+  "nouveau": "\\[ Ax\\leq b \\]",
+  "confiance": "haute",
+  "justification": "§112 forme 2 « sous : [Axb] ». Le \\leq a été détruit.",
+  "validation": "Rendu : Ax≤b."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2253,
+  "ancien": "\\[ \\_x f(x) \\]",
+  "nouveau": "\\[ \\min_x f(x) \\]",
+  "confiance": "haute",
+  "justification": "§112 forme 3 « → optimisation contrainte / Lagrangien ».",
+  "validation": "Rendu : min_x f(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2263,
+  "ancien": "\\[ \\_x f(x)+R(x) \\]",
+  "nouveau": "\\[ \\min_x f(x)+R(x) \\]",
+  "confiance": "haute",
+  "justification": "§112 forme 4 « → régularisation ».",
+  "validation": "Rendu : min_x f(x)+R(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2269,
+  "ancien": "\\[ x_{t+1}=x_t-f(x_t) \\]",
+  "nouveau": "\\[ x_{t+1}=x_t-\\eta\\nabla f(x_t) \\]",
+  "confiance": "haute",
+  "justification": "§112 forme 5 « → gradient descent » : [x_{t+1}=x_t-f(x_t)]. Le \\eta et le \\nabla ont été détruits.",
+  "validation": "Rendu : x_{t+1}=x_t−η∇f(x_t). C'est cette forme intacte qui a servi de référence à la l. 759 (lot 5a)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2275,
+  "ancien": "\\[ x_{t+1} = x_t-H^{-1}f \\]",
+  "nouveau": "\\[ x_{t+1}=x_t-H^{-1}\\nabla f \\]",
+  "confiance": "haute",
+  "justification": "§112 forme 6 « → Newton » : [x_{t+1}=x_t-H^{-1}f]. Le \\nabla a été détruit.",
+  "validation": "Rendu : x_{t+1}=x_t−H^{-1}∇f."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2281,
+  "ancien": "\\[ \\_x \\[f(x,)\\] \\]",
+  "nouveau": "\\[ \\min_x\\mathbb{E}[f(x,\\xi)] \\]",
+  "confiance": "haute",
+  "justification": "§112 forme 7 « → optimisation stochastique » : [\\_x \\[f(x,)\\]]. Le \\mathbb{E} et le \\xi ont été détruits.",
+  "validation": "Rendu : min_x 𝔼[f(x,ξ)]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2287,
+  "ancien": "\\[ \\_J() \\]",
+  "nouveau": "\\[ \\max_\\theta J(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§112 forme 8 « → optimisation de politique en reinforcement learning » : [\\_J()]. Le \\max et le \\theta ont été détruits.",
+  "validation": "Rendu : max_θ J(θ)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2339,
+  "ancien": "\\[ f \\]",
+  "nouveau": "\\[ \\nabla f \\]",
+  "confiance": "haute",
+  "justification": "§114, premier item de la liste de structures. Le \\nabla a été détruit.",
+  "validation": "Gradient."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2341,
+  "ancien": "\\[ ^2f \\]",
+  "nouveau": "\\[ \\nabla^{2}f \\]",
+  "confiance": "haute",
+  "justification": "§114, deuxième item : [^2f].",
+  "validation": "Hessienne."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2345,
+  "ancien": "\\[ (x,) \\]",
+  "nouveau": "\\[ \\mathcal{L}(x,\\lambda) \\]",
+  "confiance": "haute",
+  "justification": "§114, quatrième item : [(x,)]. Le \\mathcal{L} et le \\lambda ont été détruits.",
+  "validation": "Lagrangien."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2347,
+  "ancien": "\\[ Axb \\]",
+  "nouveau": "\\[ Ax\\leq b \\]",
+  "confiance": "haute",
+  "justification": "§114 : [Axb]. Le \\leq a été détruit.",
+  "validation": "Rendu : Ax≤b."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2349,
+  "ancien": "\\[ x \\]",
+  "nouveau": "\\[ x\\geq 0 \\]",
+  "confiance": "haute",
+  "justification": "§114 : [x]. Le \\geq a été détruit.",
+  "validation": "Rendu : x≥0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2351,
+  "ancien": "\\[ x{0,1} \\]",
+  "nouveau": "\\[ x\\in\\{0,1\\} \\]",
+  "confiance": "haute",
+  "justification": "§114 : [x{0,1}]. Le \\in a été détruit.",
+  "validation": "Rendu : x∈{0,1}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2353,
+  "ancien": "\\[ ||\\_1 \\]",
+  "nouveau": "\\[ \\|x\\|_1 \\]",
+  "confiance": "haute",
+  "justification": "§114 : [||\\_1]. Le \\| a perdu sa contre-oblique, la variable a été détruite.",
+  "validation": "Norme L1."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2355,
+  "ancien": "\\[ ||\\_2 \\]",
+  "nouveau": "\\[ \\|x\\|_2 \\]",
+  "confiance": "haute",
+  "justification": "§114 : [||\\_2].",
+  "validation": "Norme L2."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2357,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§114, dixième item — bloc vide entre la norme L2 et l'espérance. Deux blocs consécutifs (l. 2357 et l. 2359) manquent dans une liste par ailleurs parfaitement lisible.",
+  "validation": "Candidats : \\[ \\sum_i f_i(x) \\] et \\[ DP[s] \\], tous deux présents ailleurs dans le document (l. 1760 et l. 716)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2359,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§114, onzième item — bloc vide.",
+  "validation": "Voir l. 2357."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2361,
+  "ancien": "\\[ \\[f(x,)\\] \\]",
+  "nouveau": "\\[ \\mathbb{E}[f(x,\\xi)] \\]",
+  "confiance": "haute",
+  "justification": "§114 : [\\[f(x,)\\]]. Le \\mathbb{E} et le \\xi ont été détruits ; les crochets de l'espérance ont survécu.",
+  "validation": "Rendu : 𝔼[f(x,ξ)]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2363,
+  "ancien": "\\[ (f_1,,f_k) \\]",
+  "nouveau": "\\[ (f_1,\\ldots,f_k) \\]",
+  "confiance": "haute",
+  "justification": "§114 : [(f_1,,f_k)]. Le \\ldots est devenu une virgule.",
+  "validation": "Vecteur d'objectifs."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2379,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§115 « Le Domaine I répond notamment à : Comment une fonction varie-t-elle ? Le Domaine J demande : Comment exploiter cette variation pour trouver une solution optimale ? Ainsi : [vide] Et : [vide] ».",
+  "validation": "Candidats : \\[ \\nabla f(x)=0 \\] puis \\[ x_{t+1}=x_t-\\eta\\nabla f(x_t) \\] — la condition d'optimalité, puis l'algorithme qui l'exploite."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2383,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§115, second bloc de la relation avec le Domaine I.",
+  "validation": "Voir l. 2379."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2389,
+  "ancien": "\\[ \\_x \\[f(x,)\\] \\]",
+  "nouveau": "\\[ \\min_x\\mathbb{E}[f(x,\\xi)] \\]",
+  "confiance": "haute",
+  "justification": "§116 « L'optimisation peut porter sur une espérance : [\\_x \\[f(x,)\\]] ».",
+  "validation": "Identique à la forme 7."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2397,
+  "ancien": "\\[ ^\\* = _ L() \\]",
+  "nouveau": "\\[ \\theta^{*}=\\arg\\min_\\theta L(\\theta) \\]",
+  "confiance": "haute",
+  "justification": "§117 « L'estimation statistique peut devenir : [^\\*=_ L()] ou : […] Le maximum de vraisemblance est donc naturellement relié à l'optimisation. ».",
+  "validation": "Moindres carrés / minimisation de perte."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2401,
+  "ancien": "\\[ ^\\* = _ () \\]",
+  "nouveau": "\\[ \\theta^{*}=\\arg\\max_\\theta \\mathcal{L}(\\theta) \\]",
+  "confiance": "moyenne",
+  "justification": "§117, second bloc : [^\\*=_ ()] — la fonction a été détruite, ce qui désigne une commande (\\mathcal{L} ou \\ell), pas une lettre latine. La phrase qui suit nomme le maximum de vraisemblance.",
+  "validation": "Maximum de vraisemblance. Le symbole de la vraisemblance (𝓛 ou ℓ) est un choix d'auteur."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2409,
+  "ancien": "\\[ x \\]",
+  "nouveau": "\\[ x\\in\\mathcal{X} \\]",
+  "confiance": "haute",
+  "justification": "§118 « Lorsque l'espace de solutions est discret : [x] l'optimisation combinatoire devient centrale. ».",
+  "validation": "Rendu : x∈𝓧 — identique à la l. 690."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2444,
+  "ancien": "\\[ H(x)p=-f(x) \\]",
+  "nouveau": "\\[ H(x)p=-\\nabla f(x) \\]",
+  "confiance": "haute",
+  "justification": "§120 « Newton, par exemple, nécessite de résoudre : [H(x)p=-f(x)] plutôt que nécessairement de calculer explicitement (H^{-1}). ». Le \\nabla a été détruit.",
+  "validation": "Système de Newton — direction de descente."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2573,
+  "ancien": "\\[\n\n- \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§126 « Une bonne expérimentation compare : [trois lignes] et mesure : [trois lignes] Il faut éviter de conclure sur une seule exécution… ».",
+  "validation": "Candidats : comparer \\[ \\text{plusieurs algorithmes} \\] / \\[ \\text{plusieurs taux d'apprentissage} \\], mesurer \\[ \\text{la convergence} \\] / \\[ \\text{la stabilité entre runs} \\] (cette dernière expression figure l. 2573)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2579,
+  "ancien": "\\[\n\n- \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§126, second bloc : « et mesure : [trois lignes] ».",
+  "validation": "Voir l. 2573."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2595,
+  "ancien": "\\[ f(x^\\*+) \\]",
+  "nouveau": "\\[ f(x^{*}+\\delta) \\]",
+  "confiance": "haute",
+  "justification": "§127 « Il faut parfois demander : [f(x^\\*)] mais aussi : [f(x^\\*+)] pour de petites perturbations (δ). ». Le \\delta a été détruit ; la prose qui suit le nomme.",
+  "validation": "Évaluation de la robustesse — la valeur de l'objectif après perturbation."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2607,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§128 « Par exemple : [quatre blocs vides] Comprendre l'optimisation signifie donc aussi comprendre les **compromis**. ».",
+  "validation": "Candidats : coût / qualité / temps / robustesse — les quatre critères énumérés au §153 (l. 3355-3358)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2609,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§128, deuxième bloc.",
+  "validation": "Voir l. 2607."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2611,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§128, troisième bloc.",
+  "validation": "Voir l. 2607."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2613,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§128, quatrième bloc.",
+  "validation": "Voir l. 2607."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2649,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§131 « ### Réseau / Minimiser la latence ou maximiser le débit. Ainsi : [vide] Cette formule est volontairement conceptuelle… ».",
+  "validation": "Candidat : \\[ \\min\\ \\text{latence}\\ \\text{ou}\\ \\max\\ \\text{débit} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2688,
+  "ancien": "\\[ (\n\n- ) \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§131 « Exemple conceptuel : [trois lignes : « ( », ligne vide, « - ) »] ». Même gabarit qu'en l. 1534.",
+  "validation": "Voir l. 1534."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2722,
+  "ancien": "\\[ a_1,a_2,,a_T \\]",
+  "nouveau": "\\[ a_1,a_2,\\ldots,a_T \\]",
+  "confiance": "haute",
+  "justification": "§133 « ### Planification / Choisir une séquence d'actions : [a_1,a_2,,a_T] ». Le \\ldots est devenu une virgule.",
+  "validation": "Rendu : a₁,a₂,…,a_T."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2732,
+  "ancien": "\\[\n\n- \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§133 « ### Coût / Minimiser : [trois lignes] ».",
+  "validation": "Candidat : \\[ C(a) \\] — le coût d'une action, par symétrie avec le bloc J(a)=Q(a)−C(a)−T(a)−E(a) de la l. 2746."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2746,
+  "ancien": "\\[ J() = Q\n\n- C\n- T\n- E \\]",
+  "nouveau": "\\[ J(a)=Q(a)\n\n- C(a)\n- T(a)\n- E(a) \\]",
+  "confiance": "haute",
+  "justification": "§133 « On peut donc construire : [cinq lignes] où : (Q) = qualité ; (C) = coût ; (T) = temps ; (E) = erreurs. ». Les lettres ont survécu, leurs arguments et les parenthèses ont été détruits.",
+  "validation": "Objectif multi-critères d'un agent : qualité moins coût, moins temps, moins erreurs. Les quatre lettres et leurs sens sont donnés mot pour mot par la liste qui suit."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2765,
+  "ancien": "\\[ A_1,A_2,,A_n \\]",
+  "nouveau": "\\[ A_1,A_2,\\ldots,A_n \\]",
+  "confiance": "haute",
+  "justification": "§134 « Supposons plusieurs agents : [A_1,A_2,,A_n] ». Le \\ldots est devenu une virgule.",
+  "validation": "Rendu : A₁,A₂,…,A_n."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2771,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§134 « Le système doit déterminer : [vide] » — un seul bloc. Les objectifs, eux, sont donnés en liste et ont survécu : minimiser temps, coût, redondance ; maximiser qualité, fiabilité, couverture (l. 2775-2783).",
+  "validation": "Candidat : \\[ x_{ij}\\in\\{0{,}1\\} \\] — la variable d'affectation d'une tâche à un agent, puisque la section se conclut sur « un problème d'allocation et de scheduling » (l. 2785)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2791,
+  "ancien": "\\[ J =\n\n- \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§135 Stane OS « Dans un système personnel intelligent, on peut théoriquement optimiser : [J = / - ] Le système peut alors décider : quel modèle utiliser, quel outil appeler… ».",
+  "validation": "Même gabarit qu'au §133 : un objectif en deux termes. Candidat : \\[ J=Q\n\n- C \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2811,
+  "ancien": "\\[ h^\\* = _h L_{}(h) \\]",
+  "nouveau": "\\[ h^{*}=\\arg\\min_h L_{\\text{val}}(h) \\]",
+  "confiance": "haute",
+  "justification": "§136 « On cherche : [h^\\*=_h L_{}(h)] où (h) représente les hyperparamètres. ». Le \\arg\\min et le contenu de \\text{…} ont été détruits.",
+  "validation": "Rendu : h*=argmin_h L_val(h)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2817,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§136 « Cela donne : [vide] ».",
+  "validation": "Candidat : \\[ h_1,h_2,\\ldots \\] — la suite des configurations retenues."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2823,
+  "ancien": "\\[ P=(a_1,a_2,,a_n) \\]",
+  "nouveau": "\\[ P=(a_1,a_2,\\ldots,a_n) \\]",
+  "confiance": "haute",
+  "justification": "§137 « Un plan est une séquence : [P=(a_1,a_2,,a_n)] ».",
+  "validation": "Rendu : P=(a₁,a₂,…,a_n)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2827,
+  "ancien": "\\[ J(P) = (P) \\]",
+  "nouveau": "\\[ J(P)=\\text{coût}(P) \\]",
+  "confiance": "moyenne",
+  "justification": "§137 « On peut définir : [J(P)=(P)] et chercher : [P^\\*=\\_P J(P)] ». Le membre de droite ne conserve que les parenthèses : la fonction a été détruite, donc c'était une commande (\\text{…}).",
+  "validation": "Le coût d'un plan. Le libellé exact (coût, qualité, valeur) est un choix d'auteur."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2831,
+  "ancien": "\\[ P^\\* = \\_P J(P) \\]",
+  "nouveau": "\\[ P^{*}=\\arg\\min_P J(P) \\]",
+  "confiance": "haute",
+  "justification": "§137 « et chercher : [P^\\*=\\_P J(P)] ». Le \\arg\\min réduit à \\_.",
+  "validation": "Rendu : P*=argmin_P J(P)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2839,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§138 « Chaîne : [vide] ».",
+  "validation": "Candidat : \\[ \\text{perception}\\to\\text{planification}\\to\\text{contrôle} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2847,
+  "ancien": "\\[\n\n- \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§139 « Un système logistique peut optimiser simultanément : [trois lignes] Cela produit souvent des problèmes multi-objectifs, combinatoires ou mixtes. ».",
+  "validation": "Candidats : \\[ \\text{coût} \\] et \\[ \\text{délai} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2857,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§140 « On peut optimiser : [cinq blocs vides] La théorie des graphes et l'optimisation se complètent alors directement. ».",
+  "validation": "Candidats : latence, débit, coût, fiabilité, énergie."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2859,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§140, deuxième bloc.",
+  "validation": "Voir l. 2857."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2861,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§140, troisième bloc.",
+  "validation": "Voir l. 2857."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2863,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§140, quatrième bloc.",
+  "validation": "Voir l. 2857."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2865,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§140, cinquième bloc.",
+  "validation": "Voir l. 2857."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2879,
+  "ancien": "\\[ x_0,x_1,x_2, \\]",
+  "nouveau": "\\[ x_0,x_1,x_2,\\ldots \\]",
+  "confiance": "haute",
+  "justification": "§141 projet 1 « puis la trajectoire : [x_0,x_1,x_2,] ». Le \\ldots a été détruit.",
+  "validation": "Rendu : x₀,x₁,x₂,…"
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2928,
+  "ancien": "\\[ Axb \\]",
+  "nouveau": "\\[ Ax\\leq b \\]",
+  "confiance": "haute",
+  "justification": "§143 projet 4 « sous : [Axb] ». Le \\leq a été détruit.",
+  "validation": "Rendu : Ax≤b."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 2994,
+  "ancien": "\\[ J(a) = Q(a)\n\n- C(a)\n- T(a) \\]",
+  "nouveau": "\\[ J(a)=Q(a)\n\n- C(a)\n- T(a) \\]",
+  "confiance": "haute",
+  "justification": "§145 projet avancé « Pour chaque action : [quatre lignes] L'agent choisit l'action maximisant (J). ». Même gabarit que la l. 2746, sans le terme d'erreur.",
+  "validation": "Objectif d'action : qualité moins coût moins temps."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3042,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§147 exercice 2 « Appliquer gradient descent à : [f(x)=x²] avec : [vide] et : [x_0=10] Calculer plusieurs itérations. ». Le bloc manquant est le pas d'apprentissage.",
+  "validation": "Candidat : \\[ \\eta=0{,}1 \\]. La valeur est un choix d'auteur — un exercice a besoin d'un nombre, mais ce nombre ne se déduit pas du document."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3054,
+  "ancien": "\\[ \\_{x,y}x<sup>2+y</sup>2 \\]",
+  "nouveau": "\\[ \\min_{x,y}x^{2}+y^{2} \\]",
+  "confiance": "haute",
+  "justification": "§147 exercice 3 « Résoudre avec Lagrange : [\\_{x,y}x<sup>2+y</sup>2] sous : [x+y=1] ». Le \\min réduit à \\_ ; l'artefact <sup> a fusionné les deux exposants.",
+  "validation": "Exercice canonique de Lagrange : minimiser x²+y² sous x+y=1, dont la solution est x=y=1/2. Le second bloc (l. 3058) confirme la contrainte."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3091,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§152 « Demander à une IA : « … Identifie d'abord les variables, l'objectif, les contraintes… » Puis comparer : [vide] ».",
+  "validation": "Candidat : \\[ \\text{la modélisation produite} \\] et \\[ \\text{la vôtre} \\] — l'exercice consiste à confronter deux modélisations."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3372,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\min_{x\\in\\mathcal{X}}f(x) \\]",
+  "confiance": "moyenne",
+  "justification": "§154 « Le Domaine J peut être résumé par la chaîne : [vide] Pour le machine learning : [vide] Pour un système : [vide] ». Le premier bloc résume le domaine entier.",
+  "validation": "Candidat alternatif : \\[ \\min_x f(x)\\ \\text{sous}\\ g_i(x)\\leq 0 \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3376,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\min_\\theta L(\\theta) \\]",
+  "confiance": "moyenne",
+  "justification": "§154 « Pour le machine learning : [vide] ».",
+  "validation": "Forme documentée en l. 1004 et l. 1388."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3380,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§154 « Pour un système : [vide] ».",
+  "validation": "Candidat : \\[ J=Q-C-T-E \\] (l. 2746)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3386,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§155 « La progression construite jusqu'ici peut être comprise comme : [dix blocs vides] La transition : [I→J] est particulièrement importante. ».",
+  "validation": "Piste : le corpus compte dix domaines avant J (A, B, C, D, E, F, G, H, I puis J) et le bloc survivant \\[ IJ \\] montre que la notation est une flèche entre deux lettres. Candidat : les dix domaines A→…→J, la transition I→J étant celle que le texte met en avant."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3388,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§155, deuxième bloc.",
+  "validation": "Voir l. 3386."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3390,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§155, troisième bloc.",
+  "validation": "Voir l. 3386."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3392,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§155, quatrième bloc.",
+  "validation": "Voir l. 3386."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3394,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§155, cinquième bloc.",
+  "validation": "Voir l. 3386."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3396,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§155, sixième bloc.",
+  "validation": "Voir l. 3386."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3398,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§155, septième bloc.",
+  "validation": "Voir l. 3386."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3400,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§155, huitième bloc.",
+  "validation": "Voir l. 3386."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3402,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§155, neuvième bloc.",
+  "validation": "Voir l. 3386."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3404,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§155, dixième bloc.",
+  "validation": "Voir l. 3386."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3414,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\nabla f \\]",
+  "confiance": "moyenne",
+  "justification": "§155 « Le calcul différentiel fournit les outils permettant de comprendre : [vide] L'optimisation transforme ces informations en : [vide] Et le machine learning assemble ensuite : [vide] ».",
+  "validation": "Le §115 pose que le Domaine I répond à « Comment une fonction varie-t-elle ? », et le §114 ouvre sa liste de structures par ∇f. Candidat alternatif : \\[ \\nabla f,\\nabla^{2}f \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3418,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ x_{t+1}=x_t-\\eta\\nabla f(x_t) \\]",
+  "confiance": "moyenne",
+  "justification": "§155, deuxième maillon : « L'optimisation transforme ces informations en : [vide] ».",
+  "validation": "Candidat alternatif : \\[ \\min_x f(x) \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3422,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\min_\\theta L(\\theta) \\]",
+  "confiance": "moyenne",
+  "justification": "§155, troisième maillon : « Et le machine learning assemble ensuite : [vide] pour produire des systèmes capables d'apprendre. ».",
+  "validation": "Candidat alternatif : \\[ \\theta^{*}=\\arg\\min_\\theta L(\\theta) \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3432,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{l'objectif} \\]",
+  "confiance": "moyenne",
+  "justification": "§156 « **Qu'est-ce que je cherche à améliorer ?** [vide] ». La question est intacte en gras ; le bloc est sa réponse.",
+  "validation": "Primitive nommée au §3.2 (fonction objectif) et question 1 du §110 (« Que veut-on optimiser ? »). Le libellé exact est un choix d'auteur ; la case sémantique, elle, est fixée par la question."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3436,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{les variables} \\]",
+  "confiance": "moyenne",
+  "justification": "§156 « **Qu'est-ce que je peux modifier ?** [vide] ».",
+  "validation": "Primitive nommée au §3.1 (variable de décision) et question 2 du §110."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3440,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{les contraintes} \\]",
+  "confiance": "moyenne",
+  "justification": "§156 « **Qu'est-ce que je n'ai pas le droit de violer ?** [vide] ».",
+  "validation": "Primitive nommée au §3.5 (contrainte) et question 3 du §110."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3444,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{la fonction objectif} \\]",
+  "confiance": "moyenne",
+  "justification": "§156 « **Comment mesurer une amélioration ?** [vide] ».",
+  "validation": "Primitive nommée au §3.2 et au §125 (métriques de diagnostic)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3448,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\nabla f \\]",
+  "confiance": "moyenne",
+  "justification": "§156 « **Puis-je exploiter les dérivées ?** [vide] ».",
+  "validation": "Question 5 du §110 (« La fonction est-elle différentiable ? ») et premier item du §114."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3452,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{convexité} \\]",
+  "confiance": "moyenne",
+  "justification": "§156 « **Le problème est-il convexe ?** [vide] ».",
+  "validation": "Question 6 du §110, reprise mot pour mot. Le §111 oppose « convexe / non convexe »."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3456,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ x\\in\\{0,1\\} \\]",
+  "confiance": "moyenne",
+  "justification": "§156 « **Les solutions sont-elles discrètes ?** [vide] ».",
+  "validation": "Question 7 du §110 (« continu ou discret ? ») ; le §114 donne x∈{0,1} comme structure de la discrétion."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3460,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{optimisation bayésienne} \\]",
+  "confiance": "moyenne",
+  "justification": "§156 « **L'évaluation est-elle coûteuse ?** [vide] ».",
+  "validation": "Question 8 du §110, et le §113 répond par une liste intacte : « Optimisation coûteuse — optimisation bayésienne ; surrogate models. »"
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3464,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ (f_1,\\ldots,f_k) \\]",
+  "confiance": "moyenne",
+  "justification": "§156 « **Ai-je plusieurs objectifs ?** [vide] ».",
+  "validation": "Le §114 se termine sur (f₁,…,f_k), et le §111 oppose « mono-objectifs / multi-objectifs »."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3468,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ x^{*}\\ \\text{ou}\\ \\hat{x} \\]",
+  "confiance": "moyenne",
+  "justification": "§156 « **Ai-je besoin d'une solution exacte ?** [vide] ».",
+  "validation": "Question 9 du §110, et le §93 oppose exactement \\[ x^{\\*} \\] et la solution approchée."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3476,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{un problème réel} \\]",
+  "confiance": "moyenne",
+  "justification": "§157 « Le Domaine J est suffisamment maîtrisé lorsque, face à un nouveau problème informatique, l'on peut spontanément effectuer la transformation : [vide] puis : [vide] puis : [vide] et enfin : [vide] ».",
+  "validation": "Le §158, qui suit immédiatement, décrit cette transformation en prose intacte : l'optimisation « transforme une question générale « Que pourrais-je faire ? » en une question mathématiquement exploitable ». Les quatre maillons sont donc : problème → modèle → méthode → solution validée."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3480,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{un modèle mathématique} \\]",
+  "confiance": "moyenne",
+  "justification": "§157, deuxième maillon.",
+  "validation": "Voir l. 3476."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3484,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{une méthode adaptée} \\]",
+  "confiance": "moyenne",
+  "justification": "§157, troisième maillon.",
+  "validation": "Voir l. 3476."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3488,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{une solution validée} \\]",
+  "confiance": "moyenne",
+  "justification": "§157, quatrième maillon.",
+  "validation": "Voir l. 3476."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3506,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\min_\\theta L(\\theta) \\]",
+  "confiance": "moyenne",
+  "justification": "§158 « En machine learning : [vide] ». Le §2 (l. 65-69) pose exactement la même rubrique et la même forme.",
+  "validation": "Reprise du §2, lisible en l. 1004."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3510,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\min_\\tau J(\\tau) \\]",
+  "confiance": "moyenne",
+  "justification": "§158 « En robotique : [vide] ». Le §2 (l. 95-99) pose « Chercher une trajectoire : θ*=argmin_θ J(θ) ».",
+  "validation": "Reprise du §2."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3514,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\min\\sum_{i,j}c_{ij}x_{ij} \\]",
+  "confiance": "moyenne",
+  "justification": "§158 « En logistique : [vide] ». Le §2 (l. 77-83) pose « Minimiser : [coûts] » et le §78 détaille le problème.",
+  "validation": "Reprise du §2 — coût de transport."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3518,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\min_P C(P) \\]",
+  "confiance": "moyenne",
+  "justification": "§158 « En réseaux : [vide] ». Le §2 (l. 71-75) pose « Chercher le chemin minimisant le coût : P*=argmin_P C(P) ».",
+  "validation": "Reprise du §2."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3522,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\max_\\theta J(\\theta) \\]",
+  "confiance": "moyenne",
+  "justification": "§158 « En systèmes intelligents : [vide] ». Forme 8 du §112 (l. 2287) : max_θ J(θ) → optimisation de politique en reinforcement learning.",
+  "validation": "Le §133 propose une alternative multi-critères : J=Q−C−T−E."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3526,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§158 « Et dans l'ingénierie logicielle : [vide] ». Rubrique absente du §2 : aucun équivalent survivant dans le document.",
+  "validation": "Candidat : \\[ \\min\\ \\text{coût}\\ \\text{sous}\\ \\text{contrainte de qualité} \\] — d'après la question 10 du §110 (« Quel compromis entre qualité et temps de calcul est acceptable ? »)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine J — Optimisation.md",
+  "ligne": 3534,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§158 « Le Domaine I explique comment une fonction change. Le Domaine J explique comment exploiter cette information pour rechercher une solution. Ensemble : [vide] constitue l'une des chaînes mathématiques fondamentales de l'intelligence artificielle moderne. ».",
+  "validation": "Candidat : \\[ I\\to J \\] — la notation employée au §155."
+ }
+]

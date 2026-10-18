@@ -40,7 +40,31 @@ complète rendrait le chantier infini, parce qu'une part des blocs ne peut pas �
 | **Total** | **~659** | **~2 370** | | **~1 200** |
 
 ¹ L'inventaire automatique sous-estime : **+55 %** de défauts découverts à la lecture sur K,
-**+115 %** sur L. Le facteur 1,8 retenu ici est prudent ; il sera révisé document par document.
+**+115 %** sur L, **+105 %** sur I. Le facteur 1,8 retenu dans ce tableau est donc trop bas ; voir
+le recalibrage du §2 bis.
+
+## 2 bis. Recalibrage — mesuré sur le document I (2026-10-18)
+
+Le document I est le premier à avoir été lu **bloc par bloc en intégralité**, et non à partir du
+seul inventaire. La mesure corrige l'estimation ci-dessus :
+
+| Grandeur | Mesure sur I |
+|---|---:|
+| Blocs d'affichage | 318 |
+| Défauts signalés par l'inventaire | 109 |
+| **Blocs réellement dégradés (lecture intégrale)** | **223** |
+| Sous-estimation de l'inventaire | **× 2,05** |
+| **Part des blocs dégradés** | **70 %** |
+
+Deux conséquences, à prendre comme des faits et non comme des opinions :
+
+1. **Le total restant est plus élevé que les ~1 200 annoncés.** En appliquant le ratio de 70 % aux
+   ~2 060 blocs restants des documents à équations, on obtient **1 100 à 1 600 blocs** à traiter,
+   selon la densité mathématique de chaque document. I en est l'un des plus denses ; les documents
+   « Ai Technical Litteracy » en sont les moins denses. L'intervalle sera resserré à mesure que
+   chaque document sera mesuré.
+2. **L'inventaire automatique ne peut servir qu'à ordonner le travail, jamais à le chiffrer.** Il
+   reste utile pour désigner les sections à lire en priorité.
 
 ## 3. Les deux flux
 
@@ -132,7 +156,26 @@ des constats et non des objections :
 
 ## 6. Le chemin critique, c'est vous
 
-Le flux B est le facteur limitant. Sur le document L, 44 blocs ont demandé 11 arbitrages ; au
+### Avant de classer un bloc en « inconnue », chercher une structure équivalente
+
+Règle ajoutée le 2026-10-18, à la suite du document N. Un bloc vide n'est pas irrécupérable
+parce que son contenu est absent : il l'est seulement si **rien d'autre dans le document ne dit la
+même chose**. Or c'est souvent faux. Trois structures échappent à la destruction, parce qu'elles ne
+sont pas des blocs d'affichage :
+
+| Structure | Pourquoi elle survit |
+|---|---|
+| **Tableaux Markdown** | la destruction porte sur le LaTeX, pas sur les tables |
+| **Arbres ASCII** (flèches `│ ├ └ ↓`) | texte brut |
+| **Formules mentales rédigées en prose** | texte brut |
+
+Sur le document N, ces trois structures ont fourni **22 candidats** là où la lecture des blocs
+seuls aurait conclu à l'impasse : le tableau du §164 (7 blocs), l'arbre du §163 (2 blocs), la
+formule mentale en fin de document (6 blocs), les réponses croisées du §117 (6 blocs).
+
+Cette vérification est désormais une étape obligatoire, avant tout classement en « inconnue ».
+
+### Le flux B reste le facteur limitant. Sur le document L, 44 blocs ont demandé 11 arbitrages ; au
 rythme observé, le corpus en demandera **plusieurs centaines**. Avec le protocole « un échange par
 document », la charge devient tenable : une quinzaine de réponses de votre part sur la durée du
 chantier, chacune portant sur un tableau.
@@ -144,6 +187,8 @@ Sans ce protocole, le chantier peut durer indéfiniment. C'est le point à valid
 | Risque | Gravité | Parade |
 |---|---|---|
 | Le flux B s'accumule plus vite qu'il ne se résorbe | **Haute** | protocole par lot (§3) + repli « contenu perdu » |
+| Le volume réel dépasse l'estimation (mesuré : ×2 sur I) | **Haute** | mesure dès l'ouverture de chaque document ; l'estimation est révisée à chaque lot, jamais figée |
+| Les sections de synthèse concentrent les blocs non restituables | Moyenne | elles sont traitées en fin de document, en une seule salve d'arbitrage |
 | Introduire une reconstruction fausse | Haute | confiance déclarée, test de validation, validation par lot |
 | Fatigue de relecture → baisse de rigueur | Moyenne | un document à la fois ; rejeu systématique de l'inventaire après application |
 | Réinitialisation de l'environnement | Moyenne | tout lot validé est commité immédiatement ; les diffs sont régénérables |

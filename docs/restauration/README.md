@@ -140,13 +140,11 @@ toucher aux autres.
 |---:|---|---|
 | 1 | **K** — 18 défauts signalés, **30 traités** | domaine le plus utile au produit, équations canoniques — **terminé, 0 défaut restant** (lots 1 et 1 bis) |
 | 2 | **L** — analyse numérique | socle des critères de validation ; 61 signalés, **131 au total**, 102 appliqués — **33 blocs en attente de l'auteur** |
-| 3 | **I** — calcul différentiel | 109 défauts, socle des systèmes continus |
-| 4 | **N** — transformées | 104 défauts, utile aux composants de signal |
-| 5 | J, H, G, M, O | 387 défauts, utilité indirecte |
-| 6 | F, Q, P, UI/UX | 45 défauts |
-| 3 | I, N, J | ordre du plan d'achèvement (§4) |
-| 4-9 | H, G, M, O, F, Q, P, UI/UX, E/R/S/U, « Ai Technical Litteracy » | voir `PLAN-ACHEVEMENT.md` |
-| 10 | A, B, C, D | restructuration (voie 2) — **chantier distinct, périmètre à confirmer** |
+| 3 | **I** — calcul différentiel | 109 signalés, **223 au total** (lecture intégrale des 318 blocs) — lots 3a (64) et 3b (159) proposés, **en attente de validation** |
+| 4 | **N** — transformées | 84 signalés, lecture intégrale des 248 blocs — lots 4a (75) et 4b (104) proposés, **en attente de validation** |
+| 5 | **J** — optimisation | 166 signalés, **119 observés** (lecture intégrale des 332 blocs — le plus gros document) — **lots 5a (102 entrées) et 5b (186) proposés, en attente de validation** — **document entièrement parcouru** |
+| 6-9 | H, G, M, O, F, Q, P, UI/UX, E/R/S/U, « Ai Technical Litteracy » | voir `PLAN-ACHEVEMENT.md` |
+| 10 | A, B, C, D | restructuration (voie 2) — **chantier distinct, périmètre confirmé dans le périmètre d'achèvement** |
 
 > **Décision du porteur (2026-10-18) : le chantier doit être ACHEVÉ avant d'ouvrir la phase 2.**
 > L'ordre ci-dessous est donc devenu un plan d'achèvement, détaillé dans

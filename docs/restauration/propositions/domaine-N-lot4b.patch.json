@@ -1,0 +1,938 @@
+[
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1309,
+  "ancien": "\\[ z(t)=x(t)+i{x(t)} \\]",
+  "nouveau": "\\[ z(t)=x(t)+i\\mathcal{H}\\{x(t)\\} \\]",
+  "confiance": "haute",
+  "justification": "§65 transformée de Hilbert « permet de construire le signal analytique : [z(t)=x(t)+i{x(t)}] ». Le \\mathcal{H} a été détruit, ses accolades ont survécu — même signature que \\mathcal{F} et \\mathcal{L}.",
+  "validation": "Rendu : z(t)=x(t)+i𝓗{x(t)}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1350,
+  "ancien": "\\[ x ax \\]",
+  "nouveau": "\\[ x\\to ax \\]",
+  "confiance": "haute",
+  "justification": "§67 transformée de Mellin « Elle est conceptuellement intéressante lorsque : [x ax] joue un rôle fondamental. » — la flèche a été détruite, laissant deux termes accolés.",
+  "validation": "Rendu : x → ax (changement d'échelle)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1389,
+  "ancien": "\\[ x=\\_k c_k_k \\]",
+  "nouveau": "\\[ x=\\sum_k c_k\\phi_k \\]",
+  "confiance": "haute",
+  "justification": "§69 « Un vecteur (x) peut être représenté dans une autre base : [x=\\_k c_k_k] ». Le \\sum réduit à \\_, le \\phi détruit (résidu _k).",
+  "validation": "Rendu : x=Σ c_k φ_k."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1409,
+  "ancien": "\\[ x^N \\]",
+  "nouveau": "\\[ x\\in\\mathbb{R}^{N} \\]",
+  "confiance": "haute",
+  "justification": "§70 « Pour un vecteur : [x^N] une transformée discrète peut souvent s'écrire : ». Le \\in et le \\mathbb ont été détruits.",
+  "validation": "Rendu : x ∈ ℝ^N."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1417,
+  "ancien": "\\[ T^{NN} \\]",
+  "nouveau": "\\[ T\\in\\mathbb{R}^{N\\times N} \\]",
+  "confiance": "haute",
+  "justification": "§70 « où : [T^{NN}] est une matrice de transformation. » — \\in, \\mathbb et \\times détruits ; les deux N ont survécu en exposant.",
+  "validation": "Rendu : T ∈ ℝ^{N×N}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1427,
+  "ancien": "\\[ {\\_k} \\]",
+  "nouveau": "\\[ \\{\\phi_k\\} \\]",
+  "confiance": "haute",
+  "justification": "§71 base orthonormale « Une famille : [{\\_k}] est orthonormale si : ». Le \\phi a été détruit à l'intérieur des accolades.",
+  "validation": "Rendu : {φ_k}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1431,
+  "ancien": "\\[ \\_i,_j =_ {ij} \\]",
+  "nouveau": "\\[ \\langle\\phi_i,\\phi_j\\rangle=\\delta_{ij} \\]",
+  "confiance": "haute",
+  "justification": "§71 « est orthonormale si : [\\_i,_j =_ {ij}] ». Le \\langle, le \\rangle, les deux \\phi et le \\delta ont été détruits ; les virgules sont le résidu de la forme.",
+  "validation": "Rendu : ⟨φ_i,φ_j⟩=δ_ij."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1449,
+  "ancien": "\\[ x T(x) \\]",
+  "nouveau": "\\[ x\\to T(x) \\]",
+  "confiance": "haute",
+  "justification": "§72 parcimonie « Conceptuellement : [x T(x)] avec : ». La flèche a été détruite.",
+  "validation": "Rendu : x → T(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1453,
+  "ancien": "\\[ T(x)\n\n\\]",
+  "nouveau": "\\[ T(x)=(c_1,\\ldots,c_n)\n\\text{avec la plupart des } c_i\\approx 0 \\]",
+  "confiance": "moyenne",
+  "justification": "§72 « avec : [T(x) … ] Cela est extrêmement intéressant pour : - compression ; - débruitage ; … ». Le bloc occupe trois lignes : le contenu décrivait la structure du vecteur transformé.",
+  "validation": "Le candidat traduit la phrase qui précède (« un grand nombre de coefficients proches de zéro »). Formulation à confirmer."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1469,
+  "ancien": "\\[ c_i’=\n\n\\]",
+  "nouveau": "\\[ c_i'=\\begin{cases}c_i&\\text{si }|c_i|>\\lambda\\\\ 0&\\text{sinon}\\end{cases} \\]",
+  "confiance": "haute",
+  "justification": "§73 seuil et débruitage « Une stratégie simple consiste à supprimer les petits coefficients : [trois lignes vides] Puis : [x'=T^{-1}(c')] ». Le bloc sur trois lignes et la retransformée qui suit imposent une définition par cas.",
+  "validation": "Seuillage dur. Le seuil λ n'est pas nommé dans la section : proposé par cohérence."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1485,
+  "ancien": "\\[ S_(x) = x,\\_{|x|} \\]",
+  "nouveau": "\\[ S_\\lambda(x)=x\\cdot\\mathbf{1}_{|x|>\\lambda} \\]",
+  "confiance": "haute",
+  "justification": "§74 hard thresholding. Résidu S_(x)=x,\\_{|x|} : le \\lambda a été détruit, le \\cdot est devenu une virgule, et le \\mathbf{1} (indicatrice) a disparu en ne laissant que \\_.",
+  "validation": "Rendu : S_λ(x)=x·1_{|x|>λ}. Définition standard du seuillage dur."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1489,
+  "ancien": "\\[ S_(x) = (x) (|x|-,0) \\]",
+  "nouveau": "\\[ S_\\lambda(x)=\\mathrm{sign}(x)\\max(|x|-\\lambda,0) \\]",
+  "confiance": "haute",
+  "justification": "§74 soft thresholding. Résidu (x)(|x|-,0) : \\mathrm{sign} et \\max détruits, leurs parenthèses conservées. Le \\lambda a disparu.",
+  "validation": "Rendu : S_λ(x)=sign(x)·max(|x|−λ,0). Définition standard du seuillage doux."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1505,
+  "ancien": "\\[ mn \\]",
+  "nouveau": "\\[ m\\ll n \\]",
+  "confiance": "haute",
+  "justification": "§75 acquisition comprimée « avec : [m n] mais avec des hypothèses adaptées sur (x), (A) et la parcimonie. » — le \\ll a été détruit ; le contexte (peu de mesures, signal parcimonieux) impose l'inégalité large.",
+  "validation": "Rendu : m ≪ n."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1527,
+  "ancien": "\\[ z=f_(x) \\]",
+  "nouveau": "\\[ z=f_\\theta(x) \\]",
+  "confiance": "haute",
+  "justification": "§76 « ### Représentation apprise [z=f_(x)] où (f_) est appris. » Le \\theta a été détruit — même destruction que dans le document I.",
+  "validation": "Rendu : z=f_θ(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1533,
+  "ancien": "\\[ z=f_(T(x)) \\]",
+  "nouveau": "\\[ z=f_\\theta(T(x)) \\]",
+  "confiance": "haute",
+  "justification": "§76 « ### Représentation hybride [z=f_(T(x))] ». Le \\theta a été détruit.",
+  "validation": "Rendu : z=f_θ(T(x))."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1694,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§85 « On cherche souvent : [vide] tout en conservant une qualité acceptable. »",
+  "validation": "Candidat : \\[ \\text{réduire le nombre de coefficients} \\] — ou \\[ \\text{compacter la représentation} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1720,
+  "ancien": "\\[ N(x) = \\_{k=0}^{K} a_kN_k(x) \\]",
+  "nouveau": "\\[ N(x)=\\sum_{k=0}^{K}a_kN_k(x) \\]",
+  "confiance": "haute",
+  "justification": "§87 bruit procédural « comme combinaison de composantes à différentes échelles : [N(x)=\\_{k=0}^{K} a_kN_k(x)] ». Le \\sum a été détruit (résidu \\_).",
+  "validation": "Rendu : N(x)=Σ_{k=0}^{K} a_k N_k(x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1795,
+  "ancien": "\\[ H(i) \\]",
+  "nouveau": "\\[ H(i\\omega) \\]",
+  "confiance": "haute",
+  "justification": "§91 diagrammes de Bode « À partir de : [H(i)] on peut représenter : ». Le \\omega a été détruit.",
+  "validation": "Rendu : H(iω)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1801,
+  "ancien": "\\[ 20_{10}|H(i)| \\]",
+  "nouveau": "\\[ 20\\log_{10}|H(i\\omega)| \\]",
+  "confiance": "haute",
+  "justification": "§91 « ### Magnitude [20_{10}|H(i)|] ». Le \\log a été détruit, son indice 10 a survécu ; le \\omega aussi a été détruit.",
+  "validation": "Rendu : 20 log₁₀|H(iω)| — le gain en décibels."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1805,
+  "ancien": "\\[ H(i) \\]",
+  "nouveau": "\\[ \\arg(H(i\\omega)) \\]",
+  "confiance": "haute",
+  "justification": "§91 « ### Phase [H(i)] en fonction de la fréquence logarithmique. » Le \\arg et le \\omega ont été détruits.",
+  "validation": "Rendu : arg(H(iω))."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1817,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§92 détection de motifs « On peut donc rechercher : [vide] comme indicateur de : ».",
+  "validation": "Candidat : \\[ \\text{une signature fréquentielle} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1926,
+  "ancien": "\\[ e^{-it_0} \\]",
+  "nouveau": "\\[ e^{-i\\omega t_0} \\]",
+  "confiance": "haute",
+  "justification": "§97 phase et retard « Un retard (x(t−t_0)) produit un facteur fréquentiel : [e^{-it_0}] ». Le \\omega a été détruit.",
+  "validation": "Rendu : e^{-iωt₀}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1932,
+  "ancien": "\\[ \\_g() = - \\]",
+  "nouveau": "\\[ \\tau_g(\\omega)=-\\frac{d\\varphi}{d\\omega} \\]",
+  "confiance": "haute",
+  "justification": "§97 « Le retard peut être relié à la pente de phase : [\\_g()=-] ». Le \\tau et le \\omega ont été détruits ; \\frac et les dérivées aussi. La phrase qui précède nomme explicitement la pente de phase.",
+  "validation": "Rendu : τ_g(ω)=−dφ/dω. Définition du retard de groupe."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1955,
+  "ancien": "\\[ x X x \\]",
+  "nouveau": "\\[ x\\to X\\to x \\]",
+  "confiance": "haute",
+  "justification": "§99 inversibilité « Une transformée utile doit souvent permettre : [x X x] ». Les deux flèches ont été détruites.",
+  "validation": "Rendu : x → X → x."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1973,
+  "ancien": "\\[ xy \\]",
+  "nouveau": "\\[ x\\to y \\]",
+  "confiance": "haute",
+  "justification": "§100 problème inverse « Un problème direct : [xy] Un problème inverse : [yx] ». Les flèches ont été détruites ; le sens distingue les deux blocs.",
+  "validation": "Rendu : x → y (problème direct)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1977,
+  "ancien": "\\[ yx \\]",
+  "nouveau": "\\[ y\\to x \\]",
+  "confiance": "haute",
+  "justification": "§100 « Un problème inverse : [ ] ». Pendant du précédent.",
+  "validation": "Rendu : y → x (problème inverse)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1987,
+  "ancien": "\\[ X= \\]",
+  "nouveau": "\\[ X=H^{-1}Y \\]",
+  "confiance": "haute",
+  "justification": "§100 « Exemple : [Y=HX] Retrouver (X) implique : [X=] si (H). » — le \\frac ou la puissance −1 a été détruit, ainsi que la condition (H inversible).",
+  "validation": "Rendu : X=H^{-1}Y."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1993,
+  "ancien": "\\[ |H| \\]",
+  "nouveau": "\\[ |H|\\approx 0 \\]",
+  "confiance": "haute",
+  "justification": "§100 « Mais si : [|H|] le bruit peut être énormément amplifié. » — l'inégalité et l'approximation ont été détruites. La phrase donne le sens : H proche de zéro.",
+  "validation": "Rendu : |H|≈0."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2005,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§101 régularisation « Par exemple, au lieu de : [vide] on peut utiliser une forme régularisée. »",
+  "validation": "Candidat : \\[ \\frac{Y}{H} \\] — la division instable que la régularisation remplace."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2011,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§101 « L'idée générale : [vide] Cette idée fait directement le lien avec le domaine L — Analyse numérique. »",
+  "validation": "Candidat : \\[ \\frac{Y}{H}\\to\\frac{\\bar{H}Y}{|H|^{2}+\\lambda} \\] — forme régularisée de Tikhonov."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2032,
+  "ancien": "\\[\n\n- \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§102 « Une FFT théorique parfaite n'existe pas comme opération abstraite dans une machine. Elle est exécutée avec : [trois lignes, dont une puce -] ». Le bloc contenait une liste.",
+  "validation": "Candidat : \\[ \\text{des nombres flottants} \\] et \\[ \\text{une arithmétique finie} \\] — la puce conservée montre une liste d'au moins deux items."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2046,
+  "ancien": "\\[ O(NN) \\]",
+  "nouveau": "\\[ O(N\\log N) \\]",
+  "confiance": "haute",
+  "justification": "§103 « Une FFT : [O(NN)] rend de nombreux traitements pratiques. » — troisième occurrence du résidu NN dans ce document (l. 547, 606).",
+  "validation": "Rendu : O(N log N)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2052,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§103 « Cette différence est un excellent exemple de passage : [vide] ».",
+  "validation": "Candidat : \\[ \\text{de la théorie à l'implémentation} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2060,
+  "ancien": "\\[ (x\\*h) = (x)(h) \\]",
+  "nouveau": "\\[ \\mathcal{F}\\{x\\ast h\\}=\\mathcal{F}\\{x\\}\\cdot\\mathcal{F}\\{h\\} \\]",
+  "confiance": "haute",
+  "justification": "§104 « Grâce à : [(x\\*h)=(x)(h)] on peut calculer : ». Les trois \\mathcal{F} ont été détruits, leurs parenthèses conservées ; le \\cdot aussi.",
+  "validation": "Rendu : 𝓕{x∗h}=𝓕{x}·𝓕{h}."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2109,
+  "ancien": "\\[ T_{} < T_{} \\]",
+  "nouveau": "\\[ T_{\\text{calcul}}<T_{\\text{disponible}} \\]",
+  "confiance": "haute",
+  "justification": "§107 temps réel « Un système temps réel impose : [T_{} < T_{}] ». Les deux indices ont été détruits ; la phrase suivante parle de budget temporel.",
+  "validation": "Rendu : T_calcul < T_disponible."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2173,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§110 UX visuelle « Une donnée sonore peut devenir une expérience visuelle : [vide] Exemples : ».",
+  "validation": "Candidat : \\[ \\text{audio}\\to\\text{visuel} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2251,
+  "ancien": "\\[ T_1,T_2,,T_k \\]",
+  "nouveau": "\\[ T_1,T_2,\\ldots,T_k \\]",
+  "confiance": "haute",
+  "justification": "§113 transformées adaptatives « On peut sélectionner : [T_1,T_2,,T_k] ». Le \\ldots est devenu une virgule.",
+  "validation": "Rendu : T₁,T₂,…,T_k."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2265,
+  "ancien": "\\[ T^ = \\_T (T,x) \\]",
+  "nouveau": "\\[ \\hat{T}=\\arg\\max_T \\mathrm{score}(T,x) \\]",
+  "confiance": "haute",
+  "justification": "§113 « Puis sélectionner celle qui maximise un objectif : [T^=\\_T (T,x)] Le score peut mesurer : ». Le chapeau de T̂, le \\arg\\max et le \\mathrm{score} ont été détruits.",
+  "validation": "Rendu : T̂=argmax_T score(T,x)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2280,
+  "ancien": "\\[ T_ \\]",
+  "nouveau": "\\[ T_\\theta \\]",
+  "confiance": "haute",
+  "justification": "§114 transformées apprenables « On peut aller plus loin et chercher une transformation : [T_] dont les paramètres sont appris. » Le \\theta a été détruit.",
+  "validation": "Rendu : T_θ."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2286,
+  "ancien": "\\[ ^ = _L(T_(x),y) \\]",
+  "nouveau": "\\[ \\hat{\\theta}=\\arg\\min_\\theta L(T_\\theta(x),y) \\]",
+  "confiance": "haute",
+  "justification": "§114 « On cherche alors : [^=_L(T_(x),y)] Cela crée un pont entre : ». Le chapeau, le \\arg\\min et les deux \\theta ont été détruits.",
+  "validation": "Rendu : θ̂=argmin_θ L(T_θ(x),y)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2301,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\nabla_\\theta L \\]",
+  "confiance": "moyenne",
+  "justification": "§115 transformées différentiables « Dans un modèle neuronal, une transformée peut être intégrée comme une opération différentiable. On peut alors calculer : [vide] à travers la transformation. » — le bloc est vide, mais la phrase ne laisse guère d'alternative.",
+  "validation": "Candidat alternatif : \\[ \\frac{\\partial L}{\\partial\\theta} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2307,
+  "ancien": "\\[\n\n- \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§115 « Cela permet de construire des architectures combinant : [trois lignes, dont une puce -] ». Le bloc contenait une liste d'au moins deux items.",
+  "validation": "Candidat : \\[ \\text{réseaux neuronaux} \\] et \\[ \\text{transformées} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2383,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{Fourier} \\]",
+  "confiance": "moyenne",
+  "justification": "§117 Question 3 « Cherche-t-on des fréquences ? Alors : [vide] ». Le tableau du §164 donne : Fourier — entrée « fonction », sortie « spectre », question « quelle structure fréquentielle ? ».",
+  "validation": "Candidat fondé sur le tableau du §164. Alternative : \\text{DFT} si le signal est échantillonné."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2391,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{Laplace} \\]",
+  "confiance": "moyenne",
+  "justification": "§117 Question 4 « Cherche-t-on une dynamique ou une EDO ? Alors : [vide] ». Le §32 dit : « Une équation différentielle devient une équation algébrique. »",
+  "validation": "Candidat fondé sur le §32 et le tableau du §164."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2399,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{transformée en Z} \\]",
+  "confiance": "moyenne",
+  "justification": "§117 Question 5 « Travaille-t-on avec un système discret ? Alors : [vide] ».",
+  "validation": "Candidat fondé sur les fiches §159 et le tableau du §164."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2407,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{STFT} \\]",
+  "confiance": "moyenne",
+  "justification": "§117 Question 6 « Cherche-t-on une localisation temporelle et fréquentielle ? Alors : [vide] ».",
+  "validation": "Candidat fondé sur la fiche §160 et le tableau du §164."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2415,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{ondelettes} \\]",
+  "confiance": "moyenne",
+  "justification": "§117 Question 7 « Cherche-t-on une représentation multi-échelle ? Alors : [vide] ».",
+  "validation": "Candidat fondé sur la fiche §161 et le tableau du §164 (DWT : échelles/détails)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2423,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{DCT} \\]",
+  "confiance": "moyenne",
+  "justification": "§117 Question 8 « Cherche-t-on une compression efficace d'image ? Alors : [vide] ».",
+  "validation": "Candidat fondé sur la fiche §162 et le tableau du §164 (DCT : concentration d'énergie)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2537,
+  "ancien": "\\[ x\\[n\\]=(2f n/f_s) \\]",
+  "nouveau": "\\[ x[n]=\\sin(2\\pi fn/f_s) \\]",
+  "confiance": "haute",
+  "justification": "§123 tests « ### Sinusoïde pure [x[n]=(2f n/f_s)] On doit observer un pic correspondant à (f). » — le \\sin et le \\pi ont été détruits.",
+  "validation": "Rendu : x[n]=sin(2πfn/f_s)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2557,
+  "ancien": "\\[ x T(x) T^{-1}(T(x)) \\]",
+  "nouveau": "\\[ x\\to T(x)\\to T^{-1}(T(x)) \\]",
+  "confiance": "haute",
+  "justification": "§124 test de l'inverse « Pour une transformée réversible : [x T(x) T^{-1}(T(x))] on doit vérifier : ». Les flèches ont été détruites.",
+  "validation": "Rendu : x → T(x) → T^{-1}(T(x))."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2561,
+  "ancien": "\\[ |x-T^{-1}(T(x))| \\]",
+  "nouveau": "\\[ \\|x-T^{-1}(T(x))\\| \\]",
+  "confiance": "haute",
+  "justification": "§124 « on doit vérifier : [|x-T^{-1}(T(x))|] Cette erreur doit rester compatible avec : ». Le \\| a été détruit.",
+  "validation": "Rendu : ‖x−T^{-1}(T(x))‖."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2589,
+  "ancien": "\\[ X\\[N-k\\] = \\]",
+  "nouveau": "\\[ X[N-k]=\\overline{X[k]} \\]",
+  "confiance": "haute",
+  "justification": "§126 « Pour Fourier, le théorème de Parseval fournit … avec une normalisation dépendante de la convention : [X[N-k]=] dans la convention classique. » — il s'agit de la symétrie hermitienne d'un signal réel.",
+  "validation": "Rendu : X[N−k]=conj(X[k]). Propriété de symétrie pour signal réel."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2601,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§127 mémoire « Il faut distinguer : [vide] et : [vide] Une représentation complexe peut nécessiter davantage de mémoire qu'une représentation réelle. »",
+  "validation": "Candidats : \\[ \\text{la mémoire de la représentation d'origine} \\] puis \\[ \\text{la mémoire de la transformée} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2605,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§127, pendant du bloc précédent.",
+  "validation": "Voir l. 2601."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2639,
+  "ancien": "\\[ c Q(c) \\]",
+  "nouveau": "\\[ c\\to Q(c) \\]",
+  "confiance": "haute",
+  "justification": "§129 quantification « Dans une compression avec perte : [c Q(c)] où (Q) est une quantification. » — la flèche a été détruite.",
+  "validation": "Rendu : c → Q(c)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2647,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§129 « Le compromis devient : [vide] ».",
+  "validation": "Candidat : \\[ \\text{qualité contre taille} \\] — ou \\[ \\text{débit contre fidélité} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2653,
+  "ancien": "\\[ x T(x) Q C \\]",
+  "nouveau": "\\[ x\\to T(x)\\to Q\\to C \\]",
+  "confiance": "haute",
+  "justification": "§130 « Pipeline générique : [x T(x) Q C] où : ». Les flèches ont été détruites ; la légende qui suit nomme Q (quantification) et C (codage).",
+  "validation": "Rendu : x → T(x) → Q → C."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2663,
+  "ancien": "\\[ C Q^{-1} T^{-1} \\]",
+  "nouveau": "\\[ \\hat{x}=T^{-1}(Q^{-1}(C)) \\]",
+  "confiance": "haute",
+  "justification": "§130 « La reconstruction : [C Q^{-1} T^{-1}] avec : ». Les flèches et le chapeau de x̂ ont été détruits.",
+  "validation": "Rendu : x̂=T^{-1}(Q^{-1}(C))."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2667,
+  "ancien": "\\[ x \\]",
+  "nouveau": "\\[ \\hat{x} \\]",
+  "confiance": "haute",
+  "justification": "§130 « avec : [x] dans le cas avec perte. » Le chapeau a été détruit.",
+  "validation": "Rendu : x̂."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2675,
+  "ancien": "\\[ =x \\]",
+  "nouveau": "\\[ \\hat{x}=x \\]",
+  "confiance": "haute",
+  "justification": "§131 compression sans perte « la reconstruction doit être exacte : [=x] ». Le chapeau a été détruit.",
+  "validation": "Rendu : x̂=x."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2699,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§133 lien avec la théorie de l'information « On peut donc avoir : [vide] ».",
+  "validation": "Candidat : \\[ \\text{entropie} \\] ou \\[ \\text{compacité de la représentation} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2747,
+  "ancien": "\\[ \\_X(t) = \\[e^{itX}\\] \\]",
+  "nouveau": "\\[ \\varphi_X(t)=\\mathbb{E}\\left[e^{itX}\\right] \\]",
+  "confiance": "haute",
+  "justification": "§135 lien avec les probabilités « Une variable aléatoire possède une fonction caractéristique : [\\_X(t)=\\[e^{itX}\\]] ». Le \\varphi, le \\mathbb{E}, le \\left et le \\right ont été détruits — les crochets échappés sont le résidu de \\left[.",
+  "validation": "Rendu : φ_X(t)=𝔼[e^{itX}]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2774,
+  "ancien": "\\[ x:V \\]",
+  "nouveau": "\\[ x:V\\to\\mathbb{R} \\]",
+  "confiance": "haute",
+  "justification": "§137 graphes « Une idée plus avancée consiste à définir des signaux sur les sommets : [x:V] ». Le \\to et le \\mathbb{R} ont été détruits.",
+  "validation": "Rendu : x : V → ℝ."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2780,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§137 « On peut alors construire des analogues de Fourier sur les graphes à partir des vecteurs propres du Laplacien du graphe. Cela mène à la : [vide] avec des applications en : ».",
+  "validation": "Candidat : \\[ \\text{transformée de Fourier sur graphes (GFT)} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2814,
+  "ancien": "\\[ x T(x) z T^{-1}() \\]",
+  "nouveau": "\\[ x\\to T(x)\\to z\\to T^{-1}(z) \\]",
+  "confiance": "haute",
+  "justification": "§139 IA générative « Exemple conceptuel : [x T(x) z T^{-1}()] ». Les flèches ont été détruites ; le dernier terme a perdu son argument z.",
+  "validation": "Rendu : x → T(x) → z → T^{-1}(z)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2824,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§140 modèles de diffusion « Même l'… [vide] reste profondément similaire. » — la phrase elle-même est tronquée dans le document.",
+  "validation": "Candidat : \\[ \\text{idée de transformer pour simplifier} \\]. Le bloc reste très incertain : la phrase qui l'introduit est elle-même amputée."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2851,
+  "ancien": "\\[ x T(x) T^{-1} x’ \\]",
+  "nouveau": "\\[ x\\to T(x)\\to T^{-1}\\to x' \\]",
+  "confiance": "haute",
+  "justification": "§142 stéganographie « Conceptuellement : [x T(x) T^{-1} x'] ». Les flèches ont été détruites.",
+  "validation": "Rendu : x → T(x) → T^{-1} → x'."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2872,
+  "ancien": "\\[ x_0,x_1,,x_N \\]",
+  "nouveau": "\\[ x_0,x_1,\\ldots,x_N \\]",
+  "confiance": "haute",
+  "justification": "§144 données temporelles « Une série temporelle : [x_0,x_1,,x_N] ». Le \\ldots est devenu une virgule.",
+  "validation": "Rendu : x₀,x₁,…,x_N."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2914,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§146 détection d'anomalies « Exemple : [vide] puis : [vide] On peut alors construire : [s(x)=d(T(x),μ)] ».",
+  "validation": "Candidats : \\[ \\text{un spectre de référence} \\] puis \\[ \\text{un pic spectral inattendu} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2918,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§146, pendant du bloc précédent.",
+  "validation": "Voir l. 2914."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2922,
+  "ancien": "\\[ (x) = d(T(x),) \\]",
+  "nouveau": "\\[ s(x)=d(T(x),\\mu) \\]",
+  "confiance": "haute",
+  "justification": "§146 « On peut alors construire : [(x)=d(T(x),)] où () représente le comportement normal. » — le s, le \\mu ont été détruits.",
+  "validation": "Rendu : s(x)=d(T(x),μ)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3068,
+  "ancien": "\\[ T^{-1}(T(x))x \\]",
+  "nouveau": "\\[ T^{-1}(T(x))\\approx x \\]",
+  "confiance": "haute",
+  "justification": "§153 exactitude « ### Exactitude [T^{-1}(T(x))x] ». Le \\approx a été détruit ; l'égalité stricte serait fausse en arithmétique flottante.",
+  "validation": "Rendu : T^{-1}(T(x))≈x."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3140,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{transformée de Fourier} \\]",
+  "confiance": "moyenne",
+  "justification": "§156 FICHE DE RECONNAISSANCE — FOURIER « Si le problème contient : fréquence, spectre, oscillation, harmonique, périodicité, convolution, signal — penser : [vide] ». Le titre de la section et le tableau du §164 (Fourier : fonction → spectre) désignent la réponse.",
+  "validation": "Candidat fondé sur le titre de la fiche et le tableau du §164."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3154,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{FFT} \\]",
+  "confiance": "moyenne",
+  "justification": "§157 FICHE — FFT (DFT, grand volume, performance, temps réel, convolution rapide).",
+  "validation": "Candidat fondé sur le titre de la fiche."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3169,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{Laplace} \\]",
+  "confiance": "moyenne",
+  "justification": "§158 FICHE — LAPLACE (EDO, conditions initiales, système continu, fonction de transfert, pôles, stabilité).",
+  "validation": "Candidat fondé sur le titre de la fiche."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3183,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{transformée en Z} \\]",
+  "confiance": "moyenne",
+  "justification": "§159 FICHE — Z (séquence, système discret, équation aux différences, filtre numérique, cercle unité).",
+  "validation": "Candidat fondé sur le titre de la fiche."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3197,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{STFT} \\]",
+  "confiance": "moyenne",
+  "justification": "§160 FICHE — STFT (fréquence qui change dans le temps, événement sonore, parole, spectrogramme, signal non stationnaire).",
+  "validation": "Candidat fondé sur le titre de la fiche."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3212,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{ondelettes} \\]",
+  "confiance": "moyenne",
+  "justification": "§161 FICHE — ONDELETTES (transitoires, événements localisés, multirésolution, structures à différentes échelles, compression multi-échelle).",
+  "validation": "Candidat fondé sur le titre de la fiche."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3225,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{DCT} \\]",
+  "confiance": "moyenne",
+  "justification": "§162 FICHE — DCT (compression, image, coefficients cosinus, concentration d'énergie).",
+  "validation": "Candidat fondé sur le titre de la fiche."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3231,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{la DFT et la FFT} \\]",
+  "confiance": "moyenne",
+  "justification": "§163 « Ne jamais confondre : [vide] La relation est : » suivi d'un arbre ASCII intact (Fourier → continu/discret → DFT → FFT « algorithme rapide »). L'arbre dit exactement ce qu'il ne faut pas confondre : la DFT est une transformée, la FFT un algorithme.",
+  "validation": "Candidat fondé sur l'arbre ASCII qui suit le bloc, lequel est intact."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3248,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{la transformée de Fourier et la DFT} \\]",
+  "confiance": "moyenne",
+  "justification": "§163 « De même : [vide] mais elles jouent des rôles conceptuellement analogues dans les domaines continu et discret. » — la phrase désigne l'analogie continu/discret.",
+  "validation": "Candidat fondé sur la phrase elle-même et l'arbre du §163."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3426,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "PROJET 2 — Spectrogramme « Construire : [vide] et permettre de modifier : - taille de fenêtre ; - hop size ; - fréquence d'échantillonnage. »",
+  "validation": "Candidat : \\[ \\text{un spectrogramme interactif} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3438,
+  "ancien": "\\[ X(f) H(f) Y(f) \\]",
+  "nouveau": "\\[ X(f)\\to H(f)\\to Y(f) \\]",
+  "confiance": "haute",
+  "justification": "PROJET 3 — Égaliseur audio « Créer un système : [X(f) H(f) Y(f)] avec : ». Les flèches ont été détruites.",
+  "validation": "Rendu : X(f) → H(f) → Y(f)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3470,
+  "ancien": "\\[ x DWT Threshold IDWT \\]",
+  "nouveau": "\\[ x\\to \\text{DWT}\\to \\text{seuil}\\to \\text{IDWT} \\]",
+  "confiance": "haute",
+  "justification": "PROJET 5 — Débruitage par ondelettes « Créer : [x DWT Threshold IDWT] et mesurer : ». Les flèches ont été détruites.",
+  "validation": "Rendu : x → DWT → seuil → IDWT."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3530,
+  "ancien": "\\[ O(NN) \\]",
+  "nouveau": "\\[ O(N\\log N) \\]",
+  "confiance": "haute",
+  "justification": "CHALLENGE 2 « Comparer : [O(N^2)] contre : [O(NN)] ».",
+  "validation": "Rendu : O(N log N)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3600,
+  "ancien": "\\[ T^ \\]",
+  "nouveau": "\\[ \\hat{T} \\]",
+  "confiance": "haute",
+  "justification": "§169 « Le système recommande ensuite : [T^] selon le problème. » Le chapeau a été détruit.",
+  "validation": "Rendu : T̂."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3610,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§170 expérience créative audio → monde visuel « Construire : [vide] Le système pourrait contrôler : ».",
+  "validation": "Candidat : \\[ \\text{audio}\\to\\text{paramètres visuels} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3720,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§173 « ### Niveau 7 — Création / Construire de nouvelles applications à partir du principe : [vide] ».",
+  "validation": "Candidat : \\[ \\text{changer de représentation} \\]."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3794,
+  "ancien": "\\[ \\]",
+  "nouveau": null,
+  "confiance": "inconnue",
+  "justification": "§176 SYNTHÈSE DES GRANDES TRANSFORMÉES : un bloc unique et vide, sans phrase d'introduction. Le tableau du §164 en donne la matière.",
+  "validation": "Candidat : \\[ \\text{Fourier, Laplace, Z, STFT, ondelettes, DCT} \\] — ou la chaîne du §178."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3858,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{changer de représentation pour simplifier le problème} \\]",
+  "confiance": "moyenne",
+  "justification": "§178 « La contribution la plus importante de ce domaine peut être résumée ainsi : [vide] ». La question posée au §176 — « Quelle représentation rend le problème plus simple ? » — est la réponse.",
+  "validation": "Candidat fondé sur le §176, dont la phrase-clé est intacte."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3862,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{une fonction en spectre} \\]",
+  "confiance": "moyenne",
+  "justification": "§178 « Fourier transforme : [vide] ». Le tableau du §164 donne : Fourier — entrée « fonction », sortie « spectre ».",
+  "validation": "Candidat fondé mot pour mot sur le tableau intact du §164."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3866,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{une fonction temporelle en F(s)} \\]",
+  "confiance": "moyenne",
+  "justification": "§178 « Laplace transforme : [vide] ». Tableau du §164 : Laplace — « fonction temporelle » → « F(s) ».",
+  "validation": "Candidat fondé mot pour mot sur le tableau du §164."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3870,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{une séquence en X(z)} \\]",
+  "confiance": "moyenne",
+  "justification": "§178 « Z transforme : [vide] ». Tableau du §164 : Z — « séquence » → « X(z) ».",
+  "validation": "Candidat fondé mot pour mot sur le tableau du §164."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3874,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{un signal en représentation temps-fréquence} \\]",
+  "confiance": "moyenne",
+  "justification": "§178 « STFT transforme : [vide] ». Tableau du §164 : STFT — « signal » → « temps-fréquence ».",
+  "validation": "Candidat fondé mot pour mot sur le tableau du §164."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3878,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{un signal en échelles et détails} \\]",
+  "confiance": "moyenne",
+  "justification": "§178 « Les ondelettes transforment : [vide] ». Tableau du §164 : DWT — « signal » → « échelles/détails ».",
+  "validation": "Candidat fondé mot pour mot sur le tableau du §164."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3882,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{des données en coefficients cosinus} \\]",
+  "confiance": "moyenne",
+  "justification": "§178 « La DCT transforme : [vide] ». Tableau du §164 : DCT — « données » → « coefficients cosinus ».",
+  "validation": "Candidat fondé mot pour mot sur le tableau du §164."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3898,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{transformer} \\]",
+  "confiance": "moyenne",
+  "justification": "§179 « C'est ce qui permet de passer : [vide] [vide] … » — six blocs vides consécutifs. La FORMULE MENTALE DU DOMAINE N, qui clôt le document (l. 3941-3945), est intacte et énonce six verbes : transformer, voir, comprendre, simplifier, calculer, construire.",
+  "validation": "Candidat fondé sur la FORMULE MENTALE intacte du document, qui fournit les six termes dans l'ordre."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3900,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{voir} \\]",
+  "confiance": "moyenne",
+  "justification": "§179, deuxième terme de la chaîne.",
+  "validation": "Voir l. 3898."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3902,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{comprendre} \\]",
+  "confiance": "moyenne",
+  "justification": "§179, troisième terme.",
+  "validation": "Voir l. 3898."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3904,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{simplifier} \\]",
+  "confiance": "moyenne",
+  "justification": "§179, quatrième terme.",
+  "validation": "Voir l. 3898."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3906,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{calculer} \\]",
+  "confiance": "moyenne",
+  "justification": "§179, cinquième terme.",
+  "validation": "Voir l. 3898."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3908,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{construire} \\]",
+  "confiance": "moyenne",
+  "justification": "§179, sixième terme.",
+  "validation": "Voir l. 3898."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3935,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{chercher la représentation qui simplifie} \\]",
+  "confiance": "moyenne",
+  "justification": "§179 « Le réflexe d'ingénieur à développer est donc : [vide] mais : [vide] ». La question centrale du document, énoncée deux paragraphes plus haut, est : « Quelle représentation rend le problème plus simple ? »",
+  "validation": "Candidat fondé sur la phrase intacte du §176."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3939,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{vérifier les hypothèses et les limites} \\]",
+  "confiance": "moyenne",
+  "justification": "§179, second bloc (« mais : »). Le « mais » oppose une précaution au réflexe précédent.",
+  "validation": "Candidat. Alternative : \\[ \\text{ne pas oublier le coût de calcul} \\]."
+ }
+]
