@@ -55,7 +55,8 @@ dans A1, A3, A4, A5. Un jeu de repli est conservé si `mathemirum` devait être 
 | `A2-inventaire-structurel.md` + annexes CSV/JSON | **terminé** | 29 documents, 80 330 lignes, 7 240 titres, 2 354 équations affichées |
 | `A6-plan-phase-1.md` | **validé** | méthode, lots, ordre |
 | `A7-integrite-des-equations.md` + annexe CSV | **terminé** (rectifié) | nature et étendue de la dégradation |
-| `fiches/domaine-K-…md` | **terminée** | 1 fiche sur 29 |
+| `fiches/domaine-K-…md` | **terminée** | fiche 1 sur 29 |
+| `fiches/domaine-L-analyse-numerique.md` | **terminée** | fiche 2 sur 29 — **rédigée sur le document restauré** (102 écritures appliquées) ; ordre d'entrelacement L → I → N → J |
 | Index notion → composant | **non commencé** | prévu par A6 §3.4 |
 
 **Constats A2 (vérifiés, reproductibles par `tools/audit-phase1/extract_structure.py`) :**
