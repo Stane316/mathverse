@@ -1,0 +1,92 @@
+[
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 348,
+  "ancien": "\\[ x_0, x_1, x_2, \\]",
+  "nouveau": "\\[ x_0, x_1, x_2,\\ldots \\]",
+  "confiance": "haute",
+  "justification": "Suite des états successifs : l'énumération s'arrête sur une virgule, ce qui signale un \\ldots détruit.",
+  "validation": "La suite (x_n) est infinie (l. 352 donne la relation de récurrence) ; la notation elliptique est la seule lecture."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 793,
+  "ancien": "\\[ T_1,T_2,,T_n \\]",
+  "nouveau": "\\[ T_1,T_2,\\ldots,T_n \\]",
+  "confiance": "haute",
+  "justification": "Double virgule dans « T_1,T_2,,T_n » : le \\ldots a été supprimé. Contexte : « Un IFS combine plusieurs transformations ».",
+  "validation": "n transformations énumérées de façon elliptique, comme à la ligne 348."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 859,
+  "ancien": "On recouvre l’objet avec des boîtes de taille ().",
+  "nouveau": "On recouvre l’objet avec des boîtes de taille (\\varepsilon).",
+  "confiance": "haute",
+  "justification": "Parentheses vides dans le texte : le symbole \\varepsilon a été supprimé, comme dans N() de la ligne 863.",
+  "validation": "Le même ε réapparaît quatre lignes plus bas dans N(ε) : cohérence immédiate."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 869,
+  "ancien": "\\[ D {(1/)} \\]",
+  "nouveau": "\\[ D=\\lim_{\\varepsilon\\to 0}\\frac{\\log N(\\varepsilon)}{\\log(1/\\varepsilon)} \\]",
+  "confiance": "moyenne",
+  "justification": "Fragments « D {(1/)} » : accolades conservées, \\lim et \\frac détruits. C'est la dimension de comptage par boîtes (box-counting).",
+  "validation": "Appliquée au segment [0,1], N(ε)=1/ε donne D=1 ; au carré, N(ε)=1/ε² donne D=2 ; à Sierpiński, D≈1,585 comme la section 17."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 955,
+  "ancien": "\\[ f(x<sup>\\*)=x</sup>\\* \\]",
+  "nouveau": "\\[ f(x^*)=x^* \\]",
+  "confiance": "haute",
+  "justification": "Balises HTML <sup> imbriquées de façon invalide : corruption, non une suppression de commande. L'équation du point fixe est certaine.",
+  "validation": "Cohérent avec l'énoncé de la ligne 955 : « Un point fixe (x^\\*) vérifie »."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 1130,
+  "ancien": "- (<0) : convergence ;",
+  "nouveau": "- (\\lambda<0) : convergence ;",
+  "confiance": "haute",
+  "justification": "Symbole supprimé dans l'item de liste : λ a disparu, comme σ/ρ/β plus bas. La liste (<0), (), (>0) n'a de sens qu'avec λ.",
+  "validation": "λ<0 ⇔ convergence des trajectoires voisines : propriété standard."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 1131,
+  "ancien": "- () : régime critique ;",
+  "nouveau": "- (\\lambda=0) : régime critique ;",
+  "confiance": "haute",
+  "justification": "Item vide entre (<0) et (>0) : λ=0, régime critique.",
+  "validation": "λ=0 est bien le seuil entre convergence et divergence."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 1132,
+  "ancien": "- (>0) : divergence exponentielle locale compatible avec un comportement chaotique.",
+  "nouveau": "- (\\lambda>0) : divergence exponentielle locale compatible avec un comportement chaotique.",
+  "confiance": "haute",
+  "justification": "Symbole supprimé : λ>0.",
+  "validation": "λ>0 ⇔ divergence exponentielle locale, critère usuel de chaos."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 1209,
+  "ancien": "\\[ N:^n \\]",
+  "nouveau": "\\[ N:\\mathbb{R}^n\\rightarrow\\mathbb{R} \\]",
+  "confiance": "moyenne",
+  "justification": "Fragments « N:^n » : \\mathbb{R} supprimé deux fois. Une fonction de bruit est une application de ℝⁿ dans ℝ.",
+  "validation": "Pour n=2 on retrouve N(x,y) de la ligne 1213 : cohérence interne."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
+  "ligne": 1213,
+  "ancien": "\\[ N(x,y)v \\]",
+  "nouveau": "\\[ N(x,y)\\rightarrow v \\]",
+  "confiance": "moyenne",
+  "justification": "Fragments « N(x,y)v » : l'opérateur (flèche) a été supprimé. Proposition : N(x,y) → v. Alternative : laisser le bloc en l'état.",
+  "validation": "Cohérence avec la ligne 1209 et avec « pour une surface 2D »."
+ }
+]

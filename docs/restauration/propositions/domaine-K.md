@@ -1,9 +1,26 @@
 # LOT 1 — PROPOSITIONS DE RESTAURATION, DOMAINE K
 
-**Date :** 2026-10-18 — **Statut :** **propositions soumises à validation** — **non appliquées**
+**Date :** 2026-10-18 — **Statut :** **lot validé et appliqué** (19 entrées sur 20)
 **Fichier source :** `Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md` (commit `f0f5e2d`)
 **Correctif applicable :** `domaine-K.patch.json` (20 entrées : ligne, ancien bloc, nouveau bloc)
+**Livrables :** `livrables/domaine-K-lot1.gitdiff` (diff vérifié, applicable par `git apply`),
+`livrables/domaine-K-lot1.message-commit.txt`, `livrables/RESTAURATION-EQUATIONS.md`
+**Complément :** 10 propositions supplémentaires, non appliquées — `domaine-K-complement.md`
 **Rappel :** il s'agit de **reconstructions**, pas de récupérations. Le contenu détruit n'existe plus dans le fichier.
+
+---
+
+## 0. État d'application (2026-10-18)
+
+Lot validé par l'auteur le 2026-10-18, avec confirmation qu'une sauvegarde indépendante du
+dépôt existe. Les 19 entrées de confiance haute et moyenne ont été appliquées ; la 20ᵉ
+(section 166) reste en attente de l'intention de l'auteur.
+
+**Contrainte rencontrée :** l'envoi git vers `my-own-connaissance` est refusé
+(`403 — Permission to Stane316/my-own-connaissance.git denied`, puis
+`403 — Resource not accessible by integration` sur l'API). Le dépôt est donc **préparé
+localement** (branche `arena/restauration-equations`, commit `bb6ce27`) et livré sous forme
+de diff. La procédure d'application est dans le README du chantier, §7.
 
 ---
 
@@ -52,7 +69,7 @@ Trois mécanismes, tous cohérents entre eux :
 | Ligne | Bloc actuel | Reconstruction proposée | Réserve |
 |---:|---|---|---|
 | 924 | `\[ =` (bloc vide) | `\[ \mathbf{x}=(x_1,\ldots,x_n) \]` | le bloc suit « où : » : définition probable du vecteur d'état, mais la forme exacte n'est pas certaine |
-| 1150-1152 | `- () ;` ×3, liste vide | `- \(\sigma\) (nombre de Prandtl) ; - \(\rho\) (nombre de Rayleigh) ; - \(\beta\) (paramètre géométrique)` | les trois symboles sont certains (les équations les utilisent) ; les appellations et l'ajout des valeurs usuelles (10, 28, 8/3) sont un choix éditorial |
+| 1150-1152 | `- () ;` ×3, liste vide | `- (\sigma) est le nombre de Prandtl ; - (\rho) est le nombre de Rayleigh ; - (\beta) est le paramètre géométrique` *(forme révisée, cf. complément §3)* | les trois symboles sont certains (les équations les utilisent) ; les appellations sont un choix éditorial ; les valeurs usuelles (10, 28, 8/3) ne sont pas ajoutées |
 | 2575 | `\[ x'= \]` | `\[ x'=\frac{x-x_{\min}}{x_{\max}-x_{\min}} \]` | normalisation min-max vers [0,1] ; une normalisation centrée-réduite est possible |
 | 2581 | `\[ x'\]` | `\[ x'\in[0,1] \]` | défaut découvert **hors inventaire** ; l'intervalle cible est probable mais non certain |
 | 2951 | `\[ =f_(h,t) \]` | `\[ \frac{dh}{dt}=f_\theta(h,t) \]` | forme canonique des EDO neuronales ; l'indice (θ) est supprimé dans la source, donc reconstitué par hypothèse |

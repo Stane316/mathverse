@@ -47,10 +47,10 @@
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
   "ligne": 924,
-  "ancien": "\\[ =",
+  "ancien": "\\[ =\n\n\\]",
   "nouveau": "\\[ \\mathbf{x}=(x_1,\\ldots,x_n) \\]",
   "confiance": "moyenne",
-  "justification": "Bloc vide suivant « où : » : définition probable du vecteur d'état. Forme proposée, à confirmer par l'auteur.",
+  "justification": "Bloc vide de 3 lignes (l. 924-926) suivant « où : » de la section 20.3 : définition du vecteur d'état. Le bloc dégradé occupe 3 lignes ; la reconstruction tient sur 1 (décalage -2 lignes après application).",
   "validation": "Doit être cohérent avec la dimension de F dans 20.3."
  },
  {
@@ -92,10 +92,10 @@
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
   "ligne": 1150,
-  "ancien": "- () ;",
-  "nouveau": "- \\(\\sigma\\) (nombre de Prandtl) ;\\n- \\(\\rho\\) (nombre de Rayleigh) ;\\n- \\(\\beta\\) (paramètre géométrique)",
+  "ancien": "- () ;\n- () ;\n- ()",
+  "nouveau": "- (\\sigma) est le nombre de Prandtl ;\n- (\\rho) est le nombre de Rayleigh ;\n- (\\beta) est le paramètre géométrique",
   "confiance": "moyenne",
-  "justification": "La liste « où : » est vide et suivie de « sont des paramètres » : trois paramètres, donc σ, ρ, β. Les valeurs usuelles (10, 28, 8/3) peuvent être ajoutées en remark.",
+  "justification": "La liste « où : » est vide et suivie de « sont des paramètres » : trois paramètres, donc σ, ρ, β (certains : les équations les emploient). La forme retenue reprend celle du document lui-même, lignes 788-789 : « - (A) est une matrice ; ». Les appellations (Prandtl, Rayleigh, paramètre géométrique) sont un choix éditorial ; les valeurs usuelles (10, 28, 8/3) peuvent être ajoutées si vous le souhaitez.",
   "validation": "Vérifier que les trois symboles apparaissent bien dans les équations 1142-1146 reconstruites."
  },
  {
@@ -145,11 +145,11 @@
  },
  {
   "fichier": "Maths-vers-Informatiques/DOCUMENT K — FRACTALES, CHAOS & SYSTÈMES DYNAMIQUES.md",
-  "ligne": 2581,
+  "ligne": 2579,
   "ancien": "\\[ x’\\]",
   "nouveau": "\\[ x'\\in[0,1] \\]",
   "confiance": "moyenne",
-  "justification": "Bloc « afin d'obtenir : » — l'intervalle cible est très probablement [0,1]. Défaut détecté hors inventaire (bloc court non flagué par les heuristiques).",
+  "justification": "Bloc « afin d'obtenir : » — l'intervalle cible est très probablement [0,1]. Défaut détecté hors inventaire (bloc court non flagué par les heuristiques). [Correction 2026-10-18 : le bloc est en ligne 2579, non 2581.]",
   "validation": "Cohérence avec la normalisation proposée en 2575."
  },
  {
@@ -177,6 +177,7 @@
   "nouveau": null,
   "confiance": "inconnue",
   "justification": "Bloc vide en section 166 « FORMULE DE RÉFÉRENCE », entre « Pour toute future application utilisant ce domaine : » et « Cette chaîne constitue la référence opérationnelle ». Deux candidats : (a) la chaîne opérationnelle énoncée ligne 37 (PHÉNOMÈNE → CONCEPT → RÈGLE → PROCESSUS → REPRÉSENTATION → ALGORITHME → PARAMÈTRES → VISUALISATION → APPLICATION) ; (b) la formule itérative centrale x_{n+1}=f(x_n). L'intention de l'auteur est requise.",
-  "validation": "Aucun test : nécessite l'arbitrage de l'auteur."
+  "validation": "Aucun test : nécessite l'arbitrage de l'auteur.",
+  "statut": "en_attente_de_decision"
  }
 ]

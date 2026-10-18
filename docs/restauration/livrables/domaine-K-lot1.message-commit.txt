@@ -1,0 +1,38 @@
+restauration(equations): lot 1 — domaine K, 19 equations reconstruites
+
+ATTENTION — il s'agit de RECONSTRUCTIONS, pas de recuperation : le contenu
+detruit (arguments de commandes LaTeX, lettres grecques) n'existe plus dans
+le fichier. Voir RESTAURATION-EQUATIONS.md en tete de branche.
+
+19 blocs restaures dans le document K (fractales, chaos, systemes dynamiques) :
+
+haute confiance (14)
+ - 17.1 / 17.2 dimension de similarite : D=logN/log(1/r) puis log3/log2~1,585
+ - 18 comptage par boites : N(epsilon)
+ - 20.2 / 62 systeme continu : dx/dt=f(x,t)
+ - 20.3 systeme multidimensionnel : dx/dt=F(x,t)
+ - 30 exposant de Lyapunov : lambda=lim(1/n)sum ln|f'(x_i)|
+ - 31 attracteur de Lorenz : dx/dt=sigma(y-x), dy/dt=x(rho-z)-y, dz/dt=xy-beta z
+ - 44 fBm : F(x)=sum a_i N(f_i x)
+ - 46 turbulence : T(x)=sum a_i |N(f_i x)|
+ - 76 particules : dx/dt=v, dv/dt=a
+
+moyenne confiance (5)
+ - 20.3 vecteur d'etat : x=(x_1,...,x_n)
+ - 31 les trois parametres (sigma Prandtl, rho Rayleigh, beta geometrique)
+ - 96 normalisation min-max vers [0,1]
+ - 96 intervalle cible [0,1]
+ - 116 neural ODE : dh/dt=f_theta(h,t)
+
+La liste « ou : » des parametres de Lorenz etait vide ; les trois symboles
+sont certains (les equations les emploient), leurs appellations sont un choix
+editorial.
+
+1 defaut reste en attente (section 166 « FORMULE DE REFERENCE », bloc vide) :
+il exige l'intention de l'auteur.
+
+Le document K passe de 18 defauts a 1. Le corpus passe de 724 a 707.
+
+Justifications, tests de validation et correctif applicable : depot mathverse,
+docs/restauration/ (propositions/domaine-K.patch.json).
+

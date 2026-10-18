@@ -62,7 +62,12 @@ Chaque lot est livré dans `propositions/<domaine>.md`, sous forme de **tableau 
 
 | Ligne | Bloc actuel | Reconstruction proposée | Confiance | Justification | Validation proposée |
 
-Les propositions sont réunies dans un **fichier correctif** (`propositions/<domaine>.patch.json`) : liste de remplacements exacts (ligne → ancien bloc → nouveau bloc), applicable par un script. Le script d'application n'est **pas** exécuté sur le dépôt de connaissances sans votre accord explicite, lot par lot.
+Les propositions sont réunies dans un **fichier correctif** (`propositions/<domaine>.patch.json`) : liste de remplacements exacts (ligne → ancien bloc → nouveau bloc), applicable par un script. Le script d'application (`tools/restauration/apply_patch.py`) **vérifie chaque bloc attendu avant d'écrire quoi que ce soit** : à la première discordance, rien n'est écrit. Il n'est **pas** exécuté sur le dépôt de connaissances sans votre accord explicite, lot par lot.
+
+Une fois un lot validé, il est livré dans `livrables/` sous trois formes : un **diff unifié**
+(`<domaine>.gitdiff`, applicable par `git apply`), le **message de commit** correspondant, et
+le fichier de traçabilité `RESTAURATION-EQUATIONS.md` destiné à la racine du dépôt de
+connaissances.
 
 ## 6. Le cas A, B, C, D — chantier distinct
 
@@ -71,9 +76,40 @@ Ces quatre documents ont perdu **leur arborescence de titres et leurs équations
 - **Voie 1 (préférable) — récupération d'une version antérieure.** Si vous détenez un brouillon, un export d'origine ou un historique d'outil, la restauration est immédiate et fidèle. **C'est une question à laquelle vous seul pouvez répondre.**
 - **Voie 2 — reconstruction.** Échantillonnage du texte, détection des marqueurs de section, reconstruction d'un plan, puis restructuration du Markdown. Long, partiel, et jamais fidèle à l'original.
 
-Le chantier A/B/C/D ne démarrera qu'après votre réponse sur la voie 1.
+**Réponse de l'auteur (2026-10-18) : non, il n'existe pas de version antérieure de A, B, C, D.**
+La voie 1 est donc fermée. Le lot 7 sera une **restructuration par reconstruction** (voie 2) :
+échantillonnage du texte, détection des marqueurs de section, reconstruction d'un plan. Ce
+lot est le plus incertain du chantier, et le dernier.
 
-## 7. Sécurité et gouvernance
+## 7. Application effective — procédure
+
+**Constat (2026-10-18).** L'envoi git vers `my-own-connaissance` est refusé depuis
+l'environnement de travail : `403 — Permission to Stane316/my-own-connaissance.git denied`,
+et `403 — Resource not accessible by integration` via l'API (le jeton disponible n'est
+autorisé que sur le dépôt `mathverse`). **Aucune tentative de contournement n'est faite.**
+
+Le travail est donc préparé dans un clone local (branche `arena/restauration-equations`, un
+commit par lot) puis livré sous forme de diff. Deux façons de procéder :
+
+**A. Vous appliquez localement** (recommandé, ~30 s) :
+
+```bash
+cd my-own-connaissance
+git switch -c restauration-equations          # jamais sur main
+git apply --check /chemin/domaine-K-lot1.gitdiff   # vérification, n'écrit rien
+git apply /chemin/domaine-K-lot1.gitdiff
+cp /chemin/RESTAURATION-EQUATIONS.md .
+git add -A && git commit -F /chemin/domaine-K-lot1.message-commit.txt
+```
+
+**B. Vous autorisez l'accès en écriture** au dépôt `my-own-connaissance` pour la connexion
+GitHub utilisée ici ; les lots suivants sont alors poussés directement sur une branche
+dédiée, sans jamais ouvrir de pull request.
+
+Dans les deux cas : **un commit par lot**, pour pouvoir relire ou refuser un lot sans
+toucher aux autres.
+
+## 8. Sécurité et gouvernance
 
 1. **Aucune écriture dans `my-own-connaissance`** sans votre validation explicite d'un lot.
 2. **Aucune modification en place** : les corrections sont d'abord produites dans ce dépôt, sous forme de correctifs reproductibles.
@@ -82,11 +118,11 @@ Le chantier A/B/C/D ne démarrera qu'après votre réponse sur la voie 1.
 5. **Aucune suppression** de contenu existant sans signalement explicite.
 6. Le dépôt de connaissances restant sur **un seul commit**, une **sauvegarde indépendante** doit être réalisée avant toute écriture — à votre initiative, l'agent n'ayant pas la main sur vos copies locales.
 
-## 8. Priorisation
+## 9. Priorisation
 
 | Ordre | Lot | Pourquoi |
 |---:|---|---|
-| 1 | **K** — 18 défauts | domaine le plus utile au produit, équations canoniques, lot terminé |
+| 1 | **K** — 18 défauts signalés, **28 traités** | domaine le plus utile au produit, équations canoniques — **lot 1 appliqué** (19), complément de 10 propositions en attente |
 | 2 | **L** — analyse numérique | socle des critères de validation ; 61 défauts |
 | 3 | **I** — calcul différentiel | 109 défauts, socle des systèmes continus |
 | 4 | **N** — transformées | 104 défauts, utile aux composants de signal |
@@ -96,7 +132,9 @@ Le chantier A/B/C/D ne démarrera qu'après votre réponse sur la voie 1.
 
 La priorisation suit l'utilité pour le produit, pas l'ordre alphabétique : les domaines qui alimenteront les premiers composants sont restaurés en premier.
 
-## 9. Critères d'acceptation d'un lot
+**Les décomptes ci-dessus sont des planchers.** Ils proviennent de l'inventaire automatique. La relecture bloc par bloc du document K a révélé **10 dégradations supplémentaires** invisibles aux heuristiques (55 % de défauts en plus sur ce document). Il faut donc considérer que chaque lot comportera, en plus des défauts signalés, une proportion comparable de défauts découverts à la lecture.
+
+## 10. Critères d'acceptation d'un lot
 
 1. Chaque défaut du lot a une proposition, ou une raison explicite de non-reconstruction.
 2. Aucune proposition de confiance « moyenne » ou « inconnue » n'est présentée comme certaine.
@@ -104,7 +142,7 @@ La priorisation suit l'utilité pour le produit, pas l'ordre alphabétique : les
 4. Le correctif est applicable par script et réversible.
 5. Le lot est validé par vous avant application.
 
-## 10. Risques
+## 11. Risques
 
 | Risque | Gravité | Parade |
 |---|---|---|
