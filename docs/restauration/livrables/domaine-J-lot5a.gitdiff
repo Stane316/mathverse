@@ -1,0 +1,680 @@
+diff --git "a/Maths-vers-Informatiques/Domaine J \342\200\224 Optimisation.md" "b/Maths-vers-Informatiques/Domaine J \342\200\224 Optimisation.md"
+index 9b1448b..ad6fdf1 100644
+--- "a/Maths-vers-Informatiques/Domaine J \342\200\224 Optimisation.md"	
++++ "b/Maths-vers-Informatiques/Domaine J \342\200\224 Optimisation.md"	
+@@ -38,7 +38,7 @@ L’optimisation constitue l’un des points de convergence majeurs des domaines
+ 
+ On peut représenter une partie de la chaîne ainsi :
+ 
+-\[ \]
++\[ \text{les mathématiques} \to \text{l'optimisation} \]
+ 
+ Mais l’optimisation utilise également :
+ 
+@@ -66,13 +66,13 @@ Exemples :
+ 
+ Chercher les paramètres d’un modèle qui minimisent l’erreur :
+ 
+-\[ ^\* = _ L() \]
++\[ \theta^{*}=\arg\min_\theta \mathcal{L}(\theta) \]
+ 
+ ### Réseaux
+ 
+ Chercher le chemin minimisant le coût :
+ 
+-\[ P^\* = \_P (P) \]
++\[ P^{*}=\arg\min_P C(P) \]
+ 
+ ### Logistique
+ 
+@@ -96,7 +96,7 @@ ou :
+ 
+ Chercher une trajectoire :
+ 
+-\[ ^\* = _ J() \]
++\[ \theta^{*}=\arg\min_\theta J(\theta) \]
+ 
+ ### Allocation de ressources
+ 
+@@ -118,7 +118,7 @@ La variable que l’algorithme cherche à déterminer.
+ 
+ Exemple :
+ 
+-\[ x=(x_1,x_2,,x_n) \]
++\[ x=(x_1,x_2,\ldots,x_n) \]
+ 
+ ## 3.2 Fonction objectif
+ 
+@@ -132,13 +132,13 @@ Exemple :
+ 
+ Terme souvent utilisé lorsque l’on cherche une valeur minimale.
+ 
+-\[ \_x C(x) \]
++\[ \min_x C(x) \]
+ 
+ ## 3.4 Fonction de perte
+ 
+ En machine learning :
+ 
+-\[ L() \]
++\[ L(\theta) \]
+ 
+ mesure l’écart entre les prédictions du modèle et les observations.
+ 
+@@ -148,13 +148,13 @@ Condition que la solution doit respecter.
+ 
+ Exemple :
+ 
+-\[ x_1+x_2 \]
++\[ x_1+x_2\leq b \]
+ 
+ ## 3.6 Domaine admissible
+ 
+ Ensemble des solutions satisfaisant toutes les contraintes.
+ 
+-\[ = {x : g_i(x), h_j(x)=0} \]
++\[ \mathcal{X}=\{x: g_i(x)\leq 0,\ h_j(x)=0\} \]
+ 
+ ## 3.7 Solution admissible
+ 
+@@ -178,11 +178,11 @@ Fonction ayant une géométrie particulièrement favorable à l’optimisation.
+ 
+ Pour une fonction convexe :
+ 
+-\[ f(x+(1-)y) f(x)+(1-)f(y) \]
++\[ f(\lambda x+(1-\lambda)y)\leq \lambda f(x)+(1-\lambda)f(y) \]
+ 
+ pour :
+ 
+-\[ 0 \]
++\[ \lambda\in[0,1] \]
+ 
+ ## 3.12 Paysage d’optimisation
+ 
+@@ -200,11 +200,11 @@ Cette représentation devient particulièrement importante en machine learning.
+ 
+ La forme générale peut être écrite :
+ 
+-\[ \]
++\[ \min_x f(x) \]
+ 
+ sous :
+ 
+-\[ g_i(x) \]
++\[ g_i(x)\leq 0 \]
+ 
+ et :
+ 
+@@ -212,7 +212,7 @@ et :
+ 
+ On peut donc avoir :
+ 
+-\[ \]
++\[ \min_x f(x) \]
+ 
+ Cette formulation est fondamentale.
+ 
+@@ -224,7 +224,7 @@ Elle permet de reconnaître immédiatement qu’un problème informatique possè
+ 
+ Un point (x^\*) est un minimum global si :
+ 
+-\[ f(x^\*)f(x) \]
++\[ f(x^{*})\leq f(x) \]
+ 
+ pour tout (x) admissible.
+ 
+@@ -232,7 +232,7 @@ pour tout (x) admissible.
+ 
+ Un point (x^\*) est un maximum global si :
+ 
+-\[ f(x^\*)f(x) \]
++\[ f(x^{*})\geq f(x) \]
+ 
+ pour tout (x) admissible.
+ 
+@@ -240,11 +240,11 @@ pour tout (x) admissible.
+ 
+ Un problème :
+ 
+-\[ \_x f(x) \]
++\[ \max_x f(x) \]
+ 
+ peut être transformé en :
+ 
+-\[ \_x -f(x) \]
++\[ \min_x -f(x) \]
+ 
+ Cette transformation est extrêmement fréquente dans les bibliothèques d’optimisation.
+ 
+@@ -254,13 +254,13 @@ Cette transformation est extrêmement fréquente dans les bibliothèques d’opt
+ 
+ (x^_) est un minimum local s’il existe un voisinage autour de (x^_) tel que :
+ 
+-\[ f(x^\*)f(x) \]
++\[ f(x^{*})\leq f(x) \]
+ 
+ dans ce voisinage.
+ 
+ ## 6.2 Minimum global
+ 
+-\[ f(x^\*)f(x) \]
++\[ f(x^{*})\leq f(x) \]
+ 
+ pour tout (x) admissible.
+ 
+@@ -268,11 +268,11 @@ pour tout (x) admissible.
+ 
+ Une méthode peut trouver :
+ 
+-\[ x_{}^\* \]
++\[ x_{\text{local}}^{*} \]
+ 
+ sans trouver :
+ 
+-\[ x_{}^\* \]
++\[ x_{\text{global}}^{*} \]
+ 
+ Dans les problèmes non convexes, le paysage peut contenir :
+ 
+@@ -289,19 +289,19 @@ C’est une difficulté majeure du machine learning moderne.
+ 
+ Pour une fonction différentiable :
+ 
+-\[ f:^n \]
++\[ f:\mathbb{R}^{n}\to\mathbb{R} \]
+ 
+ un optimum intérieur peut satisfaire :
+ 
+-\[ \]
++\[ \nabla f(x^{*})=0 \]
+ 
+ Cela signifie que toutes les dérivées partielles sont nulles :
+ 
+-\[ =0, , =0 \]
++\[ \frac{\partial f}{\partial x_1}=0,\ \ldots,\ \frac{\partial f}{\partial x_n}=0 \]
+ 
+ Attention :
+ 
+-\[ f(x)=0 \]
++\[ \nabla f(x)=0 \]
+ 
+ ne signifie pas nécessairement que (x) est un minimum.
+ 
+@@ -316,7 +316,7 @@ Cela peut être :
+ 
+ La Hessienne :
+ 
+-\[ H_f(x) = ^2 f(x) \]
++\[ H_f(x)=\nabla^{2}f(x) \]
+ 
+ permet d’étudier la courbure locale.
+ 
+@@ -324,13 +324,13 @@ Pour un point stationnaire (x^\*) :
+ 
+ ### Hessienne définie positive
+ 
+-\[ H_f(x^\*) \]
++\[ \nabla^{2}f(x^{*})\succ 0 \]
+ 
+ → minimum local strict.
+ 
+ ### Hessienne définie négative
+ 
+-\[ H_f(x^\*) \]
++\[ \nabla^{2}f(x^{*})\prec 0 \]
+ 
+ → maximum local strict.
+ 
+@@ -348,13 +348,13 @@ La convexité est l’un des concepts les plus importants de tout le domaine.
+ 
+ Une fonction convexe satisfait :
+ 
+-\[ f(x+(1-)y) f(x)+(1-)f(y) \]
++\[ f(\lambda x+(1-\lambda)y)\leq \lambda f(x)+(1-\lambda)f(y) \]
+ 
+ ## 9.1 Pourquoi la convexité est si importante
+ 
+ Dans un problème de minimisation convexe :
+ 
+-\[ \_x f(x) \]
++\[ \min_x f(x) \]
+ 
+ tout minimum local est également un minimum global.
+ 
+@@ -366,11 +366,11 @@ Elle simplifie considérablement l’optimisation.
+ 
+ Pour une fonction deux fois différentiable :
+ 
+-\[ f:^n \]
++\[ f:\mathbb{R}^{n}\to\mathbb{R} \]
+ 
+ une condition classique de convexité est :
+ 
+-\[ \]
++\[ \nabla^{2}f(x)\succeq 0 \]
+ 
+ pour tout (x).
+ 
+@@ -378,7 +378,7 @@ Autrement dit, la Hessienne est semi-définie positive partout.
+ 
+ Pour une convexité stricte, on recherche des conditions plus fortes, typiquement :
+ 
+-\[ ^2 f(x) \]
++\[ \nabla^{2}f(x)\succ 0 \]
+ 
+ dans les contextes appropriés.
+ 
+@@ -388,7 +388,7 @@ dans les contextes appropriés.
+ 
+ Structure favorable :
+ 
+-\[ f(x) \]
++\[ f(x)\ \text{convexe} \]
+ 
+ avec :
+ 
+@@ -410,7 +410,7 @@ Les réseaux neuronaux profonds sont généralement associés à des problèmes
+ 
+ Forme :
+ 
+-\[ \]
++\[ \min_x f(x) \]
+ 
+ sans restriction supplémentaire.
+ 
+@@ -426,11 +426,11 @@ Le minimum est :
+ 
+ Forme :
+ 
+-\[ \_x f(x) \]
++\[ \min_x f(x) \]
+ 
+ sous :
+ 
+-\[ g_i(x) \]
++\[ g_i(x)\leq 0 \]
+ 
+ et :
+ 
+@@ -462,15 +462,15 @@ La solution doit appartenir à l’ensemble :
+ 
+ Exemple :
+ 
+-\[ x+y \]
++\[ x+y\leq 10 \]
+ 
+ ou :
+ 
+-\[ x \]
++\[ x\geq 0 \]
+ 
+ ou :
+ 
+-\[ 0x \]
++\[ 0\leq x\leq 1 \]
+ 
+ Ces contraintes permettent de représenter des limites physiques, économiques ou techniques.
+ 
+@@ -478,7 +478,7 @@ Ces contraintes permettent de représenter des limites physiques, économiques o
+ 
+ Pour :
+ 
+-\[ \_x f(x) \]
++\[ \min_x f(x) \]
+ 
+ sous :
+ 
+@@ -486,11 +486,11 @@ sous :
+ 
+ on construit le Lagrangien :
+ 
+-\[ \]
++\[ \mathcal{L}(x,\lambda)=f(x)+\lambda g(x) \]
+ 
+ Les conditions stationnaires sont :
+ 
+-\[ \_x=0 \]
++\[ \nabla_x\mathcal{L}=0 \]
+ 
+ et :
+ 
+@@ -508,11 +508,11 @@ Les conditions de Karush-Kuhn-Tucker généralisent les multiplicateurs de Lagra
+ 
+ Pour :
+ 
+-\[ \_x f(x) \]
++\[ \min_x f(x) \]
+ 
+ sous :
+ 
+-\[ g_i(x) \]
++\[ g_i(x)\leq 0 \]
+ 
+ et :
+ 
+@@ -520,36 +520,36 @@ et :
+ 
+ on introduit des multiplicateurs :
+ 
+-\[ \_i \]
++\[ \lambda_i \]
+ 
+ et (\_j).
+ 
+ Le Lagrangien devient :
+ 
+-\[ (x,,) = f(x)
++\[ \mathcal{L}(x,\lambda,\mu)=f(x)
+ 
+-- \_i_i g_i(x)
+-- \_j_j h_j(x) \]
+++ \sum_i\lambda_i g_i(x)
+++ \sum_j\mu_j h_j(x) \]
+ 
+ Les KKT comprennent notamment :
+ 
+ ### Stationnarité
+ 
+-\[ \_x=0 \]
++\[ \nabla_x\mathcal{L}=0 \]
+ 
+ ### Faisabilité primale
+ 
+-\[ g_i(x) \]
++\[ g_i(x)\leq 0 \]
+ 
+ \[ h_j(x)=0 \]
+ 
+ ### Faisabilité duale
+ 
+-\[ \_i \]
++\[ \lambda_i\geq 0 \]
+ 
+ ### Complémentarité
+ 
+-\[ \]
++\[ \lambda_i g_i(x)=0 \]
+ 
+ Ces conditions sont fondamentales en optimisation sous contraintes.
+ 
+@@ -559,7 +559,7 @@ Ces conditions sont fondamentales en optimisation sous contraintes.
+ 
+ On peut avoir :
+ 
+-\[ \]
++\[ \text{dualité faible} \]
+ 
+ La dualité permet notamment :
+ 
+@@ -571,7 +571,7 @@ La dualité permet notamment :
+ 
+ Dans certains problèmes convexes, sous des hypothèses appropriées, la dualité forte donne :
+ 
+-\[ \]
++\[ p^{*}=d^{*} \]
+ 
+ où (p^_) et (d^_) représentent les valeurs optimales primal et dual.
+ 
+@@ -581,15 +581,15 @@ La programmation linéaire, ou LP, optimise une fonction linéaire sous contrain
+ 
+ Forme générale :
+ 
+-\[ \]
++\[ \min_x c^{T}x \]
+ 
+ sous :
+ 
+-\[ Axb \]
++\[ Ax\leq b \]
+ 
+ et éventuellement :
+ 
+-\[ x \]
++\[ x\geq 0 \]
+ 
+ ## Applications
+ 
+@@ -629,11 +629,11 @@ Elles constituent une famille majeure d’algorithmes modernes de programmation
+ 
+ Dans une programmation entière, certaines variables doivent être entières :
+ 
+-\[ x_i \]
++\[ x_i\in\mathbb{Z} \]
+ 
+ Exemple :
+ 
+-\[ x_i{0,1} \]
++\[ x_i\in\{0,1\} \]
+ 
+ pour représenter :
+ 
+@@ -646,7 +646,7 @@ pour représenter :
+ 
+ Cas particulier :
+ 
+-\[ x_i{0,1} \]
++\[ x_i\in\{0,1\} \]
+ 
+ Elle est extrêmement utile pour modéliser des décisions discrètes.
+ 
+@@ -687,7 +687,7 @@ Applications :
+ 
+ Lorsque les solutions sont discrètes et nombreuses :
+ 
+-\[ x \]
++\[ x\in\mathcal{X} \]
+ 
+ avec (||) potentiellement énorme.
+ 
+@@ -709,11 +709,11 @@ La programmation dynamique exploite une structure de sous-problèmes.
+ 
+ Une formulation typique :
+ 
+-\[ DP\[s\] = s \]
++\[ DP[s]=\text{valeur optimale du sous-problème } s \]
+ 
+ avec une relation de récurrence :
+ 
+-\[ DP\[s\] = \_{a} { (s,a)+DP\[s’\] } \]
++\[ DP[s]=\min_{a}\{c(s,a)+DP[s']\} \]
+ 
+ ## Conditions favorables
+ 
+@@ -738,17 +738,17 @@ La programmation dynamique devient particulièrement utile lorsqu’un problème
+ 
+ Pour :
+ 
+-\[ f:^n \]
++\[ f:\mathbb{R}^{n}\to\mathbb{R} \]
+ 
+ on peut utiliser :
+ 
+-\[ f(x) \]
++\[ \nabla f(x) \]
+ 
+ pour déterminer la direction de croissance maximale locale.
+ 
+ Pour minimiser (f), on se déplace généralement dans la direction opposée :
+ 
+-\[ -f(x) \]
++\[ -\nabla f(x) \]
+ 
+ C’est le fondement du gradient descent.
+ 
+@@ -756,7 +756,7 @@ C’est le fondement du gradient descent.
+ 
+ L’algorithme fondamental :
+ 
+-\[ \]
++\[ x_{t+1}=x_t-\eta\nabla f(x_t) \]
+ 
+ où :
+ 
+@@ -770,13 +770,13 @@ Le learning rate contrôle la taille du déplacement.
+ 
+ ### Trop petit
+ 
+-\[ \]
++\[ \eta\ \text{petit} \]
+ 
+ → convergence potentiellement très lente.
+ 
+ ### Trop grand
+ 
+-\[ \]
++\[ \eta\ \text{grand} \]
+ 
+ → oscillations ou divergence possibles.
+ 
+@@ -790,11 +790,11 @@ Le choix de () est donc une question d’optimisation à part entière.
+ 
+ En machine learning, au lieu de calculer le gradient sur tout le dataset :
+ 
+-\[ L() \]
++\[ \nabla L(\theta) \]
+ 
+ on peut utiliser un mini-batch (B) :
+ 
+-\[ \]
++\[ \frac{1}{|B|}\sum_{i\in B}\nabla L_i(\theta) \]
+ 
+ C’est la base du **Stochastic Gradient Descent — SGD** et de nombreuses variantes.
+ 
+@@ -812,7 +812,7 @@ Utilise un exemple ou une très petite quantité de données.
+ 
+ Utilise un sous-ensemble :
+ 
+-\[ BD \]
++\[ B\subset D \]
+ 
+ Le mini-batch est devenu une stratégie centrale dans l’entraînement des réseaux neuronaux.
+ 
+@@ -822,13 +822,13 @@ Le momentum introduit une mémoire de la direction précédente.
+ 
+ Une forme classique :
+ 
+-\[ v_t = v_{t-1}
++\[ v_t=\beta v_{t-1}
+ 
+-- f(x_t) \]
+++ (1-\beta)\nabla f(x_t) \]
+ 
+ puis :
+ 
+-\[ x_{t+1} = x_t-v_t \]
++\[ x_{t+1}=x_t-\eta v_t \]
+ 
+ L’objectif est notamment de réduire certaines oscillations et d’accélérer la progression dans des directions cohérentes.
+ 
+@@ -881,19 +881,19 @@ Une optimisation doit généralement savoir quand s’arrêter.
+ 
+ Critères possibles :
+ 
+-\[ |f(x)|< \]
++\[ \|\nabla f(x)\|<\epsilon \]
+ 
+ ou :
+ 
+-\[ |f(x_{t+1})-f(x_t)|< \]
++\[ |f(x_{t+1})-f(x_t)|<\epsilon \]
+ 
+ ou :
+ 
+-\[ |x_{t+1}-x_t|< \]
++\[ \|x_{t+1}-x_t\|<\epsilon \]
+ 
+ ou simplement :
+ 
+-\[ tT_{} \]
++\[ t>T_{\max} \]
+ 
+ En ML, on peut également utiliser la validation et l’early stopping.
+ 
+@@ -903,11 +903,11 @@ La méthode de Newton utilise la dérivée seconde.
+ 
+ En dimension 1 :
+ 
+-\[ \]
++\[ x_{t+1}=x_t-\frac{f'(x_t)}{f''(x_t)} \]
+ 
+ En dimension (n) :
+ 
+-\[ \]
++\[ x_{t+1}=x_t-H^{-1}\nabla f(x_t) \]
+ 
+ lorsque la Hessienne est inversible.
+ 
+@@ -915,7 +915,7 @@ lorsque la Hessienne est inversible.
+ 
+ Gradient descent utilise principalement :
+ 
+-\[ \]
++\[ \nabla f \]
+ 
+ Newton utilise :
+ 
+@@ -933,7 +933,7 @@ Les méthodes quasi-Newton cherchent à obtenir les avantages de Newton sans cal
+ 
+ Elles construisent une approximation :
+ 
+-\[ B_tH_f(x_t) \]
++\[ B_t\approx H_f(x_t) \]
+ 
+ ou de son inverse.
+ 
+@@ -975,25 +975,25 @@ Le meilleur algorithme dépend de :
+ 
+ Le calcul différentiel permet de calculer :
+ 
+-\[ \]
++\[ \nabla_\theta L \]
+ 
+ La backpropagation permet de calculer efficacement ces dérivées dans un réseau.
+ 
+ L’optimiseur utilise ensuite ces gradients :
+ 
+-\[ \_{t+1} = \_t
++\[ \theta_{t+1}=\theta_t
+ 
+-- \_L \]
++- \eta\nabla_\theta L \]
+ 
+ Ainsi :
+ 
+-\[ \]
++\[ \theta^{*}=\arg\min_\theta L(\theta) \]
+ 
+ # 45\. CHAÎNE FONDAMENTALE POUR LE MACHINE LEARNING
+ 
+ La chaîne du Domaine I devient ici :
+ 
+-\[ f(x) f’(x) f(x) ^\* \]
++\[ f(x)\to f'(x)\to x-\eta f'(x)\to x^{*} \]
+ 
+ Cette chaîne constitue l’un des mécanismes fondamentaux de l’apprentissage supervisé moderne.
+ 
+@@ -1001,7 +1001,7 @@ Cette chaîne constitue l’un des mécanismes fondamentaux de l’apprentissage
+ 
+ Le problème d’apprentissage peut être écrit :
+ 
+-\[ \]
++\[ \min_\theta L(\theta) \]
+ 
+ Exemples :
+ 
+@@ -1009,13 +1009,13 @@ Exemples :
+ 
+ Erreur quadratique :
+ 
+-\[ MSE = 1n \_{i=1}^{n} (y_i-y_i)^2 \]
++\[ MSE=\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_i-y_i)^{2} \]
+ 
+ ### Classification
+ 
+ Cross-entropy :
+ 
+-\[ L = -\_i y_i(y_i) \]
++\[ L=-\sum_i y_i\log(\hat{y}_i) \]
+ 
+ Le choix de la fonction de perte définit ce que signifie « faire une bonne prédiction » pour le modèle.
+ 

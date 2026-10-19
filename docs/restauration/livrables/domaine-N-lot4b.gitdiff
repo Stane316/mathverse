@@ -1,0 +1,667 @@
+diff --git "a/Maths-vers-Informatiques/DOCUMENT N \342\200\224 TRANSFORM\303\211ES.md" "b/Maths-vers-Informatiques/DOCUMENT N \342\200\224 TRANSFORM\303\211ES.md"
+index f45366e..760e54c 100644
+--- "a/Maths-vers-Informatiques/DOCUMENT N \342\200\224 TRANSFORM\303\211ES.md"	
++++ "b/Maths-vers-Informatiques/DOCUMENT N \342\200\224 TRANSFORM\303\211ES.md"	
+@@ -1306,7 +1306,7 @@ Cela peut transformer une PDE en une famille d’EDO.
+ 
+ La transformée de Hilbert permet de construire le signal analytique :
+ 
+-\[ z(t)=x(t)+i{x(t)} \]
++\[ z(t)=x(t)+i\mathcal{H}\{x(t)\} \]
+ 
+ Elle est utilisée pour analyser :
+ 
+@@ -1347,7 +1347,7 @@ La transformée de Mellin est adaptée aux phénomènes liés aux changements d
+ 
+ Elle est conceptuellement intéressante lorsque :
+ 
+-\[ x ax \]
++\[ x\to ax \]
+ 
+ joue un rôle fondamental.
+ 
+@@ -1386,7 +1386,7 @@ Un vecteur :
+ 
+ peut être représenté dans une autre base :
+ 
+-\[ x=\_k c_k_k \]
++\[ x=\sum_k c_k\phi_k \]
+ 
+ Les coefficients :
+ 
+@@ -1406,7 +1406,7 @@ Cette perspective permet d’unifier beaucoup de transformées.
+ 
+ Pour un vecteur :
+ 
+-\[ x^N \]
++\[ x\in\mathbb{R}^{N} \]
+ 
+ une transformée discrète peut souvent s’écrire :
+ 
+@@ -1414,7 +1414,7 @@ une transformée discrète peut souvent s’écrire :
+ 
+ où :
+ 
+-\[ T^{NN} \]
++\[ T\in\mathbb{R}^{N\times N} \]
+ 
+ est une matrice de transformation.
+ 
+@@ -1424,11 +1424,11 @@ La puissance de la FFT vient en partie du fait qu’on évite de construire naï
+ 
+ Une famille :
+ 
+-\[ {\_k} \]
++\[ \{\phi_k\} \]
+ 
+ est orthonormale si :
+ 
+-\[ \_i,_j =_ {ij} \]
++\[ \langle\phi_i,\phi_j\rangle=\delta_{ij} \]
+ 
+ Cette propriété simplifie :
+ 
+@@ -1446,13 +1446,12 @@ Cela signifie qu’un grand nombre de coefficients peuvent être proches de zér
+ 
+ Conceptuellement :
+ 
+-\[ x T(x) \]
++\[ x\to T(x) \]
+ 
+ avec :
+ 
+-\[ T(x)
+-
+-\]
++\[ T(x)=(c_1,\ldots,c_n)
++\text{avec la plupart des } c_i\approx 0 \]
+ 
+ Cela est extrêmement intéressant pour :
+ 
+@@ -1466,9 +1465,7 @@ Cela est extrêmement intéressant pour :
+ 
+ Une stratégie simple consiste à supprimer les petits coefficients :
+ 
+-\[ c_i’=
+-
+-\]
++\[ c_i'=\begin{cases}c_i&\text{si }|c_i|>\lambda\\ 0&\text{sinon}\end{cases} \]
+ 
+ Puis :
+ 
+@@ -1482,11 +1479,11 @@ Elle est particulièrement naturelle avec les représentations parcimonieuses.
+ 
+ ### Hard thresholding
+ 
+-\[ S_(x) = x,\_{|x|} \]
++\[ S_\lambda(x)=x\cdot\mathbf{1}_{|x|>\lambda} \]
+ 
+ ### Soft thresholding
+ 
+-\[ S_(x) = (x) (|x|-,0) \]
++\[ S_\lambda(x)=\mathrm{sign}(x)\max(|x|-\lambda,0) \]
+ 
+ Le soft thresholding est notamment lié aux méthodes de régularisation parcimonieuse.
+ 
+@@ -1502,7 +1499,7 @@ Conceptuellement :
+ 
+ avec :
+ 
+-\[ mn \]
++\[ m\ll n \]
+ 
+ mais avec des hypothèses adaptées sur (x), (A) et la parcimonie.
+ 
+@@ -1524,13 +1521,13 @@ où (T) est mathématiquement défini.
+ 
+ ### Représentation apprise
+ 
+-\[ z=f_(x) \]
++\[ z=f_\theta(x) \]
+ 
+ où (f_) est appris.
+ 
+ ### Représentation hybride
+ 
+-\[ z=f_(T(x)) \]
++\[ z=f_\theta(T(x)) \]
+ 
+ Cette dernière approche peut combiner :
+ 
+@@ -1717,7 +1714,7 @@ On peut construire un bruit :
+ 
+ comme combinaison de composantes à différentes échelles :
+ 
+-\[ N(x) = \_{k=0}^{K} a_kN_k(x) \]
++\[ N(x)=\sum_{k=0}^{K}a_kN_k(x) \]
+ 
+ avec différentes fréquences ou échelles.
+ 
+@@ -1792,17 +1789,17 @@ Cela permet d’étudier :
+ 
+ À partir de :
+ 
+-\[ H(i) \]
++\[ H(i\omega) \]
+ 
+ on peut représenter :
+ 
+ ### Magnitude
+ 
+-\[ 20_{10}|H(i)| \]
++\[ 20\log_{10}|H(i\omega)| \]
+ 
+ ### Phase
+ 
+-\[ H(i) \]
++\[ \arg(H(i\omega)) \]
+ 
+ en fonction de la fréquence logarithmique.
+ 
+@@ -1923,13 +1920,13 @@ Un retard :
+ 
+ produit un facteur fréquentiel :
+ 
+-\[ e^{-it_0} \]
++\[ e^{-i\omega t_0} \]
+ 
+ La phase varie donc avec la fréquence.
+ 
+ Le retard peut être relié à la pente de phase :
+ 
+-\[ \_g() = - \]
++\[ \tau_g(\omega)=-\frac{d\varphi}{d\omega} \]
+ 
+ dans les contextes appropriés.
+ 
+@@ -1952,7 +1949,7 @@ Cette propriété impose des contraintes sur :
+ 
+ Une transformée utile doit souvent permettre :
+ 
+-\[ x X x \]
++\[ x\to X\to x \]
+ 
+ La transformation inverse doit donc être définie dans les conditions appropriées.
+ 
+@@ -1970,11 +1967,11 @@ Une transformée mathématiquement inversible n’implique donc pas nécessairem
+ 
+ Un problème direct :
+ 
+-\[ xy \]
++\[ x\to y \]
+ 
+ Un problème inverse :
+ 
+-\[ yx \]
++\[ y\to x \]
+ 
+ Les transformées peuvent simplifier le problème inverse, mais celui-ci peut rester mal posé.
+ 
+@@ -1984,13 +1981,13 @@ Exemple :
+ 
+ Retrouver (X) implique :
+ 
+-\[ X= \]
++\[ X=H^{-1}Y \]
+ 
+ si (H).
+ 
+ Mais si :
+ 
+-\[ |H| \]
++\[ |H|\approx 0 \]
+ 
+ le bruit peut être énormément amplifié.
+ 
+@@ -2043,7 +2040,7 @@ peut devenir prohibitive.
+ 
+ Une FFT :
+ 
+-\[ O(NN) \]
++\[ O(N\log N) \]
+ 
+ rend de nombreux traitements pratiques.
+ 
+@@ -2057,7 +2054,7 @@ Une convolution directe peut coûter beaucoup de calculs.
+ 
+ Grâce à :
+ 
+-\[ (x\*h) = (x)(h) \]
++\[ \mathcal{F}\{x\ast h\}=\mathcal{F}\{x\}\cdot\mathcal{F}\{h\} \]
+ 
+ on peut calculer :
+ 
+@@ -2106,7 +2103,7 @@ Elles sont importantes pour le traitement :
+ 
+ Un système temps réel impose :
+ 
+-\[ T_{} < T_{} \]
++\[ T_{\text{calcul}}<T_{\text{disponible}} \]
+ 
+ Une transformée peut donc être mathématiquement correcte mais inutilisable si elle dépasse le budget temporel.
+ 
+@@ -2248,7 +2245,7 @@ Une idée plus avancée consiste à ne pas imposer une seule transformée.
+ 
+ On peut sélectionner :
+ 
+-\[ T_1,T_2,,T_k \]
++\[ T_1,T_2,\ldots,T_k \]
+ 
+ selon les caractéristiques du signal.
+ 
+@@ -2262,7 +2259,7 @@ Un système peut comparer :
+ 
+ Puis sélectionner celle qui maximise un objectif :
+ 
+-\[ T^ = \_T (T,x) \]
++\[ \hat{T}=\arg\max_T \mathrm{score}(T,x) \]
+ 
+ Le score peut mesurer :
+ 
+@@ -2277,13 +2274,13 @@ Le score peut mesurer :
+ 
+ On peut aller plus loin et chercher une transformation :
+ 
+-\[ T_ \]
++\[ T_\theta \]
+ 
+ dont les paramètres sont appris.
+ 
+ On cherche alors :
+ 
+-\[ ^ = _L(T_(x),y) \]
++\[ \hat{\theta}=\arg\min_\theta L(T_\theta(x),y) \]
+ 
+ Cela crée un pont entre :
+ 
+@@ -2298,7 +2295,7 @@ Dans un modèle neuronal, une transformée peut être intégrée comme une opér
+ 
+ On peut alors calculer :
+ 
+-\[ \]
++\[ \nabla_\theta L \]
+ 
+ à travers la transformation.
+ 
+@@ -2380,7 +2377,7 @@ Cherche-t-on des fréquences ?
+ 
+ Alors :
+ 
+-\[ \]
++\[ \text{Fourier} \]
+ 
+ Question 4 :
+ 
+@@ -2388,7 +2385,7 @@ Cherche-t-on une dynamique ou une EDO ?
+ 
+ Alors :
+ 
+-\[ \]
++\[ \text{Laplace} \]
+ 
+ Question 5 :
+ 
+@@ -2396,7 +2393,7 @@ Travaille-t-on avec un système discret ?
+ 
+ Alors :
+ 
+-\[ \]
++\[ \text{transformée en Z} \]
+ 
+ Question 6 :
+ 
+@@ -2404,7 +2401,7 @@ Cherche-t-on une localisation temporelle et fréquentielle ?
+ 
+ Alors :
+ 
+-\[ \]
++\[ \text{STFT} \]
+ 
+ Question 7 :
+ 
+@@ -2412,7 +2409,7 @@ Cherche-t-on une représentation multi-échelle ?
+ 
+ Alors :
+ 
+-\[ \]
++\[ \text{ondelettes} \]
+ 
+ Question 8 :
+ 
+@@ -2420,7 +2417,7 @@ Cherche-t-on une compression efficace d’image ?
+ 
+ Alors :
+ 
+-\[ \]
++\[ \text{DCT} \]
+ 
+ # 119\. MATRICE DE DÉCISION
+ 
+@@ -2534,7 +2531,7 @@ Exemples :
+ 
+ ### Sinusoïde pure
+ 
+-\[ x\[n\]=(2f n/f_s) \]
++\[ x[n]=\sin(2\pi fn/f_s) \]
+ 
+ On doit observer un pic correspondant à (f), avec les effets attendus de la fenêtre et de la représentation.
+ 
+@@ -2554,11 +2551,11 @@ Les harmoniques doivent apparaître.
+ 
+ Pour une transformée réversible :
+ 
+-\[ x T(x) T^{-1}(T(x)) \]
++\[ x\to T(x)\to T^{-1}(T(x)) \]
+ 
+ on doit vérifier :
+ 
+-\[ |x-T^{-1}(T(x))| \]
++\[ \|x-T^{-1}(T(x))\| \]
+ 
+ Cette erreur doit rester compatible avec :
+ 
+@@ -2586,7 +2583,7 @@ Pour Fourier, le théorème de Parseval fournit notamment un lien entre l’éne
+ 
+ Pour un signal réel, les coefficients DFT présentent une symétrie conjuguée :
+ 
+-\[ X\[N-k\] = \]
++\[ X[N-k]=\overline{X[k]} \]
+ 
+ dans la convention classique.
+ 
+@@ -2636,7 +2633,7 @@ Le choix doit donc dépendre du système.
+ 
+ Dans une compression avec perte :
+ 
+-\[ c Q(c) \]
++\[ c\to Q(c) \]
+ 
+ où (Q) est une quantification.
+ 
+@@ -2650,7 +2647,7 @@ Le compromis devient :
+ 
+ Pipeline générique :
+ 
+-\[ x T(x) Q C \]
++\[ x\to T(x)\to Q\to C \]
+ 
+ où :
+ 
+@@ -2660,11 +2657,11 @@ où :
+ 
+ La reconstruction :
+ 
+-\[ C Q^{-1} T^{-1} \]
++\[ \hat{x}=T^{-1}(Q^{-1}(C)) \]
+ 
+ avec :
+ 
+-\[ x \]
++\[ \hat{x} \]
+ 
+ dans le cas avec perte.
+ 
+@@ -2672,7 +2669,7 @@ dans le cas avec perte.
+ 
+ Dans une compression sans perte, la reconstruction doit être exacte :
+ 
+-\[ =x \]
++\[ \hat{x}=x \]
+ 
+ La transformée seule ne garantit pas la compression sans perte.
+ 
+@@ -2744,7 +2741,7 @@ Cela donne une compréhension structurelle des transformées.
+ 
+ Une variable aléatoire possède une fonction caractéristique :
+ 
+-\[ \_X(t) = \[e^{itX}\] \]
++\[ \varphi_X(t)=\mathbb{E}\left[e^{itX}\right] \]
+ 
+ qui est intimement liée à la transformée de Fourier de sa loi sous des conditions appropriées.
+ 
+@@ -2771,7 +2768,7 @@ La transformée permet donc d’ajouter une dimension fréquentielle à l’anal
+ 
+ Une idée plus avancée consiste à définir des signaux sur les sommets d’un graphe :
+ 
+-\[ x:V \]
++\[ x:V\to\mathbb{R} \]
+ 
+ On peut alors construire des analogues de Fourier sur les graphes à partir des vecteurs propres du Laplacien du graphe.
+ 
+@@ -2811,7 +2808,7 @@ Une représentation transformée peut servir de représentation intermédiaire.
+ 
+ Exemple conceptuel :
+ 
+-\[ x T(x) z T^{-1}() \]
++\[ x\to T(x)\to z\to T^{-1}(z) \]
+ 
+ Cela permet potentiellement de travailler dans un espace où certaines structures sont plus faciles à manipuler.
+ 
+@@ -2848,7 +2845,7 @@ Une donnée peut être cachée dans une représentation transformée.
+ 
+ Conceptuellement :
+ 
+-\[ x T(x) T^{-1} x’ \]
++\[ x\to T(x)\to T^{-1}\to x' \]
+ 
+ Le signal final semble proche du signal original mais contient une information supplémentaire.
+ 
+@@ -2869,7 +2866,7 @@ Elle peut donc servir d’outil d’investigation.
+ 
+ Une série temporelle :
+ 
+-\[ x_0,x_1,,x_N \]
++\[ x_0,x_1,\ldots,x_N \]
+ 
+ peut être étudiée sous plusieurs angles :
+ 
+@@ -2919,7 +2916,7 @@ puis :
+ 
+ On peut alors construire :
+ 
+-\[ (x) = d(T(x),) \]
++\[ s(x)=d(T(x),\mu) \]
+ 
+ où () représente le comportement normal.
+ 
+@@ -3065,7 +3062,7 @@ Une bibliothèque de transformées doit tester :
+ 
+ ### Exactitude
+ 
+-\[ T^{-1}(T(x))x \]
++\[ T^{-1}(T(x))\approx x \]
+ 
+ ### Cas limites
+ 
+@@ -3137,7 +3134,7 @@ Si le problème contient :
+ 
+ penser :
+ 
+-\[ \]
++\[ \text{transformée de Fourier} \]
+ 
+ # 157\. FICHE DE RECONNAISSANCE — FFT
+ 
+@@ -3151,7 +3148,7 @@ Si le problème contient :
+ 
+ penser :
+ 
+-\[ \]
++\[ \text{FFT} \]
+ 
+ # 158\. FICHE DE RECONNAISSANCE — LAPLACE
+ 
+@@ -3166,7 +3163,7 @@ Si le problème contient :
+ 
+ penser :
+ 
+-\[ \]
++\[ \text{Laplace} \]
+ 
+ # 159\. FICHE DE RECONNAISSANCE — Z
+ 
+@@ -3180,7 +3177,7 @@ Si le problème contient :
+ 
+ penser :
+ 
+-\[ \]
++\[ \text{transformée en Z} \]
+ 
+ # 160\. FICHE DE RECONNAISSANCE — STFT
+ 
+@@ -3194,7 +3191,7 @@ Si le problème contient :
+ 
+ penser :
+ 
+-\[ \]
++\[ \text{STFT} \]
+ 
+ # 161\. FICHE DE RECONNAISSANCE — ONDELETTES
+ 
+@@ -3209,7 +3206,7 @@ Si le problème contient :
+ 
+ penser :
+ 
+-\[ \]
++\[ \text{ondelettes} \]
+ 
+ # 162\. FICHE DE RECONNAISSANCE — DCT
+ 
+@@ -3222,13 +3219,13 @@ Si le problème contient :
+ 
+ penser :
+ 
+-\[ \]
++\[ \text{DCT} \]
+ 
+ # 163\. ERREURS CONCEPTUELLES À ÉVITER
+ 
+ Ne jamais confondre :
+ 
+-\[ \]
++\[ \text{la DFT et la FFT} \]
+ 
+ La relation est :
+ 
+@@ -3245,7 +3242,7 @@ FFT
+ 
+ De même :
+ 
+-\[ \]
++\[ \text{la transformée de Fourier et la DFT} \]
+ 
+ mais elles jouent des rôles conceptuellement analogues dans les domaines continu et discret.
+ 
+@@ -3435,7 +3432,7 @@ et permettre de modifier :
+ 
+ Créer un système :
+ 
+-\[ X(f) H(f) Y(f) \]
++\[ X(f)\to H(f)\to Y(f) \]
+ 
+ avec :
+ 
+@@ -3467,7 +3464,7 @@ Comparer :
+ 
+ Créer :
+ 
+-\[ x DWT Threshold IDWT \]
++\[ x\to \text{DWT}\to \text{seuil}\to \text{IDWT} \]
+ 
+ et mesurer :
+ 
+@@ -3527,7 +3524,7 @@ Comparer :
+ 
+ contre :
+ 
+-\[ O(NN) \]
++\[ O(N\log N) \]
+ 
+ ## Challenge 3
+ 
+@@ -3597,7 +3594,7 @@ Comparaison
+ 
+ Le système recommande ensuite :
+ 
+-\[ T^ \]
++\[ \hat{T} \]
+ 
+ selon le problème.
+ 
+@@ -3855,31 +3852,31 @@ Compression, codage, représentation et information.
+ 
+ La contribution la plus importante de ce domaine peut être résumée ainsi :
+ 
+-\[ \]
++\[ \text{changer de représentation pour simplifier le problème} \]
+ 
+ Fourier transforme :
+ 
+-\[ \]
++\[ \text{une fonction en spectre} \]
+ 
+ Laplace transforme :
+ 
+-\[ \]
++\[ \text{une fonction temporelle en F(s)} \]
+ 
+ Z transforme :
+ 
+-\[ \]
++\[ \text{une séquence en X(z)} \]
+ 
+ STFT transforme :
+ 
+-\[ \]
++\[ \text{un signal en représentation temps-fréquence} \]
+ 
+ Les ondelettes transforment :
+ 
+-\[ \]
++\[ \text{un signal en échelles et détails} \]
+ 
+ La DCT transforme :
+ 
+-\[ \]
++\[ \text{des données en coefficients cosinus} \]
+ 
+ Et la FFT transforme une idée mathématique en un outil informatique suffisamment efficace pour être utilisé à grande échelle.
+ 
+@@ -3895,17 +3892,17 @@ La question centrale est :
+ 
+ C’est ce qui permet de passer :
+ 
+-\[ \]
++\[ \text{transformer} \]
+ 
+-\[ \]
++\[ \text{voir} \]
+ 
+-\[ \]
++\[ \text{comprendre} \]
+ 
+-\[ \]
++\[ \text{simplifier} \]
+ 
+-\[ \]
++\[ \text{calculer} \]
+ 
+-\[ \]
++\[ \text{construire} \]
+ 
+ C’est précisément cette capacité à **changer de perspective mathématique** qui rend les transformées aussi puissantes.
+ 
+@@ -3932,11 +3929,11 @@ Elles interviennent dans :
+ 
+ Le réflexe d’ingénieur à développer est donc :
+ 
+-\[ \]
++\[ \text{chercher la représentation qui simplifie} \]
+ 
+ mais :
+ 
+-\[ \]
++\[ \text{vérifier les hypothèses et les limites} \]
+ 
+ ## FORMULE MENTALE DU DOMAINE N
+ 

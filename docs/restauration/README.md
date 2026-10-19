@@ -44,7 +44,7 @@ ont été identifiés, et ils n'appellent pas la même méthode :
 |---|---|---|---|---|
 | 1 | Commandes LaTeX détruites **avec leurs arguments** | E à U | le bloc, son squelette, des fragments (`\_`, `_{}`, `( )`) | reconstruction |
 | 2 | Lettres grecques détruites | E à U | idem, sans résidu | reconstruction |
-| 3 | **Blocs `\[…\]` supprimés, formules aplaties en texte inline** | **A à D** (vérifié sur D) | **les variables, l'ordre des opérations** | **recomposition** |
+| 3 | **Blocs `\[…\]` supprimés, formules aplaties en texte inline** | **A à D** (vérifié sur A, B, C, D) | **les variables, l'ordre des opérations** | **recomposition** |
 
 Le régime 3 a été découvert sur le document D (fiche `domaine-D-…`, 2026-10-18) : les
 formules y ont été réécrites en texte, chaque symbole séparé par des doubles espaces, et
@@ -114,6 +114,14 @@ recensés (61 signalés + 70 découverts), 87 propositions prêtes, 44 blocs en 
 sont des **planchers** : sur K, la relecture bloc par bloc a révélé 55 % de défauts
 supplémentaires. Il faut s'attendre à la même proportion ailleurs.
 
+**Mesure directe du sous-comptage (N, 2026-10-18).** Sur le domaine N : 146 blocs restaurés,
+alors que l'inventaire n'en signalait que 104 — et seuls 72 des 104 ont effectivement été
+résorbés par les 146 restaurations. Autrement dit **74 blocs (51 %) étaient dégradés sans
+être détectés** par les six heuristiques. La cause est connue : un bloc dont le résidu
+ressemble à une notation complète — `\[ F(\omega) \]` — ne déclenche aucune des six règles,
+alors que l'équation a bien été détruite. **Le chiffre 724 est donc un minimum strict.**
+Tout bloc non encore relu doit être considéré comme potentiellement dégradé, signalé ou non.
+
 L'inventaire est **régénérable à volonté** : `python3 tools/restauration/extract_defects.py <source> inventaire <sortie.csv>`, et consultable lot par lot avec le mode `contexte`.
 
 ## 4. Protocole de reconstruction
@@ -164,6 +172,17 @@ autorisé que sur le dépôt `mathverse`). **Aucune tentative de contournement n
 Le travail est donc préparé dans un clone local (branche `arena/restauration-equations`, un
 commit par lot) puis livré sous forme de diff. Deux façons de procéder :
 
+**Ordre d'application — règle et limite.** Quand deux patches touchent le même fichier, on
+applique les **numéros de ligne les plus élevés d'abord**. Cette règle a une limite, rencontrée
+sur J : le lot 5c (l. 3386-3404) est **inclus** dans la plage du lot 5b (l. 1026-3534). Calculer
+le décalage à partir du JSON est **faux** — les champs `ancien` peuvent se terminer par un
+retour à la ligne, ce qui fausse le compte. **La seule méthode fiable est empirique** : relire le
+fichier après chaque lot et vérifier la position réelle des blocs restants. Sur J, le décalage
+calculé était de −20 et le décalage réel de **0**.
+
+Les trois diffs J ont été **testés** : appliqués dans l'ordre 5b → 5c → 5a sur un checkout
+vierge du document, ils reproduisent exactement l'état final (vérifié par `diff`).
+
 **A. Vous appliquez localement** (recommandé, ~30 s) :
 
 ```bash
@@ -206,10 +225,10 @@ toucher aux autres.
 | Ordre | Lot | Pourquoi |
 |---:|---|---|
 | 1 | **K** — 18 défauts signalés, **30 traités** | domaine le plus utile au produit, équations canoniques — **terminé, 0 défaut restant** (lots 1 et 1 bis) |
-| 2 | **L** — analyse numérique | socle des critères de validation ; 61 signalés, **131 au total**, 102 appliqués — **33 blocs en attente de l'auteur** |
-| 3 | **I** — calcul différentiel | 109 signalés, 318 blocs lus — **lots 3a (62), 3b (133) et 3c (9) : 204 restaurations appliquées**, blocs vides 44 → 27 — **28 blocs en attente de l'auteur** |
-| 4 | **N** — transformées | 84 signalés, lecture intégrale des 248 blocs — lots 4a (75) et 4b (104) proposés, **en attente de validation** |
-| 5 | **J** — optimisation | 166 signalés, **119 observés** (lecture intégrale des 332 blocs — le plus gros document) — **lots 5a (102 entrées) et 5b (186) proposés, en attente de validation** — **document entièrement parcouru** |
+| 2 | **L** — analyse numérique | socle des critères de validation ; 61 signalés, **131 au total**, 102 appliqués — blocs vides **57 → 32** — **44 inconnues**, dont **7 blocs jamais soumis** |
+| 3 | **I** — calcul différentiel | 109 signalés, 318 blocs lus — **lots 3a (62), 3b (133) et 3c (9) : 204 restaurations appliquées**, blocs vides **59 → 38** *(chiffre rectifié : 44 → 27 était faux)* — **28 inconnues**, dont **5 blocs jamais soumis** |
+| 4 | **N** — transformées | 104 signalés, **245 blocs display** recensés — **lots 4a (62) et 4b (84) : 146 restaurations appliquées**, défauts détectés 104 → 32, blocs vides 71 → 34 — blocs vides **71 → 34** — **33 inconnues**, dont **1 bloc jamais soumis** |
+| 5 | **J** — optimisation | 166 signalés, **332 blocs display** — **lots 5b (133), 5c (10) et 5a (89) : 232 restaurations appliquées**, défauts détectés 166 → 45, blocs vides 132 → 67 — **66 blocs en attente de l'auteur** — **document entièrement traité** |
 | 6-9 | H, G, M, O, F, Q, P, UI/UX, E/R/S/U, « Ai Technical Litteracy » | voir `PLAN-ACHEVEMENT.md` |
 | 10 | A, B, C, D | restructuration (voie 2) — **chantier distinct, périmètre confirmé dans le périmètre d'achèvement** |
 
@@ -222,6 +241,33 @@ toucher aux autres.
 La priorisation suit l'utilité pour le produit, pas l'ordre alphabétique : les domaines qui alimenteront les premiers composants sont restaurés en premier.
 
 **Les décomptes ci-dessus sont des planchers.** Ils proviennent de l'inventaire automatique. La relecture bloc par bloc du document K a révélé **10 dégradations supplémentaires** invisibles aux heuristiques (55 % de défauts en plus sur ce document). Il faut donc considérer que chaque lot comportera, en plus des défauts signalés, une proportion comparable de défauts découverts à la lecture.
+
+### État de couverture mesuré (2026-10-19)
+
+| Document | Blocs display | Vides avant | Vides après | Inconnues | **Jamais soumis** |
+|---|---:|---:|---:|---:|---:|
+| **K** | 64 | 2 | **0** | 1 | **0** |
+| **L** | 178 | 57 | **32** | 44 | **7** |
+| **I** | 318 | 59 | **38** | 28 | **5** |
+| **N** | 245 | 71 | **34** | 33 | **1** |
+| **J** | 332 | 132 | **67** | 66 | **5** |
+| **Total** | 1 137 | 321 | **171** | 172 | **18** |
+
+Trois colonnes distinctes, à ne pas confondre :
+
+- **Vides** — blocs dont le contenu est vide. C'est ce qu'on voit.
+- **Inconnues** — blocs **soumis** mais non restaurés. Le chiffre peut dépasser celui des
+  blocs vides (L : 44 inconnues pour 32 vides) parce qu'une inconnue peut conserver un
+  résidu : le bloc n'est pas vide, mais il est toujours dégradé.
+- **Jamais soumis** — blocs vides **absents de tous les lots**. Ce n'est pas un reste,
+  c'est une **lacune de couverture** : 18 blocs que personne n'avait regardés. Ils sont
+  maintenant identifiés et listés dans `propositions/domaine-L-N-blocs-restants.md`.
+
+**Recouvrements entre lots.** Certaines lignes figurent dans deux lots : L 3, I 1, J 10.
+C'est normal et voulu — un lot ultérieur reprend ce qu'un lot antérieur avait laissé en
+inconnue (les 10 de J sont le lot 5c, qui traite ce que 5b avait laissé). Ces doublons
+compliquent la comptabilité et expliquent que la somme des colonnes ne se recompose pas
+exactement ; **seule la mesure directe sur le fichier fait foi**, jamais le calcul.
 
 ## 10. Critères d'acceptation d'un lot
 

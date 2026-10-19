@@ -1,0 +1,959 @@
+diff --git "a/Maths-vers-Informatiques/Domaine J \342\200\224 Optimisation.md" "b/Maths-vers-Informatiques/Domaine J \342\200\224 Optimisation.md"
+index ef7c80f..4928aab 100644
+--- "a/Maths-vers-Informatiques/Domaine J \342\200\224 Optimisation.md"	
++++ "b/Maths-vers-Informatiques/Domaine J \342\200\224 Optimisation.md"	
+@@ -1023,17 +1023,17 @@ Le choix de la fonction de perte définit ce que signifie « faire une bonne pr
+ 
+ On peut ajouter une pénalité :
+ 
+-\[ \]
++\[ L(\theta)+\lambda R(\theta) \]
+ 
+ Exemples :
+ 
+ ### L2
+ 
+-\[ R()=||\_2^2 \]
++\[ R(\theta)=\|\theta\|_{2}^{2} \]
+ 
+ ### L1
+ 
+-\[ R()=||\_1 \]
++\[ R(\theta)=\|\theta\|_{1} \]
+ 
+ La régularisation modifie donc directement le problème d’optimisation.
+ 
+@@ -1043,19 +1043,19 @@ Minimiser parfaitement la perte d’entraînement ne garantit pas une bonne gén
+ 
+ On distingue :
+ 
+-\[ L_{} \]
++\[ L_{\text{train}} \]
+ 
+ et :
+ 
+-\[ L_{} \]
++\[ L_{\text{test}} \]
+ 
+ Un modèle peut avoir :
+ 
+-\[ L_{} \]
++\[ L_{\text{train}} \]
+ 
+ mais :
+ 
+-\[ L_{} \]
++\[ L_{\text{test}} \]
+ 
+ Le problème n’est donc pas uniquement :
+ 
+@@ -1069,7 +1069,7 @@ Il faut également considérer :
+ 
+ Pour un réseau :
+ 
+-\[ L() \]
++\[ L(\theta) \]
+ 
+ où () peut contenir des millions ou milliards de paramètres, l’espace d’optimisation est extrêmement dimensionnel.
+ 
+@@ -1089,9 +1089,9 @@ La visualisation classique en 2D ou 3D est donc une représentation simplifiée
+ 
+ Lorsque le gradient est bruité :
+ 
+-\[ g_t = f(x_t)
++\[ g_t=\nabla f(x_t)
+ 
+-- \_t \]
+++ \xi_t \]
+ 
+ l’algorithme travaille avec une estimation du gradient.
+ 
+@@ -1143,7 +1143,7 @@ Une recherche locale commence à partir d’une solution et explore son voisinag
+ 
+ Schéma :
+ 
+-\[ x N(x) x’ N(x’) \]
++\[ x\to N(x)\to x'\to N(x') \]
+ 
+ Elle est souvent efficace mais peut rester bloquée dans un optimum local.
+ 
+@@ -1151,7 +1151,7 @@ Elle est souvent efficace mais peut rester bloquée dans un optimum local.
+ 
+ On lance une recherche locale depuis plusieurs points initiaux :
+ 
+-\[ x_0^{(1)}, x_0^{(2)}, , x_0^{(k)} \]
++\[ x_0^{(1)},x_0^{(2)},\ldots,x_0^{(k)} \]
+ 
+ Puis on conserve la meilleure solution obtenue.
+ 
+@@ -1165,7 +1165,7 @@ Il peut accepter temporairement une solution moins bonne afin d’échapper à u
+ 
+ Une probabilité typique d’acceptation est :
+ 
+-\[ P = ( - ) \]
++\[ P=\exp\left(-\frac{\Delta E}{T}\right) \]
+ 
+ où :
+ 
+@@ -1180,7 +1180,7 @@ Les algorithmes génétiques représentent des solutions comme des individus.
+ 
+ Une population :
+ 
+-\[ P={x_1,x_2,,x_n} \]
++\[ P=\{x_1,x_2,\ldots,x_n\} \]
+ 
+ évolue grâce notamment à :
+ 
+@@ -1199,7 +1199,7 @@ La fonction de fitness mesure la qualité d’une solution.
+ 
+ Selon le problème :
+ 
+-\[ (x) \]
++\[ F(x) \]
+ 
+ peut être :
+ 
+@@ -1296,7 +1296,7 @@ Ce compromis apparaît dans :
+ 
+ Certains problèmes possèdent plusieurs objectifs :
+ 
+-\[ f_1(x),f_2(x),,f_k(x) \]
++\[ f_1(x),f_2(x),\ldots,f_k(x) \]
+ 
+ Par exemple :
+ 
+@@ -1331,15 +1331,15 @@ C’est fondamental pour :
+ 
+ On peut combiner plusieurs objectifs :
+ 
+-\[ F(x) = \_1 f_1(x)
++\[ F(x)=\lambda_1f_1(x)
+ 
+-- \_2 f_2(x)
+++ \lambda_2f_2(x)
+ 
+-- \_k f_k(x) \]
+++ \lambda_kf_k(x) \]
+ 
+ avec des poids :
+ 
+-\[ \_i \]
++\[ \lambda_i \]
+ 
+ Cette méthode transforme un problème multi-objectifs en un problème scalaire, mais elle impose des choix sur l’importance relative des objectifs.
+ 
+@@ -1349,11 +1349,11 @@ On peut chercher une solution qui reste performante lorsque les données ou para
+ 
+ Au lieu de :
+ 
+-\[ \_x f(x) \]
++\[ \min_x f(x) \]
+ 
+ on peut considérer :
+ 
+-\[ _x_ {} f(x,) \]
++\[ \min_x\max_{\delta\in\Delta}f(x,\delta) \]
+ 
+ où () représente une incertitude.
+ 
+@@ -1373,7 +1373,7 @@ Lorsque les paramètres ou observations sont aléatoires :
+ 
+ on peut chercher :
+ 
+-\[ \]
++\[ \min_x\mathbb{E}[f(x,\xi)] \]
+ 
+ Cette formulation est extrêmement importante en machine learning.
+ 
+@@ -1381,11 +1381,11 @@ Cette formulation est extrêmement importante en machine learning.
+ 
+ En apprentissage supervisé :
+ 
+-\[ R() = 1n _{i=1}^{n} L(f_(x_i),y_i) \]
++\[ R(\theta)=\frac{1}{n}\sum_{i=1}^{n}L(f_\theta(x_i),y_i) \]
+ 
+ On cherche :
+ 
+-\[ \]
++\[ \min_\theta R(\theta) \]
+ 
+ C’est une formulation centrale du machine learning statistique.
+ 
+@@ -1393,11 +1393,11 @@ C’est une formulation centrale du machine learning statistique.
+ 
+ On peut imposer :
+ 
+-\[ ||C \]
++\[ \|\theta\|\leq C \]
+ 
+ ou ajouter :
+ 
+-\[ || \]
++\[ \|\theta\| \]
+ 
+ Cette idée relie :
+ 
+@@ -1413,7 +1413,7 @@ Un classifieur peut être entraîné par minimisation d’une fonction de perte.
+ 
+ Exemple conceptuel :
+ 
+-\[ _ 1n _i L(y_i,f_(x_i)) \]
++\[ \min_\theta\frac{1}{n}\sum_i L(y_i,f_\theta(x_i)) \]
+ 
+ Les différents modèles peuvent donc être vus comme différentes familles de problèmes d’optimisation.
+ 
+@@ -1421,15 +1421,15 @@ Les différents modèles peuvent donc être vus comme différentes familles de p
+ 
+ Un réseau neuronal possède des paramètres :
+ 
+-\[ \]
++\[ \theta \]
+ 
+ et produit :
+ 
+-\[ y=f_(x) \]
++\[ \hat{y}=f_\theta(x) \]
+ 
+ L’entraînement cherche :
+ 
+-\[ ^\* = _L(f_(x),y) \]
++\[ \theta^{*}=\arg\min_\theta L(f_\theta(x),y) \]
+ 
+ La chaîne complète est :
+ 
+@@ -1467,7 +1467,7 @@ La recherche d’hyperparamètres constitue elle-même un problème d’optimisa
+ 
+ On définit une grille :
+ 
+-\[ = H_1H_2H_k \]
++\[ \mathcal{H}=H_1\times H_2\times\cdots\times H_k \]
+ 
+ Puis on évalue chaque combinaison.
+ 
+@@ -1483,7 +1483,7 @@ Cela permet souvent d’explorer efficacement un espace d’hyperparamètres de
+ 
+ On peut modéliser :
+ 
+-\[ h \]
++\[ L(h) \]
+ 
+ et sélectionner progressivement les hyperparamètres les plus prometteurs.
+ 
+@@ -1493,11 +1493,11 @@ Cela est particulièrement intéressant lorsque chaque entraînement coûte cher
+ 
+ En reinforcement learning, l’agent cherche à maximiser une récompense cumulée :
+ 
+-\[ J() = \]
++\[ J(\theta)=\mathbb{E}\left[\sum_{t}\gamma^{t}r_t\right] \]
+ 
+ L’objectif devient :
+ 
+-\[ \]
++\[ \max_\theta J(\theta) \]
+ 
+ Les méthodes de policy gradient transforment notamment ce problème en optimisation différentielle.
+ 
+@@ -1505,7 +1505,7 @@ Les méthodes de policy gradient transforment notamment ce problème en optimisa
+ 
+ Une trajectoire peut être représentée par :
+ 
+-\[ (t) \]
++\[ \tau(t) \]
+ 
+ On peut minimiser :
+ 
+@@ -1525,7 +1525,7 @@ sous des contraintes :
+ 
+ On obtient :
+ 
+-\[ \]
++\[ \min_\tau J(\tau) \]
+ 
+ # 78\. OPTIMISATION ET LOGISTIQUE
+ 
+@@ -1549,15 +1549,15 @@ Cela peut conduire à des problèmes LP, MILP, graphes ou combinatoires.
+ 
+ Supposons :
+ 
+-\[ T_1,T_2,,T_n \]
++\[ T_1,T_2,\ldots,T_n \]
+ 
+ à affecter à :
+ 
+-\[ M_1,M_2,,M_k \]
++\[ M_1,M_2,\ldots,M_k \]
+ 
+ On peut chercher à minimiser :
+ 
+-\[ C_{} \]
++\[ C_{\max} \]
+ 
+ où (C_{}) représente le temps de fin global.
+ 
+@@ -1577,7 +1577,7 @@ On dispose d’une ressource limitée :
+ 
+ et de plusieurs activités :
+ 
+-\[ A_1,,A_n \]
++\[ A_1,\ldots,A_n \]
+ 
+ On cherche la répartition maximisant :
+ 
+@@ -1585,7 +1585,7 @@ On cherche la répartition maximisant :
+ 
+ sous :
+ 
+-\[ \_i x_iR \]
++\[ \sum_i x_i\leq R \]
+ 
+ C’est un schéma fondamental en :
+ 
+@@ -1611,15 +1611,15 @@ Exemples :
+ 
+ ### Routage
+ 
+-\[ \_P (P) \]
++\[ \min_P C(P) \]
+ 
+ ### Allocation de bande passante
+ 
+-\[ \_x \_i U_i(x_i) \]
++\[ \max_x\sum_i U_i(x_i) \]
+ 
+ sous :
+ 
+-\[ \_i x_iC \]
++\[ \sum_i x_i\leq C \]
+ 
+ où (C) représente une capacité réseau.
+ 
+@@ -1627,21 +1627,21 @@ où (C) représente une capacité réseau.
+ 
+ Un portefeuille peut être représenté par :
+ 
+-\[ w=(w_1,,w_n) \]
++\[ w=(w_1,\ldots,w_n) \]
+ 
+ On peut chercher à optimiser :
+ 
+-\[
++\[ \max_w\left(w^{T}\mu
+ 
+-- \]
++- \lambda w^{T}\Sigma w\right) \]
+ 
+ sous :
+ 
+-\[ \_i w_i=1 \]
++\[ \sum_i w_i=1 \]
+ 
+ et éventuellement :
+ 
+-\[ w_i \]
++\[ w_i\geq 0 \]
+ 
+ L’optimisation permet donc de formaliser les compromis entre rendement, risque et contraintes.
+ 
+@@ -1661,7 +1661,7 @@ L’optimisation apparaît notamment dans :
+ 
+ Exemple :
+ 
+-\[ ^\* = _ |R()-I|^2 \]
++\[ \theta^{*}=\arg\min_\theta\|R(\theta)-I\|^{2} \]
+ 
+ où (R()) représente un rendu et (I) une image cible.
+ 
+@@ -1673,7 +1673,7 @@ On peut chercher une configuration minimisant une énergie :
+ 
+ Exemple conceptuel :
+ 
+-\[ x^\* = \_x E(x) \]
++\[ x^{*}=\arg\min_x E(x) \]
+ 
+ Cette idée intervient dans :
+ 
+@@ -1699,19 +1699,19 @@ Exemples :
+ 
+ Une grande partie de ces problèmes peut être formulée sous forme :
+ 
+-\[ _ \_i L_i() \]
++\[ \min_\theta\sum_i L_i(\theta) \]
+ 
+ # 86\. OPTIMISATION ET TRAITEMENT DU SIGNAL
+ 
+ On cherche fréquemment à reconstruire un signal (x) à partir d’observations bruitées :
+ 
+-\[ y=Ax+ \]
++\[ y=Ax+\epsilon \]
+ 
+ Puis :
+ 
+-\[ x^\* = \_x |Ax-y|^2
++\[ x^{*}=\arg\min_x\|Ax-y\|^{2}
+ 
+-- R(x) \]
+++ \lambda R(x) \]
+ 
+ Cette formulation apparaît notamment dans :
+ 
+@@ -1739,15 +1739,15 @@ Elle peut également être utilisée pour modéliser des problèmes adversariaux
+ 
+ En machine learning, on peut chercher une perturbation :
+ 
+-\[ \]
++\[ \delta \]
+ 
+ maximisant la perte :
+ 
+-\[ \_{} L(x+,y) \]
++\[ \max_{\|\delta\|\leq\epsilon}L(x+\delta,y) \]
+ 
+ sous :
+ 
+-\[ || \]
++\[ \|\delta\|\leq\epsilon \]
+ 
+ On obtient un problème d’optimisation sous contrainte.
+ 
+@@ -1757,7 +1757,7 @@ Cela permet d’étudier notamment la robustesse des modèles.
+ 
+ Lorsque les données ou calculs sont répartis entre plusieurs machines :
+ 
+-\[ _x_ {i=1}^{N} f_i(x) \]
++\[ \min_x\sum_{i=1}^{N}f_i(x) \]
+ 
+ Chaque nœud possède :
+ 
+@@ -1778,7 +1778,7 @@ Chaque client possède des données locales.
+ 
+ On cherche :
+ 
+-\[ {k=1}^{K} p_k F_k() \]
++\[ \min_\theta\sum_{k=1}^{K}p_kF_k(\theta) \]
+ 
+ où :
+ 
+@@ -1803,7 +1803,7 @@ Au lieu de disposer d’un dataset fixe :
+ 
+ on reçoit :
+ 
+-\[ x_1,x_2,x_3, \]
++\[ x_1,x_2,x_3,\ldots \]
+ 
+ L’algorithme doit mettre à jour sa solution continuellement.
+ 
+@@ -1821,11 +1821,11 @@ Dans un système temps réel, une solution mathématiquement optimale mais calcu
+ 
+ Il faut donc parfois optimiser :
+ 
+-\[ \]
++\[ \min_x f(x) \]
+ 
+ sous :
+ 
+-\[ T \]
++\[ t\leq T \]
+ 
+ Cela introduit un compromis entre :
+ 
+@@ -1841,11 +1841,11 @@ Un algorithme peut chercher :
+ 
+ ### Solution approximative
+ 
+-\[ x \]
++\[ \hat{x} \]
+ 
+ avec une garantie :
+ 
+-\[ f(x) f(x^\*) \]
++\[ f(\hat{x})\leq\alpha f(x^{*}) \]
+ 
+ dans certains problèmes de minimisation.
+ 
+@@ -1875,7 +1875,7 @@ Dans ces situations, on peut chercher :
+ 
+ Branch and Bound divise l’espace des solutions :
+ 
+-\[ \_1,\_2, \]
++\[ S_1,S_2,\ldots \]
+ 
+ et calcule des bornes permettant d’éliminer des sous-espaces qui ne peuvent pas produire une meilleure solution.
+ 
+@@ -1889,11 +1889,11 @@ On peut simplifier un problème difficile en supprimant temporairement certaines
+ 
+ Exemple :
+ 
+-\[ x_i{0,1} \]
++\[ x_i\in\{0,1\} \]
+ 
+ devient :
+ 
+-\[ 0x_i \]
++\[ 0\leq x_i\leq 1 \]
+ 
+ On obtient une relaxation continue.
+ 
+@@ -1972,11 +1972,11 @@ Le prétraitement des données peut modifier considérablement le paysage d’op
+ 
+ Si une caractéristique varie entre :
+ 
+-\[ 01 \]
++\[ [0,1] \]
+ 
+ et une autre entre :
+ 
+-\[ 010^6 \]
++\[ [0,10^{6}] \]
+ 
+ les dimensions n’ont pas la même échelle.
+ 
+@@ -2003,11 +2003,11 @@ On dit qu’une méthode converge lorsqu’elle se rapproche d’une solution se
+ 
+ Exemple :
+ 
+-\[ x_tx^\* \]
++\[ x_t\to x^{*} \]
+ 
+ ou :
+ 
+-\[ f(x_t)f(x^\*) \]
++\[ f(x_t)\to f(x^{*}) \]
+ 
+ Il faut distinguer :
+ 
+@@ -2048,7 +2048,7 @@ Pour les modèles modernes, le coût total est souvent dominé par l’évaluati
+ 
+ Utilisent principalement :
+ 
+-\[ f \]
++\[ \nabla f \]
+ 
+ Exemples :
+ 
+@@ -2061,7 +2061,7 @@ Exemples :
+ 
+ Utilisent :
+ 
+-\[ ^2f \]
++\[ \nabla^{2}f \]
+ 
+ ou une approximation.
+ 
+@@ -2132,7 +2132,7 @@ Lorsque :
+ 
+ ## Erreur 1 — Confondre minimum local et global
+ 
+-\[ f(x)=0 \]
++\[ \nabla f(x)=0 \]
+ 
+ ne garantit pas l’optimalité globale.
+ 
+@@ -2159,11 +2159,11 @@ Une solution mathématiquement excellente mais physiquement impossible n’est p
+ 
+ ## Erreur 6 — Confondre perte d’entraînement et performance réelle
+ 
+-\[ L_{} \]
++\[ L_{\text{train}} \]
+ 
+ n’implique pas nécessairement :
+ 
+-\[ L_{} \]
++\[ L_{\text{test}} \]
+ 
+ # 109\. OPTIMISATION COMME PROBLÈME D’INGÉNIERIE
+ 
+@@ -2234,23 +2234,23 @@ Il faut d’abord déterminer :
+ 
+ ### Forme 1
+ 
+-\[ \_x f(x) \]
++\[ \min_x f(x) \]
+ 
+ → optimisation générale.
+ 
+ ### Forme 2
+ 
+-\[ \_x c^Tx \]
++\[ \min_x c^{T}x \]
+ 
+ sous :
+ 
+-\[ Axb \]
++\[ Ax\leq b \]
+ 
+ → programmation linéaire.
+ 
+ ### Forme 3
+ 
+-\[ \_x f(x) \]
++\[ \min_x f(x) \]
+ 
+ sous :
+ 
+@@ -2260,31 +2260,31 @@ sous :
+ 
+ ### Forme 4
+ 
+-\[ \_x f(x)+R(x) \]
++\[ \min_x f(x)+R(x) \]
+ 
+ → régularisation.
+ 
+ ### Forme 5
+ 
+-\[ x_{t+1}=x_t-f(x_t) \]
++\[ x_{t+1}=x_t-\eta\nabla f(x_t) \]
+ 
+ → gradient descent.
+ 
+ ### Forme 6
+ 
+-\[ x_{t+1} = x_t-H^{-1}f \]
++\[ x_{t+1}=x_t-H^{-1}\nabla f \]
+ 
+ → Newton.
+ 
+ ### Forme 7
+ 
+-\[ \_x \[f(x,)\] \]
++\[ \min_x\mathbb{E}[f(x,\xi)] \]
+ 
+ → optimisation stochastique.
+ 
+ ### Forme 8
+ 
+-\[ \_J() \]
++\[ \max_\theta J(\theta) \]
+ 
+ → optimisation de politique en reinforcement learning.
+ 
+@@ -2336,31 +2336,31 @@ sous :
+ 
+ Pour être autonome dans ce domaine, il faut reconnaître :
+ 
+-\[ f \]
++\[ \nabla f \]
+ 
+-\[ ^2f \]
++\[ \nabla^{2}f \]
+ 
+ \[ J_f \]
+ 
+-\[ (x,) \]
++\[ \mathcal{L}(x,\lambda) \]
+ 
+-\[ Axb \]
++\[ Ax\leq b \]
+ 
+-\[ x \]
++\[ x\geq 0 \]
+ 
+-\[ x{0,1} \]
++\[ x\in\{0,1\} \]
+ 
+-\[ ||\_1 \]
++\[ \|x\|_1 \]
+ 
+-\[ ||\_2 \]
++\[ \|x\|_2 \]
+ 
+ \[ \]
+ 
+ \[ \]
+ 
+-\[ \[f(x,)\] \]
++\[ \mathbb{E}[f(x,\xi)] \]
+ 
+-\[ (f_1,,f_k) \]
++\[ (f_1,\ldots,f_k) \]
+ 
+ # 115\. RELATION AVEC LE DOMAINE I — CALCUL DIFFÉRENTIEL
+ 
+@@ -2386,7 +2386,7 @@ Et :
+ 
+ L’optimisation peut porter sur une espérance :
+ 
+-\[ \_x \[f(x,)\] \]
++\[ \min_x\mathbb{E}[f(x,\xi)] \]
+ 
+ Les probabilités permettent alors de modéliser l’incertitude.
+ 
+@@ -2394,11 +2394,11 @@ Les probabilités permettent alors de modéliser l’incertitude.
+ 
+ L’estimation statistique peut devenir :
+ 
+-\[ ^\* = _ L() \]
++\[ \theta^{*}=\arg\min_\theta L(\theta) \]
+ 
+ ou :
+ 
+-\[ ^\* = _ () \]
++\[ \theta^{*}=\arg\max_\theta \mathcal{L}(\theta) \]
+ 
+ Le maximum de vraisemblance est donc naturellement relié à l’optimisation.
+ 
+@@ -2406,7 +2406,7 @@ Le maximum de vraisemblance est donc naturellement relié à l’optimisation.
+ 
+ Lorsque l’espace de solutions est discret :
+ 
+-\[ x \]
++\[ x\in\mathcal{X} \]
+ 
+ l’optimisation combinatoire devient centrale.
+ 
+@@ -2441,7 +2441,7 @@ L’optimisation numérique utilise massivement :
+ 
+ Newton, par exemple, nécessite de résoudre :
+ 
+-\[ H(x)p=-f(x) \]
++\[ H(x)p=-\nabla f(x) \]
+ 
+ plutôt que nécessairement de calculer explicitement (H^{-1}).
+ 
+@@ -2592,7 +2592,7 @@ Il faut parfois demander :
+ 
+ mais aussi :
+ 
+-\[ f(x^\*+) \]
++\[ f(x^{*}+\delta) \]
+ 
+ pour de petites perturbations ().
+ 
+@@ -2719,7 +2719,7 @@ Dans un système agentique, l’optimisation peut apparaître à plusieurs nivea
+ 
+ Choisir une séquence d’actions :
+ 
+-\[ a_1,a_2,,a_T \]
++\[ a_1,a_2,\ldots,a_T \]
+ 
+ ### Allocation
+ 
+@@ -2743,11 +2743,11 @@ Pénaliser les erreurs.
+ 
+ On peut donc construire :
+ 
+-\[ J() = Q
++\[ J(a)=Q(a)
+ 
+-- C
+-- T
+-- E \]
++- C(a)
++- T(a)
++- E(a) \]
+ 
+ où :
+ 
+@@ -2762,7 +2762,7 @@ Cela transforme une stratégie agentique en problème d’optimisation multi-cri
+ 
+ Supposons plusieurs agents :
+ 
+-\[ A_1,A_2,,A_n \]
++\[ A_1,A_2,\ldots,A_n \]
+ 
+ et plusieurs tâches.
+ 
+@@ -2808,7 +2808,7 @@ L’optimisation devient ainsi un principe d’architecture et pas seulement une
+ 
+ On peut définir :
+ 
+-\[ h^\* = _h L_{}(h) \]
++\[ h^{*}=\arg\min_h L_{\text{val}}(h) \]
+ 
+ où (h) représente les hyperparamètres.
+ 
+@@ -2820,15 +2820,15 @@ Cela donne :
+ 
+ Un plan est une séquence :
+ 
+-\[ P=(a_1,a_2,,a_n) \]
++\[ P=(a_1,a_2,\ldots,a_n) \]
+ 
+ On peut définir :
+ 
+-\[ J(P) = (P) \]
++\[ J(P)=\text{coût}(P) \]
+ 
+ et chercher :
+ 
+-\[ P^\* = \_P J(P) \]
++\[ P^{*}=\arg\min_P J(P) \]
+ 
+ C’est la base conceptuelle de nombreux systèmes de planification.
+ 
+@@ -2876,7 +2876,7 @@ Construire une application affichant :
+ 
+ puis la trajectoire :
+ 
+-\[ x_0,x_1,x_2, \]
++\[ x_0,x_1,x_2,\ldots \]
+ 
+ Comparer plusieurs learning rates.
+ 
+@@ -2925,7 +2925,7 @@ Créer une petite interface permettant de définir :
+ 
+ sous :
+ 
+-\[ Axb \]
++\[ Ax\leq b \]
+ 
+ Puis visualiser la région admissible en 2D.
+ 
+@@ -2991,7 +2991,7 @@ Créer un agent ayant plusieurs stratégies.
+ 
+ Pour chaque action :
+ 
+-\[ J(a) = Q(a)
++\[ J(a)=Q(a)
+ 
+ - C(a)
+ - T(a) \]
+@@ -3051,7 +3051,7 @@ Calculer plusieurs itérations.
+ 
+ Résoudre avec Lagrange :
+ 
+-\[ \_{x,y}x<sup>2+y</sup>2 \]
++\[ \min_{x,y}x^{2}+y^{2} \]
+ 
+ sous :
+ 
+@@ -3369,11 +3369,11 @@ Face à un problème réel, être capable de répondre :
+ 
+ Le Domaine J peut être résumé par la chaîne :
+ 
+-\[ \]
++\[ \min_{x\in\mathcal{X}}f(x) \]
+ 
+ Pour le machine learning :
+ 
+-\[ \]
++\[ \min_\theta L(\theta) \]
+ 
+ Pour un système :
+ 
+@@ -3411,15 +3411,15 @@ est particulièrement importante.
+ 
+ Le calcul différentiel fournit les outils permettant de comprendre :
+ 
+-\[ \]
++\[ \nabla f \]
+ 
+ L’optimisation transforme ces informations en :
+ 
+-\[ \]
++\[ x_{t+1}=x_t-\eta\nabla f(x_t) \]
+ 
+ Et le machine learning assemble ensuite :
+ 
+-\[ \]
++\[ \min_\theta L(\theta) \]
+ 
+ pour produire des systèmes capables d’apprendre.
+ 
+@@ -3429,43 +3429,43 @@ Lorsqu’un problème informatique semble complexe, apprendre à poser les quest
+ 
+ **Qu’est-ce que je cherche à améliorer ?**
+ 
+-\[ \]
++\[ \text{l'objectif} \]
+ 
+ **Qu’est-ce que je peux modifier ?**
+ 
+-\[ \]
++\[ \text{les variables} \]
+ 
+ **Qu’est-ce que je n’ai pas le droit de violer ?**
+ 
+-\[ \]
++\[ \text{les contraintes} \]
+ 
+ **Comment mesurer une amélioration ?**
+ 
+-\[ \]
++\[ \text{la fonction objectif} \]
+ 
+ **Puis-je exploiter les dérivées ?**
+ 
+-\[ \]
++\[ \nabla f \]
+ 
+ **Le problème est-il convexe ?**
+ 
+-\[ \]
++\[ \text{convexité} \]
+ 
+ **Les solutions sont-elles discrètes ?**
+ 
+-\[ \]
++\[ x\in\{0,1\} \]
+ 
+ **L’évaluation est-elle coûteuse ?**
+ 
+-\[ \]
++\[ \text{optimisation bayésienne} \]
+ 
+ **Ai-je plusieurs objectifs ?**
+ 
+-\[ \]
++\[ (f_1,\ldots,f_k) \]
+ 
+ **Ai-je besoin d’une solution exacte ?**
+ 
+-\[ \]
++\[ x^{*}\ \text{ou}\ \hat{x} \]
+ 
+ Cette manière de penser est probablement plus importante que la mémorisation isolée des algorithmes.
+ 
+@@ -3473,19 +3473,19 @@ Cette manière de penser est probablement plus importante que la mémorisation i
+ 
+ Le Domaine J est suffisamment maîtrisé lorsque, face à un nouveau problème informatique, l’on peut spontanément effectuer la transformation :
+ 
+-\[ \]
++\[ \text{un problème réel} \]
+ 
+ puis :
+ 
+-\[ \]
++\[ \text{un modèle mathématique} \]
+ 
+ puis :
+ 
+-\[ \]
++\[ \text{une méthode adaptée} \]
+ 
+ et enfin :
+ 
+-\[ \]
++\[ \text{une solution validée} \]
+ 
+ C’est cette capacité de **modélisation, sélection de méthode et raisonnement sur les compromis** qui transforme la connaissance de l’optimisation en véritable compétence d’ingénierie.
+ 
+@@ -3503,23 +3503,23 @@ Elle constitue un pont direct entre les mathématiques et la construction de sys
+ 
+ En machine learning :
+ 
+-\[ \]
++\[ \min_\theta L(\theta) \]
+ 
+ En robotique :
+ 
+-\[ \]
++\[ \min_\tau J(\tau) \]
+ 
+ En logistique :
+ 
+-\[ \]
++\[ \min\sum_{i,j}c_{ij}x_{ij} \]
+ 
+ En réseaux :
+ 
+-\[ \]
++\[ \min_P C(P) \]
+ 
+ En systèmes intelligents :
+ 
+-\[ \]
++\[ \max_\theta J(\theta) \]
+ 
+ Et dans l’ingénierie logicielle :
+ 

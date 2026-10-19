@@ -1,0 +1,20 @@
+restauration(equations): lot 5a — domaine J, l. 17 a 1018
+
+89 blocs restaures sur 102 soumis ; 13 blocs laisses en inconnue,
+enregistres dans domaine-J-blocs-a-trancher.md.
+
+Ce lot couvre la premiere moitie du document : formulation generale,
+conditions d'optimalite, gradient et ses variantes, methodes du premier
+et du second ordre, convexite, dualite, programmation lineaire et
+quadratique.
+
+A APPLIQUER EN DERNIER : les numeros de ligne des lots 5b et 5c en
+dependent.
+
+Etat du document apres 5b + 5c + 5a : 332 blocs display (inchanges),
+defauts detectes 166 -> 45, blocs vides 132 -> 67, aucun mojibake.
+232 restaurations appliquees au total ; 66 blocs restent en inconnue.
+
+Reserve : reconstruction, pas recuperation. Les arguments LaTeX detruits
+n'existent nulle part dans le fichier ; chaque formule est retablie par
+contexte et porte une justification.
