@@ -1,0 +1,26 @@
+restauration(equations): lot 6b — domaine I, les 4 lacunes du §178
+
+Quatre blocs. C'etaient les seules LACUNES de couverture du corpus
+entier — blocs vides absents de tous les lots — et elles se trouvaient
+toutes dans ce document, dans la section « RELATION ENTRE G, H ET I ».
+
+La section nomme trois domaines, puis ouvre sur le ML :
+
+  ### Probabilites        -> \[ E[X] \]
+  ### Statistiques        -> \[ \hat{\theta} \]
+  ### Calcul differentiel -> \[ \nabla_\theta J(\theta) \]
+  En Machine Learning :   -> \[ \theta_{t+1}=\theta_t-\eta_t\nabla_\theta J(\theta_t) \]
+
+Le dernier est de confiance HAUTE : l'equation figure au §173 du meme
+document, qui la qualifie de « l'une des equations les plus importantes a
+comprendre pour le Machine Learning ». Les trois premiers reprennent les
+objets canoniques de chaque domaine ; E[X] est attestee par le bloc
+survivant que le domaine L consacre a G dans sa propre serie (§117).
+
+La coherence de l'ensemble est le principal argument : E[X] fournit
+l'esperance, theta-chapeau l'estimation depuis les donnees, le gradient
+l'optimisation, et les trois se combinent dans l'equation finale.
+
+Reserve : les trois premiers blocs sont de confiance moyenne a
+moyenne-haute. Leurs objets sont contraints, leur notation exacte ne
+l'est pas.

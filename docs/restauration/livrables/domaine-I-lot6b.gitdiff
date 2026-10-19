@@ -1,0 +1,28 @@
+diff --git "a/Maths-vers-Informatiques/Domaine I - Calcul diff\303\251rentiel \342\200\224 Cartographie compl\303\250te pour le machine learning.md" "b/Maths-vers-Informatiques/Domaine I - Calcul diff\303\251rentiel \342\200\224 Cartographie compl\303\250te pour le machine learning.md"
+index 587ba6e..640fd65 100644
+--- "a/Maths-vers-Informatiques/Domaine I - Calcul diff\303\251rentiel \342\200\224 Cartographie compl\303\250te pour le machine learning.md"	
++++ "b/Maths-vers-Informatiques/Domaine I - Calcul diff\303\251rentiel \342\200\224 Cartographie compl\303\250te pour le machine learning.md"	
+@@ -3045,19 +3045,19 @@ Ces trois domaines doivent être compris ensemble pour l’IA.
+ 
+ ### Probabilités
+ 
+-\[ \]
++\[ E[X] \]
+ 
+ ### Statistiques
+ 
+-\[ \]
++\[ \hat{\theta} \]
+ 
+ ### Calcul différentiel
+ 
+-\[ \]
++\[ \nabla_\theta J(\theta) \]
+ 
+ En Machine Learning :
+ 
+-\[ \]
++\[ \theta_{t+1}=\theta_t-\eta_t\nabla_\theta J(\theta_t) \]
+ 
+ # 179 — CRITÈRE DE MAÎTRISE DU DOMAINE I
+ 

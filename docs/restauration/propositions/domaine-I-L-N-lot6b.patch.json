@@ -1,0 +1,242 @@
+[
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3060,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\theta_{t+1}=\\theta_t-\\eta_t\\nabla_\\theta J(\\theta_t) \\]",
+  "confiance": "haute",
+  "justification": "« En Machine Learning : ». Le §173 du MEME document donne cette equation et la qualifie de « l'une des equations les plus importantes a comprendre pour le Machine Learning ». La section §178 annonce que G, H et I « doivent etre compris ensemble pour l'IA », puis nomme les trois domaines, puis ouvre sur le ML : la synthese attendue est la chaine du §173."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3056,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\nabla_\\theta J(\\theta) \\]",
+  "confiance": "moyenne",
+  "justification": "« ### Calcul differentiel ». Le gradient de la perte est l'objet du domaine I dans cette chaine, et il est la brique centrale de l'equation retenue pour le bloc suivant (§173)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3052,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\hat{\\theta} \\]",
+  "confiance": "moyenne",
+  "justification": "« ### Statistiques ». L'estimation d'un parametre a partir de donnees est l'objet de H. C'est deja le candidat retenu et applique pour H dans la meme serie du domaine L (§117)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/Domaine I - Calcul différentiel — Cartographie complète pour le machine learning.md",
+  "ligne": 3048,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ E[X] \\]",
+  "confiance": "moyenne-haute",
+  "justification": "« ### Probabilites ». L'esperance est l'objet canonique de G ; c'est la formule que le domaine L retient pour G dans sa propre serie de relations (§117, bloc survivant E[X].)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1763,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{précision, coût, stabilité, robustesse} \\]",
+  "confiance": "moyenne",
+  "justification": "« On peut evaluer une methode selon : ... Il n'existe generalement pas de methode universellement optimale. » La phrase d'avant portait « mesurer la precision sans mesurer le cout », ce qui etablit au moins deux des termes."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1357,
+  "ancien": "\\[ . \\]",
+  "nouveau": "\\[ \\text{vitesse} / \\text{précision}. \\]",
+  "confiance": "moyenne",
+  "justification": "« La precision mixte permet parfois d'ameliorer le compromis : ... » Les deux lignes d'avant opposent « calcul rapide en precision inferieure » et « correction en precision superieure ». Le point est conserve (residu « \\[ . \\] »)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1278,
+  "ancien": "\\[ . \\]",
+  "nouveau": "\\[ \\text{en variant les entrées}. \\]",
+  "confiance": "moyenne",
+  "justification": "« On peut examiner : [analytiquement.] ou experimentalement : ... » Le second terme est la methode experimentale, soit faire varier les entrees et observer. Point conserve."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1274,
+  "ancien": "\\[ . \\]",
+  "nouveau": "\\[ \\text{analytiquement}. \\]",
+  "confiance": "moyenne",
+  "justification": "« On peut examiner : ... ou experimentalement : ... » Le premier terme est donc l'approche analytique, opposee a l'experimentale. Point conserve."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1195,
+  "ancien": "\\[ . \\]",
+  "nouveau": "\\[ \\text{hautes fréquences}. \\]",
+  "confiance": "moyenne-haute",
+  "justification": "« Idee : [basses frequences] peuvent devenir : ... » C'est le principe canonique de la multigrille : une erreur basse frequence sur une grille fine devient haute frequence sur une grille grossiere, donc eliminable par un lisseur local. Point conserve."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1191,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{basses fréquences} \\]",
+  "confiance": "moyenne-haute",
+  "justification": "Premier terme de la meme paire. La phrase complete est « Idee : X peuvent devenir : Y »."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1146,
+  "ancien": "\\[ . \\]",
+  "nouveau": "\\[ \\text{les mathématiques et l'informatique}. \\]",
+  "confiance": "moyenne",
+  "justification": "« Un programme peut construire cette chaine de derivations automatiquement. C'est l'un des ponts fondamentaux entre : ... » Point conserve."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 1015,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{la dimension } d \\text{ est grande} \\]",
+  "confiance": "moyenne",
+  "justification": "« Dans certaines situations : ... rend les methodes deterministes classiques tres couteuses, tandis que Monte-Carlo reste exploitable. » Le sujet est la grande dimension ; l'avantage annonce de Monte-Carlo est exactement le fleau de la dimension."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 721,
+  "ancien": "\\[ . \\]",
+  "nouveau": "\\[ \\text{augmenter le degré ne garantit pas une meilleure approximation}. \\]",
+  "confiance": "moyenne",
+  "justification": "« Une interpolation polynomiale de haut degre sur des points mal choisis peut presenter de fortes oscillations. Cela montre que : ... » C'est l'enonce du phenomene de Runge. Point conserve."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 351,
+  "ancien": "\\[ . \\]",
+  "nouveau": "\\[ \\text{de petites perturbations provoquent de grandes variations}. \\]",
+  "confiance": "moyenne-haute",
+  "justification": "« Un probleme est bien conditionne lorsque de petites perturbations des donnees provoquent de petites variations. Il est mal conditionne lorsque : ... » La symetrie avec la phrase precedente contraint presque entierement la forme. Point conserve."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 55,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{un résultat sans son erreur} \\]",
+  "confiance": "moyenne-haute",
+  "justification": "« Le systeme ne doit donc jamais considerer : ... sans analyser les conditions du calcul. » Le principe directeur qui suit immediatement est « un resultat n'a de sens qu'avec son erreur » : le bloc est le complement de ce principe."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2641,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{compression} / \\text{qualité} \\]",
+  "confiance": "moyenne",
+  "justification": "« Les coefficients peu importants peuvent etre fortement quantifies ou supprimes. Le compromis devient : ... » puis « tout en conservant une qualite acceptable »."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2046,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ O(N^{2})\\to O(N\\log N) \\]",
+  "confiance": "moyenne-haute",
+  "justification": "« [O(N log N)] rend de nombreux traitements pratiques. Cette difference est un excellent exemple de passage : ... » Le bloc precedent donne l'arrivee, le bloc manquant donne le depart : le cout direct de la DFT, O(N^2)."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2005,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\min_{x}\\|Hx-y\\|^{2}+\\lambda\\|x\\|^{2} \\]",
+  "confiance": "moyenne",
+  "justification": "« L'idee generale : ... Cette idee fait directement le lien avec le domaine L — Analyse numerique. » La regularisation de Tikhonov est l'exemple canonique, et le renvoi au domaine L confirme qu'il s'agit d'un probleme mal conditionne regularise."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1999,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ X=H^{-1}Y \\]",
+  "confiance": "moyenne-haute",
+  "justification": "« Une strategie peut consister a eviter les divisions instables. Par exemple, au lieu de : ... on peut utiliser une forme regularisee. » La formule non regularisee X = H^{-1} Y figure textuellement au l. 1987 du meme document, dans la section sur les problemes inverses."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1811,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{un pic spectral} \\]",
+  "confiance": "moyenne-haute",
+  "justification": "« Un motif periodique possede souvent une signature frequentielle. On peut donc rechercher : ... comme indicateur de : periodicite ; vibration ; ... »"
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1688,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{à réduire la taille} \\]",
+  "confiance": "moyenne",
+  "justification": "« On cherche souvent : ... tout en conservant une qualite acceptable. »"
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1255,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{EDO}\\to\\text{équation algébrique} \\]",
+  "confiance": "moyenne",
+  "justification": "« Les transformees peuvent simplifier des equations differentielles et des problemes physiques. Exemple conceptuel : ... » C'est l'effet decrit, deja nomme au §32 pour Laplace."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1223,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{objet}\\to\\text{projections} \\]",
+  "confiance": "moyenne-haute",
+  "justification": "« La transformee de Radon associe a une fonction ses integrales le long de familles de lignes. ... Conceptuellement : ... » Le tableau de synthese du §164 donne, pour Radon : entree « objet », sortie « projections »."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1187,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{le traitement du signal et la vision} \\]",
+  "confiance": "moyenne",
+  "justification": "« Une donnee temporelle devient ainsi une structure 2D exploitable par des architectures de vision. Cela cree un pont entre : ... »"
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 1082,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{un spectrogramme} \\]",
+  "confiance": "moyenne",
+  "justification": "« Un signal vocal brut est une serie temporelle. On peut appliquer : ... On peut egalement utiliser : mel-spectrogrammes ; MFCC ; ... » Le premier terme est une representation plus simple, le spectrogramme, dont le mel-spectrogramme est une variante."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 965,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ a\\uparrow\\Rightarrow f\\downarrow \\]",
+  "confiance": "moyenne",
+  "justification": "Second bloc du couple de l'echelle et de la frequence. La relation annoncee est inverse et approximative."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 963,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ f\\approx\\frac{f_c}{a} \\]",
+  "confiance": "moyenne",
+  "justification": "« L'echelle possede une relation inverse approximative avec la frequence : ... ... Cela permet une representation multiresolution. » Deux blocs pour une relation inverse entre echelle a et frequence f."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 675,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{concentrer l'énergie} \\]",
+  "confiance": "moyenne",
+  "justification": "« Principe general : ... L'idee est de representer efficacement les informations importantes. » La phrase d'avant dit exactement : « Elle permet souvent de concentrer l'energie dans un petit nombre de coefficients. »"
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 230,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{d'un signal}\\to\\text{un spectre} \\]",
+  "confiance": "moyenne",
+  "justification": "« Une structure periodique complexe peut etre decomposee en oscillations elementaires. Cela permet de passer : ... »"
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 142,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ f\\ast g\\to F\\cdot G \\]",
+  "confiance": "moyenne",
+  "justification": "« La convolution devient une multiplication. On peut donc avoir : ... C'est precisement cette propriete qui explique l'importance des transformees en informatique. » Le gain algorithmique est la raison invoquee."
+ }
+]

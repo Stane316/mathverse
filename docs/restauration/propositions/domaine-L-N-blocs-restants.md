@@ -5,8 +5,9 @@
 **État :** les deux documents sont **assainis** (L : 102 écritures · N : 146 écritures). Ce
 document traite ce qui **reste**.
 **Statut :** les 20 candidats ont été **validés et appliqués** (lot 6a, 19 écritures — le
-vingtième était déjà restauré). Les 46 blocs déclarés en inconnue restent **à trancher** ;
-rien n'a été écrit pour eux.
+vingtième était déjà restauré). Sur les 46 blocs déclarés en inconnue, **30 ont reçu un
+candidat argumenté et ont été appliqués** (lot 6b, avec 4 blocs du domaine I). **16 restent en
+inconnue**, liste et raisons au §8.
 
 ---
 
@@ -255,19 +256,132 @@ livrée comme un lot 5d correctif.
 
 ---
 
-## 7. Récapitulatif
+## 7. Lot 6b — les 46 blocs en inconnue, trente traités, vingt maintenus
 
-| | L | N | Total |
-|---|---:|---:|---:|
-| Blocs vides restants | 32 | 34 | **66** |
-| — dont jamais soumis | 7 | 1 | **8** |
+Les 46 blocs déclarés en inconnue ont été repris un par un. **Trente ont reçu un candidat
+argumenté** et ont été appliqués (lot 6b) : 11 en L, 15 en N, et **les 4 lacunes du domaine I**.
+
+### 7.1 Les quatre lacunes du domaine I — les plus intéressantes
+
+C'étaient les seules lacunes de couverture du corpus entier, et elles formaient une série
+cohérente dans la section §178 « RELATION ENTRE G, H ET I » :
+
+| Bloc | Reconstruction | Confiance |
+|---|---|---|
+| Probabilités | `\[ E[X] \]` | moyenne-haute |
+| Statistiques | `\[ \hat{\theta} \]` | moyenne |
+| Calcul différentiel | `\[ \nabla_\theta J(\theta) \]` | moyenne |
+| En Machine Learning | `\[ \theta_{t+1}=\theta_t-\eta_t\nabla_\theta J(\theta_t) \]` | **haute** |
+
+Le dernier bloc est le seul de **confiance haute** du lot : l'équation figure au **§173 du même
+document**, qui la qualifie de « l'une des équations les plus importantes à comprendre pour le
+Machine Learning ». Les trois premiers reprennent l'objet canonique de chaque domaine — et leur
+enchaînement est l'argument : l'espérance fournit la perte attendue, l'estimateur la tire des
+données, le gradient l'optimise, et les trois se combinent dans l'équation finale.
+
+### 7.2 Les vingt blocs maintenus en inconnue
+
+Vingt des blocs déclarés en inconnue n'ont reçu aucune proposition : 13 en L, 7 en N.
+Chacun est listé ci-dessous avec le contexte qui l'entoure et la raison du renoncement.
+
+#### L — treize blocs
+
+| Ligne | Contexte | Raison |
+|---|---|---|
+| 13 | « une tension entre : **X** et **Y** » (les deux termes sont détruits) | Aucune paire ne s'impose ; « précision et coût » est un choix, pas une déduction |
+| 17 | second terme de la même paire | *idem* |
+| 202 | §5.1 « Erreur de modèle » | Aucun indice de forme |
+| 1805, 1813, 1821, 1829, 1837, 1845, 1853 | les 7 blocs-listes `L + X` | voir §8.4 — le gabarit est connu, le terme exact ne l'est pas |
+| 1863 | §109 « il peut appliquer : **X** » | trois blocs enchaînés (principe / Exemple / Autre exemple), tous vides |
+| 1867 | §109 « Exemple : **X** » | aucun des trois ne contraint les autres |
+| 1871 | §109 « Autre exemple : **X** » | *idem* |
+
+#### N — sept blocs
+
+| Ligne | Contexte | Raison |
+|---|---|---|
+| 2026 | §103 « Une mauvaise implémentation de DFT : **X** » + liste dont le 2ᵉ item est « coût algorithmique » | 1ᵉʳ item d'une liste de deux ; non contraint |
+| 2301 | §116 « architectures combinant : **X** » | même signature que les `L + X` |
+| 2693 | §132 « On peut donc avoir : **X** » | forme libre |
+| 2818 | §140 « le principe général de : **X** reste profondément similaire » | le bloc est au milieu d'une phrase, mais le terme reste libre |
+| 3420 | « Construire : **X** et permettre de modifier : » (Projet 2 — Spectrogramme) | forme libre |
+| 3604 | §170 « Construire : **X**. Le système pourrait contrôler : » | forme libre |
+| 3788 | §176 « Synthèse des grandes transformées » | **section entière réduite à un bloc vide** — perte la plus dommageable du domaine N |
+
+**Aucune de ces vingt reconstructions n'a été tentée** : le contexte donne la *place* du bloc,
+pas son *contenu*. Proposer aurait été inventer.
+
+### 7.3 Découverte — le gabarit des neuf blocs-listes
+
+L'examen des blocs-listes a livré un résultat inattendu. Leur forme détruite était :
+
+```
+### L + K
+\[ - \text{X} \]
+→ mondes procéduraux dynamiques.
+```
+
+La preuve : la commande `\text{…}` a été détruite **avec son argument**, laissant le tiret
+survivant à l'intérieur du bloc — exactement le mécanisme déjà observé sur les blocs du domaine J.
+Le gabarit est donc connu avec certitude : **`- 	ext{terme}` suivi d'une flèche `→ résultat`**,
+le tout sous un titre `L + <domaine>`.
+
+Les sept paires du §108 et le résultat annoncé, confrontés aux titres des documents du corpus :
+
+| Titre | Domaine | Résultat annoncé | Terme candidat le plus sobre |
+|---|---|---|---|
+| L + K | Fractales, chaos & systèmes dynamiques | mondes procéduraux dynamiques | `	ext{les fractales et le chaos}` |
+| L + J | Optimisation | systèmes de décision numériques | `	ext{l’optimisation}` |
+| L + I | Calcul différentiel | apprentissage et simulation | `	ext{le calcul différentiel}` |
+| L + C | Algèbre linéaire | calcul scientifique et IA | `	ext{l’algèbre linéaire}` |
+| L + G | Probabilités | simulation sous incertitude | `	ext{les probabilités}` |
+| L + D | Géométrie computationnelle | reconstruction et animation 3D | `	ext{la géométrie computationnelle}` |
+| L + E/F | Graphiques + combinatoire | planification et systèmes complexes | `	ext{les graphes et la combinatoire}` |
+
+**Cette série n'a PAS été appliquée**, et pour une raison précise. Le gabarit est certain ; le
+terme ne l'est pas. Deux lectures sont également défendables :
+
+1. le terme est **le nom du domaine** — lecture littérale, attestée par les titres du corpus ;
+2. le terme est **l'objet canonique** que le domaine apporte à L — lecture qui s'appuie sur la
+   série parallèle du §117 du même document, où G donne `E[X]`, H donne `\hat{\theta}` et I
+   donne `\nabla_\theta J(\theta)`. Sous cette lecture, « L + I » donnerait `\text{le gradient}`
+   et « L + G » `\text{l’espérance}`.
+
+La lecture 1 est reprise dans le tableau ci-dessus parce qu'elle est la plus sobre. Mais le choix
+appartient à l'auteur : les sept blocs formant une série, **une seule décision les règle tous**.
+Les deux blocs-listes de N (l. 2026, l. 2301) suivent le même gabarit.
+
+### 7.4 État après le lot 6b
+
+| Document | Blocs sans contenu avant le chantier | Après 6b |
+|---|---:|---:|
+| K | 1 | **0** |
+| L | 50 | **6** |
+| I | 44 | **23** |
+| N | 64 | **5** |
+| J | 107 | **44** |
+| **Total** | 266 | **78** |
+
+**Aucune lacune de couverture ne subsiste** sur les cinq documents instruits : tout bloc sans
+contenu est désormais un bloc soumis.
+
+---
+
+## 8. Récapitulatif
+
+| | L | N | I | Total |
+|---|---:|---:|---:|---:|
+| Blocs vides restants | 32 | 34 | — | **66** |
+| — dont jamais soumis | 7 | 1 | 0 | **8** |
 | Candidats argumentés | 8 | 12 | **20** |
 | — dont confiance haute | 2 | 3 | **5** |
 | — dont confiance moyenne-haute | 1 | 3 | **4** |
 | — dont confiance moyenne | 5 | 6 | **11** |
-| Déclarés en inconnue | 24 | 22 | **46** |
-| — dont blocs-listes | 7 | 2 | **9** |
+| Déclarés en inconnue | 24 | 22 | 4 (lacunes) | **50** |
+| — repris et traités en 6b | 11 | 15 | 4 | **30** |
+| — maintenus en inconnue | 13 | 7 | — | **20** |
+| — dont blocs-listes (gabarit identifié, §7.3) | 7 | 2 | — | **9** |
 
-**En attente de votre arbitrage.** Trois décisions sont possibles par bloc : valider la
-proposition, la corriger, ou laisser en inconnue. Rien n'est écrit tant que vous n'avez pas
-tranché.
+**Clôture des lots 6a et 6b.** Les 20 candidats argumentés (§1-§7) ont été appliqués lors du lot
+6a, et 30 des blocs déclarés en inconnue lors du lot 6b (§8). Les vingt blocs maintenus en
+inconnue restent complétables : le contexte ne contraint pas la réponse, rien n'a été inventé.

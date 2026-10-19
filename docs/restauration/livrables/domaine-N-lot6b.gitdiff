@@ -1,0 +1,131 @@
+diff --git "a/Maths-vers-Informatiques/DOCUMENT N \342\200\224 TRANSFORM\303\211ES.md" "b/Maths-vers-Informatiques/DOCUMENT N \342\200\224 TRANSFORM\303\211ES.md"
+index 16e911a..353bcfb 100644
+--- "a/Maths-vers-Informatiques/DOCUMENT N \342\200\224 TRANSFORM\303\211ES.md"	
++++ "b/Maths-vers-Informatiques/DOCUMENT N \342\200\224 TRANSFORM\303\211ES.md"	
+@@ -139,7 +139,7 @@ La convolution devient une multiplication.
+ 
+ On peut donc avoir :
+ 
+-\[ \]
++\[ f\ast g\to F\cdot G \]
+ 
+ C’est précisément cette propriété qui explique l’importance des transformées en informatique.
+ 
+@@ -227,7 +227,7 @@ Une structure périodique complexe peut être décomposée en oscillations élé
+ 
+ Cela permet de passer :
+ 
+-\[ \]
++\[ \text{d'un signal}\to\text{un spectre} \]
+ 
+ Cette idée est fondamentale pour :
+ 
+@@ -672,7 +672,7 @@ Elle permet souvent de concentrer l’énergie dans un petit nombre de coefficie
+ 
+ Principe général :
+ 
+-\[ \]
++\[ \text{concentrer l'énergie} \]
+ 
+ L’idée est de représenter efficacement les informations importantes.
+ 
+@@ -960,9 +960,9 @@ où :
+ 
+ L’échelle possède une relation inverse approximative avec la fréquence :
+ 
+-\[ \]
++\[ f\approx\frac{f_c}{a} \]
+ 
+-\[ \]
++\[ a\uparrow\Rightarrow f\downarrow \]
+ 
+ Cela permet une représentation multirésolution.
+ 
+@@ -1079,7 +1079,7 @@ Un signal vocal brut est une série temporelle.
+ 
+ On peut appliquer :
+ 
+-\[ \]
++\[ \text{un spectrogramme} \]
+ 
+ On peut également utiliser :
+ 
+@@ -1184,7 +1184,7 @@ Une donnée temporelle devient ainsi une structure 2D exploitable par des archit
+ 
+ Cela crée un pont entre :
+ 
+-\[ \]
++\[ \text{le traitement du signal et la vision} \]
+ 
+ # 59\. TRANSFORMÉES ET VISION
+ 
+@@ -1220,7 +1220,7 @@ Elle est particulièrement importante en imagerie.
+ 
+ Conceptuellement :
+ 
+-\[ \]
++\[ \text{objet}\to\text{projections} \]
+ 
+ Elle constitue notamment une base mathématique importante de la tomographie.
+ 
+@@ -1252,7 +1252,7 @@ Les transformées peuvent simplifier des équations différentielles et des prob
+ 
+ Exemple conceptuel :
+ 
+-\[ \]
++\[ \text{EDO}\to\text{équation algébrique} \]
+ 
+ Elles peuvent donc servir à :
+ 
+@@ -1685,7 +1685,7 @@ Le stockage numérique bénéficie de représentations :
+ 
+ On cherche souvent :
+ 
+-\[ \]
++\[ \text{à réduire la taille} \]
+ 
+ tout en conservant une qualité acceptable.
+ 
+@@ -1808,7 +1808,7 @@ Un motif périodique possède souvent une signature fréquentielle.
+ 
+ On peut donc rechercher :
+ 
+-\[ \]
++\[ \text{un pic spectral} \]
+ 
+ comme indicateur de :
+ 
+@@ -1996,13 +1996,13 @@ Une stratégie peut consister à éviter les divisions instables.
+ 
+ Par exemple, au lieu de :
+ 
+-\[ \]
++\[ X=H^{-1}Y \]
+ 
+ on peut utiliser une forme régularisée.
+ 
+ L’idée générale :
+ 
+-\[ \]
++\[ \min_{x}\|Hx-y\|^{2}+\lambda\|x\|^{2} \]
+ 
+ Cette idée fait directement le lien avec le domaine L — Analyse numérique.
+ 
+@@ -2043,7 +2043,7 @@ rend de nombreux traitements pratiques.
+ 
+ Cette différence est un excellent exemple de passage :
+ 
+-\[ \]
++\[ O(N^{2})\to O(N\log N) \]
+ 
+ # 104\. FFT ET CONVOLUTION RAPIDE
+ 
+@@ -2638,7 +2638,7 @@ Les coefficients peu importants peuvent être fortement quantifiés ou supprimé
+ 
+ Le compromis devient :
+ 
+-\[ \]
++\[ \text{compression} / \text{qualité} \]
+ 
+ # 130\. TRANSFORMÉES ET COMPRESSION AVEC PERTE
+ 

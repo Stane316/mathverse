@@ -225,9 +225,9 @@ toucher aux autres.
 | Ordre | Lot | Pourquoi |
 |---:|---|---|
 | 1 | **K** — 18 défauts signalés, **30 traités** | domaine le plus utile au produit, équations canoniques — **terminé, 0 défaut restant** (lots 1 et 1 bis) |
-| 2 | **L** — analyse numérique | socle des critères de validation ; 61 signalés, **131 au total**, 110 appliqués — blocs sans contenu **50 → 17** — **44 inconnues** |
-| 3 | **I** — calcul différentiel | 109 signalés, 318 blocs lus — **lots 3a (62), 3b (133) et 3c (9) : 204 restaurations appliquées**, blocs sans contenu **44 → 27** — **28 inconnues** et **4 lacunes** (blocs jamais soumis, §177/§178) |
-| 4 | **N** — transformées | 104 signalés, **245 blocs display** recensés — **lots 4a (62), 4b (84) et 6a (11) : 157 restaurations appliquées**, défauts détectés 104 → 32, blocs sans contenu **64 → 20** — **33 inconnues** |
+| 2 | **L** — analyse numérique | socle des critères de validation ; 61 signalés, **131 au total**, 121 appliqués — blocs sans contenu **50 → 6** — **44 inconnues** |
+| 3 | **I** — calcul différentiel | 109 signalés, 318 blocs lus — **lots 3a (62), 3b (133), 3c (9) et 6b (4) : 208 restaurations appliquées**, blocs sans contenu **44 → 23** — **28 inconnues** ; les 4 lacunes du §178 ont été traitées (lot 6b) |
+| 4 | **N** — transformées | 104 signalés, **245 blocs display** recensés — **lots 4a (62), 4b (84), 6a (11) et 6b (15) : 172 restaurations appliquées**, défauts détectés 104 → 32, blocs sans contenu **64 → 5** — **33 inconnues** |
 | 5 | **J** — optimisation | 166 signalés, **332 blocs display** — **lots 5b (133), 5c (10) et 5a (89) : 232 restaurations appliquées**, défauts détectés 166 → 45, blocs sans contenu 107 → 44 — **66 blocs en attente de l'auteur** — **document entièrement traité** |
 | 6-9 | H, G, M, O, F, Q, P, UI/UX, E/R/S/U, « Ai Technical Litteracy » | voir `PLAN-ACHEVEMENT.md` |
 | 10 | A, B, C, D | restructuration (voie 2) — **chantier distinct, périmètre confirmé dans le périmètre d'achèvement** |
@@ -247,11 +247,15 @@ La priorisation suit l'utilité pour le produit, pas l'ordre alphabétique : les
 | Document | Blocs display | Sans contenu **avant** | Sans contenu **après** | Restaurations appliquées | Inconnues | **Lacunes** |
 |---|---:|---:|---:|---:|---:|---:|
 | **K** | 64 | 1 | **0** | 40 | 1 | 0 |
-| **L** | 178 | 50 | **17** | 110 | 44 | 0 |
-| **I** | 318 | 44 | **27** | 204 | 28 | **4** |
-| **N** | 245 | 64 | **20** | 157 | 33 | 0 |
+| **L** | 178 | 50 | **6** | 121 | 44 | 0 |
+| **I** | 318 | 44 | **23** | 208 | 28 | **0** |
+| **N** | 245 | 64 | **5** | 172 | 33 | 0 |
 | **J** | 332 | 107 | **44** | 232 | 66 | 0 |
-| **Total** | 1 137 | 266 | **108** | 743 | 172 | **4** |
+| **Total** | 1 137 | 266 | **78** | 773 | 172 | **0** |
+
+Les **4 lacunes** recensées (toutes en I, §177/§178) ont été traitées par le lot 6b :
+**il ne reste aucune lacune de couverture sur les cinq documents instruits.** Tout bloc sans
+contenu est désormais un bloc soumis, sur lesquels un arbitrage a été rendu ou reste à rendre.
 
 **Définitions — trois grandeurs distinctes, qui ne se recomposent pas entre elles.**
 

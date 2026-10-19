@@ -1,0 +1,23 @@
+restauration(equations): lot 6b — domaine N, 15 candidats argumentes
+
+Quinze blocs : 4 moyenne-haute, 11 moyenne.
+
+Les mieux etayes :
+  l. 1223  Radon : le tableau de synthese du §164 du MEME document
+           donne, pour la transformee de Radon, entree « objet » et
+           sortie « projections ».
+  l. 1999  la regularisation : la forme non regularisee X = H^{-1} Y
+           figure textuellement au l. 1987, dans la section sur les
+           problemes inverses.
+  l. 2046  la complexite : le bloc precedent donne l'arrivee
+           O(N log N), le bloc manquant donne le depart O(N^2).
+  l. 1811  la detection de motifs : « un pic spectral » est ce qu'on
+           recherche « comme indicateur de periodicite, vibration ».
+
+Sept blocs de N restent en inconnue, dont deux blocs-listes (l. 2026,
+l. 2301) dont seul le tiret a survecu, et le bloc de synthese finale du
+§176 — le plus dommageable des 176 blocs du domaine, puisqu'il portait
+la conclusion mathematique du document.
+
+Reserve : reconstruction, pas recuperation. Onze des quinze blocs sont
+de confiance moyenne.

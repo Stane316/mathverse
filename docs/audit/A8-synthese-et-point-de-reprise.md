@@ -57,6 +57,7 @@ dans A1, A3, A4, A5. Un jeu de repli est conservé si `mathemirum` devait être 
 | `A7-integrite-des-equations.md` + annexe CSV | **terminé** (rectifié) | nature et étendue de la dégradation |
 | `fiches/domaine-K-…md` | **terminée** | fiche 1 sur 29 |
 | `fiches/domaine-L-analyse-numerique.md` | **terminée** | fiche 2 sur 29 — **rédigée sur le document restauré** (102 écritures appliquées) ; ordre d'entrelacement L → I → N → J |
+| Lot de restauration **6b** | **appliqué** | 30 candidats argumentés sur les 46 blocs déclarés en inconnue : 11 en L, 15 en N, **et les 4 lacunes du domaine I** (1 haute, 9 moyenne-haute, 20 moyenne) ; livrés en 3 diffs testés sur worktree |
 | `fiches/domaine-D-geometrie-computationnelle.md` | **terminée** | fiche 3 sur 29 — document **non restauré** (chantier A–D) ; révèle un **troisième régime de dégradation** : formules aplaties en texte inline, variables conservées |
 | `fiches/domaine-N-transformees.md` | **terminée** | fiche 4 sur 29 — **rédigée sur le document restauré** (lots 4a + 4b, 146 écritures) ; 3 941 lignes, 180 sections, 245 blocs ; **le plus directement exploitable du corpus** : pipeline web Microphone → Web Audio API → FFT → Canvas/WebGL (§109), mapping de `|X_k|` vers 8 attributs visuels (§111), fenêtrage comme paramètre réglable (§95). `navier` = 0, `CFL` = 0 — la famille 5 reste à sourcer hors corpus |
 | `fiches/domaine-I-calcul-differentiel.md` | **terminée** | fiche 5 sur 29 — **rédigée sur le document restauré** (lots 3a + 3b + 3c, 204 écritures) ; 3 169 lignes, 181 sections, 318 blocs ; **quatre cahiers des charges de composants déjà rédigés** : visualisateur de dérivée (§154), visualisateur de gradient (§155), visualisation de Hessienne (§160), optimisation sous contrainte (§161) ; le gradient comme normale à `F(x,y,z)=0` (§109) fonde les SDF et le raymarching ; théorie des transitions C⁰/C¹/C² (§152-153). `navier` = 0, `CFL` = 0 — la famille 5 reste à sourcer hors corpus |
@@ -139,8 +140,11 @@ arbres ASCII ; aucune n'est une équation.
 3. **Registre des équations à réécrire** : alimenté par A7, mais pas encore consolidé par domaine.
 4. **Les 8 documents « Ai Technical Litteracy »** (lot 5 du plan A6) : non traités.
 5. **A, B, C, D** : arborescence et équations détruites, méthode à définir (voie 2 confirmée).
-6. **Blocs en attente de votre arbitrage** : 33 sur L, 28 sur I, 33 sur N — soit 94 blocs
-   laissés en « contenu perdu » (fallback validé), tous intacts et complétables plus tard.
+6. **Blocs sans contenu restants** (mesure directe après le lot 6b) : **78** sur les 1 137 blocs
+   display des cinq documents instruits — L 6, N 5, I 23, J 44, K 0. S'y ajoutent 9 blocs-listes
+   (7 en L, 2 en N) dont seul le tiret a survécu. Tous sont intacts et complétables. Aucun n'est
+   une lacune : **la couverture est complète**, chaque bloc sans contenu a été soumis au moins
+   une fois.
 7. **Le décompte de 724 défauts est un plancher, pas un total** : sur N, 51 % des blocs
    restaurés n'étaient signalés par aucune heuristique (mesure directe, voir §3 du README
    de restauration).
@@ -148,6 +152,16 @@ arbres ASCII ; aucune n'est une équation.
    caractères » comptait comme vides des blocs sains tenant un seul caractère (44 cas), et
    avait fait annoncer 18 lacunes de couverture là où il y en a **4** (toutes en I, §177/§178).
    Leçon consignée : un test automatique sur la longueur d'un résidu n'est pas une mesure.
+   **Les 4 lacunes ont depuis été traitées** (lot 6b) : elles formaient une série unique dans le
+   §178 « RELATION ENTRE G, H ET I », et la quatrième a été retrouvée textuellement au §173 du
+   même document. **Il ne reste plus aucune lacune de couverture.**
+
+9. **Le gabarit des blocs-listes est identifié mais non appliqué** : leur forme détruite était
+   `\[ - \text{X} \]` suivie d'une flèche `→ résultat`, comme le prouve le tiret survivant
+   (la commande `\text{…}` a été détruite avec son argument). Le terme manquant n'est pas
+   déduisible de façon unique — nom du domaine, ou objet canonique qu'il apporte —, mais **une
+   seule décision règle les neuf blocs d'un coup**. Voir §7.3 de
+   `domaine-L-N-blocs-restants.md`.
 
 ## 8. Obstacles rencontrés
 
@@ -160,7 +174,8 @@ arbres ASCII ; aucune n'est une équation.
 
 ## 9. Prochaines actions
 
-1. Produire la fiche **J** — son document vient d'être assaini (232 écritures, lots 5b/5c/5a).
+1. Produire la fiche **J** — son document est assaini (232 écritures, lots 5b/5c/5a) et J est le
+   seul des cinq documents instruits dont la Grande Carte a été détruite.
 2. Poursuivre l'entrelacement sur **H** (8 documents : H, G, M, O, F, Q, P, UI/UX restent
    à instruire), en commençant par H puisque sa Grande Carte a fourni un point de comparaison.
 3. Alimenter l'index au fil des fiches.
@@ -173,5 +188,6 @@ arbres ASCII ; aucune n'est une équation.
 - `docs/decisions/0001-nom-de-travail-mathemirum.md`
 - `docs/audit/A2-inventaire-structurel.md`, `A6-plan-phase-1.md`, `A7-integrite-des-equations.md`
 - `docs/restauration/README.md` (méthode, gouvernance), `propositions/domaine-K.md`,
-  `propositions/domaine-L.md`, `propositions/domaine-L-blocs-a-trancher.md`
+  `propositions/domaine-L.md`, `propositions/domaine-L-blocs-a-trancher.md`,
+  `propositions/domaine-L-N-lot6a.patch.json`, `propositions/domaine-I-L-N-lot6b.patch.json`
 - Outils : `tools/audit-phase1/`, `tools/restauration/` (déterministes, sans réseau, aucune écriture dans la source)
