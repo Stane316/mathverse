@@ -91,10 +91,29 @@ explicite**. ⚠️ Ni les critères d'approbation ni la procédure n'ont été 
 pas d'infrastructure. L'interdiction de « produire des sorties à usage commercial ou
 organisationnel » exclut de fait un moteur Wolfram gratuit derrière un composant distribué.
 
-### CoCalc
+### CoCalc — ⚠️ MS-RSL : ce n'est pas une licence open source
 
-Licence **non identifiée** par GitHub. ⚠️ **Non vérifiée :** le fichier de licence du dépôt n'a pas
-été lu. Un `NOASSERTION` ne signifie pas « fermé », mais impose de lire le fichier avant tout usage.
+**Le fichier `LICENSE.md` du dépôt a été lu le 2026-10-19. Il porte la
+« MICROSOFT REFERENCE SOURCE LICENSE (MS-RSL) ».**
+
+Extraits :
+
+> « "**Reference use**" means use of the software within your company **as a reference, in read
+> only form**, for the sole purposes of debugging your products, maintaining your products, or
+> enhancing the interoperability of your products with the software, and **specifically excludes
+> the right to distribute the software outside of your company**. »
+
+> « the Licensor grants you a **non-transferable**, non-exclusive, worldwide, royalty-free copyright
+> license to **reproduce the software for reference use**. »
+
+**Ce que cela signifie :** le code de CoCalc est publiable pour être **consulté**, à des fins de
+débogage, de maintenance ou d'interopérabilité. **Il ne peut pas être distribué.** Ce n'est pas une
+licence open source, et ce n'est pas non plus une licence propriétaire ordinaire : c'est une
+licence de **référence**, un régime intermédiaire et restrictif.
+
+**Conséquence pour Mathemirum :** ❌ CoCalc ne peut servir ni de base, ni de dépendance, ni même de
+source d'extraits de code. Il peut en revanche être **lu** pour comprendre une architecture — ce qui
+est l'usage explicitement autorisé.
 
 ## 10. Points forts
 
@@ -110,14 +129,15 @@ Licence **non identifiée** par GitHub. ⚠️ **Non vérifiée :** le fichier d
   production et l'usage commercial.
 - ⚠️ **L'interdiction de décompiler et de modifier le Free Engine est explicite.** Toute
   rétro-ingénierie est proscrite.
-- ⚠️ **CoCalc : licence non identifiée**, et réorientation annoncée du projet vers l'IA
-  (`cocalc-ai`) — la pérennité de la plateforme de calcul mérite vigilance.
+- ⚠️ **CoCalc est sous MS-RSL** : consultation autorisée, **distribution exclue**. S'y ajoute une
+  réorientation annoncée du projet vers l'IA (`cocalc-ai`) — la pérennité de la plateforme de
+  calcul mérite vigilance.
 - Ni l'un ni l'autre ne produit de composant web.
 
 ## 12. Éléments non vérifiés ⚠️
 
-- **CoCalc :** le fichier de licence du dépôt, le modèle économique, le parcours utilisateur, la
-  portée réelle de la réorientation vers `cocalc-ai`.
+- **CoCalc :** le modèle économique, le parcours utilisateur, la portée réelle de la réorientation
+  vers `cocalc-ai`. ~~Le fichier de licence~~ — **levé le 2026-10-19 : MS-RSL**.
 - **Wolfram :** les critères et la procédure d'approbation des projets open source ; les conditions
   complètes de Wolfram|Alpha ; la politique sur l'affichage des résultats dans un produit tiers.
 - Pour les deux : la documentation, la contribution, les performances.
@@ -156,6 +176,7 @@ Wolfram rend possible, à condition de rester du côté de la référence.
 | Wolfram\|Alpha gratuit pour usage personnel non commercial | `wolframalpha.com/faqs` (page publique) | 2026-10-19 |
 | Wolfram Engine : usages autorisés et interdits, projets open source soumis à approbation | `wolfram.com/legal/terms/wolfram-engine.html` (page publique) | 2026-10-19 |
 | CoCalc : `NOASSERTION`, 1 288 ★, TypeScript, mention de déplacement vers `cocalc-ai` | `GET /repos/sagemathinc/cocalc` | 2026-10-19 |
+| **CoCalc : texte MS-RSL, clause « reference use » excluant la distribution** | `GET /repos/sagemathinc/cocalc/contents/LICENSE.md` | 2026-10-19 |
 
-**Limites :** lectures de pages publiques. **Aucune vérification juridique.** Le fichier de licence
-de CoCalc n'a pas été lu ; la procédure d'approbation Wolfram n'a pas été consultée.
+**Limites :** lectures de pages publiques et du fichier de licence CoCalc. **Aucune vérification
+juridique.** La procédure d'approbation Wolfram n'a pas été consultée.
