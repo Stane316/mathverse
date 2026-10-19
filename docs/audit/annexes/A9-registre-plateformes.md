@@ -1,10 +1,12 @@
 # A9 — REGISTRE DES PLATEFORMES ÉTUDIÉES (PHASE 2)
 
-**Date de collecte :** 2026-10-19
+**Date de collecte :** 2026-10-19 (complétée le même jour)
 **Mode d'accès :** API publique GitHub (`api.github.com`, non authentifiée, données publiques) et
 recherche web générale. Aucun contournement d'accès, aucune extraction de contenu privé.
-**Statut :** **partiel** — 15 plateformes vérifiées sur les ~20 du périmètre prévu. Les fiches
-détaillées (16 champs) ne sont pas encore rédigées.
+**Statut :** **31 plateformes vérifiées** sur les ~32 du périmètre prévu. **Dix fiches détaillées
+rédigées** dans `../fiches-phase-2/` : F01 React Bits, F02 shadcn/ui, F03 Math-To-Manim,
+**F04 Aceternity UI, F05 Uiverse, F06 Desmos, F07 GeoGebra, F08 Shadertoy, F09 Wolfram et CoCalc,
+F10 MathVerse (sadeepas)**.
 
 > ⚠️ **Ce registre est un relevé de faits observables, pas une évaluation.** Les colonnes
 > « étoiles » et « dernière activité » datent du 2026-10-19 et bougeront. Les licences sont
@@ -29,6 +31,13 @@ personnalisation. **Aucune ne porte d'explication mathématique.**
 
 **Non vérifiés à ce jour :** Aceternity UI (dépôt public non identifié sous `aceternity/ui`),
 Uiverse site principal (`uiverse.io`).
+
+> **Rectification (2026-10-19).** Le rapport de phase 0 décrivait React Bits comme reposant sur
+> la « mécanique de registre » de shadcn/ui. L'observation du dépôt corrige : React Bits construit
+> sa distribution avec **jsrepo** (`jsrepo.config.ts`), en important l'adaptateur
+> **`@jsrepo/shadcn`**. Il **émet donc bien des articles au format shadcn**, mais son outil de
+> construction est un tiers. La conclusion de fond ne change pas — la mécanique reste ouverte —,
+> mais le chemin de dépendance n'est pas celui qui était annoncé.
 
 ---
 
@@ -127,6 +136,88 @@ Deux exceptions partielles, et elles sont instructives :
   bibliothèque de composants visuels.
 - **dynamic-manim-components** poursuit l'idée d'une bibliothèque de composants
   mathématiques — mais dans l'écosystème Python/Manim, donc hors du web.
+
+---
+
+## 4 bis. Complément de collecte (2026-10-19, fin de journée)
+
+### Homonymes détectés en phase 0
+
+| Projet | Licence | ★ | Langue | Activité | Nature |
+|---|---|---:|---|---|---|
+| **MathVerse** (`ZrrSkywalker`) | MIT | 184 | Python | 2025-04-28 | benchmark MLLM de maths visuelles (ECCV-2024) |
+| **-MathVerse-An-Interactive-Suite…** (`sadeepas`) | **aucune** | 2 | HTML | 2025-11-25 | suite d'applications web mathématiques |
+
+Le premier occupe le **nom** mais pas le sujet (c'est un jeu d'évaluation de modèles). Le second
+occupe le **sujet** — « suite interactive d'applications web mathématiques » — mais n'a aucune
+licence déclarée et quasiment aucune traction (2 ★). **Aucun des deux ne bloque Mathemirum**, mais
+le second mérite une fiche : c'est le seul projet trouvé dont l'intitulé recouvre exactement
+l'objet visé.
+
+### Projets de génération mathématique par IA — vérification des licences
+
+| Projet | Licence | ★ | Langue | Activité |
+|---|---|---:|---|---|
+| **Math-To-Manim** (`HarleyCoops`) | MIT | 2 787 | Python | 2026-10-17 |
+| **3b1b/manim** (moteur d'origine) | MIT | 95 373 | Python | 2026-09-09 |
+| **manim-video-generator** (`rohitg00`) | MIT | 306 | TypeScript | 2026-01-29 |
+| **ExcaliMath** (`tamerUAE`) | MIT | 35 | TypeScript | 2026-04-05 |
+| **reactive-manim** (`philip-murray`) | MIT | 77 | Python | 2026-08-31 |
+| **MathViz-E** (`EmergenceAI`) | MIT | 36 | Python | 2026-04-17 |
+| **Manimly** (`shubhamrawat-gh`) | MIT | 0 | TypeScript | 2026-09-29 |
+
+**Tous sous MIT.** Le constat du §4 est donc confirmé sur sept projets : le couplage
+IA + maths est **massivement ouvert** — et **massivement orienté vers la vidéo**.
+
+### Distribution : deux outils, pas un
+
+- **shadcn/ui** : monorepo, paquets `shadcn` (CLI), `registry` (le registre), `react`, `helpers`,
+  `tests`. MIT.
+- **jsrepo** : utilisé par React Bits pour *construire* le registre, avec l'adaptateur
+  `@jsrepo/shadcn` pour *émettre* au format shadcn.
+
+Conséquence pour Mathemirum : il existe **deux** chaînes d'outils, et la compatibilité se joue au
+niveau du **format d'article de registre**, pas de l'outil.
+
+---
+
+## 4 ter. Deuxième vague de collecte (2026-10-19)
+
+Sept plateformes étudiées en profondeur. **Le constat dominant est juridique.**
+
+| Plateforme | Régime | Réutilisable comme base ? | Fiche |
+|---|---|---|---|
+| **Aceternity UI** | licence **propriétaire** (redistribution interdite) | ❌ **non** | F04 |
+| **Uiverse** | **MIT** sur le dépôt miroir, inactif depuis 2 ans | ⚠️ à vérifier élément par élément | F05 |
+| **Desmos** | service fermé ; gratuit = **non commercial** | ❌ **non** | F06 |
+| **GeoGebra** | **4 régimes** : EUPL (code), non commercial (services), CC BY-NC-SA (ressources) | ❌ **non** | F07 |
+| **Shadertoy** | **CC BY-NC-SA 3.0 par défaut** (non commercial + viral) | ❌ **non** | F08 |
+| **Wolfram** | **propriétaire** ; gratuit = pré-production | ❌ **non** | F09 |
+| **CoCalc** | licence **non identifiée** (`NOASSERTION`) | ⚠️ non vérifié | F09 |
+| **MathVerse (sadeepas)** | **aucune licence** = tous droits réservés | ❌ **non** | F10 |
+
+### Les trois découvertes les plus contraignantes
+
+1. **Shadertoy — le corpus de référence est fermé.** La licence par défaut est
+   **CC BY-NC-SA 3.0** : non commerciale *et* à partage à l'identique. La plupart des auteurs ne
+   déclarent rien, donc **l'absence d'en-tête vaut interdiction, pas autorisation**. C'est la plus
+   grosse contrainte de cette phase pour un projet de composants visuels.
+2. **GeoGebra — une clause de co-propriété des productions.** « Materials generated using GeoGebra
+   are […] under the copyright of **both GeoGebra** and the party who generated the materials. »
+   Une figure produite avec GeoGebra est co-détenue et son usage commercial restreint.
+3. **Aceternity UI — le « MIT » répandu est faux.** De nombreux annuaires l'annoncent MIT ; la page
+   de licence officielle décrit une licence propre interdisant **la redistribution du code, même
+   modifié**. Leçons : la source de vérité est la page de l'éditeur, jamais un agrégateur.
+
+### Contrepartie positive
+
+**Shaders** (`shaders.com`) déclare son moteur et ses composants **sous licence MIT**, avec export
+de code et usage commercial gratuit. ⚠️ **Non encore étudiée au-delà de sa page de conditions** —
+candidate prioritaire pour la suite.
+
+**Wolfram** autorise explicitement les « **open-source projects approved by Wolfram** » dans les
+usages de la Wolfram Engine gratuite. Une brèche existe, soumise à approbation — critères non
+vérifiés.
 
 ---
 

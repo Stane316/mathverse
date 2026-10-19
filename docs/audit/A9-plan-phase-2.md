@@ -1,7 +1,9 @@
 # A9 — PLAN DE LA PHASE 2 : ÉTUDE D'ÉCOSYSTÈME ET DE CONCURRENCE
 
 **Date d'ouverture :** 2026-10-19
-**Statut :** phase **ouverte**, collecte **en cours** (15 plateformes vérifiées sur ~20 prévues).
+**Statut :** phase **ouverte**, collecte **quasi complète** (31 plateformes vérifiées, 10 fiches
+rédigées sur ~32 prévues). Restent : Shaders (`shaders.com`), GLSL Sandbox, et l'approfondissement
+de CoCalc (licence non lue).
 **Décision préalable :** le chantier de restauration a été clos sur un périmètre réduit par le
 porteur le 2026-10-19 — voir `../restauration/CLOTURE-CHANTIER.md`. Cette clôture lève la règle
 du 2026-10-18 qui subordonnait l'ouverture de la phase 2 à l'achèvement du chantier.
@@ -74,8 +76,11 @@ personnalisation · 7. stratégie documentaire · 8. modèle de contribution ·
 
 ## 6. Livrables attendus
 
-1. **Registre des plateformes** — commencé : `annexes/A9-registre-plateformes.md`
-2. **Fiches détaillées**, une par plateforme, selon les 16 champs — **non commencées**
+1. **Registre des plateformes** — avancé : `annexes/A9-registre-plateformes.md`
+2. **Fiches détaillées**, une par plateforme, selon les 16 champs — **10 rédigées** dans
+   `fiches-phase-2/` : F01 React Bits, F02 shadcn/ui, F03 Math-To-Manim, F04 Aceternity UI,
+   F05 Uiverse, F06 Desmos, F07 GeoGebra, F08 Shadertoy, F09 Wolfram et CoCalc,
+   F10 MathVerse (sadeepas)
 3. **Comparaison transversale** — tableau croisé attributs × plateformes — **non commencée**
 4. **Synthèse des différenciateurs** — ce que Mathemirum peut revendiquer — **non commencée**
 5. **Registre des licences** — ce qui est réutilisable, ce qui ne l'est pas, sous quelles
@@ -96,7 +101,29 @@ d'une bibliothèque de composants distribuée sous registre.
 
 Ce n'est pas un obstacle majeur — React Bits n'apporte aucune explication mathématique, et ce que
 Mathemirum veut en reprendre est la *mécanique*, pas le code. Or cette mécanique est ouverte :
-**shadcn/ui (MIT, 125 966 ★) en est l'origine déclarée**.
+**shadcn/ui est sous MIT (125 966 ★)**.
+
+⚠️ **Rectification du 2026-10-19.** Le rapport de phase 0 décrivait React Bits comme reposant sur
+le registre shadcn. L'observation du dépôt corrige : React Bits construit sa distribution avec
+**jsrepo** et l'adaptateur **`@jsrepo/shadcn`**. Il émet au format shadcn, mais par un autre
+outil. La conclusion de fond tient — la mécanique est ouverte —, pas le chemin de dépendance
+annoncé. Détail en `annexes/A9-registre-plateformes.md` §1.
+
+### 7.3 ⚠️ Le constat dominant de la deuxième vague est juridique
+
+Sur les sept plateformes étudiées en profondeur, **six ne peuvent pas servir de base** à un projet
+de bibliothèque ouverte : Aceternity (redistribution interdite), Desmos (gratuit = non commercial),
+GeoGebra (quatre régimes, dont deux non commerciaux), Shadertoy (CC BY-NC-SA par défaut), Wolfram
+(propriétaire), MathVerse/sadeepas (aucune licence). Une seule est ouverte sans réserve :
+**Uiverse**, dont le dépôt miroir est toutefois inactif depuis deux ans.
+
+Ce n'est pas un obstacle à la thèse — c'est **une confirmation qu'elle vaut la peine d'être
+instruite** : le territoire n'est pas occupé par des acteurs libres, mais par des acteurs fermés ou
+ambiguës. Deux échappatoires identifiées et non encore vérifiées : **Shaders** (`shaders.com`,
+MIT annoncé) et la clause Wolfram « open-source projects approved by Wolfram ».
+
+⚠️ **Les licences relevées proviennent de pages publiques d'éditeurs et de métadonnées GitHub.**
+Aucune n'a été vérifiée par un conseil juridique, et plusieurs sont susceptibles d'avoir changé.
 
 ### 7.2 Le courant « IA + maths » sort de la vidéo
 
@@ -106,7 +133,7 @@ exceptions partielles confirment la règle : ExcaliMath est bien un composant Re
 tableau blanc, et `dynamic-manim-components` vise bien une bibliothèque de composants mais dans
 l'écosystème Python/Manim.
 
-⚠️ **Il s'agit d'un constat sur 15 plateformes et une requête, pas d'une preuve d'absence.**
+⚠️ **Il s'agit d'un constat sur 24 plateformes et une requête, pas d'une preuve d'absence.**
 Voir §8.
 
 ## 8. Hypothèses — à confirmer, non à tenir pour acquises
@@ -131,9 +158,10 @@ dépendance**.
 
 | # | Recommandation | Impact | Urgence | Coût | Risque | Dépendance |
 |---|---|---|---|---|---|---|
-| **R1** | Poursuivre la collecte jusqu'aux ~20 plateformes, familles A et B d'abord | **élevé** | **haute** | faible | faible | aucune |
+| **R1** | Compléter la collecte : **Shaders** (`shaders.com`, MIT annoncé — candidat prioritaire), GLSL Sandbox, et **lire le fichier de licence de CoCalc** | **élevé** | **haute** | faible | faible | aucune |
 | **R2** | Rédiger la fiche licence de React Bits en priorité, et qualifier le périmètre exact de la clause Commons Clause vis-à-vis d'une « configuration exportable » par composant | **élevé** | **haute** | faible | **moyen** (lecture juridique) | aucune |
 | **R3** | Instruire explicitement la question de la demande (§8.2) avant de conclure à une place libre | **élevé** | moyenne | moyen | faible | R1 |
+| **R6** | **Registre des licences** (livrable 5) : consolider les 10 fiches en un tableau opposable, avec la qualification juridique des trois points ouverts (configuration exportable vs clause React Bits ; co-propriété GeoGebra ; brèche Wolfram) | **élevé** | **haute** | faible | **moyen** | R1 |
 | **R4** | Vérifier les homonymes `MathVerse` : ils occupent le nom et le sujet | moyen | moyenne | faible | faible | aucune |
 | **R5** | Traiter séparément les deux licences copyleft faible relevées (p5.js LGPL-2.1, JSXGraph LGPL-3.0) dans le registre des licences | moyen | basse | faible | faible | R1 |
 
