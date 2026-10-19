@@ -172,6 +172,17 @@ autorisé que sur le dépôt `mathverse`). **Aucune tentative de contournement n
 Le travail est donc préparé dans un clone local (branche `arena/restauration-equations`, un
 commit par lot) puis livré sous forme de diff. Deux façons de procéder :
 
+**Ordre d'application — règle et limite.** Quand deux patches touchent le même fichier, on
+applique les **numéros de ligne les plus élevés d'abord**. Cette règle a une limite, rencontrée
+sur J : le lot 5c (l. 3386-3404) est **inclus** dans la plage du lot 5b (l. 1026-3534). Calculer
+le décalage à partir du JSON est **faux** — les champs `ancien` peuvent se terminer par un
+retour à la ligne, ce qui fausse le compte. **La seule méthode fiable est empirique** : relire le
+fichier après chaque lot et vérifier la position réelle des blocs restants. Sur J, le décalage
+calculé était de −20 et le décalage réel de **0**.
+
+Les trois diffs J ont été **testés** : appliqués dans l'ordre 5b → 5c → 5a sur un checkout
+vierge du document, ils reproduisent exactement l'état final (vérifié par `diff`).
+
 **A. Vous appliquez localement** (recommandé, ~30 s) :
 
 ```bash
@@ -217,7 +228,7 @@ toucher aux autres.
 | 2 | **L** — analyse numérique | socle des critères de validation ; 61 signalés, **131 au total**, 102 appliqués — **33 blocs en attente de l'auteur** |
 | 3 | **I** — calcul différentiel | 109 signalés, 318 blocs lus — **lots 3a (62), 3b (133) et 3c (9) : 204 restaurations appliquées**, blocs vides 44 → 27 — **28 blocs en attente de l'auteur** |
 | 4 | **N** — transformées | 104 signalés, **245 blocs display** recensés — **lots 4a (62) et 4b (84) : 146 restaurations appliquées**, défauts détectés 104 → 32, blocs vides 71 → 34 — **33 blocs en attente de l'auteur** |
-| 5 | **J** — optimisation | 166 signalés, **119 observés** (lecture intégrale des 332 blocs — le plus gros document) — **lots 5a (102 entrées) et 5b (186) proposés, en attente de validation** — **document entièrement parcouru** |
+| 5 | **J** — optimisation | 166 signalés, **332 blocs display** — **lots 5b (133), 5c (10) et 5a (89) : 232 restaurations appliquées**, défauts détectés 166 → 45, blocs vides 132 → 67 — **66 blocs en attente de l'auteur** — **document entièrement traité** |
 | 6-9 | H, G, M, O, F, Q, P, UI/UX, E/R/S/U, « Ai Technical Litteracy » | voir `PLAN-ACHEVEMENT.md` |
 | 10 | A, B, C, D | restructuration (voie 2) — **chantier distinct, périmètre confirmé dans le périmètre d'achèvement** |
 

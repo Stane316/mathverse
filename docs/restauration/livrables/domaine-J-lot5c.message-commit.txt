@@ -1,0 +1,18 @@
+restauration(equations): lot 5c — domaine J, section 155
+
+Dix blocs vides (l. 3386 a 3404), restaures par les lettres de domaines
+A, B, C, D, E, F, G, H, I, J. Confiance moyenne.
+
+Hypothese validee par l'auteur le 2026-10-18. Elle repose sur deux
+elements : le corpus compte exactement dix documents jusqu'a J, et le
+onzieme bloc — celui qui a survecu — vaut IJ, c'est-a-dire une flèche
+entre deux lettres de domaines. Le texte l'introduit par « La
+transition : », ce qui distingue les blocs d'une lettre (un domaine) des
+blocs de deux lettres (une transition).
+
+Le lot 5b avait laisse ces dix blocs en inconnue ; 5c les reprend.
+
+A APPLIQUER APRES LE LOT 5b ET AVANT LE LOT 5a.
+
+Reserve : le residu de chaque bloc est vide. La lettre est certaine,
+le formalisme exact du bloc d'origine ne l'est pas.

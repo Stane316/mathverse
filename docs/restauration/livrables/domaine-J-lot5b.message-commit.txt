@@ -1,0 +1,19 @@
+restauration(equations): lot 5b — domaine J, l. 1026 a 3534
+
+133 blocs restaures sur 186 soumis (72 confiance haute, 61 confiance
+moyenne) ; 53 blocs laisses en inconnue, enregistres dans
+domaine-J-blocs-a-trancher.md.
+
+Ce lot couvre la seconde moitie du document : regularisation, validation,
+generalisation, optimisation sous contraintes, methodes de point interieur,
+metaheuristiques, et la chaine de synthese finale.
+
+Dix des blocs laisses en inconnue sont ceux de la section 155 (LA GRANDE
+CARTE DES DOMAINES) : ils sont traites par le lot 5c, fonde sur une
+hypothese validee separement.
+
+A APPLIQUER AVANT LES LOTS 5c ET 5a : les numeros de ligne descendent.
+
+Reserve : reconstruction, pas recuperation. Les arguments LaTeX detruits
+n'existent nulle part dans le fichier ; chaque formule est retablie par
+contexte et porte une justification.

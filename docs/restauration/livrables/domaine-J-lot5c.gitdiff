@@ -1,0 +1,40 @@
+diff --git "a/Maths-vers-Informatiques/Domaine J \342\200\224 Optimisation.md" "b/Maths-vers-Informatiques/Domaine J \342\200\224 Optimisation.md"
+index 4928aab..9b1448b 100644
+--- "a/Maths-vers-Informatiques/Domaine J \342\200\224 Optimisation.md"	
++++ "b/Maths-vers-Informatiques/Domaine J \342\200\224 Optimisation.md"	
+@@ -3383,25 +3383,25 @@ Pour un système :
+ 
+ La progression construite jusqu’ici peut être comprise comme :
+ 
+-\[ \]
++\[ A \]
+ 
+-\[ \]
++\[ B \]
+ 
+-\[ \]
++\[ C \]
+ 
+-\[ \]
++\[ D \]
+ 
+-\[ \]
++\[ E \]
+ 
+-\[ \]
++\[ F \]
+ 
+-\[ \]
++\[ G \]
+ 
+-\[ \]
++\[ H \]
+ 
+-\[ \]
++\[ I \]
+ 
+-\[ \]
++\[ J \]
+ 
+ La transition :
+ 
