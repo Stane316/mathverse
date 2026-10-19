@@ -1,9 +1,17 @@
 # A9 — SYNTHÈSE DES DIFFÉRENCIATEURS
 
 **Livrable 4 de la phase 2**
-**Date d'établissement :** 2026-10-19
+**Date d'établissement :** 2026-10-19 · **Révisé le 2026-10-19** après l'étude de demande
 **Objet :** établir ce que Mathemirum peut **légitimement revendiquer** face à l'écosystème étudié,
 et — tout aussi important — ce qu'il **ne peut pas** revendiquer.
+
+> ⚠️ **AVERTISSEMENT DE LECTURE — ce document a été révisé, et la révision est défavorable.**
+> La version initiale présentait sept différenciateurs comme des atouts, en s'appuyant sur le fait
+> que personne ne les occupe. L'étude de demande (`A10-etude-de-demande.md`) a depuis montré que
+> **« personne ne l'occupe » et « quelqu'un le demande » sont deux choses différentes.** Le verdict
+> de demande est intégré ci-dessous (§2.0) et la hiérarchie en est **bouleversée** : les deux
+> différenciateurs les plus identitaires du projet (D1, D2) sont **ceux dont la demande est la moins
+> établie**. Ne pas lire ce document sans le §2.0.
 **Appuis :** `A9-comparaison-transversale.md` (18 attributs × 27 plateformes) et
 `A9-registre-des-licences.md` (35 plateformes, 4 statuts d'usage).
 
@@ -27,6 +35,38 @@ Chaque différenciateur ci-dessous est donc assorti de **sa preuve** (d'où vien
 ⚠️ **Une revendication non retenue n'est pas une mauvaise idée.** Elle est simplement déjà occupée,
 ou invérifiable. Le §3 les liste explicitement, parce que bâtir une stratégie sur un faux
 différenciateur est une erreur coûteuse.
+
+---
+
+## 2.0 Verdict de demande — la révision
+
+Ajouté le 2026-10-19, à la suite de `A10-etude-de-demande.md`. Chaque différenciateur est confronté
+aux signaux de demande observés. **Le classement qui en résulte n'est pas celui du §2.**
+
+| # | Différenciateur | Verdict de demande | Fondement |
+|---|---|---|---|
+| **D5** | Licence claire | ✅ **DIRECT** | la licence figure comme critère de choix dans les guides : « MIT / Apache 2.0 vs commercial license (which decides whether you can ship without paying a vendor) » |
+| **D4** | Performances mesurées | ✅ **DIRECT** | le **profilage** est la douleur n°1 des développeurs de shaders (Khronos 2026, 53 % en top 3) ; la performance est systématique dans les guides de choix |
+| **D3** | Limites connues | ✅ **DIRECT (indirectement)** | documentation = 1ᵉʳ critère (93 %), et un guide d'évaluation professionnel demande explicitement des « **edge cases** » et des « **common pitfalls** » — c'est exactement D3 |
+| **D7** | Boucle prompt → test | ⚠️ **ÉMERGENT** | « l'aptitude à l'IA » (MCP, `llms.txt`) est un critère apparu en 2026 — avec un risque de cycle de mode |
+| **D6** | Registre à champs étendus | ⚠️ **INDIRECT** | le modèle copier-coller est validé (« component ownership over black-box abstractions ») ; la demande porte sur le modèle, pas sur les champs |
+| **D1** | Équations, hypothèses, validité | ❌ **NON OBSERVÉ** | aucun des ~20 guides consultés ne mentionne ces attributs. Le discours « comprendre plutôt que copier » existe — mais **dans la sphère jeu vidéo / apprentissage des shaders, pas dans celle des composants web** |
+| **D2** | Classement tripartite | ❌ **NON OBSERVÉ** | aucun signal, dans aucune source |
+
+### Ce que la révision change
+
+1. **D1 et D2 sont requalifiés.** Ce sont les deux différenciateurs les plus identitaires du projet,
+   et **ce sont les deux dont la demande n'est pas établie**. Ils restent — parce qu'ils découlent
+   d'exigences non négociables du cahier des charges —, mais ils doivent être défendus comme **une
+   exigence de rigueur assumée**, **pas comme un avantage concurrentiel**. Prétendre le contraire
+   serait faux.
+2. **D3 passe au premier rang des différenciateurs de preuve.** C'est le seul de la couche probatoire
+   dont la demande soit établie, et c'est aussi le moins coûteux. Le rapport coût/bénéfice est
+   meilleur que celui de D1.
+3. **Le risque du §4 est confirmé, pas levé.** L'hypothèse « le marché ne valorise pas » n'est pas
+   réfutée : elle est **partiellement vérifiée** pour D1 et D2.
+4. **La recommandation R3.1 devient structurante** : présenter la couche de preuve par ses bénéfices
+   observés (débogable, mesuré, lisible par une machine), jamais comme un argument premier.
 
 ---
 
@@ -207,9 +247,21 @@ Deux explications sont possibles, et elles ont des conséquences opposées :
 2. **Le marché ne valorise pas ces attributs.** → La place est libre *parce qu'elle ne vaut rien*,
    et investir dans la preuve serait une erreur stratégique.
 
-**Ces deux hypothèses ne sont pas départagées par cette phase.** L'étude de demande
-(recommandation R3) est le seul moyen de les trancher, et **c'est la dépendance la plus importante
-de la phase 2**.
+**L'étude de demande (A10) a depuis tranché partiellement, et pas dans le sens favorable :**
+
+- pour **D3, D4, D5** → hypothèse 1 : la demande est établie et mesurée, la place est libre par
+  négligence ;
+- pour **D1, D2** → ⚠️ **hypothèse 2 non réfutée** : aucune demande observable n'a été trouvée, dans
+  aucune source. Rien ne prouve que le marché ne les valorise pas, **mais rien ne prouve le
+  contraire**, et l'absence de signal après une recherche ciblée est un indice faiblement
+  défavorable ;
+- pour **D6, D7** → la demande est réelle mais porte sur autre chose (l'aptitude à l'IA), et elle est
+  récente.
+
+⚠️ **Conséquence directe : D1 et D2 doivent être assumés comme une exigence de rigueur, pas
+présentés comme un avantage concurrentiel.** C'est un choix légitime — il est inscrit au cahier des
+charges — mais **il doit être fait les yeux ouverts**, et non justifié par une demande qu'on
+n'a pas mesurée.
 
 Un élément penche toutefois en faveur de la première : **le cahier des charges lui-même** formule ces
 exigences comme des non-négociables. Le projet ne cherche pas à maximiser une audience, il cherche à
@@ -245,8 +297,9 @@ Rappelés ici parce que D5 en dépend directement :
 - ⚠️ **Les différenciateurs D6 et D7 sont les plus fragiles** : l'un est une extension à la portée de
   tout acteur en place, l'autre dépend d'un état de l'art qui bouge vite. Ils sont retenus, mais
   classés en bas de liste pour cette raison.
-- ⚠️ **Aucune validation par le marché.** Cette synthèse dit ce qui est *libre*, pas ce qui est
-  *demandé*. La différence est entière.
+- ⚠️ **Le verdict de demande du §2.0 prime sur le reste du document.** Cette synthèse dit ce qui est
+  *libre* ; le §2.0 dit ce qui est *demandé*. **Ce sont deux questions différentes, et la seconde est
+  celle qui décide de l'investissement.**
 - ⚠️ **Aucune plateforme n'a été installée ni exécutée** : pas de GPU ni de navigateur dans cet
   environnement. Les affirmations techniques adverses sont donc reprises, non vérifiées.
 - ⚠️ **Aucune preuve d'absence.** 27 plateformes observables ne sont pas l'écosystème entier.
