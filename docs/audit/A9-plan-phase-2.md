@@ -1,9 +1,9 @@
 # A9 — PLAN DE LA PHASE 2 : ÉTUDE D'ÉCOSYSTÈME ET DE CONCURRENCE
 
 **Date d'ouverture :** 2026-10-19
-**Statut :** phase **ouverte**, collecte **quasi complète** (31 plateformes vérifiées, 10 fiches
-rédigées sur ~32 prévues). Restent : Shaders (`shaders.com`), GLSL Sandbox, et l'approfondissement
-de CoCalc (licence non lue).
+**Statut :** phase **ouverte**, collecte **complète** (35 plateformes, 11 fiches). **Le livrable 5
+— le registre des licences — est établi** (`annexes/A9-registre-des-licences.md`). Restent trois
+points ouverts nécessitant une qualification juridique (§7.4).
 **Décision préalable :** le chantier de restauration a été clos sur un périmètre réduit par le
 porteur le 2026-10-19 — voir `../restauration/CLOTURE-CHANTIER.md`. Cette clôture lève la règle
 du 2026-10-18 qui subordonnait l'ouverture de la phase 2 à l'achèvement du chantier.
@@ -83,9 +83,10 @@ personnalisation · 7. stratégie documentaire · 8. modèle de contribution ·
    F10 MathVerse (sadeepas)
 3. **Comparaison transversale** — tableau croisé attributs × plateformes — **non commencée**
 4. **Synthèse des différenciateurs** — ce que Mathemirum peut revendiquer — **non commencée**
-5. **Registre des licences** — ce qui est réutilisable, ce qui ne l'est pas, sous quelles
-   conditions — **non commencé** ; c'est le livrable qui alimentera la décision de licence,
-   reportée par le porteur à l'après-phase-2
+5. **Registre des licences** — **établi** : `annexes/A9-registre-des-licences.md`. 35 plateformes
+   classées selon quatre statuts (base / dépendance / référence / interdit), avec quatre points
+   ouverts à qualifier. C'est le livrable qui alimentera la décision de licence, reportée par le
+   porteur à l'après-phase-2
 
 ## 7. Premiers résultats vérifiés
 
@@ -125,6 +126,34 @@ MIT annoncé) et la clause Wolfram « open-source projects approved by Wolfram �
 ⚠️ **Les licences relevées proviennent de pages publiques d'éditeurs et de métadonnées GitHub.**
 Aucune n'a été vérifiée par un conseil juridique, et plusieurs sont susceptibles d'avoir changé.
 
+### 7.4 Troisième vague : Shaders, GLSL Sandbox, CoCalc
+
+- **Shaders** (`shader-effects-inc/shaders`, **MIT**, 5 106 ★, WebGPU, 200+ composants, cinq
+  frameworks, CLI et MCP) — ouvert depuis le **6 octobre 2026**, soit treize jours avant
+  l'observation. C'est le concurrent le plus sérieux sur le plan technique. ⚠️ **Mais un conflit est
+  documenté** : son contrat de plateforme (v1.7, 3 août 2026, antérieur à l'ouverture) déclare la
+  technologie « propriété exclusive » et interdit de redistribuer « le code créé avec Shaders ».
+  **Point ouvert n°1.**
+- **CoCalc** — ⚠️ **licence lue : MS-RSL (Microsoft Reference Source License)**. Ce n'est pas une
+  licence open source : le code est consultable **à titre de référence uniquement**, et
+  **la distribution est expressément exclue**. Correction apportée à la fiche F09.
+- **GLSL Sandbox** — MIT annoncé pour la plateforme, mais ⚠️ **aucune licence par défaut pour les
+  shaders déposés** : même problème que Shadertoy. Source indirecte, à confirmer.
+- **Découverts en cours de route** : **Paper Shaders** (`paper-design/shaders`, **Apache 2.0**,
+  usage commercial sans attribution) et **OpenShaders** (`openshaders`, MIT, par l'auteur de React
+  Bits — avec là encore une licence laissée au choix de chaque créateur).
+
+### 7.5 Ce que dit le registre des licences
+
+Sur 35 plateformes, **9 relèvent d'un régime fermé ou restrictif** — et ce sont souvent les plus
+visibles. Trois mécanismes de présentation trompeuse sont documentés : le titre de licence qui
+rassure (« MIT + Commons Clause »), l'agrégateur qui répète sans vérifier (Aceternity annoncé MIT
+par une dizaine d'annuaires), et le dépôt public sans licence (GeoGebra, `sadeepas`).
+
+**Résultat structurant :** une seule plateforme du secteur est à la fois ouverte, massive et sans
+restriction de redistribution — **shadcn/ui (MIT)**, d'où vient la mécanique de registre que toutes
+les autres imitent. **La couche infrastructurelle est libre ; la couche catalogue ne l'est pas.**
+
 ### 7.2 Le courant « IA + maths » sort de la vidéo
 
 Sept projets de génération mathématique par IA ont été relevés. **Tous produisent une vidéo
@@ -158,10 +187,11 @@ dépendance**.
 
 | # | Recommandation | Impact | Urgence | Coût | Risque | Dépendance |
 |---|---|---|---|---|---|---|
-| **R1** | Compléter la collecte : **Shaders** (`shaders.com`, MIT annoncé — candidat prioritaire), GLSL Sandbox, et **lire le fichier de licence de CoCalc** | **élevé** | **haute** | faible | faible | aucune |
+| **R1** | Lever les **quatre points ouverts du registre des licences** (§7.4) : confirmation écrite de Shader Effects, qualification de la « configuration exportable » face à la clause React Bits, portée de la co-propriété GeoGebra, procédure d'approbation Wolfram | **élevé** | **haute** | faible | **moyen** | aucune |
 | **R2** | Rédiger la fiche licence de React Bits en priorité, et qualifier le périmètre exact de la clause Commons Clause vis-à-vis d'une « configuration exportable » par composant | **élevé** | **haute** | faible | **moyen** (lecture juridique) | aucune |
 | **R3** | Instruire explicitement la question de la demande (§8.2) avant de conclure à une place libre | **élevé** | moyenne | moyen | faible | R1 |
-| **R6** | **Registre des licences** (livrable 5) : consolider les 10 fiches en un tableau opposable, avec la qualification juridique des trois points ouverts (configuration exportable vs clause React Bits ; co-propriété GeoGebra ; brèche Wolfram) | **élevé** | **haute** | faible | **moyen** | R1 |
+| **R6** | ~~Registre des licences~~ — **fait** (livrable 5) | — | — | — | — | — |
+| **R7** | Vérifier **Paper Shaders** (Apache 2.0) et **OpenShaders** (MIT) : deux candidats libres apparus en cours de collecte, non encore étudiés en détail | **élevé** | moyenne | faible | faible | aucune |
 | **R4** | Vérifier les homonymes `MathVerse` : ils occupent le nom et le sujet | moyen | moyenne | faible | faible | aucune |
 | **R5** | Traiter séparément les deux licences copyleft faible relevées (p5.js LGPL-2.1, JSXGraph LGPL-3.0) dans le registre des licences | moyen | basse | faible | faible | R1 |
 
