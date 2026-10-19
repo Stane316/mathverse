@@ -1,10 +1,9 @@
 # A9 — PLAN DE LA PHASE 2 : ÉTUDE D'ÉCOSYSTÈME ET DE CONCURRENCE
 
 **Date d'ouverture :** 2026-10-19
-**Statut :** phase **ouverte**, collecte **complète** (35 plateformes, 11 fiches). **Livrables 3 et
-5 établis** : `annexes/A9-comparaison-transversale.md` et `annexes/A9-registre-des-licences.md`.
-Reste le **livrable 4** (synthèse des différenciateurs), et quatre points ouverts nécessitant une
-qualification juridique (§7.4).
+**Statut :** collecte **complète** (35 plateformes, 11 fiches). **Les cinq livrables sont établis.**
+Reste quatre points ouverts nécessitant une qualification juridique (§7.4), et **deux actions
+requises du porteur** (§9.1) : la licence du corpus source, et l'arbitrage de marché.
 **Décision préalable :** le chantier de restauration a été clos sur un périmètre réduit par le
 porteur le 2026-10-19 — voir `../restauration/CLOTURE-CHANTIER.md`. Cette clôture lève la règle
 du 2026-10-18 qui subordonnait l'ouverture de la phase 2 à l'achèvement du chantier.
@@ -85,7 +84,9 @@ personnalisation · 7. stratégie documentaire · 8. modèle de contribution ·
 3. **Comparaison transversale** — **établie** : `annexes/A9-comparaison-transversale.md`.
    18 attributs × 27 plateformes, plus la question des quatre attributs et la synthèse par
    attribut
-4. **Synthèse des différenciateurs** — ce que Mathemirum peut revendiquer — **non commencée**
+4. **Synthèse des différenciateurs** — **établie** : `annexes/A9-synthese-differenciateurs.md`.
+   Sept différenciateurs retenus (avec preuve et coût), **neuf revendications écartées** parce que
+   déjà occupées, et le risque central énoncé
 5. **Registre des licences** — **établi** : `annexes/A9-registre-des-licences.md`. 35 plateformes
    classées selon quatre statuts (base / dépendance / référence / interdit), avec quatre points
    ouverts à qualifier. C'est le livrable qui alimentera la décision de licence, reportée par le
@@ -189,6 +190,24 @@ manque ; Math-To-Manim a l'explication, les prompts et la CLI — il lui manque 
 documenter les équations et les limites d'un composant coûte cher. Que personne ne le fasse peut
 signifier une opportunité — ou un marché qui ne le valorise pas. Question non instruite (R3).
 
+### 7.7 Ce que dit la synthèse des différenciateurs
+
+Sept différenciateurs retenus, chacun adossé à une case vide documentée : les équations et
+hypothèses par composant (D1) ; le classement tripartite assumé (D2) ; les limites connues publiées
+(D3) ; les performances mesurées avec méthode (D4) ; la clarté de licence (D5) ; le registre à
+champs étendus (D6) ; la boucle prompt → composant → test (D7).
+
+**Neuf revendications ont été écartées**, et c'est aussi instructif : le nombre de composants, la
+beauté visuelle, le WebGPU, le caractère open source, la CLI, l'intégration aux agents IA, le
+multi-framework, l'éditeur visuel, la profondeur mathématique de l'outil. **Toutes sont occupées
+par des acteurs mieux dotés.** Sur toute la couche technique et distributive, Mathemirum arriverait
+après les autres.
+
+⚠️ **Le risque central est énoncé sans détour dans le livrable :** les sept différenciateurs retenus
+sont **tous des centres de coût**, et aucun des 27 acteurs étudiés ne les engage. Soit personne n'a
+voulu payer, soit le marché ne les valorise pas. **Ces deux hypothèses ne sont pas départagées par
+cette phase.**
+
 ## 8. Hypothèses — à confirmer, non à tenir pour acquises
 
 ⚠️ **Ce qui suit est une hypothèse.** Elle ne sera étayée qu'après les fiches détaillées et
@@ -220,6 +239,23 @@ dépendance**.
 | **R7** | Vérifier **Paper Shaders** (Apache 2.0) et **OpenShaders** (MIT) : deux candidats libres apparus en cours de collecte, non encore étudiés en détail | **élevé** | moyenne | faible | faible | aucune |
 | **R4** | Vérifier les homonymes `MathVerse` : ils occupent le nom et le sujet | moyen | moyenne | faible | faible | aucune |
 | **R5** | Traiter séparément les deux licences copyleft faible relevées (p5.js LGPL-2.1, JSXGraph LGPL-3.0) dans le registre des licences | moyen | basse | faible | faible | R1 |
+
+## 9. Deux actions requises du porteur
+
+### 9.1 Clarifier la licence du corpus source
+
+⚠️ Le dépôt de connaissances `Stane316/my-own-connaissance`, d'où proviennent les équations et les
+773 restaurations appliquées, est **public sans fichier LICENSE** (constat de phase 0). Publier un
+composant Mathemirum dont l'explication mathématique en dérive, sans clarifier ce régime,
+**reproduirait exactement le défaut critique chez GeoGebra et `sadeepas`**. → **Votre décision.**
+
+### 9.2 Arbitrer la question du marché
+
+La recommandation R3 devient la dépendance la plus importante de la phase 2 : les différenciateurs
+sont tous des centres de coût, et il faut savoir s'ils sont demandés avant d'y investir.
+**Deux voies :** instruire l'étude de demande, ou décider explicitement que le projet poursuit une
+exigence de rigueur et non une audience — auquel cas la question du marché devient secondaire,
+**mais il faut le dire**.
 
 ## 10. Prochaine étape
 
