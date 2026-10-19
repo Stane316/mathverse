@@ -111,7 +111,7 @@ que les blocs eux-mêmes.**
 | 1357 | Précision mixte | « améliorer le compromis : … » |
 | 1763 | Critère de qualité | « évaluer une méthode selon : … » — liste dont on ignore la longueur. |
 | 1863, 1867, 1871 | Moteur de créativité | Trois blocs enchaînés (principe / exemple / autre exemple), tous détruits. **Aucun des trois ne contraint les autres.** |
-| **1805, 1813, 1821, 1829, 1837, 1845, 1853** | **L + K, L + J, L + I, L + C, L + G, L + D, L + E/F** | Voir §5 — cas à part. |
+| **1805, 1813, 1821, 1829, 1837, 1845, 1853** | **L + K, L + J, L + I, L + C, L + G, L + D, L + E/F** | **Jamais soumis** — ces 7 blocs ne figurent dans **aucun lot**. Voir §5. |
 
 ---
 
@@ -231,6 +231,7 @@ livrée comme un lot 5d correctif.
 | | L | N | Total |
 |---|---:|---:|---:|
 | Blocs vides restants | 32 | 34 | **66** |
+| — dont jamais soumis | 7 | 1 | **8** |
 | Candidats argumentés | 8 | 12 | **20** |
 | — dont confiance haute | 2 | 3 | **5** |
 | — dont confiance moyenne-haute | 1 | 3 | **4** |
