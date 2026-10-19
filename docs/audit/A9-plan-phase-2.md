@@ -281,10 +281,37 @@ question vers l'aptitude à l'IA et la documentation plutôt que vers la preuve 
 
 ## 10. Prochaine étape
 
-Compléter la collecte (R1) puis rédiger les premières fiches selon les 16 champs, en commençant
-par les trois plateformes dont la licence ou la mécanique sont structurantes pour Mathemirum :
-**React Bits** (licence), **shadcn/ui** (mécanique de registre), **Math-To-Manim** (le plus
-proche du couplage prompt + CLI + maths, malgré la sortie vidéo).
+⚠️ **Cette section a été périmée puis réécrite le 2026-10-19.** Elle annonçait encore la rédaction
+des fiches React Bits / shadcn/ui / Math-To-Manim, toutes livrées depuis.
+
+État réel : les cinq livrables sont établis, l'étude de demande est engagée. **Ce qui reste est
+bloqué sur des décisions, pas sur du travail :**
+
+1. **Réviser la synthèse des différenciateurs** à la lumière de `A10-etude-de-demande.md` — les
+   sept différenciateurs y sont présentés comme des atouts, alors que leur demande n'est établie
+   que pour trois d'entre eux (documentation, IA, mesure). **C'est le préalable à toute clôture.**
+2. **Clôturer la phase 2** par un rapport de fin de phase au format des 16 points (§16 du cahier
+   des charges), qui consolidera les cinq livrables, les quatre points ouverts et les suites.
+3. **Lever les quatre points ouverts** du registre des licences (§7.4).
+4. **Décider du sort de la phase 1** — elle n'est ni achevée ni formellement suspendue (§10.1).
+
+### 10.1 ⚠️ Une incohérence à résoudre : la phase 1 n'est ni achevée ni suspendue
+
+Les critères de validation de la phase 1 (A6 §6) **ne sont pas remplis** : 5 fiches sur 21
+domaines, l'index n'existe pas, le registre des équations à réécrire n'est pas consolidé, les 8
+documents de littératie ne sont pas traités. Pourtant `A8` porte toujours la mention
+« Phase 1 — audit documentaire (**en cours**) », et nous travaillons en phase 2.
+
+La décision du porteur du 2026-10-19 a réduit le périmètre du **chantier de restauration**, mais
+elle n'a rien statué sur le reste de la phase 1. **Trois voies, non tranchées :**
+
+- **(a)** suspendre formellement la phase 1 et le consigner, en listant ce qui reste ;
+- **(b)** la reprendre maintenant : 24 fiches, 15 documents à instruire dans l'ordre A → U, plus
+  les 8 de littératie ;
+- **(c)** la réduire à ce qui alimente directement la phase 3 (l'index et le registre des
+  équations), et reporter les fiches.
+
+**Tant que ce point n'est pas tranché, l'avancement affiché par les documents est faux.** 
 
 ---
 
