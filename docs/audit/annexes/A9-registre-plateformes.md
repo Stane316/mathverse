@@ -3,8 +3,10 @@
 **Date de collecte :** 2026-10-19 (complétée le même jour)
 **Mode d'accès :** API publique GitHub (`api.github.com`, non authentifiée, données publiques) et
 recherche web générale. Aucun contournement d'accès, aucune extraction de contenu privé.
-**Statut :** **24 plateformes vérifiées** sur les ~25 du périmètre prévu. **Trois fiches détaillées
-rédigées :** `../fiches-phase-2/F01-react-bits.md`, `F02-shadcn-ui.md`, `F03-math-to-manim.md`.
+**Statut :** **31 plateformes vérifiées** sur les ~32 du périmètre prévu. **Dix fiches détaillées
+rédigées** dans `../fiches-phase-2/` : F01 React Bits, F02 shadcn/ui, F03 Math-To-Manim,
+**F04 Aceternity UI, F05 Uiverse, F06 Desmos, F07 GeoGebra, F08 Shadertoy, F09 Wolfram et CoCalc,
+F10 MathVerse (sadeepas)**.
 
 > ⚠️ **Ce registre est un relevé de faits observables, pas une évaluation.** Les colonnes
 > « étoiles » et « dernière activité » datent du 2026-10-19 et bougeront. Les licences sont
@@ -176,6 +178,46 @@ IA + maths est **massivement ouvert** — et **massivement orienté vers la vid�
 
 Conséquence pour Mathemirum : il existe **deux** chaînes d'outils, et la compatibilité se joue au
 niveau du **format d'article de registre**, pas de l'outil.
+
+---
+
+## 4 ter. Deuxième vague de collecte (2026-10-19)
+
+Sept plateformes étudiées en profondeur. **Le constat dominant est juridique.**
+
+| Plateforme | Régime | Réutilisable comme base ? | Fiche |
+|---|---|---|---|
+| **Aceternity UI** | licence **propriétaire** (redistribution interdite) | ❌ **non** | F04 |
+| **Uiverse** | **MIT** sur le dépôt miroir, inactif depuis 2 ans | ⚠️ à vérifier élément par élément | F05 |
+| **Desmos** | service fermé ; gratuit = **non commercial** | ❌ **non** | F06 |
+| **GeoGebra** | **4 régimes** : EUPL (code), non commercial (services), CC BY-NC-SA (ressources) | ❌ **non** | F07 |
+| **Shadertoy** | **CC BY-NC-SA 3.0 par défaut** (non commercial + viral) | ❌ **non** | F08 |
+| **Wolfram** | **propriétaire** ; gratuit = pré-production | ❌ **non** | F09 |
+| **CoCalc** | licence **non identifiée** (`NOASSERTION`) | ⚠️ non vérifié | F09 |
+| **MathVerse (sadeepas)** | **aucune licence** = tous droits réservés | ❌ **non** | F10 |
+
+### Les trois découvertes les plus contraignantes
+
+1. **Shadertoy — le corpus de référence est fermé.** La licence par défaut est
+   **CC BY-NC-SA 3.0** : non commerciale *et* à partage à l'identique. La plupart des auteurs ne
+   déclarent rien, donc **l'absence d'en-tête vaut interdiction, pas autorisation**. C'est la plus
+   grosse contrainte de cette phase pour un projet de composants visuels.
+2. **GeoGebra — une clause de co-propriété des productions.** « Materials generated using GeoGebra
+   are […] under the copyright of **both GeoGebra** and the party who generated the materials. »
+   Une figure produite avec GeoGebra est co-détenue et son usage commercial restreint.
+3. **Aceternity UI — le « MIT » répandu est faux.** De nombreux annuaires l'annoncent MIT ; la page
+   de licence officielle décrit une licence propre interdisant **la redistribution du code, même
+   modifié**. Leçons : la source de vérité est la page de l'éditeur, jamais un agrégateur.
+
+### Contrepartie positive
+
+**Shaders** (`shaders.com`) déclare son moteur et ses composants **sous licence MIT**, avec export
+de code et usage commercial gratuit. ⚠️ **Non encore étudiée au-delà de sa page de conditions** —
+candidate prioritaire pour la suite.
+
+**Wolfram** autorise explicitement les « **open-source projects approved by Wolfram** » dans les
+usages de la Wolfram Engine gratuite. Une brèche existe, soumise à approbation — critères non
+vérifiés.
 
 ---
 
