@@ -2,8 +2,9 @@
 
 **Date d'ouverture :** 2026-10-19
 **Statut :** collecte **complète** (35 plateformes, 11 fiches). **Les cinq livrables sont établis.**
-Reste quatre points ouverts nécessitant une qualification juridique (§7.4), et **deux actions
-requises du porteur** (§9.1) : la licence du corpus source, et l'arbitrage de marché.
+L'étude de demande (R3) est **engagée** — `A10-etude-de-demande.md`. La licence du corpus source
+fait l'objet d'une **proposition soumise** — `../decisions/0002-licence-du-corpus-source.md`.
+Reste quatre points ouverts nécessitant une qualification juridique (§7.4).
 **Décision préalable :** le chantier de restauration a été clos sur un périmètre réduit par le
 porteur le 2026-10-19 — voir `../restauration/CLOTURE-CHANTIER.md`. Cette clôture lève la règle
 du 2026-10-18 qui subordonnait l'ouverture de la phase 2 à l'achèvement du chantier.
@@ -208,6 +209,29 @@ sont **tous des centres de coût**, et aucun des 27 acteurs étudiés ne les eng
 voulu payer, soit le marché ne les valorise pas. **Ces deux hypothèses ne sont pas départagées par
 cette phase.**
 
+### 7.8 Ce que dit l'étude de demande (R3)
+
+⚠️ **Le résultat n'est pas celui qu'on espérait, et il est rapporté tel quel.**
+
+- ✅ **La documentation est le premier critère de choix** d'un paquet, mesuré à **93 % d'accord**
+  dans une étude universitaire sur la sélection de paquets npm.
+- ✅ **« L'aptitude à l'IA » est un critère apparu en 2026** : serveur MCP, `llms.txt`,
+  documentation lisible par un assistant.
+- ✅ **La douleur n°1 des développeurs de shaders est le débogage et le profilage**, pas le manque
+  d'effets (enquête Khronos 2026, 400+ répondants : 53 % en top 3 ; 64 % adaptent des shaders entre
+  plateformes).
+- ❌ **Mais aucun des ~20 guides de choix de bibliothèques de composants consultés ne mentionne
+  l'explication mathématique, les équations, les hypothèses ou le domaine de validité.** Pas un seul.
+
+**La demande pour la couche de preuve est donc adjacente et indirecte, pas directe.** Elle existe
+dans le discours et dans des critères voisins, pas comme critère de choix formulé.
+
+**Le levier le plus solide n'est pas la preuve pour elle-même, mais la preuve rendue lisible par une
+machine** : c'est là qu'elle rencontre un critère de choix observé en 2026. Recommandation R3.2.
+
+⚠️ L'étude est une **première passe** : trois requêtes, sources majoritairement secondaires, aucun
+volume de recherche mesuré, aucune disposition à payer évaluée.
+
 ## 8. Hypothèses — à confirmer, non à tenir pour acquises
 
 ⚠️ **Ce qui suit est une hypothèse.** Elle ne sera étayée qu'après les fiches détaillées et
@@ -234,7 +258,7 @@ dépendance**.
 |---|---|---|---|---|---|---|
 | **R1** | Lever les **quatre points ouverts du registre des licences** (§7.4) : confirmation écrite de Shader Effects, qualification de la « configuration exportable » face à la clause React Bits, portée de la co-propriété GeoGebra, procédure d'approbation Wolfram | **élevé** | **haute** | faible | **moyen** | aucune |
 | **R2** | Rédiger la fiche licence de React Bits en priorité, et qualifier le périmètre exact de la clause Commons Clause vis-à-vis d'une « configuration exportable » par composant | **élevé** | **haute** | faible | **moyen** (lecture juridique) | aucune |
-| **R3** | Instruire explicitement la question de la demande (§8.2) avant de conclure à une place libre | **élevé** | moyenne | moyen | faible | R1 |
+| **R3** | ~~Instruire la question de la demande~~ — **engagée le 2026-10-19** sur décision du porteur. Première passe livrée : `A10-etude-de-demande.md`. **Résultat nuancé** : documentation et IA sont des critères mesurés, l'explication mathématique n'apparaît dans aucun guide de choix. Voir §7.8 | — | — | — | — | — |
 | **R6** | ~~Registre des licences~~ — **fait** (livrable 5) | — | — | — | — | — |
 | **R7** | Vérifier **Paper Shaders** (Apache 2.0) et **OpenShaders** (MIT) : deux candidats libres apparus en cours de collecte, non encore étudiés en détail | **élevé** | moyenne | faible | faible | aucune |
 | **R4** | Vérifier les homonymes `MathVerse` : ils occupent le nom et le sujet | moyen | moyenne | faible | faible | aucune |
@@ -249,13 +273,11 @@ dépendance**.
 composant Mathemirum dont l'explication mathématique en dérive, sans clarifier ce régime,
 **reproduirait exactement le défaut critique chez GeoGebra et `sadeepas`**. → **Votre décision.**
 
-### 9.2 Arbitrer la question du marché
+### 9.2 Arbitrer la question du marché — **décidé le 2026-10-19**
 
-La recommandation R3 devient la dépendance la plus importante de la phase 2 : les différenciateurs
-sont tous des centres de coût, et il faut savoir s'ils sont demandés avant d'y investir.
-**Deux voies :** instruire l'étude de demande, ou décider explicitement que le projet poursuit une
-exigence de rigueur et non une audience — auquel cas la question du marché devient secondaire,
-**mais il faut le dire**.
+Le porteur a choisi **d'instruire l'étude de demande (R3)**. Elle est engagée : `A10-etude-de-demande.md`.
+Ses résultats (§7.8) sont nuancés et **ne valident pas la thèse sans réserve** : ils déplacent la
+question vers l'aptitude à l'IA et la documentation plutôt que vers la preuve mathématique en soi.
 
 ## 10. Prochaine étape
 
