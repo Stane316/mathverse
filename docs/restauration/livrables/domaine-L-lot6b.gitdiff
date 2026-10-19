@@ -1,0 +1,95 @@
+diff --git "a/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md" "b/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md"
+index 0693d08..053a4e2 100644
+--- "a/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md"	
++++ "b/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md"	
+@@ -52,7 +52,7 @@ Il doit identifier :
+ 
+ Le système ne doit donc jamais considérer :
+ 
+-\[ \]
++\[ \text{un résultat sans son erreur} \]
+ 
+ sans analyser les conditions du calcul.
+ 
+@@ -348,7 +348,7 @@ Un problème est bien conditionné lorsque de petites perturbations des données
+ 
+ Il est mal conditionné lorsque :
+ 
+-\[ . \]
++\[ \text{de petites perturbations provoquent de grandes variations}. \]
+ 
+ L’analyse numérique doit donc toujours distinguer :
+ 
+@@ -718,7 +718,7 @@ Une interpolation polynomiale de haut degré sur des points mal choisis peut pr
+ 
+ Cela montre que :
+ 
+-\[ . \]
++\[ \text{augmenter le degré ne garantit pas une meilleure approximation}. \]
+ 
+ # 36\. SPLINES
+ 
+@@ -1012,7 +1012,7 @@ L’une de ses grandes forces est sa capacité à traiter des intégrales ou pro
+ 
+ Dans certaines situations :
+ 
+-\[ \]
++\[ \text{la dimension } d \text{ est grande} \]
+ 
+ rend les méthodes déterministes classiques très coûteuses, tandis que Monte-Carlo reste exploitable.
+ 
+@@ -1143,7 +1143,7 @@ Un programme peut construire cette chaîne de dérivations automatiquement.
+ 
+ C’est l’un des ponts fondamentaux entre :
+ 
+-\[ . \]
++\[ \text{les mathématiques et l'informatique}. \]
+ 
+ # 70\. MÉTHODES ITÉRATIVES : STRUCTURE GÉNÉRALE
+ 
+@@ -1188,11 +1188,11 @@ Elles sont extrêmement puissantes pour certains problèmes issus des EDP.
+ 
+ Idée :
+ 
+-\[ \]
++\[ \text{basses fréquences} \]
+ 
+ peuvent devenir :
+ 
+-\[ . \]
++\[ \text{hautes fréquences}. \]
+ 
+ # 74\. ANALYSE DE L’ERREUR
+ 
+@@ -1271,11 +1271,11 @@ Il faut étudier comment le résultat varie lorsque les entrées changent.
+ 
+ On peut examiner :
+ 
+-\[ . \]
++\[ \text{analytiquement}. \]
+ 
+ ou expérimentalement :
+ 
+-\[ . \]
++\[ \text{en variant les entrées}. \]
+ 
+ Cette analyse permet de détecter les paramètres critiques.
+ 
+@@ -1354,7 +1354,7 @@ Par exemple :
+ 
+ La précision mixte permet parfois d’améliorer le compromis :
+ 
+-\[ . \]
++\[ \text{vitesse} / \text{précision}. \]
+ 
+ Elle est particulièrement importante dans :
+ 
+@@ -1760,7 +1760,7 @@ Ne jamais :
+ 
+ On peut évaluer une méthode selon :
+ 
+-\[ \]
++\[ \text{précision, coût, stabilité, robustesse} \]
+ 
+ Il n’existe généralement pas de méthode universellement optimale.
+ 

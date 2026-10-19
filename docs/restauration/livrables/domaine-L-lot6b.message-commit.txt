@@ -1,0 +1,27 @@
+restauration(equations): lot 6b — domaine L, 11 candidats argumentes
+
+Onze blocs : 3 moyenne-haute, 8 moyenne.
+
+Les mieux etayes :
+  l.  351  le conditionnement, par symetrie avec la phrase precedente
+           (« bien conditionne lorsque de petites perturbations
+           provoquent de petites variations ») — la forme est presque
+           entierement contrainte.
+  l. 1191 et 1195  la multigrille : le principe canonique est qu'une
+           erreur basse frequence sur une grille fine devient haute
+           frequence sur une grille grossiere. Les deux blocs forment
+           une paire.
+  l.   55  le principe directeur qui suit (« un resultat n'a de sens
+           qu'avec son erreur ») designe le complement a ecrire.
+
+Sept des blocs de ce lot portaient le residu « \[ . \] ». Le point
+ayant survecu, le bloc d'origine se terminait par un point : il est
+conserve dans les sept reconstructions. Regle etablie au lot 6a,
+appliquee ici systematiquement.
+
+Treize blocs de L restent en inconnue, dont les sept blocs-listes
+« L + X » — aucun gabarit n'existe dans les 29 documents — et le couple
+d'ouverture « tension entre X et Y », dont les deux termes ont disparu.
+
+Reserve : reconstruction, pas recuperation. Huit des onze blocs sont de
+confiance moyenne.

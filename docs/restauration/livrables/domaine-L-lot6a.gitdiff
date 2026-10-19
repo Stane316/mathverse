@@ -1,0 +1,70 @@
+diff --git "a/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md" "b/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md"
+index e19a6ae..0693d08 100644
+--- "a/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md"	
++++ "b/Maths-vers-Informatiques/DOCUMENT L \342\200\224 ANALYSE NUM\303\211RIQUE.md"	
+@@ -143,7 +143,7 @@ mais L pose la question :
+ 
+ Sur papier, on peut écrire :
+ 
+-\[ \]
++\[ x \]
+ 
+ exactement.
+ 
+@@ -155,7 +155,7 @@ Il stocke une approximation :
+ 
+ Cette différence est fondamentale.
+ 
+-\[ \]
++\[ x\neq\hat{x} \]
+ 
+ dans la plupart des cas.
+ 
+@@ -878,17 +878,17 @@ Réduire (h) n’améliore pas toujours le résultat.
+ 
+ En diminuant (h) :
+ 
+-\[ \]
++\[ e_{\text{disc}}\downarrow \]
+ 
+ mais :
+ 
+-\[ \]
++\[ e_{\text{arr}}\uparrow \]
+ 
+ et les erreurs d’arrondi peuvent devenir dominantes.
+ 
+ On peut donc avoir une courbe d’erreur en forme de compromis :
+ 
+-\[ \]
++\[ e(h)\approx C_1h^{p}+\frac{C_2\varepsilon}{h^{q}} \]
+ 
+ approximativement.
+ 
+@@ -2096,7 +2096,7 @@ Visualiser l’erreur.
+ 
+ Estimer :
+ 
+-\[ \]
++\[ \pi \]
+ 
+ par échantillonnage aléatoire.
+ 
+@@ -2272,7 +2272,7 @@ Je dois savoir :
+ 
+ ## Avec le domaine I — Calcul différentiel
+ 
+-\[ \]
++\[ f'(x) \]
+ 
+ ## Avec le domaine J — Optimisation
+ 
+@@ -2292,7 +2292,7 @@ Je dois savoir :
+ 
+ ## Avec le domaine H — Statistiques
+ 
+-\[ . \]
++\[ \hat{\theta}. \]
+ 
+ # 118\. SYNTHÈSE FINALE
+ 

@@ -1,0 +1,29 @@
+restauration(equations): lot 6a — domaine L, 8 candidats valides
+
+Huit blocs, sur les vingt candidats soumis le 2026-10-19 et valides par
+l'auteur :
+
+  l.  146  \[ x \]                              haute
+  l.  158  \[ x\neq\hat{x} \]                   moyenne
+  l.  881  \[ e_{\text{disc}}\downarrow \]      moyenne
+  l.  885  \[ e_{\text{arr}}\uparrow \]         moyenne
+  l.  891  \[ e(h)\approx C_1h^p+C_2 eps/h^q \] moyenne
+  l. 2099  \[ \pi \]                            haute
+  l. 2275  \[ f'(x) \]                          moyenne-haute
+  l. 2295  \[ \hat{\theta}. \]                  moyenne
+
+Le bloc l. 2295 avait pour residu « \[ . \] ». Le point ayant survecu,
+le bloc d'origine se terminait par un point — comme ses voisins E[X]. et
+Ax=b . de la meme serie (§117). Le point est donc conserve dans la
+reconstruction. Ce que le residu conserve renseigne sur ce qui a
+disparu.
+
+Les trois blocs l. 881, 885, 891 forment un ensemble : le compromis
+entre erreur de discretisation et erreur d'arrondi. Ils se lisent comme
+une seule phrase coupee en trois.
+
+A appliquer avec le diff du domaine N issu du meme lot ; l'ordre entre
+les deux documents est indiferent (fichiers distincts).
+
+Reserve : reconstruction, pas recuperation. Chaque bloc porte une
+confiance et une justification.

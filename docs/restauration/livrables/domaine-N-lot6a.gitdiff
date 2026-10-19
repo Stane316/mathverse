@@ -1,0 +1,91 @@
+diff --git "a/Maths-vers-Informatiques/DOCUMENT N \342\200\224 TRANSFORM\303\211ES.md" "b/Maths-vers-Informatiques/DOCUMENT N \342\200\224 TRANSFORM\303\211ES.md"
+index 535d1b5..16e911a 100644
+--- "a/Maths-vers-Informatiques/DOCUMENT N \342\200\224 TRANSFORM\303\211ES.md"	
++++ "b/Maths-vers-Informatiques/DOCUMENT N \342\200\224 TRANSFORM\303\211ES.md"	
+@@ -435,7 +435,7 @@ Si le signal contient des fréquences trop élevées par rapport à (f_s), elles
+ 
+ Ce phénomène est appelé :
+ 
+-\[ \]
++\[ \text{aliasing} \]
+ 
+ Il est particulièrement important en :
+ 
+@@ -728,11 +728,11 @@ L’équation différentielle devient donc une équation algébrique en (Y(s)).
+ 
+ On passe de :
+ 
+-\[ \]
++\[ y(t) \]
+ 
+ à :
+ 
+-\[ \]
++\[ Y(s) \]
+ 
+ puis on effectue la transformée inverse.
+ 
+@@ -764,7 +764,7 @@ Il faut également déterminer les valeurs de (s) pour lesquelles l’intégrale
+ 
+ On parle de :
+ 
+-\[ \]
++\[ \text{domaine de convergence} \]
+ 
+ Elle est particulièrement importante dans l’analyse des systèmes et de leur stabilité.
+ 
+@@ -2164,7 +2164,7 @@ Visualisation Canvas/WebGL
+ 
+ Une donnée sonore peut devenir une expérience visuelle :
+ 
+-\[ \]
++\[ x[n]\to X[k]\to \text{visuel} \]
+ 
+ Exemples :
+ 
+@@ -2592,11 +2592,11 @@ Une transformée peut augmenter temporairement la mémoire nécessaire.
+ 
+ Il faut distinguer :
+ 
+-\[ \]
++\[ \text{mémoire d'entrée} \]
+ 
+ et :
+ 
+-\[ \]
++\[ \text{mémoire de sortie} \]
+ 
+ Une représentation complexe peut nécessiter davantage de mémoire qu’une représentation réelle.
+ 
+@@ -2771,7 +2771,7 @@ On peut alors construire des analogues de Fourier sur les graphes à partir des
+ 
+ Cela mène à la :
+ 
+-\[ \]
++\[ \text{transformée de Fourier sur graphes} \]
+ 
+ avec des applications en :
+ 
+@@ -2905,11 +2905,11 @@ Une anomalie peut être difficile à détecter dans le temps mais évidente dans
+ 
+ Exemple :
+ 
+-\[ \]
++\[ x(t) \]
+ 
+ puis :
+ 
+-\[ \]
++\[ X=T(x) \]
+ 
+ On peut alors construire :
+ 
+@@ -3711,7 +3711,7 @@ Intégrer les transformées dans :
+ 
+ Construire de nouvelles applications à partir du principe :
+ 
+-\[ \]
++\[ \text{changer de représentation} \]
+ 
+ # 174\. CHECKLIST DE MAÎTRISE
+ 
