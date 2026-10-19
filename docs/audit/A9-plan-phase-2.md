@@ -1,9 +1,10 @@
 # A9 — PLAN DE LA PHASE 2 : ÉTUDE D'ÉCOSYSTÈME ET DE CONCURRENCE
 
 **Date d'ouverture :** 2026-10-19
-**Statut :** phase **ouverte**, collecte **complète** (35 plateformes, 11 fiches). **Le livrable 5
-— le registre des licences — est établi** (`annexes/A9-registre-des-licences.md`). Restent trois
-points ouverts nécessitant une qualification juridique (§7.4).
+**Statut :** phase **ouverte**, collecte **complète** (35 plateformes, 11 fiches). **Livrables 3 et
+5 établis** : `annexes/A9-comparaison-transversale.md` et `annexes/A9-registre-des-licences.md`.
+Reste le **livrable 4** (synthèse des différenciateurs), et quatre points ouverts nécessitant une
+qualification juridique (§7.4).
 **Décision préalable :** le chantier de restauration a été clos sur un périmètre réduit par le
 porteur le 2026-10-19 — voir `../restauration/CLOTURE-CHANTIER.md`. Cette clôture lève la règle
 du 2026-10-18 qui subordonnait l'ouverture de la phase 2 à l'achèvement du chantier.
@@ -81,7 +82,9 @@ personnalisation · 7. stratégie documentaire · 8. modèle de contribution ·
    `fiches-phase-2/` : F01 React Bits, F02 shadcn/ui, F03 Math-To-Manim, F04 Aceternity UI,
    F05 Uiverse, F06 Desmos, F07 GeoGebra, F08 Shadertoy, F09 Wolfram et CoCalc,
    F10 MathVerse (sadeepas)
-3. **Comparaison transversale** — tableau croisé attributs × plateformes — **non commencée**
+3. **Comparaison transversale** — **établie** : `annexes/A9-comparaison-transversale.md`.
+   18 attributs × 27 plateformes, plus la question des quatre attributs et la synthèse par
+   attribut
 4. **Synthèse des différenciateurs** — ce que Mathemirum peut revendiquer — **non commencée**
 5. **Registre des licences** — **établi** : `annexes/A9-registre-des-licences.md`. 35 plateformes
    classées selon quatre statuts (base / dépendance / référence / interdit), avec quatre points
@@ -165,6 +168,27 @@ l'écosystème Python/Manim.
 ⚠️ **Il s'agit d'un constat sur 24 plateformes et une requête, pas d'une preuve d'absence.**
 Voir §8.
 
+### 7.6 Ce que révèle la comparaison transversale
+
+La matrice 18 attributs × 27 plateformes fait apparaître un motif net, et il ne concerne pas la
+technique :
+
+- **Tout ce qui relève de la mise à disposition est couvert** — nom, description, catégorie, aperçu,
+  code source, dépendances, installation, exemples d'intégration. C'est acquis partout.
+- **Tout ce qui relève de la preuve est vide** — explication mathématique, équations et hypothèses,
+  mesures de performance, limites connues. **La case « limites connues » est la plus vide de la
+  matrice**, et celle des « équations et hypothèses » est vide **sans une seule exception**.
+
+**Le résultat le plus net porte sur la question des quatre attributs (§1).** Aucune plateforme ne
+réunit composants visuels + explication mathématique + prompts + CLI. **Mais les deux plus proches
+sont complémentaires, et leur complémentaire est la thèse même de Mathemirum :** Shaders a les
+composants, les prompts et la CLI — il lui manque l'explication mathématique, et c'est son seul
+manque ; Math-To-Manim a l'explication, les prompts et la CLI — il lui manque la sortie composant.
+
+⚠️ **Ce constat ne vaut pas preuve d'absence**, et une case vide peut être vide par choix rationnel :
+documenter les équations et les limites d'un composant coûte cher. Que personne ne le fasse peut
+signifier une opportunité — ou un marché qui ne le valorise pas. Question non instruite (R3).
+
 ## 8. Hypothèses — à confirmer, non à tenir pour acquises
 
 ⚠️ **Ce qui suit est une hypothèse.** Elle ne sera étayée qu'après les fiches détaillées et
@@ -173,7 +197,9 @@ plusieurs requêtes indépendantes.
 1. **L'espace se diviserait en deux territoires disjoints** : des bibliothèques de composants
    web sans profondeur mathématique, et des moteurs mathématiques qui sortent de la vidéo.
    L'intersection — composant web portant son explication mathématique, ses équations, ses
-   hypothèses, son prompt et sa CLI — serait libre.
+   hypothèses, son prompt et sa CLI — serait libre. **Précision apportée par la matrice (§7.6) :
+   la ligne de partage ne passe pas entre le visuel et le mathématique, mais entre la mise à
+   disposition et la preuve.**
 2. **Risque attaché à cette hypothèse :** une place peut être libre **pour une raison**. Soit la
    demande est faible, soit la combinaison coûte plus cher à maintenir qu'elle ne rapporte.
    **Cette question n'a pas encore été instruite et conditionne la valeur de la thèse.**
