@@ -225,10 +225,10 @@ toucher aux autres.
 | Ordre | Lot | Pourquoi |
 |---:|---|---|
 | 1 | **K** — 18 défauts signalés, **30 traités** | domaine le plus utile au produit, équations canoniques — **terminé, 0 défaut restant** (lots 1 et 1 bis) |
-| 2 | **L** — analyse numérique | socle des critères de validation ; 61 signalés, **131 au total**, 102 appliqués — blocs vides **57 → 32** — **44 inconnues**, dont **7 blocs jamais soumis** |
-| 3 | **I** — calcul différentiel | 109 signalés, 318 blocs lus — **lots 3a (62), 3b (133) et 3c (9) : 204 restaurations appliquées**, blocs vides **59 → 38** *(chiffre rectifié : 44 → 27 était faux)* — **28 inconnues**, dont **5 blocs jamais soumis** |
-| 4 | **N** — transformées | 104 signalés, **245 blocs display** recensés — **lots 4a (62) et 4b (84) : 146 restaurations appliquées**, défauts détectés 104 → 32, blocs vides 71 → 34 — blocs vides **71 → 34** — **33 inconnues**, dont **1 bloc jamais soumis** |
-| 5 | **J** — optimisation | 166 signalés, **332 blocs display** — **lots 5b (133), 5c (10) et 5a (89) : 232 restaurations appliquées**, défauts détectés 166 → 45, blocs vides 132 → 67 — **66 blocs en attente de l'auteur** — **document entièrement traité** |
+| 2 | **L** — analyse numérique | socle des critères de validation ; 61 signalés, **131 au total**, 110 appliqués — blocs sans contenu **50 → 17** — **44 inconnues** |
+| 3 | **I** — calcul différentiel | 109 signalés, 318 blocs lus — **lots 3a (62), 3b (133) et 3c (9) : 204 restaurations appliquées**, blocs sans contenu **44 → 27** — **28 inconnues** et **4 lacunes** (blocs jamais soumis, §177/§178) |
+| 4 | **N** — transformées | 104 signalés, **245 blocs display** recensés — **lots 4a (62), 4b (84) et 6a (11) : 157 restaurations appliquées**, défauts détectés 104 → 32, blocs sans contenu **64 → 20** — **33 inconnues** |
+| 5 | **J** — optimisation | 166 signalés, **332 blocs display** — **lots 5b (133), 5c (10) et 5a (89) : 232 restaurations appliquées**, défauts détectés 166 → 45, blocs sans contenu 107 → 44 — **66 blocs en attente de l'auteur** — **document entièrement traité** |
 | 6-9 | H, G, M, O, F, Q, P, UI/UX, E/R/S/U, « Ai Technical Litteracy » | voir `PLAN-ACHEVEMENT.md` |
 | 10 | A, B, C, D | restructuration (voie 2) — **chantier distinct, périmètre confirmé dans le périmètre d'achèvement** |
 
@@ -242,32 +242,44 @@ La priorisation suit l'utilité pour le produit, pas l'ordre alphabétique : les
 
 **Les décomptes ci-dessus sont des planchers.** Ils proviennent de l'inventaire automatique. La relecture bloc par bloc du document K a révélé **10 dégradations supplémentaires** invisibles aux heuristiques (55 % de défauts en plus sur ce document). Il faut donc considérer que chaque lot comportera, en plus des défauts signalés, une proportion comparable de défauts découverts à la lecture.
 
-### État de couverture mesuré (2026-10-19)
+### État de couverture mesuré (2026-10-19, révisé le 2026-10-19 après correction)
 
-| Document | Blocs display | Vides avant | Vides après | Inconnues | **Jamais soumis** |
-|---|---:|---:|---:|---:|---:|
-| **K** | 64 | 2 | **0** | 1 | **0** |
-| **L** | 178 | 57 | **32** | 44 | **7** |
-| **I** | 318 | 59 | **38** | 28 | **5** |
-| **N** | 245 | 71 | **34** | 33 | **1** |
-| **J** | 332 | 132 | **67** | 66 | **5** |
-| **Total** | 1 137 | 321 | **171** | 172 | **18** |
+| Document | Blocs display | Sans contenu **avant** | Sans contenu **après** | Restaurations appliquées | Inconnues | **Lacunes** |
+|---|---:|---:|---:|---:|---:|---:|
+| **K** | 64 | 1 | **0** | 40 | 1 | 0 |
+| **L** | 178 | 50 | **17** | 110 | 44 | 0 |
+| **I** | 318 | 44 | **27** | 204 | 28 | **4** |
+| **N** | 245 | 64 | **20** | 157 | 33 | 0 |
+| **J** | 332 | 107 | **44** | 232 | 66 | 0 |
+| **Total** | 1 137 | 266 | **108** | 743 | 172 | **4** |
 
-Trois colonnes distinctes, à ne pas confondre :
+**Définitions — trois grandeurs distinctes, qui ne se recomposent pas entre elles.**
 
-- **Vides** — blocs dont le contenu est vide. C'est ce qu'on voit.
-- **Inconnues** — blocs **soumis** mais non restaurés. Le chiffre peut dépasser celui des
-  blocs vides (L : 44 inconnues pour 32 vides) parce qu'une inconnue peut conserver un
-  résidu : le bloc n'est pas vide, mais il est toujours dégradé.
-- **Jamais soumis** — blocs vides **absents de tous les lots**. Ce n'est pas un reste,
-  c'est une **lacune de couverture** : 18 blocs que personne n'avait regardés. Ils sont
-  maintenant identifiés et listés dans `propositions/domaine-L-N-blocs-restants.md`.
+- **Sans contenu** — bloc dont le contenu est vide, ou réduit au point absorbé (`\[ . \]`).
+  Un bloc tenant un seul caractère (`\[ x \]`, `\[ A \]`) **n'est pas** sans contenu : c'est un
+  bloc court, souvent parfaitement sain.
+- **Inconnues** — blocs **soumis** mais non restaurés. Le chiffre dépasse largement celui des
+  blocs sans contenu (L : 44 inconnues pour 17 blocs sans contenu) parce qu'une inconnue
+  **conserve généralement un résidu** : le bloc n'est pas vide, il est toujours dégradé.
+- **Lacunes** — blocs sans contenu **absents de tous les lots**. Ce n'est pas un reste, c'est
+  une lacune de couverture.
+
+> **Deux erreurs de mesure ont été corrigées, et elles vont dans le même sens.**
+>
+> 1. Un premier décompte comptait comme « vides » tous les blocs de moins de deux caractères.
+>    Il grossissait tout : **44 blocs comptés comme vides tiennent en réalité un seul
+>    caractère**, et 25 d'entre eux sont des blocs parfaitement sains (`\[ x \]`, `\[ A \]`).
+> 2. Le même biais avait fait annoncer **18 lacunes** de couverture. Refaites avec la
+>    définition stricte : **4 lacunes**, toutes dans le domaine I, dans la zone charnière
+>    §177/§178. Le bloc §106 signalé à tort contient `\[ H \]`, qui a survécu.
+>
+> La leçon est générale et déjà payée deux fois : **un test automatique sur la longueur d'un
+> résidu n'est pas une mesure.** Tout chiffre de ce chantier doit être relu contre le fichier.
 
 **Recouvrements entre lots.** Certaines lignes figurent dans deux lots : L 3, I 1, J 10.
-C'est normal et voulu — un lot ultérieur reprend ce qu'un lot antérieur avait laissé en
-inconnue (les 10 de J sont le lot 5c, qui traite ce que 5b avait laissé). Ces doublons
-compliquent la comptabilité et expliquent que la somme des colonnes ne se recompose pas
-exactement ; **seule la mesure directe sur le fichier fait foi**, jamais le calcul.
+C'est voulu — un lot ultérieur reprend ce qu'un lot antérieur avait laissé en inconnue (les
+10 de J sont le lot 5c, qui traite ce que 5b avait laissé). Ces doublons empêchent de
+recomposer les totaux par le calcul : **seule la mesure directe sur le fichier fait foi**.
 
 ## 10. Critères d'acceptation d'un lot
 

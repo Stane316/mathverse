@@ -1,0 +1,154 @@
+[
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2295,
+  "ancien": "\\[ . \\]",
+  "nouveau": "\\[ \\hat{\\theta}. \\]",
+  "confiance": "moyenne",
+  "justification": "« Avec le domaine H — Statistiques ». Les blocs voisins survivants donnent une formule canonique par domaine : J -> min_x f(x), K -> y'=f(t,y), C -> Ax=b, G -> E[X]. H etant l'estimation d'un parametre, et E[X] deja pris par G, l'estimateur theta-chapeau est le candidat le plus distinctif. Alternative credible : barre X. Le residu etant « \\[ . \\] », le point a survecu : le bloc d'origine se terminait donc par un point, comme ses voisins E[X]. et Ax=b . de la meme serie. Le point est conserve."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2275,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ f'(x) \\]",
+  "confiance": "moyenne-haute",
+  "justification": "« Avec le domaine I — Calcul differentiel ». Meme serie, meme raisonnement. La synthese finale du domaine I (§180) ouvre sur f(x) -> f'(x) ; les blocs voisins sont courts (min_x f(x), y'=f(t,y), Ax=b, E[X]), ce qui exclut une forme longue."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 2099,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\pi \\]",
+  "confiance": "haute",
+  "justification": "« Projet 5 — Simulateur Monte-Carlo. Estimer : ... par echantillonnage aleatoire. Puis visualiser la convergence. » L'estimation de pi par tirage est l'exercice canonique du genre, et la convergence visuelle n'a de sens que vers une constante connue."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 891,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ e(h)\\approx C_1h^{p}+\\frac{C_2\\varepsilon}{h^{q}} \\]",
+  "confiance": "moyenne",
+  "justification": "« courbe d'erreur en forme de compromis : ... approximativement ». Forme classique : troncature decroissante en h^p plus arrondi croissant en eps/h^q. Les exposants sont un choix de convention."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 885,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ e_{\\text{arr}}\\uparrow \\]",
+  "confiance": "moyenne",
+  "justification": "Le « mais : » de la phrase, avant « et les erreurs d'arrondi peuvent devenir dominantes ». Symetrique du bloc precedent."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 881,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ e_{\\text{disc}}\\downarrow \\]",
+  "confiance": "moyenne",
+  "justification": "« En diminuant (h) : ... mais : ... ». Le premier terme du compromis est l'erreur de discretisation, qui decroit avec h."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 158,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ x\\neq\\hat{x} \\]",
+  "confiance": "moyenne",
+  "justification": "« Cette difference est fondamentale. ... dans la plupart des cas. » Le mot « difference » et l'opposition x / x-hat etablie aux lignes 146 et 154 contraignent la forme ; le symbole exact reste un choix."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT L — ANALYSE NUMÉRIQUE.md",
+  "ligne": 146,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ x \\]",
+  "confiance": "haute",
+  "justification": "« Sur papier, on peut ecrire : x exactement. Un ordinateur ... ne peut generalement pas representer exactement ce nombre. Il stocke une approximation : x-hat. » La paire x / x-hat est explicite dans la phrase."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 3714,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{changer de représentation} \\]",
+  "confiance": "moyenne",
+  "justification": "« Niveau 7 — Creation. Construire de nouvelles applications a partir du principe : ... » Le principe du domaine est enonce au §178 : « changer de representation pour simplifier le probleme »."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2912,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ X=T(x) \\]",
+  "confiance": "moyenne",
+  "justification": "« Une anomalie peut etre difficile a detecter dans le temps mais evidente dans le spectre. Exemple : x(t) puis : X=T(x) ». Le bloc survivant qui suit, s(x)=d(T(x),mu), impose la notation T."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2908,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ x(t) \\]",
+  "confiance": "moyenne",
+  "justification": "Premier terme de la meme paire : le signal temporel avant transformation."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2774,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{transformée de Fourier sur graphes} \\]",
+  "confiance": "moyenne-haute",
+  "justification": "« On peut alors construire des analogues de Fourier sur les graphes a partir des vecteurs propres du Laplacien. Cela mene a la : ... » Le nom de l'objet est decrit dans la phrase qui precede."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2599,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{mémoire de sortie} \\]",
+  "confiance": "moyenne",
+  "justification": "« Il faut distinguer : ... et : ... Une representation complexe peut necessiter davantage de memoire qu'une representation reelle. »"
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2595,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{mémoire d'entrée} \\]",
+  "confiance": "moyenne",
+  "justification": "Premier terme de la meme paire, oppose au second par « et »."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 2167,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ x[n]\\to X[k]\\to \\text{visuel} \\]",
+  "confiance": "moyenne",
+  "justification": "« Une donnee sonore peut devenir une experience visuelle : ... » La chaine est decrite par la phrase ; les maillons exacts restent un choix de notation. Le §109 donne la chaine complete microphone -> FFT -> rendu, qui s'arrete a « Spectre »."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 767,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{domaine de convergence} \\]",
+  "confiance": "moyenne-haute",
+  "justification": "« On parle de : ... » sous le titre de section « DOMAINE DE CONVERGENCE ». Le nom du concept est le titre."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 735,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ Y(s) \\]",
+  "confiance": "haute",
+  "justification": "« L'equation differentielle devient donc une equation algebrique en (Y(s)). On passe de : ... a : ... puis on effectue la transformee inverse. » La cible est nommee textuellement."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 731,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ y(t) \\]",
+  "confiance": "haute",
+  "justification": "Meme phrase. La source est la fonction du domaine temporel ; le couple y(t) / Y(s) est la notation de la section."
+ },
+ {
+  "fichier": "Maths-vers-Informatiques/DOCUMENT N — TRANSFORMÉES.md",
+  "ligne": 438,
+  "ancien": "\\[ \\]",
+  "nouveau": "\\[ \\text{aliasing} \\]",
+  "confiance": "moyenne-haute",
+  "justification": "« Ce phenomene est appele : ... » sous le titre de section « ALIASING ». Le nom du phenomene est le titre."
+ }
+]

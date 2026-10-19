@@ -4,7 +4,9 @@
 **Documents concernés :** `DOCUMENT L — ANALYSE NUMÉRIQUE.md`, `DOCUMENT N — TRANSFORMÉES.md`
 **État :** les deux documents sont **assainis** (L : 102 écritures · N : 146 écritures). Ce
 document traite ce qui **reste**.
-**Statut :** propositions à valider. **Rien n'a été écrit dans les fichiers sources.**
+**Statut :** les 20 candidats ont été **validés et appliqués** (lot 6a, 19 écritures — le
+vingtième était déjà restauré). Les 46 blocs déclarés en inconnue restent **à trancher** ;
+rien n'a été écrit pour eux.
 
 ---
 
@@ -21,6 +23,33 @@ J'avais annoncé « 47 blocs L/N restants ». **Le compte réel est de 66 :**
 Le chiffre 47 ne correspond à aucune mesure ; il provenait d'une note de synthèse erronée.
 Je le signale parce qu'il a servi de base à votre décision de traiter ces blocs maintenant —
 la charge réelle est **40 % plus élevée** que ce que vous avez validé.
+
+**Seconde correction, plus fine.** Ces 66 blocs étaient comptés avec un test « moins de deux
+caractères ». Une partie d'entre eux tiennent en réalité **un seul caractère** :
+
+| | Sans contenu | Point absorbé | Tiret seul (blocs-listes) | Total |
+|---|---:|---:|---:|---:|
+| L | 14 | 11 | 7 | 32 |
+| N | 31 | 0 | — | 34 (dont 3 à un caractère) |
+| **Total** | **45** | **11** | **7** | **66** |
+
+Le travail réel porte donc sur **63 blocs sans contenu** (45 + 11 + 7 tirets), auxquels
+s'ajoutent 3 blocs courts de N qui sont peut-être sains.
+
+### Bilan d'application — lot 6a (2026-10-19)
+
+Les 20 candidats ont été validés. **19 ont été appliqués** (lot 6a) : 8 en L, 11 en N.
+
+**Le vingtième n'a pas été écrit, et c'est une découverte.** Le bloc N l. 1382, proposé comme
+`\[ x \]`, contenait **déjà** `\[ x \]` : il avait été restauré par le lot 4a. Il n'était
+apparu dans la liste des blocs restants que parce qu'une lettre seule tient en un caractère —
+le même biais, une deuxième fois.
+
+Un enseignement en a été tiré et appliqué : **le résidu n'est pas qu'une absence, ce qui
+subsiste renseigne sur ce qui a disparu.** Le bloc L l. 2295 avait pour résidu `\[ . \]`.
+Le point ayant survécu, le bloc d'origine se terminait par un point — comme ses voisins
+`\[ E[X]. \]` et `\[ Ax=b . \]` de la même série. La reconstruction en tient compte :
+`\[ \hat{\theta}. \]`, avec le point.
 
 ### Autres chiffres publiés à corriger
 

@@ -59,6 +59,8 @@ dans A1, A3, A4, A5. Un jeu de repli est conservé si `mathemirum` devait être 
 | `fiches/domaine-L-analyse-numerique.md` | **terminée** | fiche 2 sur 29 — **rédigée sur le document restauré** (102 écritures appliquées) ; ordre d'entrelacement L → I → N → J |
 | `fiches/domaine-D-geometrie-computationnelle.md` | **terminée** | fiche 3 sur 29 — document **non restauré** (chantier A–D) ; révèle un **troisième régime de dégradation** : formules aplaties en texte inline, variables conservées |
 | `fiches/domaine-N-transformees.md` | **terminée** | fiche 4 sur 29 — **rédigée sur le document restauré** (lots 4a + 4b, 146 écritures) ; 3 941 lignes, 180 sections, 245 blocs ; **le plus directement exploitable du corpus** : pipeline web Microphone → Web Audio API → FFT → Canvas/WebGL (§109), mapping de `|X_k|` vers 8 attributs visuels (§111), fenêtrage comme paramètre réglable (§95). `navier` = 0, `CFL` = 0 — la famille 5 reste à sourcer hors corpus |
+| `fiches/domaine-I-calcul-differentiel.md` | **terminée** | fiche 5 sur 29 — **rédigée sur le document restauré** (lots 3a + 3b + 3c, 204 écritures) ; 3 169 lignes, 181 sections, 318 blocs ; **quatre cahiers des charges de composants déjà rédigés** : visualisateur de dérivée (§154), visualisateur de gradient (§155), visualisation de Hessienne (§160), optimisation sous contrainte (§161) ; le gradient comme normale à `F(x,y,z)=0` (§109) fonde les SDF et le raymarching ; théorie des transitions C⁰/C¹/C² (§152-153). `navier` = 0, `CFL` = 0 — la famille 5 reste à sourcer hors corpus |
+| `annexes/decision-grande-carte.md` | **terminée** | la Grande Carte des domaines apparaît **quatre fois** dans le corpus : G et H portent `A:`, I porte `A`. J conserve la forme sans deux-points (voisin immédiat de I, même motif). Aucun lot correctif |
 | Index notion → composant | **non commencé** | prévu par A6 §3.4 |
 
 **Constats A2 (vérifiés, reproductibles par `tools/audit-phase1/extract_structure.py`) :**
@@ -129,10 +131,9 @@ arbres ASCII ; aucune n'est une équation.
 
 ## 7. Lacunes restantes en phase 1
 
-1. **25 fiches sur 29** à produire (**K, L, D, N** existent). Le lot ordonné D → I → L → N est
-   achevé à trois quarts : **reste I** (document déjà restauré — 204 écritures, 3 lots), puis
-   l'ordre se poursuit sur J. I et N étant tous deux assainis, leurs fiches sont rédigeables
-   sans attendre.
+1. **24 fiches sur 29** à produire (**K, L, D, N, I** existent). **Le lot ordonné D → I → L → N
+   est achevé.** Cinq documents sont instruits et restaurés : K, L, I, N, J. Les fiches de I et
+   J sont rédigeables sans attendre, leurs documents étant assainis.
 2. **Index notion → modèle → équation → paramètres → algorithme → moteur → composant → tests** :
    non commencé. C'est le livrable qui rend les fiches exploitables.
 3. **Registre des équations à réécrire** : alimenté par A7, mais pas encore consolidé par domaine.
@@ -143,6 +144,10 @@ arbres ASCII ; aucune n'est une équation.
 7. **Le décompte de 724 défauts est un plancher, pas un total** : sur N, 51 % des blocs
    restaurés n'étaient signalés par aucune heuristique (mesure directe, voir §3 du README
    de restauration).
+8. **Deux erreurs de mesure ont été corrigées dans le chantier** : le test « moins de deux
+   caractères » comptait comme vides des blocs sains tenant un seul caractère (44 cas), et
+   avait fait annoncer 18 lacunes de couverture là où il y en a **4** (toutes en I, §177/§178).
+   Leçon consignée : un test automatique sur la longueur d'un résidu n'est pas une mesure.
 
 ## 8. Obstacles rencontrés
 
@@ -155,9 +160,11 @@ arbres ASCII ; aucune n'est une équation.
 
 ## 9. Prochaines actions
 
-1. Produire la fiche **I** (document restauré) — dernière du lot ordonné validé.
-2. Alimenter l'index au fil des fiches.
-3. Clôturer la phase 1 par un rapport au format des 14 points.
+1. Produire la fiche **J** — son document vient d'être assaini (232 écritures, lots 5b/5c/5a).
+2. Poursuivre l'entrelacement sur **H** (8 documents : H, G, M, O, F, Q, P, UI/UX restent
+   à instruire), en commençant par H puisque sa Grande Carte a fourni un point de comparaison.
+3. Alimenter l'index au fil des fiches.
+4. Clôturer la phase 1 par un rapport au format des 14 points.
 4. Engager la phase 2 (étude d'écosystème) selon la méthode du §10 de `A6`, enrichie des plateformes déjà identifiées.
 5. Soumettre les documents du dossier de référence au fil des phases 2 et 3, avec un statut explicite chacun.
 

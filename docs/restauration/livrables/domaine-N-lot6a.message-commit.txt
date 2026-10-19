@@ -1,0 +1,30 @@
+restauration(equations): lot 6a — domaine N, 11 candidats valides
+
+Onze blocs, sur les vingt candidats soumis le 2026-10-19 et valides par
+l'auteur :
+
+  l.  438  \[ \text{aliasing} \]                        moyenne-haute
+  l.  731  \[ y(t) \]                                    haute
+  l.  735  \[ Y(s) \]                                    haute
+  l.  767  \[ \text{domaine de convergence} \]          moyenne-haute
+  l. 2167  \[ x[n]\to X[k]\to \text{visuel} \]          moyenne
+  l. 2595  \[ \text{mémoire d'entrée} \]                moyenne
+  l. 2599  \[ \text{mémoire de sortie} \]               moyenne
+  l. 2774  \[ \text{transformée de Fourier sur graphes} \] moyenne-haute
+  l. 2908  \[ x(t) \]                                    moyenne
+  l. 2912  \[ X=T(x) \]                                  moyenne
+  l. 3714  \[ \text{changer de représentation} \]       moyenne
+
+Note : le vingtieme candidat, N l. 1382 (propose comme \[ x \]), avait
+deja ete restaure par le lot 4a. Il avait ete compte comme vide
+uniquement parce qu'une lettre seule tient en un caractere. Il n'est
+donc pas reecrit.
+
+Les blocs l. 731 et 735 forment un couple : « on passe de y(t) a Y(s) »,
+les deux termes etant nommes dans la phrase qui les encadre.
+
+A appliquer avec le diff du domaine L issu du meme lot ; l'ordre entre
+les deux documents est indiferent (fichiers distincts).
+
+Reserve : reconstruction, pas recuperation. Chaque bloc porte une
+confiance et une justification.
