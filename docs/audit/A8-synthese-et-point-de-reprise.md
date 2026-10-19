@@ -58,6 +58,7 @@ dans A1, A3, A4, A5. Un jeu de repli est conservé si `mathemirum` devait être 
 | `fiches/domaine-K-…md` | **terminée** | fiche 1 sur 29 |
 | `fiches/domaine-L-analyse-numerique.md` | **terminée** | fiche 2 sur 29 — **rédigée sur le document restauré** (102 écritures appliquées) ; ordre d'entrelacement L → I → N → J |
 | `fiches/domaine-D-geometrie-computationnelle.md` | **terminée** | fiche 3 sur 29 — document **non restauré** (chantier A–D) ; révèle un **troisième régime de dégradation** : formules aplaties en texte inline, variables conservées |
+| `fiches/domaine-N-transformees.md` | **terminée** | fiche 4 sur 29 — **rédigée sur le document restauré** (lots 4a + 4b, 146 écritures) ; 3 941 lignes, 180 sections, 245 blocs ; **le plus directement exploitable du corpus** : pipeline web Microphone → Web Audio API → FFT → Canvas/WebGL (§109), mapping de `|X_k|` vers 8 attributs visuels (§111), fenêtrage comme paramètre réglable (§95). `navier` = 0, `CFL` = 0 — la famille 5 reste à sourcer hors corpus |
 | Index notion → composant | **non commencé** | prévu par A6 §3.4 |
 
 **Constats A2 (vérifiés, reproductibles par `tools/audit-phase1/extract_structure.py`) :**
@@ -128,14 +129,20 @@ arbres ASCII ; aucune n'est une équation.
 
 ## 7. Lacunes restantes en phase 1
 
-1. **28 fiches sur 29** à produire (seule K existe). Le lot ordonné D → I → L → N couvre les
-   quatre domaines les plus directement utiles aux premières familles de composants.
+1. **25 fiches sur 29** à produire (**K, L, D, N** existent). Le lot ordonné D → I → L → N est
+   achevé à trois quarts : **reste I** (document déjà restauré — 204 écritures, 3 lots), puis
+   l'ordre se poursuit sur J. I et N étant tous deux assainis, leurs fiches sont rédigeables
+   sans attendre.
 2. **Index notion → modèle → équation → paramètres → algorithme → moteur → composant → tests** :
    non commencé. C'est le livrable qui rend les fiches exploitables.
 3. **Registre des équations à réécrire** : alimenté par A7, mais pas encore consolidé par domaine.
 4. **Les 8 documents « Ai Technical Litteracy »** (lot 5 du plan A6) : non traités.
 5. **A, B, C, D** : arborescence et équations détruites, méthode à définir (voie 2 confirmée).
-6. **44 blocs du document L** en attente de votre arbitrage, dont 10 candidats déjà soumis.
+6. **Blocs en attente de votre arbitrage** : 33 sur L, 28 sur I, 33 sur N — soit 94 blocs
+   laissés en « contenu perdu » (fallback validé), tous intacts et complétables plus tard.
+7. **Le décompte de 724 défauts est un plancher, pas un total** : sur N, 51 % des blocs
+   restaurés n'étaient signalés par aucune heuristique (mesure directe, voir §3 du README
+   de restauration).
 
 ## 8. Obstacles rencontrés
 
@@ -148,7 +155,7 @@ arbres ASCII ; aucune n'est une équation.
 
 ## 9. Prochaines actions
 
-1. Produire les fiches **D, I, L, N** (lot ordonné, validé).
+1. Produire la fiche **I** (document restauré) — dernière du lot ordonné validé.
 2. Alimenter l'index au fil des fiches.
 3. Clôturer la phase 1 par un rapport au format des 14 points.
 4. Engager la phase 2 (étude d'écosystème) selon la méthode du §10 de `A6`, enrichie des plateformes déjà identifiées.
