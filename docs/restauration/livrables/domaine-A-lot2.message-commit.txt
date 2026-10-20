@@ -1,0 +1,80 @@
+Domaine A — lot 2 applique : predicats (§5), demonstration et inference (§6), induction (§7)
+
+Deuxieme lot applique du chantier A, apres le lot 1 (§2–§4). Douze
+substitutions, dont deux corrections relevees a la relecture du lot applique.
+
+Ce que fait le lot
+  - §5.1 : les quatre exemples de predicats sont dresses en tableau. Trois
+           d'entre eux etaient fragmentes par un decalage d'accent
+           (`tudiant` + `É`, `Sup rieur` + `e ˊ`) ; ils sont recomposes par
+           recollement, methode verifiee sur deux autres sections du document.
+  - §5.2 : l'exemple vide recoit ∀x (Étudiant(x) → Accès(x)). Ce n'est pas
+           une proposition invente : la glose qui suit — « tout etudiant
+           possede la propriete « avoir acces » » — est la traduction
+           litterale de cette formule. Le texte de la source dicte
+           l'appariement.
+  - §5.3 : les deux lois de negation des quantificateurs sont restituees.
+  - §5.4 : le fragment qui trainait en fin de section est retire, recase en
+           §5.2 et §5.3.
+  - §6.1 et §6.2 : sept emplacements vides, sept tokens. La comptabilite
+           exacte leve l'hesitation de la proposition initiale, qui ne
+           visait que le §6.2.
+  - §6.6 : emplacement vide NON CATALOGUE lors de la proposition ; il recoit
+           `P ∨ ¬P`, le principe du tiers exclu que la section annonce sans
+           en donner la forme.
+  - §6.7 : la colonne « Forme » du tableau des regles d'inference etait
+           systematiquement vide et les en-tetes prives de leur connecteur ;
+           les six regles sont pourvues.
+  - §7.1 : les trois temps de l'induction (initialisation, heredite,
+           conclusion) recoivent leurs formules.
+
+Deux corrections apportees apres la premiere application
+
+  1. A2-14b — DEFAUT D'APPLICATION. L'insertion du tableau du §6.7 avait
+     coupe la phrase finale en deux, la note « Fragments non rattaches »
+     se retrouvant intercalee au milieu d'un membre de phrase. La phrase
+     est resoudee. Surtout, le symbole ⊨ que j'avais laisse orphelin au
+     §7.2 n'etait PAS orphelin : sa destination etait le second membre de
+     cette phrase, « ⊨ indique une consequence semantique ». ⊢ et ⊨ sont
+     toujours definis ensemble ; la destination est certaine, pas choisie.
+  2. A2-13c — consequence de la precedente : ⊨ est recase au §6.7, la
+     mention d'orphelin au §7.2 est retiree. Aucun token perdu : il est
+     reloge.
+
+Regle de non-perte, appliquee
+  Un fragment n'est retire que si chacun de ses tokens est recase. Les
+  quinze tokens deplaces ont ete suivis un a un et retrouves a leur
+  nouvelle demeure. Les trois tokens sans destination etablie
+  (`∀x, P(x)` · `a` · `¬P(a)`) sont CONSERVES dans le document, signales
+  par une note « Fragments non rattaches ». Aucun n'a ete supprime ni
+  complete par invention.
+
+Verification
+  - mojibake : 0
+  - diff incremental (lot 1 -> lot 2) : 48 lignes
+  - `git apply --check` : OK sur l'etat post-lot 1 reconstruit
+  - chaine de volumes : 77 970 (f0f5e2d) -> 78 776 (lot 1) -> 78 789 (lot 2)
+  - les douze substitutions ont ete relues in situ apres application
+
+Reste non resolu, laisse en place volontairement
+  - `∀x, P(x)` · `a` · `¬P(a)` : conserves et signales en §6.7
+  - l'emplacement vide restant du §6.7, entre « systeme de preuve » et
+    « donne » : aucun token ne le revendique, il est laisse tel quel
+  - l'emplacement vide du §7.2 (« pas seulement de _ ») : idem
+  - PISTE, non appliquee : le §6.5 « Contre-exemple » presente deux
+    emplacements vides (« il suffit de trouver un _ tel que : _ ») et les
+    tokens orphelins pourraient s'y lire — `a` et `¬P(a)`, l'affirmation
+    universelle refutee etant ∀x P(x). Le compte ne tombe pas juste :
+    TROIS tokens pour DEUX emplacements attestes. La piste reste donc une
+    hypothese soumise, pas une restitution.
+
+Outils
+  - tools/restauration/lot_commun.py : moteur partage des lots A — unicite
+    des sous-chaines, regle de non-perte, emission du journal. Il offre
+    desormais un diagnostic preventif, `python3 lot_commun.py <lot>`, qui
+    compte les occurrences de chaque sous-chaine SANS rien ecrire et
+    localise le premier caractere divergent en cas d'echec. Deux erreurs
+    de transcription (un espace de trop dans une longue sequence d'espaces)
+    ont ete corrigees ainsi avant toute ecriture.
+  - Une sauvegarde du fichier est prise avant chaque ecriture, hors du
+    clone, pour permettre un retour arriere.

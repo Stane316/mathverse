@@ -1,0 +1,204 @@
+#!/usr/bin/env python3
+"""Lot A-2 : predicats (§5), demonstration et inference (§6), induction (§7).
+
+Treize propositions du lot 2 du document A. Voir `domaine-A-lot2.md` pour
+l'argumentation et `lot_commun.py` pour les regles que le moteur fait respecter
+(unicite des sous-chaines, non-perte, verifiabilite).
+
+Usage
+-----
+    python3 tools/restauration/build_lot_A_2.py
+"""
+
+import sys
+
+from lot_commun import H, M, I, appliquer
+
+EDITS = [
+    # ------------------------------------------------------------ §5.1
+    ("A2-08 + A2-09 + A2-10 + A2-11",
+     "Exemples :  ( P   ∨   Q ) ∧ (¬ P   ∨   R )  tudiant ( x ) E ˊ  Inscrit ( x ,   c )  Sup rieur ( x ,   y ) e ˊ\n\n",
+     "Exemples :\n\n"
+     "| Type | Exemple |\n|---|---|\n"
+     "| Prédicat unaire | `Étudiant(x)` |\n"
+     "| Prédicat binaire | `Inscrit(x, c)` |\n"
+     "| Prédicat binaire | `Supérieur(x, y)` |\n"
+     "| Formule composée | `(P ∨ Q) ∧ (¬P ∨ R)` |\n\n",
+     M,
+     "Fragments #15 a #18. Les trois predicats sont recomposes par recollement des "
+     "accents deplaces : `tudiant` + `É` → `Étudiant`, `Sup rieur` + `é` → "
+     "`Supérieur`. Le meme artefact se verifie en §5.4 et §16.5, ce qui confirme la "
+     "methode. `Inscrit(x, c)` n'est pas degrade. `(P ∨ Q) ∧ (¬P ∨ R)` est intact.",
+     "La colonne « Type » est proposee : l'ordre et la repartition des quatre "
+     "exemples dans l'unique emplacement « Exemples : » du §5.1 ne sont pas attestes."),
+
+    # ------------------------------------------------------------ §5.2
+    ("A2-01",
+     "5.2 Quantificateurs et portée  Exemple :  Lecture : tout étudiant possède la propriété « avoir accès », selon l’interprétation donnée.",
+     "5.2 Quantificateurs et portée  Exemple : `∀x (Étudiant(x) → Accès(x))`  Lecture : tout étudiant possède la propriété « avoir accès », selon l’interprétation donnée.",
+     H,
+     "L'emplacement « Exemple : » est vide et la glose qui le suit — « tout etudiant "
+     "possede la propriete « avoir acces » » — est la traduction litterale de "
+     "∀x (Étudiant(x) → Accès(x)). Le texte de la source dicte l'appariement. "
+     "Le fragment git deux sections plus loin, a la fin du §5.4.",
+     "Les noms de predicats sont reconstitues par recollement des accents ; la forme "
+     "logique est certaine, l'orthographe repose sur ce recollement."),
+
+    # ------------------------------------------------------------ §5.3
+    ("A2-02 + A2-03",
+     "5.3 Négation des quantificateurs  Exemple :  « Tous les fichiers sont valides » est nié par :",
+     "5.3 Négation des quantificateurs  Formes : `¬∀x P(x) ≡ ∃x ¬P(x)` · `¬∃x P(x) ≡ ∀x ¬P(x)`  Exemple :  « Tous les fichiers sont valides » est nié par :",
+     H,
+     "Le §5.3 enonce la loi en prose sans en donner la forme. L'exemple en prose est "
+     "l'instanciation exacte de la premiere loi : « tous les fichiers sont valides » "
+     "= ∀x P(x), nie = ∃x ¬P(x). La seconde loi, presente dans le fragment, est la "
+     "duale de la premiere.",
+     "La seconde loi n'est pas instanciee dans la source ; sa presence dans le §5.3 "
+     "est une inference par symetrie, tres forte mais non attestee."),
+
+    # ------------------------------------------------------------ §5.4
+    ("A2-01b + A2-02b + A2-03b",
+     "Une relation d’équivalence est réflexive, symétrique et transitive.  ∀ x   (   tudiant ( x ) → E ˊ   AAcc s ( x )) e ˋ  ¬∀ x P   ( x ) ≡ ∃ x   ¬ P   ( x )  ¬∃ x P   ( x ) ≡ ∀ x   ¬ P   ( x )\n\n",
+     "Une relation d’équivalence est réflexive, symétrique et transitive.\n\n",
+     H,
+     "Retrait du fragment #19 a #22, recase en totalite : l'exemple ∀x (…) va au "
+     "§5.2 (A2-01) et les deux lois de negation au §5.3 (A2-02, A2-03). Aucun token "
+     "n'est perdu.",
+     None),
+
+    # ------------------------------------------------------------ §6.1 §6.2
+    ("A2-12",
+     "6.1 Démonstration directe  Pour démontrer   , on suppose   , puis on établit   par une suite de raisonnements valides.  Signature :   « Supposons   . Montrons   . »  6.2 Contraposée  Pour démontrer   , on peut démontrer :  La contraposée est logiquement équivalente à l’implication initiale.",
+     "6.1 Démonstration directe  Pour démontrer `P → Q`, on suppose `P`, puis on établit `Q` par une suite de raisonnements valides.  Signature :  « Supposons `P` . Montrons `Q` . »  6.2 Contraposée  Pour démontrer `P → Q`, on peut démontrer : `¬Q → ¬P`  La contraposée est logiquement équivalente à l’implication initiale.",
+     H,
+     "Le fragment #23 git a la fin du §6.3 et porte sept tokens : P → Q, P, Q, P, Q, "
+     "P → Q, ¬Q → ¬P. Le §6.1 presente cinq emplacements vides et le §6.2 deux : "
+     "sept pour sept, dans l'ordre. La comptabilite est exacte, ce qui leve "
+     "l'hesitation de la proposition initiale.",
+     "TRANCHE : la proposition initiale destinait ce fragment au §6.2 seul. Les "
+     "cinq emplacements vides du §6.1, non reperes lors de la proposition, "
+     "absorbent cinq des sept tokens. Le fragment est desormais recase en totalite."),
+
+    ("A2-12b",
+     "Signature :   « Supposons le contraire… »  P   →   Q   P   Q P   Q P   →   Q  ¬ Q   → ¬ P\n\n",
+     "Signature :   « Supposons le contraire… »\n\n",
+     H,
+     "Retrait du fragment #23, recase en A2-12.",
+     None),
+
+    # ------------------------------------------------------------ §6.6
+    ("A2-14",
+     "6.6 Principe du tiers exclu  En logique classique :  Toute proposition est vraie ou fausse dans le cadre classique.",
+     "6.6 Principe du tiers exclu  En logique classique : `P ∨ ¬P`  Toute proposition est vraie ou fausse dans le cadre classique.",
+     H,
+     "Emplacement vide non reperé lors de la proposition : le §6.6 annonce le "
+     "principe du tiers exclu sans en donner la forme. Le fragment #24 porte `P ∨ ¬P`, "
+     "qui est precisement ce principe.",
+     "Proposition AJOUTEE par rapport au lot : l'emplacement vide du §6.6 n'avait "
+     "pas ete catalogue dans l'inventaire."),
+
+    # ------------------------------------------------------------ §6.7
+    ("A2-04 + A2-05 + A2-06 + A2-13",
+     "6.7 Règles d’inférence courantes  Règle   Forme   Lecture  Modus ponens   Si P et si P implique Q, alors Q  Modus tollens   Si Q est faux, P ne peut être vrai  Introduction de   Établir les deux  ∀ x ,   P   ( x )  a  ¬ P   ( a )  P   ∨ ¬ P  P   ,   P   →   Q   ⊢   Q  ¬ Q ,   P   →   Q   ⊢ ¬ P  ∧   P   ,   Q   ⊢   P   ∧   Q\n\nÉlimination de   Extraire une composante  Introduction de   Une proposition vraie suffit  Élimination de   , avec les deux cas traités   Raisonner par cas  Le symbole   indique une dérivabilité dans un système de preuve",
+     "6.7 Règles d’inférence courantes\n\n"
+     "| Règle | Forme | Lecture |\n|---|---|---|\n"
+     "| Modus ponens | `P, P → Q ⊢ Q` | Si P et si P implique Q, alors Q |\n"
+     "| Modus tollens | `¬Q, P → Q ⊢ ¬P` | Si Q est faux, P ne peut être vrai |\n"
+     "| Introduction de ∧ | `P, Q ⊢ P ∧ Q` | Établir les deux |\n"
+     "| Élimination de ∧ | `P ∧ Q ⊢ P` | Extraire une composante |\n"
+     "| Introduction de ∨ | `P ⊢ P ∨ Q` | Une proposition vraie suffit |\n"
+     "| Élimination de ∨ | `P ∨ Q, ¬P ⊢ Q` | … , avec les deux cas traités — Raisonner par cas |\n\n"
+     "Le symbole `⊢` indique une dérivabilité dans un système de preuve.\n\n"
+     "*Fragments non rattachés, conservés faute de destination établie :* "
+     "`∀x, P(x)` · `a` · `¬P(a)`",
+     M,
+     "Le tableau du §6.7 a sa colonne « Forme » systematiquement vide et ses "
+     "en-tetes « Introduction de _ » / « Elimination de _ » prives du connecteur. Le "
+     "fragment #24 fournit trois formes (modus ponens, modus tollens, introduction "
+     "de ∧) ; le fragment #25 apporte les trois manquantes (elimination de ∧, "
+     "introduction de ∨, elimination de ∨). `P ∨ ¬P` est retire vers le §6.6 (A2-14).",
+     "REGLE DE NON-PERTE : les tokens `∀x, P(x)`, `a` et `¬P(a)` — instantiation "
+     "universelle — n'ont aucune ligne correspondante dans le tableau : ils sont "
+     "CONSERVES et signales, non supprimes. La forme d'elimination de ∨ est TRONQUEE "
+     "dans la source (`P ∨ Q ⊢` sans second membre) : elle est completee par la regle "
+     "classique `P ∨ Q, ¬P ⊢ Q` sur validation expresse du porteur, et cette "
+     "completion est signalee comme non attestee."),
+
+    # ------------------------------------------------------------ §7.1
+    ("A2-07",
+     "7.1 Principe de récurrence (induction mathématique)  Pour démontrer une propriété   pour tout entier   , on établit :  1.   Initialisation   :   .  2.   Hérédité   :   .  3.   Conclusion   :   est vraie pour tout   .",
+     "7.1 Principe de récurrence (induction mathématique)  Pour démontrer une propriété `P(n)` pour tout entier `n`, on établit :\n\n"
+     "1. Initialisation : `P(n₀)`.\n"
+     "2. Hérédité : `P(n) → P(n + 1)`.\n"
+     "3. Conclusion : `P(n)` est vraie pour tout `n ≥ n₀`.\n",
+     H,
+     "Six emplacements vides, structures par l'enonce lui-meme : initialisation, "
+     "heredite, conclusion. Le fragment #25/#26 porte exactement P(n₀), "
+     "P(n) → P(n+1) et la clause de portee n ≥ n₀. Les formules sont typees par leur "
+     "position : aucune autre repartition n'est possible.",
+     "Cas d'ecole du palier T1 : le contenu manque, l'emplacement est connu et "
+     "structure. La restitution est une lecture."),
+
+    # ------------------------------------------------------------ §7.2
+    ("A2-07b + A2-13b",
+     "7.2 Récurrence forte  Pour établir   , on peut supposer que la propriété est vraie pour toutes les valeurs antérieures pertinentes, puis démontrer le cas   .  ∧   P   ∧   Q   ⊢   P  ∨   P   ⊢   P   ∨   Q  ∨   P   ∨   Q  ⊢   ⊨  P   ( n )   n   ≥   n 0  P   ( n   ) 0  P   ( n ) →   P   ( n   + 1)  P   ( n )   n   ≥   n 0  P   ( n )  n\n\n",
+     "7.2 Récurrence forte  Pour établir `P(n)`, on peut supposer que la propriété est vraie pour toutes les valeurs antérieures pertinentes, puis démontrer le cas `n + 1`.\n\n"
+     "*Fragments non rattachés, conservés faute de destination établie :* `⊨`\n\n",
+     M,
+     "Les formes d'elimination de ∧, d'introduction de ∨ et d'elimination de ∨ sont "
+     "rapatriees au §6.7 (A2-13). Les formules d'induction vont au §7.1 (A2-07). "
+     "Les deux emplacements vides du §7.2 recoivent `P(n)` et `n + 1`, tous deux "
+     "attestes dans le fragment.",
+     "REGLE DE NON-PERTE : le symbole `⊨` n'a pas de destination etablie — il est "
+     "CONSERVE et signale. L'emplacement vide restant de la phrase suivante "
+     "(« pas seulement de _ ») est laisse en l'etat : le token correspondant n'est "
+     "pas attesté."),
+]
+
+
+# Correurs relevees a la relecture du lot applique. Elles s'executent apres
+# EDITS et sont enregistrees dans le meme journal.
+CORRECTIONS = [
+    ("A2-14b (correction)",
+     "Le symbole `⊢` indique une dérivabilité dans un système de preuve.\n\n"
+     "*Fragments non rattachés, conservés faute de destination établie :* "
+     "`∀x, P(x)` · `a` · `¬P(a)` donné ;   indique une conséquence sémantique.",
+     "Le symbole `⊢` indique une dérivabilité dans un système de preuve   donné ; "
+     "`⊨` indique une conséquence sémantique.\n\n"
+     "*Fragments non rattachés, conservés faute de destination établie :* "
+     "`∀x, P(x)` · `a` · `¬P(a)`",
+     H,
+     "DEFAUT D'APPLICATION, corrige ici. L'insertion du tableau du §6.7 avait "
+     "coupe la phrase en deux : « … dans un systeme de preuve. » d'un cote, et "
+     "« donne ; indique une consequence semantique. » de l'autre, avec la note "
+     "« Fragments non rattaches » intercalee au milieu. La phrase est resoudee. "
+     "Surtout, le symbole ⊨ n'etait pas orphelin : sa destination etait ce "
+     "second membre de phrase. ⊨ designe la consequence semantique, exactement "
+     "comme ⊢ designe la derivabilite — les deux sont toujours definis "
+     "ensemble. Le fragment git au §7.2, mais l'emplacement vide est ici.",
+     "L'emplacement vide restant entre « systeme de preuve » et « donne » est "
+     "conserve tel quel (trois espaces, aucun token attesté) : il n'est pas "
+     "complete."),
+
+    ("A2-13c (correction)",
+     "démontrer le cas `n + 1`.\n\n"
+     "*Fragments non rattachés, conservés faute de destination établie :* `⊨`\n\n"
+     "Elle apparaît",
+     "démontrer le cas `n + 1`.\n\nElle apparaît",
+     H,
+     "Consequence de A2-14b : ⊨ est recase au §6.7, il n'y a donc plus lieu de "
+     "le signaler comme non rattache au §7.2. Aucun token n'est perdu, il est "
+     "reloge.",
+     None),
+]
+
+
+def main():
+    return appliquer(
+        EDITS + CORRECTIONS,
+        journal="docs/restauration/propositions/domaine-A-lot2.journal.json",
+    )
+
+
+if __name__ == "__main__":
+    sys.exit(main())

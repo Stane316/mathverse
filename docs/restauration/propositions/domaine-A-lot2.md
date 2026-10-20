@@ -1,9 +1,22 @@
 # DOMAINE A — LOT 2 : PRÉDICATS, DÉMONSTRATION, INDUCTION (§5, §6, §7)
 
-**Date :** 2026-10-20 — **Statut :** **PROPOSITION — non appliquée, en attente de validation**
+**Date :** 2026-10-20 — **Statut :** **APPLIQUÉ LE 2026-10-20** (corrections en bas de document)
 **Document source :** `Maths-vers-Informatiques/DOCUMENT MAÎTRE A — LOGIQUE ET FONDEMENTS DE L'INFORMATIQUE.md`
 **Inventaire de référence :** `domaine-A-inventaire-fragments.md`
 **Contenu du lot :** 13 propositions — **7 T1**, **6 T2**, 0 T3
+
+> ## ✅ LOT APPLIQUÉ LE 2026-10-20 (corrections en bas de document)
+>
+> **Statut : APPLIQUÉ.** Diff livré : `livrables/domaine-A-lot2.gitdiff` — diff
+> **incrémental**, à appliquer **après** le lot 1 ; éprouvé par `git apply --check`
+> sur l'état post-lot 1 reconstruit. Journal : `domaine-A-lot2.journal.json`.
+> Générateur : `tools/restauration/build_lot_A_2.py`, sur le moteur partagé
+> `tools/restauration/lot_commun.py`.
+>
+> **12 substitutions**, soit les 13 propositions soumises, **plus une proposition
+> ajoutée** (A2-14 : un emplacement vide du §6.6 qui n'avait pas été catalogué),
+> **plus deux corrections** relevées à la relecture du lot appliqué.
+> Ce document reste la **proposition argumentée** ; le diff est l'application.
 
 **Légende des actions :** **Combler** (emplacement vide explicite) · **Réattribuer** (fragment à déplacer) ·
 **Reformater** (contenu en place, structure à reconstituer).
@@ -266,3 +279,69 @@ consignée comme inconnue plutôt que complétée.
 ---
 
 **Rien de ce lot n'a été appliqué.**
+
+---
+
+## Compte rendu d'application (2026-10-20)
+
+### Une proposition ajoutée par rapport au lot soumis
+
+**A2-14 — le §6.6 avait un emplacement vide non catalogué.** La section annonce le
+principe du tiers exclu sans jamais en donner la forme. Le fragment qui gisait au
+§7.2 porte `P ∨ ¬P`. La proposition n'existait pas dans le lot soumis : l'inventaire
+avait manqué cet emplacement.
+
+### Un défaut d'application, détecté et corrigé
+
+L'insertion du tableau du §6.7 **avait coupé la phrase finale en deux** : « … dans un
+système de preuve. » d'un côté, « donné ; indique une conséquence sémantique. » de
+l'autre, avec la note « Fragments non rattachés » intercalée au milieu. La phrase est
+resoudée, et l'incident a révélé mieux :
+
+**Le `⊨` n'était pas orphelin.** Je l'avais laissé signalé comme non rattaché au §7.2.
+Sa destination était ce second membre de phrase : *« ⊨ indique une conséquence
+sémantique »*. `⊢` et `⊨` sont toujours définis ensemble — le premier pour la
+dérivabilité, le second pour la conséquence sémantique. Ce n'est pas un choix, c'est
+la définition. `⊨` est donc recasé au §6.7, et la mention d'orphelin retirée du §7.2.
+
+### Règle de non-perte, appliquée et vérifiée token par token
+
+Un fragment n'est retiré que si chacun de ses tokens est recasé. Les quinze tokens
+déplacés ont été suivis un à un et retrouvés à leur nouvelle demeure :
+
+| Fragment gisant | Token | Destination |
+|---|---|---|
+| §5.4 | `∀x (Étudiant(x) → Accès(x))` | §5.2 |
+| §5.4 | `¬∀x P(x) ≡ ∃x ¬P(x)` · `¬∃x P(x) ≡ ∀x ¬P(x)` | §5.3 |
+| §6.3 | `P → Q` · `P` · `Q` · `P` · `Q` | §6.1 (5 emplacements) |
+| §6.3 | `P → Q` · `¬Q → ¬P` | §6.2 (2 emplacements) |
+| §6.7 | `P, P → Q ⊢ Q` · `¬Q, P → Q ⊢ ¬P` · `P, Q ⊢ P ∧ Q` · `P ∨ ¬P` | §6.7 et §6.6 |
+| §7.2 | `P ∧ Q ⊢ P` · `P ⊢ P ∨ Q` · `P ∨ Q ⊢` | §6.7 |
+| §7.2 | `P(n₀)` · `P(n) → P(n + 1)` · `n ≥ n₀` · `P(n)` · `n` | §7.1 et §7.2 |
+| §7.2 | `⊨` | §6.7 (correction A2-14b) |
+
+### Vérifications
+
+| Contrôle | Résultat |
+|---|---|
+| Diagnostic préalable (`python3 lot_commun.py build_lot_A_2.py`) | 10/10 sous-chaînes uniques |
+| Mojibake | 0 |
+| `git apply --check` sur l'état post-lot 1 reconstruit | OK |
+| Diff incrémental livré | 48 lignes, `livrables/domaine-A-lot2.gitdiff` |
+| Chaîne de volumes | 77 970 (`f0f5e2d`) → 78 776 (lot 1) → **78 789** (lot 2) |
+| Relance de l'inventaire | §5 à §7 relus in situ après application |
+
+### Ce qui reste non résolu, et pourquoi c'est laissé en place
+
+| Élément | Situation |
+|---|---|
+| `∀x, P(x)` · `a` · `¬P(a)` | conservés en §6.7, signalés comme non rattachés |
+| emplacement vide du §6.7, entre « système de preuve » et « donné » | aucun token ne le revendique ; laissé tel quel |
+| emplacement vide du §7.2 (« pas seulement de _ ») | idem |
+
+**Piste examinée, non retenue, non appliquée.** Le §6.5 « Contre-exemple » présente
+deux emplacements vides — « il suffit de trouver un _ tel que : _ » — et les tokens
+orphelins pourraient s'y lire : `a` et `¬P(a)`, l'affirmation universelle réfutée étant
+`∀x, P(x)`. **Le compte ne tombe pas juste : trois tokens pour deux emplacements
+attestés.** La cohérence est séduisante mais non établie ; la piste est donc consignée
+comme hypothèse et soumise à validation, elle n'a pas été appliquée.
