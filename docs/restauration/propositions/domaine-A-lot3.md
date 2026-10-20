@@ -1,9 +1,21 @@
 # DOMAINE A — LOT 3 : ENSEMBLES, PARADOXES, THÉORÈMES (§8, §9, §10)
 
-**Date :** 2026-10-20 — **Statut :** **PROPOSITION — non appliquée, en attente de validation**
+**Date :** 2026-10-20 — **Statut :** **APPLIQUÉ LE 2026-10-20** (compte rendu en bas de document)
 **Document source :** `Maths-vers-Informatiques/DOCUMENT MAÎTRE A — LOGIQUE ET FONDEMENTS DE L'INFORMATIQUE.md`
 **Inventaire de référence :** `domaine-A-inventaire-fragments.md`
 **Contenu du lot :** 10 propositions — **7 T1**, **2 T2**, **1 T3**
+
+> ## ✅ LOT APPLIQUÉ LE 2026-10-20 (compte rendu en bas de document)
+>
+> **Statut : APPLIQUÉ.** Diff livré : `livrables/domaine-A-lot3.gitdiff` — diff
+> **incrémental**, à appliquer **après** les lots 1 et 2 ; éprouvé par
+> `git apply --check` sur l'état post-lot 2 reconstruit. Journal :
+> `domaine-A-lot3.journal.json`. Générateur : `build_lot_A_3.py`, sur le moteur
+> partagé `lot_commun.py`.
+>
+> **16 substitutions** sur **9 propositions**. La dixième — **A3-10**, paradoxe de
+> Russell — n'entraîne volontairement **aucune édition**. Deux trouvailles faites
+> en route sont **renvoyées** aux lots 4 et 5, voir le compte rendu.
 
 **Légende des actions :** **Combler** (emplacement vide explicite) · **Réattribuer** (fragment à déplacer) ·
 **Reformater** (contenu en place, structure à reconstituer).
@@ -233,3 +245,78 @@ ensembles qui ne se contiennent pas eux-mêmes ») : **la perte est formelle, el
 ---
 
 **Rien de ce lot n'a été appliqué.**
+---
+
+## Compte rendu d'application (2026-10-20)
+
+### Non-perte, vérifiée token par token
+
+Les **24 tokens** déplacés ont été suivis un à un et retrouvés à leur nouvelle
+demeure. Aucun n'a été supprimé, aucun n'a été complété par invention.
+
+| Fragment gisant | Tokens | Destination |
+|---|---|---|
+| §8.4 | `f(a) = f(b) ⇒ a = b` · `∀y, ∃x : f(x) = y` | §8.2 |
+| §8.4 | `N` · `Z` · `Q` · `R` · `N` | §8.3 (5 emplacements) |
+| §8 intro | `n − 1` | bloc de code (dernière ligne) |
+| §10.2 | `¬(P ∧ Q) ≡ ¬P ∨ ¬Q` · `¬(P ∨ Q) ≡ ¬P ∧ ¬Q` | §10.1 |
+| §10.2 | `(P ∨ A), (¬P ∨ B) ⇒ (A ∨ B)` · `P` | §10.2 |
+| §10.6 | `P` · `x` · `P` · `x` · `H(P, x) = { 1 si P(x) s'arrête, 0 sinon` | §10.6 |
+| §11.3 | `A` · `P(A)` · `A` · `∣A∣ < ∣P(A)∣` | §10.7 |
+
+### Trois phrases ressoudées au passage
+
+Le retrait d'un fragment lui rend sa continuité. Trois sections en ont profité :
+
+| Section | État | Après |
+|---|---|---|
+| §8.4 | « Idée [pile] Supposons qu'on ait prétendu… » | « Idée  Supposons qu'on ait prétendu… » |
+| §10.2 | « … décidable par cette [pile] méthode. » | « … décidable par cette méthode. » |
+| §10.6 | « Ce que cela ne veut pas dire [pile] Cela ne signifie pas… » | « Ce que cela ne veut pas dire  Cela ne signifie pas… » |
+
+### Deux trouvailles faites en route, NON appliquées
+
+**1. Le §11.3 porte une seconde intrusion — renvoyée au lot 4.** La phrase
+« Existe-t-il une procédure mécanique qui, pour chaque entrée autorisée, produit la
+sortie demandée en un nombre fini d'étapes ? » s'est insérée entre « tandis » et
+« que ». Elle définit la **décidabilité**, pas la semi-décidabilité : son domicile
+est donc ailleurs dans le §11, **qui relève du lot 4**. Le §11.3 reste coupé après
+ce lot ; il sera ressoudé au lot 4, une fois la destination établie.
+
+**2. Le §8 porte une phrase qui n'est pas à sa place — renvoyée au lot 5.**
+« Après avoir examiné les _ premiers éléments, la variable max contient le maximum
+de ces éléments. », suivie du token `i` orphelin. C'est **l'invariant de la
+recherche du maximum d'un tableau**, c'est-à-dire l'exemple intuitif du §7.4 — dont
+l'emplacement est précisément vide, et qui nomme exactement cela : « Dans une
+recherche du maximum d'un tableau, l'invariant peut affirmer : _ ». Le §7.4 relevant
+du lot 2, déjà livré, cette restitution est renvoyée à un **lot 5**.
+
+### A3-10 — aucune restitution, et c'est la conclusion
+
+Le fragment du §9.3 se réduit à deux occurrences de la lettre `n` ; le symbole qui
+les reliait — vraisemblablement `∉` — est **perdu**, il ne figure dans aucun fragment
+du document. Rétablir `x ∉ x` reviendrait à **inventer**. Rien n'est appliqué, rien
+n'est ajouté au document. Le paradoxe est décrit correctement en prose au §9.2 :
+**la perte est formelle, elle n'est pas conceptuelle.**
+
+### Réserves signalées
+
+| Point | Situation |
+|---|---|
+| `def` du bloc factorielle | non attesté, restitué par nécessité syntaxique |
+| `si` / `retourner` / `sinon` → `if` / `return` / `else` | normalisation **validée** ; la variante fidèle reste disponible |
+| `×` conservé | l'orthographe Python est `*` ; le signe attesté est gardé |
+| `if n = 0` | **erreur du document d'origine**, conservée et signalée |
+| `H(P, x) = { …` | accolade fermante **absente** du fragment, non ajoutée ; ordre des tokens `1 · 0 · si …` signalé |
+| libellé « Forme : » au §10.7 | **ajouté** pour recevoir le 4ᵉ token, la source n'ayant pas de 4ᵉ emplacement |
+
+### Vérifications
+
+| Contrôle | Résultat |
+|---|---|
+| Diagnostic préalable (`python3 lot_commun.py build_lot_A_3.py`) | 16/16 sous-chaînes uniques |
+| Mojibake | 0 |
+| `git apply --check` sur l'état post-lot 2 reconstruit | OK |
+| Diff incrémental livré | 42 lignes, `livrables/domaine-A-lot3.gitdiff` |
+| Chaîne de volumes | 77 970 → 78 776 → 78 789 → **78 758** |
+| Relecture in situ | §8, §10.1, §10.2, §10.6, §10.7 relus après application |

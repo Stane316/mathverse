@@ -1,0 +1,67 @@
+Domaine A — lot 3 applique : ensembles et denominabilite (§8), theoremes (§10), Cantor (§10.7)
+
+16 substitutions sur 9 propositions appliquees ; la dixieme (A3-10, paradoxe
+de Russell) n'entraine volontairement AUCUNE edition.
+
+Ce que fait le lot
+  - §8    : le code factorielle, aplati en une ligne, est remis en bloc.
+            Le token `n − 1` qui ouvrait la pile est le `n - 1` de la
+            derniere ligne, deplace en tete : il est recase, non supprime.
+  - §8.2  : la colonne « Signature » du tableau injection/surjection, vide,
+            recoit `f(a) = f(b) ⇒ a = b` et `∀y, ∃x : f(x) = y`. Les gloses
+            de la source en sont la traduction litterale.
+  - §8.3  : cinq emplacements vides, cinq tokens (`N Z Q R N`) — trois
+            ensembles denombrables, un non denombrable, et l'ensemble de
+            reference de la bijection. Le compte tombe juste, sans reste.
+  - §8.4  : le fragment qui s'etait glisse entre le mot « Idee » et le
+            paragraphe qu'il introduit est retire ; la phrase est ressoudee.
+  - §10.1 : les deux lois de De Morgan vont dans l'emplacement « Enonce : ».
+  - §10.2 : la regle de resolution et le nom du litteral elimine. La pile
+            coupait « … decidable par cette [pile] methode. » ; ressoudee.
+  - §10.6 : les cinq emplacements du probleme de l'arret, dont la fonction
+            `H(P, x)`. Le fragment s'etait insere entre l'intitule « Ce que
+            cela ne veut pas dire » et son paragraphe ; ressoude.
+  - §10.7 : les trois emplacements du theoreme de Cantor recoivent `A`,
+            `P(A)`, `A`, et l'enonce symbolique `∣A∣ < ∣P(A)∣` est porte.
+            Le fragment coupait une phrase du §11.3 en deux (« tandis
+            [fragment] que »).
+
+Regle de non-perte, appliquee
+  Les 24 tokens deplaces ont ete suivis un a un. Aucun n'a ete supprime ;
+  aucun n'a ete complete par invention. Trois phrases coupees par une pile
+  — §8.4, §10.2, §10.6 — ont ete ressoudees au passage, le retrait du
+  fragment leur rendant leur continuite.
+
+Deux trouvailles faites en route, NON APPLIQUEES, et pourquoi
+  1. Le §11.3 porte une SECONDE intrusion, non cataloghee : la phrase
+     « Existe-t-il une procedure mecanique qui, pour chaque entree
+     autorisee, produit la sortie demandee en un nombre fini d'etapes ? »
+     s'est inseree entre « tandis » et « que ». Elle definit la
+     DECIDABILITE, pas la semi-decidabilite : son domicile est ailleurs
+     dans le §11, qui releve du LOT 4. Le §11.3 reste donc coupe apres ce
+     lot ; il sera ressoude au lot 4, destination etablie.
+  2. Le §8 porte une phrase entiere qui n'est pas a sa place : « Apres
+     avoir examine les _ premiers elements, la variable max contient le
+     maximum de ces elements. », suivie du token `i`. C'est l'invariant de
+     la recherche du maximum d'un tableau — c'est-a-dire l'exemple intuitif
+     du §7.4, dont l'emplacement est precisement vide. Le §7.4 relevant du
+     lot 2, deja livre, cette restitution est renvoyee a un lot 5.
+
+A3-10 — aucune restitution
+  Le fragment du §9.3 se reduit a deux occurrences de la lettre `n` ; le
+  symbole qui les reliait (vraisemblablement ∉) est PERDU, il ne figure
+  dans aucun fragment du document. Retablir `x ∉ x` reviendrait a inventer.
+  Rien n'est applique. Le paradoxe est decrit correctement en prose au
+  §9.2 : la perte est formelle, elle n'est pas conceptuelle.
+
+Verification
+  - mojibake : 0
+  - diagnostic preventif : 16/16 sous-chaines uniques
+  - diff incremental (lot 2 -> lot 3) : 42 lignes, `git apply --check` OK
+  - chaine de volumes : 77970 -> 78776 -> 78789 -> 78758 caracteres
+
+Outil nouveau
+  `tools/restauration/diff_lot_A.py <n>` reconstruit la chaine f0f5e2d ->
+  lot 1 -> … -> lot n-1 en rejouant les diffs deja livres, y applique
+  l'etat courant, et en tire le diff incremental du lot n, qu'il verifie
+  ensuite par `git apply --check` sur l'etat precedent.

@@ -88,6 +88,28 @@ def divergence(ancien, texte):
                texte[i + debut:i + debut + 50]))
 
 
+def entre(deb, fin, nouveau):
+    """Construit (ancien, nouveau) pour la region strictement entre deux marqueurs.
+
+    Supprime la cause d'erreur la plus frequente du chantier : la transcription
+    a la main de longues sequences d'espaces. On ne recopie plus le milieu ; on
+    le RELIT dans le fichier. Seuls deux marqueurs courts et surs sont ecrits a
+    la main, et ils encadrent le remplacement sans etre modifies.
+
+        ("A3-02", *entre("Énoncé :", "Reconnaissance :", " `a ≡ b`  "), H, ...)
+
+    Leve ValueError si un marqueur est introuvable ou si `fin` precede `deb`.
+    """
+    texte = _lire()
+    i = texte.find(deb)
+    if i < 0:
+        raise ValueError("marqueur de debut introuvable : %r" % deb)
+    j = texte.find(fin, i + len(deb))
+    if j < 0:
+        raise ValueError("marqueur de fin introuvable : %r" % fin)
+    return (texte[i:j + len(fin)], deb + nouveau + fin)
+
+
 def diagnostiquer(edits, tranche=None):
     """Compte les occurrences de chaque sous-chaine SANS rien ecrire.
 
