@@ -1,9 +1,10 @@
 # A9 — PLAN DE LA PHASE 2 : ÉTUDE D'ÉCOSYSTÈME ET DE CONCURRENCE
 
 **Date d'ouverture :** 2026-10-19
-**Statut :** phase **ouverte**, collecte **complète** (35 plateformes, 11 fiches). **Le livrable 5
-— le registre des licences — est établi** (`annexes/A9-registre-des-licences.md`). Restent trois
-points ouverts nécessitant une qualification juridique (§7.4).
+**Statut :** collecte **complète** (35 plateformes, 11 fiches). **Les cinq livrables sont établis.**
+L'étude de demande (R3) est **engagée** — `A10-etude-de-demande.md`. La licence du corpus source
+fait l'objet d'une **proposition soumise** — `../decisions/0002-licence-du-corpus-source.md`.
+Reste quatre points ouverts nécessitant une qualification juridique (§7.4).
 **Décision préalable :** le chantier de restauration a été clos sur un périmètre réduit par le
 porteur le 2026-10-19 — voir `../restauration/CLOTURE-CHANTIER.md`. Cette clôture lève la règle
 du 2026-10-18 qui subordonnait l'ouverture de la phase 2 à l'achèvement du chantier.
@@ -81,8 +82,12 @@ personnalisation · 7. stratégie documentaire · 8. modèle de contribution ·
    `fiches-phase-2/` : F01 React Bits, F02 shadcn/ui, F03 Math-To-Manim, F04 Aceternity UI,
    F05 Uiverse, F06 Desmos, F07 GeoGebra, F08 Shadertoy, F09 Wolfram et CoCalc,
    F10 MathVerse (sadeepas)
-3. **Comparaison transversale** — tableau croisé attributs × plateformes — **non commencée**
-4. **Synthèse des différenciateurs** — ce que Mathemirum peut revendiquer — **non commencée**
+3. **Comparaison transversale** — **établie** : `annexes/A9-comparaison-transversale.md`.
+   18 attributs × 27 plateformes, plus la question des quatre attributs et la synthèse par
+   attribut
+4. **Synthèse des différenciateurs** — **établie** : `annexes/A9-synthese-differenciateurs.md`.
+   Sept différenciateurs retenus (avec preuve et coût), **neuf revendications écartées** parce que
+   déjà occupées, et le risque central énoncé
 5. **Registre des licences** — **établi** : `annexes/A9-registre-des-licences.md`. 35 plateformes
    classées selon quatre statuts (base / dépendance / référence / interdit), avec quatre points
    ouverts à qualifier. C'est le livrable qui alimentera la décision de licence, reportée par le
@@ -165,6 +170,68 @@ l'écosystème Python/Manim.
 ⚠️ **Il s'agit d'un constat sur 24 plateformes et une requête, pas d'une preuve d'absence.**
 Voir §8.
 
+### 7.6 Ce que révèle la comparaison transversale
+
+La matrice 18 attributs × 27 plateformes fait apparaître un motif net, et il ne concerne pas la
+technique :
+
+- **Tout ce qui relève de la mise à disposition est couvert** — nom, description, catégorie, aperçu,
+  code source, dépendances, installation, exemples d'intégration. C'est acquis partout.
+- **Tout ce qui relève de la preuve est vide** — explication mathématique, équations et hypothèses,
+  mesures de performance, limites connues. **La case « limites connues » est la plus vide de la
+  matrice**, et celle des « équations et hypothèses » est vide **sans une seule exception**.
+
+**Le résultat le plus net porte sur la question des quatre attributs (§1).** Aucune plateforme ne
+réunit composants visuels + explication mathématique + prompts + CLI. **Mais les deux plus proches
+sont complémentaires, et leur complémentaire est la thèse même de Mathemirum :** Shaders a les
+composants, les prompts et la CLI — il lui manque l'explication mathématique, et c'est son seul
+manque ; Math-To-Manim a l'explication, les prompts et la CLI — il lui manque la sortie composant.
+
+⚠️ **Ce constat ne vaut pas preuve d'absence**, et une case vide peut être vide par choix rationnel :
+documenter les équations et les limites d'un composant coûte cher. Que personne ne le fasse peut
+signifier une opportunité — ou un marché qui ne le valorise pas. Question non instruite (R3).
+
+### 7.7 Ce que dit la synthèse des différenciateurs
+
+Sept différenciateurs retenus, chacun adossé à une case vide documentée : les équations et
+hypothèses par composant (D1) ; le classement tripartite assumé (D2) ; les limites connues publiées
+(D3) ; les performances mesurées avec méthode (D4) ; la clarté de licence (D5) ; le registre à
+champs étendus (D6) ; la boucle prompt → composant → test (D7).
+
+**Neuf revendications ont été écartées**, et c'est aussi instructif : le nombre de composants, la
+beauté visuelle, le WebGPU, le caractère open source, la CLI, l'intégration aux agents IA, le
+multi-framework, l'éditeur visuel, la profondeur mathématique de l'outil. **Toutes sont occupées
+par des acteurs mieux dotés.** Sur toute la couche technique et distributive, Mathemirum arriverait
+après les autres.
+
+⚠️ **Le risque central est énoncé sans détour dans le livrable :** les sept différenciateurs retenus
+sont **tous des centres de coût**, et aucun des 27 acteurs étudiés ne les engage. Soit personne n'a
+voulu payer, soit le marché ne les valorise pas. **Ces deux hypothèses ne sont pas départagées par
+cette phase.**
+
+### 7.8 Ce que dit l'étude de demande (R3)
+
+⚠️ **Le résultat n'est pas celui qu'on espérait, et il est rapporté tel quel.**
+
+- ✅ **La documentation est le premier critère de choix** d'un paquet, mesuré à **93 % d'accord**
+  dans une étude universitaire sur la sélection de paquets npm.
+- ✅ **« L'aptitude à l'IA » est un critère apparu en 2026** : serveur MCP, `llms.txt`,
+  documentation lisible par un assistant.
+- ✅ **La douleur n°1 des développeurs de shaders est le débogage et le profilage**, pas le manque
+  d'effets (enquête Khronos 2026, 400+ répondants : 53 % en top 3 ; 64 % adaptent des shaders entre
+  plateformes).
+- ❌ **Mais aucun des ~20 guides de choix de bibliothèques de composants consultés ne mentionne
+  l'explication mathématique, les équations, les hypothèses ou le domaine de validité.** Pas un seul.
+
+**La demande pour la couche de preuve est donc adjacente et indirecte, pas directe.** Elle existe
+dans le discours et dans des critères voisins, pas comme critère de choix formulé.
+
+**Le levier le plus solide n'est pas la preuve pour elle-même, mais la preuve rendue lisible par une
+machine** : c'est là qu'elle rencontre un critère de choix observé en 2026. Recommandation R3.2.
+
+⚠️ L'étude est une **première passe** : trois requêtes, sources majoritairement secondaires, aucun
+volume de recherche mesuré, aucune disposition à payer évaluée.
+
 ## 8. Hypothèses — à confirmer, non à tenir pour acquises
 
 ⚠️ **Ce qui suit est une hypothèse.** Elle ne sera étayée qu'après les fiches détaillées et
@@ -173,7 +240,9 @@ plusieurs requêtes indépendantes.
 1. **L'espace se diviserait en deux territoires disjoints** : des bibliothèques de composants
    web sans profondeur mathématique, et des moteurs mathématiques qui sortent de la vidéo.
    L'intersection — composant web portant son explication mathématique, ses équations, ses
-   hypothèses, son prompt et sa CLI — serait libre.
+   hypothèses, son prompt et sa CLI — serait libre. **Précision apportée par la matrice (§7.6) :
+   la ligne de partage ne passe pas entre le visuel et le mathématique, mais entre la mise à
+   disposition et la preuve.**
 2. **Risque attaché à cette hypothèse :** une place peut être libre **pour une raison**. Soit la
    demande est faible, soit la combinaison coûte plus cher à maintenir qu'elle ne rapporte.
    **Cette question n'a pas encore été instruite et conditionne la valeur de la thèse.**
@@ -189,18 +258,60 @@ dépendance**.
 |---|---|---|---|---|---|---|
 | **R1** | Lever les **quatre points ouverts du registre des licences** (§7.4) : confirmation écrite de Shader Effects, qualification de la « configuration exportable » face à la clause React Bits, portée de la co-propriété GeoGebra, procédure d'approbation Wolfram | **élevé** | **haute** | faible | **moyen** | aucune |
 | **R2** | Rédiger la fiche licence de React Bits en priorité, et qualifier le périmètre exact de la clause Commons Clause vis-à-vis d'une « configuration exportable » par composant | **élevé** | **haute** | faible | **moyen** (lecture juridique) | aucune |
-| **R3** | Instruire explicitement la question de la demande (§8.2) avant de conclure à une place libre | **élevé** | moyenne | moyen | faible | R1 |
+| **R3** | ~~Instruire la question de la demande~~ — **engagée le 2026-10-19** sur décision du porteur. Première passe livrée : `A10-etude-de-demande.md`. **Résultat nuancé** : documentation et IA sont des critères mesurés, l'explication mathématique n'apparaît dans aucun guide de choix. Voir §7.8 | — | — | — | — | — |
 | **R6** | ~~Registre des licences~~ — **fait** (livrable 5) | — | — | — | — | — |
 | **R7** | Vérifier **Paper Shaders** (Apache 2.0) et **OpenShaders** (MIT) : deux candidats libres apparus en cours de collecte, non encore étudiés en détail | **élevé** | moyenne | faible | faible | aucune |
 | **R4** | Vérifier les homonymes `MathVerse` : ils occupent le nom et le sujet | moyen | moyenne | faible | faible | aucune |
 | **R5** | Traiter séparément les deux licences copyleft faible relevées (p5.js LGPL-2.1, JSXGraph LGPL-3.0) dans le registre des licences | moyen | basse | faible | faible | R1 |
 
+## 9. Deux actions requises du porteur
+
+### 9.1 Clarifier la licence du corpus source
+
+⚠️ Le dépôt de connaissances `Stane316/my-own-connaissance`, d'où proviennent les équations et les
+773 restaurations appliquées, est **public sans fichier LICENSE** (constat de phase 0). Publier un
+composant Mathemirum dont l'explication mathématique en dérive, sans clarifier ce régime,
+**reproduirait exactement le défaut critique chez GeoGebra et `sadeepas`**. → **Votre décision.**
+
+### 9.2 Arbitrer la question du marché — **décidé le 2026-10-19**
+
+Le porteur a choisi **d'instruire l'étude de demande (R3)**. Elle est engagée : `A10-etude-de-demande.md`.
+Ses résultats (§7.8) sont nuancés et **ne valident pas la thèse sans réserve** : ils déplacent la
+question vers l'aptitude à l'IA et la documentation plutôt que vers la preuve mathématique en soi.
+
 ## 10. Prochaine étape
 
-Compléter la collecte (R1) puis rédiger les premières fiches selon les 16 champs, en commençant
-par les trois plateformes dont la licence ou la mécanique sont structurantes pour Mathemirum :
-**React Bits** (licence), **shadcn/ui** (mécanique de registre), **Math-To-Manim** (le plus
-proche du couplage prompt + CLI + maths, malgré la sortie vidéo).
+⚠️ **Cette section a été périmée puis réécrite le 2026-10-19.** Elle annonçait encore la rédaction
+des fiches React Bits / shadcn/ui / Math-To-Manim, toutes livrées depuis.
+
+État réel : les cinq livrables sont établis, l'étude de demande est engagée. **Ce qui reste est
+bloqué sur des décisions, pas sur du travail :**
+
+1. **Réviser la synthèse des différenciateurs** à la lumière de `A10-etude-de-demande.md` — les
+   sept différenciateurs y sont présentés comme des atouts, alors que leur demande n'est établie
+   que pour trois d'entre eux (documentation, IA, mesure). **C'est le préalable à toute clôture.**
+2. **Clôturer la phase 2** par un rapport de fin de phase au format des 16 points (§16 du cahier
+   des charges), qui consolidera les cinq livrables, les quatre points ouverts et les suites.
+3. **Lever les quatre points ouverts** du registre des licences (§7.4).
+4. **Décider du sort de la phase 1** — elle n'est ni achevée ni formellement suspendue (§10.1).
+
+### 10.1 ⚠️ Une incohérence à résoudre : la phase 1 n'est ni achevée ni suspendue
+
+Les critères de validation de la phase 1 (A6 §6) **ne sont pas remplis** : 5 fiches sur 21
+domaines, l'index n'existe pas, le registre des équations à réécrire n'est pas consolidé, les 8
+documents de littératie ne sont pas traités. Pourtant `A8` porte toujours la mention
+« Phase 1 — audit documentaire (**en cours**) », et nous travaillons en phase 2.
+
+La décision du porteur du 2026-10-19 a réduit le périmètre du **chantier de restauration**, mais
+elle n'a rien statué sur le reste de la phase 1. **Trois voies, non tranchées :**
+
+- **(a)** suspendre formellement la phase 1 et le consigner, en listant ce qui reste ;
+- **(b)** la reprendre maintenant : 24 fiches, 15 documents à instruire dans l'ordre A → U, plus
+  les 8 de littératie ;
+- **(c)** la réduire à ce qui alimente directement la phase 3 (l'index et le registre des
+  équations), et reporter les fiches.
+
+**Tant que ce point n'est pas tranché, l'avancement affiché par les documents est faux.** 
 
 ---
 

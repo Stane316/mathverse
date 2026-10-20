@@ -174,14 +174,20 @@ arbres ASCII ; aucune n'est une équation.
 
 ## 9. Prochaines actions
 
-1. Produire la fiche **J** — son document est assaini (232 écritures, lots 5b/5c/5a) et J est le
-   seul des cinq documents instruits dont la Grande Carte a été détruite.
-2. Poursuivre l'entrelacement sur **H** (8 documents : H, G, M, O, F, Q, P, UI/UX restent
-   à instruire), en commençant par H puisque sa Grande Carte a fourni un point de comparaison.
-3. Alimenter l'index au fil des fiches.
-4. Clôturer la phase 1 par un rapport au format des 14 points.
-4. Engager la phase 2 (étude d'écosystème) selon la méthode du §10 de `A6`, enrichie des plateformes déjà identifiées.
-5. Soumettre les documents du dossier de référence au fil des phases 2 et 3, avec un statut explicite chacun.
+⚠️ **Cette liste a été périmée puis réécrite le 2026-10-19.** Les points 1 à 3 et 5 supposaient la
+poursuite du chantier de restauration, clos depuis sur un périmètre réduit par décision du porteur
+(`../restauration/CLOTURE-CHANTIER.md`), et la phase 2 est désormais engagée et bien avancée.
+
+| # | Action | Statut |
+|---|---|---|
+| 1 | ~~Fiche J~~ · ~~entrelacement sur H~~ · ~~index au fil des fiches~~ | **différés** — voir le point 2 ci-dessous |
+| 2 | **Décider du sort de la phase 1** — elle n'est ni achevée (5 fiches sur 21 domaines, critères de A6 §6 non remplis) ni formellement suspendue | ⚠️ **non tranché** — voir `A9-plan-phase-2.md` §10.1 |
+| 3 | Clôturer la phase 1 par un rapport au format des 14 points | ⚠️ **subordonné au point 2** — on ne clôture pas une phase sans statuer sur son périmètre |
+| 4 | Phase 2 (étude d'écosystème) | **engagée** — les cinq livrables sont établis ; voir `A9-plan-phase-2.md` |
+| 5 | Réviser la synthèse des différenciateurs à la lumière de l'étude de demande | **à faire** — préalable à la clôture de la phase 2 |
+| 6 | Clôturer la phase 2 par un rapport au format des 16 points | **à faire** |
+| 7 | Soumettre les documents du dossier de référence au fil des phases 2 et 3, avec un statut explicite chacun | reporté, phase 3 |
+| 8 | Lever les quatre points ouverts du registre des licences | ⚠️ **décision / avis juridique requis** |
 
 ## 10. Références
 
