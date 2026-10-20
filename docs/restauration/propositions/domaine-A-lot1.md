@@ -5,6 +5,14 @@
 **Inventaire de référence :** `domaine-A-inventaire-fragments.md`
 **Contenu du lot :** 16 propositions — **9 T1**, **7 T2**, 0 T3
 
+> ## ✅ LOT APPLIQUÉ LE 2026-10-20 (corrections en bas de document)
+>
+> **Statut : APPLIQUÉ.** Diff livré : `livrables/domaine-A-lot1.gitdiff`, éprouvé par
+> `git apply --check` puis application sur un clone neuf à `f0f5e2d`. Journal :
+> `domaine-A-lot1.journal.json`. Générateur : `tools/restauration/build_lot_A_1.py`.
+> Ce document reste la **proposition argumentée** ; le diff est l'application.
+
+
 **Légende des actions :**
 - **Combler** — la source présente un emplacement vide explicite ; on y porte le fragment.
 - **Réattribuer** — le fragment n'est pas à sa place ; on le déplace vers sa section d'origine.
@@ -306,3 +314,53 @@ forme.
 
 **Rien de ce lot n'a été appliqué.** Le clone de travail `/home/user/_audit/connaissance` reste disponible
 pour l'application après validation.
+
+
+---
+
+## Compte rendu d'application (2026-10-20)
+
+### Corrections apportées à la proposition
+
+**A1-02 — les libellés n'étaient pas inventés.** La proposition présentait
+« toujours vrai / toujours faux » comme des libellés proposés faute d'attestation.
+C'est faux : la source porte les lignes **« Vrai logique · Toujours vrai »** et
+**« Faux logique · Contradiction »**. Les `⊤` et `⊥` ont donc une destination
+attestée. **Le palier passe de T2 à T1, et aucun libellé n'est inventé.**
+
+**A1-15 — la destination n'était pas à arbitrer.** L'hésitation entre §3.3 et §6.2
+est levée par la structure même du §3.3 : c'est une liste de **cinq** équivalences
+nommées (Double négation, Lois de De Morgan, Implication, Contraposée, Équivalence),
+et les fragments #5 et #6 en couvrent exactement **cinq**. La destination §3.3 est
+établie, non choisie.
+
+### Une erreur commise, détectée, corrigée
+
+La première version de l'édition E6 **supprimait** un sous-fragment
+(`P → Q` · `P Q P → Q P → Q P Q` · le second `x` de `∀x x`) que ce même document
+avait signalé comme non résolu en A1-10. Un contrôle de non-perte l'a détecté.
+Le fichier a été restauré depuis `HEAD` et l'édition corrigée.
+
+**Règle désormais appliquée à tous les lots :** un fragment n'est retiré que si
+chacun de ses tokens est recasé. Sinon il est conservé et signalé.
+
+### Vérifications
+
+| Contrôle | Résultat |
+|---|---|
+| `git apply --check` sur clone neuf (`f0f5e2d`) | OK |
+| Application effective | OK |
+| Mojibake | 0 |
+| Lignes de tableau créées | 64 |
+| Volume | 77 970 → 78 776 caractères |
+| Tables de vérité | relues valeur par valeur **avant** reformatage : **5/5 exactes** |
+
+### Ce qui reste non résolu, et pourquoi c'est laissé en place
+
+| Token | Situation |
+|---|---|
+| `N` isolé en fin de §2 | destination probable §8.3 — laissé en place |
+| `P → Q` · `P Q P → Q P → Q P Q` · `∀x …` | conservés en §3.2, signalés comme non rattachés |
+| `∃!x …` | prédicat perdu dans la source, non complété |
+
+Aucun de ces éléments n'a été supprimé ni complété par invention.
