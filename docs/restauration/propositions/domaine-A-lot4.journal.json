@@ -1,0 +1,154 @@
+[
+ {
+  "identifiant": "A4-15",
+  "confiance": "haute",
+  "ancien": "Une question typique :  11.2 Décidabilité",
+  "nouveau": "Une question typique : Existe-t-il une procédure mécanique qui, pour chaque entrée autorisée, produit la sortie demandée en un nombre fini d’étapes ?\n\n11.2 Décidabilité",
+  "justification": "TROUVAILLE, non cataloguee par l'inventaire. Le §11.1 annonce « Une question typique : » et s'arrete : l'emplacement est vide. Or le §11.3 portait une phrase entiere, inseree entre « tandis » et « que », qui definit la CALCULABILITE et non la semi-decidabilite : c'est exactement la question typique du §11.1. Emplacement vide explicite ET phrase coupee en deux : les deux preuves reunis, comme A3-06/A3-07. La phrase est deplacee MOT POUR MOT, relue dans le fichier sans transcription.",
+  "validation": "Le lot 3 avait laisse le §11.3 coupe, precisement parce que cette destination etait a etablir et relevait du §11, donc du lot 4. Elle l'est desormais, et le §11.3 est ressoude par A4-15b."
+ },
+ {
+  "identifiant": "A4-15b",
+  "confiance": "haute",
+  "ancien": "positives, tandis Existe-t-il une procédure mécanique qui, pour chaque entrée autorisée, produit la sortie demandée en un nombre fini d’étapes ?\n\nque sur les instances négatives",
+  "nouveau": "positives, tandis que sur les instances négatives",
+  "justification": "Retrait de la phrase egarée, recasée au §11.1 (A4-15). « tandis … que » n'admet aucune insertion : la phrase est ressoudée.",
+  "validation": null
+ },
+ {
+  "identifiant": "A4-01a",
+  "confiance": "haute",
+  "ancien": "Forme schématique :  Selon le type",
+  "nouveau": "Forme schématique : `A ≤ B`  Selon le type",
+  "justification": "L'emplacement « Forme schematique : » est vide, et le fragment porte `A ≤ B`, qui est la forme schematique de la reduction.",
+  "validation": null
+ },
+ {
+  "identifiant": "A4-01b",
+  "confiance": "haute",
+  "ancien": "que résoudre   permettrait de résoudre",
+  "nouveau": "que résoudre `A` permettrait de résoudre",
+  "justification": "Second emplacement. Le sens impose l'affectation : « resoudre A permettrait de resoudre B » est la signification meme de `A ≤ B`.",
+  "validation": "L'ordre du fragment (`A ≤ B`, puis `B`, puis `A`) ne suit pas l'ordre du texte (`A`, puis `B`). L'inversion est REELLE et NON EXPLIQUEE ; l'affectation repose sur le sens, pas sur la position."
+ },
+ {
+  "identifiant": "A4-01c",
+  "confiance": "haute",
+  "ancien": "permettrait de résoudre   .  Comment reconnaître une réduction",
+  "nouveau": "permettrait de résoudre `B`.  Comment reconnaître une réduction",
+  "justification": "Troisieme emplacement, troisieme token. Meme reserve que A4-01b sur l'ordre du fragment.",
+  "validation": null
+ },
+ {
+  "identifiant": "A4-01d",
+  "confiance": "haute",
+  "ancien": "les réponses pertinentes.  A   ≤   B  B   A\n\nLes réductions sont centrales",
+  "nouveau": "les réponses pertinentes.  Les réductions sont centrales",
+  "justification": "Retrait du fragment #38, recase en totalite : `A ≤ B` en A4-01a, `A` en A4-01b, `B` en A4-01c.",
+  "validation": null
+ },
+ {
+  "identifiant": "A4-16",
+  "confiance": "haute",
+  "ancien": "On peut écrire un triplet de Hoare :  : précondition ;  : commande ou programme ;  : postcondition.  Lecture :",
+  "nouveau": "On peut écrire un triplet de Hoare : `P` : précondition ; `C` : commande ou programme ; `Q` : postcondition.  Lecture :",
+  "justification": "TROUVAILLE, non cataloguée. Le §12.2 porte TROIS emplacements vides accompagnes de leur legende : « _ : précondition ; _ : commande ou programme ; _ : postcondition. ». La legende n'est donc PAS proposée, elle est ATTESTEE par la source elle-meme : c'est le document qui apparie chaque emplacement a son role. Les trois tokens `P`, `C`, `Q` les remplissent dans l'ordre, qui est l'ordre meme du triplet.",
+  "validation": "Ceci leve la reserve 2 de la proposition : l'appariement P/precondition, C/commande, Q/postcondition n'est plus une proposition, il est donne par le texte."
+ },
+ {
+  "identifiant": "A4-02 + A4-03",
+  "confiance": "haute",
+  "ancien": "retourner un élément dont la valeur est maximale.  { P   }   C   { Q }  P C Q  Si   est vrai avant l’exécution de   , et si celle-ci termine conformément au cadre de raisonnement, alors   est vrai après.  P   C Q\n\n12.3 Logique de Hoare",
+  "nouveau": "retourner un élément dont la valeur est maximale.  Si `P` est vrai avant l’exécution de `C`, et si celle-ci termine conformément au cadre de raisonnement, alors `Q` est vrai après.\n\n12.3 Logique de Hoare",
+  "justification": "Une seule edition, parce que trois operations s'y enchainent et que l'ordre importe. (1) Le fragment #39 — le triplet `{P} C {Q}` suivi de `P`, `C`, `Q` — gisait ici, apres l'exemple du maximum : le triplet part au §12.3 (A4-02), les trois lettres vont a la ligne de legende (A4-16). (2) Les trois emplacements de la phrase « Si _ est vrai avant l'execution de _ …, alors _ est vrai apres » recoivent `P`, `C`, `Q`, qui est la semantique meme du triplet. (3) Le fragment #40 — `P`, `C`, `Q` — qui trainait apres cette phrase est retire, ses tokens etant recases en A4-16 et A4-02.",
+  "validation": "SEPT tokens pour SEPT destinations : le triplet va au §12.3 ; les trois lettres de #39 a la ligne de legende du §12.2 ; les trois lettres de #40 a la phrase « Si … alors ». Aucun token n'est perdu."
+ },
+ {
+  "identifiant": "A4-02",
+  "confiance": "haute",
+  "ancien": "notamment à l’aide de triplets de Hoare.  Comment la reconnaître ?",
+  "nouveau": "notamment à l’aide de triplets de Hoare. `{P} C {Q}`\n\nComment la reconnaître ?",
+  "justification": "Le §12.3 annonce explicitement « les triplets de Hoare » sans en donner un seul ; le §12.2, qui traite des preconditions et postconditions, n'a pas vocation a porter le triplet. Le fragment fournit le triplet, recase ici.",
+  "validation": "La legende n'est pas repetee au §12.3 : elle est deja attestee au §12.2 par A4-16, et la doubler serait une invention redondante."
+ },
+ {
+  "identifiant": "A4-04",
+  "confiance": "haute",
+  "ancien": "Une fonction reçoit un vecteur de taille   et renvoie un vecteur de taille   . n   n\n\nDans les systèmes qui prennent",
+  "nouveau": "Une fonction reçoit un vecteur de taille `n` et renvoie un vecteur de taille `n`.\n\nDans les systèmes qui prennent",
+  "justification": "Deux emplacements vides, deux tokens `n`, et la phrase decrit une fonction de `n` vers `n`.",
+  "validation": "Le second emplacement pourrait etre `n + 1` ou `m` : la source ne permet pas de trancher, et `n` est le seul token disponible dans le fragment. La reserve est maintenue."
+ },
+ {
+  "identifiant": "A4-06",
+  "confiance": "haute",
+  "ancien": "15.3 Énumération exhaustive des affectations  Pour   variables propositionnelles, il existe   affectations possibles. n   2 n\n\nLa méthode teste chacune d’elles.",
+  "nouveau": "15.3 Énumération exhaustive des affectations  Pour `n` variables propositionnelles, il existe `2ⁿ` affectations possibles.\n\nLa méthode teste chacune d’elles.",
+  "justification": "Deux emplacements vides, deux tokens, et la phrase qui suit — « le nombre d'affectations croit exponentiellement » — confirme `2ⁿ`. Le second token du fragment, `2 n`, est la forme degradee de l'exposant.",
+  "validation": "Deux emplacements vides restent sans token disponible : « Complexité indicative : _ » et « croît exponentiellement avec _ ». Ils sont laisses tels quels."
+ },
+ {
+  "identifiant": "A4-11a",
+  "confiance": "moyenne",
+  "ancien": "15.6 Unification  L’unification cherche une substitution de variables qui rend deux expressions identiques.  Exemple conceptuel :  n\n\nUne substitution possible est :  Reconnaissance :",
+  "nouveau": "15.6 Unification  L’unification cherche une substitution de variables qui rend deux expressions identiques.  Exemple conceptuel : `f(x, 3) et f(2, y)`\n\nUne substitution possible est : `x = 2`, `y = 3`\n\n*Fragment non rattaché, conservé faute de destination établie :* `n`  Reconnaissance :",
+  "justification": "Le §15.6 traite de l'unification ; le §15.7, du chainage. Les termes `f(x, 3)` et `f(2, y)` avec leur substitution sont l'exemple canonique de l'unification, et le §15.6 presente deux emplacements vides : « Exemple conceptuel : » et « Une substitution possible est : ».",
+  "validation": "REGLE DE NON-PERTE : un token `n` occupait l'emplacement « Exemple conceptuel : ». Il n'a aucune destination etablie — il pourrait aussi bien revenir au §15.3 (« croît exponentiellement avec _ »). Il est CONSERVE et signale, non supprime. Le verbe « unifier » et le mot « substitution » n'apparaissent pas dans le fragment : les libelles « Exemple conceptuel » et « Une substitution possible est » sont ceux de la source, le reste est laisse tel quel."
+ },
+ {
+  "identifiant": "A4-11b",
+  "confiance": "haute",
+  "ancien": "de la stratégie de recherche.  f(x, 3) et f(2, y)  x = 2 y = 3  Faits connus ↓",
+  "nouveau": "de la stratégie de recherche.  Faits connus ↓",
+  "justification": "Retrait du fragment #44, recase au §15.6 (A4-11a). Le fragment coupait le paragraphe « Limites » des schemas de chainage qui le suivent ; le retrait les ressoude.",
+  "validation": null
+ },
+ {
+  "identifiant": "A4-07 + A4-08 + A4-09",
+  "confiance": "haute",
+  "ancien": "Exemple de règle d’accès :  Cette formule décrit une règle.",
+  "nouveau": "Exemple de règle d’accès : `Authentifié(u) ∧ Autorisé(u, r) → AccèsPermis(u, r)`  Cette formule décrit une règle.",
+  "justification": "Les trois fragments #45 a #47 sont CONTIGUS et non deplaces : seule la decomposition des accents les a morceles. Le recollement est mecanique — `Authentifi` + `é`, `Autoris` + `é`, `Acc sP ermis` + `è` — et la structure logique (`∧` puis `→`) est intacte.",
+  "validation": "L'orthographe `AccèsPermis` resulte d'un recollement de trois morceaux ; la casse exacte (espace ou non, majuscule interne) n'est pas attestée."
+ },
+ {
+  "identifiant": "A4-07b",
+  "confiance": "haute",
+  "ancien": "ses chemins d’exécution.  Authentifi   ( u ) ∧ e ˊ   Autoris   ( u ,   r ) → e ˊ   Acc sP ermis ( u ,   r ) e ˋ\n\n16.6 Architecture système et Linux",
+  "nouveau": "ses chemins d’exécution.\n\n16.6 Architecture système et Linux",
+  "justification": "Retrait du fragment decompose, recompose et recase en A4-07 + A4-08 + A4-09, juste au-dessus. Aucun token n'est perdu.",
+  "validation": null
+ },
+ {
+  "identifiant": "A4-12a",
+  "confiance": "haute",
+  "ancien": "Étape 1 — Modélisation  : utilisateur authentifié ;  : utilisateur autorisé ;  : accès permis.  Si le paiement est confirmé",
+  "nouveau": "Étape 1 — Modélisation `A` : utilisateur authentifié ; `R` : utilisateur autorisé ; `P` : accès permis.  Si le paiement est confirmé",
+  "justification": "Comme au §12.2 : les TROIS emplacements vides du §17.5 portent leur legende — « _ : utilisateur authentifié ; _ : utilisateur autorisé ; _ : accès permis. ». La legende est donc ATTESTEE, et non proposée. Les trois tokens `A`, `R`, `P` du fragment #48 les remplissent dans l'ordre.",
+  "validation": "Ceci leve la reserve 1 de la proposition : l'appariement A/authentifie, R/autorise, P/acces permis est donne par le texte."
+ },
+ {
+  "identifiant": "A4-12b",
+  "confiance": "haute",
+  "ancien": "autoriser l’accès à la ressource.  A R P\n\nRègle :",
+  "nouveau": "autoriser l’accès à la ressource.  Règle :",
+  "justification": "Retrait du fragment #48, recase en A4-12a et A4-13. Le fragment coupait l'enonce en prose de la regle qui suit ; le retrait les ressoude.",
+  "validation": null
+ },
+ {
+  "identifiant": "A4-13",
+  "confiance": "moyenne",
+  "ancien": "Règle :  Étape 2 — Reconnaissance",
+  "nouveau": "Règle : `A ∧ R → P`  Étape 2 — Reconnaissance",
+  "justification": "L'emplacement « Regle : » est vide, et le §18 porte `A ∧ R → P` immediatement suivi du pseudo-code qui l'implemente. Le §17.5 est « Exemple complet : validation d'un acces Web », c'est-a-dire exactement cette regle.",
+  "validation": "La reserve 2 de la proposition subsiste : le fragment #49 pourrait AUSSI rester au §18, ou il joue le role d'exemple d'IA symbolique, et ou il est suivi de son pseudo-code. Deux destinations plausibles ; le §17.5 est retenu parce que c'est la qu'est l'emplacement vide. CONSEQUENCE : le pseudo-code du §18 — « si authentifié ET autorisé : permettre l'accès sinon : refuser l'accès » — se retrouve separe de sa formule. Il est conserve tel quel. A noter aussi : « Étape 3 — Implémentation conceptuelle » du §17.5 est vide, et ce pseudo-code en serait le contenu naturel ; l'hypothese est consignee pour un lot 5, elle n'est pas appliquee ici."
+ },
+ {
+  "identifiant": "A4-13b",
+  "confiance": "moyenne",
+  "ancien": "Je ne vais donc pas lui attribuer une signification arbitraire.  A   ∧   R   →   P  si authentifié ET autorisé",
+  "nouveau": "Je ne vais donc pas lui attribuer une signification arbitraire.  si authentifié ET autorisé",
+  "justification": "Retrait du fragment #49, recase au §17.5 (A4-13).",
+  "validation": "Le pseudo-code qui suit reste en place. Voir la reserve de A4-13 : si le porteur prefere laisser la formule au §18, cette edition et A4-13 sont a annuler ensemble."
+ }
+]

@@ -1,9 +1,21 @@
 # DOMAINE A — LOT 4 : CALCULABILITÉ, VÉRIFICATION, TYPES, APPLICATIONS (§11–§18, §30)
 
-**Date :** 2026-10-20 — **Statut :** **PROPOSITION — non appliquée, en attente de validation**
+**Date :** 2026-10-20 — **Statut :** **APPLIQUÉ LE 2026-10-20** (compte rendu en bas de document)
 **Document source :** `Maths-vers-Informatiques/DOCUMENT MAÎTRE A — LOGIQUE ET FONDEMENTS DE L'INFORMATIQUE.md`
 **Inventaire de référence :** `domaine-A-inventaire-fragments.md`
 **Contenu du lot :** 13 propositions — **9 T1**, **3 T2**, **1 T3**
+
+> ## ✅ LOT APPLIQUÉ LE 2026-10-20 (compte rendu en bas de document)
+>
+> **Statut : APPLIQUÉ.** Diff livré : `livrables/domaine-A-lot4.gitdiff` — diff
+> **incrémental**, à appliquer **après** les lots 1, 2 et 3 ; éprouvé par
+> `git apply --check` sur l'état post-lot 3 reconstruit. Journal :
+> `domaine-A-lot4.journal.json`. Générateur : `build_lot_A_4.py`.
+>
+> **19 substitutions** sur **11 propositions**. Deux n'entraînent volontairement
+> **aucune édition** (A4-05, A4-14). Une proposition supplémentaire a été ajoutée
+> en cours de route (**A4-15**, §11.1) et une seconde (**A4-16**, §12.2) : deux
+> emplacements vides que l'inventaire avait manqués.
 
 **Légende des actions :** **Combler** (emplacement vide explicite) · **Réattribuer** (fragment à déplacer) ·
 **Reformater** (contenu en place, structure à reconstituer).
@@ -249,3 +261,85 @@ questions : sans indice supplémentaire, attribuer `P → Q` à l'une d'elles re
 ---
 
 **Rien de ce lot n'a été appliqué.**
+---
+
+## Compte rendu d'application (2026-10-20)
+
+### Deux réserves de la proposition levées par la source
+
+La proposition présentait comme **proposé** l'appariement des lettres à leur rôle.
+C'était trop prudent : **la source porte elle-même la légende**, accolée à chaque
+emplacement vide.
+
+| Section | Ce que la source écrit | Conséquence |
+|---|---|---|
+| §12.2 | « _ : précondition ; _ : commande ou programme ; _ : postcondition. » | `P`/`C`/`Q` **attestés** |
+| §17.5 | « _ : utilisateur authentifié ; _ : utilisateur autorisé ; _ : accès permis. » | `A`/`R`/`P` **attestés** |
+
+**Ces propositions passent de T2 à T1. Aucun appariement n'est inventé : il est
+donné par le texte.** Le lot est plus solide que la proposition initiale.
+
+### Une proposition ajoutée en cours de route
+
+**A4-15 — §11.1 « Une question typique : » était vide, et l'inventaire l'avait
+manqué.** Le §11.3 portait une phrase entière, insérée entre « tandis » et
+« que », qui définit la **calculabilité** et non la semi-décidabilité. C'est
+exactement la question typique du §11.1. Emplacement vide explicite **et** phrase
+coupée en deux : les deux preuves réunies. **Le §11.3 est ressoudé**, ce que le
+lot 3 avait laissé en attente précisément parce que cette destination relevait du
+§11, donc du lot 4.
+
+### Non-perte : 31 tokens suivis un à un
+
+| Fragment gisant | Tokens | Destination |
+|---|---|---|
+| §11.3 | une phrase entière | §11.1 |
+| §11.6 | `A ≤ B` · `B` · `A` | §11.6 (forme, puis les deux emplacements) |
+| §12.2 | `{P} C {Q}` | §12.3 |
+| §12.2 | `P` · `C` · `Q` | §12.2 ligne de légende |
+| §12.2 | `P` · `C` · `Q` | §12.2 phrase « Si … alors » |
+| §13.5 | `n` · `n` | §13.5 |
+| §15.3 | `n` · `2ⁿ` | §15.3 |
+| §15.7 | `f(x, 3) et f(2, y)` · `x = 2` · `y = 3` | §15.6 |
+| §16.5 | formule décomposée | §16.5 (recomposée) |
+| §17.5 | `A` · `R` · `P` | §17.5 modélisation |
+| §18 | `A ∧ R → P` | §17.5 « Règle : » |
+
+**Un seul token n'a pas de destination établie :** le `n` orphelin du §15.6. Il
+pourrait aussi bien revenir au §15.3 (« croît exponentiellement avec _ »). Il est
+**conservé et signalé**, non supprimé.
+
+### Réserve maintenue sur A4-13
+
+Deux destinations étaient plausibles pour `A ∧ R → P`. Le §17.5 est retenu parce
+que c'est là qu'est l'emplacement vide. **Conséquence assumée :** le pseudo-code du
+§18 — « si authentifié ET autorisé : permettre l'accès sinon : refuser l'accès » —
+se retrouve séparé de sa formule. Il est conservé tel quel. Si le porteur préfère
+laisser la formule au §18, les éditions A4-13 et A4-13b sont à annuler ensemble.
+
+**Hypothèse consignée, non appliquée :** « Étape 3 — Implémentation conceptuelle »
+du §17.5 est vide, et ce pseudo-code en serait le contenu naturel. Renvoi au lot 5.
+
+### Aucune restitution, et c'est la conclusion
+
+| Proposition | Raison |
+|---|---|
+| **A4-05** · `2 + 3 × 4` | **pas déplacé**, il est à sa place. Aucune modification : juger de la priorité des opérations relève de l'édition, pas de la restauration. |
+| **A4-14** · `P → Q` au §30 | inséré entre les questions 18 et 19, il ne correspond à aucune des deux. L'attribuer à l'une des vingt questions reviendrait à **inventer**. Rien n'est appliqué. |
+
+### Trois emplacements vides repérés hors périmètre, non traités
+
+§13.3 et §14.2 (« Exemple conceptuel : » vides) et §17.5 « Étape 3 ». Ils sont
+consignés pour un lot 5 : les traiter ici aurait supposé des attributions que rien
+n'atteste.
+
+### Vérifications
+
+| Contrôle | Résultat |
+|---|---|
+| Diagnostic préalable (`python3 lot_commun.py build_lot_A_4.py`) | 19/19 sous-chaînes uniques |
+| Mojibake | 0 |
+| `git apply --check` sur l'état post-lot 3 reconstruit | OK |
+| Diff incrémental livré | 62 lignes, `livrables/domaine-A-lot4.gitdiff` |
+| Chaîne de volumes | 77 970 → 78 776 → 78 789 → 78 758 → **78 767** |
+| Relecture in situ | §11.1, §11.3, §11.6, §12.2, §12.3, §15.6, §16.5, §17.5 relus |
