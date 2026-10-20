@@ -110,6 +110,29 @@ def entre(deb, fin, nouveau):
     return (texte[i:j + len(fin)], deb + nouveau + fin)
 
 
+def retirer(deb, fin, remplacement=""):
+    """Construit (ancien, nouveau) en supprimant tout l'intervalle, `deb` compris.
+
+    A ne pas confondre avec `entre()`, qui CONSERVE les deux marqueurs et ne
+    remplace que l'intervalle entre eux. Ici `deb` disparait avec le contenu ;
+    `fin` est conserve et `remplacement` est insere devant lui.
+
+    Sert au cas frequent ou un fragment a supprimer n'a pas de marqueur amont
+    qui doive survivre — par exemple une pile situee entre la fin d'un bloc et
+    le titre de la section suivante.
+
+        ("A5-01b", *retirer("```\n\n", "8.1 Ensembles"), H, ...)
+    """
+    texte = _lire()
+    i = texte.find(deb)
+    if i < 0:
+        raise ValueError("marqueur de debut introuvable : %r" % deb)
+    j = texte.find(fin, i + len(deb))
+    if j < 0:
+        raise ValueError("marqueur de fin introuvable : %r" % fin)
+    return (texte[i:j + len(fin)], remplacement + fin)
+
+
 def diagnostiquer(edits, tranche=None):
     """Compte les occurrences de chaque sous-chaine SANS rien ecrire.
 

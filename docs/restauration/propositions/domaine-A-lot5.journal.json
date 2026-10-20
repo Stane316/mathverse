@@ -1,0 +1,58 @@
+[
+ {
+  "identifiant": "A5-02",
+  "confiance": "moyenne",
+  "ancien": "il suffit de trouver un   tel que :",
+  "nouveau": "il suffit de trouver un `a` tel que :",
+  "justification": "Emplacement vide : trois espaces en pleine phrase, signature retenue par la grille. Le token `a` etait conserve comme non rattache au §6.7, section des regles d'inference ou il n'a aucune place. Le §6.5 est la section du contre-exemple, et sa phrase en decrit le schema.",
+  "validation": "Ce lot ne case que DEUX tokens pour DEUX emplacements. Le troisieme orphelin, `∀x, P(x)`, n'a pas d'emplacement : il demeure conserve et signale. On ne le case pas en force."
+ },
+ {
+  "identifiant": "A5-03",
+  "confiance": "moyenne",
+  "ancien": "tel que :  Réflexe :",
+  "nouveau": "tel que : `¬P(a)`  Réflexe :",
+  "justification": "Emplacement vide : deux espaces suivis d'un autre libelle, meme signa- ture que le §10.1. La source designe elle-meme le contenu : « tel que : » appelle une propriete niee. `¬P(a)` etait orphelin au §6.7.",
+  "validation": null
+ },
+ {
+  "identifiant": "A5-02b",
+  "confiance": "haute",
+  "ancien": "*Fragments non rattachés, conservés faute de destination établie :* `∀x, P(x)` · `a` · `¬P(a)` La distinction devient importante",
+  "nouveau": "*Fragments non rattachés, conservés faute de destination établie :* `∀x, P(x)` · `a` · `¬P(a)`*Fragment non rattaché, conservé faute de destination établie :* `∀x, P(x)`  La distinction devient importante",
+  "justification": "Mise a jour de la note du §6.7 : `a` et `¬P(a)` sont desormais recases au §6.5, il n'y a plus lieu de les signaler. `∀x, P(x)` reste sans destination et reste signale. Aucun token n'est supprime.",
+  "validation": null
+ },
+ {
+  "identifiant": "A5-01",
+  "confiance": "haute",
+  "ancien": "Dans une recherche du maximum d’un tableau, l’invariant peut affirmer :  Cet invariant permet de raisonner",
+  "nouveau": "Dans une recherche du maximum d’un tableau, l’invariant peut affirmer : « Après avoir examiné les `i` premiers éléments, la variable max contient le maximum de ces éléments. »  Cet invariant permet de raisonner",
+  "justification": "L'emplacement du §7.4 nomme exactement le contenu : une recherche du maximum d'un tableau, et un invariant. La phrase est verbatim dans la source, en tete du §8 — RIEN N'EST REDIGE. Le `i`, separe en fin de pile, revient a sa place dans « les _ premiers elements ». `max` etait deja en place et n'est pas touche.",
+  "validation": "Le §7.4 relevant du lot 2, deja livre, ce point avait ete renvoye ici : on ne redefait pas un diff deja livre pour y ajouter une restitution trouvee apres coup. Ce lot la reprend, et le diff est incremental."
+ },
+ {
+  "identifiant": "A5-01b",
+  "confiance": "haute",
+  "ancien": "return n × factorielle(n - 1)\n```\n\nAprès avoir examiné les   premiers éléments, la variable   max   contient le maximum de ces éléments.  i\n\n8.1 Ensembles et cardinalité",
+  "nouveau": "return n × factorielle(n - 1)\n```\n\n8.1 Ensembles et cardinalité",
+  "justification": "Retrait de la phrase egarée, recasee au §7.4 (A5-01). Le §8 est « ENSEMBLES, FONCTIONS ET DENOMBRABILITE » : une phrase sur le maximum d'un tableau n'y a rien a faire. Le bloc de code factorielle, lui, reste en place : il est bien a sa section.",
+  "validation": "DEUX ERREURS COMMISES AVANT D'Y ARRIVER, consignees parce qu'elles revelent une limite de l'outillage. (1) Premier montage : marqueur amont « Après avoir examiné ». Or `entre()` CONSERVE ses deux marqueurs — la phrase restait donc en tete du §8, accolee au titre de section. (2) Second montage : passage a `retirer()`, censee supprimer l'intervalle. Elle supprime AUSSI le marqueur amont, qui etait la fin du bloc de code : le bloc a ete deregle. La zone a etereparee a la main, puis le constructeur a ete REJOUE DEBOUT depuis la sauvegarde pre-lot-5 et compare octet par octet a l'etatrepare : identiques. Le montage retenu est `entre()` avec un marqueur amont qui doit survivre."
+ },
+ {
+  "identifiant": "A5-04",
+  "confiance": "haute",
+  "ancien": "d’un langage de programmation.  Exemple conceptuel :  Une grammaire réelle doit aussi",
+  "nouveau": "d’un langage de programmation.  Exemple conceptuel :\n\nExpression → Expression + Terme\nExpression → Terme\nTerme → nombre\n\nUne grammaire réelle doit aussi",
+  "justification": "Trois raisons convergent. (1) L'emplacement est vide : « Exemple conceptuel : » est suivi d'une MISE EN GARDE (« Une grammaire reelle doit aussi preciser… »), non d'un exemple. (2) Le contenu est une grammaire : trois productions, avec terminaux et non terminaux — c'est la definition de l'exemple que le §14.2 appelle. (3) Il git dans la section des AUTOMATES FINIS, ou il coupe le paragraphe avant « Comment les reconnaitre ? ».",
+  "validation": "La mise en forme une-production-par-ligne est PROPOSEE : le fragment est a plat sur une ligne, et ce rendu, usuel pour une grammaire, n'est pas atteste."
+ },
+ {
+  "identifiant": "A5-04b",
+  "confiance": "haute",
+  "ancien": "Ils servent notamment à reconnaître des langages réguliers.  Expression → Expression + Terme Expression → Terme Terme   → nombre\n\nComment les reconnaître ?",
+  "nouveau": "Ils servent notamment à reconnaître des langages réguliers.\n\nComment les reconnaître ?",
+  "justification": "Retrait des productions grammaticales, recasees au §14.2 (A5-04). Elles coupaient le paragraphe des automates finis ; le retrait le ressoude.",
+  "validation": null
+ }
+]
