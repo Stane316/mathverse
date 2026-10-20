@@ -44,6 +44,13 @@ EDITS = [
      "appelle une propriete niee. `¬P(a)` etait orphelin au §6.7.",
      None),
 
+    # TROISIEME ERREUR DE MONTAGE (lot 5) : `entre()` conserve son marqueur
+    # amont. Prendre la note elle-meme comme marqueur amont l'a donc laissee en
+    # place, et la nouvelle note s'est retrouvee COLLEE A LA SUITE de
+    # l'ancienne — le §6.7 affichait deux notes. Le marqueur amont correct etait
+    # la phrase qui precede : « `⊨` indique une conséquence sémantique. ».
+    # Corrige par A5-02c dans `build_lot_A_6.py`. Le montage ci-dessous est
+    # conserve tel qu'il a ete execute : c'est le compte rendu du lot.
     ("A5-02b",
      *entre("*Fragments non rattachés, conservés faute de destination établie :*"
             " `∀x, P(x)` · `a` · `¬P(a)`", "La distinction devient importante",

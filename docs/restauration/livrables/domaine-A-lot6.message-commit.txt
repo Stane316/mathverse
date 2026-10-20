@@ -1,0 +1,63 @@
+Domaine A — lot 6 : emplacements vides sans token catalogue, et correction d'un lot anterieur
+
+Quatre restitutions, une correction, zero invention, zero perte. Deux
+decisions anterieures sont renversees, chacune pour une raison nouvelle.
+
+Ce que fait le lot
+  - §7.3  : l'emplacement « Exemple conceptuel : » de la recursivite etait
+            VIDE, et rien ne l'annoncait. Ce qui le suit nomme exactement
+            les deux branches du code factorielle : « un ou plusieurs cas
+            de base » = `if n = 0: return 1`, et « un appel recursif qui
+            progresse vers un cas de base » = `return n × factorielle(n-1)`.
+            Le bloc de code, egare en tete du §8, y revient.
+  - §8    : le tas qui precedait cette section contenait deja, demontre au
+            lot 5, la phrase d'invariant du §7.4. Il est etabli que ce tas
+            etait un debordement de la FIN du §7, et non de son debut.
+            Le §8 ne traite plus que de son sujet.
+  - §13.3 : `Utilisateur = (nom, email, age)` est sans ambiguite un type
+            PRODUIT. Il comble le premier emplacement. Le second emplacement
+            est CONSERVE : le document ne contient aucun token de type
+            somme disponible.
+
+Renversements, et pourquoi
+  - A3-08/09 (lot 3) traitait le code factorielle comme un reformatage sur
+    place. C'etait raisonnable tant que l'emplacement vide du §7.3 n'etait
+    pas repere. Il l'est. Reversible : A6-01 et A6-01b s'annulent ensemble.
+  - A5-05 (lot 5) refusait les deux emplacements du §13.3, la pile gitant
+    APRES la description du type somme. Le CONTRENU tranche contre la
+    POSITION, celle-ci s'etant revelee peu fiable a chaque lot. Renversement
+    PARTIEL : le premier emplacement seulement.
+
+Correction d'un lot anterieur
+  A5-02b (lot 5) etait montee avec `entre()`, qui conserve son marqueur
+  amont : la note du §6.7 s'est retrouvee en DOUBLE, l'ancienne citant
+  encore `a` et `¬P(a)`. Troisieme occurrence du meme piege en six lots.
+  Le controle de non-perte du lot 5 ne pouvait pas la voir : AUCUN token
+  n'etait perdu, ils etaient cites deux fois. Detectee par un comptage
+  d'occurrences. Aucun token supprime : `a` et `¬P(a)` sont bien recases
+  au §6.5.
+
+Methode : chercher les emplacements, pas les fragments
+  `inventorier_fragments.py` rapporte 103 fragments et est INUTILISABLE en
+  l'etat : l'essentiel sont des separateurs de tableaux et des notations en
+  place. Un scan des triples espaces donne 111 occurrences, noyees dans la
+  mise en page de listes. Deux methodes lui sont substituees : regex ciblee
+  sur les FORMES connues (2 tas : `n   n`, `P   →   Q`), et detection des
+  emplacements vides. Puis, decisivement, VIDER ET LIRE chaque section :
+  l'emplacement du §7.3 n'a ete trouve par aucun scan.
+
+Verification
+  - mojibake : 0
+  - diagnostic preventif : 5/5 sous-chaines uniques
+  - diff incremental (lot 5 -> lot 6) : 41 lignes, `git apply --check` OK
+  - chaine de volumes : 77970 -> 78776 -> 78789 -> 78758 -> 78767 -> 78849
+    -> 78756 (le recul vient de la note dedoublee, pas d'une perte)
+  - points non retenus : §30, §9.3, §17.5, §6.7, §3.2, §15.6 — 6/6 intacts
+  - couverture des autres documents : 1146 blocs, 78 sans contenu, ecart nul
+  - rejeu depuis la sauvegarde pre-lot 6, correction incluse : conforme
+
+Restent volontairement en l'etat, faute de token disponible
+  Douze emplacements vides sont recenses et documentes dans la fiche :
+  §30 Q2, §3.x (3), §4.x (2), §4.5, §5.x, §9.3, §12.3, §16.6 (2),
+  §13.3 (2e). S'y ajoutent l'etape 3 du §17.5, redactionnelle, et les
+  fragments conserves par principe deja documentes.
