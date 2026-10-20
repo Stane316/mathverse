@@ -281,37 +281,46 @@ question vers l'aptitude à l'IA et la documentation plutôt que vers la preuve 
 
 ## 10. Prochaine étape
 
-⚠️ **Cette section a été périmée puis réécrite le 2026-10-19.** Elle annonçait encore la rédaction
-des fiches React Bits / shadcn/ui / Math-To-Manim, toutes livrées depuis.
+⚠️ **Cette section a été périmée deux fois (2026-10-19) puis réécrite le 2026-10-20.** Elle
+annonçait encore la rédaction des fiches React Bits / shadcn/ui / Math-To-Manim, toutes livrées
+depuis.
 
-État réel : les cinq livrables sont établis, l'étude de demande est engagée. **Ce qui reste est
-bloqué sur des décisions, pas sur du travail :**
+**État réel au 2026-10-20.**
 
-1. **Réviser la synthèse des différenciateurs** à la lumière de `A10-etude-de-demande.md` — les
-   sept différenciateurs y sont présentés comme des atouts, alors que leur demande n'est établie
-   que pour trois d'entre eux (documentation, IA, mesure). **C'est le préalable à toute clôture.**
-2. **Clôturer la phase 2** par un rapport de fin de phase au format des 16 points (§16 du cahier
-   des charges), qui consolidera les cinq livrables, les quatre points ouverts et les suites.
-3. **Lever les quatre points ouverts** du registre des licences (§7.4).
-4. **Décider du sort de la phase 1** — elle n'est ni achevée ni formellement suspendue (§10.1).
+| # | Action | État |
+|---:|---|---|
+| 1 | Réviser la synthèse des différenciateurs à la lumière de `A10-etude-de-demande.md` | ✅ **faite** — §2.0 « Verdict de demande » ajouté |
+| 2 | Clôturer la phase 2 par un rapport au format des 16 points | ✅ **faite** — `A9-rapport-fin-de-phase-2.md` |
+| 3 | Lever les quatre points ouverts du registre des licences (§7.4) | ❌ **ouvert** — toujours pendant |
+| 4 | Décider du sort de la phase 1 | ✅ **tranché** — voie (b), voir §10.1 |
 
-### 10.1 ⚠️ Une incohérence à résoudre : la phase 1 n'est ni achevée ni suspendue
+**Reste donc une seule action de la phase 2 : lever les quatre points ouverts.** Le reste du
+travail est en phase 1.
 
-Les critères de validation de la phase 1 (A6 §6) **ne sont pas remplis** : 5 fiches sur 21
-domaines, l'index n'existe pas, le registre des équations à réécrire n'est pas consolidé, les 8
-documents de littératie ne sont pas traités. Pourtant `A8` porte toujours la mention
-« Phase 1 — audit documentaire (**en cours**) », et nous travaillons en phase 2.
+### 10.1 Phase 1 — décision prise et reprise engagée
 
-La décision du porteur du 2026-10-19 a réduit le périmètre du **chantier de restauration**, mais
-elle n'a rien statué sur le reste de la phase 1. **Trois voies, non tranchées :**
+L'incohérence signalée ici les 18 et 19 octobre **est levée** : le porteur a choisi, le
+2026-10-19, la voie **(b)** — reprendre la phase 1 en entier, ni suspension, ni réduction, ni
+clôture en l'état. L'ordre est **A → U** pour les documents de maths, puis les 8 documents de
+littératie.
 
-- **(a)** suspendre formellement la phase 1 et le consigner, en listant ce qui reste ;
-- **(b)** la reprendre maintenant : 24 fiches, 15 documents à instruire dans l'ordre A → U, plus
-  les 8 de littératie ;
-- **(c)** la réduire à ce qui alimente directement la phase 3 (l'index et le registre des
-  équations), et reporter les fiches.
+**Le préalable technique est rempli.** La procédure de reconstitution du clone et de réapplication
+des 17 diffs (`docs/restauration/CLOTURE-CHANTIER.md` §6) a été éprouvée deux fois : 17/17 diffs
+appliqués sans erreur, table de couverture reproduite à l'identique (78, écart nul).
 
-**Tant que ce point n'est pas tranché, l'avancement affiché par les documents est faux.** 
+**Avancement : 6 fiches sur 29 documents** (K, L, D, N, I, puis A). Restent **23 documents** :
+14 de maths (B, C, E, F, G, H, J, M, O, P, Q, R, S, U), les 8 de littératie, et le README.
+
+⚠️ **Point d'attention pour la suite.** Les quatre documents **A, B, C, D** sont les seuls du
+corpus dépouillés de toute structure Markdown et de tout LaTeX (0 titre, 0 bloc d'équation,
+0 puce, contre 197 à 359 titres et 6 à 332 blocs pour les autres). Leurs formules n'ont pas été
+supprimées mais **déplacées** hors de leur emplacement. La méthode applicable aux quatre est
+fixée au §11 de `docs/audit/fiches/domaine-A-logique-et-fondements.md`. A est traité ; B, C et D
+suivent le même protocole.
+
+**Non traité à ce jour :** l'index général, le registre consolidé des équations à réécrire, les 8
+documents de littératie, et le README du corpus. Les critères de validation de la phase 1 (A6 §6)
+**ne sont donc toujours pas remplis**.
 
 ---
 
