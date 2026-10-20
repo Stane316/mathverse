@@ -49,7 +49,16 @@ traitement fait l'objet du lot 4 du plan A6 avec A, B et C. **Il sort donc du p�
 
 ## 3. État chiffré au moment de la clôture
 
-Mesuré le 2026-10-19, après application du lot 6b, par lecture directe des fichiers restaurés.
+Mesuré le 2026-10-19 après le lot 6b, puis **vérifié le 2026-10-19** sur un clone neuf après
+réapplication des 17 diffs (§6.1).
+
+> ⚠️ **DÉFINITION DU COMPTAGE — à lire avant tout usage de ce tableau.**
+> Un « bloc display » est ici compté par la règle **`\[` en début de ligne**. Cette règle donne
+> **1 137** blocs. Une règle plus large — toute paire `\[…\]`, y compris lorsque le délimiteur
+> ouvrant n'ouvre pas la ligne — donne **1 146**. **Les deux chiffres sont exacts sous leur
+> définition**, et ils diffèrent parce que 9 blocs n'ouvrent pas leur ligne. La figure de 1 137
+> publiée jusqu'ici ne précisait pas sa règle : c'est un défaut, désormais corrigé.
+> **Ne jamais comparer deux chiffres obtenus sous des définitions différentes.**
 
 | Document | Blocs display | Sans contenu avant | Sans contenu après | Inconnues | Lacunes |
 |---|---:|---:|---:|---:|---:|
@@ -71,11 +80,15 @@ Définitions retenues (rappel, elles ont fait l'objet de deux corrections) :
 le domaine I et formaient une série unique au §178 « RELATION ENTRE G, H ET I ». La quatrième a
 été retrouvée textuellement au §173 du même document.
 
-> ⚠️ **Provenance des chiffres.** Le clone du dépôt de connaissances a été détruit par la
-> réinitialisation du sandbox du 2026-10-19 (septième incident). Ces valeurs ne peuvent donc plus
-> être **re-mesurées** ; elles sont reprises de la mesure effectuée après le lot 6b et consignée
-> dans `README.md` §9 et `../audit/A8-synthese-et-point-de-reprise.md` §7. Toute reprise du
-> chantier devra les vérifier à nouveau sur les fichiers (§6).
+> ✅ **Provenance des chiffres — levée le 2026-10-19.** La réserve qui figurait ici
+> (impossibilité de re-mesurer après la destruction du clone) **a été levée** : le clone a été
+> reconstitué et les 17 diffs réappliqués (§6.1). **La mesure directe reproduit la table à
+> l'identique** : 78 blocs sans contenu, écart nul sur les cinq documents.
+>
+> ⚠️ **Une correction subsiste** : le total de **1 137 blocs** annoncé au §2 est exact sous la règle
+> « délimiteur en début de ligne », mais la règle n'était pas précisée. Sous la règle large, le
+> total est **1 146** (N comptant 254 blocs et non 245). Les deux figures sont désormais énoncées
+> avec leur définition.
 
 ---
 
@@ -205,6 +218,34 @@ connaissance reste ainsi reproductible document par document.
 
 ---
 
+## 6.1 La procédure a été éprouvée — résultats
+
+Exécutée le 2026-10-19 sur un clone neuf (`f0f5e2d`), dans l'ordre du §6, avec `git apply --check`
+avant chaque application.
+
+| Vérification | Résultat |
+|---|---|
+| Diffs appliqués | **17 / 17**, sans erreur |
+| Contrôle d'absence de mojibake | **0** sur les cinq documents |
+| Table « sans contenu » du §3 | **reproduite à l'identique** — 78, écart nul sur K, L, I, N et J |
+| Équilibre des délimiteurs `\[` / `\]` | **0** sur les cinq documents — aucune structure cassée |
+
+**La procédure est donc valide.** L'outil `tools/restauration/mesurer_couverture.py` permet de la
+rejouer : il compare la mesure à la table publiée et signale tout écart.
+
+### Une anomalie expliquée
+
+La réapplication a fait apparaître une différence de comptage : **N perdait 4 blocs et J 1 bloc**
+entre l'état avant et l'état après restauration. L'explication a été trouvée, et elle est
+rassurante : les lignes supprimées contenaient des **délimiteurs imbriqués**, résidus de la
+dégradation — par exemple `\[ {xp_} \[f_(x)\] \]` ou `\[ DP\[s\] = s \]`.
+
+Autrement dit : **ces « blocs perdus » n'étaient pas des blocs, mais des artefacts que les
+restaurations ont supprimés à juste titre.** L'équilibre des délimiteurs, vérifié à zéro sur les
+cinq documents, confirme qu'aucune structure n'a été endommagée.
+
+---
+
 ## 7. Corrections de chiffres publiés
 
 Trois figures diffusées pendant le chantier se sont révélées fausses ou ambiguës. Elles sont
@@ -230,6 +271,13 @@ Le plan A6 §4 répartit les domaines en cinq lots. Le domaine **P — Cryptogra
 66 équations affichées, soit le 4ᵉ document le plus volumineux du corpus) **n'apparaît dans
 aucun**. Les lots couvrent 19 des 20 documents réels. Cette lacune du plan est à corriger lors de
 la reprise ; P est donc ajouté à la liste du §5.1.
+
+### 7.3bis Le total de 1 137 blocs était exact, mais sa règle n'était pas énoncée
+
+Vérifié le 2026-10-19 (§6.1) : 1 137 blocs sous la règle « délimiteur en début de ligne »,
+**1 146** sous la règle large. La figure publiée n'était pas fausse — elle était **sans
+définition**, ce qui la rendait incomparable. C'est la quatrième occurrence du même défaut dans ce
+chantier : un chiffre publié sans la règle qui l'a produit.
 
 ### 7.3 Le test « moins de deux caractères » n'est pas une mesure
 
