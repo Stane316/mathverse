@@ -404,3 +404,9 @@ restaure rien sans validation lot par lot.
 **Référence de méthode :** la procédure de reconstitution du clone et de réapplication des 17 diffs est dans
 `docs/restauration/CLOTURE-CHANTIER.md` §6, validée au §6.1. Le profilage de ce document est reproductible par
 `tools/audit-phase1/profil_degradation.py`.
+
+**Suite du travail sur A — propositions de restauration, en attente de validation.** L'inventaire des 67
+fragments déplacés et les 52 propositions de restitution, réparties en quatre lots selon trois paliers de
+confiance, sont dans `docs/restauration/propositions/` : `domaine-A-inventaire-fragments.md` (inventaire,
+tri, option de validation retenue) puis `domaine-A-lot1.md` à `domaine-A-lot4.md`. **Aucune restitution n'a
+été appliquée** : elles sont soumises à la validation du porteur, par palier.
