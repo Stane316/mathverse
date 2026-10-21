@@ -34,9 +34,21 @@ Que contient réellement la collection, qu'est-ce qui est utilisable pour produi
 |---|---|---|
 | **Lot 1** | **K** (fait) · D · I · L · N | couverture directe des cinq familles de composants prioritaires |
 | **Lot 2** | C · G · J · M · O | socles transverses : algèbre linéaire, probabilités, optimisation, information, complexité |
-| **Lot 3** | E · F · H · Q · R · S · U | apports indirects (graphes, combinatoire, statistiques, logiques) |
+| **Lot 3** | E · F · H · **P** · Q · R · S · U | apports indirects (graphes, combinatoire, statistiques, cryptographie, logiques) |
 | **Lot 4** | A (maître) · B · C · D | **traitement spécial** : structure et équations détruites, méthode dédiée à définir |
 | **Lot 5** | `Ai Technical Litteracy` 01–08 | périmètre décidé par vous : documents utiles au site, à la DX, à la performance et à l'accessibilité |
+
+**Correction du 2026-10-21 — P assigné au lot 3.** Le domaine **P — Cryptographie** (4 120 lignes,
+319 titres, 66 équations display, 28 algorithmes ; 3,0 % d'équations incomplètes selon A7 — soit le
+**4ᵉ document le plus volumineux** du corpus) **n'était assigné à aucun lot**. La table ne couvrait
+que 19 des 20 documents réels. P est placé au lot 3 pour deux raisons : (i) il ne couvre aucune des
+cinq familles de composants prioritaires (lot 1), et n'est pas un socle transverse au sens du lot 2 ;
+(ii) le plan d'achèvement le range déjà parmi les « apports indirects » avec O, F et Q.
+
+**Hors lot, volontairement :** la lettre **T n'existe pas** dans le corpus. Elle donne lieu à une
+*fiche d'absence* (critère 1 du §6), qui n'entre dans aucun lot de traitement. Les cinq lots
+couvrent donc **20 documents réels sur 20**, plus les 8 documents de littératie — et la 29ᵉ fiche
+est celle de l'absence de T.
 
 **Traitement spécial pour A, B, C, D :** ces quatre documents n'ont ni titres ni équations (103 à 133 lignes pour 58 à 82 Kio). Une lecture par extraction d'arborescence est impossible. Deux options, à trancher : (i) échantillonnage par blocs + reconstruction manuelle du plan ; (ii) recherche d'une version antérieure non dégradée auprès de vous (solution préférable si elle existe).
 

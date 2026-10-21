@@ -260,7 +260,7 @@ dépendance**.
 | **R2** | Rédiger la fiche licence de React Bits en priorité, et qualifier le périmètre exact de la clause Commons Clause vis-à-vis d'une « configuration exportable » par composant | **élevé** | **haute** | faible | **moyen** (lecture juridique) | aucune |
 | **R3** | ~~Instruire la question de la demande~~ — **engagée le 2026-10-19** sur décision du porteur. Première passe livrée : `A10-etude-de-demande.md`. **Résultat nuancé** : documentation et IA sont des critères mesurés, l'explication mathématique n'apparaît dans aucun guide de choix. Voir §7.8 | — | — | — | — | — |
 | **R6** | ~~Registre des licences~~ — **fait** (livrable 5) | — | — | — | — | — |
-| **R7** | Vérifier **Paper Shaders** (Apache 2.0) et **OpenShaders** (MIT) : deux candidats libres apparus en cours de collecte, non encore étudiés en détail | **élevé** | moyenne | faible | faible | aucune |
+| **R7** | ~~Vérifier **Paper Shaders** (Apache 2.0) et **OpenShaders** (MIT)~~ — **faite le 2026-10-21**, fiche F11 §17. **Paper Shaders** : Apache 2.0 sans piège, 3 793 ★, 30 effets, zéro dépendance vérifiée, `llms.txt` déployé, registry shadcn, mais `0.0.x` et sans explication mathématique. **OpenShaders** : ⚠️ **dépôt sans code** (3 commits, 473 Kio, arrêté depuis 42 j), et licence **par créateur** — même risque que Shadertoy | — | — | — | — | — |
 | **R4** | Vérifier les homonymes `MathVerse` : ils occupent le nom et le sujet | moyen | moyenne | faible | faible | aucune |
 | **R5** | Traiter séparément les deux licences copyleft faible relevées (p5.js LGPL-2.1, JSXGraph LGPL-3.0) dans le registre des licences | moyen | basse | faible | faible | R1 |
 
@@ -293,6 +293,7 @@ depuis.
 | 2 | Clôturer la phase 2 par un rapport au format des 16 points | ✅ **faite** — `A9-rapport-fin-de-phase-2.md` |
 | 3 | Lever les quatre points ouverts du registre des licences (§7.4) | ❌ **ouvert** — toujours pendant |
 | 4 | Décider du sort de la phase 1 | ✅ **tranché** — voie (b), voir §10.1 |
+| 5 | Vérifier Paper Shaders et OpenShaders (**R7**) | ✅ **faite le 2026-10-21** — fiche F11 §17 |
 
 **Reste donc une seule action de la phase 2 : lever les quatre points ouverts.** Le reste du
 travail est en phase 1.
