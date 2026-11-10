@@ -1,0 +1,125 @@
+diff --git "a/Maths-vers-Informatiques/DOCUMENT MA\303\216TRE A \342\200\224 LOGIQUE ET FONDEMENTS DE L\342\200\231INFORMATIQUE.md" "b/Maths-vers-Informatiques/DOCUMENT MA\303\216TRE A \342\200\224 LOGIQUE ET FONDEMENTS DE L\342\200\231INFORMATIQUE.md"
+index e78b8fe..8d681c7 100644
+--- "a/Maths-vers-Informatiques/DOCUMENT MA\303\216TRE A \342\200\224 LOGIQUE ET FONDEMENTS DE L\342\200\231INFORMATIQUE.md"	
++++ "b/Maths-vers-Informatiques/DOCUMENT MA\303\216TRE A \342\200\224 LOGIQUE ET FONDEMENTS DE L\342\200\231INFORMATIQUE.md"	
+@@ -4,19 +4,107 @@ Niveau   Question  Logique mathématique   Qu’est-ce qui est vrai, faux, démo
+ 
+ formaliser les conditions d’un problème ;  déduire des conséquences à partir de faits ;  représenter les règles d’un programme ;  spécifier le comportement attendu d’un logiciel ;  prouver certaines propriétés d’un algorithme ;  détecter des erreurs de conception ;  comprendre les systèmes de types ;  analyser les langages et les compilateurs ;  construire des systèmes de raisonnement symbolique ;  comprendre les limites fondamentales de l’automatisation.  1.4 Les grandes familles du domaine  A1   Logique propositionnelle  Représenter et combiner des propositions vraies ou fausses.  A2   Logique des prédicats  Raisonner sur des objets, leurs propriétés et les relations entre eux.  A3   Démonstration et raisonnement  Implication, équivalence, induction, contradiction, règles d’inférence.  A4   Ensembles, relations et fonctions  Décrire les objets, les correspondances, les relations et les tailles d’ensembles.  A5   Récursion, invariants et correction  Comprendre la structure des programmes et raisonner sur leur exécution.  A6   Calculabilité et décidabilité  Étudier ce qui peut être résolu par un algorithme.  A7   Dénombrabilité et limites logiques  Comparer les tailles d’ensembles et comprendre certains résultats d’impossibilité.  A8   Logique des programmes et vérification formelle
+ 
+-Spécifier et démontrer des propriétés de programmes.  A9   Types, langages formels et compilation  Décrire la syntaxe et les contraintes des programmes.  A10   Logique et IA symbolique  Représenter des connaissances et déduire des conclusions.  2. VOCABULAIRE FONDAMENTAL  Voici les termes que tu dois pouvoir reconnaître avant de chercher à maîtriser chaque théorie.  Terme   Sens essentiel   Comment le reconnaître  Proposition   Énoncé auquel on peut attribuer une valeur de vérité  Peut être vrai ou faux dans une interprétation  Valeur de vérité   Vrai ou faux, dans la logique classique   ,   , ou   ,  Connecteur logique  Opérateur qui combine des propositions  Prédicat   Expression dont la vérité dépend d’un ou plusieurs objets  ,  Quantificateur   Indique combien d’objets satisfont une propriété  Interprétation   Manière d’attribuer un sens aux symboles   Domaine, objets, relations, valeurs  Formule   Expression construite selon des règles formelles  Syntaxe logique bien formée  Satisfaisabilité   Existence d’une interprétation qui rend une formule vraie  « Existe-t-il une affectation qui satisfait… ? »  Validité   Vérité dans toutes les interprétations visées  « La formule est-elle toujours vraie ? »  Conséquence logique  Une conclusion découle des hypothèses  Démonstration   Suite de raisonnements justifiant une conclusion  Déduction à partir de règles admises  V   F   1 0 ∧, ∨, ¬, →, ↔  P   ( x )   R ( x ,   y ) ∀, ∃ Γ ⊨   φ
+-
+-Axiome   Énoncé admis comme point de départ d’un système  Hypothèse de base du système formel  Théorème   Énoncé démontré à partir d’hypothèses ou d’axiomes  Résultat accompagné d’une preuve  Lemme   Résultat intermédiaire utile à une preuve   Sert à démontrer un résultat plus général  Corollaire   Conséquence d’un résultat établi   Déduit d’un théorème  Contradiction   Conflit logique, souvent représenté par   Une hypothèse mène à l’impossible  Ensemble   Collection d’objets  Relation   Association entre objets   ,  Fonction   Association déterministe d’une entrée à une sortie  Récursion   Définition ou procédure qui se réfère à elle-même  Appel récursif, cas de base  Invariant   Propriété qui demeure vraie à travers certaines étapes  Vrai avant/après une boucle  Décidabilité   Existence d’une procédure qui tranche une question  Algorithme terminant avec oui/non  Calculabilité   Possibilité de calculer une fonction par un modèle de calcul  Machine de Turing, fonction calculable  Dénombrabilité   Possibilité d’énumérer les éléments par les naturels  Correspondance avec   , ou sous-ensemble  Sémantique   Signification d’une expression ou d’un programme  Ce que l’expression fait ou désigne  Syntaxe   Règles de construction des expressions   Grammaire, arbre syntaxique  Type   Classification des valeurs et opérations autorisées  int   ,   bool   , types fonctionnels, etc.  Preuve formelle   Démonstration codée dans un système de règles explicites  Vérifiable mécaniquement  Vérification formelle  Vérification mathématique de propriétés d’un système  Preuve, model checking, analyse formelle  ⊥  x   ∈   A R ( x ,   y )   xRy f   :   A   →   B  N
+-
+-3. NOTATIONS ET SIGNATURES LOGIQUES À RECONNAÎTRE  Cette section est ton   détecteur de concepts . Le but est de voir une formule et de comprendre immédiatement quel type de raisonnement elle représente.  3.1 Les connecteurs propositionnels  Symbole   Nom   Lecture  Négation   Non  Conjonction   et  Disjonction inclusive   ou   , ou les deux  Implication   Si   , alors  Équivalence   si et seulement si  Vrai logique   Toujours vrai  Faux logique   Contradiction  Comment reconnaître une implication ?  Si tu rencontres :  tu dois te demander :  Quelle est l’hypothèse   ?  Quelle est la conclusion   ?  Dans quels cas l’implication est-elle fausse ?  Le problème demande-t-il de démontrer   , sa réciproque, ou une équivalence ?  Attention :   ne signifie pas que   cause   . C’est une relation logique, pas nécessairement une relation causale.  3.2 Les quantificateurs  Symbole   Nom   Lecture  Universel   Pour tout  ¬ P   P P   ∧   Q   P   Q P   ∨   Q   P   Q P   →   Q   P   Q P   ↔   Q   P   Q  ⊤ ⊥  P   →   Q  P Q P   →   Q P   →   Q   P   Q  ∀ x   x
+-
+-Existentiel   Il existe au moins un  Existence et unicité   Il existe exactement un  Exemples :  Signification : tout réel a un carré positif ou nul.  Signification : il existe au moins un entier dont le carré vaut 9.  Réflexe de reconnaissance  « Pour tout », « chaque », « quel que soit » → penser à   .  « Il existe », « au moins un » → penser à   .  « Un unique », « exactement un » → penser à   .  3.3 Équivalences logiques essentielles  Double négation  Lois de De Morgan  Implication  Contraposée  ∃ x   x  ∃! x   x  ∀ x   ∈   R ,   x   ≥ 2   0  ∃ x   ∈   Z ,   x   = 2   9  ∀ ∃ ∃!  ¬(¬ P   ) ≡   P  ¬( P   ∧   Q ) ≡ ¬ P   ∨ ¬ Q  ¬( P   ∨   Q ) ≡ ¬ P   ∧ ¬ Q  P   →   Q   ≡ ¬ P   ∨   Q
+-
+-Équivalence  Ces relations permettent de transformer une formule en une autre forme logiquement équivalente. Elles sont importantes en démonstration, simplification logique, conception de conditions et traitement de formules par des outils informatiques.  4. LOGIQUE PROPOSITIONNELLE  4.1 Qu’est-ce que c’est ?  La logique propositionnelle étudie des propositions et la manière de les combiner avec des connecteurs logiques.  On représente souvent les propositions par :  Exemple :  : « L’utilisateur est authentifié. »  : « L’utilisateur peut accéder à la page privée. »  Une règle pourrait être :  Cela signifie que, selon cette règle, si l’utilisateur est authentifié, alors il peut accéder à la page privée.  Cela ne prouve pas que l’utilisateur est effectivement authentifié : la formule décrit une implication, pas un fait observé.  4.2 Tables de vérité  Une table de vérité indique la valeur d’une formule pour toutes les affectations possibles de ses propositions.  P   →   Q   ≡ ¬ Q   → ¬ P  P   ↔   Q   ≡ ( P   →   Q ) ∧ ( Q   →   P   )  P   ,   Q ,   R , …  P Q  P   →   Q
+-
+-Négation  V   F  F   V  Conjonction  V   V   V  V   F   F  F   V   F  F   F   F  Disjonction inclusive  V   V   V  V   F   V  F   V   V  F   F   F  Implication  V   V   V  V   F   F  F   V   V  F   F   V  L’implication matérielle n’est donc fausse que lorsque l’hypothèse est vraie et la conclusion fausse.  P   ¬ P  P   Q   P   ∧   Q  P   Q   P   ∨   Q  P   Q   P   →   Q
+-
+-Équivalence  V   V   V  V   F   F  F   V   F  F   F   V  4.3 Tautologie, contradiction, contingence  Notion   Définition   Signature  Tautologie   Vraie pour toutes les affectations   Colonne finale toujours V  Contradiction   Fausse pour toutes les affectations   Colonne finale toujours F  Contingence   Vraie dans certains cas, fausse dans d’autres   Colonne mixte  Exemples :  est une tautologie en logique classique.  est une contradiction.  est une contingence.  4.4 Satisfaisabilité et validité  Une formule est   satisfaisable   si au moins une affectation la rend vraie.  Une formule est   valide   si toutes les affectations la rendent vraie.  Il ne faut pas confondre :  « Peut être vraie » ;  « Est toujours vraie ».  Comment reconnaître le problème ?  Si on te demande :  « Existe-t-il une affectation qui satisfait toutes les contraintes ? » → satisfaisabilité.  « La formule est-elle vraie dans tous les cas ? » → validité.  « Les contraintes se contredisent-elles ? » → recherche de satisfaisabilité / contradiction.  P   Q   P   ↔   Q  P   ∨ ¬ P P   ∧ ¬ P P   →   Q
++Spécifier et démontrer des propriétés de programmes.  A9   Types, langages formels et compilation  Décrire la syntaxe et les contraintes des programmes.  A10   Logique et IA symbolique  Représenter des connaissances et déduire des conclusions.  2. VOCABULAIRE FONDAMENTAL  Voici les termes que tu dois pouvoir reconnaître avant de chercher à maîtriser chaque théorie.  Terme   Sens essentiel   Comment le reconnaître  Proposition   Énoncé auquel on peut attribuer une valeur de vérité  Peut être vrai ou faux dans une interprétation  Valeur de vérité   Vrai ou faux, dans la logique classique   ,   , ou   ,  Connecteur logique  Opérateur qui combine des propositions  Prédicat   Expression dont la vérité dépend d’un ou plusieurs objets  ,  Quantificateur   Indique combien d’objets satisfont une propriété  Interprétation   Manière d’attribuer un sens aux symboles   Domaine, objets, relations, valeurs  Formule   Expression construite selon des règles formelles  Syntaxe logique bien formée  Satisfaisabilité   Existence d’une interprétation qui rend une formule vraie  « Existe-t-il une affectation qui satisfait… ? »  Validité   Vérité dans toutes les interprétations visées  « La formule est-elle toujours vraie ? »  Conséquence logique  Une conclusion découle des hypothèses  Démonstration   Suite de raisonnements justifiant une conclusion  Déduction à partir de règles admises
++
++**Notations du vocabulaire**
++
++| Notation | Signification |
++|---|---|
++| `V`, `F` | valeurs de vérité |
++| `1`, `0` | valeurs de vérité (codage binaire) |
++| `∧`, `∨`, `¬`, `→`, `↔` | connecteurs logiques |
++| `P(x)` | prédicat unaire |
++| `R(x, y)` | prédicat binaire |
++| `∀`, `∃` | quantificateurs |
++| `Γ ⊨ φ` | conséquence logique |
++
++Axiome   Énoncé admis comme point de départ d’un système  Hypothèse de base du système formel  Théorème   Énoncé démontré à partir d’hypothèses ou d’axiomes  Résultat accompagné d’une preuve  Lemme   Résultat intermédiaire utile à une preuve   Sert à démontrer un résultat plus général  Corollaire   Conséquence d’un résultat établi   Déduit d’un théorème  Contradiction   Conflit logique, souvent représenté par   Une hypothèse mène à l’impossible  Ensemble   Collection d’objets (appartenance : `x ∈ A`)  Relation   Association entre objets `R(x, y)`, aussi notée `xRy` ,  Fonction   Association déterministe d’une entrée à une sortie, notée `f : A → B`  Récursion   Définition ou procédure qui se réfère à elle-même  Appel récursif, cas de base  Invariant   Propriété qui demeure vraie à travers certaines étapes  Vrai avant/après une boucle  Décidabilité   Existence d’une procédure qui tranche une question  Algorithme terminant avec oui/non  Calculabilité   Possibilité de calculer une fonction par un modèle de calcul  Machine de Turing, fonction calculable  Dénombrabilité   Possibilité d’énumérer les éléments par les naturels  Correspondance avec   , ou sous-ensemble  Sémantique   Signification d’une expression ou d’un programme  Ce que l’expression fait ou désigne  Syntaxe   Règles de construction des expressions   Grammaire, arbre syntaxique  Type   Classification des valeurs et opérations autorisées  int   ,   bool   , types fonctionnels, etc.  Preuve formelle   Démonstration codée dans un système de règles explicites  Vérifiable mécaniquement  Vérification formelle  Vérification mathématique de propriétés d’un système  Preuve, model checking, analyse formelle  N
++
++3. NOTATIONS ET SIGNATURES LOGIQUES À RECONNAÎTRE  Cette section est ton   détecteur de concepts . Le but est de voir une formule et de comprendre immédiatement quel type de raisonnement elle représente.  3.1 Les connecteurs propositionnels
++
++| Symbole | Nom | Lecture |
++|---|---|---|
++| `¬P` | Négation | Non |
++| `P ∧ Q` | Conjonction | et |
++| `P ∨ Q` | Disjonction inclusive | ou , ou les deux |
++| `P → Q` | Implication | Si … , alors |
++| `P ↔ Q` | Équivalence | … si et seulement si |
++| `⊤` | Vrai logique | Toujours vrai |
++| `⊥` | Faux logique | Contradiction |  Comment reconnaître une implication ?  Si tu rencontres :  tu dois te demander :  Quelle est l’hypothèse   ?  Quelle est la conclusion   ?  Dans quels cas l’implication est-elle fausse ?  Le problème demande-t-il de démontrer   , sa réciproque, ou une équivalence ?  Attention :   ne signifie pas que   cause   . C’est une relation logique, pas nécessairement une relation causale.  3.2 Les quantificateurs
++
++| Symbole | Nom | Lecture | Exemple |
++|---|---|---|---|
++| `∀` | Universel | Pour tout | `∀x ∈ R, x² ≥ 0` |
++| `∃` | Existentiel | Il existe au moins un | `∃x ∈ Z, x² = 9` |
++| `∃!` | Existence et unicité | Il existe exactement un | `∃!x …` |
++
++*Fragments non rattachés, conservés faute de destination établie :* `P → Q` · `P Q P → Q P → Q P Q` · `∀x …`
++
++Existentiel   Il existe au moins un  Existence et unicité   Il existe exactement un  Exemples :  Signification : tout réel a un carré positif ou nul.  Signification : il existe au moins un entier dont le carré vaut 9.  Réflexe de reconnaissance  « Pour tout », « chaque », « quel que soit » → penser à   .  « Il existe », « au moins un » → penser à   .  « Un unique », « exactement un » → penser à   .  3.3 Équivalences logiques essentielles
++
++| Nom | Équivalence |
++|---|---|
++| Double négation | `¬(¬P) ≡ P` |
++| Lois de De Morgan | `¬(P ∧ Q) ≡ ¬P ∨ ¬Q` · `¬(P ∨ Q) ≡ ¬P ∧ ¬Q` |
++| Implication | `P → Q ≡ ¬P ∨ Q` |
++| Contraposée | `P → Q ≡ ¬Q → ¬P` |
++| Équivalence | `P ↔ Q ≡ (P → Q) ∧ (Q → P)` |
++
++Ces relations permettent de transformer une formule en une autre forme logiquement équivalente. Elles sont importantes en démonstration, simplification logique, conception de conditions et traitement de formules par des outils informatiques.  4. LOGIQUE PROPOSITIONNELLE  4.1 Qu’est-ce que c’est ?  La logique propositionnelle étudie des propositions et la manière de les combiner avec des connecteurs logiques.  On représente souvent les propositions par :  Exemple :  : « L’utilisateur est authentifié. »  : « L’utilisateur peut accéder à la page privée. »  Une règle pourrait être :  Cela signifie que, selon cette règle, si l’utilisateur est authentifié, alors il peut accéder à la page privée.  Cela ne prouve pas que l’utilisateur est effectivement authentifié : la formule décrit une implication, pas un fait observé.  4.2 Tables de vérité  Une table de vérité indique la valeur d’une formule pour toutes les affectations possibles de ses propositions (`P`, `Q`, `R`, …).
++
++**Négation**
++
++| P | ¬P |
++|---|---|
++| V | F |
++| F | V |
++
++**Conjonction**
++
++| P | Q | P ∧ Q |
++|---|---|---|
++| V | V | V |
++| V | F | F |
++| F | V | F |
++| F | F | F |
++
++**Disjonction inclusive**
++
++| P | Q | P ∨ Q |
++|---|---|---|
++| V | V | V |
++| V | F | V |
++| F | V | V |
++| F | F | F |
++
++**Implication**
++
++| P | Q | P → Q |
++|---|---|---|
++| V | V | V |
++| V | F | F |
++| F | V | V |
++| F | F | V |
++
++L’implication matérielle n’est donc fausse que lorsque l’hypothèse est vraie et la conclusion fausse.
++
++**Équivalence**
++
++| P | Q | P ↔ Q |
++|---|---|---|
++| V | V | V |
++| V | F | F |
++| F | V | F |
++| F | F | V |
++
++4.3 Tautologie, contradiction, contingence  Notion   Définition   Signature  Tautologie   Vraie pour toutes les affectations   Colonne finale toujours V  Contradiction   Fausse pour toutes les affectations   Colonne finale toujours F  Contingence   Vraie dans certains cas, fausse dans d’autres   Colonne mixte  Exemples :  est une tautologie en logique classique.  est une contradiction.  est une contingence.  4.4 Satisfaisabilité et validité  Une formule est   satisfaisable   si au moins une affectation la rend vraie.  Une formule est   valide   si toutes les affectations la rendent vraie.  Il ne faut pas confondre :  « Peut être vraie » ;  « Est toujours vraie ».  Comment reconnaître le problème ?  Si on te demande :  « Existe-t-il une affectation qui satisfait toutes les contraintes ? » → satisfaisabilité.  « La formule est-elle vraie dans tous les cas ? » → validité.  « Les contraintes se contredisent-elles ? » → recherche de satisfaisabilité / contradiction.
++
++| Notion | Exemple | Statut |
++|---|---|---|
++| Contingence | `P → Q` | ni tautologie ni contradiction |
++| Contingence | `P ↔ Q` | ni tautologie ni contradiction |
++| Tautologie | `P ∨ ¬P` | toujours vraie |
++| Contradiction | `P ∧ ¬P` | toujours fausse |
+ 
+ 4.5 Formes normales  Deux formes classiques sont utiles :  Forme normale conjonctive (CNF/FNC)   : conjonction de clauses, chaque clause étant une disjonction de littéraux.  Forme normale disjonctive (DNF/FND)   : disjonction de termes, chaque terme étant une conjonction de littéraux.  Exemple de FNC :  Un littéral est une proposition ou sa négation.  Application informatique  Les formes normales interviennent notamment dans :  les solveurs SAT ;  la vérification de contraintes ;  certains outils de vérification formelle ;  l’analyse de circuits logiques ;  la résolution de problèmes combinatoires ;  certaines représentations de règles symboliques.  5. LOGIQUE DES PRÉDICATS  5.1 Qu’est-ce que c’est ?  La logique des prédicats étend la logique propositionnelle en permettant de parler d’objets, de leurs propriétés et de leurs relations.  Exemples :  ( P   ∨   Q ) ∧ (¬ P   ∨   R )  tudiant ( x ) E ˊ  Inscrit ( x ,   c )  Sup rieur ( x ,   y ) e ˊ
+ 

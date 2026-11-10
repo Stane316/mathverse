@@ -1,0 +1,64 @@
+Domaine A — lot 1 applique : vocabulaire (§2), notations (§3), tables de verite (§4)
+
+Premier lot applique du chantier A. Le porteur a valide l'ensemble des 52
+propositions le 2026-10-20 ; ce lot en couvre 11 substitutions, soit les
+sections §2, §3 et §4.
+
+Ce que fait le lot
+  - §2  : les notations du vocabulaire (V/F, 1/0, connecteurs, P(x), R(x,y),
+          ∀ ∃, Γ ⊨ φ) sont sorties du fragment qui les contenait et dressees
+          en tableau ; `R(x, y)` / `xRy` reviennent a l'entree « Relation »,
+          `f : A → B` a l'entree « Fonction », `x ∈ A` a l'entree « Ensemble ».
+  - §3.1 : la colonne « Symbole » du tableau des connecteurs est remplie avec
+          les sept tokens du fragment, de ¬P a ⊥.
+  - §3.2 : la colonne « Symbole » recoit ∀, ∃, ∃! ; les exemples
+          ∀x ∈ R, x² ≥ 0 et ∃x ∈ Z, x² = 9 sont restitues d'apres les gloses
+          de la source.
+  - §3.3 : les cinq equivalences nommees recoivent leur formule. Trois
+          venaient du fragment sur place, deux du fragment #6 rapatrie depuis
+          le §4.2. Les cinq sont pourvues, sans reste.
+  - §4.2 : les cinq tables de verite sont remises en forme tabulaire.
+  - §4.4 : les exemples de satisfaisabilite sont dresses en tableau.
+
+Deux corrections apportees au lot tel qu'il avait ete propose
+
+  1. A1-02 — les libelles « toujours vrai / toujours faux » avaient ete
+     proposes comme INVENTES. Ils sont en realite ATTESTES : la source porte
+     les lignes « Vrai logique · Toujours vrai » et « Faux logique ·
+     Contradiction ». Le palier passe de T2 a T1 et aucun libelle n'est
+     invente. Le lot est donc plus solide que la proposition initiale.
+
+  2. A1-15 — la destination du fragment #6 hesitait entre §3.3 et §6.2.
+     Le §3.3 est une liste de CINQ equivalences nommees, et les deux
+     fragments en couvrent exactement cinq. La destination §3.3 est donc
+     etablie, non choisie.
+
+Une erreur commise et corrigee avant livraison
+
+  La premiere version de l'edition E6 supprimait un sous-fragment
+  (`P → Q`, `P Q P → Q P → Q P Q`, le second `x` de `∀x x`) que j'avais
+  moi-meme signale comme non resolu. Un controle de non-perte l'a detecte :
+  le fichier a ete restaure depuis HEAD et l'edition corrigee. REGLE DESORMAIS
+  APPLIQUEE A TOUS LES LOTS : un fragment n'est retire que si chacun de ses
+  tokens est recase ; sinon il est conserve et signale.
+
+Verification
+  - mojibake : 0
+  - `git apply --check` puis application sur un clone neuf a f0f5e2d : OK
+  - 64 lignes de tableau creees ; 77970 -> 78776 caracteres
+  - les cinq tables de verite ont ete relues valeur par valeur et confrontees
+    aux definitions AVANT reformatage : toutes exactes, y compris
+    l'implication materielle. Aucune valeur n'a ete modifiee.
+
+Reste non resolu, et laisse en place volontairement
+  - le `N` isole en fin de §2 (destination probable §8.3)
+  - les tokens conserves et signales en §3.2 (`P → Q`, `P Q P → Q P → Q P Q`,
+    `∀x …`) faute de destination etablie
+
+Outils
+  - tools/restauration/build_lot_A_1.py : applique le lot et emet le journal
+  - docs/restauration/propositions/domaine-A-lot1.journal.json : les 11
+    substitutions avec leur justification et leur validation
+  Le lot travaille en SOUS-CHAINES et non en lignes : le document est aplani,
+  un paragraphe tient sur une ligne et les remplacements enjambent les sauts
+  de paragraphe. Le format ligne-a-ligne de apply_patch.py ne convenait pas.

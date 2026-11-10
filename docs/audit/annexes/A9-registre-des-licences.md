@@ -42,8 +42,8 @@ C'est la confusion qui traverse React Bits, Aceternity et le contrat Shaders.
 |---|---|:--:|:--:|:--:|---|:--:|
 | **shadcn/ui** | MIT | ✅ | ✅ | ✅ | la **mécanique de registre** est le bien le plus réutilisable du secteur | F02 |
 | **Shaders** (paquet npm) | MIT | ⚠️ | ✅ | ✅ | ⚠️ **conflit avec le contrat de plateforme v1.7** — voir §3.1 | F11 |
-| **Paper Shaders** | Apache-2.0 | ⚠️ | ✅ | ✅ | usage commercial sans attribution ; ⚠️ périmètre non vérifié | F11 |
-| **OpenShaders** | MIT | ⚠️ | ✅ | ✅ | ⚠️ les créateurs choisissent la licence de **leurs** shaders | F11 |
+| **Paper Shaders** | Apache-2.0 | ✅ | ✅ | ✅ | **vérifié le 2026-10-21** : usage commercial sans attribution visible ; en cas de redistribution, conserver `LICENSE` **et** `NOTICE` (obligation Apache-2.0 §4). ⚠️ version `0.0.x`, ruptures annoncées | F11 §17 |
+| **OpenShaders** | MIT | ✅ | ✅ | ✅ | **vérifié le 2026-10-21** : MIT sur la plateforme, ⚠️ **mais aucun code publié à ce jour** (3 commits, 473 Kio, arrêté depuis 42 jours). ⚠️ les créateurs choisissent la licence de **leurs** shaders — même risque de structure que Shadertoy | F11 §17 |
 | **Magic UI** | MIT | ⚠️ | ✅ | ✅ | | — |
 | **Motion** (ex-Framer) | MIT | ✅ | ✅ | ✅ | | — |
 | **Motion Primitives** | MIT | ✅ | ✅ | ✅ | | — |

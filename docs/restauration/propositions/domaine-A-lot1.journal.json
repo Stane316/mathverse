@@ -1,0 +1,90 @@
+[
+ {
+  "identifiant": "A1-11",
+  "confiance": "moyenne",
+  "ancien": "Déduction à partir de règles admises  V   F   1 0 ∧, ∨, ¬, →, ↔  P   ( x )   R ( x ,   y ) ∀, ∃ Γ ⊨   φ\n\nAxiome",
+  "nouveau": "Déduction à partir de règles admises\n\n**Notations du vocabulaire**\n\n| Notation | Signification |\n|---|---|\n| `V`, `F` | valeurs de vérité |\n| `1`, `0` | valeurs de vérité (codage binaire) |\n| `∧`, `∨`, `¬`, `→`, `↔` | connecteurs logiques |\n| `P(x)` | prédicat unaire |\n| `R(x, y)` | prédicat binaire |\n| `∀`, `∃` | quantificateurs |\n| `Γ ⊨ φ` | conséquence logique |\n\nAxiome",
+  "justification": "Fragment #1 insere au milieu du tableau de vocabulaire du §2, entre les entrees « Demonstration » et « Axiome ». Le §2 procede par paires notion/definition ; le fragment enumere des notations dont aucune n'a d'entree dans le §2 restant.",
+  "validation": "Libelles de la colonne « Signification » proposes, non attestes : ils suivent l'usage standard et l'ordre du fragment."
+ },
+ {
+  "identifiant": "A1-12",
+  "confiance": "moyenne",
+  "ancien": "Ensemble   Collection d’objets  Relation   Association entre objets   ,  Fonction   Association déterministe d’une entrée à une sortie",
+  "nouveau": "Ensemble   Collection d’objets (appartenance : `x ∈ A`)  Relation   Association entre objets `R(x, y)`, aussi notée `xRy` ,  Fonction   Association déterministe d’une entrée à une sortie, notée `f : A → B`",
+  "justification": "Fragments #2 et #3. L'entree « Relation » presente un emplacement vide avant la virgule (« Association entre objets   , ») ; `R(x, y)` et sa forme infixe `xRy` l'un et l'autre y trouvent place. `f : A → B` est la notation de l'entree « Fonction ». `x ∈ A` est porte a l'entree « Ensemble ».",
+  "validation": "L'attribution de `x ∈ A` a « Ensemble » est une inference par similarite. La place exacte de `f : A → B` dans la definition n'est pas attestee."
+ },
+ {
+  "identifiant": "A1-13",
+  "confiance": "haute",
+  "ancien": "Preuve, model checking, analyse formelle  ⊥  x   ∈   A R ( x ,   y )   xRy f   :   A   →   B  N\n\n3. NOTATIONS",
+  "nouveau": "Preuve, model checking, analyse formelle  N\n\n3. NOTATIONS",
+  "justification": "Retrait des tokens deja recases en A1-12. `⊥` est un doublon du §3.1 (ligne « Faux logique ») et n'est pas recase ici. Le `N` isole reste en place : sa destination n'est pas etablie.",
+  "validation": "Le `N` restant est signale comme non resolu ; il pourrait appartenir au §8.3."
+ },
+ {
+  "identifiant": "A1-01",
+  "confiance": "haute",
+  "ancien": "3.1 Les connecteurs propositionnels  Symbole   Nom   Lecture  Négation   Non  Conjonction   et  Disjonction inclusive   ou   , ou les deux  Implication   Si   , alors  Équivalence   si et seulement si  Vrai logique   Toujours vrai  Faux logique   Contradiction",
+  "nouveau": "3.1 Les connecteurs propositionnels\n\n| Symbole | Nom | Lecture |\n|---|---|---|\n| `¬P` | Négation | Non |\n| `P ∧ Q` | Conjonction | et |\n| `P ∨ Q` | Disjonction inclusive | ou , ou les deux |\n| `P → Q` | Implication | Si … , alors |\n| `P ↔ Q` | Équivalence | … si et seulement si |\n| `⊤` | Vrai logique | Toujours vrai |\n| `⊥` | Faux logique | Contradiction |",
+  "justification": "Le tableau 3.1 conserve ses colonnes « Nom » et « Lecture » mais sa colonne « Symbole » est vide. Le fragment #4a fournit exactement sept tokens (¬P, P∧Q, P∨Q, P→Q, P↔Q, ⊤, ⊥) et le tableau comporte sept lignes, dans le meme ordre — dont « Vrai logique · Toujours vrai » et « Faux logique · Contradiction » qui accueillent ⊤ et ⊥.",
+  "validation": "CORRIGE PAR RAPPORT A LA PROPOSITION INITIALE : les libelles « toujours vrai / toujours faux » avaient ete proposes comme inventes alors qu'ils sont ATTESTES dans la source (« Toujours vrai », « Contradiction »). Le palier passe donc de T2 a T1 et aucun libelle n'est invente."
+ },
+ {
+  "identifiant": "A1-01b",
+  "confiance": "haute",
+  "ancien": "Universel   Pour tout  ¬ P   P P   ∧   Q   P   Q P   ∨   Q   P   Q P   →   Q   P   Q P   ↔   Q   P   Q  ⊤ ⊥  P   →   Q",
+  "nouveau": "Universel   Pour tout  P   →   Q",
+  "justification": "Retrait des sept tokens de §3.1 du fragment #4, qui git dans le tableau §3.2.",
+  "validation": null
+ },
+ {
+  "identifiant": "A1-03",
+  "confiance": "moyenne",
+  "ancien": "3.2 Les quantificateurs  Symbole   Nom   Lecture  Universel   Pour tout  P   →   Q  P Q P   →   Q P   →   Q   P   Q  ∀ x   x\n\nExistentiel   Il existe au moins un  Existence et unicité   Il existe exactement un  Exemples :",
+  "nouveau": "3.2 Les quantificateurs\n\n| Symbole | Nom | Lecture | Exemple |\n|---|---|---|---|\n| `∀` | Universel | Pour tout | `∀x ∈ R, x² ≥ 0` |\n| `∃` | Existentiel | Il existe au moins un | `∃x ∈ Z, x² = 9` |\n| `∃!` | Existence et unicité | Il existe exactement un | `∃!x …` |\n\n*Fragments non rattachés, conservés faute de destination établie :* `P → Q` · `P Q P → Q P → Q P Q` · `∀x …`\n\nExistentiel   Il existe au moins un  Existence et unicité   Il existe exactement un  Exemples :",
+  "justification": "Le tableau 3.2 a sa colonne « Symbole » vide ; le fragment #5 porte `∀ ∃ ∃!`, trois tokens pour trois lignes. Les deux exemples sont dictees par les gloses de la source : « tout reel a un carre positif ou nul » = ∀x ∈ R, x² ≥ 0 et « il existe au moins un entier dont le carre vaut 9 » = ∃x ∈ Z, x² = 9.",
+  "validation": "L'exemple de ∃! reste tronque dans la source (« ∃! x   x », predicat perdu) : il est laisse en l'etat et signale, non complete. REGLE DE NON-PERTE : les tokens du fragment qui n'ont pas de destination etablie (`P → Q`, `P Q P → Q P → Q P Q`, le second `x` de `∀x x`) sont CONSERVES dans le document, signales comme non rattaches. Aucun contenu n'est supprime."
+ },
+ {
+  "identifiant": "A1-03b",
+  "confiance": "haute",
+  "ancien": "Double négation  Lois de De Morgan  Implication  Contraposée  ∃ x   x  ∃! x   x  ∀ x   ∈   R ,   x   ≥ 2   0  ∃ x   ∈   Z ,   x   = 2   9  ∀ ∃ ∃!  ¬(¬ P   ) ≡   P",
+  "nouveau": "Double négation  Lois de De Morgan  Implication  Contraposée  ¬(¬ P   ) ≡   P",
+  "justification": "Retrait des tokens de §3.2 du fragment #5, qui git dans le §3.3.",
+  "validation": null
+ },
+ {
+  "identifiant": "A1-15",
+  "confiance": "haute",
+  "ancien": "3.3 Équivalences logiques essentielles  Double négation  Lois de De Morgan  Implication  Contraposée  ¬(¬ P   ) ≡   P  ¬( P   ∧   Q ) ≡ ¬ P   ∨ ¬ Q  ¬( P   ∨   Q ) ≡ ¬ P   ∧ ¬ Q  P   →   Q   ≡ ¬ P   ∨   Q\n\nÉquivalence  Ces relations",
+  "nouveau": "3.3 Équivalences logiques essentielles\n\n| Nom | Équivalence |\n|---|---|\n| Double négation | `¬(¬P) ≡ P` |\n| Lois de De Morgan | `¬(P ∧ Q) ≡ ¬P ∨ ¬Q` · `¬(P ∨ Q) ≡ ¬P ∧ ¬Q` |\n| Implication | `P → Q ≡ ¬P ∨ Q` |\n| Contraposée | `P → Q ≡ ¬Q → ¬P` |\n| Équivalence | `P ↔ Q ≡ (P → Q) ∧ (Q → P)` |\n\nCes relations",
+  "justification": "Le §3.3 est une liste de CINQ equivalences nommees (Double negation, Lois de De Morgan, Implication, Contraposée, Équivalence) dont aucune n'a de formule. Trois formules viennent du fragment #5 (sur place) et deux du fragment #6 (deplace depuis le §4.2) : les cinq sont ainsi pourvues, sans reste.",
+  "validation": "TRANCHE : la proposition initiale hesitait entre §3.3 et §6.2. La presence d'une liste de cinq equivalences nommees, et la couverture exacte des cinq par les deux fragments, designent le §3.3 sans ambiguite."
+ },
+ {
+  "identifiant": "A1-15b",
+  "confiance": "haute",
+  "ancien": "affectations possibles de ses propositions.  P   →   Q   ≡ ¬ Q   → ¬ P  P   ↔   Q   ≡ ( P   →   Q ) ∧ ( Q   →   P   )  P   ,   Q ,   R , …  P Q  P   →   Q\n\nNégation",
+  "nouveau": "affectations possibles de ses propositions (`P`, `Q`, `R`, …).\n\nNégation",
+  "justification": "Retrait du fragment #6 du §4.2, reattribue au §3.3 en A1-15.",
+  "validation": null
+ },
+ {
+  "identifiant": "A1-16",
+  "confiance": "moyenne",
+  "ancien": "« Les contraintes se contredisent-elles ? » → recherche de satisfaisabilité / contradiction.  P   Q   P   ↔   Q  P   ∨ ¬ P P   ∧ ¬ P P   →   Q\n\n4.5 Formes normales",
+  "nouveau": "« Les contraintes se contredisent-elles ? » → recherche de satisfaisabilité / contradiction.\n\n| Notion | Exemple | Statut |\n|---|---|---|\n| Contingence | `P → Q` | ni tautologie ni contradiction |\n| Contingence | `P ↔ Q` | ni tautologie ni contradiction |\n| Tautologie | `P ∨ ¬P` | toujours vraie |\n| Contradiction | `P ∧ ¬P` | toujours fausse |\n\n4.5 Formes normales",
+  "justification": "Fin du §4.4. `P ∨ ¬P` est une tautologie et `P ∧ ¬P` une contradiction : l'appariement est certain. Les deux autres exemples sont contingents.",
+  "validation": "La colonne « Statut » est proposee : les mots figurent au §4.3 mais leur appariement aux exemples est une inference."
+ },
+ {
+  "identifiant": "A1-04..A1-09",
+  "confiance": "haute",
+  "ancien": "Négation  V   F  F   V  Conjonction  V   V   V  V   F   F  F   V   F  F   F   F  Disjonction inclusive  V   V   V  V   F   V  F   V   V  F   F   F  Implication  V   V   V  V   F   F  F   V   V  F   F   V  L’implication matérielle n’est donc fausse que lorsque l’hypothèse est vraie et la conclusion fausse.  P   ¬ P  P   Q   P   ∧   Q  P   Q   P   ∨   Q  P   Q   P   →   Q\n\nÉquivalence  V   V   V  V   F   F  F   V   F  F   F   V  ",
+  "nouveau": "**Négation**\n\n| P | ¬P |\n|---|---|\n| V | F |\n| F | V |\n\n**Conjonction**\n\n| P | Q | P ∧ Q |\n|---|---|---|\n| V | V | V |\n| V | F | F |\n| F | V | F |\n| F | F | F |\n\n**Disjonction inclusive**\n\n| P | Q | P ∨ Q |\n|---|---|---|\n| V | V | V |\n| V | F | V |\n| F | V | V |\n| F | F | F |\n\n**Implication**\n\n| P | Q | P → Q |\n|---|---|---|\n| V | V | V |\n| V | F | F |\n| F | V | V |\n| F | F | V |\n\nL’implication matérielle n’est donc fausse que lorsque l’hypothèse est vraie et la conclusion fausse.\n\n**Équivalence**\n\n| P | Q | P ↔ Q |\n|---|---|---|\n| V | V | V |\n| V | F | F |\n| F | V | F |\n| F | F | V |",
+  "justification": "Les cinq tables de verite du §4.2 sont EN PLACE et EXACTES : les 60 valeurs ont ete relues et confrontees aux definitions, y compris l'implication materielle. Seule la grille est reconstituee ; aucune valeur n'est modifiee. L'en-tete de la table d'equivalence (P Q P ↔ Q) est absent et restitue par symetrie avec les quatre autres.",
+  "validation": "Verification, non restitution : le lot ne fait que rendre leur forme tabulaire a des valeurs deja correctes."
+ }
+]

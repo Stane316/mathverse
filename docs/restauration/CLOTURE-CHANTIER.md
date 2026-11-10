@@ -267,10 +267,13 @@ présente séance.
 
 ### 7.2 P n'est assigné à aucun lot
 
-Le plan A6 §4 répartit les domaines en cinq lots. Le domaine **P — Cryptographie** (4 120 lignes,
-66 équations affichées, soit le 4ᵉ document le plus volumineux du corpus) **n'apparaît dans
-aucun**. Les lots couvrent 19 des 20 documents réels. Cette lacune du plan est à corriger lors de
-la reprise ; P est donc ajouté à la liste du §5.1.
+Le plan A6 §4 répartissait les domaines en cinq lots. Le domaine **P — Cryptographie** (4 120 lignes,
+66 équations affichées, soit le 4ᵉ document le plus volumineux du corpus) **n'apparaissait dans
+aucun**. Les lots couvraient 19 des 20 documents réels. — **Corrigé le 2026-10-21** : P est désormais
+assigné au **lot 3** du plan A6 §4 (apports indirects), avec la justification et le décompte
+**20 documents réels sur 20**. La lettre **T**, qui n'existe pas, reste hors lot : elle donne lieu à
+la fiche d'absence. Le renvoi « §5.1 » figurant ici à l'origine était orphelin — ce numéro de
+section n'existe dans aucun livrable.
 
 ### 7.3bis Le total de 1 137 blocs était exact, mais sa règle n'était pas énoncée
 

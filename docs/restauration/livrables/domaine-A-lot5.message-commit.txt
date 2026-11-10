@@ -1,0 +1,61 @@
+Domaine A — lot 5 : points laisses ouverts par les lots 1 a 4
+
+Six points etaient restes en suspens. Trois donnent lieu a une restitution ;
+trois ne sont PAS appliques, et c'est la conclusion.
+
+Ce que fait le lot
+  - §6.5  : les deux emplacements vides du contre-exemple recoivent `a` et
+            `¬P(a)`. Troisieme orphelin, `∀x, P(x)`, SANS EMPLACEMENT : il
+            reste conserve et signale. Deux tokens pour deux emplacements,
+            pas trois pour deux.
+  - §7.4  : l'invariant du maximum d'un tableau, dont la phrase avait derive
+            en tete du §8. L'emplacement du §7.4 nomme exactement ce
+            contenu ; la phrase est verbatim, RIEN n'est redige ; le `i`,
+            separe en fin de pile, revient dans « les _ premiers elements ».
+  - §14.2 : les productions grammaticales, egarées dans la section des
+            automates finis, reviennent dans l'emplacement « Exemple
+            conceptuel : » des grammaires formelles.
+
+Ce que le lot ne fait pas, et pourquoi
+  - A5-05 (§13.3) : deux emplacements vides, mais l'affectation n'est pas
+            tranchable. `Utilisateur = (nom, email, age)` est un type
+            produit et git dans une pile situee APRES la description du
+            type somme. Une hypothese existe — le type somme attendrait
+            `Résultat = Succès(valeur) | Échec(erreur)`, aujourd'hui au
+            §13.5 — mais la deplacer viderait l'emplacement qu'il occupe.
+            Consignee, non retenue.
+  - A5-06 (§17.5) : l'etape 3 est vide, et le pseudo-code du §18 en serait
+            le contenu naturel. Mais ce pseudo-code ne porte AUCUNE
+            signature de deplacement et il est coherent la ou il est. Le
+            deplacer serait une REDACTION, pas une restauration.
+  - A5-07 (§9.3) : les deux `n` du paradoxe de Russell. Le symbole qui les
+            reliait est PERDU, il ne figure dans aucun fragment. Retablir
+            `x ∉ x` serait une INVENTION. Confirme A3-10.
+
+Une grille etablie pour compter les emplacements vides
+  La question se posait au §6.5. Toutes les suites d'espaces suivant un
+  deux-points ont ete extraites : 69 occurrences de 2 espaces, 42 de 3.
+  Resultat : 2 espaces suivis d'un AUTRE LIBELLE, ou d'une prose
+  INCOHERENTE avec le libelle, ou 3 espaces en pleine phrase = emplacement
+  vide. 2 ou 3 espaces suivis d'un CONTENU COHERENT = libelle suivi de son
+  contenu. C'est cette grille qui etablit que le §6.5 a DEUX emplacements
+  et non trois, et qui a deja valide, sans le dire, les §10.1, §11.1,
+  §17.5 et §7.4.
+
+Deux erreurs commises, detectees, corrigees
+  L'edition A5-01b a ete montee deux fois de travers avant d'etre correcte.
+  (1) `entre()` CONSERVE ses deux marqueurs : prendre « Après avoir examiné »
+  comme marqueur amont laissait la phrase en tete du §8. (2) `retirer()`,
+  ajoutee au moteur pour ce cas, supprime AUSSI le marqueur amont : la fin
+  du bloc de code factorielle partait avec. La zone a etereparee a la main,
+  puis le constructeur a ete REJOUE DEBOUT depuis la sauvegarde pre-lot-5
+  et compare octet par octet a l'etatrepare : identiques. Le montage retenu
+  est `entre()` avec un marqueur amont qui doit survivre.
+
+Verification
+  - mojibake : 0
+  - diagnostic preventif : 7/7 sous-chaines uniques
+  - diff incremental (lot 4 -> lot 5) : 54 lignes, `git apply --check` OK
+  - chaine de volumes : 77970 -> 78776 -> 78789 -> 78758 -> 78767 -> 78849
+  - rejeu integral depuis la sauvegarde : resultat identique a l'octet pres
+  - couverture des autres documents : 1146 blocs, 78 sans contenu, ecart nul

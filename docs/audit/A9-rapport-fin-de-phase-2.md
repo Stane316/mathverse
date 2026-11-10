@@ -141,7 +141,7 @@ n'est remplie par inférence silencieuse.**
 |---|---|---|---|---|---|---|
 | **R3.1** | Présenter la couche de preuve par ses bénéfices observés, jamais comme argument premier | **élevé** | **haute** | faible | faible | aucune |
 | **R3.2** | Faire de l'aptitude à l'IA le cheval de Troie (`llms.txt`, champs structurés, MCP) | **élevé** | **haute** | moyen | **moyen** | D1, D3 |
-| **R7** | Vérifier Paper Shaders (Apache 2.0) et OpenShaders (MIT) | **élevé** | moyenne | faible | faible | aucune |
+| **R7** | ~~Vérifier Paper Shaders (Apache 2.0) et OpenShaders (MIT)~~ — **faite le 2026-10-21**, fiche F11 §17. **Paper Shaders** : Apache 2.0 sans piège, 3 793 ★, 30 effets, zéro dépendance vérifiée, `llms.txt` déployé, registry shadcn — mais `0.0.x`, et **aucune explication mathématique**. **OpenShaders** : ⚠️ **dépôt sans code**, et licence **au choix du créateur** — même risque de structure que Shadertoy | — | — | — | — | — |
 | **R1** | Lever les quatre points ouverts du registre des licences | **élevé** | **haute** | faible | moyen | éditeurs |
 | **R3.3** | Compléter l'étude de demande | **élevé** | moyenne | moyen | faible | aucune |
 | **R3.4** | Instrumenter dès le premier composant | **élevé** | moyenne | faible | faible | aucun composant |

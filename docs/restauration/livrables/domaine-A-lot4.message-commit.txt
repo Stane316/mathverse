@@ -1,0 +1,73 @@
+Domaine A — lot 4 applique : calculabilite (§11), verification (§12), types (§13), algorithmes (§15), cybersecurite (§16), IA symbolique (§17, §18)
+
+19 substitutions sur 11 propositions ; deux n'entrainent volontairement
+AUCUNE edition (A4-05, A4-14).
+
+Ce que fait le lot
+  - §11.1  : l'emplacement vide « Une question typique : » recoit la phrase
+             qui s'etait egarée au §11.3, ou elle coupait « tandis … que ».
+             C'est la question typique de la CALCULABILITE : destination
+             etablie, §11.3 ressoude.
+  - §11.6  : la forme schematique `A ≤ B`, et les deux emplacements de la
+             reduction (`A`, `B`).
+  - §12.2  : les trois emplacements de la ligne de legende du triplet
+             recoivent `P`, `C`, `Q`. La legende n'est pas proposee, elle
+             est ATTESTEE : la source ecrit « _ : precondition ; _ :
+             commande ou programme ; _ : postcondition. »
+  - §12.2  : les trois emplacements de la phrase « Si _ est vrai avant
+             l'execution de _ …, alors _ est vrai apres » recoivent `P`,
+             `C`, `Q`.
+  - §12.3  : le triplet `{P} C {Q}`, que la section annoncait sans jamais
+             en donner un seul.
+  - §13.5  : les deux emplacements de la fonction sur vecteurs de taille `n`.
+  - §15.3  : `n` variables, `2ⁿ` affectations.
+  - §15.6  : l'exemple d'unification `f(x, 3)` / `f(2, y)` et sa
+             substitution, rapatries du §15.7 qui traite du chainage.
+  - §16.5  : la regle d'acces recomposee par recollement des accents.
+  - §17.5  : `A`, `R`, `P` dans la modelisation, et `A ∧ R → P` dans
+             l'emplacement « Regle : ». La legende est ATTESTEE, elle aussi :
+             la source ecrit « _ : utilisateur authentifie ; _ : utilisateur
+             autorise ; _ : acces permis. »
+  - §18    : retrait de `A ∧ R → P`, recase au §17.5.
+
+Deux reserves de la proposition LEVEES par la source
+  La proposition presentait comme PROPOSE l'appariement des lettres a leur
+  role — P/precondition, C/commande, Q/postcondition au §12.2 ; A/authentifie,
+  R/autorise, P/acces permis au §17.5. C'etait trop prudent : dans les deux
+  cas la source porte elle-meme la legende, accolee a chaque emplacement
+  vide. L'appariement est donc ATTESTE, et ces propositions passent de T2 a
+  T1. Le lot est plus solide que la proposition initiale.
+
+Une reserve maintenue, une hypothesee consignee
+  - A4-13 : deux destinations etaient plausibles pour `A ∧ R → P`. Le §17.5
+    est retenu parce que c'est la qu'est l'emplacement vide. CONSEQUENCE :
+    le pseudo-code du §18 — « si authentifie ET autorise : permettre l'acces
+    sinon : refuser l'acces » — se retrouve separe de sa formule. Il est
+    conserve tel quel.
+  - Hypothese NON appliquee : « Etape 3 — Implementation conceptuelle » du
+    §17.5 est vide, et ce pseudo-code en serait le contenu naturel. Consigne
+    pour un lot 5.
+
+Non-perte
+  Les 31 tokens deplaces ont ete suivis un a un. Un seul n'a pas de
+  destination etablie : le `n` orphelin du §15.6, qui pourrait aussi bien
+  revenir au §15.3 (« croit exponentiellement avec _ »). Il est CONSERVE et
+  signale, non supprime. Deux phrases coupees ont ete ressoudees au passage :
+  §11.3 et §15.7.
+
+Aucune restitution, et c'est la conclusion (A4-05, A4-14)
+  - A4-05 : `2 + 3 × 4` n'est pas deplace ; il est a sa place. Aucune
+    modification, le jugement sur la priorite des operations releve de
+    l'edition, pas de la restauration.
+  - A4-14 : le `P → Q` insere entre les questions 18 et 19 du §30 ne
+    correspond a aucune des deux. Attribuer ce fragment a l'une des vingt
+    questions reviendrait a inventer. Rien n'est applique.
+
+Verification
+  - mojibake : 0
+  - diagnostic preventif : 19/19 sous-chaines uniques
+  - diff incremental (lot 3 -> lot 4) : 62 lignes, `git apply --check` OK
+  - chaine de volumes : 77970 -> 78776 -> 78789 -> 78758 -> 78767
+
+Trois emplacements vides reperes hors du perimetre du lot, non traites :
+§13.3 et §14.2 (« Exemple conceptuel : »), et §17.5 « Etape 3 ».
