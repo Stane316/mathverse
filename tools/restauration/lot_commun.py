@@ -39,6 +39,7 @@ I = "inconnue"
 RACINE = "/home/user/_audit/connaissance"
 FICHIER_A = ("Maths-vers-Informatiques/DOCUMENT MAÎTRE A — "
              "LOGIQUE ET FONDEMENTS DE L’INFORMATIQUE.md")
+FICHIER_B = "Maths-vers-Informatiques/DOCUMENT B — THÉORIE DES NOMBRES.md"
 
 # Les lots sont lances depuis n'importe quel repertoire : le journal est ecrit
 # relativement a la racine du depot, jamais au repertoire courant.
@@ -51,8 +52,8 @@ RACINE_DEPOT = os.path.dirname(os.path.dirname(os.path.dirname(
 SAUVEGARDES = "/home/user/_audit/sauvegardes"
 
 
-def _lire():
-    return open(f"{RACINE}/{FICHIER_A}", encoding="utf-8").read()
+def _lire(fichier=FICHIER_A):
+    return open(f"{RACINE}/{fichier}", encoding="utf-8").read()
 
 
 def _long_prefixe(ancien, texte):
@@ -88,7 +89,7 @@ def divergence(ancien, texte):
                texte[i + debut:i + debut + 50]))
 
 
-def entre(deb, fin, nouveau):
+def entre(deb, fin, nouveau, fichier=FICHIER_A):
     """Construit (ancien, nouveau) pour la region strictement entre deux marqueurs.
 
     Supprime la cause d'erreur la plus frequente du chantier : la transcription
@@ -98,9 +99,11 @@ def entre(deb, fin, nouveau):
 
         ("A3-02", *entre("Énoncé :", "Reconnaissance :", " `a ≡ b`  "), H, ...)
 
+    `fichier` : document cible (defaut A ; passer FICHIER_B pour le domaine B).
+
     Leve ValueError si un marqueur est introuvable ou si `fin` precede `deb`.
     """
-    texte = _lire()
+    texte = _lire(fichier)
     i = texte.find(deb)
     if i < 0:
         raise ValueError("marqueur de debut introuvable : %r" % deb)
@@ -110,7 +113,7 @@ def entre(deb, fin, nouveau):
     return (texte[i:j + len(fin)], deb + nouveau + fin)
 
 
-def retirer(deb, fin, remplacement=""):
+def retirer(deb, fin, remplacement="", fichier=FICHIER_A):
     """Construit (ancien, nouveau) en supprimant tout l'intervalle, `deb` compris.
 
     A ne pas confondre avec `entre()`, qui CONSERVE les deux marqueurs et ne
@@ -122,8 +125,10 @@ def retirer(deb, fin, remplacement=""):
     le titre de la section suivante.
 
         ("A5-01b", *retirer("```\n\n", "8.1 Ensembles"), H, ...)
+
+    `fichier` : document cible (defaut A ; passer FICHIER_B pour le domaine B).
     """
-    texte = _lire()
+    texte = _lire(fichier)
     i = texte.find(deb)
     if i < 0:
         raise ValueError("marqueur de debut introuvable : %r" % deb)
@@ -133,14 +138,16 @@ def retirer(deb, fin, remplacement=""):
     return (texte[i:j + len(fin)], remplacement + fin)
 
 
-def diagnostiquer(edits, tranche=None):
+def diagnostiquer(edits, tranche=None, fichier=FICHIER_A):
     """Compte les occurrences de chaque sous-chaine SANS rien ecrire.
 
     A executer avant `appliquer` : une sous-chaine introuvable ou ambigue
     fait echouer le lot, mieux vaut le savoir pour toutes les editions d'un
     coup que de corriger l'une et de redecouvrir la suivante.
+
+    `fichier` : document cible (defaut A ; passer FICHIER_B pour le domaine B).
     """
-    texte = _lire()
+    texte = _lire(fichier)
     ok = True
     for ident, ancien, nouveau, conf, just, val in edits:
         n = texte.count(ancien)
@@ -163,7 +170,7 @@ def diagnostiquer(edits, tranche=None):
     return 0 if ok else 1
 
 
-def appliquer(edits, journal, tranche=None):
+def appliquer(edits, journal, tranche=None, fichier=FICHIER_A):
     """Applique une liste de substitutions au document et emet le journal.
 
     `edits`   : liste de (identifiant, ancien, nouveau, confiance,
@@ -173,11 +180,13 @@ def appliquer(edits, journal, tranche=None):
                  confiance, justification, validation) — pour remplacer une
                  region delimitee par deux marqueurs plutot que transcrite en
                  clair (utile pour les longues sequences d'espaces).
+    `fichier` : chemin du document cible RELATIF a RACINE. Par defaut A ;
+                passer FICHIER_B pour le domaine B.
 
     Renvoie 0 si tout s'est bien passe, 1 sinon.
     """
-    chemin = f"{RACINE}/{FICHIER_A}"
-    texte = _lire()
+    chemin = f"{RACINE}/{fichier}"
+    texte = _lire(fichier)
     avant = len(texte)
     log = []
 
@@ -210,7 +219,10 @@ def appliquer(edits, journal, tranche=None):
 
     os.makedirs(SAUVEGARDES, exist_ok=True)
     nom = os.path.basename(journal).replace(".journal.json", "")
-    shutil.copy2(chemin, f"{SAUVEGARDES}/A-avant-{nom}.md")
+    # La lettre du document est tiree du nom de fichier cible, pour que les
+    # sauvegardes de B ne viennent pas ecraser celles de A.
+    lettre = os.path.basename(fichier)[9:10].upper() or "X"
+    shutil.copy2(chemin, f"{SAUVEGARDES}/{lettre}-avant-{nom}.md")
 
     open(chemin, "w", encoding="utf-8").write(texte)
 
@@ -228,13 +240,15 @@ def appliquer(edits, journal, tranche=None):
           f"{n_i} inconnue")
     print(f"{avant} -> {len(texte)} caracteres ({len(texte) - avant:+d})")
     print(f"journal : {os.path.relpath(chemin_journal, RACINE_DEPOT)}")
-    print(f"sauvegarde : {SAUVEGARDES}/A-avant-{nom}.md")
+    print(f"sauvegarde : {SAUVEGARDES}/{lettre}-avant-{nom}.md")
     return 0
 
 
 if __name__ == "__main__":
     # Controle prealable de n'importe quel lot construit sur ce moteur :
     #     python3 lot_commun.py build_lot_A_2.py
+    #     python3 lot_commun.py build_lot_B_1.py
+    # Le lot declare sa cible par une constante CIBLE (defaut : le document A).
     if len(sys.argv) < 2:
         print("usage : python3 lot_commun.py <fichier_du_lot>", file=sys.stderr)
         sys.exit(2)
@@ -243,4 +257,6 @@ if __name__ == "__main__":
     _mod = importlib.util.module_from_spec(_spec)
     sys.modules["lot"] = _mod
     _spec.loader.exec_module(_mod)
-    sys.exit(diagnostiquer(_mod.EDITS, getattr(_mod, "TRANCHE", None)))
+    sys.exit(diagnostiquer(_mod.EDITS,
+                           getattr(_mod, "TRANCHE", None),
+                           getattr(_mod, "CIBLE", FICHIER_A)))
