@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1280">
+<title>Banc de mesure — répétabilité du protocole</title>
+<style>
+  /* Mise en page volontairement neutre : aucune couleur ne code un résultat. */
+  html { background: #fff; color: #000; }
+  body { font: 14px/1.5 "Segoe UI", system-ui, sans-serif; margin: 24px; max-width: 1100px; }
+  h1 { font-size: 17px; font-weight: 600; margin: 0 0 12px; }
+  #params { border: 1px solid #000; padding: 8px 10px; margin-bottom: 10px; }
+  #etat { border: 1px solid #000; padding: 8px 10px; font-family: "Cascadia Mono", Consolas, monospace; }
+  #garde { margin-top: 8px; font-size: 12px; }
+  #fin { margin-top: 16px; }
+  button { font: inherit; padding: 6px 14px; margin-right: 8px; cursor: pointer; }
+  pre { border: 1px solid #000; padding: 10px; overflow: auto; max-height: 46vh;
+        font: 12px/1.45 "Cascadia Mono", Consolas, monospace; white-space: pre; }
+  .note { font-size: 12px; margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<!--
+================================================================================
+BANC DE MESURE JETABLE — EXP-04
+================================================================================
+
+CE QUE CETTE PAGE MESURE
+  Elle mesure la répétabilité d'un protocole de mesure, sur une machine et une
+  session données. Elle produit, pour trois grandeurs par répétition, une
+  médiane, un minimum, un maximum et des quartiles, plus deux cellules de
+  référence (calibrage R, contrôle C) destinées à révéler une dérive.
+
+  D1 — durée processeur autour de l'appel de calcul et de l'appel de rendu,
+       additionnés, sans attente entre les deux (performance.now).
+  D2 — durée GPU par passe de rendu, par horodatages GPU (timestamp-query
+       WebGPU, ou EXT_disjoint_timer_query_webgl2 en repli).
+  D3 — intervalle entre deux rappels consécutifs de requestAnimationFrame,
+       valeurs brutes conservées, sans moyenne glissante.
+  D4 — débit d'un noyau de calcul pur, sur trois tailles, sans rendu.
+
+CE QU'ELLE NE MESURE PAS
+  Elle ne mesure aucun composant du produit : aucun n'existe. Elle ne mesure
+  donc ni la qualité visuelle, ni la justesse mathématique, ni la mémoire, ni
+  la consommation, ni la stabilité au-delà d'une session, ni quoi que ce soit
+  sur une autre machine. Elle ne compare pas WebGPU et WebGL 2 : un seul
+  moteur sert par série, et le repli n'est qu'un filet de sécurité.
+
+  Elle ne conclut rien. Elle ne dit ni « stable », ni « rapide », ni
+  « conforme ». Toute lecture se fait hors de cette page.
+
+PIÈGES CONNUS, ÉCRITS ICI POUR QU'ON NE LES OUBLIE PAS À LA LECTURE
+  1. performance.now() seul mesure la vitesse d'envoi des commandes, pas le
+     travail du GPU. D1 n'est donc pas une durée GPU.
+  2. Les horodatages GPU sont quantifiés : deux chiffres significatifs au
+     maximum. La valeur D2 est approximative.
+  3. requestAnimationFrame est plafonné par l'écran. À 60 Hz, une mesure à
+     60 i/s ne prouve aucune marge. D3 mesure le rythme d'affichage, pas la
+     charge.
+  4. L'échauffement n'est pas optionnel : la première image compile les
+     nuanceurs, et le plancher est de 90 images et 1,5 s.
+  5. Le premier passage de la cellule de calibrage est toujours plus lent.
+     C'est pourquoi elle tourne 30 images et qu'on prend sa médiane.
+  6. timestamp-query est une fonction optionnelle. Une fonction déclarée
+     n'est pas une fonction éprouvée : la page déclare présent ou absent
+     selon ce qu'elle a réellement obtenu.
+  7. Les horodatages GPU doivent être résolus puis copiés dans un tampon
+     MAP_READ avant d'être lus ; les lire directement n'est pas possible.
+
+CONVENTIONS DE CALCUL
+  - Médiane : valeur centrale si l'effectif est impair, moyenne des deux
+    valeurs centrales sinon.
+  - Quartiles : méthode des moitiés (hinges de Tukey) — médiane de la moitié
+    basse et médiane de la moitié haute, médiane exclue si l'effectif est
+    impair.
+  - Aucune valeur n'est arrondie avant l'écriture. L'arrondi est un acte de
+    publication ; il n'a pas sa place ici.
+
+UNE RÉPÉTITION = UN CHARGEMENT DE PAGE
+  La page se recharge elle-même entre deux répétitions. La spécification
+  interdisant tout stockage persistant, l'état cumulé voyage dans l'URL d'un
+  chargement au suivant (paramètres internes `rep` et `acc`). Ce n'est pas du
+  stockage : rien n'est écrit sur le disque, et fermer l'onglet perd tout.
+
+SCÈNE C
+  Désactivée par défaut : à 1280x720 et 256 itérations, le calcul sur
+  processeur allonge la série de plusieurs minutes par répétition. Activez-la
+  avec scene=toutes ou scene=C. Le paramètre `scene` accepte A, B, C, toutes ;
+  la valeur documentée par défaut est `toutes`, mais C est exclue de
+  l'exécution par défaut, comme la spécification l'autorise.
+================================================================================
+-->
+
+<h1>Banc de mesure — répétabilité du protocole (EXP-04)</h1>
+
+<div id="params">Paramètres…</div>
+<div id="etat">Initialisation…</div>
+<div id="garde"></div>
+
+<div id="fin" hidden>
+  <button id="copier">Copier la sortie</button>
+  <button id="telecharger">Télécharger le TSV</button>
+  <div class="note">Le bloc ci-dessous est le contenu exact du fichier TSV. Aucune valeur n'a été arrondie.</div>
+  <pre id="sortie"></pre>
+</div>
+
+<script>
+"use strict";
+
+/* ==========================================================================
+   Constantes du banc
+   ========================================================================== */
+
+// Identifiant du banc d'essai, repris tel quel dans l'en-tête TSV.
+var COMPOSANT = "banc_essai_fractale_plein_ecran";
+
+// La question posée, en une phrase, reprise telle quelle dans l'en-tête TSV.
+var QUESTION = "Une mesure de performance est-elle répétable sur cette machine, avec ce protocole ?";
+
+// Les trois tailles du noyau de calcul pur, imposées.
+var TAILLES_NOYAU = [1000, 100000, 1000000];
+
+// Nombre fixe de répétitions de chaque taille du noyau (impair : médiane exacte).
+var REPETITIONS_NOYAU = 7;
+
+// Durée minimale de l'échauffement, en millisecondes.
+var PLANCHER_ECHAUFFEMENT_MS = 1500;
+
+// Plancher d'images de l'échauffement, imposé.
+var PLANCHER_ECHAUFFEMENT_IMAGES = 90;
+
+// Nombre d'images consécutives sans création de ressource neuve pour déclarer l'échauffement terminé.
+var IMAGES_STABILITE = 30;
+
+// Nombre d'images de la cellule de calibrage et de la cellule de contrôle.
+var IMAGES_CELLULE = 30;
+
+// Taille du vivier de jeux d'horodatage GPU réutilisés d'une image à l'autre.
+var TAILLE_VIVIER = 128;
+
+// Nombre maximal d'images rendues par la scène C, facultative et coûteuse.
+var IMAGES_SCENE_C = 12;
+
+// Noms des grandeurs, dans l'ordre de sortie.
+var GRANDEURS = ["D1", "D2", "D3"];
+
+/* ==========================================================================
+   Utilitaires de statistique et de formatage
+   ========================================================================== */
+
+// Trie une copie croissante du tableau, sans jamais modifier l'ordre d'acquisition.
+function trier(t) { return t.slice().sort(function (a, b) { return a - b; }); }
+
+// Renvoie la médiane : valeur centrale si l'effectif est impair, demi-somme des deux centrales sinon.
+function mediane(t) {
+  if (!t || t.length === 0) return NaN;
+  var s = trier(t), n = s.length, m = n >> 1;
+  return (n % 2) ? s[m] : (s[m - 1] + s[m]) / 2;
+}
+
+// Renvoie les quartiles par la méthode des moitiés (hinges de Tukey).
+function quartiles(t) {
+  if (!t || t.length < 2) return { q1: NaN, q3: NaN };
+  var s = trier(t), n = s.length, m = n >> 1;
+  return { q1: mediane(s.slice(0, m)), q3: mediane(s.slice((n % 2) ? m + 1 : m)) };
+}
+
+// Agrège un tableau de valeurs en un bloc {n, med, min, max, q1, q3} sans aucun arrondi.
+function agreger(t) {
+  if (!t || t.length === 0) return { n: 0, med: NaN, min: NaN, max: NaN, q1: NaN, q3: NaN };
+  var s = trier(t), q = quartiles(t);
+  return { n: s.length, med: mediane(s), min: s[0], max: s[s.length - 1], q1: q.q1, q3: q.q3 };
+}
+
+// Convertit un nombre en chaîne pleine précision ; une valeur non finie ou absente donne une chaîne vide.
+function brut(x) {
+  if (typeof x !== "number" || !isFinite(x)) return "";
+  return String(x);
+}
+
+// Formate une date locale en AAAA-MM-JJ-HHMM, pour le nom du fichier TSV.
+function horodateFichier(d) {
+  var p = function (n) { return (n < 10 ? "0" : "") + n; };
+  return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()) +
+         "-" + p(d.getHours()) + p(d.getMinutes());
+}
+
+// Formate une date locale en horodatage ISO sans fuseau, pour l'en-tête TSV.
+function horodateISO(d) {
+  var p = function (n) { return (n < 10 ? "0" : "") + n; };
+  return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()) +
+         "T" + p(d.getHours()) + ":" + p(d.getMinutes()) + ":" + p(d.getSeconds());
+}
+
+/* ==========================================================================
+   Transport de l'état entre deux chargements de page
+   ========================================================================== */
+
+// Encode une chaîne en base64 sûr pour URL, jeu de caractères non échappés par encodeURIComponent.
+function encoder64(s) {
+  var b = new TextEncoder().encode(s), r = "", i;
+  for (i = 0; i < b.length; i++) r += String.fromCharCode(b[i]);
+  return btoa(r).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+
+// Décode une chaîne base64 sûre pour URL, inverse exact de encoder64.
+function decoder64(s) {
+  var t = s.replace(/-/g, "+").replace(/_/g, "/"), r, b, i;
+  while (t.length % 4) t += "=";
+  r = atob(t);
+  b = new Uint8Array(r.length);
+  for (i = 0; i < r.length; i++) b[i] = r.charCodeAt(i);
+  return new TextDecoder().decode(b);
+}
+
+// Encode le cumul des répétitions en une chaîne transportable dans l'URL.
+function encoderCumul(cumul) { return encoder64(JSON.stringify(cumul)); }
+
+// Décode le cumul transporté dans l'URL, ou renvoie un cumul vide en cas d'absence.
+function decoderCumul(txt) {
+  if (!txt) return { R: null, reps: [] };
+  try {
+    var o = JSON.parse(decoder64(txt));
+    if (o && Array.isArray(o.reps)) return o;
+  } catch (e) { /* un cumul illisible repart de zéro, sans bruit */ }
+  return { R: null, reps: [] };
+}
+
+/* ==========================================================================
+   Paramètres lus dans l'URL
+   ========================================================================== */
+
+// Convertit un paramètre en entier strictement positif, ou renvoie la valeur par défaut.
+function entierPositif(val, defaut) {
+  var n = parseInt(val, 10);
+  return (isFinite(n) && n > 0) ? n : defaut;
+}
+
+// Convertit un paramètre en nombre strictement positif, ou renvoie la valeur par défaut.
+function reelPositif(val, defaut) {
+  var n = parseFloat(val);
+  return (isFinite(n) && n > 0) ? n : defaut;
+}
+
+// Lit les paramètres de la chaîne de requête et applique les valeurs par défaut imposées.
+function lireParametres() {
+  var q = new URLSearchParams(location.search);
+  var sceneBrut = (q.get("scene") || "toutes").toLowerCase();
+  var scenes = { A: false, B: false, C: false };
+
+  if (sceneBrut === "toutes") { scenes.A = true; scenes.B = true; scenes.C = false; }
+  else {
+    sceneBrut.split(",").forEach(function (s) {
+      s = s.trim().toUpperCase();
+      if (s === "A") scenes.A = true;
+      if (s === "B") scenes.B = true;
+      if (s === "C") scenes.C = true;
+    });
+    if (!scenes.A && !scenes.B && !scenes.C) { scenes.A = true; scenes.B = true; }
+  }
+
+  return {
+    repetitions: entierPositif(q.get("repetitions"), 5),
+    images: entierPositif(q.get("images"), 240),
+    duree_s: reelPositif(q.get("duree_s"), 3),
+    largeur: entierPositif(q.get("largeur"), 1280),
+    hauteur: entierPositif(q.get("hauteur"), 720),
+    iterations: entierPositif(q.get("iterations"), 256),
+    scenes: scenes,
+    // Paramètres internes : numéro de répétition en cours et cumul transporté.
+    rep: entierPositif(q.get("rep"), 1),
+    acc: q.get("acc") || ""
+  };
+}
+
+// Reconstruit une chaîne de requête à partir des paramètres, du numéro de répétition et du cumul.
+function construireRequete(p, rep, cumul) {
+  var q = new URLSearchParams();
+  q.set("repetitions", String(p.repetitions));
+  q.set("images", String(p.images));
+  q.set("duree_s", String(p.duree_s));
+  q.set("largeur", String(p.largeur));
+  q.set("hauteur", String(p.hauteur));
+  q.set("iterations", String(p.iterations));
+  q.set("scene", p.scenes.C ? "toutes" : "A,B");
+  q.set("rep", String(rep));
+  q.set("acc", encoderCumul(cumul));
+  return q.toString();
+}
+
+/* ==========================================================================
+   Scène A — noyau de calcul pur
+   ========================================================================== */
+
+// Somme de contrôle du noyau : elle force la consommation du résultat et interdit la suppression de la boucle.
+var gardeNoyau = 0;
+
+// Exécute le noyau sur les trois tailles imposées et renvoie, par taille, les durées individuelles et les débits.
+function sceneA() {
+  var resultats = [], s, r, i, n, somme, t0, t1, durees, debits;
+
+  for (s = 0; s < TAILLES_NOYAU.length; s++) {
+    n = TAILLES_NOYAU[s];
+    durees = [];
+    debits = [];
+    for (r = 0; r < REPETITIONS_NOYAU; r++) {
+      somme = 0;
+      t0 = performance.now();
+      // Boucle sans allocation : un seul accumulateur scalaire, aucune création d'objet.
+      for (i = 0; i < n; i++) { somme += Math.sqrt(i + 1); }
+      t1 = performance.now();
+      gardeNoyau += somme;
+      durees.push(t1 - t0);
+      debits.push(n / ((t1 - t0) / 1000));
+    }
+    resultats.push({ n: n, durees: durees, debits: debits });
+  }
+  return resultats;
+}
+
+/* ==========================================================================
+   Moteur WebGPU
+   ========================================================================== */
+
+// Code WGSL : un triangle plein écran et un nuanceur de fractale à échappement quadratique.
+var WGSL = [
+  "struct Uni { res : vec2f, iter : u32, pad : u32, };",
+  "@group(0) @binding(0) var<uniform> u : Uni;",
+  "@vertex",
+  "fn vs(@builtin(vertex_index) idx : u32) -> @builtin(position) vec4f {",
+  "  var x = -1.0;",
+  "  var y = -1.0;",
+  "  if (idx == 1u) { x = 3.0; y = -1.0; }",
+  "  else if (idx == 2u) { x = -1.0; y = 3.0; }",
+  "  return vec4f(x, y, 0.0, 1.0);",
+  "}",
+  "@fragment",
+  "fn fs(@builtin(position) pos : vec4f) -> @location(0) vec4f {",
+  "  let c = (pos.xy / u.res - vec2f(0.5, 0.5)) * vec2f(u.res.x / u.res.y, 1.0) * 2.5 + vec2f(-0.5, 0.0);",
+  "  var zx = 0.0;",
+  "  var zy = 0.0;",
+  "  var i = 0u;",
+  "  for (var k = 0u; k < u.iter; k = k + 1u) {",
+  "    let x2 = zx * zx;",
+  "    let y2 = zy * zy;",
+  "    if (x2 + y2 > 4.0) { break; }",
+  "    zy = 2.0 * zx * zy + c.y;",
+  "    zx = x2 - y2 + c.x;",
+  "    i = i + 1u;",
+  "  }",
+  "  let t = f32(i) / f32(u.iter);",
+  "  return vec4f(t, t, t, 1.0);",
+  "}"
+].join("\n");
+
+// Crée un moteur WebGPU prêt à rendre, ou renvoie null si WebGPU n'est pas disponible.
+async function creerMoteurWebGPU(canvas, largeur, hauteur, iterations) {
+  if (!navigator.gpu) return null;
+
+  var adaptateur = await navigator.gpu.requestAdapter();
+  if (!adaptateur) return null;
+
+  // timestamp-query est une fonction optionnelle : on ne la demande que si l'adaptateur la déclare.
+  var tsq = adaptateur.features && adaptateur.features.has("timestamp-query");
+  var appareil = null;
+  try {
+    appareil = await adaptateur.requestDevice(tsq ? { requiredFeatures: ["timestamp-query"] } : {});
+  } catch (e) {
+    // Une fonction déclarée n'est pas une fonction éprouvée : on retente sans elle et on la déclare absente.
+    tsq = false;
+    try { appareil = await adaptateur.requestDevice(); } catch (e2) { return null; }
+  }
+  if (!appareil) return null;
+
+  var contexte = canvas.getContext("webgpu");
+  if (!contexte) { appareil.destroy(); return null; }
+
+  var format = navigator.gpu.getPreferredCanvasFormat();
+  contexte.configure({ device: appareil, format: format, alphaMode: "opaque" });
+
+  var moteur = {
+    backend: "webgpu",
+    tsq: tsq,
+    appareil: appareil,
+    contexte: contexte,
+    // Compteur de créations de ressources : sert à décider de la fin de l'échauffement.
+    ressources: 0,
+    infosPilote: "(non lisible)",
+    vivier: [],
+    detruire: function () {
+      try { appareil.destroy(); } catch (e) { /* la destruction ne doit jamais faire échouer la série */ }
+    }
+  };
+
+  // Renseigne le pilote à partir des informations d'adaptateur, quand elles sont exposées.
+  try {
+    var info = adaptateur.info || (adaptateur.requestAdapterInfo ? await adaptateur.requestAdapterInfo() : null);
+    if (info) {
+      moteur.infosPilote = [
+        "fournisseur=" + (info.vendor || "?"),
+        "architecture=" + (info.architecture || "?"),
+        "appareil=" + (info.device || "?"),
+        "description=" + (info.description || "?")
+      ].join("; ");
+    }
+  } catch (e) { /* laissé à "(non lisible)" */ }
+
+  // --- ressources de rendu, toutes créées avant la boucle ---
+
+  var moduleVS = appareil.createShaderModule({ code: WGSL });
+  moteur.ressources++;
+  var pipeline = appareil.createRenderPipeline({
+    layout: "auto",
+    vertex: { module: moduleVS, entryPoint: "vs" },
+    fragment: { module: moduleVS, entryPoint: "fs", targets: [{ format: format }] },
+    primitive: { topology: "triangle-list" }
+  });
+  moteur.ressources++;
+
+  var tamponUni = appareil.createBuffer({
+    size: 16, usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
+  });
+  moteur.ressources++;
+  var donnees = new ArrayBuffer(16);
+  new Float32Array(donnees, 0, 2).set([largeur, hauteur]);
+  new Uint32Array(donnees, 8, 2).set([iterations, 0]);
+  appareil.queue.writeBuffer(tamponUni, 0, donnees);
+
+  var groupe = appareil.createBindGroup({
+    layout: pipeline.getBindGroupLayout(0),
+    entries: [{ binding: 0, resource: { buffer: tamponUni } }]
+  });
+  moteur.ressources++;
+
+  // --- vivier de jeux d'horodatage, réutilisés d'une image à l'autre ---
+  if (tsq) {
+    for (var i = 0; i < TAILLE_VIVIER; i++) {
+      var qs = appareil.createQuerySet({ type: "timestamp", count: 2 });
+      var resolu = appareil.createBuffer({
+        size: 16, usage: GPUBufferUsage.QUERY_RESOLVE | GPUBufferUsage.COPY_SRC
+      });
+      var lisible = appareil.createBuffer({
+        size: 16, usage: GPUBufferUsage.MAP_READ | GPUBufferUsage.COPY_DST
+      });
+      moteur.ressources += 3;
+      moteur.vivier.push({ qs: qs, resolu: resolu, lisible: lisible, libre: true });
+    }
+  }
+
+  // Encode et soumet une passe plein écran, en encadrant la passe de deux horodatages si le vivier le permet.
+  moteur.rendre = function (jeu) {
+    var enc = appareil.createCommandEncoder();
+    var desc = {
+      colorAttachments: [{
+        view: contexte.getCurrentTexture().createView(),
+        loadOp: "clear", storeOp: "store",
+        clearValue: { r: 0, g: 0, b: 0, a: 1 }
+      }]
+    };
+    if (tsq && jeu) {
+      desc.timestampWrites = {
+        querySet: jeu.qs,
+        beginningOfPassWriteIndex: 0,
+        endOfPassWriteIndex: 1
+      };
+    }
+    var passe = enc.beginRenderPass(desc);
+    passe.setPipeline(pipeline);
+    passe.setBindGroup(0, groupe);
+    passe.draw(3);
+    passe.end();
+    if (tsq && jeu) {
+      enc.resolveQuerySet(jeu.qs, 0, 2, jeu.resolu, 0);
+      enc.copyBufferToBuffer(jeu.resolu, 0, jeu.lisible, 0, 16);
+    }
+    appareil.queue.submit([enc.finish()]);
+  };
+
+  // Lit la durée GPU d'un jeu d'horodatage après achèvement du travail soumis, en millisecondes.
+  moteur.lire = async function (jeu) {
+    await appareil.queue.onSubmittedWorkDone();
+    await jeu.lisible.mapAsync(GPUMapMode.READ);
+    var a = new BigInt64Array(jeu.lisible.getMappedRange().slice(0));
+    jeu.lisible.unmap();
+    var ns = a[1] - a[0];
+    if (ns <= 0n) return NaN;
+    return Number(ns) / 1e6;
+  };
+
+  // Rend une image sans horodatage GPU, pour les phases où le vivier est épuisé ou absent.
+
+  return moteur;
+}
+
+/* ==========================================================================
+   Moteur WebGL 2 (repli)
+   ========================================================================== */
+
+var GLSL_VS = [
+  "#version 300 es",
+  "in vec2 aPos;",
+  "void main() { gl_Position = vec4(aPos, 0.0, 1.0); }"
+].join("\n");
+
+var GLSL_FS = [
+  "#version 300 es",
+  "precision highp float;",
+  "uniform vec2 uRes;",
+  "uniform int uIter;",
+  "out vec4 fragColor;",
+  "void main() {",
+  "  vec2 c = (gl_FragCoord.xy / uRes - vec2(0.5)) * vec2(uRes.x / uRes.y, 1.0) * 2.5 + vec2(-0.5, 0.0);",
+  "  float zx = 0.0; float zy = 0.0; int i = 0;",
+  "  for (int k = 0; k < uIter; k++) {",
+  "    float x2 = zx * zx; float y2 = zy * zy;",
+  "    if (x2 + y2 > 4.0) break;",
+  "    zy = 2.0 * zx * zy + c.y;",
+  "    zx = x2 - y2 + c.x;",
+  "    i++;",
+  "  }",
+  "  float t = float(i) / float(uIter);",
+  "  fragColor = vec4(t, t, t, 1.0);",
+  "}"
+].join("\n");
+
+// Compile un nuanceur WebGL 2 et lève une erreur explicite en cas d'échec.
+function compiler(gl, type, source) {
+  var sh = gl.createShader(type);
+  gl.shaderSource(sh, source);
+  gl.compileShader(sh);
+  if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) {
+    throw new Error(" compilation nuanceur : " + gl.getShaderInfoLog(sh));
+  }
+  return sh;
+}
+
+// Crée un moteur WebGL 2 prêt à rendre, ou renvoie null si WebGL 2 n'est pas disponible.
+function creerMoteurWebGL2(canvas, largeur, hauteur, iterations) {
+  var gl = canvas.getContext("webgl2", { antialias: false, depth: false, stencil: false });
+  if (!gl) return null;
+
+  // Le minuteur GPU de WebGL 2 est une extension : présente ou absente, jamais remplacée.
+  var ext = gl.getExtension("EXT_disjoint_timer_query_webgl2");
+  var tsq = !!ext;
+
+  var programme = gl.createProgram();
+  gl.attachShader(programme, compiler(gl, gl.VERTEX_SHADER, GLSL_VS));
+  gl.attachShader(programme, compiler(gl, gl.FRAGMENT_SHADER, GLSL_FS));
+  gl.linkProgram(programme);
+  if (!gl.getProgramParameter(programme, gl.LINK_STATUS)) {
+    throw new Error(" liaison programme : " + gl.getProgramInfoLog(programme));
+  }
+  gl.useProgram(programme);
+
+  var tampon = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, tampon);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+  var loc = gl.getAttribLocation(programme, "aPos");
+  gl.enableVertexAttribArray(loc);
+  gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+
+  gl.uniform2f(gl.getUniformLocation(programme, "uRes"), largeur, hauteur);
+  gl.uniform1i(gl.getUniformLocation(programme, "uIter"), iterations);
+  gl.viewport(0, 0, largeur, hauteur);
+
+  var moteur = {
+    backend: "webgl2",
+    tsq: tsq,
+    gl: gl,
+    ressources: 0,
+    infosPilote: "(non lisible — relever dans edge://gpu)",
+    vivier: [],
+    enAttente: [],
+    detruire: function () {
+      try { gl.getExtension("WEBGL_lose_context") && gl.getExtension("WEBGL_lose_context").loseContext(); }
+      catch (e) { /* la destruction ne doit jamais faire échouer la série */ }
+    }
+  };
+
+  if (tsq) {
+    for (var i = 0; i < TAILLE_VIVIER; i++) {
+      moteur.vivier.push({ q: gl.createQuery(), libre: true });
+      moteur.ressources++;
+    }
+  }
+
+  // Encode et soumet une passe plein écran, encadrée d'une requête de temps si le vivier le permet.
+  moteur.rendre = function (jeu) {
+    if (tsq && jeu) gl.beginQuery(ext.TIME_ELAPSED_EXT, jeu.q);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+    if (tsq && jeu) {
+      gl.endQuery(ext.TIME_ELAPSED_EXT);
+      moteur.enAttente.push(jeu);
+    }
+  };
+
+  // Relève les requêtes de temps arrivées à terme, en ne retenant que celles de la phase de mesure.
+  moteur.relever = function (ranger) {
+    if (!tsq) return;
+    var reste = [], i, jeu, disjoint = false;
+    try { disjoint = gl.getParameter(ext.GPU_DISJOINT_EXT); } catch (e) { disjoint = true; }
+    for (i = 0; i < moteur.enAttente.length; i++) {
+      jeu = moteur.enAttente[i];
+      var pret = false;
+      try { pret = gl.getQueryParameter(jeu.q, gl.QUERY_RESULT_AVAILABLE); } catch (e) { pret = false; }
+      if (pret && !disjoint) {
+        var ns = gl.getQueryParameter(jeu.q, gl.QUERY_RESULT);
+        // Un événement disjoint ou une image hors mesure ne produit aucune valeur.
+        if (ns > 0 && jeu.phase === "mesure") ranger(ns / 1e6);
+        jeu.libre = true;
+      } else if (!pret && !disjoint) {
+        reste.push(jeu);
+      } else {
+        jeu.libre = true;
+      }
+    }
+    moteur.enAttente = reste;
+  };
+
+  return moteur;
+}
+
+/* ==========================================================================
+   Scène B — échauffement, calibrage, mesure, contrôle
+   ========================================================================== */
+
+// Affiche l'état d'avancement, seule animation d'interface autorisée.
+function afficher(texte) {
+  document.getElementById("etat").textContent = texte;
+}
+
+// Pilote les quatre phases d'une répétition dans une seule boucle de rappels d'animation.
+function derouler(moteur, p, cumul, besoinCalibrage) {
+  return new Promise(function (resoudre) {
+    var d1 = [], d2 = [], d3 = [], cellule = [];
+    var phase = "echauffement";
+    var images = 0;
+    var imagesStables = 0;
+    var compteur = moteur.ressources;
+    var departChaud = performance.now();
+    var departMesure = 0;
+    var dernierTs = null;
+    var indiceVivier = 0;
+    var fini = false;
+
+    // Rend une image, relève les grandeurs et avance la machine à phases.
+    function frame(ts) {
+      if (fini) return;
+
+      // D3 n'est relevé que pendant la phase de mesure : la première image mesurée sert de référence.
+      if (phase === "mesure" && dernierTs !== null) d3.push(ts - dernierTs);
+      dernierTs = ts;
+
+      // Choix d'un jeu d'horodatage libre ; s'il n'y en a plus, l'image est rendue sans D2.
+      var jeu = null, i;
+      if (moteur.tsq) {
+        for (i = 0; i < moteur.vivier.length; i++) {
+          indiceVivier = (indiceVivier + 1) % moteur.vivier.length;
+          if (moteur.vivier[indiceVivier].libre) { jeu = moteur.vivier[indiceVivier]; jeu.libre = false; break; }
+        }
+      }
+
+      // La phase est figée ici : la lecture de l'horodatage GPU survient plus tard, hors de cette image.
+      var phaseImage = phase;
+      if (jeu) jeu.phase = phaseImage;
+
+      // D1 : durée processeur autour de l'appel de rendu, sans attente intermédiaire.
+      var t0 = performance.now();
+      moteur.rendre(jeu);
+      var t1 = performance.now();
+
+      var dureeCpu = t1 - t0;
+      if (moteur.backend === "webgl2") moteur.relever(function (ms) { d2.push(ms); });
+      else if (jeu) {
+        moteur.lire(jeu).then(function (ms) {
+          jeu.libre = true;
+          // Aucune valeur n'est retenue si l'image n'appartenait pas à la phase de mesure.
+          if (isFinite(ms) && jeu.phase === "mesure") d2.push(ms);
+        }).catch(function () { jeu.libre = true; });
+      }
+
+      if (phase === "mesure") d1.push(dureeCpu);
+      if (phase === "calibrage" || phase === "controle") cellule.push(dureeCpu);
+
+      // --- critère d'arrêt de l'échauffement : aucune ressource neuve pendant 30 images ---
+      if (phase === "echauffement") {
+        if (moteur.ressources === compteur) imagesStables++; else imagesStables = 0;
+        compteur = moteur.ressources;
+      }
+
+      images++;
+      var elapsed = performance.now() - departChaud;
+
+      // --- transitions de phase ---
+      if (phase === "echauffement") {
+        afficher("répétition " + p.rep + "/" + p.repetitions +
+                 " · échauffement " + images + "/" + PLANCHER_ECHAUFFEMENT_IMAGES);
+        if (imagesStables >= IMAGES_STABILITE && images >= PLANCHER_ECHAUFFEMENT_IMAGES &&
+            elapsed >= PLANCHER_ECHAUFFEMENT_MS) {
+          phase = besoinCalibrage ? "calibrage" : "mesure";
+          images = 0;
+          // La référence d'intervalle repart de zéro : aucune image d'une autre phase ne sert de borne.
+          dernierTs = null;
+          departMesure = performance.now();
+        }
+      } else if (phase === "calibrage") {
+        afficher("répétition " + p.rep + "/" + p.repetitions + " · calibrage " + images + "/" + IMAGES_CELLULE);
+        if (images >= IMAGES_CELLULE) {
+          cumul.R = mediane(cellule);
+          cellule = [];
+          phase = "mesure";
+          images = 0;
+          dernierTs = null;
+          departMesure = performance.now();
+        }
+      } else if (phase === "mesure") {
+        afficher("répétition " + p.rep + "/" + p.repetitions + " · mesure " + images + "/" + p.images);
+        if (images >= p.images || (performance.now() - departMesure) >= p.duree_s * 1000) {
+          phase = "controle";
+          images = 0;
+          dernierTs = null;
+        }
+      } else if (phase === "controle") {
+        afficher("répétition " + p.rep + "/" + p.repetitions + " · contrôle " + images + "/" + IMAGES_CELLULE);
+        if (images >= IMAGES_CELLULE) {
+          fini = true;
+          resoudre({
+            d1: agreger(d1),
+            d2: agreger(d2),
+            d3: agreger(d3),
+            C: mediane(cellule)
+          });
+          return;
+        }
+      }
+
+      requestAnimationFrame(frame);
+    }
+
+    requestAnimationFrame(frame);
+  });
+}
+
+/* ==========================================================================
+   Scène C — même image, sans accélération (facultative)
+   ========================================================================== */
+
+// Calcule la même image sur processeur et renvoie la médiane des durées par image.
+function sceneC(p) {
+  var canvas = document.createElement("canvas");
+  canvas.width = p.largeur;
+  canvas.height = p.hauteur;
+  var ctx2d = canvas.getContext("2d", { alpha: false });
+  if (!ctx2d) return { med: NaN, n: 0 };
+
+  var image = ctx2d.createImageData(p.largeur, p.hauteur);
+  var donnees = image.data;
+  var durees = [], f, x, y, k, cx, cy, zx, zy, x2, y2, i, t, pos;
+  var rapport = p.largeur / p.hauteur;
+
+  for (f = 0; f < IMAGES_SCENE_C; f++) {
+    var t0 = performance.now();
+    pos = 0;
+    for (y = 0; y < p.hauteur; y++) {
+      for (x = 0; x < p.largeur; x++) {
+        cx = ((x / p.largeur) - 0.5) * rapport * 2.5 - 0.5;
+        cy = ((y / p.hauteur) - 0.5) * 2.5;
+        zx = 0.0; zy = 0.0; i = 0;
+        for (k = 0; k < p.iterations; k++) {
+          x2 = zx * zx; y2 = zy * zy;
+          if (x2 + y2 > 4.0) break;
+          zy = 2.0 * zx * zy + cy;
+          zx = x2 - y2 + cx;
+          i++;
+        }
+        t = (i / p.iterations) * 255;
+        donnees[pos] = t; donnees[pos + 1] = t; donnees[pos + 2] = t; donnees[pos + 3] = 255;
+        pos += 4;
+      }
+    }
+    durees.push(performance.now() - t0);
+    ctx2d.putImageData(image, 0, 0);
+  }
+
+  return { med: mediane(durees), n: durees.length };
+}
+
+/* ==========================================================================
+   Construction du TSV
+   ========================================================================== */
+
+// Construit le TSV complet : en-tête, corps, pied, sans le moindre arrondi.
+function construireTSV(p, cumul, meta) {
+  var L = [];
+
+  // --- en-tête, une ligne par élément ---
+  L.push("# date\t" + meta.dateISO);
+  L.push("# composant\t" + COMPOSANT);
+  L.push("# question\t" + QUESTION);
+  L.push("# scene\tresolution=" + p.largeur + "x" + p.hauteur +
+         "; objets=1; iterations=" + p.iterations +
+         "; noyau=" + TAILLES_NOYAU.join(",") +
+         "; repetitions_noyau=" + REPETITIONS_NOYAU);
+  L.push("# grandeur\tD1;D2;D3;D4");
+  L.push("# methode\t" + meta.methode);
+  L.push("# materiel\t" + meta.materiel);
+  L.push("# navigateur\t" + meta.navigateur);
+  L.push("# pilote\t" + meta.pilote);
+  L.push("# conditions\timages=" + p.images +
+         "; duree_s=" + p.duree_s +
+         "; repetitions=" + p.repetitions +
+         "; backend=" + meta.backend +
+         "; scene=" + (p.scenes.C ? "toutes" : "A,B") +
+         "; ecran=" + meta.ecran +
+         "; secteur=non_verifiable_depuis_la_page; onglets=non_verifiable_depuis_la_page");
+  L.push("# timestamp_query\t" + (meta.tsq ? "present" : "absent"));
+
+  // --- corps : une ligne par grandeur et par répétition ---
+  L.push("grandeur\trepetition\tn_images\tmediane_ms\tmin_ms\tmax_ms\tq1_ms\tq3_ms");
+  cumul.reps.forEach(function (r) {
+    GRANDEURS.forEach(function (g) {
+      var a = r[g.toLowerCase()];
+      if (!a || a.n === 0) {
+        // Colonne laissée vide : jamais de valeur fabriquée.
+        L.push([g, r.rep, 0, "", "", "", "", ""].join("\t"));
+      } else {
+        L.push([g, r.rep, a.n, brut(a.med), brut(a.min), brut(a.max), brut(a.q1), brut(a.q3)].join("\t"));
+      }
+    });
+  });
+
+  // --- pied ---
+  L.push("# calibrage_ms\tR=" + brut(cumul.R));
+
+  var controles = cumul.reps.map(function (r, i) { return "C" + (i + 1) + "=" + brut(r.C); }).join(";");
+  L.push("# controle_ms\t" + controles);
+
+  var derives = cumul.reps.map(function (r, i) {
+    var v = (isFinite(cumul.R) && cumul.R !== 0 && isFinite(r.C)) ? (r.C / cumul.R) : NaN;
+    return "C" + (i + 1) + "/R=" + brut(v);
+  }).join(";");
+  L.push("# derive\t" + derives);
+
+  // Dispersion : rapport du maximum des médianes à la médiane des médianes, par grandeur.
+  var disp = GRANDEURS.map(function (g) {
+    var meds = cumul.reps.map(function (r) { return r[g.toLowerCase()] ? r[g.toLowerCase()].med : NaN; })
+                         .filter(function (v) { return isFinite(v); });
+    if (meds.length === 0) return g + "=";
+    var med = mediane(meds), max = Math.max.apply(null, meds);
+    return g + "=" + brut((med !== 0) ? (max / med) : NaN);
+  }).join(";");
+  L.push("# dispersion\tmax(mediane)/mediane(mediane): " + disp);
+
+  // Noyau : durées et débits par taille, tels quels.
+  var tailles = "n=" + TAILLES_NOYAU.join(";");
+  var dureesNoyau = cumul.reps.map(function (r) {
+    return r.k.map(function (s) { return s.d.map(brut).join(","); }).join(";");
+  }).map(function (s, i) { return "R" + (i + 1) + "[" + s + "]"; }).join("|");
+  var debitsNoyau = cumul.reps.map(function (r) {
+    return r.k.map(function (s) { return s.e.map(brut).join(","); }).join(";");
+  }).map(function (s, i) { return "R" + (i + 1) + "[" + s + "]"; }).join("|");
+  L.push("# taille_noyau\t" + tailles + "; repetitions=" + REPETITIONS_NOYAU +
+         "; durees_ms=" + dureesNoyau + "; debits=" + debitsNoyau);
+
+  // Scène C, seulement si elle a tourné.
+  if (cumul.reps.some(function (r) { return r.c && isFinite(r.c.med); })) {
+    L.push("# scene_C\t" + cumul.reps.map(function (r, i) {
+      return "R" + (i + 1) + "=" + (r.c ? brut(r.c.med) : "");
+    }).join(";") + " (mediane_ms, " + IMAGES_SCENE_C + " images, sans acceleration)");
+  }
+
+  return L.join("\n") + "\n";
+}
+
+/* ==========================================================================
+   Sortie : copie et téléchargement
+   ========================================================================== */
+
+// Déclenche le téléchargement du TSV sous un nom horodaté, sans toucher au disque avant ce clic.
+function telecharger(contenu, nom) {
+  var blob = new Blob([contenu], { type: "text/tab-separated-values;charset=utf-8" });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement("a");
+  a.href = url;
+  a.download = nom;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Copie le TSV dans le presse-papiers, avec repli silencieux si l'API est refusée.
+function copier(contenu) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(contenu).catch(function () { /* refusé : le bloc reste copiable à la main */ });
+  }
+}
+
+/* ==========================================================================
+   Programme principal
+   ========================================================================== */
+
+// Orchestre une répétition, puis enchaîne par un chargement neuf ou affiche la sortie.
+async function principal() {
+  var p = lireParametres();
+  var cumul = decoderCumul(p.acc);
+
+  // Les paramètres effectivement retenus sont affichés en clair, en haut de page.
+  var listeScenes = [];
+  if (p.scenes.A) listeScenes.push("A");
+  if (p.scenes.B) listeScenes.push("B");
+  if (p.scenes.C) listeScenes.push("C");
+  document.getElementById("params").innerHTML =
+    "Valeurs retenues : repetitions=" + p.repetitions +
+    " · images=" + p.images +
+    " · duree_s=" + p.duree_s +
+    " · largeur=" + p.largeur +
+    " · hauteur=" + p.hauteur +
+    " · iterations=" + p.iterations +
+    " · scene=" + listeScenes.join(",") +
+    "<br>Répétition en cours : " + p.rep + " / " + p.repetitions +
+    "<br><em>Scène C désactivée par défaut (elle allonge la série). Activez-la avec scene=toutes ou scene=C.</em>";
+
+  // --- Scène A : noyau de calcul pur ---
+  var noyau = null;
+  if (p.scenes.A) {
+    afficher("répétition " + p.rep + "/" + p.repetitions + " · scène A — noyau de calcul pur");
+    await new Promise(function (r) { setTimeout(r, 30); });
+    noyau = sceneA().map(function (s) {
+      return { n: s.n, d: s.durees, e: s.debits };
+    });
+  } else {
+    noyau = TAILLES_NOYAU.map(function (n) { return { n: n, d: [], e: [] }; });
+  }
+
+  // --- Scène B : passe de rendu accélérée ---
+  var mesure = { d1: { n: 0 }, d2: { n: 0 }, d3: { n: 0 }, C: NaN };
+  var backend = "aucun";
+  var tsq = false;
+  var infosPilote = "(aucun moteur)";
+
+  if (p.scenes.B) {
+    afficher("répétition " + p.rep + "/" + p.repetitions + " · scène B — initialisation du moteur");
+    await new Promise(function (r) { setTimeout(r, 30); });
+
+    var canvas = document.createElement("canvas");
+    canvas.width = p.largeur;
+    canvas.height = p.hauteur;
+    document.body.appendChild(canvas);
+    canvas.style.width = p.largeur + "px";
+    canvas.style.height = p.hauteur + "px";
+
+    var moteur = null;
+    try { moteur = await creerMoteurWebGPU(canvas, p.largeur, p.hauteur, p.iterations); }
+    catch (e) { moteur = null; }
+    if (!moteur) {
+      try { moteur = creerMoteurWebGL2(canvas, p.largeur, p.hauteur, p.iterations); }
+      catch (e) { moteur = null; }
+    }
+
+    if (!moteur) {
+      // Aucun moteur : les grandeurs restent vides, aucune valeur n'est fabriquée.
+      infosPilote = "aucun moteur disponible (ni WebGPU ni WebGL 2)";
+      document.getElementById("garde").textContent =
+        "Aucun moteur de rendu disponible : D1, D2 et D3 restent vides.";
+    } else {
+      backend = moteur.backend;
+      tsq = moteur.tsq;
+      infosPilote = moteur.infosPilote;
+      mesure = await derouler(moteur, p, cumul, cumul.R === null || cumul.R === undefined);
+      moteur.detruire();
+    }
+    document.body.removeChild(canvas);
+  }
+
+  // --- Scène C : mêmes paramètres, sans accélération ---
+  var resultatC = null;
+  if (p.scenes.C) {
+    afficher("répétition " + p.rep + "/" + p.repetitions + " · scène C — calcul sans accélération");
+    await new Promise(function (r) { setTimeout(r, 30); });
+    resultatC = sceneC(p);
+  }
+
+  // --- cumul de cette répétition ---
+  cumul.reps.push({
+    rep: p.rep,
+    d1: mesure.d1,
+    d2: mesure.d2,
+    d3: mesure.d3,
+    C: mesure.C,
+    k: noyau,
+    c: resultatC
+  });
+
+  // --- répétition suivante par chargement neuf, ou fin de série ---
+  if (p.rep < p.repetitions) {
+    afficher("répétition " + p.rep + "/" + p.repetitions + " terminée — chargement neuf…");
+    // On repart de l'URL complète sans sa requête : ainsi le schéma file:// est préservé tel quel.
+    var url = location.href.split("?")[0] + "?" + construireRequete(p, p.rep + 1, cumul);
+    await new Promise(function (r) { setTimeout(r, 250); });
+    location.replace(url);
+    return;
+  }
+
+  // --- fin de série : métadonnées, puis sortie ---
+  var maintenant = new Date();
+  var methode = [];
+  methode.push("D1=performance.now() autour de l'appel de rendu");
+  methode.push(tsq
+    ? "D2=horodatages GPU (" + (backend === "webgpu" ? "timestamp-query WebGPU" : "EXT_disjoint_timer_query_webgl2") + ")"
+    : "D2=non mesuree (timestamp_query absent)");
+  methode.push("D3=intervalle entre deux requestAnimationFrame consecutifs, valeurs brutes");
+  methode.push("D4=noyau seul, sans rendu, " + TAILLES_NOYAU.join("/") + " elements x " + REPETITIONS_NOYAU + " repetitions");
+
+  var meta = {
+    dateISO: horodateISO(maintenant),
+    methode: methode.join(" / "),
+    materiel: "coeurs_logiques=" + (navigator.hardwareConcurrency || "inconnu") +
+              "; memoire_appareil=" + (navigator.deviceMemory || "non_exposee") +
+              "; ecran=" + (screen.width + "x" + screen.height) +
+              "; densite=" + window.devicePixelRatio +
+              "; (modele CPU et GPU non detectables depuis la page — a completer par le porteur)",
+    navigateur: navigator.userAgent,
+    pilote: infosPilote,
+    ecran: screen.width + "x" + screen.height + "@" + window.devicePixelRatio + "x",
+    backend: backend,
+    tsq: tsq
+  };
+
+  var tsv = construireTSV(p, cumul, meta);
+  var nomFichier = "serie_" + horodateFichier(maintenant) + ".tsv";
+
+  afficher("série terminée — " + cumul.reps.length + " répétition(s) · " +
+           (tsq ? "timestamp_query present" : "timestamp_query absent") + " · moteur " + backend);
+  document.getElementById("garde").textContent =
+    "Somme de contrôle du noyau (consommée, non interprétable) : " + brut(gardeNoyau);
+
+  var zoneFin = document.getElementById("fin");
+  document.getElementById("sortie").textContent = tsv;
+  zoneFin.hidden = false;
+  document.getElementById("copier").onclick = function () { copier(tsv); };
+  document.getElementById("telecharger").onclick = function () { telecharger(tsv, nomFichier); };
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
+principal().catch(function (erreur) {
+  afficher("échec : " + (erreur && erreur.message ? erreur.message : String(erreur)));
+});
+</script>
+</body>
+</html>
